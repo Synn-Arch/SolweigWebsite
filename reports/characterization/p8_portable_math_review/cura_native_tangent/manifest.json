@@ -1,0 +1,434 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1543,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/LICENSE",
+      "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9"
+    },
+    {
+      "bytes": 1543,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/SVML_LICENSE",
+      "sha256": "c17011467b4fe6e20fbfbeda4df09e58c2bca5480a063e55735a4000a379aad9"
+    },
+    {
+      "bytes": 736,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_linux.sh",
+      "sha256": "bd7b8d5325d64dc1a6cd13c165675fa474da28ad34c07ed1b0d954455255fd12"
+    },
+    {
+      "bytes": 49,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_packet.stderr",
+      "sha256": "5244a64700c8c0eca84efa4edb400886825b174eb0beefd81d8f2c1ac043663e"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_packet.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 276,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_packet_retry.stderr",
+      "sha256": "d4b0723008058f4a1124fd78978e8b27bbb31f9b2c2b6bdf1fdb4ec5a7fb8939"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_packet_retry.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 224,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_packet_retry2.stderr",
+      "sha256": "f5bdf8b232c79f80d9ac5e19bf1ceb74dd4ff3bc0b742328ea0d23c3bb4ccec3"
+    },
+    {
+      "bytes": 10703,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/build_packet_retry2.stdout",
+      "sha256": "3ec90f2e0604fab093d213eb1c0440c647323ff5cc3c5118162156a35ccb1da8"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/cmake_install.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 445,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/cmake_install.stdout",
+      "sha256": "5b827b5c83209af3c8d0b860d86c107bbd601f39b214019a8404fef55f716381"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/cmake_version.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/compile.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/compile.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_build.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_build.stdout",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 4703,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_math/acosf.c",
+      "sha256": "3972539baab1247fd81c2bd1e5798dca9f915151633037af19a54c2baae951e2"
+    },
+    {
+      "bytes": 4813,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_math/atanf.c",
+      "sha256": "29032ad8862b3be39b14a9e302e11b1abfde066a2096c56a4d54aab996b85f88"
+    },
+    {
+      "bytes": 1266,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_math/commit.json",
+      "sha256": "25b85eea7a66262289a78362ed2813a4ce9fbbf4ace53c21645a038d0e8a0ec4"
+    },
+    {
+      "bytes": 7325,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_math/tanf.c",
+      "sha256": "f58f91f351af54af1f4284e139b369da8480b68fc4cd347492c81e38b1081fea"
+    },
+    {
+      "bytes": 265,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_math/wrapper.c",
+      "sha256": "e7d80516169005974a6fb9057cfd98cb10dbfb797f99c1baa148dc3e6ab8fa6f"
+    },
+    {
+      "bytes": 328950,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/core_math_results.npz",
+      "sha256": "17c986c65f9768c6646398eb94930020f140eab79e87a51cc1acbfe7f9b6bb23"
+    },
+    {
+      "bytes": 1082528,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/corpus.npz",
+      "sha256": "8bfaf4016f85c0939d4e72155e84420ffac89a16ce051c1afbb2c934f615d1cf"
+    },
+    {
+      "bytes": 1559,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/environment.txt",
+      "sha256": "4c4a62f8aeba1aa48d2e71350e38b5466cee8c465523c99520de5fbbdf305c86"
+    },
+    {
+      "bytes": 9664,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/evidence.sha256",
+      "sha256": "2a0583328ef890889698097ace5524abe32cb5a8d45ba2d1a69909894c13eaa2"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/generated_probe.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2002,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/generated_probe.stdout",
+      "sha256": "2fe42a80302b37d387aee6ff177b74b3f26cc37894bf40c3e6d5f43227e5790f"
+    },
+    {
+      "bytes": 328784,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/intel_igc_ha_results.npz",
+      "sha256": "2fd6cb638be42085ed93e4612295eba3648592bfb0e477ca5bf195e2e96ea0e0"
+    },
+    {
+      "bytes": 16312,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/libcore_probe.so",
+      "sha256": "9b1edac4dce53cf466dd32e33b39b4a7d43242d33b715d922a5faf618af52401"
+    },
+    {
+      "bytes": 15632,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/libsleef_tan_probe.so",
+      "sha256": "d85d5b21fbe627b41151674c7f3fafcb425808f1651ed0fadd503d1b33b4fa4d"
+    },
+    {
+      "bytes": 28216,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/libsvml_tan_la.so",
+      "sha256": "17c851a3b18522667fa3631bf7d61e8d2fa5db0f9effa6fb469fddc89a432d9a"
+    },
+    {
+      "bytes": 28152,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/libsvml_tan_probe.so",
+      "sha256": "6f573c7b424cf897e70bebe32027fadf5b0e1f7b5c0c3980937b298bc9351674"
+    },
+    {
+      "bytes": 529,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/native_sleef.c",
+      "sha256": "7c037408e473bebfb04ebf6c19b3c053e06a4a2dfc307b363ed10f80d90caec3"
+    },
+    {
+      "bytes": 513,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/native_svml.c",
+      "sha256": "418c265ec26730b47f8b0cfd447b65fd738aa3491bb5b8215c9de58019650e99"
+    },
+    {
+      "bytes": 2950,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/packet.json",
+      "sha256": "1ee7a09381d67df339e6954bc403060277ea2fb5730b07d52e2ec1b8d5a02d63"
+    },
+    {
+      "bytes": 0,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/probe.stderr",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 924,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/probe.stdout",
+      "sha256": "49336dd2fff78d86d988cfee83525f46c2adaad59ca6557ad94afccc463dd006"
+    },
+    {
+      "bytes": 2377,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/probe_generated_asvf.py",
+      "sha256": "b07b01e886909681b3a98c747ce20097532f8bfd7eb363102045fc8d053d5174"
+    },
+    {
+      "bytes": 2140,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/probe_tangent.py",
+      "sha256": "2f687f91b10712bac6ed84bd4bac12671e04ac0fa2ace13ca924c886ec6bbaa5"
+    },
+    {
+      "bytes": 20372,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/results/generated_asvf_masks.npz",
+      "sha256": "a575710e0ea8746d553346e84e927c7cad4251fc669a0f427bdbdd006465e6fe"
+    },
+    {
+      "bytes": 2419,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/results/generated_asvf_report.json",
+      "sha256": "1762a7d6ee05b2498b91635778e04560f9c1cd90f4a80e7914e478fd388cb0f0"
+    },
+    {
+      "bytes": 1270,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/results/result.json",
+      "sha256": "83b8fe460a988f09dac774eba65b52abe7fb79dbb4f3b9581d56f1bf04fa4fcd"
+    },
+    {
+      "bytes": 3505,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/results/tangent_results.npz",
+      "sha256": "b9353d9d6f72ab65f9f6d70b055c38f3104730240802b04bac24301720cbecd6"
+    },
+    {
+      "bytes": 1865203,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/sleef-5a1d179.tar.gz",
+      "sha256": "afd1b92010ae7918e20eec3e5bb270b7ca4828b5cb19e4d820a0a4558a04ce63"
+    },
+    {
+      "bytes": 328966,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/sleef_fma_results.npz",
+      "sha256": "e6a5b8503bac2880eb9432907e5bf62c6776a8cccefa132f2b6eae4e3b42b8b1"
+    },
+    {
+      "bytes": 645,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/svml_tan_wrapper.c",
+      "sha256": "845f48f15e579ee78056e972d5e7391cce732a8d3930cc06552bc90856d3efc5"
+    },
+    {
+      "bytes": 65251,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/svml_z0_tan_s_la.s",
+      "sha256": "52d9e3002cb3ec30fa528275701124812520d743e97c1b06178ae45bc0e1a961"
+    },
+    {
+      "bytes": 214,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/symbols.txt",
+      "sha256": "c194e332fabbd91889c50f9762b055be3fcce5fa80d98c962b75d31ec1359501"
+    },
+    {
+      "bytes": 308458,
+      "path": "reports/characterization/p8_portable_math_review/cura_native_tangent/trace.npz",
+      "sha256": "9467d83c202b2ab9e50c2856f2d7350243b26afe7306d6fd23c1616b8d9e64fc"
+    }
+  ],
+  "created_at": "2026-09-20T01:22:10.103821Z",
+  "decision": "Neither unmodified SLEEF u35 nor BSD SVML LA tangent preserves all corrected actual774x153 masks. No portable profile promoted; no full pipeline run.",
+  "execution": {
+    "commands": [
+      "bash build_linux.sh with one build job",
+      "cc -O2 -fno-fast-math -ffp-contract=off ... CORE-MATH diagnostic library",
+      "python3 probe_tangent.py --trace trace.npz --core-lib libcore_probe.so --output results",
+      "python3 probe_generated_asvf.py <owned diagnostic root>"
+    ],
+    "initial_failures": [
+      "cmake absent from host; isolated cmake==4.1.0 installed under owned prefix",
+      "system python venv unavailable due missing ensurepip; abandoned empty owned directory",
+      "first build retry needed PYTHONPATH for isolated cmake prefix",
+      "post-build symbol check initially used wrong sleef-install path; corrected to build/include/sleef.h"
+    ],
+    "threads": 1
+  },
+  "generated_asvf_diagnostic": {
+    "qualification": "Generated ASVF end-to-end boundary diagnostic using declared profile ASVF, uniform native tangent, CORE-MATH atan, and original scalar coefficients; not a complete production profile.",
+    "results": {
+      "core_math": {
+        "sleef_u35_avx512": {
+          "four_residual_rows_hsvf_bits": [
+            1075788189,
+            1075788189,
+            1075788189,
+            1075788186
+          ],
+          "shade_mismatches": 13,
+          "sun_mismatches": 27
+        },
+        "sleef_u35_scalar": {
+          "four_residual_rows_hsvf_bits": [
+            1075788189,
+            1075788189,
+            1075788189,
+            1075788186
+          ],
+          "shade_mismatches": 13,
+          "sun_mismatches": 27
+        },
+        "svml_la": {
+          "four_residual_rows_hsvf_bits": [
+            1075788190,
+            1075788190,
+            1075788190,
+            1075788186
+          ],
+          "shade_mismatches": 31,
+          "sun_mismatches": 19
+        }
+      },
+      "intel_igc_ha": {
+        "sleef_u35_avx512": {
+          "four_residual_rows_hsvf_bits": [
+            1075788189,
+            1075788189,
+            1075788189,
+            1075788186
+          ],
+          "shade_mismatches": 9,
+          "sun_mismatches": 25
+        },
+        "sleef_u35_scalar": {
+          "four_residual_rows_hsvf_bits": [
+            1075788189,
+            1075788189,
+            1075788189,
+            1075788186
+          ],
+          "shade_mismatches": 9,
+          "sun_mismatches": 25
+        },
+        "svml_la": {
+          "four_residual_rows_hsvf_bits": [
+            1075788190,
+            1075788190,
+            1075788190,
+            1075788186
+          ],
+          "shade_mismatches": 24,
+          "sun_mismatches": 17
+        }
+      },
+      "sleef_fma": {
+        "sleef_u35_avx512": {
+          "four_residual_rows_hsvf_bits": [
+            1075788189,
+            1075788189,
+            1075788189,
+            1075788186
+          ],
+          "shade_mismatches": 15,
+          "sun_mismatches": 25
+        },
+        "sleef_u35_scalar": {
+          "four_residual_rows_hsvf_bits": [
+            1075788189,
+            1075788189,
+            1075788189,
+            1075788186
+          ],
+          "shade_mismatches": 15,
+          "sun_mismatches": 25
+        },
+        "svml_la": {
+          "four_residual_rows_hsvf_bits": [
+            1075788190,
+            1075788190,
+            1075788190,
+            1075788186
+          ],
+          "shade_mismatches": 31,
+          "sun_mismatches": 15
+        }
+      }
+    }
+  },
+  "interpretation": [
+    "SLEEF scalar and explicit AVX512 results agree for this corpus, but yield 19 sun and 9 shade mismatches with original ASVF and CORE atan.",
+    "SVML LA yields 9 sun and 20 shade mismatches with original ASVF and CORE atan.",
+    "SLEEF u35 matches original tangent bits at the four previously isolated rows but fails elsewhere; SVML LA does not match those rows. Uniform source candidates therefore fail the complete boundary mask gate.",
+    "Every tested generated-ASVF combination also fails: best observed is Intel IGC HA ASVF + SLEEF u35 tangent at25 sun/9 shade mismatches. These are diagnostic source combinations, not complete production profiles.",
+    "No per-input switching, lookup, nextafter, tolerance change, proprietary HA source, MKL production integration, or full1024 run was used."
+  ],
+  "native_stage_isolation": {
+    "qualification": "Original ASVF and yi used for stage isolation only, not production lookup; no full-pipeline or complete portable profile pass implied.",
+    "results": {
+      "sleef_u35_avx512": {
+        "finite_tan_bit_mismatches": 209,
+        "four_residual_rows_bits": [
+          1075788189,
+          1075788189,
+          1075788189,
+          1075788189
+        ],
+        "masks_with_original_asvf_and_scalar_coefficients_and_core_atan": {
+          "shade": 9,
+          "sun": 19
+        },
+        "max_abs": 2.0
+      },
+      "sleef_u35_scalar": {
+        "finite_tan_bit_mismatches": 209,
+        "four_residual_rows_bits": [
+          1075788189,
+          1075788189,
+          1075788189,
+          1075788189
+        ],
+        "masks_with_original_asvf_and_scalar_coefficients_and_core_atan": {
+          "shade": 9,
+          "sun": 19
+        },
+        "max_abs": 2.0
+      },
+      "svml_la": {
+        "finite_tan_bit_mismatches": 185,
+        "four_residual_rows_bits": [
+          1075788190,
+          1075788190,
+          1075788190,
+          1075788190
+        ],
+        "masks_with_original_asvf_and_scalar_coefficients_and_core_atan": {
+          "shade": 20,
+          "sun": 9
+        },
+        "max_abs": 2.0
+      }
+    },
+    "trace_sha256": "9467d83c202b2ab9e50c2856f2d7350243b26afe7306d6fd23c1616b8d9e64fc"
+  },
+  "schema": "portable-native-tangent-cura.v1",
+  "source_packet": {
+    "excluded": "SVML HA files were not compiled or used.",
+    "sha256": "1ee7a09381d67df339e6954bc403060277ea2fb5730b07d52e2ec1b8d5a02d63",
+    "sleef_commit": "5a1d179df9cf652951b59010a2d2075372d67f68",
+    "sleef_license": "Boost-1.0",
+    "svml_commit": "9a43e744b15006d63e8d1b57626dfbe6b984f5ee",
+    "svml_license": "BSD-3-Clause explicit file header",
+    "svml_source_sha256": "52d9e3002cb3ec30fa528275701124812520d743e97c1b06178ae45bc0e1a961"
+  },
+  "status": "rejected_boundary_gate",
+  "verification": "48 selected source, binaries, logs, raw results and provenance artifacts matched remote SHA256 locally before owned remote directory removal; absence asserted."
+}

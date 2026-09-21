@@ -1,0 +1,10 @@
+{
+  "schema_version": "p7_persistent_jit_distinct_variant.v1",
+  "source": "reports/characterization/p7_persistent_jit_distinct_variant/src",
+  "source_hash": "331822efc80f26531ed74bdb8f33266ebffc409c0f32dcac2d3eb8e2b72b2ad4",
+  "tests": {"path": "test_run", "result": "92 passed", "import_asserted": true, "junit": "test_run/junit.xml"},
+  "collision_orders": {"logs": "cache_collision/serial_then_parallel-v2 and cache_collision/parallel_then_serial-v2", "shortwave_cache_names": ["_shortwave_serial-215.py311", "_shortwave-168.py311"], "longwave_cache_names": ["_longwave_serial-396.py311", "_longwave-332.py311"], "cross_order_loads": false, "parallel_metadata": "parfors var_rename_map present", "serial_metadata": "parfors={} present"},
+  "profile": {"path": "small_v1", "status": "profile_completed_not_a_benchmark", "profiled_wall_seconds": 4.655834582983516, "new_outputs": 10, "matches_current_source_v2": true},
+  "cache": {"disk_size_bytes": 2138112, "serial_and_parallel_names_distinct": true},
+  "conclusion": "Repaired snapshot separates serial and parallel cache identities for both shortwave and longwave; both fresh-process orders compile/load their own names and retain correct parfor metadata. No main source or timing claims."
+}

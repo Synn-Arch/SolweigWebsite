@@ -1,0 +1,31 @@
+{
+  "distribution_version": "0.1.0.dev0",
+  "installed_hashes": {
+    "geometry/visibility_compiled.py": "422750110cbfbb2a41023ac6d0d413bf9e0c3b923ecf1ceb01cd75454b06e57d",
+    "radiation/patch_radiation.py": "331822efc80f26531ed74bdb8f33266ebffc409c0f32dcac2d3eb8e2b72b2ad4"
+  },
+  "optional_specs": {
+    "ee": false,
+    "geemap": false,
+    "geopandas": false,
+    "netCDF4": false,
+    "osmnx": false,
+    "pandas": false,
+    "rasterio": false,
+    "requests": false,
+    "torch": false,
+    "xarray": false
+  },
+  "package": "/private/tmp/solweig-p7-promotion.zWMQlH/venv/lib/python3.11/site-packages/solweig_light/__init__.py",
+  "public_workflows_callable": {
+    "build_inputs": true,
+    "build_wind_ext_coeff": true,
+    "calculate_svf": true,
+    "preprocess": true,
+    "run_utci_tiles": true,
+    "run_walls_aspect": true,
+    "thermal_comfort": true
+  },
+  "python": "/private/tmp/solweig-p7-promotion.zWMQlH/venv/bin/python",
+  "python_version": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]"
+}

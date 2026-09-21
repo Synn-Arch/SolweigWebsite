@@ -1,0 +1,143 @@
+{
+  "affected_entry_points": {
+    "pipeline_asvf": {
+      "input": "internal geometry SVF ndarray",
+      "legacy_invalid": "sqrt/acos NaN propagation",
+      "physical_values": "[0,1]",
+      "production_dtype": "float32",
+      "promoted_dtype": "explicit preserved NumPy sqrt/acos"
+    },
+    "prepared_classifier": {
+      "class_coefficients": "(altitude, azimuth, geometry, asvf, active=None)",
+      "classes": "(altitude, azimuth, geometry, asvf, start, stop, active=None, prepared=None)",
+      "fallback": "unchanged serial engine path for unsupported dtype/layout",
+      "supported_fast_path": "float32 fields and patch tables; scalar ndarray solar inputs"
+    },
+    "shaded_or_sunlit": {
+      "asvf": "array-like; arbitrary finite/nonfinite float values historically accepted by NumPy candidate",
+      "coefficient": "float64 NumPy cos/tan scalar grouping",
+      "signature": "(solar_altitude, solar_azimuth, patch_altitude, patch_azimuth, asvf)",
+      "solar_altitude": "tensor-origin zero-dimensional ndarray required by frozen compatibility behavior"
+    }
+  },
+  "atan": {
+    "accepted": "all float32 finite/nonfinite via source-derived helper; promoted dtypes explicit NumPy path",
+    "bits": [
+      3217625051,
+      3217624212,
+      3217557943,
+      3217557943,
+      3209236442,
+      2147483648,
+      0,
+      1061752794,
+      1070074295,
+      1070074295,
+      1070140564,
+      1070141403,
+      2143289344
+    ]
+  },
+  "environment": {
+    "numpy": "2.4.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "nonclaims": [
+    "Domain audit does not admit numerical parity.",
+    "The explicit large/nonfinite tangent path preserves accepted behavior; it is not used by physical ASVF."
+  ],
+  "profile": {
+    "fingerprint": "da2fbd13d9eb9430d1a9a81d105c8eefe07e3426b1c88626334084db8f238db8",
+    "id": "solweig-portable-sleef-5a1d179d-v1",
+    "implementation": {
+      "coefficient_policy": "numpy-float64-cos-tan-scalar-v1",
+      "profile_id": "solweig-portable-sleef-5a1d179d-v1",
+      "sleef_commit": "5a1d179df9cf652951b59010a2d2075372d67f68",
+      "source_sha256": {
+        "SLEEF_LICENSE.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+        "_math_profile.py": "b2020b4dd1c2ef4efd00c717ea3bdf75ba1ecd5399d5df1c0324c54ff03cc2cd",
+        "_sleef_acos.py": "cc59c1fac382db67219ee07f662d08a9f8da29349a460b854d74b7d44a9316c6",
+        "_sleef_classifier.py": "fdc7bbdc77777cbe75760f394bdf28af76f8d12b637368b8c187c606313b9552"
+      },
+      "tan_domain_policy": "sleef-u10-fast-abs-lt-125;explicit-legacy-numpy-otherwise-v1"
+    },
+    "runtime": {
+      "byteorder": "little",
+      "fastmath": false,
+      "float_rounds": 1,
+      "fma": "explicit-llvm.fma.f32",
+      "llvmlite": "0.49.0",
+      "machine": "arm64",
+      "numba": "0.67.0",
+      "numpy": "2.4.6",
+      "python": "CPython-3.11.16",
+      "system": "Darwin"
+    }
+  },
+  "public_signatures": {
+    "build_inputs": "(lat: float, lon: float, city: Optional[str] = None, km_buffer: float = 8.0, km_reduced_lat: float = 3.0, km_reduced_lon: float = 1.0, base_folder: Optional[str] = None, resolution: float = 2.0) -> str",
+    "build_wind_ext_coeff": "(input_dir: Union[str, pathlib.Path], era5_dir: Union[str, pathlib.Path], *, directions: Sequence[int] = (0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330), z0_ref: float = 0.03, hmin_b: float = 1.0, hmin_t: float = 1.0, z_eval: float = 10.0, zref: float = 10.0, LAI_t: float = 2.0, a0_t: float = 0.5, a1_t: float = 0.4, alpha_min_t: float = 0.2, alpha_max_t: float = 2.5, coeff_min: float = 0.1, coeff_max: float = 1.0, lp_min_open: float = 0.02, max_workers: Optional[int] = None) -> str",
+    "calculate_svf": "(base_path: str, patch_option: int = 2, overwrite: bool = False) -> None",
+    "preprocess": "(base_path: str, selected_date_str: str, building_dsm_filename: str = 'Building_DSM.tif', dem_filename: str = 'DEM.tif', trees_filename: str = 'Trees.tif', landcover_filename: Optional[str] = None, windcoeff_folder: Optional[str] = None, tile_size: int = 3600, overlap: int = 20, use_own_met: bool = True, start_time: Optional[str] = None, end_time: Optional[str] = None, data_source_type: Optional[str] = None, data_folder: Optional[str] = None, own_met_file: Optional[str] = None, preprocess_dir: Optional[str] = None, use_uhi: bool = True) -> str",
+    "run_utci_tiles": "(base_path: str, preprocess_dir: str, selected_date_str: str, tile_keys: Optional[List[str]] = None, save_tmrt: bool = True, save_svf: bool = False, save_kup: bool = False, save_kdown: bool = False, save_lup: bool = False, save_ldown: bool = False, save_shadow: bool = False, save_wbgt: bool = False, save_ta: bool = False, save_wind: bool = False) -> None",
+    "run_walls_aspect": "(preprocess_dir: str) -> None",
+    "thermal_comfort": "(base_path, selected_date_str, building_dsm_filename='Building_DSM.tif', dem_filename='DEM.tif', trees_filename='Trees.tif', landcover_filename: Optional[str] = None, ERA_5_z0_find=True, tile_size=3600, overlap=20, use_own_met=True, start_time=None, end_time=None, data_source_type=None, data_folder=None, own_met_file=None, use_uhi=True, save_tmrt=True, save_svf=False, save_kup=False, save_kdown=False, save_lup=False, save_ldown=False, save_shadow=False, save_wbgt=False, save_ta=False, save_wind=False)"
+  },
+  "schema": "solweig-light.portable-profile-domain-audit.v1",
+  "source": {
+    "_math_profile.py": "b2020b4dd1c2ef4efd00c717ea3bdf75ba1ecd5399d5df1c0324c54ff03cc2cd",
+    "engine.py": "f0734862f696dcbdfbba07d4848e99682492c15cec76a8375b67df37cba9c109",
+    "patch_radiation.py": "17dc32859548c753b981fc4a4110b029df3131b1db4dc001338fd50f7dfe773f"
+  },
+  "tan_dispatch": {
+    "actual_bits": [
+      2143289344,
+      3198441044,
+      1061696799,
+      1061723844,
+      3217512739,
+      2147483648,
+      0,
+      1070029091,
+      3209207492,
+      3209180447,
+      1050957396,
+      2143289344,
+      2143289344
+    ],
+    "input_bits": [
+      4286578688,
+      3323740160,
+      3271163904,
+      3271163773,
+      3212836864,
+      2147483648,
+      0,
+      1065353216,
+      1123680125,
+      1123680256,
+      1176256512,
+      2139095040,
+      2143289344
+    ],
+    "legacy_bits": [
+      2143289344,
+      3198441044,
+      1061696799,
+      1061723844,
+      3217512739,
+      2147483648,
+      0,
+      1070029091,
+      3209207492,
+      3209180447,
+      1050957396,
+      2143289344,
+      2143289344
+    ],
+    "nan_masks_equal": true,
+    "preserved_domain": "nonfinite or abs(x)>=125 uses explicit legacy NumPy tan",
+    "source_derived_domain": "finite float32 abs(x)<125"
+  }
+}

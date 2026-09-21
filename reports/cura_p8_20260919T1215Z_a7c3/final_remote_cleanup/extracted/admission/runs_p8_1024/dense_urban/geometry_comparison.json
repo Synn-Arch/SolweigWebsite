@@ -1,0 +1,125 @@
+{
+  "status": "passed",
+  "records": [
+    {
+      "artifact": "shadowmats_0_0.npz",
+      "field": "shadowmat",
+      "shape": [
+        1024,
+        1024,
+        153
+      ],
+      "bitwise_equal": true
+    },
+    {
+      "artifact": "shadowmats_0_0.npz",
+      "field": "vegshadowmat",
+      "shape": [
+        1024,
+        1024,
+        153
+      ],
+      "bitwise_equal": true
+    },
+    {
+      "artifact": "shadowmats_0_0.npz",
+      "field": "vbshmat",
+      "shape": [
+        1024,
+        1024,
+        153
+      ],
+      "bitwise_equal": true
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svf.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfE.tif",
+      "max_abs": 1.4901161193847656e-08,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfS.tif",
+      "max_abs": 1.4901161193847656e-08,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfW.tif",
+      "max_abs": 7.450580596923828e-09,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfN.tif",
+      "max_abs": 1.4901161193847656e-08,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfEveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfSveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfWveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfNveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfaveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfEaveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfSaveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfWaveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    },
+    {
+      "artifact": "svfs_0_0.zip",
+      "field": "svfNaveg.tif",
+      "max_abs": 0.0,
+      "frozen_max_abs": 1e-06
+    }
+  ]
+}

@@ -1,0 +1,355 @@
+{
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "source_sha256": {
+    "preprocessor.py": "e818c3edbaf2901096cbc45aaad61112988e5500578b1c6363afa5ba9b5ea57d",
+    "solweig_gpu.py": "db12f76f440ba6173a93c8f7936649a50622db736d5cb4823e4fc42efb9798f4"
+  },
+  "collector_sha256": "b98b19976f903b5ea1fb52018ba3aa9cd22770dc26eb1ae7845d0195eee8fbfa",
+  "invocation": [
+    "tools/characterize_public_forcing.py",
+    "--output",
+    "tests/reference/public_forcing_original_cpu"
+  ],
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit"
+  },
+  "cases": [
+    {
+      "label": "time-standard",
+      "evidence_class": "original_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-11-03",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-11-03 00:00:00",
+        "end_time": "2024-11-04 12:00:00",
+        "data_source_type": "ERA5",
+        "data_folder": {
+          "repository_path": "tests/reference/forcing_original_cpu/time"
+        },
+        "preprocess_dir": {
+          "packet_path": "time-standard"
+        },
+        "use_uhi": false
+      },
+      "status": "success",
+      "returned_preprocess_dir": "tests/reference/public_forcing_original_cpu/time-standard"
+    },
+    {
+      "label": "time-uhi",
+      "evidence_class": "original_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-11-03",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-11-03 00:00:00",
+        "end_time": "2024-11-04 12:00:00",
+        "data_source_type": "ERA5",
+        "data_folder": {
+          "repository_path": "tests/reference/forcing_original_cpu/time"
+        },
+        "preprocess_dir": {
+          "packet_path": "time-uhi"
+        },
+        "use_uhi": true
+      },
+      "status": "success",
+      "returned_preprocess_dir": "tests/reference/public_forcing_original_cpu/time-uhi"
+    },
+    {
+      "label": "valid_time-standard",
+      "evidence_class": "original_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-11-03",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-11-03 00:00:00",
+        "end_time": "2024-11-04 12:00:00",
+        "data_source_type": "ERA5",
+        "data_folder": {
+          "repository_path": "tests/reference/forcing_original_cpu/valid_time"
+        },
+        "preprocess_dir": {
+          "packet_path": "valid_time-standard"
+        },
+        "use_uhi": false
+      },
+      "status": "success",
+      "returned_preprocess_dir": "tests/reference/public_forcing_original_cpu/valid_time-standard"
+    },
+    {
+      "label": "valid_time-uhi",
+      "evidence_class": "original_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-11-03",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-11-03 00:00:00",
+        "end_time": "2024-11-04 12:00:00",
+        "data_source_type": "ERA5",
+        "data_folder": {
+          "repository_path": "tests/reference/forcing_original_cpu/valid_time"
+        },
+        "preprocess_dir": {
+          "packet_path": "valid_time-uhi"
+        },
+        "use_uhi": true
+      },
+      "status": "success",
+      "returned_preprocess_dir": "tests/reference/public_forcing_original_cpu/valid_time-uhi"
+    },
+    {
+      "label": "wrf-original-failure",
+      "evidence_class": "original_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-06-21",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 14:00:00",
+        "data_source_type": "wrfout",
+        "data_folder": {
+          "repository_path": "tests/reference/wrf_patched_cpu/three-hour-rotation"
+        },
+        "preprocess_dir": {
+          "packet_path": "wrf-original-failure"
+        },
+        "use_uhi": true
+      },
+      "status": "failure",
+      "exception_type": "TypeError",
+      "exception_message": "'<=' not supported between instances of 'datetime.datetime' and 'tuple'"
+    },
+    {
+      "label": "wrf-patched-three-hour",
+      "evidence_class": "patched_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-06-21",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 14:00:00",
+        "data_source_type": "wrfout",
+        "data_folder": {
+          "repository_path": "tests/reference/wrf_patched_cpu/three-hour-rotation"
+        },
+        "preprocess_dir": {
+          "packet_path": "wrf-patched-three-hour"
+        },
+        "use_uhi": true
+      },
+      "status": "success",
+      "returned_preprocess_dir": "tests/reference/public_forcing_original_cpu/wrf-patched-three-hour"
+    },
+    {
+      "label": "wrf-patched-domain-shape-failure",
+      "evidence_class": "patched_upstream_cpu_reference",
+      "arguments": {
+        "base_path": {
+          "packet_path": "raw"
+        },
+        "selected_date_str": "2024-06-21",
+        "landcover_filename": "Landcover.tif",
+        "tile_size": 2,
+        "overlap": 1,
+        "use_own_met": false,
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 12:00:00",
+        "data_source_type": "wrfout",
+        "data_folder": {
+          "repository_path": "tests/reference/wrf_patched_cpu/duplicate-domain-shape-failure"
+        },
+        "preprocess_dir": {
+          "packet_path": "wrf-patched-domain-shape-failure"
+        },
+        "use_uhi": true
+      },
+      "status": "failure",
+      "exception_type": "ValueError",
+      "exception_message": "operands could not be broadcast together with remapped shapes [original->remapped]: (2,3,4)  and requested shape (1,3,4)"
+    }
+  ],
+  "wrf_repair": {
+    "policy": "wrf_timestamp_v1",
+    "patched_source_sha256": "0e7ba766b70eb847ffac601b01da31570c64bfd70cdd42bfffccb61272d9e25d",
+    "patch": "docs/upstream_patches/wrf_timestamp_v1.patch",
+    "patch_sha256": "60af87301022f01f40b114a5796926cd7e6eb84759d98416b9e4213ee5cf19e8"
+  },
+  "files": {
+    "preprocessor_wrf_timestamp_v1.py": "0e7ba766b70eb847ffac601b01da31570c64bfd70cdd42bfffccb61272d9e25d",
+    "raw/Building_DSM.tif": "477acc1879ec8eb9b96dea05a61840b8023331a6b0a8d1d952aba33dbe5028f1",
+    "raw/DEM.tif": "68353a481f9d4c5d38af6bc328785087bbd785bfbbe8445e4835f45d3e6a9aa2",
+    "raw/Landcover.tif": "f60697ee0fa14aed2211e8ee93857a7dbafe867e3a2e2c298d8a2756489a7c80",
+    "raw/Trees.tif": "d027144454182ce787022fd5b682ac67a2ce290f1365f6f2e182297e72a60a2a",
+    "time-standard/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "time-standard/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "time-standard/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "time-standard/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "time-standard/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "time-standard/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "time-standard/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "time-standard/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "time-standard/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "time-standard/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "time-standard/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "time-standard/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "time-standard/Outfile.nc": "6e29d38cd64cca91677573ed140d4209acf479c5f5d5c7417f5e631791651f97",
+    "time-standard/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "time-standard/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "time-standard/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "time-standard/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "time-standard/metfiles/metfile_0_0_2024-11-03.txt": "03af75e6a081dd04b94fd6a88a3249cae40e0d7387114cc79006c447c746bea2",
+    "time-standard/metfiles/metfile_0_2_2024-11-03.txt": "9b6a438e3630e6286d7a71d55297884fe415c37508ca5c4f659b3ef3757a9be3",
+    "time-standard/metfiles/metfile_2_0_2024-11-03.txt": "5b5bde966774b81fd69a3ccc876af48f1cac6ebef1b3c95e7b2bdeca57ccba4f",
+    "time-standard/metfiles/metfile_2_2_2024-11-03.txt": "9199612d4ab0f3234d5fa753a06e271f3ef5fed4ce8b8ac4e530cf7b1ef7dc55",
+    "time-uhi/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "time-uhi/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "time-uhi/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "time-uhi/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "time-uhi/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "time-uhi/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "time-uhi/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "time-uhi/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "time-uhi/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "time-uhi/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "time-uhi/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "time-uhi/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "time-uhi/Outfile.nc": "23370584699deb499f4ebc8050933a49db6876b03d768d20b8c51e06e36a7392",
+    "time-uhi/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "time-uhi/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "time-uhi/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "time-uhi/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "time-uhi/metfiles/metfile_0_0_2024-11-03.txt": "36ba2312902b0ad14b141a63b5e2d9502e03dd45229bd2c7c60e4ae88d993c1b",
+    "time-uhi/metfiles/metfile_0_2_2024-11-03.txt": "eaaa77a0b5c729314fe51b66936092c5acba8fab44ae582893c697e88f304d8b",
+    "time-uhi/metfiles/metfile_2_0_2024-11-03.txt": "bb97566cd29f9e91028936488b1744a3594ec7ae7a77873ed14fd6170654305e",
+    "time-uhi/metfiles/metfile_2_2_2024-11-03.txt": "fe188f164c40fba2447e9f8fc5064535570d98d9b2f59c1cac3610dbab7a6c26",
+    "valid_time-standard/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "valid_time-standard/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "valid_time-standard/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "valid_time-standard/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "valid_time-standard/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "valid_time-standard/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "valid_time-standard/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "valid_time-standard/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "valid_time-standard/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "valid_time-standard/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "valid_time-standard/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "valid_time-standard/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "valid_time-standard/Outfile.nc": "6e29d38cd64cca91677573ed140d4209acf479c5f5d5c7417f5e631791651f97",
+    "valid_time-standard/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "valid_time-standard/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "valid_time-standard/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "valid_time-standard/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "valid_time-standard/metfiles/metfile_0_0_2024-11-03.txt": "03af75e6a081dd04b94fd6a88a3249cae40e0d7387114cc79006c447c746bea2",
+    "valid_time-standard/metfiles/metfile_0_2_2024-11-03.txt": "9b6a438e3630e6286d7a71d55297884fe415c37508ca5c4f659b3ef3757a9be3",
+    "valid_time-standard/metfiles/metfile_2_0_2024-11-03.txt": "5b5bde966774b81fd69a3ccc876af48f1cac6ebef1b3c95e7b2bdeca57ccba4f",
+    "valid_time-standard/metfiles/metfile_2_2_2024-11-03.txt": "9199612d4ab0f3234d5fa753a06e271f3ef5fed4ce8b8ac4e530cf7b1ef7dc55",
+    "valid_time-uhi/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "valid_time-uhi/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "valid_time-uhi/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "valid_time-uhi/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "valid_time-uhi/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "valid_time-uhi/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "valid_time-uhi/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "valid_time-uhi/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "valid_time-uhi/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "valid_time-uhi/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "valid_time-uhi/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "valid_time-uhi/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "valid_time-uhi/Outfile.nc": "23370584699deb499f4ebc8050933a49db6876b03d768d20b8c51e06e36a7392",
+    "valid_time-uhi/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "valid_time-uhi/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "valid_time-uhi/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "valid_time-uhi/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "valid_time-uhi/metfiles/metfile_0_0_2024-11-03.txt": "36ba2312902b0ad14b141a63b5e2d9502e03dd45229bd2c7c60e4ae88d993c1b",
+    "valid_time-uhi/metfiles/metfile_0_2_2024-11-03.txt": "eaaa77a0b5c729314fe51b66936092c5acba8fab44ae582893c697e88f304d8b",
+    "valid_time-uhi/metfiles/metfile_2_0_2024-11-03.txt": "bb97566cd29f9e91028936488b1744a3594ec7ae7a77873ed14fd6170654305e",
+    "valid_time-uhi/metfiles/metfile_2_2_2024-11-03.txt": "fe188f164c40fba2447e9f8fc5064535570d98d9b2f59c1cac3610dbab7a6c26",
+    "wrf-original-failure/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "wrf-original-failure/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "wrf-original-failure/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "wrf-original-failure/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "wrf-original-failure/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "wrf-original-failure/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "wrf-original-failure/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "wrf-original-failure/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "wrf-original-failure/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "wrf-original-failure/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "wrf-original-failure/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "wrf-original-failure/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "wrf-original-failure/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "wrf-original-failure/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "wrf-original-failure/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "wrf-original-failure/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "wrf-patched-domain-shape-failure/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "wrf-patched-domain-shape-failure/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "wrf-patched-domain-shape-failure/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "wrf-patched-domain-shape-failure/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "wrf-patched-domain-shape-failure/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "wrf-patched-domain-shape-failure/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "wrf-patched-domain-shape-failure/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "wrf-patched-domain-shape-failure/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "wrf-patched-domain-shape-failure/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "wrf-patched-domain-shape-failure/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "wrf-patched-domain-shape-failure/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "wrf-patched-domain-shape-failure/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "wrf-patched-domain-shape-failure/Outfile.nc": "7a035076e8e06d2b87acd739dd7bfed3fdaf729582d3842f1a7e9613cc33a32a",
+    "wrf-patched-domain-shape-failure/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "wrf-patched-domain-shape-failure/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "wrf-patched-domain-shape-failure/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "wrf-patched-domain-shape-failure/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "wrf-patched-three-hour/Building_DSM/Building_DSM_0_0.tif": "92ac15ce132fc74618fada2261edad8ee5ca5dedda9910b68dc9e274fb80125b",
+    "wrf-patched-three-hour/Building_DSM/Building_DSM_0_2.tif": "9009809c7d57ec7708d5374ebeebac5cc6c22d6fb4c5a005daad113c0b6cc083",
+    "wrf-patched-three-hour/Building_DSM/Building_DSM_2_0.tif": "878c7bd50758c37ee51e5cd17807635e05c1c5928d73587b4f5b50d2be03f3e4",
+    "wrf-patched-three-hour/Building_DSM/Building_DSM_2_2.tif": "bb2c63cdb4e49332ade5d552c2150349f71c07cf6652863ba6a6555f94398204",
+    "wrf-patched-three-hour/DEM/DEM_0_0.tif": "d8c9b4f500c72d474202f5d62d73d6a3871aaa97b51019b9bd90c0a083567e02",
+    "wrf-patched-three-hour/DEM/DEM_0_2.tif": "de8221be58c58eeb29536e4f77a6356daa6de7f074ca17fa6fe113370b521d71",
+    "wrf-patched-three-hour/DEM/DEM_2_0.tif": "746a999f307d98f70f54270ef0c368405e46649646415bef619b188bf46f47d2",
+    "wrf-patched-three-hour/DEM/DEM_2_2.tif": "b0b7e884460752ecdbe57418d89249568b9fdae34ba56ff8c1ecfbe0f348d08a",
+    "wrf-patched-three-hour/Landcover/Landcover_0_0.tif": "7837a3016cda37f56229c235cf266391f49e8210745048e1b7530021cb246076",
+    "wrf-patched-three-hour/Landcover/Landcover_0_2.tif": "290d97f0e927028dd82fb3780894c58f218fe376c0e0e07821bd8e4bb7f2dac4",
+    "wrf-patched-three-hour/Landcover/Landcover_2_0.tif": "8740484750f2da03d8ccaa9b22326c094e19dea5206f21ce222a9515c0557e40",
+    "wrf-patched-three-hour/Landcover/Landcover_2_2.tif": "2ddfca55cf9cc4f8642c1075e9eee9d6e38a5acb86c568ece97088fef980fbf8",
+    "wrf-patched-three-hour/Outfile.nc": "b5df9b39be67d38808f5ebbd872db6fef83d6a613002544eb5687acc1c904c3a",
+    "wrf-patched-three-hour/Trees/Trees_0_0.tif": "f26c89734886abed1512eece1a15f91adf0ade7a9df152f11864dd2e17de8e28",
+    "wrf-patched-three-hour/Trees/Trees_0_2.tif": "45a675a8441713e09b95ad73fd0c8c51f48c44068d4fead27554088a09136d73",
+    "wrf-patched-three-hour/Trees/Trees_2_0.tif": "43aad801fdf21f9ec388d77091c1b39795aa4b37904ebc4f4367592064139cc5",
+    "wrf-patched-three-hour/Trees/Trees_2_2.tif": "54acdcdee1164f28dd0d4ff7ba727861e8c1ce6f3da19cb76622d3a8265b7e1b",
+    "wrf-patched-three-hour/metfiles/metfile_0_0_2024-06-21.txt": "b7649a8cf503db62818ab89f8291ec8aa636846dae4eeba3cb013c8a04db8d4b",
+    "wrf-patched-three-hour/metfiles/metfile_0_2_2024-06-21.txt": "92d40ac50609aa61b670e176bc71e8500f46faf3d7949091200503ab664da8a1",
+    "wrf-patched-three-hour/metfiles/metfile_2_0_2024-06-21.txt": "9dbb62526e3fa9471360dfe241da8a04529d4e14fdded87a9f4296c1e8e6e8f0",
+    "wrf-patched-three-hour/metfiles/metfile_2_2_2024-06-21.txt": "fb4f8185922935748601a9ae3478301fa56e82b9c23112ad417dce530c25fbca"
+  }
+}

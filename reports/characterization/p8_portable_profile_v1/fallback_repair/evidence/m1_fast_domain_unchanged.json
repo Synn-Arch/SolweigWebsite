@@ -1,0 +1,15 @@
+{
+  "all_finite_abs_lt_125": true,
+  "bitwise_equal": true,
+  "count": 118422,
+  "dtype": "float32",
+  "old_compiled_tan_array_sha256": "9628a4cab0f1308201772adf39316cfbfafac2885e3d23ddee7945fd8110574e",
+  "repaired_tan32_sha256": "9628a4cab0f1308201772adf39316cfbfafac2885e3d23ddee7945fd8110574e",
+  "schema": "portable-profile-v1-fast-domain-unchanged-proof.v1",
+  "shape": [
+    153,
+    774
+  ],
+  "source_fixture": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/torch_patch_scalar_trace/results/trace.npz",
+  "source_fixture_sha256": "9467d83c202b2ab9e50c2856f2d7350243b26afe7306d6fd23c1616b8d9e64fc"
+}

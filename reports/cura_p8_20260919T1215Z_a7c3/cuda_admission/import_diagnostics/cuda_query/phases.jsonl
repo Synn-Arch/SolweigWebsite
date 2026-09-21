@@ -1,0 +1,6 @@
+{"time": 1789838199.257581, "phase": "start", "pid": 933272}
+{"time": 1789838200.1327405, "phase": "torch_imported", "pid": 933272, "torch": "2.14.0+cu126", "compiled_cuda": "12.6"}
+{"time": 1789838200.1775296, "phase": "cuda_available", "pid": 933272, "available": true, "count": 1}
+{"time": 1789838200.2531044, "phase": "device_initialized", "pid": 933272, "name": "NVIDIA RTX A6000"}
+{"time": 1789838200.267384, "phase": "tensor_synchronized", "pid": 933272, "sum": 523776.0}
+{"time": 1789838200.7677248, "phase": "complete", "pid": 933272}

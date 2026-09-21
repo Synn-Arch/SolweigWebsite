@@ -1,0 +1,165 @@
+{
+  "note": "full default reference was contiguous 1D; chunks exercise vector tails, offsets exercise starting alignment; torch thread counts affect inter-op partitioning only if kernel parallelizes",
+  "variants": [
+    {
+      "chunk": 1,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 1,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 36,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 7,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 7,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 36,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 153,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 153,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 36,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 1024,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 1024,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 36,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 4096,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 4096,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 36,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 189220,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 189220,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 0,
+      "threads": 36,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 4096,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 1,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 4096,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 3,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 4096,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 7,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    },
+    {
+      "chunk": 4096,
+      "first_indices": [],
+      "mismatches_vs_full_default": 0,
+      "offset_floats": 15,
+      "threads": 1,
+      "ulp_distribution": {
+        "0": 189220
+      }
+    }
+  ]
+}

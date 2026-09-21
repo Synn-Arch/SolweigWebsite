@@ -1,0 +1,38 @@
+- test_sequence: perf_tests
+  function: ldexp
+  timing_enabled: true
+  test_sets:
+  - id: range-tests_01
+    tests:
+# Single Precision (exponent kept within the float binary-exponent range)
+    - id: ldexp_ss_001
+      description: 'Positive values: [SMALLEST_SUBNORMAL, FLT_MAX]'
+      input: [[min_subnormal, max], [-126, 127]]
+      type: [linearstep, integer]
+      steps: [200, 200]
+      variants : [ss]
+
+    - id: ldexp_ss_002
+      description: 'Negative values: [-FLT_MAX, -SMALLEST_SUBNORMAL]'
+      input: [[-max, -min_subnormal], [-126, 127]]
+      type: [linearstep, integer]
+      steps: [200, 200]
+      variants : [ss]
+
+
+#Double precision (exponent kept within the double binary-exponent range)
+    - id: ldexp_sd_001
+      description: 'Positive values: [SMALLEST_SUBNORMAL, DBL_MAX]'
+      input: [[min_subnormal, max], [-1022, 1023]]
+      type: [linearstep, integer]
+      steps: [200, 200]
+      variants : [sd]
+
+    - id: ldexp_sd_002
+      description: 'Negative values: [-DBL_MAX, -SMALLEST_SUBNORMAL]'
+      input: [[-max, -min_subnormal], [-1022, 1023]]
+      type: [linearstep, integer]
+      steps: [200, 200]
+      variants : [sd]
+
+

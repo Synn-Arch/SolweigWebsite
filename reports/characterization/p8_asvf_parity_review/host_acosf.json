@@ -1,0 +1,32 @@
+{
+  "diagnostic_only": "host C acosf after float32 NumPy sqrt; not production implementation",
+  "finite_bit_mismatches": 5108,
+  "nan_mask_equal": true,
+  "examples": [
+    {
+      "input": 0.34077978134155273,
+      "output_bits": 1064471406,
+      "oracle_bits": 1064471407
+    },
+    {
+      "input": 0.5231616497039795,
+      "output_bits": 1061364067,
+      "oracle_bits": 1061364068
+    },
+    {
+      "input": 0.795613706111908,
+      "output_bits": 1055928050,
+      "oracle_bits": 1055928051
+    },
+    {
+      "input": 0.7991904020309448,
+      "output_bits": 1055778756,
+      "oracle_bits": 1055778757
+    },
+    {
+      "input": 0.3428671956062317,
+      "output_bits": 1064434489,
+      "oracle_bits": 1064434490
+    }
+  ]
+}

@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="9" skipped="0" tests="9" time="19.314" timestamp="2026-09-19T22:34:37.774803-04:00" hostname="analytica"><testcase classname="" name="test_chronological_tiff_pipeline[small-False]" time="7.794"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli0')
+case = 'small', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[small-True]" time="0.927"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli1')
+case = 'small', cold = True
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[raw-True]" time="2.932"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli2')
+case = 'raw', cold = True
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[base-False]" time="0.908"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli3')
+case = 'base', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[uhi-False]" time="0.916"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli4')
+case = 'uhi', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[landcover-False]" time="1.717"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli5')
+case = 'landcover', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[landcover_normalized-False]" time="1.681"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli6')
+case = 'landcover_normalized', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[directional-False]" time="0.932"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli7')
+case = 'directional', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase><testcase classname="" name="test_chronological_tiff_pipeline[legacy_wrapper-False]" time="0.899"><failure message="AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}&#10;  &#10;  Extra items in the right set:&#10;  '._Wind_0_0.tif'&#10;  '._Lup_0_0.tif'&#10;  '._UTCI_0_0.tif'&#10;  '._Shadow_0_0.tif'&#10;  '._TMRT_0_0.tif'...&#10;  &#10;  ...Full output truncated (6 lines hidden), use '-vv' to show">tmp_path = PosixPath('/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/pipeline9_tmp/test_chronological_tiff_pipeli8')
+case = 'legacy_wrapper', cold = False
+
+    @pytest.mark.parametrize('case,cold', [('small', False), ('small', True), ('raw', True)] +
+                             [(name, False) for name in ('base', 'uhi', 'landcover',
+                              'landcover_normalized', 'directional', 'legacy_wrapper')])
+    def test_chronological_tiff_pipeline(tmp_path, case, cold):
+        assert importlib.util.find_spec('torch') is None, 'Run candidate checks in the isolated CPU environment'
+        reference = REFERENCE if case in ('small', 'raw') else ROOT / 'tests/reference/optional_original_cpu' / case
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(reference / 'processed_inputs', prepared)
+        if cold:
+            shutil.rmtree(prepared / 'SVF')
+        paths = {name: files_by_key(prepared / name)['0_0'] for name in
+                 ('Building_DSM', 'Trees', 'DEM', 'walls', 'aspect', 'metfiles')}
+        if (prepared / 'Landcover').is_dir():
+            paths['Landcover'] = files_by_key(prepared / 'Landcover')['0_0']
+        flags = {f'save_{name}': True for name in
+                 ('tmrt', 'svf', 'kup', 'kdown', 'lup', 'ldown', 'shadow', 'wbgt', 'ta', 'wind')}
+        if case == 'raw':
+            from solweig_light import thermal_comfort
+            shutil.rmtree(prepared)
+            for filename in ('Building_DSM.tif', 'Trees.tif', 'DEM.tif', 'met.txt'):
+                shutil.copy2(reference / filename, tmp_path / filename)
+            assert thermal_comfort(str(tmp_path), '2020-07-18', own_met_file=str(tmp_path / 'met.txt'),
+                                   tile_size=64, overlap=0, ERA_5_z0_find=False, **flags) is None
+        else:
+            run_tile(tmp_path, prepared, '2020-07-18', '0_0', paths, flags)
+        output = tmp_path / 'output_folder/0_0'
+        expected_files = {p.name for p in (reference / 'output_folder/0_0').glob('*.tif')}
+&gt;       assert {p.name for p in output.glob('*.tif')} == expected_files | ({'SVF_0_0.tif'} if cold and case != 'raw' else set())
+E       AssertionError: assert {'Kdown_0_0.t...0_0.tif', ...} == {'._Kdown_0_0...0_0.tif', ...}
+E         
+E         Extra items in the right set:
+E         '._Wind_0_0.tif'
+E         '._Lup_0_0.tif'
+E         '._UTCI_0_0.tif'
+E         '._Shadow_0_0.tif'
+E         '._TMRT_0_0.tif'...
+E         
+E         ...Full output truncated (6 lines hidden), use '-vv' to show
+
+../source/tests/differential/test_pipeline_reference.py:45: AssertionError</failure></testcase></testsuite></testsuites>

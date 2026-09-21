@@ -1,0 +1,35 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2950,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/final_cleanup_report.json",
+      "sha256": "e4f83ff5f1c5b14373d82ee8e0e555db0453a98e395e46aad7d55b017cfa23e5"
+    },
+    {
+      "bytes": 161296,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/selected.sha256",
+      "sha256": "c1c62d3ac97e809b869b946237a92587922215190306a9643748becd359c37d1"
+    },
+    {
+      "bytes": 52261815,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/selected_evidence.tar.gz",
+      "sha256": "ebd5f12aa9f2d25b685758f4bd48a146c8523b20eed02ef570ce88f5336e5d44"
+    },
+    {
+      "bytes": 95576,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/selected_verify.log",
+      "sha256": "f28811dcec9e8b4987c1f767280020e029e257ff6ac874b351d96435d9de64e9"
+    },
+    {
+      "bytes": 344,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/selection.json",
+      "sha256": "7fd9557f4298d1def83c6be03ebddafbca2cf087553ed7392595537d45746d89"
+    },
+    {
+      "bytes": 24406067,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/whole_tree_inventory.json",
+      "sha256": "0dbdcd5c4ee3697a1f2be82cb256a34c7816f8ff3be306c507b2e637671a7d57"
+    }
+  ],
+  "schema_version": 1
+}

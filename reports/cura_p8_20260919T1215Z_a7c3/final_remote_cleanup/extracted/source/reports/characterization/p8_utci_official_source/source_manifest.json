@@ -1,0 +1,25 @@
+{
+  "url": "https://utci.org/resources/UTCI%20Program%20Code.zip",
+  "retrieved_date": "2026-09-19",
+  "sha256": "83ea34dc2428093c8b0f4e299bfb0a24752ff49ec1e11741927a75dafae283f1",
+  "bytes": 252552,
+  "archive_members": [
+    "UTCI Program Code/",
+    "UTCI Program Code/UTCI_a002.exe",
+    "UTCI Program Code/ReadMe_UTCI_a002.txt",
+    "UTCI Program Code/UTCI_a002.f90"
+  ],
+  "status": "downloaded_not_evaluated",
+  "text_members": {
+    "UTCI Program Code/ReadMe_UTCI_a002.txt": {
+      "path": "reports/characterization/p8_utci_official_source/ReadMe_UTCI_a002.txt",
+      "sha256": "c52e87ace3bf2d171dcabbc7c130cd8cf94f23404206e9285101d4709556a4fd",
+      "bytes": 4847
+    },
+    "UTCI Program Code/UTCI_a002.f90": {
+      "path": "reports/characterization/p8_utci_official_source/UTCI_a002.f90",
+      "sha256": "85c06e2cc9806520359730d2a621050a5b627792ba92b33dc69f6ec7b25236bc",
+      "bytes": 18611
+    }
+  }
+}

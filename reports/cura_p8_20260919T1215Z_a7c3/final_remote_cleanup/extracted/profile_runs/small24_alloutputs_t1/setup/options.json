@@ -1,0 +1,12 @@
+{
+  "block_pixels": 128,
+  "cache_dir": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/profile_runs/small24_alloutputs_t1/setup/geometry_cache",
+  "cache_enabled": true,
+  "checkpoint_interval": 1,
+  "cpu_budget": 1,
+  "legacy_cache_policy": "recompute",
+  "memory_budget_bytes": 4294967296,
+  "resume": false,
+  "threads_per_worker": 1,
+  "workers": 1
+}

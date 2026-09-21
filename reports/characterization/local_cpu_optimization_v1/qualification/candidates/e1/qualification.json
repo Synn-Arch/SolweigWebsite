@@ -1,0 +1,27 @@
+{
+  "candidate": "e1",
+  "every_timestep_exactness_passed": true,
+  "evidence": [
+    {
+      "label": "historical_e1_functional_admission",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/e1/admission.json",
+      "sha256": "0b562f4d8dac6bb017abd14d254aad062a19f1db9d58c7c9c7d6105679b0fa8f"
+    },
+    {
+      "label": "exact_trace_qualification",
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/trace/qualification.json",
+      "sha256": "546876806fd72c93746a592a35c5ddbb2a521217efcb754a3d44bc016f5ecd98"
+    }
+  ],
+  "functional_qualification": true,
+  "notes": "216 copied E1 functional tests plus exact small-fixture trace; no speed claim.",
+  "performance_claim": null,
+  "performance_qualification": false,
+  "promotion_approved": false,
+  "schema": "local-cpu-optimization-v1-candidate-qualification.v1",
+  "source_file_count": 48,
+  "source_inventory_path": "reports/characterization/local_cpu_optimization_v1/candidates/e1/src",
+  "source_inventory_sha256": "2969eed07382ca458462f1a8d9f0bd5003ddaead73d4988540db526fdeb3b67b",
+  "source_manifest_sha256": "c16f8400c02a9598b702af85f385b5bd9109b7e3067c7254e98e11b51594ecc4",
+  "status": "passed"
+}

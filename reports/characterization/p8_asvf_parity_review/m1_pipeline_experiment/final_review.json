@@ -1,0 +1,115 @@
+{
+  "status": "isolated_M1_prototype_ready_for_review; not_promoted",
+  "source_tests": {
+    "tests": "750",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "71.389"
+  },
+  "installed_wheel_tests": {
+    "tests": "9",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "23.766"
+  },
+  "classifier_gate": {
+    "actual_upstream_per_patch_oracle": true,
+    "solar_timesteps": 24,
+    "boundary_SVF_inputs": 774,
+    "local_frozen_unique_SVF_inputs": 249,
+    "patches": 153,
+    "blocks": [
+      17,
+      128,
+      1023
+    ],
+    "layouts": [
+      "contiguous",
+      "stride2noncontiguous"
+    ],
+    "serial_and_prepared_masks": "zero differences across every recorded variant",
+    "installed_package": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/venv/lib/python3.11/site-packages/solweig_light/__init__.py"
+  },
+  "artifact_gate": {
+    "comparisons": 18,
+    "fields_per_case": 10,
+    "bands_per_field": 24,
+    "reference": "originalCPU frozen fixtures",
+    "rule": "unchanged comparison_v1",
+    "schemas_masks_nodata_timestamps": "passed",
+    "genuine_raw_TIFF_to_TIFF": "passed in source and installedwheel",
+    "extended_cases": [
+      "base",
+      "uhi",
+      "landcover",
+      "landcover_normalized",
+      "directional",
+      "legacy_wrapper"
+    ]
+  },
+  "wheel_environment": {
+    "package": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/venv/lib/python3.11/site-packages/solweig_light/__init__.py",
+    "absent": {
+      "torch": true,
+      "xarray": true,
+      "cdsapi": true,
+      "wrf": true
+    },
+    "license_included": true
+  },
+  "main_source_inventory_unchanged": true,
+  "snapshot_installed_package_bytes_identical": true,
+  "changed_subsystems": [
+    "identities.py",
+    "pipeline.py",
+    "radiation/SLEEF_LICENSE.txt",
+    "radiation/_math_profile.py",
+    "radiation/_sleef_acos.py",
+    "radiation/_sleef_classifier.py",
+    "radiation/engine.py",
+    "radiation/patch_radiation.py"
+  ],
+  "source_patch": "source.patch",
+  "scope_limits": [
+    "32x35small ownmet and existingoptional fixtures; not M1 1024-scale admission",
+    "Float64scalar cos/tan remainNumPy, with observed bitdifferences; all24 frozen solar mask and fullradiation/output gates pass, but universal intermediatebitparity is not established",
+    "SLEEFtan prototype handles abs(input)<125 plus nonfinite; physicalASVF domain is withinthisbound. Not a general-purpose trig replacement",
+    "Three retained RuntimeWarnings in each pipeline testlog; no failures/skips",
+    "No performance claim, no production sourcechange, no LinuxMKLapproval inferred or releaseclaim"
+  ],
+  "profile": "m1-sleef-5a1d179d-fma-f32-classifier-experiment-v1",
+  "math_profile_identity": "Explicit in geometry and simulation/checkpoint identities; helpercontent hashes included",
+  "provenance": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "sleef_source": "../sleef_source/provenance.json",
+    "license_in_wheel": "solweig_light/radiation/SLEEF_LICENSE.txt",
+    "protocol_sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd"
+  },
+  "commands": [
+    ".venv-oracle/bin/python reports/characterization/p8_asvf_parity_review/m1_full_solar_probe.py --oracle",
+    "PYTHONPATH=src .venv-light/bin/python reports/characterization/p8_asvf_parity_review/m1_full_solar_probe.py",
+    ".venv-light/bin/python reports/characterization/p8_asvf_parity_review/prepare_m1_snapshot.py",
+    "uv venv --python .venv-light/bin/python reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/venv",
+    "uv pip install --offline --python reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/venv/bin/python -r requirements/macos-arm64-py311.txt",
+    "PYTHONPATH=<snapshot>/src NUMBA_NUM_THREADS=10 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv-light/bin/python -m pytest -q tests/differential/test_pipeline_reference.py tests/differential/test_radiation_reference.py tests/differential/test_patch_radiation.py tests/unit/test_patch_classification.py --basetemp=<experiment>/source_tests --junitxml=<experiment>/source_junit.xml",
+    ".venv-light/bin/python -m build --wheel --no-isolation <snapshot> --outdir <experiment>/wheels",
+    "uv pip install --offline --no-deps --python <experiment>/venv/bin/python <experiment>/wheels/solweig_light-0.1.0.dev0-py3-none-any.whl",
+    "NUMBA_NUM_THREADS=4 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 <experiment>/venv/bin/python reports/characterization/p8_asvf_parity_review/m1_full_solar_probe.py --actual-package --label installed",
+    "NUMBA_NUM_THREADS=4 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 <experiment>/venv/bin/python -m pytest -q tests/differential/test_pipeline_reference.py --basetemp=<experiment>/wheel_tests --junitxml=<experiment>/wheel_junit.xml"
+  ],
+  "command_expansions": {
+    "<experiment>": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment",
+    "<snapshot>": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/snapshot"
+  },
+  "evidence_sha256": {
+    "source.patch": "2c130b7826831ed6d05266be35e7e2b64453d954eada8cf8eaee57ed6e076384",
+    "source_manifest.json": "f099274e9eb3f1a2932cad9ae2762f112f26c77d956f9c6f1f69b9dd1fc1f0cf",
+    "source_junit.xml": "eb7f165a58501d8ebfe16289e3d16f32240235bb18fa6534b7e786bbb51d7268",
+    "wheel_junit.xml": "dd29a633c3048e9fecbe1e0182cadf4a1ce7d0797c2637642399663c6e51129a",
+    "full_artifact_comparisons.json": "002b100bf6a7ab106da4c984eb2ee04d3025a9b215757cd3e90d97f4e1504d4e",
+    "output_sha256.json": "603feda99d3edd03e78a2e2434b4823398503bc598bd78cd9f047b8d088f436e",
+    "wheels/solweig_light-0.1.0.dev0-py3-none-any.whl": "1710752549eef6860cf34fb8863e377b92be743a2cea50ec7fcb2e8762c6c577"
+  }
+}

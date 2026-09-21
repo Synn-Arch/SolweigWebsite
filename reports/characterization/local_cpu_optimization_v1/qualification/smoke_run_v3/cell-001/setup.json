@@ -1,0 +1,116 @@
+{
+  "baseline": {
+    "measurement": {
+      "abort_reason": null,
+      "cleanup": {
+        "errors": [],
+        "group_signal": "group_absent",
+        "launcher_exited_with_live_group": false,
+        "launcher_wait": "already_exited_reaped",
+        "ownership": {
+          "basis": "popen_start_new_session_contract",
+          "expected_process_group": 44481,
+          "expected_session": 44481,
+          "launcher_pid": 44481,
+          "live_verified": true,
+          "observed_process_group": 44481,
+          "observed_session": 44481,
+          "start_new_session": true,
+          "verified": true
+        },
+        "passed": true,
+        "post_cleanup_group_exists": false,
+        "post_cleanup_owned_pids": [],
+        "pre_cleanup_group_exists": false,
+        "pre_cleanup_owned_pids": [],
+        "timeout_seconds": 5.0
+      },
+      "cleanup_elapsed_seconds": 0.0008031250908970833,
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_exact_cpu_pairs.py",
+        "--child",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/smoke_run_v3/cell-001/baseline/setup.spec.json"
+      ],
+      "disk_reserve_bytes": 10737418240,
+      "elapsed_seconds": 35.72189691604581,
+      "maximum_trial_seconds": 3600,
+      "memory_limit_aborted": false,
+      "memory_limit_bytes": 12884901888,
+      "monitor_error": null,
+      "monitoring_passed": true,
+      "returncode": 0,
+      "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+      "rss_valid": true,
+      "sample_interval_seconds": 0.02,
+      "sampled_process_tree_peak_rss_bytes": 590151680,
+      "samples": 1168,
+      "supervisor_elapsed_seconds": 35.72347883298062,
+      "timing_scope": "Launch through first observed launcher exit; cleanup and evidence sync excluded. Poll interval is 20 ms."
+    },
+    "status": {
+      "failure_artifacts": [],
+      "outcome": {
+        "status": "executed_not_yet_compared"
+      },
+      "passed": true
+    }
+  },
+  "candidate": {
+    "measurement": {
+      "abort_reason": null,
+      "cleanup": {
+        "errors": [],
+        "group_signal": "group_absent",
+        "launcher_exited_with_live_group": false,
+        "launcher_wait": "already_exited_reaped",
+        "ownership": {
+          "basis": "popen_start_new_session_contract",
+          "expected_process_group": 45888,
+          "expected_session": 45888,
+          "launcher_pid": 45888,
+          "live_verified": true,
+          "observed_process_group": 45888,
+          "observed_session": 45888,
+          "start_new_session": true,
+          "verified": true
+        },
+        "passed": true,
+        "post_cleanup_group_exists": false,
+        "post_cleanup_owned_pids": [],
+        "pre_cleanup_group_exists": false,
+        "pre_cleanup_owned_pids": [],
+        "timeout_seconds": 5.0
+      },
+      "cleanup_elapsed_seconds": 0.0009684170363470912,
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_exact_cpu_pairs.py",
+        "--child",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/smoke_run_v3/cell-001/candidate/setup.spec.json"
+      ],
+      "disk_reserve_bytes": 10737418240,
+      "elapsed_seconds": 34.91838312509935,
+      "maximum_trial_seconds": 3600,
+      "memory_limit_aborted": false,
+      "memory_limit_bytes": 12884901888,
+      "monitor_error": null,
+      "monitoring_passed": true,
+      "returncode": 0,
+      "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+      "rss_valid": true,
+      "sample_interval_seconds": 0.02,
+      "sampled_process_tree_peak_rss_bytes": 586940416,
+      "samples": 1141,
+      "supervisor_elapsed_seconds": 34.919665459077805,
+      "timing_scope": "Launch through first observed launcher exit; cleanup and evidence sync excluded. Poll interval is 20 ms."
+    },
+    "status": {
+      "failure_artifacts": [],
+      "outcome": {
+        "status": "executed_not_yet_compared"
+      },
+      "passed": true
+    }
+  }
+}

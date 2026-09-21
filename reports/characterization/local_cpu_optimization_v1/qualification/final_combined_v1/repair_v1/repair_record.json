@@ -1,0 +1,64 @@
+{
+  "baseline_source_focused": {
+    "command": "PYTHONPATH=<repo>/src:<repo>:<repair_v1> PYTHONNOUSERSITE=1 NUMBA_NUM_THREADS=10 private NUMBA_CACHE_DIR/TMPDIR pytest -q -p baseline_guard tests/unit/test_p7_serial_variant_harness.py -k test_child_failure_is_retained_as_job_failure --junitxml=repair_v1/baseline/junit.xml",
+    "deselected": 17,
+    "explicit_source_target": "src/solweig_light",
+    "junit_path": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/baseline/junit.xml",
+    "junit_sha256": "98e005cc0c240701b0dd37d86367f54f428e836b4e429d90331b2254377bc09b",
+    "package_origin": "src/solweig_light/__init__.py",
+    "result": {
+      "failed": 0,
+      "passed": 1,
+      "skipped": 0,
+      "total": 1
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "3093a3c0e58bf998e8d2a9e148b9b89602e0f86fd90805bc0603a95bea0360de",
+    "torch_imported": false
+  },
+  "installed_wheel_focused": {
+    "command": "PYTHONPATH=<site-packages>:<repo>:<installed_tests> PYTHONNOUSERSITE=1 NUMBA_NUM_THREADS=10 private NUMBA_CACHE_DIR/TMPDIR pytest -q -p tests.helpers.installed_wheel_guard -p target_guard tests/unit/test_p7_serial_variant_harness.py --junitxml=repair_v1/installed/junit.xml",
+    "explicit_target_guard": true,
+    "installed_wheel_guard": true,
+    "junit_path": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/installed/junit.xml",
+    "junit_sha256": "8694b878f55319e1c5b2c3520fc64ed88b117a32ec08baf07b256c2004aa4147",
+    "package_origin": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/__init__.py",
+    "result": {
+      "failed": 0,
+      "passed": 18,
+      "skipped": 0,
+      "total": 18
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "ff536cfe35447d0faa0742840914c09c3d53775df0a034f6db67d4493f8ee627",
+    "torch_imported": false
+  },
+  "prior_attempt_retained": {
+    "corrected_narrative": "The prior v2 rerun excluded the entire 18-test file, not only this one case; this supplemental run covers all 18 installed-wheel cases and separately the repaired baseline case.",
+    "failure": "tests/unit/test_p7_serial_variant_harness.py::test_child_failure_is_retained_as_job_failure",
+    "path": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/installed_tests/attempt_v1_failure.json",
+    "prior_junit_sha256": "081453eb75c97e31009a1e6e7e6f4b609531ac55e132702340ee3db8f4632a12",
+    "result": "3320 passed, 1 failed",
+    "sha256": "e96f7907d8b87ec2e12868f9dfe582e19de9e764b2dd01a16b09d8b564c0bd14"
+  },
+  "purpose": "Focused test-only repair verification; no production, candidate, harness, protocol, numerical, or timing changes.",
+  "qualification_record_preserved": {
+    "path": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/qualification.json",
+    "sha256": "93e99a6709327d98bf33eb59e8038df85e07a5a653084ea913fa3d09f8107b52"
+  },
+  "repair": {
+    "changed_semantics": "test derives source root from actually imported solweig_light.__file__; removes ROOT/src prepend; assertions unchanged",
+    "path": "tests/unit/test_p7_serial_variant_harness.py",
+    "sha256": "0738dbddf4d6ee283b035cc78ec8a42ac054e5b8cea6cde1e56e90092cfae043",
+    "source_origin_failure_explained": "The prior installed run failed in the source-origin guard before reaching missing-entrypoint getattr semantics; it was not a missing-entrypoint behavior failure."
+  },
+  "schema": "local-cpu-optimization-final-combined-repair-v1.v1",
+  "source_bindings": {
+    "candidate_source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+    "installed_target": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages",
+    "no_timing_matrix_started": true,
+    "ready_for_promotion_matrix": "pending lead review",
+    "tools_run_p7_serial_variant_sha256": "d688ae60fbd82e13ecf58b2598f13ba3aa66201ddf56ed1857ffd9c7c12720d5"
+  },
+  "status": "passed"
+}

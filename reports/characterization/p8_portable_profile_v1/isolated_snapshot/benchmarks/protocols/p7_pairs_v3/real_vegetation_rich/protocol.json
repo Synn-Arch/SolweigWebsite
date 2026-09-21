@@ -1,0 +1,127 @@
+{
+  "amendment_reason": "Original-reference failures required angular and annulus arithmetic repairs in both variants; original failed reports retained",
+  "amendment_script_sha256": "cd78186c0db93a77aedceadbd7b81107609363001fdc7ac60f9614eabe9d9c40",
+  "artifact_globs": [
+    "output_folder/**/*.tif",
+    "processed_inputs/SVF/*.tif",
+    "processed_inputs/SVF/*.zip",
+    "processed_inputs/SVF/*.npz"
+  ],
+  "baseline_label": "P6 plus angular and SVF weight compatibility repairs; not unchanged accepted P6",
+  "baseline_manifest": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repaired_p6_baseline_v2/manifest.json",
+  "baseline_manifest_sha256": "5a9874c41d5f4daf4a939fa46e2c5857e4416b98713ddf7404666dad86015aa2",
+  "cold_remove_relative": [
+    "processed_inputs",
+    "output_folder",
+    ".runtime_cache",
+    ".solweig-light",
+    ".solweig-light-locks"
+  ],
+  "comparison_protocol_sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+  "correctness_report": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repair_v2_correctness/gate.json",
+  "correctness_report_sha256": "a8911fbc15639ec8ac7ac2af05ad7a9bca4bb1a44bf468a45c97a95ef64a1e9b",
+  "fixture": "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/p7_real/vegetation_rich",
+  "fixture_hashes": {
+    "Building_DSM.tif": "35a57b6a1641c2f706910b576504e66ac73f0b45688b6a1e39708f65a3537063",
+    "DEM.tif": "09d52b3693709df003dc76b7cfa6a2e255b4b7b9e0bfe90766117a42a59f38e7",
+    "Landcover.tif": "95c44b4c16d3a6749b4ade017802ca45669f6d21b924ba88f753fac937218713",
+    "Trees.tif": "fef326ce3877d156f7a5ad4df752568a5aa403269b6faa1be5210dc68beb6d6b",
+    "kwargs.json": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+    "manifest.json": "851c568b1589db04f1f28a9866bbb300026de531e1d7a2bb9c7f2ed95cf376fa",
+    "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+  },
+  "freezer_sha256": "4e3d279d1e0d2349cd073ec30edb7050f9327500c41f2687e3bbfd7287bccba6",
+  "instrument_sha256": "d5987b2c149d823c794a23a5855cbc12c607cc7c4c897ce8cae1aeea4657743b",
+  "kwargs_manifest": "/Users/alansynn/Workspace/solweig-light/benchmarks/protocols/p7_pairs_v2/real_vegetation_rich/kwargs.json",
+  "limitations": [
+    "Development host; OS page cache uncontrolled",
+    "Warm means validated geometry warm, not JIT warm",
+    "No reduced patches, resolution, timesteps or output computation"
+  ],
+  "memory_budget_bytes": 12884901888,
+  "native_budgets": [
+    1,
+    4
+  ],
+  "parent_protocol": "/Users/alansynn/Workspace/solweig-light/benchmarks/protocols/p7_pairs_v2/real_vegetation_rich/protocol.json",
+  "parent_protocol_sha256": "76ee4e30a2a1691d5ea7272ab8dd50fa76234172157863ddd2570bd8d8e417f5",
+  "preprocess_relative": "processed_inputs",
+  "regimes": [
+    "cold",
+    "geometry_warm"
+  ],
+  "repair_patch_sha256": "2bd0d629d63894d5d2ee95b8d83230d651b710340a80bf3b6f2535e46047eb54",
+  "repair_policy": "angular_and_svf_weights_v1",
+  "repetitions": 5,
+  "runtime_options": {
+    "block_pixels": 128,
+    "cache_dir": "{scene}/.runtime_cache",
+    "cache_enabled": true,
+    "checkpoint_interval": 1,
+    "legacy_cache_policy": "recompute"
+  },
+  "schema_version": 3,
+  "scope": "Repaired P6 versus optimized candidate; not unchanged P6 or upstream speedup evidence",
+  "seed": 20260918,
+  "status": "workload_frozen_before_tuning; baseline_amended_after_correctness_repair_before_paired_timing",
+  "tiff_field_rules": {
+    "Kdown": {
+      "atol": 0.05,
+      "rtol": 1e-05,
+      "unit": "W m-2"
+    },
+    "Kup": {
+      "atol": 0.05,
+      "rtol": 1e-05,
+      "unit": "W m-2"
+    },
+    "Ldown": {
+      "atol": 0.05,
+      "rtol": 1e-05,
+      "unit": "W m-2"
+    },
+    "Lup": {
+      "atol": 0.05,
+      "rtol": 1e-05,
+      "unit": "W m-2"
+    },
+    "SVF": {
+      "max_abs": 1e-06
+    },
+    "Shadow": {
+      "rule": "exact_value_and_masks",
+      "unit": "transmitted_visibility"
+    },
+    "SkyViewFactor": {
+      "max_abs": 1e-06
+    },
+    "TMRT": {
+      "max_abs": 0.01,
+      "unit": "degC"
+    },
+    "Ta": {
+      "rule": "match float32 operation order; exact on frozen forcing",
+      "unit": "degC"
+    },
+    "UTCI": {
+      "max_abs": 0.02,
+      "unit": "degC"
+    },
+    "WBGT": {
+      "max_abs": 0.02,
+      "unit": "degC"
+    },
+    "Wind": {
+      "rule": "exact selection, clamp and values on frozen fixtures",
+      "unit": "m s-1"
+    },
+    "svf": {
+      "max_abs": 1e-06
+    }
+  },
+  "warm_remove_relative": [
+    "output_folder",
+    ".solweig-light",
+    ".solweig-light-locks"
+  ]
+}

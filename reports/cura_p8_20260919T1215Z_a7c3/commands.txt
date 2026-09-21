@@ -1,0 +1,15 @@
+Remote root: /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3
+
+Environment creation:
+$HOME/miniforge3/bin/conda create -y -p "$REMOTE_ROOT/env" -c conda-forge --strict-channel-priority python=3.12 numpy=2.4 scipy=1.17 numba=0.67 pytest=9 gdal=3.13 pytz=2026.3 timezonefinder=9 pip setuptools
+
+Queued science execution:
+PYTHONPATH="$REMOTE_ROOT/source/src" NUMBA_CACHE_DIR="$REMOTE_ROOT/tmp/numba" CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=4 "$REMOTE_ROOT/env/bin/python" -m pytest -q tests/scientific/test_radiation_analytic.py tests/scientific/test_directional_wind_analytic.py tests/scientific/test_utci_independent.py tests/scientific/test_umep_delay_independent.py tests/scientific/test_umep_ground_view_independent.py tests/scientific/test_svf_analytic.py --junitxml="$REMOTE_ROOT/results/p8_queued_science_tests.xml"
+
+Directional environment retry:
+PYTHONPATH="$REMOTE_ROOT/source/src" NUMBA_CACHE_DIR="$REMOTE_ROOT/tmp/numba" CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PROJ_DATA="$REMOTE_ROOT/env/share/proj" GDAL_DATA="$REMOTE_ROOT/env/share/gdal" "$REMOTE_ROOT/env/bin/python" -m pytest -q tests/scientific/test_directional_wind_analytic.py --junitxml="$REMOTE_ROOT/results/p8_directional_wind_retry.xml"
+
+The first attempt to capture the package manifest used the nonexistent path `$REMOTE_ROOT/env/bin/conda` and exited 127 before tests. The corrected command was `$HOME/miniforge3/bin/conda list -p "$REMOTE_ROOT/env" --explicit`.
+
+Revised radiation test rerun:
+PYTHONPATH="$REMOTE_ROOT/source/src" NUMBA_CACHE_DIR="$REMOTE_ROOT/tmp/numba" CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 PROJ_DATA="$REMOTE_ROOT/env/share/proj" GDAL_DATA="$REMOTE_ROOT/env/share/gdal" "$REMOTE_ROOT/env/bin/python" -m pytest -q tests/scientific/test_radiation_analytic.py --junitxml="$REMOTE_ROOT/results/p8_radiation_analytic_revision_tests.xml"

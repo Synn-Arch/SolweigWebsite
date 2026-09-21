@@ -1,0 +1,13 @@
+{
+  "original_vs_candidate_dense_all_bitwise": true,
+  "original_vs_candidate_compact_all_bitwise": true,
+  "all_bounded": true,
+  "unity_failed_indices": [
+    6,
+    7,
+    9,
+    10,
+    13,
+    14
+  ]
+}

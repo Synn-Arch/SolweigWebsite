@@ -1,0 +1,17 @@
+{
+  "diagnosis": {
+    "path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_real_diagnosis/svf_weights/repair_verification.json",
+    "sha256": "bcd1618d31b178d7e99bc66d8c3f9cb0765f258ec4ec569850fd49d624296d35"
+  },
+  "limitation": "174/180 weights bitwise equal; six within one ULP on this host",
+  "passed": true,
+  "reference_manifest": {
+    "path": "/Users/alansynn/Workspace/solweig-light/tests/reference/p7_svf_annulus_original_cpu/manifest.json",
+    "sha256": "8020da8f626b51e40a3421e64713c4e17851c9e03f9dc6dad244490df24caf20"
+  },
+  "source_sha256": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+  "tests": {
+    "path": "/Users/alansynn/Workspace/solweig-light/reports/p7_repair_v2_installed_tests.xml",
+    "sha256": "e4fffb30d30c48a79425be54f25b489c884649d1c6001924c46c4d9fd5ed7a6c"
+  }
+}

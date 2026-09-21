@@ -1,0 +1,212 @@
+{
+  "input_count": 189220,
+  "boundary_inputs": 774,
+  "patches": 153,
+  "qualification": "Actual per-patch original masks, not rejected vector-broadcast oracle; host NumPy float64 scalar cosine/tangent remains a qualified coefficient dependency.",
+  "sqrt_correct_rounded_vs_torch": {
+    "finite_bit_mismatches": 1230,
+    "all_bit_mismatches": 1230,
+    "nan_mask_equal": true,
+    "max_abs": 5.960464477539063e-08
+  },
+  "profiles": {
+    "intel_igc_ha": {
+      "asvf": {
+        "finite_bit_mismatches": 6873,
+        "all_bit_mismatches": 6876,
+        "nan_mask_equal": true,
+        "max_abs": 8.940696716308594e-07
+      },
+      "actual_boundary_masks": {
+        "sun": 11,
+        "shade": 27
+      },
+      "categories": {
+        "frozen": {
+          "finite_bit_mismatches": 4263,
+          "all_bit_mismatches": 4263,
+          "nan_mask_equal": true,
+          "max_abs": 4.76837158203125e-07
+        },
+        "boundary": {
+          "finite_bit_mismatches": 43,
+          "all_bit_mismatches": 43,
+          "nan_mask_equal": true,
+          "max_abs": 3.5762786865234375e-07
+        },
+        "random": {
+          "finite_bit_mismatches": 2576,
+          "all_bit_mismatches": 2576,
+          "nan_mask_equal": true,
+          "max_abs": 8.940696716308594e-07
+        },
+        "edge": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 3,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        },
+        "hotspot": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 0,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        }
+      },
+      "oracle_asvf_isolating_classifier": {
+        "sun": 5,
+        "shade": 26
+      }
+    },
+    "core_math": {
+      "asvf": {
+        "finite_bit_mismatches": 12534,
+        "all_bit_mismatches": 12535,
+        "nan_mask_equal": true,
+        "max_abs": 8.940696716308594e-07
+      },
+      "actual_boundary_masks": {
+        "sun": 8,
+        "shade": 14
+      },
+      "categories": {
+        "frozen": {
+          "finite_bit_mismatches": 8187,
+          "all_bit_mismatches": 8187,
+          "nan_mask_equal": true,
+          "max_abs": 4.76837158203125e-07
+        },
+        "boundary": {
+          "finite_bit_mismatches": 57,
+          "all_bit_mismatches": 57,
+          "nan_mask_equal": true,
+          "max_abs": 3.5762786865234375e-07
+        },
+        "random": {
+          "finite_bit_mismatches": 4302,
+          "all_bit_mismatches": 4302,
+          "nan_mask_equal": true,
+          "max_abs": 8.940696716308594e-07
+        },
+        "edge": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 1,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        },
+        "hotspot": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 0,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        }
+      },
+      "oracle_asvf_isolating_classifier": {
+        "sun": 0,
+        "shade": 4
+      }
+    },
+    "sleef_fma": {
+      "asvf": {
+        "finite_bit_mismatches": 10959,
+        "all_bit_mismatches": 10962,
+        "nan_mask_equal": true,
+        "max_abs": 8.940696716308594e-07
+      },
+      "actual_boundary_masks": {
+        "sun": 12,
+        "shade": 27
+      },
+      "categories": {
+        "frozen": {
+          "finite_bit_mismatches": 7385,
+          "all_bit_mismatches": 7385,
+          "nan_mask_equal": true,
+          "max_abs": 4.76837158203125e-07
+        },
+        "boundary": {
+          "finite_bit_mismatches": 34,
+          "all_bit_mismatches": 34,
+          "nan_mask_equal": true,
+          "max_abs": 3.427267074584961e-07
+        },
+        "random": {
+          "finite_bit_mismatches": 3549,
+          "all_bit_mismatches": 3549,
+          "nan_mask_equal": true,
+          "max_abs": 8.940696716308594e-07
+        },
+        "edge": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 3,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        },
+        "hotspot": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 0,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        }
+      },
+      "oracle_asvf_isolating_classifier": {
+        "sun": 6,
+        "shade": 13
+      }
+    },
+    "float64_round": {
+      "asvf": {
+        "finite_bit_mismatches": 12534,
+        "all_bit_mismatches": 12538,
+        "nan_mask_equal": true,
+        "max_abs": 8.940696716308594e-07
+      },
+      "actual_boundary_masks": {
+        "sun": 8,
+        "shade": 14
+      },
+      "categories": {
+        "frozen": {
+          "finite_bit_mismatches": 8187,
+          "all_bit_mismatches": 8187,
+          "nan_mask_equal": true,
+          "max_abs": 4.76837158203125e-07
+        },
+        "boundary": {
+          "finite_bit_mismatches": 57,
+          "all_bit_mismatches": 57,
+          "nan_mask_equal": true,
+          "max_abs": 3.5762786865234375e-07
+        },
+        "random": {
+          "finite_bit_mismatches": 4302,
+          "all_bit_mismatches": 4302,
+          "nan_mask_equal": true,
+          "max_abs": 8.940696716308594e-07
+        },
+        "edge": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 4,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        },
+        "hotspot": {
+          "finite_bit_mismatches": 0,
+          "all_bit_mismatches": 0,
+          "nan_mask_equal": true,
+          "max_abs": 0.0
+        }
+      },
+      "oracle_asvf_isolating_classifier": {
+        "sun": 0,
+        "shade": 4
+      }
+    }
+  },
+  "core_acos_on_original_sqrt_diagnostic": {
+    "finite_bit_mismatches": 11903,
+    "all_bit_mismatches": 11904,
+    "nan_mask_equal": true,
+    "max_abs": 1.1920928955078125e-07
+  }
+}

@@ -1,0 +1,1262 @@
+[
+  {
+    "altitude": 1,
+    "interval": 31.0,
+    "golden": 9.825399502005894e-06,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 1,
+    "interval": 16.0,
+    "golden": 1.9036711819353513e-05,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 2,
+    "interval": 31.0,
+    "golden": 2.9464192266459577e-05,
+    "numpy_ulp": 2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 2,
+    "interval": 16.0,
+    "golden": 5.70868760405574e-05,
+    "numpy_ulp": 2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 3,
+    "interval": 31.0,
+    "golden": 4.9066955398302525e-05,
+    "numpy_ulp": -1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 3,
+    "interval": 16.0,
+    "golden": 9.50672329054214e-05,
+    "numpy_ulp": -1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 4,
+    "interval": 31.0,
+    "golden": 6.8610068410635e-05,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 4,
+    "interval": 16.0,
+    "golden": 0.00013293202209752053,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 5,
+    "interval": 31.0,
+    "golden": 8.806959522189572e-05,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 5,
+    "interval": 16.0,
+    "golden": 0.00017063485574908555,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 6,
+    "interval": 31.0,
+    "golden": 0.00010742167796706781,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 6,
+    "interval": 16.0,
+    "golden": 0.00020812952425330877,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 7,
+    "interval": 31.0,
+    "golden": 0.00012664303358178586,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 7,
+    "interval": 16.0,
+    "golden": 0.00024537090212106705,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 8,
+    "interval": 31.0,
+    "golden": 0.00014571008796337992,
+    "numpy_ulp": -1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 8,
+    "interval": 16.0,
+    "golden": 0.00028231332544237375,
+    "numpy_ulp": -1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 9,
+    "interval": 31.0,
+    "golden": 0.00016459973994642496,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 9,
+    "interval": 16.0,
+    "golden": 0.000318912003422156,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 10,
+    "interval": 31.0,
+    "golden": 0.000183288604603149,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 10,
+    "interval": 16.0,
+    "golden": 0.00035512170870788395,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 11,
+    "interval": 31.0,
+    "golden": 0.00020175428653601557,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 11,
+    "interval": 16.0,
+    "golden": 0.00039089893107302487,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 12,
+    "interval": 31.0,
+    "golden": 0.00021997402654960752,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 12,
+    "interval": 16.0,
+    "golden": 0.0004261996946297586,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 13,
+    "interval": 30.0,
+    "golden": 0.00024585690698586404,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 13,
+    "interval": 15.0,
+    "golden": 0.0004917138139717281,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 14,
+    "interval": 30.0,
+    "golden": 0.00026410751161165535,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 14,
+    "interval": 15.0,
+    "golden": 0.0005282150232233107,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 15,
+    "interval": 30.0,
+    "golden": 0.00028203646070323884,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 15,
+    "interval": 15.0,
+    "golden": 0.0005640729214064777,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 16,
+    "interval": 30.0,
+    "golden": 0.0002996217808686197,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 16,
+    "interval": 15.0,
+    "golden": 0.0005992435617372394,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 17,
+    "interval": 30.0,
+    "golden": 0.00031684196437709033,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 17,
+    "interval": 15.0,
+    "golden": 0.0006336839287541807,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 18,
+    "interval": 30.0,
+    "golden": 0.00033367634750902653,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 18,
+    "interval": 15.0,
+    "golden": 0.0006673526950180531,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 19,
+    "interval": 30.0,
+    "golden": 0.00035010394640266895,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 19,
+    "interval": 15.0,
+    "golden": 0.0007002078928053379,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 20,
+    "interval": 30.0,
+    "golden": 0.0003661051450762898,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 20,
+    "interval": 15.0,
+    "golden": 0.0007322102901525795,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 21,
+    "interval": 30.0,
+    "golden": 0.0003816602984443307,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 21,
+    "interval": 15.0,
+    "golden": 0.0007633205968886614,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 22,
+    "interval": 30.0,
+    "golden": 0.0003967504308093339,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 22,
+    "interval": 15.0,
+    "golden": 0.0007935008616186678,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 23,
+    "interval": 30.0,
+    "golden": 0.0004113572067581117,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 23,
+    "interval": 15.0,
+    "golden": 0.0008227144135162234,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 24,
+    "interval": 30.0,
+    "golden": 0.00042546269833110273,
+    "numpy_ulp": -2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 24,
+    "interval": 15.0,
+    "golden": 0.0008509253966622055,
+    "numpy_ulp": -2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 25,
+    "interval": 28.0,
+    "golden": 0.00047041065408848226,
+    "numpy_ulp": 2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 25,
+    "interval": 14.0,
+    "golden": 0.0009408213081769645,
+    "numpy_ulp": 2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 26,
+    "interval": 28.0,
+    "golden": 0.00048439521924592555,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 26,
+    "interval": 14.0,
+    "golden": 0.0009687904384918511,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 27,
+    "interval": 28.0,
+    "golden": 0.0004977897042408586,
+    "numpy_ulp": -1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 27,
+    "interval": 14.0,
+    "golden": 0.0009955794084817171,
+    "numpy_ulp": -1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 28,
+    "interval": 28.0,
+    "golden": 0.0005105776363052428,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 28,
+    "interval": 14.0,
+    "golden": 0.0010211552726104856,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 29,
+    "interval": 28.0,
+    "golden": 0.0005227435030974448,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 29,
+    "interval": 14.0,
+    "golden": 0.0010454870061948895,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 30,
+    "interval": 28.0,
+    "golden": 0.0005342725780792534,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 30,
+    "interval": 14.0,
+    "golden": 0.0010685451561585069,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 31,
+    "interval": 28.0,
+    "golden": 0.000545150600373745,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 31,
+    "interval": 14.0,
+    "golden": 0.00109030120074749,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 32,
+    "interval": 28.0,
+    "golden": 0.0005553645896725357,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 32,
+    "interval": 14.0,
+    "golden": 0.0011107291793450713,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 33,
+    "interval": 28.0,
+    "golden": 0.0005649018567055464,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 33,
+    "interval": 14.0,
+    "golden": 0.0011298037134110928,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 34,
+    "interval": 28.0,
+    "golden": 0.0005737508763559163,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 34,
+    "interval": 14.0,
+    "golden": 0.0011475017527118325,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 35,
+    "interval": 28.0,
+    "golden": 0.0005819008802063763,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 35,
+    "interval": 14.0,
+    "golden": 0.0011638017604127526,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 36,
+    "interval": 28.0,
+    "golden": 0.0005893419729545712,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 36,
+    "interval": 14.0,
+    "golden": 0.0011786839459091425,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 37,
+    "interval": 24.0,
+    "golden": 0.0006954091368243098,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 37,
+    "interval": 12.0,
+    "golden": 0.0013908182736486197,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 38,
+    "interval": 24.0,
+    "golden": 0.000702405464835465,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 38,
+    "interval": 12.0,
+    "golden": 0.00140481092967093,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 39,
+    "interval": 24.0,
+    "golden": 0.0007085459074005485,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 39,
+    "interval": 12.0,
+    "golden": 0.001417091814801097,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 40,
+    "interval": 24.0,
+    "golden": 0.0007138231885619462,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 40,
+    "interval": 12.0,
+    "golden": 0.0014276463771238923,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 41,
+    "interval": 24.0,
+    "golden": 0.0007182307890616357,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 41,
+    "interval": 12.0,
+    "golden": 0.0014364615781232715,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 42,
+    "interval": 24.0,
+    "golden": 0.0007217633537948132,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 42,
+    "interval": 12.0,
+    "golden": 0.0014435267075896263,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 43,
+    "interval": 24.0,
+    "golden": 0.000724416458979249,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 43,
+    "interval": 12.0,
+    "golden": 0.001448832917958498,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 44,
+    "interval": 24.0,
+    "golden": 0.0007261870196089149,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 44,
+    "interval": 12.0,
+    "golden": 0.0014523740392178297,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 45,
+    "interval": 24.0,
+    "golden": 0.0007270728820003569,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 45,
+    "interval": 12.0,
+    "golden": 0.0014541457640007138,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 46,
+    "interval": 24.0,
+    "golden": 0.0007270728820003569,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 46,
+    "interval": 12.0,
+    "golden": 0.0014541457640007138,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 47,
+    "interval": 24.0,
+    "golden": 0.0007261870196089149,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 47,
+    "interval": 12.0,
+    "golden": 0.0014523740392178297,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 48,
+    "interval": 24.0,
+    "golden": 0.000724416458979249,
+    "numpy_ulp": 1,
+    "math_ulp": 1
+  },
+  {
+    "altitude": 48,
+    "interval": 12.0,
+    "golden": 0.001448832917958498,
+    "numpy_ulp": 1,
+    "math_ulp": 1
+  },
+  {
+    "altitude": 49,
+    "interval": 19.0,
+    "golden": 0.0009117010049521923,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 49,
+    "interval": 10.0,
+    "golden": 0.0017322319326922297,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 50,
+    "interval": 19.0,
+    "golden": 0.0009072388638742268,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 50,
+    "interval": 10.0,
+    "golden": 0.0017237539868801832,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 51,
+    "interval": 19.0,
+    "golden": 0.0009016714175231755,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 51,
+    "interval": 10.0,
+    "golden": 0.0017131756758317351,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 52,
+    "interval": 19.0,
+    "golden": 0.0008950053597800434,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 52,
+    "interval": 10.0,
+    "golden": 0.0017005102708935738,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 53,
+    "interval": 19.0,
+    "golden": 0.0008872489561326802,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 53,
+    "interval": 10.0,
+    "golden": 0.0016857730224728584,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 54,
+    "interval": 19.0,
+    "golden": 0.0008784115198068321,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 54,
+    "interval": 10.0,
+    "golden": 0.0016689819749444723,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 55,
+    "interval": 19.0,
+    "golden": 0.0008685039356350899,
+    "numpy_ulp": -1,
+    "math_ulp": -1
+  },
+  {
+    "altitude": 55,
+    "interval": 10.0,
+    "golden": 0.001650157617405057,
+    "numpy_ulp": -1,
+    "math_ulp": -1
+  },
+  {
+    "altitude": 56,
+    "interval": 19.0,
+    "golden": 0.0008575381361879408,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 56,
+    "interval": 10.0,
+    "golden": 0.0016293225344270468,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 57,
+    "interval": 19.0,
+    "golden": 0.0008455276256427169,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 57,
+    "interval": 10.0,
+    "golden": 0.0016065024537965655,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 58,
+    "interval": 19.0,
+    "golden": 0.0008324868977069855,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 58,
+    "interval": 10.0,
+    "golden": 0.0015817251987755299,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 59,
+    "interval": 19.0,
+    "golden": 0.0008184320759028196,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 59,
+    "interval": 10.0,
+    "golden": 0.001555020920932293,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 60,
+    "interval": 19.0,
+    "golden": 0.0008033799240365624,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 60,
+    "interval": 10.0,
+    "golden": 0.0015264219837263227,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 61,
+    "interval": 13.0,
+    "golden": 0.001150741009041667,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 61,
+    "interval": 7.0,
+    "golden": 0.0021370903123170137,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 62,
+    "interval": 13.0,
+    "golden": 0.0011259091552346945,
+    "numpy_ulp": 1,
+    "math_ulp": 1
+  },
+  {
+    "altitude": 62,
+    "interval": 7.0,
+    "golden": 0.002090974012389779,
+    "numpy_ulp": 1,
+    "math_ulp": 1
+  },
+  {
+    "altitude": 63,
+    "interval": 13.0,
+    "golden": 0.0010997058125212789,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 63,
+    "interval": 7.0,
+    "golden": 0.0020423107780516148,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 64,
+    "interval": 13.0,
+    "golden": 0.0010721624130383134,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 64,
+    "interval": 7.0,
+    "golden": 0.0019911588169634342,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 65,
+    "interval": 13.0,
+    "golden": 0.0010433130664750934,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 65,
+    "interval": 7.0,
+    "golden": 0.0019375813426449895,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 66,
+    "interval": 13.0,
+    "golden": 0.0010131922317668796,
+    "numpy_ulp": 1,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 66,
+    "interval": 7.0,
+    "golden": 0.001881642616353929,
+    "numpy_ulp": 2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 67,
+    "interval": 13.0,
+    "golden": 0.0009818371618166566,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 67,
+    "interval": 7.0,
+    "golden": 0.001823411788791418,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 68,
+    "interval": 13.0,
+    "golden": 0.0009492857498116791,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 68,
+    "interval": 7.0,
+    "golden": 0.0017629592912271619,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 69,
+    "interval": 13.0,
+    "golden": 0.0009155779262073338,
+    "numpy_ulp": -2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 69,
+    "interval": 7.0,
+    "golden": 0.0017003590473905206,
+    "numpy_ulp": -2,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 70,
+    "interval": 13.0,
+    "golden": 0.0008807545527815819,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 70,
+    "interval": 7.0,
+    "golden": 0.0016356869600713253,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 71,
+    "interval": 13.0,
+    "golden": 0.0008448581211268902,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 71,
+    "interval": 7.0,
+    "golden": 0.0015690221916884184,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 72,
+    "interval": 13.0,
+    "golden": 0.0008079324034042656,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 72,
+    "interval": 7.0,
+    "golden": 0.0015004457673057914,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 73,
+    "interval": 7.0,
+    "golden": 0.0014300415059551597,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 73,
+    "interval": 4.0,
+    "golden": 0.0025025727227330208,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 74,
+    "interval": 7.0,
+    "golden": 0.0013578946236521006,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 74,
+    "interval": 4.0,
+    "golden": 0.002376315649598837,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 75,
+    "interval": 7.0,
+    "golden": 0.0012840935960412025,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 75,
+    "interval": 4.0,
+    "golden": 0.0022471637930721045,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 76,
+    "interval": 7.0,
+    "golden": 0.0012087278300896287,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 76,
+    "interval": 4.0,
+    "golden": 0.002115273615345359,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 77,
+    "interval": 7.0,
+    "golden": 0.0011318896431475878,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 77,
+    "interval": 4.0,
+    "golden": 0.0019808069337159395,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 78,
+    "interval": 7.0,
+    "golden": 0.0010536722838878632,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 78,
+    "interval": 4.0,
+    "golden": 0.0018439264968037605,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 79,
+    "interval": 7.0,
+    "golden": 0.000974171154666692,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 79,
+    "interval": 4.0,
+    "golden": 0.0017047995934262872,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 80,
+    "interval": 7.0,
+    "golden": 0.0008934832876548171,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 80,
+    "interval": 4.0,
+    "golden": 0.0015635957242920995,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 81,
+    "interval": 7.0,
+    "golden": 0.0008117068209685385,
+    "numpy_ulp": -1,
+    "math_ulp": -1
+  },
+  {
+    "altitude": 81,
+    "interval": 4.0,
+    "golden": 0.0014204869512468576,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 82,
+    "interval": 7.0,
+    "golden": 0.000728941464331001,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 82,
+    "interval": 4.0,
+    "golden": 0.0012756475480273366,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 83,
+    "interval": 7.0,
+    "golden": 0.000645287916995585,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 83,
+    "interval": 4.0,
+    "golden": 0.0011292538838461041,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 84,
+    "interval": 7.0,
+    "golden": 0.0005608482169918716,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 84,
+    "interval": 4.0,
+    "golden": 0.000981484423391521,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 85,
+    "interval": 1.0,
+    "golden": 0.0033300763461738825,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 85,
+    "interval": 1.0,
+    "golden": 0.0033300763461738825,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 86,
+    "interval": 1.0,
+    "golden": 0.002730158157646656,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 86,
+    "interval": 1.0,
+    "golden": 0.002730158157646656,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 87,
+    "interval": 1.0,
+    "golden": 0.0021269135177135468,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 87,
+    "interval": 1.0,
+    "golden": 0.0021269135177135468,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 88,
+    "interval": 1.0,
+    "golden": 0.00152107747271657,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 88,
+    "interval": 1.0,
+    "golden": 0.00152107747271657,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 89,
+    "interval": 1.0,
+    "golden": 0.0009133884450420737,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 89,
+    "interval": 1.0,
+    "golden": 0.0009133884450420737,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 90,
+    "interval": 1.0,
+    "golden": 0.00030458648689091206,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  },
+  {
+    "altitude": 90,
+    "interval": 1.0,
+    "golden": 0.00030458648689091206,
+    "numpy_ulp": 0,
+    "math_ulp": 0
+  }
+]

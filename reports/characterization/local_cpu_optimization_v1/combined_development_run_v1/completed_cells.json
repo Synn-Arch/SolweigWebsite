@@ -1,0 +1,248 @@
+[
+  {
+    "cell": {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "cell": 0,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    },
+    "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+    "median_baseline_over_candidate": 1.0826894382118666,
+    "pair_count": 3,
+    "passed": true,
+    "performance_claim_eligible": false,
+    "ratio_range": [
+      1.0305036023535075,
+      1.0996031948608667
+    ],
+    "ratios": [
+      1.0996031948608667,
+      1.0826894382118666,
+      1.0305036023535075
+    ],
+    "upstream_speedup_claim_eligible": false
+  },
+  {
+    "cell": {
+      "baseline_block_pixels": 128,
+      "budget": 10,
+      "candidate_block_pixels": 1024,
+      "cell": 5,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    },
+    "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+    "median_baseline_over_candidate": 1.763496994980172,
+    "pair_count": 3,
+    "passed": true,
+    "performance_claim_eligible": false,
+    "ratio_range": [
+      1.7031628094377957,
+      1.8072301620867324
+    ],
+    "ratios": [
+      1.8072301620867324,
+      1.763496994980172,
+      1.7031628094377957
+    ],
+    "upstream_speedup_claim_eligible": false
+  },
+  {
+    "cell": {
+      "baseline_block_pixels": 128,
+      "budget": 10,
+      "candidate_block_pixels": 128,
+      "cell": 4,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    },
+    "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+    "median_baseline_over_candidate": 1.2996161662887993,
+    "pair_count": 3,
+    "passed": true,
+    "performance_claim_eligible": false,
+    "ratio_range": [
+      1.214917660545467,
+      1.3030220836918103
+    ],
+    "ratios": [
+      1.214917660545467,
+      1.2996161662887993,
+      1.3030220836918103
+    ],
+    "upstream_speedup_claim_eligible": false
+  },
+  {
+    "cell": {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 1024,
+      "cell": 1,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    },
+    "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+    "median_baseline_over_candidate": 1.1040741272727979,
+    "pair_count": 3,
+    "passed": true,
+    "performance_claim_eligible": false,
+    "ratio_range": [
+      1.0679975351132618,
+      1.111900428230175
+    ],
+    "ratios": [
+      1.0679975351132618,
+      1.111900428230175,
+      1.1040741272727979
+    ],
+    "upstream_speedup_claim_eligible": false
+  },
+  {
+    "cell": {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 128,
+      "cell": 2,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    },
+    "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+    "median_baseline_over_candidate": 1.3701643352806412,
+    "pair_count": 3,
+    "passed": true,
+    "performance_claim_eligible": false,
+    "ratio_range": [
+      1.3564878113882473,
+      1.3843613480407237
+    ],
+    "ratios": [
+      1.3843613480407237,
+      1.3564878113882473,
+      1.3701643352806412
+    ],
+    "upstream_speedup_claim_eligible": false
+  },
+  {
+    "cell": {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "cell": 3,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    },
+    "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+    "median_baseline_over_candidate": 1.6465993786592832,
+    "pair_count": 3,
+    "passed": true,
+    "performance_claim_eligible": false,
+    "ratio_range": [
+      1.6422226690862733,
+      1.7193005445413398
+    ],
+    "ratios": [
+      1.6465993786592832,
+      1.7193005445413398,
+      1.6422226690862733
+    ],
+    "upstream_speedup_claim_eligible": false
+  }
+]

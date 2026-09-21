@@ -1,0 +1,7 @@
+{"time": 1789838243.864868, "phase": "start", "pid": 933443}
+{"time": 1789838244.9175906, "phase": "torch_imported", "pid": 933443, "torch": "2.14.0+cu126", "compiled_cuda": "12.6"}
+{"time": 1789838244.963459, "phase": "cuda_available", "pid": 933443, "available": true, "count": 1}
+{"time": 1789838245.036978, "phase": "device_initialized", "pid": 933443, "name": "NVIDIA RTX A6000"}
+{"time": 1789838245.0537126, "phase": "tensor_synchronized", "pid": 933443, "sum": 523776.0}
+{"time": 1789838245.0541694, "phase": "upstream_imported", "pid": 933443, "package": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/lib/python3.12/site-packages/solweig_gpu/__init__.py"}
+{"time": 1789838245.188421, "phase": "pool_submitted", "pid": 933443, "configured_workers": 32}

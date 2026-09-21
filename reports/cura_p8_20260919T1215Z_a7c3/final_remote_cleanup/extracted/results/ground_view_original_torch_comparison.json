@@ -1,0 +1,324 @@
+{
+  "cases": [
+    {
+      "fields": [
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 4,
+          "index": 0,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 1,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 2,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 5,
+          "index": 3,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 4,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 5,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 2,
+          "index": 6,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 7,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 8,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 2,
+          "index": 9,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 10,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 11,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 6,
+          "index": 12,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 13,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 14,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 15,
+          "max_abs": 0.0,
+          "name": "gvfSum",
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 16,
+          "max_abs": 0.0,
+          "name": "gvfNorm",
+          "passed": true,
+          "upstream_dtype": "float32"
+        }
+      ],
+      "landcover": 0,
+      "tg_mutation_equal": true
+    },
+    {
+      "fields": [
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 14,
+          "index": 0,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 1,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 2,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 12,
+          "index": 3,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 4,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 5,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 14,
+          "index": 6,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 7,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 8,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 11,
+          "index": 9,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 10,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 11,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 12,
+          "index": 12,
+          "max_abs": 3.0517578125e-05,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 13,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 14,
+          "max_abs": 0.0,
+          "name": null,
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 15,
+          "max_abs": 0.0,
+          "name": "gvfSum",
+          "passed": true,
+          "upstream_dtype": "float32"
+        },
+        {
+          "candidate_dtype": "float32",
+          "count_over_1e_6": 0,
+          "index": 16,
+          "max_abs": 0.0,
+          "name": "gvfNorm",
+          "passed": true,
+          "upstream_dtype": "float32"
+        }
+      ],
+      "landcover": 1,
+      "tg_mutation_equal": true
+    }
+  ],
+  "evidence_class": "original_upstream_cpu_vs_candidate_diagnostic",
+  "passed": true
+}

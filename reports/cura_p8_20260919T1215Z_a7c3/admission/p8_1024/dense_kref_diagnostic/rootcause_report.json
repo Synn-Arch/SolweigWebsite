@@ -1,0 +1,68 @@
+{
+  "classification": "root-cause diagnostic; not benchmark, correction, or correctness pass",
+  "cleanup": {
+    "compact_files_verified_before_cleanup": 9,
+    "previous_cleanup_failure_record_preserved": true,
+    "remote_root_removed_and_absence_verified": true
+  },
+  "exact_input": {
+    "candidate_asvf": {
+      "uint32_bits": 1057360531,
+      "value": 0.523598849773407
+    },
+    "fixture": "kref_step7_candidate_input.npz",
+    "fixture_sha256": "4ab3d9e3647b762454b059327671b5532da55644227edf2cfa426c97a3586e2a",
+    "output_band": 8,
+    "point_row_col": [
+      36,
+      185
+    ],
+    "scene": "dense_urban_1024",
+    "svf_from_originally_verified_artifact": 0.749999940395355,
+    "timestep_zero_based": 7,
+    "upstream_torch_asvf": {
+      "uint32_bits": 1057360530,
+      "value": 0.5235987901687622
+    }
+  },
+  "exact_operation": {
+    "active_patches": "61, 67, 68, and 69 have building mask true and each adds 0.0809573158621788 W/m2 to Kref_sh",
+    "candidate": "pipeline.py: asvf = np.arccos(np.sqrt(svf)) under retained Cura candidate NumPy yields uint32 1057360531",
+    "candidate_extra_Kref_sh_sum_W_m2": 0.3238292634487152,
+    "consequence": "one-ULP asvf change crosses strict shaded_or_sunlit comparison for patches 61-73 and 88; equality belongs to neither class upstream, while candidate marks them shaded",
+    "observed_full_candidate_Kside_W_m2": 105.30752563476562,
+    "observed_full_delta_W_m2": 0.323822021484375,
+    "observed_full_original_CPU_Kside_W_m2": 104.98370361328125,
+    "reproduced_Kside_delta_W_m2": 0.32382965087890625,
+    "upstream": "utci_process.py: asvf = torch.acos(torch.sqrt(svf)) on original CPU yields uint32 1057360530"
+  },
+  "exclusions": {
+    "Kref_sun": "sun classifier sets identical",
+    "Kref_veg": "does not use sun/shade classifier and is unchanged by asvf bit substitution",
+    "KsideI_KsideD": "unchanged apart from float32-scale forcing arithmetic",
+    "compiled_vs_serial": "identical for both asvf bit patterns in minimal fixture",
+    "longwave": "float32-scale differences only at earliest failure"
+  },
+  "proposed_parity_repair_for_review": {
+    "candidate_expression_to_characterize": "np.arccos(np.asarray(np.sqrt(svf), dtype=np.float64)).astype(np.float32); this yields the upstream bit at the failing input in the retained Cura environment",
+    "required_gate_before_apply": "compare bit patterns against original Torch CPU across the frozen SVF fixtures and boundary-focused float32 values, then rerun patch-radiation differential, dense1024, vegetation1024, and unchanged comparison_v1; do not apply a blanket nextafter correction",
+    "scope": "derive asvf with a characterized Torch-CPU-compatible float32 operation sequence before both serial and compiled patch radiation paths",
+    "status": "proposal only; not applied"
+  },
+  "reproducer": {
+    "result": "reproducer_result.json",
+    "result_sha256": "92d821934e107b696b89c8be1d9599ba4754b8db151b54f9b45b867d89e9e772",
+    "script": "reproduce_kref_boundary.py"
+  },
+  "schema_version": 1,
+  "source_and_gate_policy": {
+    "candidate_snapshot": "retained Cura admission snapshot",
+    "frozen_tolerance_changed": false,
+    "production_source_changed": false,
+    "snapshot_source_sha256": {
+      "patch_radiation.py": "632d478c29efceed3f6646ac764ac20b562feb75ac71f19783a78d249d948233",
+      "pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93"
+    },
+    "upstream_patch": null
+  }
+}

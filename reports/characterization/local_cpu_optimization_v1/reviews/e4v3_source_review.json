@@ -1,0 +1,23 @@
+{
+  "command_fixes": {
+    "after_readme_sha256": "c6a8ac8eaea82b0767a3de4dd3ab0823b8e6bf768dfedb8c52abbfe3ccb8795b",
+    "before_readme_sha256": "1c5371b0fb3e1ad51cb1945a425b7411c5cd1360f50545c5f8992e0e3ae0b579",
+    "changes": [
+      "Replace nonexistent test path with real wall differential, portable profile and persistent-cache suites",
+      "Use NUMBA_NUM_THREADS=10 for repository pytest processes; probes/traces remain deliberately one-thread"
+    ]
+  },
+  "packet": "reports/characterization/local_cpu_optimization_v1/candidates/e4v3",
+  "promotion_approved": false,
+  "remaining_gates": [
+    "Execute source proof, cold/warm subprocess, same-stamp invalidation tests",
+    "Origin-bound subsystem suites with multithread coverage",
+    "Real chronological exact traces and artifacts",
+    "Separate performance experiment; final source large and installed-wheel admission"
+  ],
+  "reviewer": "Astra /root/exact_promotion_review",
+  "source_and_test_execution": false,
+  "source_identity": "Both candidate source trees byte-identical to reviewed E4v2, independently checked",
+  "source_manifest_sha256": "45a428f1b1f806c4886dbc893e8975dedf9f756b5ea02a615c9e9ac0859e6119",
+  "status": "accepted_for_executable_qualification"
+}

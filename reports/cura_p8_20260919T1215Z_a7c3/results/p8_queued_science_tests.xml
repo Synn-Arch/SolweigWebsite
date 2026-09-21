@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="7" skipped="0" tests="35" time="4.926" timestamp="2026-09-19T12:13:02.315917-04:00" hostname="analytica"><testcase classname="tests.scientific.test_radiation_analytic" name="test_no_shortwave_flux_below_horizon" time="0.017"><failure message="assert 1 == 0&#10; +  where 1 = int(1)">def test_no_shortwave_flux_below_horizon():
+        """With the sun below the horizon and zero solar forcing, flux is zero."""
+&gt;       _, result = _run_genuine_night_case()
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scientific/test_radiation_analytic.py:77: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _run_genuine_night_case():
+        arguments = _load_genuine_night_input()
+        # These assertions define the physical domain of both expectations. A
+        # changed fixture must fail here instead of silently testing daylight or a
+        # water-temperature override.
+        assert float(arguments["altitude"]) &lt;= 0.0
+&gt;       assert int(arguments["landcover"]) == 0
+E       assert 1 == 0
+E        +  where 1 = int(1)
+
+tests/scientific/test_radiation_analytic.py:65: AssertionError</failure></testcase><testcase classname="tests.scientific.test_radiation_analytic" name="test_night_upward_longwave_obeys_stefan_boltzmann_law" time="0.017"><failure message="assert 1 == 0&#10; +  where 1 = int(1)">def test_night_upward_longwave_obeys_stefan_boltzmann_law():
+        """An isothermal non-water surface emits εσT⁴ in W m^-2."""
+&gt;       arguments, result = _run_genuine_night_case()
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests/scientific/test_radiation_analytic.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def _run_genuine_night_case():
+        arguments = _load_genuine_night_input()
+        # These assertions define the physical domain of both expectations. A
+        # changed fixture must fail here instead of silently testing daylight or a
+        # water-temperature override.
+        assert float(arguments["altitude"]) &lt;= 0.0
+&gt;       assert int(arguments["landcover"]) == 0
+E       assert 1 == 0
+E        +  where 1 = int(1)
+
+tests/scientific/test_radiation_analytic.py:65: AssertionError</failure></testcase><testcase classname="tests.scientific.test_directional_wind_analytic" name="test_directional_sector_centres_edges_wrap_and_missing_values" time="0.005"><failure message="RuntimeError: PROJ: proj_create_from_name: Open of /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/env/share/proj failed">tmp_path = PosixPath('/tmp/pytest-of-ssynn3/pytest-12/test_directional_sector_centre0')
+
+    def test_directional_sector_centres_edges_wrap_and_missing_values(tmp_path):
+        root = Path(__file__).resolve().parents[2]
+        source = root / 'tests/reference/small_original_cpu/scene/processed_inputs'
+        prepared = tmp_path / 'processed_inputs'
+        shutil.copytree(source, prepared, ignore=shutil.ignore_patterns('SVF', 'WindCoeff'))
+        met_path = next((prepared / 'metfiles').glob('*.txt'))
+        header = met_path.read_text().splitlines()[0]
+        met = np.loadtxt(met_path, skiprows=1)
+        assert met.shape[0] == 24 and met.shape[1] &gt;= 24
+        met[:, 9] = 2.0
+        met[:, 23] = [0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330,
+                      14.999, 15, 44.999, 45, 344.999, 345, 359.999, 360, 720,
+                      -999, -1, np.nan]
+        np.savetxt(met_path, met, header=header, comments='', fmt='%.8f')
+        expected_speeds = [.15, .5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5, 5.5,
+                           .15, .5, .5, 1, 5.5, .15, .15, .15, .15, 2, 2, 2]
+    
+        template = gdal.Open(str(next((prepared / 'Building_DSM').glob('*.tif'))))
+        wind = prepared / 'WindCoeff'
+        wind.mkdir()
+        for index, direction in enumerate(range(0, 360, 30)):
+            dataset = gdal.GetDriverByName('GTiff').Create(
+                str(wind / f'WindCoeff_dir{direction:03d}_0_0.tif'),
+                template.RasterXSize, template.RasterYSize, 1, gdal.GDT_Float32)
+            dataset.SetGeoTransform(template.GetGeoTransform())
+            dataset.SetProjection(template.GetProjection())
+            dataset.GetRasterBand(1).Fill(index / 4)
+&gt;           dataset.FlushCache()
+
+tests/scientific/test_directional_wind_analytic.py:43: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = &lt;osgeo.gdal.Dataset; proxy of &lt;Swig Object of type 'GDALDatasetShadow *' at 0x79f6a75938b0&gt; &gt;
+args = ()
+
+    def FlushCache(self, *args):
+        r"""
+        FlushCache(self) -&gt; CPLErr
+    
+    
+        Flush all write-cached data to disk.
+    
+        See :cpp:func:`GDALDataset::FlushCache`.
+    
+        Returns
+        -------
+        int
+            `gdal.CE_None` in case of success
+    
+        """
+&gt;       return _gdal.Dataset_FlushCache(self, *args)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       RuntimeError: PROJ: proj_create_from_name: Open of /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/env/share/proj failed
+
+../env/lib/python3.12/site-packages/osgeo/gdal.py:5552: RuntimeError</failure></testcase><testcase classname="tests.scientific.test_utci_independent" name="test_candidate_polynomial_coefficients_and_exponents_match_official_source" time="0.002" /><testcase classname="tests.scientific.test_utci_independent" name="test_pressure_polynomial_matches_independent_official_evaluator[-50.0-0.0--80.0-0.5]" time="1.599" /><testcase classname="tests.scientific.test_utci_independent" name="test_pressure_polynomial_matches_independent_official_evaluator[50.0-50.0-120.0-17.0]" time="0.001" /><testcase classname="tests.scientific.test_utci_independent" name="test_pressure_polynomial_matches_independent_official_evaluator[0.0-5.0-0.0-0.5]" time="0.001" /><testcase classname="tests.scientific.test_utci_independent" name="test_pressure_polynomial_matches_independent_official_evaluator[-20.0-1.0-50.0-17.0]" time="0.001" /><testcase classname="tests.scientific.test_utci_independent" name="test_pressure_polynomial_matches_independent_official_evaluator[32.0-4.0-2.0-7.3]" time="0.001" /><testcase classname="tests.scientific.test_utci_independent" name="test_rh_interface_against_official_saturation_and_polynomial[-40.0-15.0--50.0-0.5]" time="0.002" /><testcase classname="tests.scientific.test_utci_independent" name="test_rh_interface_against_official_saturation_and_polynomial[0.0-100.0-30.0-1.0]" time="0.002" /><testcase classname="tests.scientific.test_utci_independent" name="test_rh_interface_against_official_saturation_and_polynomial[25.0-50.0-70.0-3.0]" time="0.002" /><testcase classname="tests.scientific.test_utci_independent" name="test_rh_interface_against_official_saturation_and_polynomial[45.0-20.0-80.0-17.0]" time="0.002" /><testcase classname="tests.scientific.test_utci_independent" name="test_official_wind_domain_does_not_validate_model_floor" time="0.000" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float32-10]" time="0.002" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float32-30]" time="0.001" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float32-59]" time="0.001" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float32-60]" time="0.001" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float64-10]" time="0.001" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float64-30]" time="0.001" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float64-59]" time="0.001" /><testcase classname="tests.scientific.test_umep_delay_independent" name="test_umep_delay_chronological_state[float64-60]" time="0.001" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_sunonsurface_direct[5-0]" time="1.195" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_sunonsurface_direct[5-1]" time="0.003" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_sunonsurface_direct[105-0]" time="0.003" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_sunonsurface_direct[105-1]" time="0.003" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_sunonsurface_direct[285-0]" time="0.003" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_sunonsurface_direct[285-1]" time="0.003" /><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_full_ground_view[0]" time="0.017"><failure message="AssertionError: &#10;Not equal to tolerance rtol=0, atol=1e-06&#10;&#10;Mismatched elements: 12 / 99 (12.1%)&#10;First 5 mismatches are at indices:&#10; [0, 2]: 13.222498893737793 (ACTUAL), 13.22249998599291 (DESIRED)&#10; [1, 1]: 10.564998626708984 (ACTUAL), 10.564999964833259 (DESIRED)&#10; [4, 0]: 11.079998970031738 (ACTUAL), 11.079999971389771 (DESIRED)&#10; [4, 3]: 8.180001258850098 (ACTUAL), 8.179999965429305 (DESIRED)&#10; [6, 7]: 9.240001678466797 (ACTUAL), 9.239999967813493 (DESIRED)&#10;Max absolute difference among violations: 1.7106533e-06&#10;Max relative difference among violations: 1.8513564e-07&#10; ACTUAL: array([[ 0.      ,  7.5575  , 13.222499,  5.745   , 11.88    , 13.9975  ,&#10;         5.67    ,  0.      , 13.14    ,  5.205   ,  5.8875  ],&#10;       [ 7.934999, 10.564999, 10.690001,  0.      , 11.5025  ,  9.365001,...&#10; DESIRED: array([[ 0.    ,  7.5575, 13.2225,  5.745 , 11.88  , 13.9975,  5.67  ,&#10;         0.    , 13.14  ,  5.205 ,  5.8875],&#10;       [ 7.935 , 10.565 , 10.69  ,  0.    , 11.5025,  9.365 , 10.46  ,...">landcover = 0
+
+    @pytest.mark.parametrize("landcover", (0, 1))
+    def test_umep_full_ground_view(landcover):
+        _, umep_gvf = _load_unchanged_umep()
+        base = _fixture(landcover)
+        reference_args = _copy(base)
+        serial_args = _copy(base)
+        parallel_args = _copy(base)
+    
+        reference = umep_gvf.gvf_2018a(**reference_args)
+        serial = ground_view.gvf_2018a(**serial_args)
+        parallel = ground_view.gvf_2018a_parallel(**parallel_args)
+    
+        assert len(reference) == len(serial) == len(parallel) == 17
+        for index, expected in enumerate(reference):
+            longwave = index in LONGWAVE_FIELDS
+&gt;           _assert_field(serial[index], expected, longwave=longwave)
+
+tests/scientific/test_umep_ground_view_independent.py:197: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = array([[ 0.       ,  7.5575004, 13.222499 ,  5.7450004, 11.88     ,
+        13.9975   ,  5.67     ,  0.       , 13.14 ... ,  9.17     ,
+         8.699999 , 13.505    ,  5.95     , 11.380001 , 13.6675005,
+         0.       ]], dtype=float32)
+expected = array([[ 0.        ,  7.55749994, 13.22249999,  5.74499999, 11.87999997,
+        13.99749999,  5.66999999,  0.        ....        ,  9.16999999,
+         8.69999994, 13.50499999,  5.94999999, 11.37999996, 13.66749999,
+         0.        ]])
+longwave = False
+
+    def _assert_field(actual, expected, longwave):
+        assert actual.shape == expected.shape
+        for mask in (np.isnan, np.isposinf, np.isneginf):
+            np.testing.assert_array_equal(mask(actual), mask(expected))
+        if longwave:
+            np.testing.assert_allclose(actual, expected, rtol=1e-5, atol=0.05, equal_nan=True)
+        else:
+&gt;           np.testing.assert_allclose(actual, expected, rtol=0, atol=1e-6, equal_nan=True)
+E           AssertionError: 
+E           Not equal to tolerance rtol=0, atol=1e-06
+E           
+E           Mismatched elements: 12 / 99 (12.1%)
+E           First 5 mismatches are at indices:
+E            [0, 2]: 13.222498893737793 (ACTUAL), 13.22249998599291 (DESIRED)
+E            [1, 1]: 10.564998626708984 (ACTUAL), 10.564999964833259 (DESIRED)
+E            [4, 0]: 11.079998970031738 (ACTUAL), 11.079999971389771 (DESIRED)
+E            [4, 3]: 8.180001258850098 (ACTUAL), 8.179999965429305 (DESIRED)
+E            [6, 7]: 9.240001678466797 (ACTUAL), 9.239999967813493 (DESIRED)
+E           Max absolute difference among violations: 1.7106533e-06
+E           Max relative difference among violations: 1.8513564e-07
+E            ACTUAL: array([[ 0.      ,  7.5575  , 13.222499,  5.745   , 11.88    , 13.9975  ,
+E                    5.67    ,  0.      , 13.14    ,  5.205   ,  5.8875  ],
+E                  [ 7.934999, 10.564999, 10.690001,  0.      , 11.5025  ,  9.365001,...
+E            DESIRED: array([[ 0.    ,  7.5575, 13.2225,  5.745 , 11.88  , 13.9975,  5.67  ,
+E                    0.    , 13.14  ,  5.205 ,  5.8875],
+E                  [ 7.935 , 10.565 , 10.69  ,  0.    , 11.5025,  9.365 , 10.46  ,...
+
+tests/scientific/test_umep_ground_view_independent.py:136: AssertionError</failure></testcase><testcase classname="tests.scientific.test_umep_ground_view_independent" name="test_umep_full_ground_view[1]" time="0.016"><failure message="AssertionError: &#10;Not equal to tolerance rtol=0, atol=1e-06&#10;&#10;Mismatched elements: 12 / 99 (12.1%)&#10;First 5 mismatches are at indices:&#10; [0, 2]: 13.222498893737793 (ACTUAL), 13.22249998599291 (DESIRED)&#10; [1, 1]: 10.564998626708984 (ACTUAL), 10.564999964833259 (DESIRED)&#10; [4, 0]: 11.079998970031738 (ACTUAL), 11.079999971389771 (DESIRED)&#10; [4, 3]: 8.180001258850098 (ACTUAL), 8.179999965429305 (DESIRED)&#10; [6, 7]: 9.240001678466797 (ACTUAL), 9.239999967813493 (DESIRED)&#10;Max absolute difference among violations: 1.7106533e-06&#10;Max relative difference among violations: 1.8513564e-07&#10; ACTUAL: array([[ 0.      ,  7.5575  , 13.222499,  5.745   , 11.88    , 13.9975  ,&#10;         5.67    ,  0.      , 13.14    ,  5.205   ,  5.8875  ],&#10;       [ 7.934999, 10.564999, 10.690001,  0.      , 11.5025  ,  9.365001,...&#10; DESIRED: array([[ 0.    ,  7.5575, 13.2225,  5.745 , 11.88  , 13.9975,  5.67  ,&#10;         0.    , 13.14  ,  5.205 ,  5.8875],&#10;       [ 7.935 , 10.565 , 10.69  ,  0.    , 11.5025,  9.365 , 10.46  ,...">landcover = 1
+
+    @pytest.mark.parametrize("landcover", (0, 1))
+    def test_umep_full_ground_view(landcover):
+        _, umep_gvf = _load_unchanged_umep()
+        base = _fixture(landcover)
+        reference_args = _copy(base)
+        serial_args = _copy(base)
+        parallel_args = _copy(base)
+    
+        reference = umep_gvf.gvf_2018a(**reference_args)
+        serial = ground_view.gvf_2018a(**serial_args)
+        parallel = ground_view.gvf_2018a_parallel(**parallel_args)
+    
+        assert len(reference) == len(serial) == len(parallel) == 17
+        for index, expected in enumerate(reference):
+            longwave = index in LONGWAVE_FIELDS
+&gt;           _assert_field(serial[index], expected, longwave=longwave)
+
+tests/scientific/test_umep_ground_view_independent.py:197: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+actual = array([[ 0.       ,  7.5575004, 13.222499 ,  5.7450004, 11.88     ,
+        13.9975   ,  5.67     ,  0.       , 13.14 ... ,  9.17     ,
+         8.699999 , 13.505    ,  5.95     , 11.380001 , 13.6675005,
+         0.       ]], dtype=float32)
+expected = array([[ 0.        ,  7.55749994, 13.22249999,  5.74499999, 11.87999997,
+        13.99749999,  5.66999999,  0.        ....        ,  9.16999999,
+         8.69999994, 13.50499999,  5.94999999, 11.37999996, 13.66749999,
+         0.        ]])
+longwave = False
+
+    def _assert_field(actual, expected, longwave):
+        assert actual.shape == expected.shape
+        for mask in (np.isnan, np.isposinf, np.isneginf):
+            np.testing.assert_array_equal(mask(actual), mask(expected))
+        if longwave:
+            np.testing.assert_allclose(actual, expected, rtol=1e-5, atol=0.05, equal_nan=True)
+        else:
+&gt;           np.testing.assert_allclose(actual, expected, rtol=0, atol=1e-6, equal_nan=True)
+E           AssertionError: 
+E           Not equal to tolerance rtol=0, atol=1e-06
+E           
+E           Mismatched elements: 12 / 99 (12.1%)
+E           First 5 mismatches are at indices:
+E            [0, 2]: 13.222498893737793 (ACTUAL), 13.22249998599291 (DESIRED)
+E            [1, 1]: 10.564998626708984 (ACTUAL), 10.564999964833259 (DESIRED)
+E            [4, 0]: 11.079998970031738 (ACTUAL), 11.079999971389771 (DESIRED)
+E            [4, 3]: 8.180001258850098 (ACTUAL), 8.179999965429305 (DESIRED)
+E            [6, 7]: 9.240001678466797 (ACTUAL), 9.239999967813493 (DESIRED)
+E           Max absolute difference among violations: 1.7106533e-06
+E           Max relative difference among violations: 1.8513564e-07
+E            ACTUAL: array([[ 0.      ,  7.5575  , 13.222499,  5.745   , 11.88    , 13.9975  ,
+E                    5.67    ,  0.      , 13.14    ,  5.205   ,  5.8875  ],
+E                  [ 7.934999, 10.564999, 10.690001,  0.      , 11.5025  ,  9.365001,...
+E            DESIRED: array([[ 0.    ,  7.5575, 13.2225,  5.745 , 11.88  , 13.9975,  5.67  ,
+E                    0.    , 13.14  ,  5.205 ,  5.8875],
+E                  [ 7.935 , 10.565 , 10.69  ,  0.    , 11.5025,  9.365 , 10.46  ,...
+
+tests/scientific/test_umep_ground_view_independent.py:136: AssertionError</failure></testcase><testcase classname="tests.scientific.test_svf_analytic" name="test_default_full_patch_svf_fields_are_physically_bounded[open-svf_calculator]" time="0.372"><failure message="AssertionError: &#10;Not equal to tolerance rtol=0, atol=0.00025&#10;&#10;Mismatched elements: 117 / 117 (100%)&#10;First 5 mismatches are at indices:&#10; [0, 0]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 1]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 2]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 3]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 4]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10;Max absolute difference among violations: 0.02477348&#10;Max relative difference among violations: 0.02477348&#10; ACTUAL: array([[0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,&#10;        0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,&#10;        0.975227],...&#10; DESIRED: array(1., dtype=float32)">calculator = &lt;function svf_calculator at 0x79f6a764e660&gt;, kind = 'open'
+
+    @pytest.mark.parametrize("calculator", (svf_calculator, svf_calculator_compact))
+    @pytest.mark.parametrize("kind", ("open", "obstructed"))
+    def test_default_full_patch_svf_fields_are_physically_bounded(calculator, kind):
+        outputs = calculator(**_calculation(kind))
+        _assert_bounded_svf(outputs)
+        if kind == "open":
+            for index in VEGETATION_OPEN_FIELDS:
+&gt;               np.testing.assert_allclose(
+                    outputs[index], np.float32(1), rtol=0, atol=FLOAT32_ALLOWANCE
+                )
+E               AssertionError: 
+E               Not equal to tolerance rtol=0, atol=0.00025
+E               
+E               Mismatched elements: 117 / 117 (100%)
+E               First 5 mismatches are at indices:
+E                [0, 0]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 1]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 2]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 3]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 4]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E               Max absolute difference among violations: 0.02477348
+E               Max relative difference among violations: 0.02477348
+E                ACTUAL: array([[0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,
+E                       0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,
+E                       0.975227],...
+E                DESIRED: array(1., dtype=float32)
+
+tests/scientific/test_svf_analytic.py:68: AssertionError</failure></testcase><testcase classname="tests.scientific.test_svf_analytic" name="test_default_full_patch_svf_fields_are_physically_bounded[open-svf_calculator_compact]" time="0.030"><failure message="AssertionError: &#10;Not equal to tolerance rtol=0, atol=0.00025&#10;&#10;Mismatched elements: 117 / 117 (100%)&#10;First 5 mismatches are at indices:&#10; [0, 0]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 1]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 2]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 3]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10; [0, 4]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)&#10;Max absolute difference among violations: 0.02477348&#10;Max relative difference among violations: 0.02477348&#10; ACTUAL: array([[0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,&#10;        0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,&#10;        0.975227],...&#10; DESIRED: array(1., dtype=float32)">calculator = &lt;function svf_calculator_compact at 0x79f6a764fc40&gt;, kind = 'open'
+
+    @pytest.mark.parametrize("calculator", (svf_calculator, svf_calculator_compact))
+    @pytest.mark.parametrize("kind", ("open", "obstructed"))
+    def test_default_full_patch_svf_fields_are_physically_bounded(calculator, kind):
+        outputs = calculator(**_calculation(kind))
+        _assert_bounded_svf(outputs)
+        if kind == "open":
+            for index in VEGETATION_OPEN_FIELDS:
+&gt;               np.testing.assert_allclose(
+                    outputs[index], np.float32(1), rtol=0, atol=FLOAT32_ALLOWANCE
+                )
+E               AssertionError: 
+E               Not equal to tolerance rtol=0, atol=0.00025
+E               
+E               Mismatched elements: 117 / 117 (100%)
+E               First 5 mismatches are at indices:
+E                [0, 0]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 1]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 2]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 3]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E                [0, 4]: 0.9752265214920044 (ACTUAL), 1.0 (DESIRED)
+E               Max absolute difference among violations: 0.02477348
+E               Max relative difference among violations: 0.02477348
+E                ACTUAL: array([[0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,
+E                       0.975227, 0.975227, 0.975227, 0.975227, 0.975227, 0.975227,
+E                       0.975227],...
+E                DESIRED: array(1., dtype=float32)
+
+tests/scientific/test_svf_analytic.py:68: AssertionError</failure></testcase><testcase classname="tests.scientific.test_svf_analytic" name="test_default_full_patch_svf_fields_are_physically_bounded[obstructed-svf_calculator]" time="0.888" /><testcase classname="tests.scientific.test_svf_analytic" name="test_default_full_patch_svf_fields_are_physically_bounded[obstructed-svf_calculator_compact]" time="0.049" /><testcase classname="tests.scientific.test_svf_analytic" name="test_float32_allowance_is_fixed_from_default_patch_operation_count" time="0.000" /></testsuite></testsuites>

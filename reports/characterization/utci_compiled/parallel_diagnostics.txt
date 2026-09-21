@@ -1,0 +1,43 @@
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _utci_points_parallel, 
+/Users/alansynn/Workspace/solweig-light/src/solweig_light/comfort/utci.py (346)
+  
+================================================================================
+
+
+Parallel loop listing for  Function _utci_points_parallel, /Users/alansynn/Workspace/solweig-light/src/solweig_light/comfort/utci.py (346) 
+-------------------------------------------------------------------------------------------|loop #ID
+@njit(cache=True, parallel=True, fastmath=False, error_model='numpy')                      | 
+def _utci_points_parallel(ta, rh, tmrt, wind, supported, output):                          | 
+    # Each iteration owns exactly one output element; no reductions/shared words.          | 
+    for point in prange(ta.size):----------------------------------------------------------| #2
+        if supported[point]:                                                               | 
+            output[point] = utci_scalar(ta[point], rh[point], tmrt[point], wind[point])    | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #2:
+  Has the following hoisted:
+    $64load_global.1 = global(utci_scalar: CPUDispatcher(<function utci_scalar at 0x11be15ee0>))
+    $bool62 = global(bool: <class 'bool'>)
+  Failed to hoist the following:
+    dependency: $80binary_subscr.5 = getitem(value=ta, index=$parfor__index_70.87, fn=<built-in function getitem>)
+    dependency: $94binary_subscr.8 = getitem(value=rh, index=$parfor__index_70.87, fn=<built-in function getitem>)
+    dependency: $108binary_subscr.11 = getitem(value=tmrt, index=$parfor__index_70.87, fn=<built-in function getitem>)
+    dependency: $122binary_subscr.14 = getitem(value=wind, index=$parfor__index_70.87, fn=<built-in function getitem>)
+    dependency: $136call.15 = call $push_global_to_block.85($80binary_subscr.5, $94binary_subscr.8, $108binary_subscr.11, $122binary_subscr.14, func=$push_global_to_block.85, args=[Var($80binary_subscr.5, utci.py:351), Var($94binary_subscr.8, utci.py:351), Var($108binary_subscr.11, utci.py:351), Var($122binary_subscr.14, utci.py:351)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $52binary_subscr.4 = getitem(value=supported, index=$parfor__index_70.87, fn=<built-in function getitem>)
+    dependency: $62pred = call $push_global_to_block.86($52binary_subscr.4, func=$push_global_to_block.86, args=(Var($52binary_subscr.4, utci.py:350),), kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------

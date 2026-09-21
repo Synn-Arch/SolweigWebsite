@@ -1,0 +1,78 @@
+{
+  "expected_warmup_only": [
+    "0_0/SVF_0_0.tif"
+  ],
+  "files": [
+    {
+      "passed": true,
+      "path": "0_0/Kdown_0_0.tif",
+      "profile_sha256": "a2ddf2f67c6fa28c1db9308713ea4c875edafa6c2c20fdf6134b50dadfcd150c",
+      "warmup_sha256": "a2ddf2f67c6fa28c1db9308713ea4c875edafa6c2c20fdf6134b50dadfcd150c"
+    },
+    {
+      "passed": true,
+      "path": "0_0/Kup_0_0.tif",
+      "profile_sha256": "886bb6363dddbeccd06ab8144443f9ffd089f0f73895a05d96e5ff93a367a370",
+      "warmup_sha256": "886bb6363dddbeccd06ab8144443f9ffd089f0f73895a05d96e5ff93a367a370"
+    },
+    {
+      "passed": true,
+      "path": "0_0/Ldown_0_0.tif",
+      "profile_sha256": "92b6695ff1fc1eff01d0135d6a3dd1d1fe475b7a6a3b98b463d725c3b1ac95bf",
+      "warmup_sha256": "92b6695ff1fc1eff01d0135d6a3dd1d1fe475b7a6a3b98b463d725c3b1ac95bf"
+    },
+    {
+      "passed": true,
+      "path": "0_0/Lup_0_0.tif",
+      "profile_sha256": "18ae165dbd4ebcc59ac4efb012218a42f763c4d21d3d536af617d41eb587871d",
+      "warmup_sha256": "18ae165dbd4ebcc59ac4efb012218a42f763c4d21d3d536af617d41eb587871d"
+    },
+    {
+      "passed": true,
+      "path": "0_0/Shadow_0_0.tif",
+      "profile_sha256": "8990ff21e87192477794c3e6673882f77a61ff8d111812949034a53fd5a690a7",
+      "warmup_sha256": "8990ff21e87192477794c3e6673882f77a61ff8d111812949034a53fd5a690a7"
+    },
+    {
+      "passed": true,
+      "path": "0_0/TMRT_0_0.tif",
+      "profile_sha256": "fb502921d535cf60fe901d09282f14a6310f5ca20b75216e74ced407c0eba72a",
+      "warmup_sha256": "fb502921d535cf60fe901d09282f14a6310f5ca20b75216e74ced407c0eba72a"
+    },
+    {
+      "passed": true,
+      "path": "0_0/Ta_0_0.tif",
+      "profile_sha256": "f180aa7653f665aa8b26a9011c918c40c9c8c0c3666a87a5497cf4d26b3f1abe",
+      "warmup_sha256": "f180aa7653f665aa8b26a9011c918c40c9c8c0c3666a87a5497cf4d26b3f1abe"
+    },
+    {
+      "passed": true,
+      "path": "0_0/UTCI_0_0.tif",
+      "profile_sha256": "4b0ff5a095ccc155f8aeab485a6fd67288d9da5a07694576c9463cc92df6e493",
+      "warmup_sha256": "4b0ff5a095ccc155f8aeab485a6fd67288d9da5a07694576c9463cc92df6e493"
+    },
+    {
+      "passed": true,
+      "path": "0_0/WBGT_0_0.tif",
+      "profile_sha256": "ded3d14b8f36ab0e62107d7e5a27d19e87480c4ebb0068738816a8128d57cdba",
+      "warmup_sha256": "ded3d14b8f36ab0e62107d7e5a27d19e87480c4ebb0068738816a8128d57cdba"
+    },
+    {
+      "passed": true,
+      "path": "0_0/Wind_0_0.tif",
+      "profile_sha256": "6f58de0baddc9d317b78e0af1d819307bbf766d81e86d169954ce26b78e015af",
+      "warmup_sha256": "6f58de0baddc9d317b78e0af1d819307bbf766d81e86d169954ce26b78e015af"
+    }
+  ],
+  "passed": true,
+  "performance_claim": null,
+  "profile_only": [],
+  "profiled_outputs": 10,
+  "run": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1",
+  "schema": "local-cpu-optimization-e0-profile-output-comparison.v1",
+  "shared_outputs": 10,
+  "warmup_only": [
+    "0_0/SVF_0_0.tif"
+  ],
+  "warmup_outputs": 11
+}

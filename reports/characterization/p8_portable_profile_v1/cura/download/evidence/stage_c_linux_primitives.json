@@ -1,0 +1,64 @@
+{
+  "llvm": {
+    "fast_flag_text_count": 0,
+    "fma_call_text_count": 10,
+    "signature": "(Array(float32, 1, 'C', False, aligned=True),)"
+  },
+  "passed": true,
+  "profile": {
+    "fingerprint": "982fa77f7f674562e9e086b1d1bba987cb850ea8140598701e3436a2a34f2427",
+    "id": "solweig-portable-sleef-5a1d179d-v1",
+    "implementation": {
+      "coefficient_policy": "numpy-float64-cos-tan-scalar-v1",
+      "profile_id": "solweig-portable-sleef-5a1d179d-v1",
+      "sleef_commit": "5a1d179df9cf652951b59010a2d2075372d67f68",
+      "source_sha256": {
+        "SLEEF_LICENSE.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+        "_math_profile.py": "b2020b4dd1c2ef4efd00c717ea3bdf75ba1ecd5399d5df1c0324c54ff03cc2cd",
+        "_sleef_acos.py": "cc59c1fac382db67219ee07f662d08a9f8da29349a460b854d74b7d44a9316c6",
+        "_sleef_classifier.py": "fdc7bbdc77777cbe75760f394bdf28af76f8d12b637368b8c187c606313b9552"
+      },
+      "tan_domain_policy": "sleef-u10-fast-abs-lt-125;explicit-legacy-numpy-otherwise-v1"
+    },
+    "runtime": {
+      "byteorder": "little",
+      "fastmath": false,
+      "float_rounds": 1,
+      "fma": "explicit-llvm.fma.f32",
+      "llvmlite": "0.49.0",
+      "machine": "x86_64",
+      "numba": "0.67.0",
+      "numpy": "2.4.6",
+      "python": "CPython-3.12.3",
+      "system": "Linux"
+    }
+  },
+  "records": [
+    {
+      "count": 411685,
+      "finite_bit_mismatches": 0,
+      "name": "m1_411685_asvf",
+      "nan_mask_mismatches": 0,
+      "neginf_mask_mismatches": 0,
+      "posinf_mask_mismatches": 0
+    },
+    {
+      "count": 189220,
+      "finite_bit_mismatches": 0,
+      "name": "cura_189220_sqrt",
+      "nan_mask_mismatches": 0,
+      "neginf_mask_mismatches": 0,
+      "posinf_mask_mismatches": 0
+    },
+    {
+      "count": 189220,
+      "finite_bit_mismatches": 0,
+      "name": "cura_189220_asvf",
+      "nan_mask_mismatches": 0,
+      "neginf_mask_mismatches": 0,
+      "posinf_mask_mismatches": 0
+    }
+  ],
+  "schema": "portable-profile-linux-primitives.v1",
+  "torch_imported": false
+}

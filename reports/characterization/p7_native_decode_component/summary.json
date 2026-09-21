@@ -1,0 +1,72 @@
+{
+  "scope": "Quiet-window P4 component experiment only, unchanged block128/serial1, five warm calls each in one fresh process, first-call compilation separate; no full simulation speedup or promotion",
+  "pairs": [
+    {
+      "function": "Kside_veg_v2022a",
+      "visibility": "compact",
+      "baseline_warm_median_seconds": 0.8657073329668492,
+      "decoder_warm_median_seconds": 0.31295050005428493,
+      "median_ratio_baseline_over_decoder": 2.7662756021053876,
+      "baseline_first_seconds": 2.6696453749900684,
+      "decoder_first_seconds": 2.040929166949354,
+      "first_call_delta_seconds": -0.6287162080407143,
+      "baseline_peak_rss_bytes": 258375680,
+      "decoder_peak_rss_bytes": 258228224,
+      "cross_candidate_outputs_and_mutations_bitwise_equal": true,
+      "baseline_report": "reports/characterization/p7_native_decode_component/p6_Kside_compact/report.json",
+      "decoder_report": "reports/characterization/p7_native_decode_component/decoder_Kside_veg_v2022a_compact/report.json"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "visibility": "dense",
+      "baseline_warm_median_seconds": 0.5578576249536127,
+      "decoder_warm_median_seconds": 0.5614084169501439,
+      "median_ratio_baseline_over_decoder": 0.9936752070518984,
+      "baseline_first_seconds": 1.7987425830215216,
+      "decoder_first_seconds": 1.7308198750251904,
+      "first_call_delta_seconds": -0.06792270799633116,
+      "baseline_peak_rss_bytes": 333283328,
+      "decoder_peak_rss_bytes": 358170624,
+      "cross_candidate_outputs_and_mutations_bitwise_equal": true,
+      "baseline_report": "reports/characterization/p7_native_decode_component/p6_Kside_veg_v2022a_dense/report.json",
+      "decoder_report": "reports/characterization/p7_native_decode_component/decoder_Kside_veg_v2022a_dense/report.json"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "visibility": "compact",
+      "baseline_warm_median_seconds": 0.49331112497020513,
+      "decoder_warm_median_seconds": 0.17894066707231104,
+      "median_ratio_baseline_over_decoder": 2.756841879721254,
+      "baseline_first_seconds": 2.6658373749814928,
+      "decoder_first_seconds": 2.753670291043818,
+      "first_call_delta_seconds": 0.08783291606232524,
+      "baseline_peak_rss_bytes": 267272192,
+      "decoder_peak_rss_bytes": 286195712,
+      "cross_candidate_outputs_and_mutations_bitwise_equal": true,
+      "baseline_report": "reports/characterization/p7_native_decode_component/p6_Lcyl_v2022a_compact/report.json",
+      "decoder_report": "reports/characterization/p7_native_decode_component/decoder_Lcyl_v2022a_compact/report.json"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "visibility": "dense",
+      "baseline_warm_median_seconds": 0.37462433299515396,
+      "decoder_warm_median_seconds": 0.36883741698693484,
+      "median_ratio_baseline_over_decoder": 1.0156896121209527,
+      "baseline_first_seconds": 2.828286583069712,
+      "decoder_first_seconds": 2.6255792500451207,
+      "first_call_delta_seconds": -0.2027073330245912,
+      "baseline_peak_rss_bytes": 323420160,
+      "decoder_peak_rss_bytes": 337379328,
+      "cross_candidate_outputs_and_mutations_bitwise_equal": true,
+      "baseline_report": "reports/characterization/p7_native_decode_component/p6_Lcyl_v2022a_dense/report.json",
+      "decoder_report": "reports/characterization/p7_native_decode_component/decoder_Lcyl_v2022a_dense/report.json"
+    }
+  ],
+  "limitations": [
+    "Single process perconfiguration, no crossprocess confidence interval",
+    "Process lifetime RSS includes imports/JIT/fixtures/output and descriptor instrumentation; not process-tree memory or decode-only memory",
+    "Descriptor construction measured after compilation with tracemalloc enabled; excludes untracked native allocation, zero encoded copying verified by shares_memory",
+    "Longwave compact first call has +0.088s single observation; no inference of repeatable startup regression"
+  ],
+  "source_guard_passed": true
+}

@@ -1,0 +1,23 @@
+{
+  "baseline_commit": "8ca23d444a3b05bdeb76655329c0a09c3dc4d6e8",
+  "baseline_manifest": "baseline_source_manifest.json",
+  "inventories": {
+    "wall_candidate": "wall_source_inventory.sha256",
+    "math_candidate": "math_source_inventory.sha256"
+  },
+  "changed_files": {
+    "wall_candidate/src/solweig_light/radiation/wall_shadows.py": "5c0630e238d801c4c0d2c821edee435bbc152d9892f4aea3cc4e6ced0ef09bc1",
+    "math_candidate/src/solweig_light/radiation/_sleef_acos.py": "a02c9923a1933806eed68b4a5c69e198a94e99e277be98cd1c884a1f459ac24c",
+    "math_candidate/src/solweig_light/radiation/_sleef_classifier.py": "86611ca34cffcb548e99efcb0bc50ff273ed78266e558d56c3cfefed4edb7e51"
+  },
+  "test_sources": {
+    "tests/e4_probe.py": "672ad49774a16f42798a104d18230e882435fb4d72af58277bd3a1fe3ae6b23f",
+    "tests/test_e4_source_proof.py": "8fb26e0516e0b861c849e27d02938c59c223d5b95eae05b68ef8c25f3d336587",
+    "tests/test_e4_subprocess.py": "ef85dc87546c050423282045ad899a739276e56fbc5b2efdea8e939789bf1cae"
+  },
+  "patches": {
+    "wall_candidate.patch": "f0a0b962eef6be6cb5a2bd8b39c67518d90d977e351079dffc32ff2dee4016b1",
+    "math_candidate.patch": "5398037dbc2a504955abfd5a5082ed7c3e862c549f535110191f5b618617af67"
+  },
+  "self_excluded": ["source_manifest.json", "report.json", "README.md"]
+}

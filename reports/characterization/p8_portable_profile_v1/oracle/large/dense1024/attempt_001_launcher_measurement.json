@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_real_dense_urban_original_cpu/harness/run_reference.py",
+    "--fixture",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_portable_profile_v1/oracle/large/dense1024/fixture",
+    "--kwargs",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_portable_profile_v1/oracle/large/dense1024/kwargs.json",
+    "--run",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_portable_profile_v1/oracle/large/dense1024/run",
+    "--threads",
+    "1"
+  ],
+  "exit_code": 1,
+  "memory_limit_aborted": false,
+  "peak_process_tree_rss_bytes": 272760832,
+  "rss_cap_bytes": 12884901888,
+  "sample_interval_seconds": 0.02
+}

@@ -1,0 +1,2756 @@
+{
+  "artifacts": [
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 4.57763671875e-05,
+          "passed": true,
+          "worst_coordinate": [
+            939,
+            997
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            93
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            32
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            14,
+            1023
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            9,
+            140
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 0.00018310546875,
+          "passed": true,
+          "worst_coordinate": [
+            26,
+            39
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            960
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 0.00018310546875,
+          "passed": true,
+          "worst_coordinate": [
+            14,
+            52
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            8,
+            10
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            4,
+            16
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 9.1552734375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1000,
+            85
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 9.1552734375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            150,
+            985
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            4,
+            118
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Kdown_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 3.814697265625e-06,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            12
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 1.1444091796875e-05,
+          "passed": true,
+          "worst_coordinate": [
+            3,
+            17
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 7.62939453125e-06,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            11
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            7,
+            1020
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            1016
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            953
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            58,
+            110
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            35
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            4,
+            101
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            4,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 7.62939453125e-06,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            13
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 7.62939453125e-06,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            1
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 3.814697265625e-06,
+          "passed": true,
+          "worst_coordinate": [
+            2,
+            36
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Kup_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            93
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 0.000274658203125,
+          "passed": true,
+          "worst_coordinate": [
+            55,
+            91
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            2,
+            48
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 0.000457763671875,
+          "passed": true,
+          "worst_coordinate": [
+            8,
+            19
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            14,
+            76
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 0.000152587890625,
+          "passed": true,
+          "worst_coordinate": [
+            17,
+            65
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 0.000213623046875,
+          "passed": true,
+          "worst_coordinate": [
+            35,
+            39
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 0.00018310546875,
+          "passed": true,
+          "worst_coordinate": [
+            2,
+            44
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 0.00048828125,
+          "passed": true,
+          "worst_coordinate": [
+            58,
+            118
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 0.00048828125,
+          "passed": true,
+          "worst_coordinate": [
+            87,
+            90
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 0.000396728515625,
+          "passed": true,
+          "worst_coordinate": [
+            14,
+            138
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 0.000396728515625,
+          "passed": true,
+          "worst_coordinate": [
+            5,
+            152
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 0.000152587890625,
+          "passed": true,
+          "worst_coordinate": [
+            30,
+            957
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 0.00018310546875,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            28
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 0.000152587890625,
+          "passed": true,
+          "worst_coordinate": [
+            35,
+            989
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            92
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            92
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            92
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Ldown_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            25
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            3,
+            26
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            30,
+            973
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            43
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            4,
+            27
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            1023
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            70,
+            1
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            92,
+            981
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            28,
+            85
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            4
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            89
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            131
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            28
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Lup_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Shadow_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            92
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            5
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 9.1552734375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            58,
+            121
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            151,
+            76
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            11
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            5
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            40,
+            82
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            909,
+            186
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            2,
+            93
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            10
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            4
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            32
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            21
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            76
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            76
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 3.0517578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            76
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "TMRT_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Ta_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            66,
+            91
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 3.62396240234375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            981
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 3.814697265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            1015
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 4.1961669921875e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            163
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            77,
+            1023
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1020,
+            26
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 5.7220458984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            65,
+            1019
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 4.9591064453125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1016,
+            98
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 4.9591064453125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            36,
+            96
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 5.340576171875e-05,
+          "passed": true,
+          "worst_coordinate": [
+            3,
+            66
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 5.340576171875e-05,
+          "passed": true,
+          "worst_coordinate": [
+            144,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 3.814697265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            31,
+            9
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 3.814697265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            167,
+            1
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 3.24249267578125e-05,
+          "passed": true,
+          "worst_coordinate": [
+            24,
+            30
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 2.47955322265625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            994,
+            97
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 2.6702880859375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            22,
+            2
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 2.6702880859375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            22,
+            2
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 2.6702880859375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            22,
+            2
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "UTCI_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            111
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            7,
+            30
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            2,
+            107
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            2,
+            103
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 5.7220458984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            9
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 8.392333984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            14,
+            994
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 8.392333984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            131,
+            35
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 8.392333984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            33,
+            118
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 8.20159912109375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            98,
+            1010
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 8.392333984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            57
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 5.7220458984375e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            35
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            24
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            1,
+            58
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            3,
+            57
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            8,
+            95
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            18
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            18
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 5.53131103515625e-05,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            18
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "WBGT_0_0.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 10,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 11,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 14,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 15,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 17,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 19,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "Wind_0_0.tif",
+      "schema_equal": true
+    }
+  ],
+  "geometry": [
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svf.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "worst_coordinate": [
+            27,
+            2
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfE.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfEaveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfEveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "worst_coordinate": [
+            77,
+            32
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfN.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfNaveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfNveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "worst_coordinate": [
+            20,
+            29
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfS.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfSaveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfSveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 7.450580596923828e-09,
+          "passed": true,
+          "worst_coordinate": [
+            12,
+            29
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfW.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfWaveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfWveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfaveg.tif",
+      "schema_equal": true
+    },
+    {
+      "bands": [
+        {
+          "band": 1,
+          "masks_equal": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ],
+      "passed": true,
+      "path": "svfveg.tif",
+      "schema_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "passed": true,
+      "path": "shadowmats/shadowmat",
+      "schema_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "passed": true,
+      "path": "shadowmats/vegshadowmat",
+      "schema_equal": true
+    },
+    {
+      "max_abs": 0.0,
+      "passed": true,
+      "path": "shadowmats/vbshmat",
+      "schema_equal": true
+    }
+  ],
+  "passed": true,
+  "summary": {
+    "failed_geometry": [],
+    "failed_outputs": [],
+    "geometry_count": 18,
+    "output_count": 10
+  }
+}

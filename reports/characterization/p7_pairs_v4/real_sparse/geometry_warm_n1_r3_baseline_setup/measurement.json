@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/tools/benchmark_p7_pipeline.py",
+    "--child",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_sparse/geometry_warm_n1_r3_baseline_setup/spec.json"
+  ],
+  "elapsed_seconds_including_imports_jit_io": 138.52133533393499,
+  "exit_code": 0,
+  "jit_state": "fresh private NUMBA_CACHE_DIR; uncached kernels compile each process; OS page cache uncontrolled",
+  "memory_limit_aborted": false,
+  "peak_process_tree_rss_bytes": 520667136,
+  "rss_caveat": "shared pages may count twice; between-sample peaks may be missed",
+  "sample_interval_seconds": 0.02
+}

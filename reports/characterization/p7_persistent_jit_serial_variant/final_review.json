@@ -1,0 +1,45 @@
+{
+  "baseline_inventory_sha256": "5a1fd8cd9f68941e716678da58af2432835bde07447ca7b005b43236d54d34e7",
+  "fixes": [
+    "Explicit process_run in child specification: outcomes and failures previously written one directory above execution_status lookup, which would invalidate every real run.",
+    "Guard immutable source and protocol again immediately before warm measured worker.",
+    "Make draft-status rejection test independent of repository protocol freeze status."
+  ],
+  "harness_sha256": "d688ae60fbd82e13ecf58b2598f13ba3aa66201ddf56ed1857ffd9c7c12720d5",
+  "launch_command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/tools/run_p7_serial_variant.py",
+    "--protocol",
+    "/Users/alansynn/Workspace/solweig-light/benchmarks/protocols/p7_persistent_jit_serial_variant/protocol.json",
+    "--output",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_persistent_jit_serial_variant/pairs_v1",
+    "--execute"
+  ],
+  "limits": [
+    "Matrix not launched by reviewer; no timing or promotion claim",
+    "Existing 92-test evidence and collision logs inspected rather than rerun",
+    "No main numerical source changes or upstream worker-limit repair"
+  ],
+  "protocol_sha256": "b6839eb242b97072792e6a97b571fc092814b86db772c1a52da190b91ec73ec1",
+  "semantics_reviewed": [
+    "Current optimized baseline snapshot; no repaired P6 baseline",
+    "Distinct serial function cache names, scheduling-only duplicated bodies; only two candidate files differ from current src",
+    "First use times worker startup/import/JIT/geometry/24 chronological steps/10 output writes",
+    "Fresh warm worker after output/transaction/chronological reset; retained geometry and JIT content guarded",
+    "20ms process-tree RSS sampling with 12GiB kill cap, sampled-RSS caveat retained",
+    "Frozen comparison_v1 gates and metadata/mask checks; any failed pair invalidates five-pair subgroup"
+  ],
+  "status": "reviewed_frozen_launch_admitted_not_executed",
+  "validation": {
+    "body_equivalence": {
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "Both serial/parallel bodies match after scheduling-only normalization.\n"
+    },
+    "candidate_admission_prior_evidence": "92 passed, inspected stored JUnit; not rerun in this review",
+    "command": ".venv-light/bin/python -m pytest -q tests/unit/test_p7_serial_variant_harness.py tests/unit/test_p7_benchmark_harness.py",
+    "real_subprocess_instrumentation_regressions": 2,
+    "result": "72 passed in 3.93s",
+    "schedule_pairs": 40
+  }
+}

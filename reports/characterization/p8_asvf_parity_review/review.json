@@ -1,0 +1,54 @@
+{
+  "decision": "Do not promote float64-acos cast as universal Torch CPU parity remedy.",
+  "scope": "Independent Apple Silicon original-operation characterization; no production changes.",
+  "input_generation": {
+    "seed": 20260919,
+    "uniform_float32_samples": 200000,
+    "uniform_positive_float32_bitpatterns": 200000,
+    "boundaries": "cos(degrees)**2 cast float32 for each integer degree0..90, neighboring +/-64 float32 bit patterns clipped to [0,1]",
+    "specials": [
+      "reported failing input",
+      "+0",
+      "-0",
+      "1",
+      "negative subnormal",
+      "nextafter(1,2)",
+      "-1",
+      "+inf",
+      "-inf",
+      "NaN"
+    ],
+    "total": 411685
+  },
+  "observations": {
+    "sqrt_bit_mismatches": 0,
+    "current_acos_bit_mismatches": 5108,
+    "double_acos_bit_mismatches": 6903,
+    "host_acosf_bit_mismatches": 5108,
+    "all_finite_differences_max_ulp": 1,
+    "reported_failing_point_M1": "all three expressions return1057360530; existing M1 expression already matches originalCPU at this point",
+    "nan_masks_match": true,
+    "sampled_torch_scalar_vector_mismatches": 0
+  },
+  "source_evidence": {
+    "original": ".upstream/SOLWEIG-GPU/solweig_gpu/utci_process.py:632",
+    "strict_classifier": ".upstream/SOLWEIG-GPU/solweig_gpu/solweig.py:524",
+    "installed_neon_header": ".venv-oracle/lib/python3.11/site-packages/torch/include/ATen/cpu/vec/vec128/vec128_float_neon.h:306",
+    "header_observation": "acos uses Sleef_acosf4_u10; this is source evidence for a backend-specific approximation, not proof of runtime dispatch."
+  },
+  "recommendation": "Characterize actual pinned Torch CPU backend on each supported platform; restore upstream float32 sqrt then its acos behavior in one bounded CPU-native helper used by both paths. If precision-only repair passes full boundary classifiers and all unchanged field gates per platform, qualify evidence to those profiles; do not assert global bit parity. Otherwise reproduce the pinned native math algorithm explicitly rather than shift inputs or change comparisons.",
+  "gates": [
+    "Stage-level sqrt/asvf bit reports for full frozen SVF unique values and boundary neighborhoods on both hosts",
+    "Strict sun/shade equality behavior including neither-class equality; compare originalTorch masks and full radiation over frozen solar/patch combinations",
+    "Test tails, array layout, vector lengths, thread counts, special values and original dtype",
+    "OriginalCPU full dense1024 and vegetation1024 all-field comparison under unchanged comparison_v1, plus small chronological and patch-radiation suites",
+    "Fresh installed-wheel CPU-only verification; preserve separate cache promotion and failure records"
+  ],
+  "artifacts": {
+    "oracle.npz": "59bf2cbd16b8937e8e835f731bbeb954490076746b28ff1b2f65ab6ba2ecf0c0",
+    "comparison.json": "57a858e85b1aa4aeef336b46eb9b727de100c90901b586db79772f6e8fc20167",
+    "host_acosf.json": "1e4df77d6ede6a87987a7f9aa44b0fcd60d34a9542c4d1b19be34901f86a5bef",
+    "oracle_environment.json": "f4b48743018c015377f41afe3d58c7786288a42ac6a115d16070b153f2e806c5",
+    "inputs.npy": "96749d763174cda8cc8333688454405480ba9498d2012163afb92d5a493c6de2"
+  }
+}

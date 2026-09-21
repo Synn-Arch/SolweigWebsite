@@ -1,0 +1,19 @@
+{
+  "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+    "--child",
+    "--run",
+    "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small_frozen/trial_08_threads_default",
+    "--kwargs",
+    "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small_frozen/trial_08_threads_default/kwargs.json"
+  ],
+  "elapsed_seconds_including_imports": 9.203089207992889,
+  "exit_code": 0,
+  "measurement_class": "initial characterization, not release benchmark",
+  "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+  "sample_count": 282,
+  "sample_interval_seconds": 0.02,
+  "sampled_process_tree_peak_rss_bytes": 506134528
+}

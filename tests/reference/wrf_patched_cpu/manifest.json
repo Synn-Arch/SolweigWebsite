@@ -1,0 +1,119 @@
+{
+  "evidence_class": "patched_upstream_cpu_reference",
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "source_sha256": "e818c3edbaf2901096cbc45aaad61112988e5500578b1c6363afa5ba9b5ea57d",
+  "patched_source_sha256": "0e7ba766b70eb847ffac601b01da31570c64bfd70cdd42bfffccb61272d9e25d",
+  "upstream_patch": "docs/upstream_patches/wrf_timestamp_v1.patch",
+  "upstream_patch_sha256": "60af87301022f01f40b114a5796926cd7e6eb84759d98416b9e4213ee5cf19e8",
+  "repair_policy": "wrf_timestamp_v1",
+  "repair_rationale": "Extract datetime from parser tuple only for inclusive window filtering; retain datetime/domain tuple sort.",
+  "collector_sha256": "99cc4a47bf599956c6db3fe6aa5660c21fa050c7862547d61db861fd2b5fcc01",
+  "invocation": [
+    "tools/characterize_forcing.py",
+    "--wrf-patched-output",
+    "tests/reference/wrf_patched_cpu"
+  ],
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "2.4.6",
+    "xarray": "2026.7.0",
+    "netCDF4": "1.7.4"
+  },
+  "cases": [
+    {
+      "label": "three-hour-rotation",
+      "function": "process_wrfout_data",
+      "arguments": {
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 14:00:00",
+        "folder_path": {
+          "fixture_path": "three-hour-rotation"
+        },
+        "output_file": {
+          "fixture_path": "three-hour-rotation.nc"
+        }
+      },
+      "ordered_source_filenames": [
+        "wrfout_d03_2024-06-21_12_00_00",
+        "wrfout_d02_2024-06-21_13:00:00",
+        "wrfout_d03_2024-06-21_14"
+      ],
+      "status": "success"
+    },
+    {
+      "label": "domain-sort-retained",
+      "function": "process_wrfout_data",
+      "arguments": {
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 13:00:00",
+        "folder_path": {
+          "fixture_path": "domain-sort-retained"
+        },
+        "output_file": {
+          "fixture_path": "domain-sort-retained.nc"
+        }
+      },
+      "ordered_source_filenames": [
+        "wrfout_d02_2024-06-21_12",
+        "wrfout_d03_2024-06-21_12"
+      ],
+      "status": "success"
+    },
+    {
+      "label": "duplicate-domain-shape-failure",
+      "function": "process_wrfout_data",
+      "arguments": {
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 12:00:00",
+        "folder_path": {
+          "fixture_path": "duplicate-domain-shape-failure"
+        },
+        "output_file": {
+          "fixture_path": "duplicate-domain-shape-failure.nc"
+        }
+      },
+      "ordered_source_filenames": [
+        "wrfout_d02_2024-06-21_12",
+        "wrfout_d03_2024-06-21_12"
+      ],
+      "status": "patched_failure",
+      "exception_type": "ValueError",
+      "exception_message": "operands could not be broadcast together with remapped shapes [original->remapped]: (2,3,4)  and requested shape (1,3,4)"
+    },
+    {
+      "label": "single-calm-unrotated",
+      "function": "process_wrfout_data",
+      "arguments": {
+        "start_time": "2024-06-21 12:00:00",
+        "end_time": "2024-06-21 12:00:00",
+        "folder_path": {
+          "fixture_path": "single-calm-unrotated"
+        },
+        "output_file": {
+          "fixture_path": "single-calm-unrotated.nc"
+        }
+      },
+      "ordered_source_filenames": [
+        "wrfout_d01_2024-06-21_12"
+      ],
+      "status": "success"
+    }
+  ],
+  "files": {
+    "domain-sort-retained/wrfout_d02_2024-06-21_12": "4ab2833a11a963b9e36ee59b71379019916f843822518053159404db47fff578",
+    "domain-sort-retained/wrfout_d03_2024-06-21_12": "7c4f4b568a1f394b7d7d30953d480ad77b7390b474a31106a1c2912af06cecbb",
+    "domain-sort-retained.nc": "b194a0aeff9d1fa5c6a101b672c02654c448d5d481a5d2331346c23376c5fe33",
+    "duplicate-domain-shape-failure/wrfout_d02_2024-06-21_12": "4ab2833a11a963b9e36ee59b71379019916f843822518053159404db47fff578",
+    "duplicate-domain-shape-failure/wrfout_d03_2024-06-21_12": "7c4f4b568a1f394b7d7d30953d480ad77b7390b474a31106a1c2912af06cecbb",
+    "duplicate-domain-shape-failure.nc": "7a035076e8e06d2b87acd739dd7bfed3fdaf729582d3842f1a7e9613cc33a32a",
+    "preprocessor_wrf_timestamp_v1.py": "0e7ba766b70eb847ffac601b01da31570c64bfd70cdd42bfffccb61272d9e25d",
+    "single-calm-unrotated/wrfout_d01_2024-06-21_12": "7c4f4b568a1f394b7d7d30953d480ad77b7390b474a31106a1c2912af06cecbb",
+    "single-calm-unrotated.nc": "4f795d1bec0a263e980ad60c4decfca3bdfedb025f454c86fa99a75a90d10151",
+    "three-hour-rotation/wrfout_d02_2024-06-21_13:00:00": "4a6af0ca807058e62300c6750b788bde23af06dde34ff8941e251bfe62338103",
+    "three-hour-rotation/wrfout_d03_2024-06-21_12_00_00": "9145787b77d4cb328577df2b48394ee92e72e96614855050a9468194793ecd26",
+    "three-hour-rotation/wrfout_d03_2024-06-21_14": "bd73cb3fa20b0fe6ce6e21460d43176e4536a2ffd2e489fd2b3c0a701ebf11a6",
+    "three-hour-rotation.nc": "b5df9b39be67d38808f5ebbd872db6fef83d6a613002544eb5687acc1c904c3a"
+  }
+}

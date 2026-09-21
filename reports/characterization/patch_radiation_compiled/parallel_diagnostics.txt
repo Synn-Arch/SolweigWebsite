@@ -1,0 +1,907 @@
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _shortwave, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/radiation/patch_radiation.py (122)  
+================================================================================
+
+
+Parallel loop listing for  Function _shortwave, /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py (122) 
+-----------------------------------------------------------------------------------------------------------------------------------------|loop #ID
+@njit(fastmath=False,parallel=True)                                                                                                      | 
+def _shortwave(sh,vs,vb,diff,sun,shade,lum,solid,cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box):              | 
+    pixels,patches=sh.shape                                                                                                              | 
+    # diffuse and sunlit/shaded/vegetation reflections each have own accumulators.                                                       | 
+    out=np.zeros((pixels,20),dtype=np.float32)-------------------------------------------------------------------------------------------| #0
+    for pixel in prange(pixels):---------------------------------------------------------------------------------------------------------| #1
+        for patch in range(patches):                                                                                                     | 
+            veg=vs[pixel,patch]==0 or vb[pixel,patch]==0                                                                                 | 
+            building=np.float32(np.float32(1)-sh[pixel,patch])*vb[pixel,patch]==1                                                        | 
+            contribution=np.float32(np.float32(np.float32(diff[pixel,patch]*lum[patch])*cosine[patch])*solid[patch])                     | 
+            out[pixel,0]=np.float32(out[pixel,0]+contribution)                                                                           | 
+            v=((surface_sh*veg)*solid[patch])*cosine[patch]                                                                              | 
+            out[pixel,3]=np.float32(out[pixel,3]+v)                                                                                      | 
+            if not box:                                                                                                                  | 
+                a=((((surface_sun*sun[pixel,patch])*building)*solid[patch])*cosine[patch])                                               | 
+                b=((((surface_sh*shade[pixel,patch])*building)*solid[patch])*cosine[patch])                                              | 
+                out[pixel,1]=np.float32(out[pixel,1]+a)                                                                                  | 
+                out[pixel,2]=np.float32(out[pixel,2]+b)                                                                                  | 
+            else:                                                                                                                        | 
+                if box_gate[patch]:                                                                                                      | 
+                    a=((((surface_sun*sun[pixel,patch])*building)*solid[patch])*cosine[patch])                                           | 
+                    b=((((surface_sh*shade[pixel,patch])*building)*solid[patch])*cosine[patch])                                          | 
+                else:                                                                                                                    | 
+                    a=np.float32(0)                                                                                                      | 
+                    b=(((surface_sh*building)*solid[patch])*cosine[patch])                                                               | 
+                out[pixel,1]=np.float32(out[pixel,1]+a)                                                                                  | 
+                out[pixel,2]=np.float32(out[pixel,2]+b)                                                                                  | 
+                for direction in range(4):                                                                                               | 
+                    if diff_gate[patch,direction]:                                                                                       | 
+                        inc=np.float32(cosine[patch]*directions[patch,direction])                                                        | 
+                        d=np.float32(np.float32(np.float32(diff[pixel,patch]*lum[patch])*inc)*solid[patch])                              | 
+                        out[pixel,4+direction]=np.float32(out[pixel,4+direction]+d)                                                      | 
+                    if ref_gate[patch,direction]:                                                                                        | 
+                        v=((((surface_sh*solid[patch])*cosine[patch])*veg)*directions[patch,direction])                                  | 
+                        out[pixel,12+direction]=np.float32(out[pixel,12+direction]+v)                                                    | 
+                        if box_gate[patch]:                                                                                              | 
+                            a=(((((surface_sun*sun[pixel,patch])*solid[patch])*cosine[patch])*building)*directions[patch,direction])     | 
+                            b=(((((surface_sh*shade[pixel,patch])*solid[patch])*cosine[patch])*building)*directions[patch,direction])    | 
+                        else:                                                                                                            | 
+                            a=np.float32(0)                                                                                              | 
+                            b=((((surface_sh*solid[patch])*cosine[patch])*building)*directions[patch,direction])                         | 
+                        out[pixel,8+direction]=np.float32(out[pixel,8+direction]+a)                                                      | 
+                        # Shaded directional accumulation lives in separate final columns.                                               | 
+                        out[pixel,16+direction]=np.float32(out[pixel,16+direction]+b)                                                    | 
+    return out                                                                                                                           | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+  Trying to fuse loops #0 and #1:
+    - fusion failed: number of loops mismatched, parallel loop #0 has a nest of 
+2 loops, parallel loop #1 has a nest of 1 loops.
+  Trying to fuse loops #0 and #1:
+    - fusion failed: number of loops mismatched, parallel loop #0 has a nest of 
+2 loops, parallel loop #1 has a nest of 1 loops.
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #0:
+  Has the following hoisted:
+    $expr_out_var.83 = const(float32, 0.0)
+  Failed to hoist the following:
+    dependency: $parfor_index_tuple_var.84 = build_tuple(items=[Var($parfor__index_77.289, <string>:2), Var($parfor__index_78.291, <string>:3)])
+loop #1:
+  Has the following hoisted:
+    $const1184.5.3 = const(int, 0)
+    $const1274.7.4 = const(int, 1)
+    $const1312.15.4 = const(int, 1)
+    $const1346.22.6 = const(int, 2)
+    $const1384.30.6 = const(int, 2)
+    $1392load_global.32 = global(range: <class 'range'>)
+    $const1404.34.7 = const(int, 4)
+    $bool1446 = global(bool: <class 'bool'>)
+    $const1718.48.7 = const(int, 4)
+    $const1762.58.7 = const(int, 4)
+    $const182.8.3 = const(int, 0)
+    $bool190 = global(bool: <class 'bool'>)
+    $bool1796 = global(bool: <class 'bool'>)
+    $const2170.6.3 = const(int, 0)
+    $const210.7.3 = const(int, 0)
+    $bool1022 = global(bool: <class 'bool'>)
+    $const264.9.4 = const(int, 1)
+    $const338.24.4 = const(int, 1)
+    $const556.60.3 = const(int, 0)
+    $const594.68.3 = const(int, 0)
+    $const674.86.5 = const(int, 3)
+    $const712.94.5 = const(int, 3)
+    $bool722 = global(bool: <class 'bool'>)
+    $const2282.8.9 = const(int, 8)
+    $const2326.18.9 = const(int, 8)
+    $const2366.27.10 = const(int, 16)
+    $const2410.37.10 = const(int, 16)
+    $const1892.25.8 = const(int, 12)
+    $const1936.35.8 = const(int, 12)
+    $bool1964 = global(bool: <class 'bool'>)
+    $const886.41.4 = const(int, 1)
+    $const924.49.4 = const(int, 1)
+    $const958.56.6 = const(int, 2)
+    $const996.64.6 = const(int, 2)
+    $128load_global.2 = global(range: <class 'range'>)
+  Failed to hoist the following:
+    dependency: $1174load_attr.4 = getattr(value=$1162load_global.2, attr=float32)
+    dependency: a.2 = call $1174load_attr.4($const1184.5.3, func=$1174load_attr.4, args=[Var($const1184.5.3, patch_radiation.py:145)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul1206.9 = surface__sh * building
+    dependency: $1214binary_subscr.12 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1224.13 = $binop_mul1206.9 * $1214binary_subscr.12
+    dependency: $1232binary_subscr.16 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: b.2 = $binop_mul1224.13 * $1232binary_subscr.16
+    dependency: $1974build_tuple.7 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $1976binary_subscr.8 = getitem(value=sun, index=$1974build_tuple.7, fn=<built-in function getitem>)
+    dependency: $binop_mul1986.9 = surface__sun * $1976binary_subscr.8
+    dependency: $1994binary_subscr.12 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul2004.13 = $binop_mul1986.9 * $1994binary_subscr.12
+    dependency: $2012binary_subscr.16 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul2022.17 = $binop_mul2004.13 * $2012binary_subscr.16
+    dependency: $binop_mul2028.19 = $binop_mul2022.17 * building
+    dependency: $2038build_tuple.23 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $2040binary_subscr.24 = getitem(value=directions, index=$2038build_tuple.23, fn=<built-in function getitem>)
+    dependency: a.3 = $binop_mul2028.19 * $2040binary_subscr.24
+    dependency: $2064build_tuple.30 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $2066binary_subscr.31 = getitem(value=shade, index=$2064build_tuple.30, fn=<built-in function getitem>)
+    dependency: $binop_mul2076.32 = surface__sh * $2066binary_subscr.31
+    dependency: $2084binary_subscr.35 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul2094.36 = $binop_mul2076.32 * $2084binary_subscr.35
+    dependency: $2102binary_subscr.39 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul2112.40 = $binop_mul2094.36 * $2102binary_subscr.39
+    dependency: $binop_mul2118.42 = $binop_mul2112.40 * building
+    dependency: $2128build_tuple.46 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $2130binary_subscr.47 = getitem(value=directions, index=$2128build_tuple.46, fn=<built-in function getitem>)
+    dependency: b.3 = $binop_mul2118.42 * $2130binary_subscr.47
+    dependency: $1260load_attr.4 = getattr(value=$1248load_global.2, attr=float32)
+    dependency: $1276build_tuple.8 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const1274.7.4, patch_radiation.py:147)])
+    dependency: $1278binary_subscr.9 = getitem(value=out, index=$1276build_tuple.8, fn=<built-in function getitem>)
+    dependency: $binop_add1290.11 = $1278binary_subscr.9 + a.5
+    dependency: $1298call.12 = call $1260load_attr.4($binop_add1290.11, func=$1260load_attr.4, args=[Var($binop_add1290.11, patch_radiation.py:147)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1314build_tuple.16 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const1312.15.4, patch_radiation.py:147)])
+    dependency: $1332load_attr.19 = getattr(value=$1320load_global.17, attr=float32)
+    dependency: $1348build_tuple.23 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const1346.22.6, patch_radiation.py:148)])
+    dependency: $1350binary_subscr.24 = getitem(value=out, index=$1348build_tuple.23, fn=<built-in function getitem>)
+    dependency: $binop_add1362.26 = $1350binary_subscr.24 + b.5
+    dependency: $1370call.27 = call $1332load_attr.19($binop_add1362.26, func=$1332load_attr.19, args=[Var($binop_add1362.26, patch_radiation.py:148)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1386build_tuple.31 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const1384.30.6, patch_radiation.py:148)])
+    not pure: $1410call.35 = call $push_global_to_block.293($const1404.34.7, func=$push_global_to_block.293, args=[Var($const1404.34.7, patch_radiation.py:149)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1420get_iter.36 = getiter(value=$1410call.35)
+    dependency: $1434build_tuple.7 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $1436binary_subscr.8 = getitem(value=diff__gate, index=$1434build_tuple.7, fn=<built-in function getitem>)
+    dependency: $1446pred = call $push_global_to_block.294($1436binary_subscr.8, func=$push_global_to_block.294, args=(Var($1436binary_subscr.8, patch_radiation.py:150),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1460load_attr.5 = getattr(value=$1448load_global.3, attr=float32)
+    dependency: $1474binary_subscr.8 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $1490build_tuple.12 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $1492binary_subscr.13 = getitem(value=directions, index=$1490build_tuple.12, fn=<built-in function getitem>)
+    dependency: $binop_mul1502.14 = $1474binary_subscr.8 * $1492binary_subscr.13
+    dependency: inc = call $1460load_attr.5($binop_mul1502.14, func=$1460load_attr.5, args=[Var($binop_mul1502.14, patch_radiation.py:151)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1534load_attr.18 = getattr(value=$1522load_global.16, attr=float32)
+    dependency: $1556load_attr.21 = getattr(value=$1544load_global.19, attr=float32)
+    dependency: $1578load_attr.24 = getattr(value=$1566load_global.22, attr=float32)
+    dependency: $1594build_tuple.28 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $1596binary_subscr.29 = getitem(value=diff, index=$1594build_tuple.28, fn=<built-in function getitem>)
+    dependency: $1610binary_subscr.32 = getitem(value=lum, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1620.33 = $1596binary_subscr.29 * $1610binary_subscr.32
+    dependency: $1628call.34 = call $1578load_attr.24($binop_mul1620.33, func=$1578load_attr.24, args=[Var($binop_mul1620.33, patch_radiation.py:152)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul1640.36 = $1628call.34 * inc
+    dependency: $1648call.37 = call $1556load_attr.21($binop_mul1640.36, func=$1556load_attr.21, args=[Var($binop_mul1640.36, patch_radiation.py:152)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1662binary_subscr.40 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1672.41 = $1648call.37 * $1662binary_subscr.40
+    dependency: d = call $1534load_attr.18($binop_mul1672.41, func=$1534load_attr.18, args=[Var($binop_mul1672.41, patch_radiation.py:152)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1704load_attr.45 = getattr(value=$1692load_global.43, attr=float32)
+    dependency: $binop_add1722.50 = $const1718.48.7 + $direction.94
+    dependency: $1726build_tuple.51 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add1722.50, patch_radiation.py:153)])
+    dependency: $1728binary_subscr.52 = getitem(value=out, index=$1726build_tuple.51, fn=<built-in function getitem>)
+    dependency: $binop_add1740.54 = $1728binary_subscr.52 + d
+    dependency: $1748call.55 = call $1704load_attr.45($binop_add1740.54, func=$1704load_attr.45, args=[Var($binop_add1740.54, patch_radiation.py:153)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1766.60 = $const1762.58.7 + $direction.94
+    dependency: $1770build_tuple.61 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add1766.60, patch_radiation.py:153)])
+    dependency: $160for_iter.2 = iternext(value=$156get_iter.6)
+    dependency: $patch.95 = pair_first(value=$160for_iter.2)
+    dependency: $160for_iter.4 = pair_second(value=$160for_iter.2)
+    dependency: $170build_tuple.6 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $172binary_subscr.7 = getitem(value=vs, index=$170build_tuple.6, fn=<built-in function getitem>)
+    dependency: $184compare_op.9 = $172binary_subscr.7 == $const182.8.3
+    dependency: $190pred = call $push_global_to_block.295($184compare_op.9, func=$push_global_to_block.295, args=(Var($184compare_op.9, patch_radiation.py:129),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1782build_tuple.6 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $1784binary_subscr.7 = getitem(value=ref__gate, index=$1782build_tuple.6, fn=<built-in function getitem>)
+    dependency: $1796pred = call $push_global_to_block.296($1784binary_subscr.7, func=$push_global_to_block.296, args=(Var($1784binary_subscr.7, patch_radiation.py:154),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2160load_attr.5 = getattr(value=$2148load_global.3, attr=float32)
+    dependency: a.4 = call $2160load_attr.5($const2170.6.3, func=$2160load_attr.5, args=[Var($const2170.6.3, patch_radiation.py:161)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2194binary_subscr.11 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul2204.12 = surface__sh * $2194binary_subscr.11
+    dependency: $2212binary_subscr.15 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul2222.16 = $binop_mul2204.12 * $2212binary_subscr.15
+    dependency: $binop_mul2228.18 = $binop_mul2222.16 * building
+    dependency: $2238build_tuple.22 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $2240binary_subscr.23 = getitem(value=directions, index=$2238build_tuple.22, fn=<built-in function getitem>)
+    dependency: b.4 = $binop_mul2228.18 * $2240binary_subscr.23
+    dependency: $198build_tuple.5 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $200binary_subscr.6 = getitem(value=vb, index=$198build_tuple.5, fn=<built-in function getitem>)
+    dependency: $212compare_op.8 = $200binary_subscr.6 == $const210.7.3
+    dependency: $1012binary_subscr.4 = getitem(value=box__gate, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $1022pred = call $push_global_to_block.297($1012binary_subscr.4, func=$push_global_to_block.297, args=(Var($1012binary_subscr.4, patch_radiation.py:141),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $232load_attr.5 = getattr(value=$220load_global.3, attr=float32)
+    dependency: $254load_attr.8 = getattr(value=$242load_global.6, attr=float32)
+    dependency: $270call.10 = call $254load_attr.8($const264.9.4, func=$254load_attr.8, args=[Var($const264.9.4, patch_radiation.py:130)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $286build_tuple.14 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $288binary_subscr.15 = getitem(value=sh, index=$286build_tuple.14, fn=<built-in function getitem>)
+    dependency: $binop_sub298.16 = $270call.10 - $288binary_subscr.15
+    dependency: $306call.17 = call $232load_attr.5($binop_sub298.16, func=$232load_attr.5, args=[Var($binop_sub298.16, patch_radiation.py:130)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $322build_tuple.21 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $324binary_subscr.22 = getitem(value=vb, index=$322build_tuple.21, fn=<built-in function getitem>)
+    dependency: $binop_mul334.23 = $306call.17 * $324binary_subscr.22
+    dependency: building = $binop_mul334.23 == $const338.24.4
+    dependency: $360load_attr.28 = getattr(value=$348load_global.26, attr=float32)
+    dependency: $382load_attr.31 = getattr(value=$370load_global.29, attr=float32)
+    dependency: $404load_attr.34 = getattr(value=$392load_global.32, attr=float32)
+    dependency: $420build_tuple.38 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $422binary_subscr.39 = getitem(value=diff, index=$420build_tuple.38, fn=<built-in function getitem>)
+    dependency: $436binary_subscr.42 = getitem(value=lum, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul446.43 = $422binary_subscr.39 * $436binary_subscr.42
+    dependency: $454call.44 = call $404load_attr.34($binop_mul446.43, func=$404load_attr.34, args=[Var($binop_mul446.43, patch_radiation.py:131)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $468binary_subscr.47 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul478.48 = $454call.44 * $468binary_subscr.47
+    dependency: $486call.49 = call $382load_attr.31($binop_mul478.48, func=$382load_attr.31, args=[Var($binop_mul478.48, patch_radiation.py:131)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $500binary_subscr.52 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul510.53 = $486call.49 * $500binary_subscr.52
+    dependency: contribution = call $360load_attr.28($binop_mul510.53, func=$360load_attr.28, args=[Var($binop_mul510.53, patch_radiation.py:131)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $542load_attr.57 = getattr(value=$530load_global.55, attr=float32)
+    dependency: $558build_tuple.61 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const556.60.3, patch_radiation.py:132)])
+    dependency: $560binary_subscr.62 = getitem(value=out, index=$558build_tuple.61, fn=<built-in function getitem>)
+    dependency: $binop_add572.64 = $560binary_subscr.62 + contribution
+    dependency: $580call.65 = call $542load_attr.57($binop_add572.64, func=$542load_attr.57, args=[Var($binop_add572.64, patch_radiation.py:132)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $596build_tuple.69 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const594.68.3, patch_radiation.py:132)])
+    dependency: $binop_mul606.72 = surface__sh * $veg.92
+    dependency: $614binary_subscr.75 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul624.76 = $binop_mul606.72 * $614binary_subscr.75
+    dependency: $632binary_subscr.79 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: v = $binop_mul624.76 * $632binary_subscr.79
+    dependency: $660load_attr.83 = getattr(value=$648load_global.81, attr=float32)
+    dependency: $676build_tuple.87 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const674.86.5, patch_radiation.py:134)])
+    dependency: $678binary_subscr.88 = getitem(value=out, index=$676build_tuple.87, fn=<built-in function getitem>)
+    dependency: $binop_add690.90 = $678binary_subscr.88 + v
+    dependency: $698call.91 = call $660load_attr.83($binop_add690.90, func=$660load_attr.83, args=[Var($binop_add690.90, patch_radiation.py:134)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $714build_tuple.95 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const712.94.5, patch_radiation.py:134)])
+    not pure: $722pred = call $push_global_to_block.298(box, func=$push_global_to_block.298, args=(Var(box, patch_radiation.py:122),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1424for_iter.3 = iternext(value=$1420get_iter.36)
+    dependency: $direction.94 = pair_first(value=$1424for_iter.3)
+    dependency: $1424for_iter.5 = pair_second(value=$1424for_iter.3)
+    dependency: $2268load_attr.5 = getattr(value=$2256load_global.3, attr=float32)
+    dependency: $binop_add2286.10 = $const2282.8.9 + $direction.94
+    dependency: $2290build_tuple.11 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add2286.10, patch_radiation.py:163)])
+    dependency: $2292binary_subscr.12 = getitem(value=out, index=$2290build_tuple.11, fn=<built-in function getitem>)
+    dependency: $binop_add2304.14 = $2292binary_subscr.12 + a.6
+    dependency: $2312call.15 = call $2268load_attr.5($binop_add2304.14, func=$2268load_attr.5, args=[Var($binop_add2304.14, patch_radiation.py:163)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add2330.20 = $const2326.18.9 + $direction.94
+    dependency: $2334build_tuple.21 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add2330.20, patch_radiation.py:163)])
+    dependency: $2352load_attr.24 = getattr(value=$2340load_global.22, attr=float32)
+    dependency: $binop_add2370.29 = $const2366.27.10 + $direction.94
+    dependency: $2374build_tuple.30 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add2370.29, patch_radiation.py:165)])
+    dependency: $2376binary_subscr.31 = getitem(value=out, index=$2374build_tuple.30, fn=<built-in function getitem>)
+    dependency: $binop_add2388.33 = $2376binary_subscr.31 + b.6
+    dependency: $2396call.34 = call $2352load_attr.24($binop_add2388.33, func=$2352load_attr.24, args=[Var($binop_add2388.33, patch_radiation.py:165)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add2414.39 = $const2410.37.10 + $direction.94
+    dependency: $2418build_tuple.40 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add2414.39, patch_radiation.py:165)])
+    dependency: $1032build_tuple.6 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $1034binary_subscr.7 = getitem(value=sun, index=$1032build_tuple.6, fn=<built-in function getitem>)
+    dependency: $binop_mul1044.8 = surface__sun * $1034binary_subscr.7
+    dependency: $binop_mul1050.10 = $binop_mul1044.8 * building
+    dependency: $1058binary_subscr.13 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1068.14 = $binop_mul1050.10 * $1058binary_subscr.13
+    dependency: $1076binary_subscr.17 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: a.1 = $binop_mul1068.14 * $1076binary_subscr.17
+    dependency: $1100build_tuple.23 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $1102binary_subscr.24 = getitem(value=shade, index=$1100build_tuple.23, fn=<built-in function getitem>)
+    dependency: $binop_mul1112.25 = surface__sh * $1102binary_subscr.24
+    dependency: $binop_mul1118.27 = $binop_mul1112.25 * building
+    dependency: $1126binary_subscr.30 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1136.31 = $binop_mul1118.27 * $1126binary_subscr.30
+    dependency: $1144binary_subscr.34 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: b.1 = $binop_mul1136.31 * $1144binary_subscr.34
+    dependency: $1804binary_subscr.6 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1814.7 = surface__sh * $1804binary_subscr.6
+    dependency: $1822binary_subscr.10 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul1832.11 = $binop_mul1814.7 * $1822binary_subscr.10
+    dependency: $binop_mul1838.13 = $binop_mul1832.11 * $veg.92
+    dependency: $1848build_tuple.17 = build_tuple(items=[Var($patch.95, patch_radiation.py:128), Var($direction.94, patch_radiation.py:149)])
+    dependency: $1850binary_subscr.18 = getitem(value=directions, index=$1848build_tuple.17, fn=<built-in function getitem>)
+    dependency: v.1 = $binop_mul1838.13 * $1850binary_subscr.18
+    dependency: $1878load_attr.22 = getattr(value=$1866load_global.20, attr=float32)
+    dependency: $binop_add1896.27 = $const1892.25.8 + $direction.94
+    dependency: $1900build_tuple.28 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add1896.27, patch_radiation.py:156)])
+    dependency: $1902binary_subscr.29 = getitem(value=out, index=$1900build_tuple.28, fn=<built-in function getitem>)
+    dependency: $binop_add1914.31 = $1902binary_subscr.29 + v.1
+    dependency: $1922call.32 = call $1878load_attr.22($binop_add1914.31, func=$1878load_attr.22, args=[Var($binop_add1914.31, patch_radiation.py:156)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1940.37 = $const1936.35.8 + $direction.94
+    dependency: $1944build_tuple.38 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($binop_add1940.37, patch_radiation.py:156)])
+    dependency: $1954binary_subscr.41 = getitem(value=box__gate, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $1964pred = call $push_global_to_block.299($1954binary_subscr.41, func=$push_global_to_block.299, args=(Var($1954binary_subscr.41, patch_radiation.py:157),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $732build_tuple.6 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $734binary_subscr.7 = getitem(value=sun, index=$732build_tuple.6, fn=<built-in function getitem>)
+    dependency: $binop_mul744.8 = surface__sun * $734binary_subscr.7
+    dependency: $binop_mul750.10 = $binop_mul744.8 * building
+    dependency: $758binary_subscr.13 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul768.14 = $binop_mul750.10 * $758binary_subscr.13
+    dependency: $776binary_subscr.17 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: a = $binop_mul768.14 * $776binary_subscr.17
+    dependency: $800build_tuple.23 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($patch.95, patch_radiation.py:128)])
+    dependency: $802binary_subscr.24 = getitem(value=shade, index=$800build_tuple.23, fn=<built-in function getitem>)
+    dependency: $binop_mul812.25 = surface__sh * $802binary_subscr.24
+    dependency: $binop_mul818.27 = $binop_mul812.25 * building
+    dependency: $826binary_subscr.30 = getitem(value=solid, index=$patch.95, fn=<built-in function getitem>)
+    dependency: $binop_mul836.31 = $binop_mul818.27 * $826binary_subscr.30
+    dependency: $844binary_subscr.34 = getitem(value=cosine, index=$patch.95, fn=<built-in function getitem>)
+    dependency: b = $binop_mul836.31 * $844binary_subscr.34
+    dependency: $872load_attr.38 = getattr(value=$860load_global.36, attr=float32)
+    dependency: $888build_tuple.42 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const886.41.4, patch_radiation.py:138)])
+    dependency: $890binary_subscr.43 = getitem(value=out, index=$888build_tuple.42, fn=<built-in function getitem>)
+    dependency: $binop_add902.45 = $890binary_subscr.43 + a
+    dependency: $910call.46 = call $872load_attr.38($binop_add902.45, func=$872load_attr.38, args=[Var($binop_add902.45, patch_radiation.py:138)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $926build_tuple.50 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const924.49.4, patch_radiation.py:138)])
+    dependency: $944load_attr.53 = getattr(value=$932load_global.51, attr=float32)
+    dependency: $960build_tuple.57 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const958.56.6, patch_radiation.py:139)])
+    dependency: $962binary_subscr.58 = getitem(value=out, index=$960build_tuple.57, fn=<built-in function getitem>)
+    dependency: $binop_add974.60 = $962binary_subscr.58 + b
+    dependency: $982call.61 = call $944load_attr.53($binop_add974.60, func=$944load_attr.53, args=[Var($binop_add974.60, patch_radiation.py:139)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $998build_tuple.65 = build_tuple(items=[Var($parfor__index_85.301, <string>:2), Var($const996.64.6, patch_radiation.py:139)])
+    not pure: $146call.5 = call $push_global_to_block.300(_patches_90, func=$push_global_to_block.300, args=[Var(_patches_90, patch_radiation.py:124)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $156get_iter.6 = getiter(value=$146call.5)
+--------------------------------------------------------------------------------
+nopython signatures [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(bool, 2, 'C', False, aligned=True), Array(bool, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', True, aligned=True), Array(float32, 1, 'C', True, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(bool, 2, 'C', True, aligned=True), Array(bool, 2, 'C', True, aligned=True), Array(bool, 1, 'C', False, aligned=True), float32, float32, bool) -> array(float32, 2d, C)]
+options {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _longwave, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/radiation/patch_radiation.py (239)  
+================================================================================
+
+
+Parallel loop listing for  Function _longwave, /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py (239) 
+--------------------------------------------------------------------------------------------------------------------------------------------------|loop #ID
+@njit(fastmath=False,parallel=True)                                                                                                               | 
+def _longwave(sh,vs,vb,sun,shade,solid,sine,cosine,directions,gate,solar_gate,sky_down,sky_side,surface_sun,surface_sh,lup,reflection_factor):    | 
+    pixels,patches=sh.shape                                                                                                                       | 
+    output=np.zeros((pixels,11),dtype=np.float32)-------------------------------------------------------------------------------------------------| #3
+    for pixel in prange(pixels):------------------------------------------------------------------------------------------------------------------| #5
+        accum=np.zeros(14,dtype=np.float32)-------------------------------------------------------------------------------------------------------| #4
+        for patch in range(patches):                                                                                                              | 
+            sky=sh[pixel,patch]==1 and vs[pixel,patch]==1                                                                                         | 
+            veg=vs[pixel,patch]==0 or vb[pixel,patch]==0                                                                                          | 
+            building=np.float32(np.float32(1)-sh[pixel,patch])*vb[pixel,patch]==1                                                                 | 
+            accum[0]=np.float32(accum[0]+np.float32(sky*sky_down[patch]))                                                                         | 
+            accum[5]=np.float32(accum[5]+np.float32(sky*sky_side[patch]))                                                                         | 
+            vegetation_side=((surface_sh*solid[patch])*cosine[patch])*veg                                                                         | 
+            vegetation_down=((surface_sh*solid[patch])*sine[patch])*veg                                                                           | 
+            accum[6]=np.float32(accum[6]+vegetation_side)                                                                                         | 
+            accum[1]=np.float32(accum[1]+vegetation_down)                                                                                         | 
+            for direction in range(4):                                                                                                            | 
+                if gate[patch,direction]:                                                                                                         | 
+                    sky_term=np.float32(np.float32(sky*sky_side[patch])*directions[patch,direction])                                              | 
+                    accum[10+direction]=np.float32(accum[10+direction]+sky_term)                                                                  | 
+                    vegetation_term=vegetation_side*directions[patch,direction]                                                                   | 
+                    accum[10+direction]=np.float32(accum[10+direction]+vegetation_term)                                                           | 
+            if solar_gate[patch]:                                                                                                                 | 
+                sun_side=((((surface_sun*sun[pixel,patch])*solid[patch])*cosine[patch])*building)                                                 | 
+                shade_side=((((surface_sh*shade[pixel,patch])*solid[patch])*cosine[patch])*building)                                              | 
+                sun_down=((((surface_sun*sun[pixel,patch])*solid[patch])*sine[patch])*building)                                                   | 
+                shade_down=((((surface_sh*shade[pixel,patch])*solid[patch])*sine[patch])*building)                                                | 
+                accum[8]=np.float32(accum[8]+sun_side)                                                                                            | 
+                accum[7]=np.float32(accum[7]+shade_side)                                                                                          | 
+                accum[3]=np.float32(accum[3]+sun_down)                                                                                            | 
+                accum[2]=np.float32(accum[2]+shade_down)                                                                                          | 
+                for direction in range(4):                                                                                                        | 
+                    if gate[patch,direction]:                                                                                                     | 
+                        accum[10+direction]=np.float32(accum[10+direction]+sun_side*directions[patch,direction])                                  | 
+                        accum[10+direction]=np.float32(accum[10+direction]+shade_side*directions[patch,direction])                                | 
+            else:                                                                                                                                 | 
+                shade_side=(((surface_sh*solid[patch])*cosine[patch])*building)                                                                   | 
+                shade_down=(((surface_sh*solid[patch])*sine[patch])*building)                                                                     | 
+                accum[7]=np.float32(accum[7]+shade_side)                                                                                          | 
+                accum[2]=np.float32(accum[2]+shade_down)                                                                                          | 
+                for direction in range(4):                                                                                                        | 
+                    if gate[patch,direction]:                                                                                                     | 
+                        accum[10+direction]=np.float32(accum[10+direction]+shade_side*directions[patch,direction])                                | 
+        # The reflection field depends on the completed ordered sky sweep.                                                                        | 
+        reflected=np.float32(np.float32(np.float32(np.float32(accum[0]+lup[pixel])*reflection_factor)*np.float32(.5))/np.float32(np.pi))          | 
+        for patch in range(patches):                                                                                                              | 
+            mask=sh[pixel,patch]==0 or vs[pixel,patch]==0 or vb[pixel,patch]==0                                                                   | 
+            side=np.float32(np.float32(np.float32(reflected*solid[patch])*cosine[patch])*mask)                                                    | 
+            down=np.float32(np.float32(np.float32(reflected*solid[patch])*sine[patch])*mask)                                                      | 
+            accum[9]=np.float32(accum[9]+side)                                                                                                    | 
+            accum[4]=np.float32(accum[4]+down)                                                                                                    | 
+            for direction in range(4):                                                                                                            | 
+                if gate[patch,direction]:                                                                                                         | 
+                    accum[10+direction]=np.float32(accum[10+direction]+np.float32(side*directions[patch,direction]))                              | 
+        output[pixel,0]=np.float32(np.float32(np.float32(np.float32(accum[0]+accum[1])+accum[2])+accum[3])+accum[4])                              | 
+        output[pixel,1]=np.float32(np.float32(np.float32(np.float32(accum[5]+accum[6])+accum[7])+accum[8])+accum[9])                              | 
+        output[pixel,2:7]=accum[5:10]-------------------------------------------------------------------------------------------------------------| #2
+        output[pixel,7]=accum[10]                                                                                                                 | 
+        output[pixel,8]=accum[12]                                                                                                                 | 
+        output[pixel,9]=accum[13]                                                                                                                 | 
+        output[pixel,10]=accum[11]                                                                                                                | 
+    return output                                                                                                                                 | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+  Trying to fuse loops #3 and #5:
+    - fusion failed: number of loops mismatched, parallel loop #3 has a nest of 
+2 loops, parallel loop #5 has a nest of 1 loops.
+  Trying to fuse loops #3 and #5:
+    - fusion failed: number of loops mismatched, parallel loop #3 has a nest of 
+2 loops, parallel loop #5 has a nest of 1 loops.
+----------------------------- Before Optimisation ------------------------------
+Parallel region 0:
++--5 (parallel)
+   +--2 (parallel)
+   +--4 (parallel)
+
+
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel region 0:
++--5 (parallel)
+   +--2 (serial)
+   +--4 (serial)
+
+
+ 
+Parallel region 0 (loop #5) had 0 loop(s) fused and 2 loop(s) serialized as part
+ of the larger parallel loop (#5).
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+The memory allocation derived from the instruction at 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/radiation/patch_radiation.py (244) is hoisted out of the
+ parallel loop labelled #5 (it will be performed before the loop is executed and
+ reused inside the loop):
+   Allocation:: accum=np.zeros(14,dtype=np.float32)
+    - numpy.empty() is used for the allocation.
+
+Instruction hoisting:
+loop #3:
+  Has the following hoisted:
+    $expr_out_var.383 = const(float32, 0.0)
+  Failed to hoist the following:
+    dependency: $parfor_index_tuple_var.384 = build_tuple(items=[Var($parfor__index_377.631, <string>:2), Var($parfor__index_378.633, <string>:3)])
+loop #5:
+  Has the following hoisted:
+    $const274.7.4 = const(int, 1)
+    $const3194.53.15 = const(int, 9)
+    $const3228.59.15 = const(int, 9)
+    $const3258.64.8 = const(int, 4)
+    $const3292.70.8 = const(int, 4)
+    $3298load_global.71 = global(range: <class 'range'>)
+    $const3310.73.8 = const(int, 4)
+    $const1588.74.10 = const(int, 8)
+    $const1622.80.10 = const(int, 8)
+    $const1652.85.11 = const(int, 7)
+    $const1686.91.11 = const(int, 7)
+    $const1716.96.12 = const(int, 3)
+    $const1750.102.12 = const(int, 3)
+    $const1780.107.13 = const(int, 2)
+    $const1814.113.13 = const(int, 2)
+    $1820load_global.114 = global(range: <class 'range'>)
+    $const1832.116.8 = const(int, 4)
+    $const2824.7.5 = const(int, 0)
+    $bool2832 = global(bool: <class 'bool'>)
+    $const3582.14.5 = const(int, 0)
+    $const3596.17.4 = const(int, 1)
+    $const3628.22.13 = const(int, 2)
+    $const3660.27.12 = const(int, 3)
+    $const3692.32.8 = const(int, 4)
+    $const3726.38.5 = const(int, 0)
+    $const3824.53.6 = const(int, 5)
+    $const3838.56.7 = const(int, 6)
+    $const3870.61.11 = const(int, 7)
+    $const3902.66.10 = const(int, 8)
+    $const3934.71.15 = const(int, 9)
+    $const3968.77.4 = const(int, 1)
+    $const3978.80.6 = const(int, 5)
+    $const3980.81.9 = const(int, 10)
+    $3982build_slice.82 = global(slice: <class 'slice'>)
+    $3982build_slice.83 = call $3982build_slice.82($const3978.80.6, $const3980.81.9, func=$3982build_slice.82, args=(Var($const3978.80.6, patch_radiation.py:295), Var($const3980.81.9, patch_radiation.py:295)), kws=(), vararg=None, varkwarg=None, target=None)
+    $const3998.87.13 = const(int, 2)
+    $const4000.88.11 = const(int, 7)
+    $4002build_slice.89 = global(slice: <class 'slice'>)
+    $4002build_slice.90 = call $4002build_slice.89($const3998.87.13, $const4000.88.11, func=$4002build_slice.89, args=(Var($const3998.87.13, patch_radiation.py:295), Var($const4000.88.11, patch_radiation.py:295)), kws=(), vararg=None, varkwarg=None, target=None)
+    static_slice_size.369 = const(int, 5)
+    $const4012.93.9 = const(int, 10)
+    $const4028.97.11 = const(int, 7)
+    $const4038.100.16 = const(int, 12)
+    $const4054.104.10 = const(int, 8)
+    $const4064.107.17 = const(int, 13)
+    $const4080.111.15 = const(int, 9)
+    $const4090.114.1 = const(int, 11)
+    $const4106.118.9 = const(int, 10)
+    $bool2348 = global(bool: <class 'bool'>)
+    $const302.8.5 = const(int, 0)
+    $bool310 = global(bool: <class 'bool'>)
+    $const2192.28.11 = const(int, 7)
+    $const2226.34.11 = const(int, 7)
+    $const2256.39.13 = const(int, 2)
+    $const2290.45.13 = const(int, 2)
+    $2296load_global.46 = global(range: <class 'range'>)
+    $const2308.48.8 = const(int, 4)
+    $const3376.7.9 = const(int, 10)
+    $const3474.25.9 = const(int, 10)
+    $bool3350 = global(bool: <class 'bool'>)
+    $const2852.7.5 = const(int, 0)
+    $const2374.7.9 = const(int, 10)
+    $const2436.21.9 = const(int, 10)
+    $const330.7.5 = const(int, 0)
+    $bool976 = global(bool: <class 'bool'>)
+    $bool1872 = global(bool: <class 'bool'>)
+    $const384.9.4 = const(int, 1)
+    $const458.24.4 = const(int, 1)
+    $const492.30.5 = const(int, 0)
+    $const580.44.5 = const(int, 0)
+    $const610.49.6 = const(int, 5)
+    $const698.63.6 = const(int, 5)
+    $const820.90.7 = const(int, 6)
+    $const854.96.7 = const(int, 6)
+    $const884.101.4 = const(int, 1)
+    $const918.107.4 = const(int, 1)
+    $924load_global.108 = global(range: <class 'range'>)
+    $const936.110.8 = const(int, 4)
+    $const1118.26.9 = const(int, 10)
+    $const1158.34.9 = const(int, 10)
+    $const1220.48.9 = const(int, 10)
+    $const1260.56.9 = const(int, 10)
+    $const2544.14.5 = const(int, 0)
+    $const2630.27.14 = const(float, 0.5)
+    $2686load_global.34 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    $2698load_attr.35 = getattr(value=$2686load_global.34, attr=pi)
+    $2742load_global.39 = global(range: <class 'range'>)
+    $const1898.7.9 = const(int, 10)
+    $const1960.21.9 = const(int, 10)
+    $const1996.28.9 = const(int, 10)
+    $const2058.42.9 = const(int, 10)
+    $const246.8.4 = const(int, 1)
+    $bool254 = global(bool: <class 'bool'>)
+    $const2796.8.5 = const(int, 0)
+    $bool2804 = global(bool: <class 'bool'>)
+    $bool1290 = global(bool: <class 'bool'>)
+    $const150.5.3 = const(int, 14)
+    $192load_global.9 = global(range: <class 'range'>)
+    $np_g_var.386 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    $empty_attr_attr.387 = getattr(value=$np_g_var.386, attr=empty)
+    $np_typ_var.388 = getattr(value=$np_g_var.386, attr=float32)
+    accum = call $empty_attr_attr.387($const150.5.3, $np_typ_var.388, func=$empty_attr_attr.387, args=[Var($const150.5.3, patch_radiation.py:244), Var($np_typ_var.388, patch_radiation.py:244)], kws=(), vararg=None, varkwarg=None, target=None)
+  Failed to hoist the following:
+    dependency: $262build_tuple.5 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $264binary_subscr.6 = getitem(value=vs, index=$262build_tuple.5, fn=<built-in function getitem>)
+    dependency: $276compare_op.8 = $264binary_subscr.6 == $const274.7.4
+    dependency: $2874load_attr.5 = getattr(value=$2862load_global.3, attr=float32)
+    dependency: $2896load_attr.8 = getattr(value=$2884load_global.6, attr=float32)
+    dependency: $2918load_attr.11 = getattr(value=$2906load_global.9, attr=float32)
+    dependency: $2934binary_subscr.15 = getitem(value=solid, index=$patch.1.414, fn=<built-in function getitem>)
+    dependency: $binop_mul2944.16 = reflected * $2934binary_subscr.15
+    dependency: $2952call.17 = call $2918load_attr.11($binop_mul2944.16, func=$2918load_attr.11, args=[Var($binop_mul2944.16, patch_radiation.py:286)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2966binary_subscr.20 = getitem(value=cosine, index=$patch.1.414, fn=<built-in function getitem>)
+    dependency: $binop_mul2976.21 = $2952call.17 * $2966binary_subscr.20
+    dependency: $2984call.22 = call $2896load_attr.8($binop_mul2976.21, func=$2896load_attr.8, args=[Var($binop_mul2976.21, patch_radiation.py:286)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul2996.24 = $2984call.22 * $mask.402
+    dependency: side = call $2874load_attr.5($binop_mul2996.24, func=$2874load_attr.5, args=[Var($binop_mul2996.24, patch_radiation.py:286)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3028load_attr.28 = getattr(value=$3016load_global.26, attr=float32)
+    dependency: $3050load_attr.31 = getattr(value=$3038load_global.29, attr=float32)
+    dependency: $3072load_attr.34 = getattr(value=$3060load_global.32, attr=float32)
+    dependency: $3088binary_subscr.38 = getitem(value=solid, index=$patch.1.414, fn=<built-in function getitem>)
+    dependency: $binop_mul3098.39 = reflected * $3088binary_subscr.38
+    dependency: $3106call.40 = call $3072load_attr.34($binop_mul3098.39, func=$3072load_attr.34, args=[Var($binop_mul3098.39, patch_radiation.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3120binary_subscr.43 = getitem(value=sine, index=$patch.1.414, fn=<built-in function getitem>)
+    dependency: $binop_mul3130.44 = $3106call.40 * $3120binary_subscr.43
+    dependency: $3138call.45 = call $3050load_attr.31($binop_mul3130.44, func=$3050load_attr.31, args=[Var($binop_mul3130.44, patch_radiation.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul3150.47 = $3138call.45 * $mask.402
+    dependency: down = call $3028load_attr.28($binop_mul3150.47, func=$3028load_attr.28, args=[Var($binop_mul3150.47, patch_radiation.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3182load_attr.51 = getattr(value=$3170load_global.49, attr=float32)
+    dependency: $3196binary_subscr.54 = static_getitem(value=accum, index=9, index_var=$const3194.53.15, fn=<built-in function getitem>)
+    dependency: $binop_add3208.56 = $3196binary_subscr.54 + side
+    dependency: $3216call.57 = call $3182load_attr.51($binop_add3208.56, func=$3182load_attr.51, args=[Var($binop_add3208.56, patch_radiation.py:288)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3246load_attr.62 = getattr(value=$3234load_global.60, attr=float32)
+    dependency: $3260binary_subscr.65 = static_getitem(value=accum, index=4, index_var=$const3258.64.8, fn=<built-in function getitem>)
+    dependency: $binop_add3272.67 = $3260binary_subscr.65 + down
+    dependency: $3280call.68 = call $3246load_attr.62($binop_add3272.67, func=$3246load_attr.62, args=[Var($binop_add3272.67, patch_radiation.py:289)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $3316call.74 = call $push_global_to_block.635($const3310.73.8, func=$push_global_to_block.635, args=[Var($const3310.73.8, patch_radiation.py:290)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3326get_iter.75 = getiter(value=$3316call.74)
+    dependency: $3328for_iter.3 = iternext(value=$3326get_iter.75)
+    dependency: $direction.3.409 = pair_first(value=$3328for_iter.3)
+    dependency: $3328for_iter.5 = pair_second(value=$3328for_iter.3)
+    dependency: $1300build_tuple.6 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $1302binary_subscr.7 = getitem(value=sun, index=$1300build_tuple.6, fn=<built-in function getitem>)
+    dependency: $binop_mul1312.8 = surface__sun * $1302binary_subscr.7
+    dependency: $1320binary_subscr.11 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1330.12 = $binop_mul1312.8 * $1320binary_subscr.11
+    dependency: $1338binary_subscr.15 = getitem(value=cosine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1348.16 = $binop_mul1330.12 * $1338binary_subscr.15
+    dependency: sun_side = $binop_mul1348.16 * building
+    dependency: $1368build_tuple.23 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $1370binary_subscr.24 = getitem(value=shade, index=$1368build_tuple.23, fn=<built-in function getitem>)
+    dependency: $binop_mul1380.25 = surface__sh * $1370binary_subscr.24
+    dependency: $1388binary_subscr.28 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1398.29 = $binop_mul1380.25 * $1388binary_subscr.28
+    dependency: $1406binary_subscr.32 = getitem(value=cosine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1416.33 = $binop_mul1398.29 * $1406binary_subscr.32
+    dependency: shade_side = $binop_mul1416.33 * building
+    dependency: $1436build_tuple.40 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $1438binary_subscr.41 = getitem(value=sun, index=$1436build_tuple.40, fn=<built-in function getitem>)
+    dependency: $binop_mul1448.42 = surface__sun * $1438binary_subscr.41
+    dependency: $1456binary_subscr.45 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1466.46 = $binop_mul1448.42 * $1456binary_subscr.45
+    dependency: $1474binary_subscr.49 = getitem(value=sine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1484.50 = $binop_mul1466.46 * $1474binary_subscr.49
+    dependency: sun_down = $binop_mul1484.50 * building
+    dependency: $1504build_tuple.57 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $1506binary_subscr.58 = getitem(value=shade, index=$1504build_tuple.57, fn=<built-in function getitem>)
+    dependency: $binop_mul1516.59 = surface__sh * $1506binary_subscr.58
+    dependency: $1524binary_subscr.62 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1534.63 = $binop_mul1516.59 * $1524binary_subscr.62
+    dependency: $1542binary_subscr.66 = getitem(value=sine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1552.67 = $binop_mul1534.63 * $1542binary_subscr.66
+    dependency: shade_down = $binop_mul1552.67 * building
+    dependency: $1576load_attr.72 = getattr(value=$1564load_global.70, attr=float32)
+    dependency: $1590binary_subscr.75 = static_getitem(value=accum, index=8, index_var=$const1588.74.10, fn=<built-in function getitem>)
+    dependency: $binop_add1602.77 = $1590binary_subscr.75 + sun_side
+    dependency: $1610call.78 = call $1576load_attr.72($binop_add1602.77, func=$1576load_attr.72, args=[Var($binop_add1602.77, patch_radiation.py:266)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1640load_attr.83 = getattr(value=$1628load_global.81, attr=float32)
+    dependency: $1654binary_subscr.86 = static_getitem(value=accum, index=7, index_var=$const1652.85.11, fn=<built-in function getitem>)
+    dependency: $binop_add1666.88 = $1654binary_subscr.86 + shade_side
+    dependency: $1674call.89 = call $1640load_attr.83($binop_add1666.88, func=$1640load_attr.83, args=[Var($binop_add1666.88, patch_radiation.py:267)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1704load_attr.94 = getattr(value=$1692load_global.92, attr=float32)
+    dependency: $1718binary_subscr.97 = static_getitem(value=accum, index=3, index_var=$const1716.96.12, fn=<built-in function getitem>)
+    dependency: $binop_add1730.99 = $1718binary_subscr.97 + sun_down
+    dependency: $1738call.100 = call $1704load_attr.94($binop_add1730.99, func=$1704load_attr.94, args=[Var($binop_add1730.99, patch_radiation.py:268)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1768load_attr.105 = getattr(value=$1756load_global.103, attr=float32)
+    dependency: $1782binary_subscr.108 = static_getitem(value=accum, index=2, index_var=$const1780.107.13, fn=<built-in function getitem>)
+    dependency: $binop_add1794.110 = $1782binary_subscr.108 + shade_down
+    dependency: $1802call.111 = call $1768load_attr.105($binop_add1794.110, func=$1768load_attr.105, args=[Var($binop_add1794.110, patch_radiation.py:269)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $1838call.117 = call $push_global_to_block.636($const1832.116.8, func=$push_global_to_block.636, args=[Var($const1832.116.8, patch_radiation.py:270)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1848get_iter.118 = getiter(value=$1838call.117)
+    dependency: $2812build_tuple.5 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.1.414, patch_radiation.py:284)])
+    dependency: $2814binary_subscr.6 = getitem(value=vs, index=$2812build_tuple.5, fn=<built-in function getitem>)
+    dependency: $2826compare_op.8 = $2814binary_subscr.6 == $const2824.7.5
+    dependency: $2832pred = call $push_global_to_block.637($2826compare_op.8, func=$push_global_to_block.637, args=(Var($2826compare_op.8, patch_radiation.py:285),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3504load_attr.3 = getattr(value=$3492load_global.1, attr=float32)
+    dependency: $3526load_attr.6 = getattr(value=$3514load_global.4, attr=float32)
+    dependency: $3548load_attr.9 = getattr(value=$3536load_global.7, attr=float32)
+    dependency: $3570load_attr.12 = getattr(value=$3558load_global.10, attr=float32)
+    dependency: $3584binary_subscr.15 = static_getitem(value=accum, index=0, index_var=$const3582.14.5, fn=<built-in function getitem>)
+    dependency: $3598binary_subscr.18 = static_getitem(value=accum, index=1, index_var=$const3596.17.4, fn=<built-in function getitem>)
+    dependency: $binop_add3608.19 = $3584binary_subscr.15 + $3598binary_subscr.18
+    dependency: $3616call.20 = call $3570load_attr.12($binop_add3608.19, func=$3570load_attr.12, args=[Var($binop_add3608.19, patch_radiation.py:293)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3630binary_subscr.23 = static_getitem(value=accum, index=2, index_var=$const3628.22.13, fn=<built-in function getitem>)
+    dependency: $binop_add3640.24 = $3616call.20 + $3630binary_subscr.23
+    dependency: $3648call.25 = call $3548load_attr.9($binop_add3640.24, func=$3548load_attr.9, args=[Var($binop_add3640.24, patch_radiation.py:293)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3662binary_subscr.28 = static_getitem(value=accum, index=3, index_var=$const3660.27.12, fn=<built-in function getitem>)
+    dependency: $binop_add3672.29 = $3648call.25 + $3662binary_subscr.28
+    dependency: $3680call.30 = call $3526load_attr.6($binop_add3672.29, func=$3526load_attr.6, args=[Var($binop_add3672.29, patch_radiation.py:293)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3694binary_subscr.33 = static_getitem(value=accum, index=4, index_var=$const3692.32.8, fn=<built-in function getitem>)
+    dependency: $binop_add3704.34 = $3680call.30 + $3694binary_subscr.33
+    dependency: $3712call.35 = call $3504load_attr.3($binop_add3704.34, func=$3504load_attr.3, args=[Var($binop_add3704.34, patch_radiation.py:293)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3728build_tuple.39 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($const3726.38.5, patch_radiation.py:293)])
+    dependency: $3746load_attr.42 = getattr(value=$3734load_global.40, attr=float32)
+    dependency: $3768load_attr.45 = getattr(value=$3756load_global.43, attr=float32)
+    dependency: $3790load_attr.48 = getattr(value=$3778load_global.46, attr=float32)
+    dependency: $3812load_attr.51 = getattr(value=$3800load_global.49, attr=float32)
+    dependency: $3826binary_subscr.54 = static_getitem(value=accum, index=5, index_var=$const3824.53.6, fn=<built-in function getitem>)
+    dependency: $3840binary_subscr.57 = static_getitem(value=accum, index=6, index_var=$const3838.56.7, fn=<built-in function getitem>)
+    dependency: $binop_add3850.58 = $3826binary_subscr.54 + $3840binary_subscr.57
+    dependency: $3858call.59 = call $3812load_attr.51($binop_add3850.58, func=$3812load_attr.51, args=[Var($binop_add3850.58, patch_radiation.py:294)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3872binary_subscr.62 = static_getitem(value=accum, index=7, index_var=$const3870.61.11, fn=<built-in function getitem>)
+    dependency: $binop_add3882.63 = $3858call.59 + $3872binary_subscr.62
+    dependency: $3890call.64 = call $3790load_attr.48($binop_add3882.63, func=$3790load_attr.48, args=[Var($binop_add3882.63, patch_radiation.py:294)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3904binary_subscr.67 = static_getitem(value=accum, index=8, index_var=$const3902.66.10, fn=<built-in function getitem>)
+    dependency: $binop_add3914.68 = $3890call.64 + $3904binary_subscr.67
+    dependency: $3922call.69 = call $3768load_attr.45($binop_add3914.68, func=$3768load_attr.45, args=[Var($binop_add3914.68, patch_radiation.py:294)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3936binary_subscr.72 = static_getitem(value=accum, index=9, index_var=$const3934.71.15, fn=<built-in function getitem>)
+    dependency: $binop_add3946.73 = $3922call.69 + $3936binary_subscr.72
+    dependency: $3954call.74 = call $3746load_attr.42($binop_add3946.73, func=$3746load_attr.42, args=[Var($binop_add3946.73, patch_radiation.py:294)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $3970build_tuple.78 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($const3968.77.4, patch_radiation.py:294)])
+    dependency: $3984binary_subscr.84 = static_getitem(value=accum, index=slice(5, 10, None), index_var=$3982build_slice.83, fn=<built-in function getitem>)
+    dependency: $4004build_tuple.91 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($4002build_slice.90, patch_radiation.py:295)])
+    dependency: $4014binary_subscr.94 = static_getitem(value=accum, index=10, index_var=$const4012.93.9, fn=<built-in function getitem>)
+    dependency: $4030build_tuple.98 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($const4028.97.11, patch_radiation.py:296)])
+    dependency: $4040binary_subscr.101 = static_getitem(value=accum, index=12, index_var=$const4038.100.16, fn=<built-in function getitem>)
+    dependency: $4056build_tuple.105 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($const4054.104.10, patch_radiation.py:297)])
+    dependency: $4066binary_subscr.108 = static_getitem(value=accum, index=13, index_var=$const4064.107.17, fn=<built-in function getitem>)
+    dependency: $4082build_tuple.112 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($const4080.111.15, patch_radiation.py:298)])
+    dependency: $4092binary_subscr.115 = static_getitem(value=accum, index=11, index_var=$const4090.114.1, fn=<built-in function getitem>)
+    dependency: $4108build_tuple.119 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($const4106.118.9, patch_radiation.py:299)])
+    dependency: $2326for_iter.3 = iternext(value=$2324get_iter.50)
+    dependency: $direction.2.406 = pair_first(value=$2326for_iter.3)
+    dependency: $2326for_iter.5 = pair_second(value=$2326for_iter.3)
+    dependency: $2336build_tuple.7 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.2.406, patch_radiation.py:279)])
+    dependency: $2338binary_subscr.8 = getitem(value=gate, index=$2336build_tuple.7, fn=<built-in function getitem>)
+    dependency: $2348pred = call $push_global_to_block.638($2338binary_subscr.8, func=$push_global_to_block.638, args=(Var($2338binary_subscr.8, patch_radiation.py:280),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $290build_tuple.6 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $292binary_subscr.7 = getitem(value=vs, index=$290build_tuple.6, fn=<built-in function getitem>)
+    dependency: $304compare_op.9 = $292binary_subscr.7 == $const302.8.5
+    dependency: $310pred = call $push_global_to_block.639($304compare_op.9, func=$push_global_to_block.639, args=(Var($304compare_op.9, patch_radiation.py:247),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2082binary_subscr.5 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul2092.6 = surface__sh * $2082binary_subscr.5
+    dependency: $2100binary_subscr.9 = getitem(value=cosine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul2110.10 = $binop_mul2092.6 * $2100binary_subscr.9
+    dependency: shade_side.1 = $binop_mul2110.10 * building
+    dependency: $2128binary_subscr.16 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul2138.17 = surface__sh * $2128binary_subscr.16
+    dependency: $2146binary_subscr.20 = getitem(value=sine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul2156.21 = $binop_mul2138.17 * $2146binary_subscr.20
+    dependency: shade_down.1 = $binop_mul2156.21 * building
+    dependency: $2180load_attr.26 = getattr(value=$2168load_global.24, attr=float32)
+    dependency: $2194binary_subscr.29 = static_getitem(value=accum, index=7, index_var=$const2192.28.11, fn=<built-in function getitem>)
+    dependency: $binop_add2206.31 = $2194binary_subscr.29 + shade_side.1
+    dependency: $2214call.32 = call $2180load_attr.26($binop_add2206.31, func=$2180load_attr.26, args=[Var($binop_add2206.31, patch_radiation.py:277)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2244load_attr.37 = getattr(value=$2232load_global.35, attr=float32)
+    dependency: $2258binary_subscr.40 = static_getitem(value=accum, index=2, index_var=$const2256.39.13, fn=<built-in function getitem>)
+    dependency: $binop_add2270.42 = $2258binary_subscr.40 + shade_down.1
+    dependency: $2278call.43 = call $2244load_attr.37($binop_add2270.42, func=$2244load_attr.37, args=[Var($binop_add2270.42, patch_radiation.py:278)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $2314call.49 = call $push_global_to_block.640($const2308.48.8, func=$push_global_to_block.640, args=[Var($const2308.48.8, patch_radiation.py:279)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2324get_iter.50 = getiter(value=$2314call.49)
+    dependency: $3364load_attr.5 = getattr(value=$3352load_global.3, attr=float32)
+    dependency: $binop_add3380.9 = $const3376.7.9 + $direction.3.409
+    dependency: $3384binary_subscr.10 = getitem(value=accum, index=$binop_add3380.9, fn=<built-in function getitem>)
+    dependency: $3406load_attr.13 = getattr(value=$3394load_global.11, attr=float32)
+    dependency: $3424build_tuple.18 = build_tuple(items=[Var($patch.1.414, patch_radiation.py:284), Var($direction.3.409, patch_radiation.py:290)])
+    dependency: $3426binary_subscr.19 = getitem(value=directions, index=$3424build_tuple.18, fn=<built-in function getitem>)
+    dependency: $binop_mul3436.20 = side * $3426binary_subscr.19
+    dependency: $3444call.21 = call $3406load_attr.13($binop_mul3436.20, func=$3406load_attr.13, args=[Var($binop_mul3436.20, patch_radiation.py:292)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add3454.22 = $3384binary_subscr.10 + $3444call.21
+    dependency: $3462call.23 = call $3364load_attr.5($binop_add3454.22, func=$3364load_attr.5, args=[Var($binop_add3454.22, patch_radiation.py:292)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add3478.27 = $const3474.25.9 + $direction.3.409
+    dependency: $3338build_tuple.7 = build_tuple(items=[Var($patch.1.414, patch_radiation.py:284), Var($direction.3.409, patch_radiation.py:290)])
+    dependency: $3340binary_subscr.8 = getitem(value=gate, index=$3338build_tuple.7, fn=<built-in function getitem>)
+    dependency: $3350pred = call $push_global_to_block.641($3340binary_subscr.8, func=$push_global_to_block.641, args=(Var($3340binary_subscr.8, patch_radiation.py:291),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2840build_tuple.5 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.1.414, patch_radiation.py:284)])
+    dependency: $2842binary_subscr.6 = getitem(value=vb, index=$2840build_tuple.5, fn=<built-in function getitem>)
+    dependency: $2854compare_op.8 = $2842binary_subscr.6 == $const2852.7.5
+    dependency: $2362load_attr.5 = getattr(value=$2350load_global.3, attr=float32)
+    dependency: $binop_add2378.9 = $const2374.7.9 + $direction.2.406
+    dependency: $2382binary_subscr.10 = getitem(value=accum, index=$binop_add2378.9, fn=<built-in function getitem>)
+    dependency: $2400build_tuple.15 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.2.406, patch_radiation.py:279)])
+    dependency: $2402binary_subscr.16 = getitem(value=directions, index=$2400build_tuple.15, fn=<built-in function getitem>)
+    dependency: $binop_mul2412.17 = shade_side.1 * $2402binary_subscr.16
+    dependency: $binop_add2416.18 = $2382binary_subscr.10 + $binop_mul2412.17
+    dependency: $2424call.19 = call $2362load_attr.5($binop_add2416.18, func=$2362load_attr.5, args=[Var($binop_add2416.18, patch_radiation.py:281)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add2440.23 = $const2436.21.9 + $direction.2.406
+    dependency: $318build_tuple.5 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $320binary_subscr.6 = getitem(value=vb, index=$318build_tuple.5, fn=<built-in function getitem>)
+    dependency: $332compare_op.8 = $320binary_subscr.6 == $const330.7.5
+    dependency: $954for_iter.3 = iternext(value=$952get_iter.112)
+    dependency: $direction.410 = pair_first(value=$954for_iter.3)
+    dependency: $954for_iter.5 = pair_second(value=$954for_iter.3)
+    dependency: $1850for_iter.3 = iternext(value=$1848get_iter.118)
+    dependency: $direction.1.411 = pair_first(value=$1850for_iter.3)
+    dependency: $1850for_iter.5 = pair_second(value=$1850for_iter.3)
+    dependency: $964build_tuple.7 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.410, patch_radiation.py:255)])
+    dependency: $966binary_subscr.8 = getitem(value=gate, index=$964build_tuple.7, fn=<built-in function getitem>)
+    dependency: $976pred = call $push_global_to_block.642($966binary_subscr.8, func=$push_global_to_block.642, args=(Var($966binary_subscr.8, patch_radiation.py:256),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1860build_tuple.7 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.1.411, patch_radiation.py:270)])
+    dependency: $1862binary_subscr.8 = getitem(value=gate, index=$1860build_tuple.7, fn=<built-in function getitem>)
+    dependency: $1872pred = call $push_global_to_block.643($1862binary_subscr.8, func=$push_global_to_block.643, args=(Var($1862binary_subscr.8, patch_radiation.py:271),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $352load_attr.5 = getattr(value=$340load_global.3, attr=float32)
+    dependency: $374load_attr.8 = getattr(value=$362load_global.6, attr=float32)
+    dependency: $390call.10 = call $374load_attr.8($const384.9.4, func=$374load_attr.8, args=[Var($const384.9.4, patch_radiation.py:248)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $406build_tuple.14 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $408binary_subscr.15 = getitem(value=sh, index=$406build_tuple.14, fn=<built-in function getitem>)
+    dependency: $binop_sub418.16 = $390call.10 - $408binary_subscr.15
+    dependency: $426call.17 = call $352load_attr.5($binop_sub418.16, func=$352load_attr.5, args=[Var($binop_sub418.16, patch_radiation.py:248)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $442build_tuple.21 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $444binary_subscr.22 = getitem(value=vb, index=$442build_tuple.21, fn=<built-in function getitem>)
+    dependency: $binop_mul454.23 = $426call.17 * $444binary_subscr.22
+    dependency: building = $binop_mul454.23 == $const458.24.4
+    dependency: $480load_attr.28 = getattr(value=$468load_global.26, attr=float32)
+    dependency: $494binary_subscr.31 = static_getitem(value=accum, index=0, index_var=$const492.30.5, fn=<built-in function getitem>)
+    dependency: $516load_attr.34 = getattr(value=$504load_global.32, attr=float32)
+    dependency: $532binary_subscr.38 = getitem(value=sky__down, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul542.39 = $sky.403 * $532binary_subscr.38
+    dependency: $550call.40 = call $516load_attr.34($binop_mul542.39, func=$516load_attr.34, args=[Var($binop_mul542.39, patch_radiation.py:249)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add560.41 = $494binary_subscr.31 + $550call.40
+    dependency: $568call.42 = call $480load_attr.28($binop_add560.41, func=$480load_attr.28, args=[Var($binop_add560.41, patch_radiation.py:249)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $598load_attr.47 = getattr(value=$586load_global.45, attr=float32)
+    dependency: $612binary_subscr.50 = static_getitem(value=accum, index=5, index_var=$const610.49.6, fn=<built-in function getitem>)
+    dependency: $634load_attr.53 = getattr(value=$622load_global.51, attr=float32)
+    dependency: $650binary_subscr.57 = getitem(value=sky__side, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul660.58 = $sky.403 * $650binary_subscr.57
+    dependency: $668call.59 = call $634load_attr.53($binop_mul660.58, func=$634load_attr.53, args=[Var($binop_mul660.58, patch_radiation.py:250)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add678.60 = $612binary_subscr.50 + $668call.59
+    dependency: $686call.61 = call $598load_attr.47($binop_add678.60, func=$598load_attr.47, args=[Var($binop_add678.60, patch_radiation.py:250)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $710binary_subscr.67 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul720.68 = surface__sh * $710binary_subscr.67
+    dependency: $728binary_subscr.71 = getitem(value=cosine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul738.72 = $binop_mul720.68 * $728binary_subscr.71
+    dependency: vegetation_side = $binop_mul738.72 * $veg.404
+    dependency: $756binary_subscr.78 = getitem(value=solid, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul766.79 = surface__sh * $756binary_subscr.78
+    dependency: $774binary_subscr.82 = getitem(value=sine, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul784.83 = $binop_mul766.79 * $774binary_subscr.82
+    dependency: vegetation_down = $binop_mul784.83 * $veg.404
+    dependency: $808load_attr.88 = getattr(value=$796load_global.86, attr=float32)
+    dependency: $822binary_subscr.91 = static_getitem(value=accum, index=6, index_var=$const820.90.7, fn=<built-in function getitem>)
+    dependency: $binop_add834.93 = $822binary_subscr.91 + vegetation_side
+    dependency: $842call.94 = call $808load_attr.88($binop_add834.93, func=$808load_attr.88, args=[Var($binop_add834.93, patch_radiation.py:253)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $872load_attr.99 = getattr(value=$860load_global.97, attr=float32)
+    dependency: $886binary_subscr.102 = static_getitem(value=accum, index=1, index_var=$const884.101.4, fn=<built-in function getitem>)
+    dependency: $binop_add898.104 = $886binary_subscr.102 + vegetation_down
+    dependency: $906call.105 = call $872load_attr.99($binop_add898.104, func=$872load_attr.99, args=[Var($binop_add898.104, patch_radiation.py:254)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $942call.111 = call $push_global_to_block.644($const936.110.8, func=$push_global_to_block.644, args=[Var($const936.110.8, patch_radiation.py:255)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $952get_iter.112 = getiter(value=$942call.111)
+    dependency: $990load_attr.5 = getattr(value=$978load_global.3, attr=float32)
+    dependency: $1012load_attr.8 = getattr(value=$1000load_global.6, attr=float32)
+    dependency: $1028binary_subscr.12 = getitem(value=sky__side, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $binop_mul1038.13 = $sky.403 * $1028binary_subscr.12
+    dependency: $1046call.14 = call $1012load_attr.8($binop_mul1038.13, func=$1012load_attr.8, args=[Var($binop_mul1038.13, patch_radiation.py:257)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1062build_tuple.18 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.410, patch_radiation.py:255)])
+    dependency: $1064binary_subscr.19 = getitem(value=directions, index=$1062build_tuple.18, fn=<built-in function getitem>)
+    dependency: $binop_mul1074.20 = $1046call.14 * $1064binary_subscr.19
+    dependency: sky_term = call $990load_attr.5($binop_mul1074.20, func=$990load_attr.5, args=[Var($binop_mul1074.20, patch_radiation.py:257)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1106load_attr.24 = getattr(value=$1094load_global.22, attr=float32)
+    dependency: $binop_add1122.28 = $const1118.26.9 + $direction.410
+    dependency: $1126binary_subscr.29 = getitem(value=accum, index=$binop_add1122.28, fn=<built-in function getitem>)
+    dependency: $binop_add1138.31 = $1126binary_subscr.29 + sky_term
+    dependency: $1146call.32 = call $1106load_attr.24($binop_add1138.31, func=$1106load_attr.24, args=[Var($binop_add1138.31, patch_radiation.py:258)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1162.36 = $const1158.34.9 + $direction.410
+    dependency: $1178build_tuple.41 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.410, patch_radiation.py:255)])
+    dependency: $1180binary_subscr.42 = getitem(value=directions, index=$1178build_tuple.41, fn=<built-in function getitem>)
+    dependency: vegetation_term = vegetation_side * $1180binary_subscr.42
+    dependency: $1208load_attr.46 = getattr(value=$1196load_global.44, attr=float32)
+    dependency: $binop_add1224.50 = $const1220.48.9 + $direction.410
+    dependency: $1228binary_subscr.51 = getitem(value=accum, index=$binop_add1224.50, fn=<built-in function getitem>)
+    dependency: $binop_add1240.53 = $1228binary_subscr.51 + vegetation_term
+    dependency: $1248call.54 = call $1208load_attr.46($binop_add1240.53, func=$1208load_attr.46, args=[Var($binop_add1240.53, patch_radiation.py:260)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1264.58 = $const1260.56.9 + $direction.410
+    dependency: $2466load_attr.3 = getattr(value=$2454load_global.1, attr=float32)
+    dependency: $2488load_attr.6 = getattr(value=$2476load_global.4, attr=float32)
+    dependency: $2510load_attr.9 = getattr(value=$2498load_global.7, attr=float32)
+    dependency: $2532load_attr.12 = getattr(value=$2520load_global.10, attr=float32)
+    dependency: $2546binary_subscr.15 = static_getitem(value=accum, index=0, index_var=$const2544.14.5, fn=<built-in function getitem>)
+    dependency: $2560binary_subscr.18 = getitem(value=lup, index=$parfor__index_390.652, fn=<built-in function getitem>)
+    dependency: $binop_add2570.19 = $2546binary_subscr.15 + $2560binary_subscr.18
+    dependency: $2578call.20 = call $2532load_attr.12($binop_add2570.19, func=$2532load_attr.12, args=[Var($binop_add2570.19, patch_radiation.py:283)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul2590.22 = $2578call.20 * reflection__factor
+    dependency: $2598call.23 = call $2510load_attr.9($binop_mul2590.22, func=$2510load_attr.9, args=[Var($binop_mul2590.22, patch_radiation.py:283)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2620load_attr.26 = getattr(value=$2608load_global.24, attr=float32)
+    dependency: $2636call.28 = call $2620load_attr.26($const2630.27.14, func=$2620load_attr.26, args=[Var($const2630.27.14, patch_radiation.py:283)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul2646.29 = $2598call.23 * $2636call.28
+    dependency: $2654call.30 = call $2488load_attr.6($binop_mul2646.29, func=$2488load_attr.6, args=[Var($binop_mul2646.29, patch_radiation.py:283)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2676load_attr.33 = getattr(value=$2664load_global.31, attr=float32)
+    dependency: $2712call.36 = call $2676load_attr.33($push_getattr_to_block.645, func=$2676load_attr.33, args=[Var($push_getattr_to_block.645, patch_radiation.py:283)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_truediv2722.37 = $2654call.30 / $2712call.36
+    dependency: reflected = call $2466load_attr.3($binop_truediv2722.37, func=$2466load_attr.3, args=[Var($binop_truediv2722.37, patch_radiation.py:283)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $2760call.42 = call $push_global_to_block.647(_patches_399, func=$push_global_to_block.647, args=[Var(_patches_399, patch_radiation.py:241)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2770get_iter.43 = getiter(value=$2760call.42)
+    dependency: $1886load_attr.5 = getattr(value=$1874load_global.3, attr=float32)
+    dependency: $binop_add1902.9 = $const1898.7.9 + $direction.1.411
+    dependency: $1906binary_subscr.10 = getitem(value=accum, index=$binop_add1902.9, fn=<built-in function getitem>)
+    dependency: $1924build_tuple.15 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.1.411, patch_radiation.py:270)])
+    dependency: $1926binary_subscr.16 = getitem(value=directions, index=$1924build_tuple.15, fn=<built-in function getitem>)
+    dependency: $binop_mul1936.17 = sun_side * $1926binary_subscr.16
+    dependency: $binop_add1940.18 = $1906binary_subscr.10 + $binop_mul1936.17
+    dependency: $1948call.19 = call $1886load_attr.5($binop_add1940.18, func=$1886load_attr.5, args=[Var($binop_add1940.18, patch_radiation.py:272)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1964.23 = $const1960.21.9 + $direction.1.411
+    dependency: $1984load_attr.26 = getattr(value=$1972load_global.24, attr=float32)
+    dependency: $binop_add2000.30 = $const1996.28.9 + $direction.1.411
+    dependency: $2004binary_subscr.31 = getitem(value=accum, index=$binop_add2000.30, fn=<built-in function getitem>)
+    dependency: $2022build_tuple.36 = build_tuple(items=[Var($patch.413, patch_radiation.py:245), Var($direction.1.411, patch_radiation.py:270)])
+    dependency: $2024binary_subscr.37 = getitem(value=directions, index=$2022build_tuple.36, fn=<built-in function getitem>)
+    dependency: $binop_mul2034.38 = shade_side * $2024binary_subscr.37
+    dependency: $binop_add2038.39 = $2004binary_subscr.31 + $binop_mul2034.38
+    dependency: $2046call.40 = call $1984load_attr.26($binop_add2038.39, func=$1984load_attr.26, args=[Var($binop_add2038.39, patch_radiation.py:273)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add2062.44 = $const2058.42.9 + $direction.1.411
+    dependency: $2774for_iter.2 = iternext(value=$2770get_iter.43)
+    dependency: $patch.1.414 = pair_first(value=$2774for_iter.2)
+    dependency: $2774for_iter.4 = pair_second(value=$2774for_iter.2)
+    dependency: $224for_iter.2 = iternext(value=$220get_iter.13)
+    dependency: $patch.413 = pair_first(value=$224for_iter.2)
+    dependency: $224for_iter.4 = pair_second(value=$224for_iter.2)
+    dependency: $234build_tuple.6 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.413, patch_radiation.py:245)])
+    dependency: $236binary_subscr.7 = getitem(value=sh, index=$234build_tuple.6, fn=<built-in function getitem>)
+    dependency: $248compare_op.9 = $236binary_subscr.7 == $const246.8.4
+    dependency: $254pred = call $push_global_to_block.648($248compare_op.9, func=$push_global_to_block.648, args=(Var($248compare_op.9, patch_radiation.py:246),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2784build_tuple.6 = build_tuple(items=[Var($parfor__index_390.652, <string>:2), Var($patch.1.414, patch_radiation.py:284)])
+    dependency: $2786binary_subscr.7 = getitem(value=sh, index=$2784build_tuple.6, fn=<built-in function getitem>)
+    dependency: $2798compare_op.9 = $2786binary_subscr.7 == $const2796.8.5
+    dependency: $2804pred = call $push_global_to_block.649($2798compare_op.9, func=$push_global_to_block.649, args=(Var($2798compare_op.9, patch_radiation.py:285),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1278binary_subscr.4 = getitem(value=solar__gate, index=$patch.413, fn=<built-in function getitem>)
+    dependency: $1290pred = call $push_global_to_block.650($1278binary_subscr.4, func=$push_global_to_block.650, args=(Var($1278binary_subscr.4, patch_radiation.py:261),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: pixel = $parfor__index_390.652
+    not pure: $210call.12 = call $push_global_to_block.651(_patches_399, func=$push_global_to_block.651, args=[Var(_patches_399, patch_radiation.py:241)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $220get_iter.13 = getiter(value=$210call.12)
+--------------------------------------------------------------------------------
+nopython signatures [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(bool, 2, 'C', False, aligned=True), Array(bool, 2, 'C', False, aligned=True), Array(float32, 1, 'C', True, aligned=True), Array(float32, 1, 'C', True, aligned=True), Array(float32, 1, 'C', True, aligned=True), Array(float32, 2, 'C', True, aligned=True), Array(bool, 2, 'C', True, aligned=True), Array(bool, 1, 'C', False, aligned=True), Array(float32, 1, 'A', False, aligned=True), Array(float32, 1, 'A', False, aligned=True), float64, float64, Array(float32, 1, 'C', False, aligned=True), float32) -> array(float32, 2d, C)]
+options {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}

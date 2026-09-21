@@ -1,0 +1,203 @@
+schema_version: 1
+project: solweig-light
+status: correctness_pipeline_in_progress
+progress_record: docs/progress.md
+current_evidence:
+  original_upstream_cpu_24_step_execution: verified
+  intermediate_capture_24_steps_23_handoffs: verified
+  geometry_function_cases_executed: 126
+  flat_visibility_scientific_checks_passed: 18
+  flat_visibility_scientific_checks_failed: 2
+  cpu_thread_trials_with_exact_tiff_comparison: 15
+  cuda: not_available
+  numerical_contract: frozen_P0_proposal_pending_P1_calibration
+  candidate_runtime: P5_installed_2881_core_58_optional_34_forcing_extra_tests
+  pr_ci: configured_not_executed
+upstream:
+  repository: https://github.com/nvnsudharsan/SOLWEIG-GPU
+  commit: 0d7fe742abeeddd890dd58fc76ed7f78bd47faec
+  package_version: 2.0.0
+review:
+  date: '2026-09-18'
+  method: static_source_inspection
+  simulation_executed: false
+  benchmarks_executed: false
+  complete_source_audit_executed: false
+required_public_functions:
+  - thermal_comfort
+  - preprocess
+  - build_inputs
+  - build_wind_ext_coeff
+  - run_walls_aspect
+  - calculate_svf
+  - run_utci_tiles
+invariants:
+  - No Torch or CUDA requirement in the core runtime.
+  - No hidden approximation or reduced workload in default compatibility mode.
+  - Preserve logical domain, patch tables, time ordering, state and artifact semantics.
+  - Use independent upstream reference environments and source-provenanced fixtures.
+  - Preserve exact masks/categories and frozen numeric error budgets.
+  - Bound workers, native threads, writer queues and live memory together.
+  - Never silently change a scientific constant or an upstream behavior.
+  - No numerical stub, skipped required pipeline, or fabricated verification result.
+proposed_numerical_gates:
+  status: frozen_proposal_calibrate_remaining_fields_before_optimization
+  protocol: benchmarks/protocols/comparison_v1.json
+  mask_and_category_equality: exact
+  wall_height_float32_equality: exact_on_finite_stencil_fixtures
+  svf_max_abs: 0.000001
+  flux_atol_w_m2: 0.05
+  flux_rtol: 0.00001
+  tmrt_max_abs_c: 0.01
+  utci_max_abs_c: 0.02
+  wbgt_max_abs_c: 0.02
+  state_gates: derive_field_specific_units_and_freeze
+  validity_domain: reference_valid_fixtures_with_explicit_out_of_range_policy
+proposed_performance_goals:
+  status: frozen_goals_feasibility_unproven_full_matrix_pending
+  protocol: benchmarks/protocols/benchmark_v1.json
+  primary_baseline: strongest_documented_upstream_cpu_configuration
+  geometry_cold_end_to_end_speedup: 2.0
+  geometry_warm_simulation_speedup: 3.0
+  visibility_dominated_peak_memory_reduction: 4.0
+  universal_cpu_over_gpu_claim: prohibited_without_matching_evidence
+benchmark_scenarios:
+  - first_use_empty_jit_and_geometry_caches_complete_outputs
+  - fresh_process_compiled_cache_geometry_cold
+  - validated_geometry_warm_including_cache_loading_and_outputs
+  - preloaded_kernel_only_clearly_labeled
+benchmark_metadata:
+  - source_commit
+  - candidate_commit
+  - fixture_hash
+  - oracle_patch_hash_if_any
+  - invocation
+  - os_and_architecture
+  - cpu_gpu_ram_storage
+  - package_compiler_versions
+  - cpu_affinity_and_thread_budget
+  - cache_state_and_jit_state
+  - raw_trial_times_and_failures
+  - process_tree_peak_rss
+  - stage_times_and_output_hashes
+  - summary_uncertainty
+work_packages:
+  - id: P0
+    title: Baseline and executable contract
+    status: complete
+    depends_on: []
+    outputs:
+      - source and environment manifests
+      - complete call graph and API CLI artifact snapshots
+      - independent oracle adapters and deterministic fixtures
+      - raw baseline profiling and model behavior register
+      - frozen benchmark scope and justified tolerance proposal
+    gate:
+      - Real upstream case executed or exact failure and separately labeled repair documented.
+      - Reference results never generated from light.
+      - CPU and CUDA discrepancies reported when comparisons are available.
+  - id: P1
+    title: Package and correctness-first streaming CPU pipeline
+    status: complete
+    depends_on: [P0]
+    outputs:
+      - package structure and opt-in compatibility distribution
+      - scene forcing geometry state workspace and output types
+      - raster met readers and chronological reference CPU path
+      - streaming writers and contract tests
+    gate:
+      - Genuine own-met TIFF-to-TIFF execution without Torch.
+      - Exact artifact schema comparison.
+      - Optional feature gaps explicitly tracked until P5.
+  - id: P2
+    title: Exact compiled wall aspect and UTCI kernels
+    status: complete
+    depends_on: [P1]
+    outputs:
+      - exact four-neighbor wall stencil
+      - sparse cached aspect filters with original tie behavior
+      - coefficient-provenanced scalar UTCI and pointwise loop
+    gate:
+      - Boundary and tie cases pass.
+      - Coefficient checksum and reconstruction verification pass.
+      - Serial and parallel numerical comparisons and microbenchmarks recorded.
+  - id: P3
+    title: Shadows SVF and compact visibility
+    status: complete
+    depends_on: [P1]
+    outputs:
+      - exact ray schedules and both shadow families
+      - all implemented sky-patch tables and SVF fields
+      - lossless compact visibility with bounded legacy exports
+    gate:
+      - Zenith one-step bush vegetation and border cases pass.
+      - Every patch option and visibility round trip passes.
+      - No shared temporary export paths or packed-word races.
+      - Peak memory and cold compute measurements recorded.
+  - id: P4
+    title: Ground view radiation and chronological state
+    status: complete
+    depends_on: [P2, P3]
+    outputs:
+      - verified static traversal reuse and dynamic GVF gathers
+      - complete anisotropic shortwave and longwave
+      - surface parameterization delay state and TMRT
+      - integrated chronological simulation
+    gate:
+      - Intermediate components and state match through day night transitions.
+      - Neighbor reads are protected from in-place block updates.
+      - No isotropic shortcut or independent-hour parallelization.
+  - id: P5
+    title: Complete optional workflow and interface parity
+    status: complete
+    depends_on: [P1, P4]
+    outputs:
+      - WBGT directional and legacy wind UHI ERA5 WRF paths
+      - optional input construction adapters and local processing
+      - installed-wheel compatibility and dependency isolation tests
+    gate:
+      - All seven public functions operational without stubs.
+      - Every local optional path tested on frozen actual file fixtures.
+      - Service mocks distinguished from live verification.
+      - Legacy namespace conflict documented and diagnosed.
+  - id: P6
+    title: Cache memory scheduler and restart robustness
+    status: complete
+    depends_on: [P3, P4, P5]
+    outputs:
+      - dependency-addressed atomic caches
+      - memory planner and logical-domain-preserving execution blocks
+      - bounded thread and process scheduler
+      - complete-state checkpoints and robust output completion manifests
+    gate:
+      - Block thread and worker changes preserve results.
+      - Corrupt stale interrupted and concurrent caches handled correctly.
+      - Process-tree memory budget tested.
+      - No time-history raster memory growth.
+  - id: P7
+    title: Profile-driven advanced optimization
+    status: in_progress
+    depends_on: [P6]
+    outputs:
+      - exact horizon and hierarchical skip experiments where valid
+      - angular moment reuse and layout experiments
+      - UTCI specialization and optional extension experiments
+      - local CPU exact GVF scheduling, visibility decode reuse, persistent JIT caches, and execution-block experiments
+      - recorded rejected and accepted approaches with workload crossovers
+    gate:
+      - Every promoted optimization passes the frozen numerical contract.
+      - Full-workload benefit established beyond isolated microbenchmarks.
+      - Preconditions construction cost and extra memory documented.
+  - id: P8
+    title: Independent validation benchmarks and release
+    status: pending
+    depends_on: [P5, P6, P7]
+    outputs:
+      - independent scientific and component reference checks
+      - complete paired performance matrix and raw data
+      - CPU-only non-skipped CI and supported-platform wheels
+      - final compatibility provenance deviation and performance reports
+    gate:
+      - Definition of done in implementation plan Section 13 satisfied.
+      - Missing hardware or failed cases not labeled passed.
+      - Published claims restricted to measured supported regimes.

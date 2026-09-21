@@ -1,0 +1,31 @@
+{
+  "abort_reason": null,
+  "aborted": false,
+  "available_disk_after_bytes": 57587310592,
+  "available_disk_before_bytes": 60168376320,
+  "case": "dense1024",
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/large_harness/run_final_large.py",
+    "--child",
+    "--case",
+    "dense1024",
+    "--run",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/large_harness/large_runs_v1/dense1024",
+    "--fixture",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/large_harness/fixtures/dense1024",
+    "--kwargs",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_portable_profile_v1/oracle/large/dense1024/kwargs.json",
+    "--site",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages"
+  ],
+  "disk_reserve_bytes": 10737418240,
+  "elapsed_seconds": 403.9848355840659,
+  "exit_code": 0,
+  "limit_bytes": 12884901888,
+  "peak_summed_process_tree_rss_bytes": 1629618176,
+  "performance_claim": false,
+  "positive_rss_samples": 13212,
+  "sample_interval_seconds": 0.02,
+  "schema": "local-cpu-optimization-final-combined-large-monitor.v1"
+}

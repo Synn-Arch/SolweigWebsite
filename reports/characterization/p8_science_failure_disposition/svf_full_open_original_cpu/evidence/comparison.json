@@ -1,0 +1,512 @@
+{
+  "all_bounded": true,
+  "field_count": 15,
+  "fields": [
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 0,
+      "max": 1.0,
+      "min": 0.98907470703125,
+      "shape": [
+        9,
+        13
+      ]
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 1,
+      "max": 1.0,
+      "min": 1.0,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.0,
+        "pass": true,
+        "unique": [
+          1.0
+        ],
+        "violation_count": 0
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 2,
+      "max": 1.0,
+      "min": 1.0,
+      "shape": [
+        9,
+        13
+      ]
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 3,
+      "max": 1.0,
+      "min": 1.0,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.0,
+        "pass": true,
+        "unique": [
+          1.0
+        ],
+        "violation_count": 0
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 4,
+      "max": 1.0,
+      "min": 1.0,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.0,
+        "pass": true,
+        "unique": [
+          1.0
+        ],
+        "violation_count": 0
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 5,
+      "max": 0.9752265214920044,
+      "min": 0.9643003940582275,
+      "shape": [
+        9,
+        13
+      ]
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 6,
+      "max": 0.9752265214920044,
+      "min": 0.9752265214920044,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.024773478507995605,
+        "pass": false,
+        "unique": [
+          0.9752265214920044
+        ],
+        "violation_count": 117
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 7,
+      "max": 0.9752265214920044,
+      "min": 0.9752265214920044,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.024773478507995605,
+        "pass": false,
+        "unique": [
+          0.9752265214920044
+        ],
+        "violation_count": 117
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 8,
+      "max": 0.9484643340110779,
+      "min": 0.9484643340110779,
+      "shape": [
+        9,
+        13
+      ]
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 9,
+      "max": 0.9484643340110779,
+      "min": 0.9484643340110779,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.05153566598892212,
+        "pass": false,
+        "unique": [
+          0.9484643340110779
+        ],
+        "violation_count": 117
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 10,
+      "max": 0.9484643340110779,
+      "min": 0.9484643340110779,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.05153566598892212,
+        "pass": false,
+        "unique": [
+          0.9484643340110779
+        ],
+        "violation_count": 117
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 11,
+      "max": 1.0,
+      "min": 1.0,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.0,
+        "pass": true,
+        "unique": [
+          1.0
+        ],
+        "violation_count": 0
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 12,
+      "max": 0.8594677448272705,
+      "min": 0.8594677448272705,
+      "shape": [
+        9,
+        13
+      ]
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 13,
+      "max": 0.8594677448272705,
+      "min": 0.8594677448272705,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.1405322551727295,
+        "pass": false,
+        "unique": [
+          0.8594677448272705
+        ],
+        "violation_count": 117
+      }
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 14,
+      "max": 0.8594677448272705,
+      "min": 0.8594677448272705,
+      "shape": [
+        9,
+        13
+      ],
+      "unity": {
+        "max_abs": 0.1405322551727295,
+        "pass": false,
+        "unique": [
+          0.8594677448272705
+        ],
+        "violation_count": 117
+      }
+    },
+    {
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "index": 15,
+      "shape": [
+        9,
+        13,
+        153
+      ]
+    },
+    {
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "index": 16,
+      "shape": [
+        9,
+        13,
+        153
+      ]
+    },
+    {
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "index": 17,
+      "shape": [
+        9,
+        13,
+        153
+      ]
+    },
+    {
+      "bounded_pass": true,
+      "candidate_compact": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "candidate_dense": {
+        "bitwise_equal": true,
+        "max_abs": 0.0,
+        "mismatch_count": 0
+      },
+      "dtype": "float32",
+      "finite": true,
+      "index": 18,
+      "max": 1.0,
+      "min": 0.98907470703125,
+      "shape": [
+        9,
+        13
+      ]
+    }
+  ],
+  "original_vs_candidate_compact_all_bitwise": true,
+  "original_vs_candidate_dense_all_bitwise": true,
+  "output_count": 19,
+  "svftotal_index": 18,
+  "unity_failed_indices": [
+    6,
+    7,
+    9,
+    10,
+    13,
+    14
+  ],
+  "visibility_indices": [
+    15,
+    16,
+    17
+  ]
+}

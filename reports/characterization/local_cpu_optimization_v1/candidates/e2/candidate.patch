@@ -1,0 +1,59 @@
+diff --git a/src/solweig_light/geometry/visibility_compiled.py b/src/solweig_light/geometry/visibility_compiled.py
+--- a/src/solweig_light/geometry/visibility_compiled.py
++++ b/src/solweig_light/geometry/visibility_compiled.py
+@@ -83,3 +83,33 @@ def decode_block(channel, start, stop, patches):
+         if len(leaves) == 1:
+             return _decode(*_descriptor(leaves[0]), start, stop, patches)
+         return _decode_diff(*_descriptor(leaves[0]), *_descriptor(leaves[1]), start, stop, patches)
++
++
++def decode_shared_diff_leaves(shadow, vegetation, diffuse, start, stop, patches):
++    """Decode leaves once only for the canonical identity-bound lazy difference.
++
++    Returning ``None`` is an exact fallback signal. In particular, dense/duck
++    diffuse inputs, LazyDiffVisibility subclasses, and lazy differences bound
++    to different leaves retain their independent decode behavior.
++    """
++    if (type(diffuse) is not LazyDiffVisibility
++            or diffuse.shadow is not shadow or diffuse.vegetation is not vegetation
++            or not isinstance(shadow, PackedVisibility)
++            or not isinstance(vegetation, PackedVisibility)):
++        return None
++    leaves = (shadow, vegetation)
++    owners = sorted({id(leaf): leaf for leaf in leaves if hasattr(leaf, '_lock')}.values(), key=id)
++    with ExitStack() as stack:
++        for owner in owners:
++            stack.enter_context(owner._lock)
++            owner._check_open()
++        for leaf in leaves:
++            if not 0 <= start <= stop <= leaf.shape[0]*leaf.shape[1] or not 0 <= patches <= leaf.shape[2]:
++                raise IndexError('Visibility block interval out of range')
++        return (_decode(*_descriptor(shadow), start, stop, patches),
++                _decode(*_descriptor(vegetation), start, stop, patches))
++
++
++def diff_from_decoded(shadow, vegetation):
++    """Apply the frozen float32 difference graph without mutating shadow."""
++    return _diff(shadow.copy(), vegetation)
+diff --git a/src/solweig_light/radiation/patch_radiation.py b/src/solweig_light/radiation/patch_radiation.py
+--- a/src/solweig_light/radiation/patch_radiation.py
++++ b/src/solweig_light/radiation/patch_radiation.py
+@@ -312,10 +312,17 @@ def Kside_veg_v2022a(*args,block_pixels=128,parallel=True,**kwargs):
+     kernel=_shortwave if parallel else _shortwave_serial
+     if block_pixels<1:raise ValueError('block_pixels must be positive')
+     prepared=_class_coefficients(altitude,azimuth,geometry,values['asvf']) if pixels else None
++    from ..geometry.visibility_compiled import decode_shared_diff_leaves, diff_from_decoded
+     for start in range(0,pixels,block_pixels):
+         stop=min(start+block_pixels,pixels)
+         sun,shade=_classes(altitude,azimuth,geometry,values['asvf'],start,stop,prepared=prepared)
+-        sh,vs,vb,diff=(_block(values[name],start,stop,count) for name in ('shmat','vegshmat','vbshvegshmat','diffsh'))
++        shared=decode_shared_diff_leaves(values['shmat'],values['vegshmat'],values['diffsh'],start,stop,count)
++        if shared is None:
++            sh,vs,vb,diff=(_block(values[name],start,stop,count) for name in ('shmat','vegshmat','vbshvegshmat','diffsh'))
++        else:
++            sh,vs=shared
++            vb=_block(values['vbshvegshmat'],start,stop,count)
++            diff=diff_from_decoded(sh,vs)
+         reduced=kernel(sh,vs,vb,diff,sun,shade,lum,geometry.solid_angle,geometry.cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box)
+         if not box:
+             output[5,start:stop]=reduced[:,0]

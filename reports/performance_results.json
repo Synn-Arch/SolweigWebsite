@@ -1,0 +1,167 @@
+{
+  "candidate_commit": null,
+  "candidate_state": "uncommitted worktree; individual records bind exact sources",
+  "cuda": {
+    "assessment": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/assessment.md",
+      "sha256": "80045c6470cc56ab2d375c89c7d42a89525073da9a8b16ef0b9bb7051f48873d"
+    },
+    "cold_failure": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_feasibility_manifest.json",
+      "sha256": "27047a986398a566e37f5b8004875e2208e93f2440b1b0cea90cecbe141518f3"
+    },
+    "cura": "original_warm_passed_original_cold_resource_failed_patched_cold_passed_performance_unmeasured",
+    "historical_m1": "not_available",
+    "memory_diagnosis": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_startup_memory_diagnostic.json",
+      "sha256": "78a3712b4875bedee53d0a6ce4ef682e44a55c1dfdf7a67524e29796d3914a8a"
+    },
+    "patched_cold_correctness": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/patched_workerlimit/manifest.json",
+      "sha256": "84fb4691d4eeef1e468d31cc9e4a6ec642e17a6a148e51501db4b09efc59e622"
+    },
+    "warm_correctness": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_geometry_warm_admission.json",
+      "sha256": "6717e277fc149100a05d5c3c801add39da70a74625e7d5a931824653b737f530"
+    }
+  },
+  "evidence": [
+    {
+      "report": {
+        "path": "reports/upstream_cpu_tuning.json",
+        "sha256": "235243cb04fe060a873985baf40a354dfe4b89bcadc5bfd42a9672eda2e69921"
+      },
+      "scope": "historical original CPU thread tuning; see own protocol and limitations"
+    },
+    {
+      "report": {
+        "path": "reports/p2_kernel_comparison.json",
+        "sha256": "355ff0ec802094b62acd5a0a37a3fa226dd4849737de9ec9d777640a9f2fe8d0"
+      },
+      "scope": "historical P2 kernel-only comparisons, not end-to-end"
+    },
+    {
+      "report": {
+        "path": "reports/p3_geometry_comparison.json",
+        "sha256": "7ac02c70edb6d31920167e35f09bf7acd8c5af04bc6a38650e678d6b677915ec"
+      },
+      "scope": "historical P3 geometry component comparisons, not end-to-end"
+    },
+    {
+      "report": {
+        "path": "reports/p4_radiation_comparison.json",
+        "sha256": "d7aa850f83ad3173a66b2011da5173685ebe937a907b951039c1cf5242c545ce"
+      },
+      "scope": "historical P4 radiation component comparisons, including recorded regressions"
+    },
+    {
+      "comparisons_passed": 29,
+      "execution": {
+        "path": "reports/characterization/p7_repaired_v2_component_matrix/execution_manifest.json",
+        "sha256": "f81bb2e8606f6908b3c9b5131e5b334fb047004dd96e5cc294f94b900687d6f7"
+      },
+      "report": {
+        "path": "reports/characterization/p7_repaired_v2_component_matrix/comparison.json",
+        "sha256": "ce67c85fcb676452b15426446d9e39f55edbcb25d565f47c6a72946d17974d38"
+      },
+      "scope": "current repaired-v2 candidate, frozen 29-configuration component matrix only"
+    }
+  ],
+  "outstanding": [
+    "Current-main cross-platform numerical repair and final P7 gate",
+    "P8 equal-work original default/best CPU versus candidate release matrix",
+    "Release hardware/workload coverage and uncertainty assessment"
+  ],
+  "p7_checkpoint_review": {
+    "path": "reports/p7_checkpoint_review.json",
+    "sha256": "95a5a0e5b7a76d17b425f60bb90761fc1fe13ed3a18583079c5d94b4745eee91"
+  },
+  "p7_full_pipeline": {
+    "completed_scene_summaries": [
+      {
+        "case_id": "dense_urban_256",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/dense_urban_256/summary.json",
+          "sha256": "6e8f6b7291e0b6e6bbde67c65d053371ef3ee8d374700b4a461c7b6b8d199a51"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "real_dense_urban",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/real_dense_urban/summary.json",
+          "sha256": "c86adb65ac6b42a64a32d3b79fe59b8145aa2aa9528acbdbc04b3bcc659c888b"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "real_sparse",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/real_sparse/summary.json",
+          "sha256": "5f62ee5a7772d0895c4a605aa93a2b2bd43a1d53f6305e73031119d2ab78a16f"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "real_vegetation_rich",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/real_vegetation_rich/summary.json",
+          "sha256": "4958ff52abc73f9028a4629d5573b30693c5af890cb0e7b5ad17f20730d42d75"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "repeated_block_256",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/repeated_block_256/summary.json",
+          "sha256": "dba11f3b419fbd142dea55c79190ca948c601ff36bc5d2c81c976809fdb86c65"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "small",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/small/summary.json",
+          "sha256": "08a275537313b2051aea2fce86556caae90c74eca9b0b6d0344adff5721b8134"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "vegetation_rich_256",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/vegetation_rich_256/summary.json",
+          "sha256": "7427043877d329722c1c40b222ff6de93747d82151b3b4d237a2ebbd5a377c9c"
+        },
+        "global_evidence_eligible": true
+      }
+    ],
+    "partial_v3_not_claim_eligible": {
+      "path": "reports/characterization/p7_pairs_v3/interruption.json",
+      "sha256": "3c32d09706396c2ccc94c336ba954f5a3e681b995ea193d91ed53cbe8141025f"
+    },
+    "protocol_manifest": {
+      "path": "benchmarks/protocols/p7_pairs_v4/manifest.json",
+      "sha256": "5076464a25f3cbcd589a9efbfbd36c34467c96fd8ee52f1dea7542e02935c341"
+    },
+    "repetitions_per_regime_budget": 5,
+    "required_scenes": 7,
+    "scope": "repair-only P6 versus optimized candidate; not upstream speedup"
+  },
+  "p7_persistent_jit": {
+    "path": "reports/characterization/p7_persistent_jit_promotion/report.json",
+    "sha256": "ca87a0a433975693ae70c9ad2572d256b04fee5fdadf313ecd6e721f197e351f"
+  },
+  "p7_rejected_angular_moments": {
+    "path": "reports/characterization/p7_angular_moment_experiment/pairs_v2/summary.json",
+    "sha256": "94cec42b44a8181b6098497525c960e798e62fc056bbe76a1d439840ce2cc70c"
+  },
+  "published_speedup_claims": [],
+  "recorder": {
+    "path": "tools/record_release_measurement_indices.py",
+    "sha256": "e63fbc6f3c71ba9aea1a1cd71416884b7171382440a4b70c020bd43ca93c5fd6"
+  },
+  "release_gate_passed": false,
+  "remote_ci": "configured_not_executed",
+  "status": "incomplete_release_evidence_index",
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec"
+}

@@ -1,0 +1,57 @@
+{
+  "status": "validated_not_executed",
+  "bindings": {
+    "harness": "b7f52b0c897e16b0a4071af06c3fa549537e95cc201d94f57eafb04f00c0a80d",
+    "helpers": "d688ae60fbd82e13ecf58b2598f13ba3aa66201ddf56ed1857ffd9c7c12720d5"
+  },
+  "schedule": [
+    {
+      "cell": 0,
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "first_use",
+      "repetitions": 1,
+      "variant": "e2",
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "cell": 2,
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 1,
+      "variant": "e2",
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ]
+      ]
+    },
+    {
+      "cell": 1,
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_cold",
+      "repetitions": 1,
+      "variant": "e2",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ]
+      ]
+    }
+  ]
+}

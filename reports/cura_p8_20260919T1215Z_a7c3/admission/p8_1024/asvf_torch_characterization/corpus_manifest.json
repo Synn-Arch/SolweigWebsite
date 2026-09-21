@@ -1,0 +1,1531 @@
+{
+  "boundary_formula": "svf=cos(arctan(tan(patch_altitude)-min(yi,0)))**2; +/-4 float32 bit neighbors",
+  "combined_unique": 189220,
+  "counts": {
+    "boundary": 774,
+    "edge": 10,
+    "frozen": 88669,
+    "hotspot": 1,
+    "random": 99937
+  },
+  "neighbor_ulps": 4,
+  "probe": {
+    "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/dense_kref_diagnostic/kref_step7_candidate_input.npz",
+    "sha256": "4ab3d9e3647b762454b059327671b5532da55644227edf2cfa426c97a3586e2a"
+  },
+  "seed": 20260919,
+  "sources": [
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/base/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/legacy_wrapper/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/legacy_direct/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/landcover_normalized/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/directional/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/landcover/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/optional_original_cpu/uhi/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/small_original_cpu/scene/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 290
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 246
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 198
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 173
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 137
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 26
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            48
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/public_roughness_original_cpu/scene/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "85b0695342497cba1ffd169d1245904711bcf541cc3926b5d5c5c2bbaddd0c7f"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 283
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 209
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 1
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 122
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 240
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 20
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 168
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 195
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 17
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 138
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 170
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 22
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 136
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 24
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            32,
+            35
+          ],
+          "unique": 215
+        }
+      ],
+      "path": "tests/reference/state_sequence_original_cpu/scene/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 8451
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 3038
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 131
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 81
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 2563
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 96
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 114
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 2846
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 216
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 57
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 2543
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 153
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 97
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 307
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 187
+        }
+      ],
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/dense_urban/raw/candidate/scene/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "0486a894d20aa2d25e0d5f7879bcb427919b5732abf53591a4ba9a360bf32343"
+    },
+    {
+      "members": [
+        {
+          "name": "svf.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 3107
+        },
+        {
+          "name": "svfE.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 1267
+        },
+        {
+          "name": "svfEaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 517
+        },
+        {
+          "name": "svfEveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 9864
+        },
+        {
+          "name": "svfN.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 1349
+        },
+        {
+          "name": "svfNaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 749
+        },
+        {
+          "name": "svfNveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 8524
+        },
+        {
+          "name": "svfS.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 994
+        },
+        {
+          "name": "svfSaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 995
+        },
+        {
+          "name": "svfSveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 9508
+        },
+        {
+          "name": "svfW.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 981
+        },
+        {
+          "name": "svfWaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 907
+        },
+        {
+          "name": "svfWveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 8361
+        },
+        {
+          "name": "svfaveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 2164
+        },
+        {
+          "name": "svfveg.tif",
+          "shape": [
+            1024,
+            1024
+          ],
+          "unique": 23577
+        }
+      ],
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/vegetation_rich/raw/candidate/scene/processed_inputs/SVF/svfs_0_0.zip",
+      "sha256": "033525bda1c92405e3804cff11ad4c5435a98c504e80226488e09cdabbcf4847"
+    }
+  ]
+}

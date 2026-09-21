@@ -1,0 +1,108 @@
+{
+  "cells": [
+    {
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 1,
+        "candidate_block_pixels": 128,
+        "cell": 0,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "first_use",
+        "repetitions": 1,
+        "variant": "e2"
+      },
+      "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+      "median_baseline_over_candidate": 0.9864081825125329,
+      "pair_count": 1,
+      "passed": true,
+      "performance_claim_eligible": false,
+      "ratio_range": [
+        0.9864081825125329,
+        0.9864081825125329
+      ],
+      "ratios": [
+        0.9864081825125329
+      ],
+      "upstream_speedup_claim_eligible": false
+    },
+    {
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 1,
+        "candidate_block_pixels": 128,
+        "cell": 2,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 1,
+        "variant": "e2"
+      },
+      "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+      "median_baseline_over_candidate": 1.0300319957370028,
+      "pair_count": 1,
+      "passed": true,
+      "performance_claim_eligible": false,
+      "ratio_range": [
+        1.0300319957370028,
+        1.0300319957370028
+      ],
+      "ratios": [
+        1.0300319957370028
+      ],
+      "upstream_speedup_claim_eligible": false
+    },
+    {
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 1,
+        "candidate_block_pixels": 128,
+        "cell": 1,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "baseline",
+            "candidate"
+          ]
+        ],
+        "regime": "geometry_cold",
+        "repetitions": 1,
+        "variant": "e2"
+      },
+      "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+      "median_baseline_over_candidate": 1.040452705321596,
+      "pair_count": 1,
+      "passed": true,
+      "performance_claim_eligible": false,
+      "ratio_range": [
+        1.040452705321596,
+        1.040452705321596
+      ],
+      "ratios": [
+        1.040452705321596
+      ],
+      "upstream_speedup_claim_eligible": false
+    }
+  ],
+  "eligibility_reason": "Requires a separate reviewed selection report evaluating the frozen benefit/regression/uncertainty gates.",
+  "limitations": [
+    "OS page cache uncontrolled; no disk-cold claim.",
+    "Compatible JIT warm still includes compilation for deliberately uncached kernels.",
+    "Single host and candidate baseline; no original-upstream speedup claim.",
+    "Only last output histories retained; every trial keeps content hashes and exact comparison."
+  ],
+  "performance_claim_eligible": false,
+  "source_and_fixture_guards_passed": true,
+  "status": "passed",
+  "upstream_speedup_claim_eligible": false
+}

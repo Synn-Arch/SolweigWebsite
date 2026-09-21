@@ -1,0 +1,110 @@
+{
+  "case": "dense1024",
+  "elapsed_diagnostic_seconds": 400.8271133340895,
+  "fixture_manifest_sha256": "51e5aac79281644d20b5e9f9fd518056fc503cca1d538a5cf603c88f5aed755d",
+  "module_origins": {
+    "solweig_light": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/__init__.py",
+    "solweig_light.api": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/api.py",
+    "solweig_light.geometry.service": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/geometry/service.py",
+    "solweig_light.pipeline": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/pipeline.py",
+    "solweig_light.radiation.engine": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/radiation/engine.py",
+    "solweig_light.runtime": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/runtime.py"
+  },
+  "outputs": [
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Kdown_0_0.tif",
+      "sha256": "450ac0c91a42233daaeed5aa4d5f6d311b27e0e0cec1743ecc6e74134640cfd5"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Kup_0_0.tif",
+      "sha256": "f8d493c41597fe1a4fb12f4f26bb8ffb9dd6705c96759fb02803d59cd21e6fbf"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Ldown_0_0.tif",
+      "sha256": "7e47112ed93148a1569eb1b37c6089add7908403ae636e4cdbdbb74eb3308a9e"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Lup_0_0.tif",
+      "sha256": "787e0fad828507fca0b93ec3136ce0daccc6bda485a911aaf616ca133f26a4ec"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Shadow_0_0.tif",
+      "sha256": "381989e381452f9fbed816581aa69fd903fb800fee227e72f7949761c5b4e9bb"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/TMRT_0_0.tif",
+      "sha256": "18780752f72d5a45444407b22d7b2eb6f3d44da191e06b3f6f40eda65f8e6eae"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Ta_0_0.tif",
+      "sha256": "203160b0824a3af6f125a264999cb14538bb68e9f8b9f12c65b0bfdf5d633b95"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/UTCI_0_0.tif",
+      "sha256": "ed3022bf8f20f1846679167f79d8941ea036c15e4dc7acee7a78a42688189fb5"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/WBGT_0_0.tif",
+      "sha256": "8fdb91cb18c8c09339be5d35bc32a48a1938604d9c1df531e2a9ba218b95b18f"
+    },
+    {
+      "bytes": 100899822,
+      "path": "scene/output_folder/0_0/Wind_0_0.tif",
+      "sha256": "a2581e7b45c706b563c804ead5af5c8d2fea575ec2365c50c3d9cab1e78b1098"
+    }
+  ],
+  "package_origin": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages/solweig_light/__init__.py",
+  "performance_claim": false,
+  "profile": {
+    "fingerprint": "8e4d38460b61b0299e7c1d525c8499750dcd219ef01cc785d7496dbe1dcbef30",
+    "id": "solweig-portable-sleef-5a1d179d-v1",
+    "implementation": {
+      "coefficient_policy": "numpy-float64-cos-tan-scalar-v1",
+      "profile_id": "solweig-portable-sleef-5a1d179d-v1",
+      "sleef_commit": "5a1d179df9cf652951b59010a2d2075372d67f68",
+      "source_sha256": {
+        "SLEEF_LICENSE.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+        "_jit_cache.py": "93cafde414ff020fa6810f5bb5a904e199ba22b0ebd780a9291a1257903b85ab",
+        "_math_profile.py": "7921432908b43aec6b99ac5c70df0f1f7e6566787c4e84cd741cbfa5b64e3ef7",
+        "_sleef_acos.py": "9c7aff0c880a10db81cc6f96c314a7600ef77cb0008cbcd5ff344fa156511263",
+        "_sleef_classifier.py": "444e27eb3e887145b0f9fc2447b9e6aafba3185c4f7cab0835bf862ae60447ec"
+      },
+      "tan_domain_policy": "sleef-u10-fast-abs-lt-125;explicit-legacy-numpy-otherwise-v1"
+    },
+    "runtime": {
+      "byteorder": "little",
+      "fastmath": false,
+      "float_rounds": 1,
+      "fma": "explicit-llvm.fma.f32",
+      "llvmlite": "0.49.0",
+      "machine": "arm64",
+      "numba": "0.67.0",
+      "numpy": "2.4.6",
+      "python": "CPython-3.11.16",
+      "system": "Darwin"
+    }
+  },
+  "runtime_options": {
+    "block_pixels": 1024,
+    "cache_dir": null,
+    "cache_enabled": true,
+    "checkpoint_interval": 1,
+    "cpu_budget": 4,
+    "legacy_cache_policy": "recompute",
+    "memory_budget_bytes": 12884901888,
+    "resume": false,
+    "threads_per_worker": 4,
+    "workers": 1
+  },
+  "schema": "local-cpu-optimization-final-combined-large-candidate.v1",
+  "torch_imported": false
+}

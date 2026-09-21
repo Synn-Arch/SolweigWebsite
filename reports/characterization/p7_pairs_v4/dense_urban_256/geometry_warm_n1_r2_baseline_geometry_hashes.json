@@ -1,0 +1,16 @@
+{
+  ".solweig-light-locks/496a0cd55f42da5afa542dabbadb517e6284270ed9919cf883f7f52b5e09d39b.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  ".solweig-light-locks/894165dfdc7bbca9e89772e1a7e5d3cd27f3ff2808421793be4da54a3a56b052.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  ".solweig-light-locks/db81925c1b48ea1fc13f60572838b43948fe4ad854c6b726e4003ea6479c7a0f.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  ".solweig-light/export-manifests/geometry-exports_0_0.json": "70a981dcdfcd37cf686051b3ac19e533b2843a253fcca2f8a1eb3c13d25b7169",
+  ".solweig-light/export-manifests/geometry-exports_0_0.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "Building_DSM/Building_DSM_0_0.tif": "687655ed2122002eebc16214fa506537a433aec5ca12ef198572c8dc0bee430f",
+  "DEM/DEM_0_0.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+  "SVF/SkyViewFactor_0_0.tif": "e5b1ae5194ca263e33b7a3b4368d0ee51999224386627174efe0b7e5a82659da",
+  "SVF/shadowmats_0_0.npz": "6df9dc3ec6245e2383b8ef0cd1673eea1620c010bb5f4ca53bcc58f9dcfbc88f",
+  "SVF/svfs_0_0.zip": "a56745a0dd4b1a2e79725c1424a236a094a9d58a15eb601120ee5094db09df0b",
+  "Trees/Trees_0_0.tif": "30f9e56852cc59aa196df9ce281666612a63608ee14cef76ee698227128ccdfa",
+  "aspect/aspect_0_0.tif": "7badaeee79cb4f490f149faf4196a57388bb4a971d747d3786a0289b661c57b7",
+  "metfiles/metfile_0_0.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4",
+  "walls/walls_0_0.tif": "7bec6a080f51bb942b91a7d8af0466f5668aca8fbe205d77aecc1b1b786ff48f"
+}

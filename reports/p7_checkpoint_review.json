@@ -1,0 +1,263 @@
+{
+  "schema": "p7_checkpoint_review.v1",
+  "decision": "P7 remains in_progress; P8/release not complete. Bounded advanced-strategy disposition review is complete for executed experiments, not every conceivable variant.",
+  "candidate_state": {
+    "git_head": null,
+    "git_head_reason": "git rev-parse HEAD failed: repository has no resolvable HEAD; use content inventory.",
+    "source_sha256": {
+      "src/solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+      "src/solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+      "src/solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+      "src/solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+      "src/solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+      "src/solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+      "src/solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+      "src/solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+      "src/solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+      "src/solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+      "src/solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+      "src/solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+      "src/solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+      "src/solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+      "src/solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+      "src/solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+      "src/solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+      "src/solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+      "src/solweig_light/geometry/svf.py": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+      "src/solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+      "src/solweig_light/geometry/visibility_compiled.py": "422750110cbfbb2a41023ac6d0d413bf9e0c3b923ecf1ceb01cd75454b06e57d",
+      "src/solweig_light/geometry/visibility_native.py": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+      "src/solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+      "src/solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+      "src/solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+      "src/solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+      "src/solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+      "src/solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+      "src/solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+      "src/solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+      "src/solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+      "src/solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+      "src/solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+      "src/solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "src/solweig_light/radiation/engine.py": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1",
+      "src/solweig_light/radiation/ground_view.py": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+      "src/solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+      "src/solweig_light/radiation/patch_radiation.py": "331822efc80f26531ed74bdb8f33266ebffc409c0f32dcac2d3eb8e2b72b2ad4",
+      "src/solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+      "src/solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+      "src/solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+      "src/solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+      "src/solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+      "src/solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+    },
+    "scope": "Current main still uses NumPy ASVF/classifier preparation. Isolated MKL and M1 SLEEF repairs are not production."
+  },
+  "evidence_sha256": {
+    "TASKS.yaml": "81fbbf42c435f8ad08553e5f0795b5260665c65ccda039eb0f10987e0a13e273",
+    "SOLWEIG_LIGHT_IMPLEMENTATION_PLAN.md": "0f2d1e44de38e219619dfd6e4fe1a02d4f93b4b1c3f2d29577372b352e539aea",
+    "reports/optimization_experiments.md": "cc1b21ecf59a56f6c34994a694a5a0dba0f745095f48f1ca857b01976c68e405",
+    "docs/progress.md": "bee7479aa53b0f58454cdac0e6f4a7e84119f3d72c28d1db3a5e8db834a897f4",
+    "reports/p7_completed_matrix_review.json": "844c288f6cfc518fd04e7c3a7504111644ed2965c5102fb334167126ddb4c07e",
+    "reports/characterization/p7_persistent_jit_serial_variant/pairs_v1/summary.json": "fc105f23ea8a4025ef5dfa380ad60f6a9b322e39a1141240323244155f438e20",
+    "reports/characterization/p7_persistent_jit_promotion/report.json": "ca87a0a433975693ae70c9ad2572d256b04fee5fdadf313ecd6e721f197e351f",
+    "reports/characterization/p7_angular_moment_experiment/pairs_v2/summary.json": "94cec42b44a8181b6098497525c960e798e62fc056bbe76a1d439840ce2cc70c",
+    "reports/characterization/p7_horizon_experiment/result_v2_reference_bound.json": "59cc604ccbaef470d7db51fabaad9035255b8680ccdfbfff6fbaf6d5e01e3814",
+    "reports/characterization/p7_hierarchical_skip_experiment/result.json": "39aa7387c83b33a104456f058a3550ee3ba3028b87ad81f2f96bc721c6c882b0",
+    "reports/characterization/p7_utci_horner_experiment/result.json": "55472742de2dc2c55c07de81a41f4b38f3c44b5b98c5951affb6da9fb667cb5b",
+    "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/batch_manifest.json": "97886a76ae4066d01c993686997903fba825219269b5c24017c0f96002c05fdf",
+    "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/dense_kref_diagnostic/rootcause_report.json": "abd67a4d42ffdf0b7f5e4ce7277d6883a20a6a6d3a46d5eb83b11d589bb87fa2",
+    "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/mkl_pipeline_experiment/result_summary.json": "afab4a2a11c14adb3da8726c7fb940f25f7fa54264dad4f4b1ad9dd63d2962c4",
+    ".github/workflows/cpu-reference.yml": "8ec636820149452ab9079330030aa8afe8058e2a95ac11770c85c733a0a91d56",
+    "reports/characterization/p7_pairs_v4/dense_urban_256/summary.json": "6e8f6b7291e0b6e6bbde67c65d053371ef3ee8d374700b4a461c7b6b8d199a51",
+    "reports/characterization/p7_pairs_v4/real_dense_urban/summary.json": "c86adb65ac6b42a64a32d3b79fe59b8145aa2aa9528acbdbc04b3bcc659c888b",
+    "reports/characterization/p7_pairs_v4/real_sparse/summary.json": "5f62ee5a7772d0895c4a605aa93a2b2bd43a1d53f6305e73031119d2ab78a16f",
+    "reports/characterization/p7_pairs_v4/real_vegetation_rich/summary.json": "4958ff52abc73f9028a4629d5573b30693c5af890cb0e7b5ad17f20730d42d75",
+    "reports/characterization/p7_pairs_v4/repeated_block_256/summary.json": "dba11f3b419fbd142dea55c79190ca948c601ff36bc5d2c81c976809fdb86c65",
+    "reports/characterization/p7_pairs_v4/small/summary.json": "08a275537313b2051aea2fce86556caae90c74eca9b0b6d0344adff5721b8134",
+    "reports/characterization/p7_pairs_v4/vegetation_rich_256/summary.json": "7427043877d329722c1c40b222ff6de93747d82151b3b4d237a2ebbd5a377c9c"
+  },
+  "p7_gates": [
+    {
+      "gate": "Every promoted optimization passes frozen numerical contract",
+      "status": "historical scoped admissions passed; expanded current-main gate unmet",
+      "reason": "140 repaired-P6 candidate pairs and40 persistent-JIT pairs pass original scopes. Cura original-CPU dense1024 TMRT max0.04949951171875 K exceeds unchanged0.01 K. Diagnosis identifies preexisting math-profile classification behavior, not cache regression. The failure still prevents unqualified numerical completion."
+    },
+    {
+      "gate": "Full-workload benefit beyond microbenchmarks",
+      "status": "satisfied for measured admitted regimes; no universal or original-upstream claim",
+      "reason": "140 repaired-P6 pairs establish complete-workload benefit with startup/memory qualifications; small four-thread geometry-warm baseline/candidate median0.9868922715496179 regresses.40 persistent-JIT pairs show warm benefit but mixed first use. Angular implementation fails complete-workload acceptance and is rejected."
+    },
+    {
+      "gate": "Preconditions construction cost extra memory documented",
+      "status": "satisfied for reviewed experiment scope",
+      "reason": "Per-strategy reports retain applicability, construction/storage and diagnostic costs; paired data retains startup/RSS. Six float64 moments add48N persistent bytes plus scratch; no generic memory-reduction claim. Untested alternatives have no measured benefit."
+    }
+  ],
+  "matrices": {
+    "repaired_p6": {
+      "scenes": {
+        "dense_urban_256": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        },
+        "real_dense_urban": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        },
+        "real_sparse": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        },
+        "real_vegetation_rich": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        },
+        "repeated_block_256": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        },
+        "small": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        },
+        "vegetation_rich_256": {
+          "valid_pairs": 20,
+          "failed_pairs": 0,
+          "frozen_inputs_unchanged": true,
+          "global_evidence_eligible": true
+        }
+      },
+      "valid_pairs": 140,
+      "baseline": "P6 plus explicit angular/SVF compatibility repairs, not unchanged P6 or original upstream",
+      "warm": "geometry warm, not JIT warm"
+    },
+    "persistent_jit": {
+      "valid_pairs": 40,
+      "promotion": "two-file cache-only implementation; distinct serial/parallel cache identities;831 source tests and installed-wheel cache/output verification",
+      "ratio": "baseline/candidate",
+      "qualification": "Warm medians small1.52\u20131.71x,2561.12\u20131.16x; mixed first use; host/source/configuration bound."
+    },
+    "angular": {
+      "valid_pairs": 40,
+      "simulation_failed_pairs": 0,
+      "promotion": "rejected; performance acceptance false",
+      "ratio": "candidate/baseline",
+      "groups": [
+        {
+          "scene": "small",
+          "regime": "first_use_empty_private_jit_and_geometry_cache",
+          "threads": 1,
+          "median": 1.044381592885486
+        },
+        {
+          "scene": "small",
+          "regime": "first_use_empty_private_jit_and_geometry_cache",
+          "threads": 4,
+          "median": 1.1920133697707196
+        },
+        {
+          "scene": "small",
+          "regime": "geometry_and_compatible_jit_warm",
+          "threads": 1,
+          "median": 1.0408321337885946
+        },
+        {
+          "scene": "small",
+          "regime": "geometry_and_compatible_jit_warm",
+          "threads": 4,
+          "median": 1.0280563665557636
+        },
+        {
+          "scene": "repeated_block_256",
+          "regime": "first_use_empty_private_jit_and_geometry_cache",
+          "threads": 1,
+          "median": 1.2735017320581714
+        },
+        {
+          "scene": "repeated_block_256",
+          "regime": "first_use_empty_private_jit_and_geometry_cache",
+          "threads": 4,
+          "median": 1.3120636697333792
+        },
+        {
+          "scene": "repeated_block_256",
+          "regime": "geometry_and_compatible_jit_warm",
+          "threads": 1,
+          "median": 1.446684091079734
+        },
+        {
+          "scene": "repeated_block_256",
+          "regime": "geometry_and_compatible_jit_warm",
+          "threads": 4,
+          "median": 1.4494369787346295
+        }
+      ],
+      "retained_failures": "pairs_v1 all40 failed before model import; no timing evidence. Corrected child-path rehearsals are diagnostics only."
+    }
+  },
+  "plan_12_1": [
+    {
+      "strategy": "Horizon scan recurrence",
+      "decision": "Reject tested single-translation general replacement",
+      "evidence": "Reference-bound rounded-path masks and30-degree minimal blocker counterexample.30/73-degree samples change9/24 masks. Cardinal sampled agreement does not prove arbitrary-threshold float32 horizon equality. Phase-indexed alternatives untested."
+    },
+    {
+      "strategy": "Conservative hierarchy",
+      "decision": "Reject Python implementation; retain building-only bound proof",
+      "evidence": "15 cases have bit-identical building horizons and reference-bound masks.41.6\u201399.4% samples skipped, but mechanism7.2\u20137.4x slower with219508-byte lower-bound Python storage on32x35. Not full-pipeline timings. Compiled structure and vegetation/wall simultaneous bounds untested."
+    },
+    {
+      "strategy": "Angular moments",
+      "decision": "Reject measured implementation",
+      "evidence": "Correctness admissions and40 paired trials pass, but every one of8 median candidate/baseline ratios>1. No retuning tolerance, excluding construction or promoting a kernel-only improvement."
+    },
+    {
+      "strategy": "Layout/native decoding/classification preparation",
+      "decision": "Retain source-bound implementations with historical workload qualifications",
+      "evidence": "Original component/block/layout comparisons and140-pair matrix. Added memory and small warm regression retained."
+    },
+    {
+      "strategy": "UTCI specialization/Horner",
+      "decision": "Retain existing explicit specialization; reject tested Horner reassociation",
+      "evidence": "All211 terms.10762 frozen original-CPU cases: Horner max0.031005859375 C>0.02 C; existing explicit max0.0078125 C.8015 cancellation-neighbour cases stress grouping. Uniform specialization inherits failed Horner behavior. No full-workload Horner speed claim."
+    },
+    {
+      "strategy": "Alternative Cython/C++",
+      "decision": "Conditional defer, not measured rejection",
+      "evidence": "Warmed profiles include compilation and predate cache promotion. No demonstrated Numba limitation justifying another maintained backend. Plan does not mandate speculative implementation."
+    }
+  ],
+  "unmet_gates_and_pending_decisions": [
+    "Current-main original dense1024 numerical admission remains failed. Approved production math profile, retained boundary regressions, chronological/source/wheel and dense/vegetation comparisons required before declaring repaired.",
+    "Linux pinned-MKL dependency/minimal-runtime/redistribution choice remains pending user decision. Isolated Torch-free MKL now passes actual per-patch classifier and both full1024 cases, but does not transfer to main or authorize integration.",
+    "Upstream worker-limit repair remains pending user approval. Keep original failure/default behavior visible; any eventual patched reference must be explicit. Do not apply repair to obtain a convenient oracle or performance baseline.",
+    "Complete required original upstream default/tuned CPU performance and supported-regime release matrices are not established by candidate-to-candidate P7 measurements. CUDA/hardware/failure results remain independently labeled, never inferred passed.",
+    "Section13 final-source compatibility, optional workflows, independent science, installed wheels, ordinary non-skipped CPU CI, bounded memory and source-provenanced report coverage still need final release review. Reports existing on disk do not establish release completion."
+  ],
+  "document_accuracy": "optimization_experiments.md final paragraph still calls downstream classifier boundary parity open. Isolated MKL actual-call preflight and both1024 full cases now pass; production/packaging/current-main admission remain open. Update this distinction in subsequent shared-doc maintenance, not by copying stale diagnostic proposals.",
+  "next_unblocked_local_task": {
+    "name": "Current-main installed-wheel, CI and legacy-compatibility provenance checkpoint",
+    "classification": "Preparatory local release work; not P8 milestone completion and independent of pending numerical/dependency decisions.",
+    "scope": [
+      "Freeze current source; build base and opt-in compatibility wheels in isolated staging; retain wheels, hashes, exact commands, environment and JUnit/logs.",
+      "Verify installed origins and no Torch/CUDA/acquisition import dependency. Run tests/unit/test_public_api.py, test_cli.py and test_compatibility.py against installed artifacts, including upstream-name collision handling.",
+      "Execute existing genuine small installed-wheel TIFF differential and required cache/restart subset in cpu-reference.yml; no source PYTHONPATH, mocks or unconditional skip. Reuse adequate same-source retained evidence rather than broad redundant tests.",
+      "Audit local commands against CI and supported-platform coverage; retain remote CI execution as not_run unless evidenced. Workflow file presence is not a CI pass.",
+      "Link all Section13 required reports in a source-bound release manifest, explicitly preserving original dense1024 failure and unverified platforms. No publish/tag, task-status promotion, MKL install-to-main, or upstream patch."
+    ],
+    "gate": "Durable local artifact/contract admission manifest with exact unresolved numerical/platform/CI scope. Numerical-source changes require relevant final-source revalidation."
+  },
+  "verification": "Read task/plan and retained strategy/progress reports. Recomputed140/40/40 valid-pair counts and angular rejection from actual summaries; hashed evidence/current source. No broad retests, main edits or TASKS status changes."
+}

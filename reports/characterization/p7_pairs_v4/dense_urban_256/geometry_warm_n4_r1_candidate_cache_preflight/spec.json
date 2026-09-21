@@ -1,0 +1,41 @@
+{
+  "budget": 4,
+  "entrypoint": "__cache_preflight",
+  "kwargs": {
+    "ERA_5_z0_find": false,
+    "base_path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/dense_urban_256/geometry_warm_n4_r1_candidate_scene",
+    "building_dsm_filename": "Building_DSM.tif",
+    "data_folder": null,
+    "data_source_type": null,
+    "dem_filename": "DEM.tif",
+    "end_time": null,
+    "landcover_filename": null,
+    "overlap": 20,
+    "own_met_file": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/dense_urban_256/geometry_warm_n4_r1_candidate_scene/met.txt",
+    "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/dense_urban_256/geometry_warm_n4_r1_candidate_scene/processed_inputs",
+    "save_kdown": true,
+    "save_kup": true,
+    "save_ldown": true,
+    "save_lup": true,
+    "save_shadow": true,
+    "save_svf": true,
+    "save_ta": true,
+    "save_tmrt": true,
+    "save_wbgt": true,
+    "save_wind": true,
+    "selected_date_str": "2020-07-18",
+    "start_time": null,
+    "tile_size": 3600,
+    "trees_filename": "Trees.tif",
+    "use_own_met": true,
+    "use_uhi": false
+  },
+  "runtime": {
+    "block_pixels": 128,
+    "cache_dir": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/dense_urban_256/geometry_warm_n4_r1_candidate_scene/.runtime_cache",
+    "cache_enabled": true,
+    "checkpoint_interval": 1,
+    "legacy_cache_policy": "recompute"
+  },
+  "source": "/Users/alansynn/Workspace/solweig-light/src"
+}

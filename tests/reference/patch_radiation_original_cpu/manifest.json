@@ -1,0 +1,7879 @@
+{
+  "evidence_class": "original_upstream_cpu_instrumented",
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "upstream_patch_hash": null,
+  "source_sha256": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+  "collector_sha256": "e0cf093811449e1b224d5bffb1b7e77bb047563087f69562766bda51ca3cb698",
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "package_path": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu",
+    "torch_threads": 1,
+    "torch_default_dtype": "torch.float32",
+    "packages": {
+      "timezonefinder": "9.0.0",
+      "kiwisolver": "1.5.1",
+      "coverage": "7.16.1",
+      "packaging": "26.3",
+      "iniconfig": "2.3.0",
+      "fonttools": "4.65.0",
+      "Pygments": "2.21.0",
+      "networkx": "3.6.1",
+      "pytz": "2026.3.post1",
+      "pytest-cov": "7.1.0",
+      "contourpy": "1.3.3",
+      "shapely": "2.1.2",
+      "torch": "2.14.0",
+      "numpy": "2.4.6",
+      "filelock": "4.0.0",
+      "sympy": "1.14.0",
+      "fsspec": "2026.7.0",
+      "tqdm": "4.70.1",
+      "pytest": "9.1.1",
+      "setuptools": "84.0.0",
+      "pycparser": "3.0",
+      "llvmlite": "0.49.0",
+      "timezonefinder-data": "3.2026.3.post1",
+      "python-dateutil": "2.9.0.post0",
+      "mpmath": "1.3.0",
+      "numba": "0.67.0",
+      "matplotlib": "3.11.2",
+      "xarray": "2026.7.0",
+      "cffi": "2.1.1",
+      "certifi": "2026.7.22",
+      "scipy": "1.17.1",
+      "cycler": "0.12.1",
+      "Jinja2": "3.1.6",
+      "pyparsing": "3.3.2",
+      "MarkupSafe": "3.0.3",
+      "solweig-gpu": "2.0.0",
+      "cftime": "1.6.5",
+      "pandas": "3.0.6",
+      "flatbuffers": "25.12.19",
+      "pluggy": "1.6.0",
+      "typing_extensions": "4.16.0",
+      "GDAL": "3.13.3",
+      "psutil": "7.2.2",
+      "pillow": "12.3.0",
+      "netCDF4": "1.7.4",
+      "six": "1.17.0",
+      "h3": "4.5.0"
+    }
+  },
+  "invocation": [
+    "tools/characterize_patch_radiation.py",
+    "--output",
+    "tests/reference/patch_radiation_original_cpu"
+  ],
+  "cases": [
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "original-small-daytime-step12",
+      "input": "000-Kside_veg_v2022a-input.npz",
+      "input_sha256": "1914106a44d1a046d97707872d1d6cb131770a57c3b30ce64239bd8fea7fc90a",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "cyl": {
+          "kind": "bool",
+          "dtype": "bool"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "000-Kside_veg_v2022a-output.npz",
+      "output_sha256": "6e3c912ce0a81325a750d816e7ef1af1d49be85832541092d5b78faeb80b993f"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "original-small-daytime-step12",
+      "input": "001-Lcyl_v2022a-input.npz",
+      "input_sha256": "1096d79975735d933b1336315ef54683ff623a35a05d72309e3cee26ab49342b",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "001-Lcyl_v2022a-output.npz",
+      "output_sha256": "fe2870061296d94faf7ff480aaf892cf9893e39ee793376ae4835ff25b80dd00"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "original-small-daytime-step12",
+      "input": "002-define_patch_characteristics-input.npz",
+      "input_sha256": "f815a8fed7ece28ce82065c1a91222b934525000f1b2eefb94ec61df4a346329",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35,
+            153
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            32,
+            35
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float64",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "002-define_patch_characteristics-output.npz",
+      "output_sha256": "db8b209f5b5cd9633849ca200fcc10e7d1bd8089b3f6872057e817e7b3abd1e1"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option1-binary-cylinder",
+      "input": "003-Kside_veg_v2022a-input.npz",
+      "input_sha256": "c04dcd8afc85453e765266e43274d9898a9108fe9db6501004e7ebf8ce0c908e",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "003-Kside_veg_v2022a-output.npz",
+      "output_sha256": "389227a8de64dda4d683c9fad2e439ecf905c05937a842521158b7b31cbb50b7"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option1-binary-box-tensor-azimuth",
+      "input": "004-Kside_veg_v2022a-input.npz",
+      "input_sha256": "5e878c9e628c2c838868c885ca1d4bf3a35765ded15657fdc0d98b3c4ec8b89d",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "004-Kside_veg_v2022a-output.npz",
+      "output_sha256": "9bebbc67b50a4fa5e0b6ff3b07c7e06b05352f7b53fd5ab19e95b92617f43949"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option1-binary-box-python-azimuth",
+      "input": "005-Kside_veg_v2022a-input.npz",
+      "input_sha256": "dd07bc1249f71e45bbc6be176e4740e6bc7312db21a3228e3e2f1967ec658df4",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option1-binary-longwave-python-solar",
+      "input": "006-Lcyl_v2022a-input.npz",
+      "input_sha256": "b6d2c8056933ad45704d95279d740d6257719558b6d692ac34a8c3728f44796e",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option1-binary-longwave-python-solar",
+      "input": "007-define_patch_characteristics-input.npz",
+      "input_sha256": "a3f1d59a832937d479f6af4b10d9baab1a927633f778dfd968e98cf97f8644bc",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option1-binary-longwave-tensor-solar",
+      "input": "008-Lcyl_v2022a-input.npz",
+      "input_sha256": "d1177787ffd0f23cada3b718133a8dfe23f2e2d54014363a1433d2c80ed38625",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "008-Lcyl_v2022a-output.npz",
+      "output_sha256": "18afea6bb9b72e7fa815e3f2b1f20faa9d63edde803aa979abb13587ce955807"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option1-binary-longwave-tensor-solar",
+      "input": "009-define_patch_characteristics-input.npz",
+      "input_sha256": "66132e35a52b2e8493c6dc7a98dadb7b150411c997f423dee12338b054979c04",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "009-define_patch_characteristics-output.npz",
+      "output_sha256": "1775888772cd985cb7caa843ca058b58f54da519a345515558b2b83e84a9bb59"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option1-raw-cylinder",
+      "input": "010-Kside_veg_v2022a-input.npz",
+      "input_sha256": "596aa444b9317f661453e176dbaac846e6c6107cc3f3bc76d7690d476be8e1cd",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "010-Kside_veg_v2022a-output.npz",
+      "output_sha256": "c0b98441e7a07655152d7df94f09a753b9e95ddca605bcd0472e008c4b0f809a"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option1-raw-longwave-python-solar",
+      "input": "011-Lcyl_v2022a-input.npz",
+      "input_sha256": "57d4e88fdeadbabbf1decb0334f5c6735a104e64aaf7eed5f0fa308daf395417",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option1-raw-longwave-python-solar",
+      "input": "012-define_patch_characteristics-input.npz",
+      "input_sha256": "2be292421d5ecafb7a4b6d54df693c6a366d5ffa5cf4b5df0d6d7cba9562ddc1",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option1-raw-longwave-tensor-solar",
+      "input": "013-Lcyl_v2022a-input.npz",
+      "input_sha256": "54c81f189b4418cca4926a63de8fd2c6d418e24eeaaf615f393246f3a38948c1",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "013-Lcyl_v2022a-output.npz",
+      "output_sha256": "f9a8d04580ddd2a0776685d963ef2ce368dbfa250cb1ebd70c88e4dea5ca1dc3"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option1-raw-longwave-tensor-solar",
+      "input": "014-define_patch_characteristics-input.npz",
+      "input_sha256": "fc2a4591a6355689dd9ffd2319f8dd53b60a2a8e911d7419c554e0fda5761a62",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            145
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            145,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "014-define_patch_characteristics-output.npz",
+      "output_sha256": "62e61ba775be765f208341a8d268d5b2cb72c16136794934ee064cbfb8ed6ef6"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option2-binary-cylinder",
+      "input": "015-Kside_veg_v2022a-input.npz",
+      "input_sha256": "3ce6b783daa9e8765bd034f7674a136c7a392171b665ee50ac22f1d052ec303e",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "015-Kside_veg_v2022a-output.npz",
+      "output_sha256": "383a9ad43fe9267dc3d4b9ccd979815c3235e35e47158e950360c8686ee67c13"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option2-binary-box-tensor-azimuth",
+      "input": "016-Kside_veg_v2022a-input.npz",
+      "input_sha256": "4ea0156528fb74c7efde66ddcf55954a7f25e09d6808f3158f1eaf9a8cb12b77",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "016-Kside_veg_v2022a-output.npz",
+      "output_sha256": "8e556de55692261ee372bc6ae8cb02afcee8fc5c2ba38071352eb04bf0c76a16"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option2-binary-box-python-azimuth",
+      "input": "017-Kside_veg_v2022a-input.npz",
+      "input_sha256": "7fb84c2dc71ad68fe4d9d147aff7322e4f3fce5fd19c135d5d72a00ed2975272",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option2-binary-longwave-python-solar",
+      "input": "018-Lcyl_v2022a-input.npz",
+      "input_sha256": "c2c1c00af625b5e2330c08b7ac02cf20cae850817d6174a91e8d1bfc5b8d2b67",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option2-binary-longwave-python-solar",
+      "input": "019-define_patch_characteristics-input.npz",
+      "input_sha256": "287280f4551ccee1846c349d3201448e56e9c626c03414db5e9d824db713a04a",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option2-binary-longwave-tensor-solar",
+      "input": "020-Lcyl_v2022a-input.npz",
+      "input_sha256": "0ec7d3a44d764766597f530242d88ffe1870d0ce441f0d52a705207cb64d39b0",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "020-Lcyl_v2022a-output.npz",
+      "output_sha256": "9448b1842238f40768d88e8a5f9b4e5032d2f3d7a8ec20e90de5e9d735fb9b36"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option2-binary-longwave-tensor-solar",
+      "input": "021-define_patch_characteristics-input.npz",
+      "input_sha256": "4d2e46f3222e506fd57a639f4ed9c7fa08cdee3a4c38efaf6cd1a923596e43aa",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "021-define_patch_characteristics-output.npz",
+      "output_sha256": "a3192a22ab6ebf21c4d3662ae527028f808378b2420b851f045bacb274c8bce6"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option2-raw-cylinder",
+      "input": "022-Kside_veg_v2022a-input.npz",
+      "input_sha256": "ddde0eb5d154922bb759f1c303f37622c7e15bd1e599c5001a8459bde95079ee",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "022-Kside_veg_v2022a-output.npz",
+      "output_sha256": "c0b98441e7a07655152d7df94f09a753b9e95ddca605bcd0472e008c4b0f809a"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option2-raw-longwave-python-solar",
+      "input": "023-Lcyl_v2022a-input.npz",
+      "input_sha256": "b6c47283792202334b912f8bff69c33310d167d3450c5e4210a155f65d064af8",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option2-raw-longwave-python-solar",
+      "input": "024-define_patch_characteristics-input.npz",
+      "input_sha256": "e76246a186523667f87ba5f585871b5738895a14f3638284c02aa6f76a21e217",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option2-raw-longwave-tensor-solar",
+      "input": "025-Lcyl_v2022a-input.npz",
+      "input_sha256": "bb92ab281c4a89dfa19f11e79139c3ba19dfa2204d2ec00034e9c28627c2a247",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "025-Lcyl_v2022a-output.npz",
+      "output_sha256": "a425dcf4d84f01c8d3dd1f6718d113be3ed5507049837c7311e614b230567752"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option2-raw-longwave-tensor-solar",
+      "input": "026-define_patch_characteristics-input.npz",
+      "input_sha256": "38b0441787ad74b026edd48767932977084ba6a0effc9f81d983d0468f56cc1c",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            153
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "026-define_patch_characteristics-output.npz",
+      "output_sha256": "7899bb9b8578c850773daabacbebc0cf75e1a44afbc6cb53f2ebfd2bfd99b76f"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option3-binary-cylinder",
+      "input": "027-Kside_veg_v2022a-input.npz",
+      "input_sha256": "a03779afb9ec4a130825140101129df8f2c1940a0df3a52d2aa71b8abacb7189",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "027-Kside_veg_v2022a-output.npz",
+      "output_sha256": "b88137708a2191d2114c3a825172e535e271cba9a9a7bf72a14e8c6bd2752967"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option3-binary-box-tensor-azimuth",
+      "input": "028-Kside_veg_v2022a-input.npz",
+      "input_sha256": "d71ac38c8061bc4e152ab53f38d607e20c69815a7bb693f2f3e4ed7dedbb0dda",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "028-Kside_veg_v2022a-output.npz",
+      "output_sha256": "2f5d732bf28bca8d39891af1ecbb1a464c06ff250b5a9d0e619c77dfec50ab56"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option3-binary-box-python-azimuth",
+      "input": "029-Kside_veg_v2022a-input.npz",
+      "input_sha256": "40412e5698a6dd0c5d47e208ba4efea666435a3ff3aba45bae6eba8f503424de",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option3-binary-longwave-python-solar",
+      "input": "030-Lcyl_v2022a-input.npz",
+      "input_sha256": "5863a3a97304f9b71b97bf000447c1196073f76feb57c4f18bd3827b191566f3",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option3-binary-longwave-python-solar",
+      "input": "031-define_patch_characteristics-input.npz",
+      "input_sha256": "3c2527eb899e60edf1f3570c161d14d7bc037803093bdf2b0f6d596bbd6166ee",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option3-binary-longwave-tensor-solar",
+      "input": "032-Lcyl_v2022a-input.npz",
+      "input_sha256": "6941741a47d6b3ecefe9a490c2fb9e8ee1b23ace31c925574065c272a872208a",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "032-Lcyl_v2022a-output.npz",
+      "output_sha256": "a8a804d502ffa82cffd0dd966d102342a6ec3ea4df5d508eedde8546673acedd"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option3-binary-longwave-tensor-solar",
+      "input": "033-define_patch_characteristics-input.npz",
+      "input_sha256": "e498bd53c58aedb6bea74ee894f12f666ddfd39defd3a7a8fa1c29e328af38ed",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "033-define_patch_characteristics-output.npz",
+      "output_sha256": "bcae8881221954522846049499748d0c7346499f792437810918678abb1ea6e0"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option3-raw-cylinder",
+      "input": "034-Kside_veg_v2022a-input.npz",
+      "input_sha256": "5d1512095c39629d484a4d6d25525bcd594c911e60e4f942709fe43b4af6ac21",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "034-Kside_veg_v2022a-output.npz",
+      "output_sha256": "c0b98441e7a07655152d7df94f09a753b9e95ddca605bcd0472e008c4b0f809a"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option3-raw-longwave-python-solar",
+      "input": "035-Lcyl_v2022a-input.npz",
+      "input_sha256": "2559cc6460a34582259f22dfda0dd1579429f99d78363b876ef9807b6c1378bb",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option3-raw-longwave-python-solar",
+      "input": "036-define_patch_characteristics-input.npz",
+      "input_sha256": "c3ef360b2c339df0042941e133a333155ce96fe3414dc7c4dac304a33e9a37b4",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option3-raw-longwave-tensor-solar",
+      "input": "037-Lcyl_v2022a-input.npz",
+      "input_sha256": "c8333dce92794309e72801d5e11c274ba5656aea55e9f2d30e4ccd603daf7f55",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "037-Lcyl_v2022a-output.npz",
+      "output_sha256": "5b89590c33e10e4c52aa4f131464b423a2f15d1050425ab48d72daedd9a15901"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option3-raw-longwave-tensor-solar",
+      "input": "038-define_patch_characteristics-input.npz",
+      "input_sha256": "f7971119d5665e826f596ab25bbdf26a8bf7a6818bb584e4fc27cd8f15d3e28b",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            305
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            305,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "038-define_patch_characteristics-output.npz",
+      "output_sha256": "516df888fe6e55ab166c4d15e51350e29d5052c6362ced7e5fecf9fab4f11fd5"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option4-binary-cylinder",
+      "input": "039-Kside_veg_v2022a-input.npz",
+      "input_sha256": "08f32fbccd4426fa156059ac645bfb7790450976ab44e08fd4ae6fe653a8491f",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "039-Kside_veg_v2022a-output.npz",
+      "output_sha256": "6cc61495e1c5fb2aff2311ed19de3cc0c122d72fd76a959834aac528915f0f0e"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option4-binary-box-tensor-azimuth",
+      "input": "040-Kside_veg_v2022a-input.npz",
+      "input_sha256": "f06a8ee5f097ded654bc3e0ed7cdfca22015dcd3c9424913c4bd03b0600404fe",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "040-Kside_veg_v2022a-output.npz",
+      "output_sha256": "71a2bc8b8d1374511b3269a44dcf3d99ee725b2c0ce9cc65197b1a4ca126b0ad"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option4-binary-box-python-azimuth",
+      "input": "041-Kside_veg_v2022a-input.npz",
+      "input_sha256": "bc0e80d43f221480882979fca399e2c4ebb37e2efc5c5e702667502cf3000ce0",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option4-binary-longwave-python-solar",
+      "input": "042-Lcyl_v2022a-input.npz",
+      "input_sha256": "bf7ea272c1d34898f7dd966752e6fc7d7398805c0da9f73f278bc2b727a74d04",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option4-binary-longwave-python-solar",
+      "input": "043-define_patch_characteristics-input.npz",
+      "input_sha256": "011ed40236d723ad907b0eef5739a5fd173708a09789dba84db3c487db2384fe",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option4-binary-longwave-tensor-solar",
+      "input": "044-Lcyl_v2022a-input.npz",
+      "input_sha256": "73d53226e27650cf19bf5fc55b6d49e43f6898a9fa3cf866b789585aabfa3a4e",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "044-Lcyl_v2022a-output.npz",
+      "output_sha256": "48988fae576d5536c5177656a8e5f5bf5378d2dba81a96029a75b09ad704a428"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option4-binary-longwave-tensor-solar",
+      "input": "045-define_patch_characteristics-input.npz",
+      "input_sha256": "29783fb38491b6c13b2cc68a9e50e4b7697660ed1914cde84eed5e70dbd78f22",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "045-define_patch_characteristics-output.npz",
+      "output_sha256": "80296ecd07dfbc2d8ff2b3887cfb5901dac87cf32aeb91a6aaae2a0e40badc43"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "label": "option4-raw-cylinder",
+      "input": "046-Kside_veg_v2022a-input.npz",
+      "input_sha256": "a07d1126f1b0553e3123acd49161af04fe70a9b1342edbc773f010dfd6febc75",
+      "fields": {
+        "radI": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radD": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "radG": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfEveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfSveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfWveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "svfNveg": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "psi": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "t": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "albedo": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupE": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupS": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupW": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "KupN": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "cyl": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "lv": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "anisotropic_diffuse": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "diffsh": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "046-Kside_veg_v2022a-output.npz",
+      "output_sha256": "c0b98441e7a07655152d7df94f09a753b9e95ddca605bcd0472e008c4b0f809a"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option4-raw-longwave-python-solar",
+      "input": "047-Lcyl_v2022a-input.npz",
+      "input_sha256": "7b75b17f4484ac29ec7f7501d25a81bf07dc451e8cd92da928a3f9d34ccd80d8",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option4-raw-longwave-python-solar",
+      "input": "048-define_patch_characteristics-input.npz",
+      "input_sha256": "a3c30b4865fd32fe3b8b6ce5e590f7f2334eccc14b46c9f2f9339905b17688cd",
+      "fields": {
+        "solar_altitude": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "solar_azimuth": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "original_failure"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "label": "option4-raw-longwave-tensor-solar",
+      "input": "049-Lcyl_v2022a-input.npz",
+      "input_sha256": "af3d8bb5b4b2da4683838cde00012d10e78277a4857364a684ef24fe9d74bd5a",
+      "fields": {
+        "esky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "sky_patches": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        }
+      },
+      "status": "captured",
+      "output": "049-Lcyl_v2022a-output.npz",
+      "output_sha256": "d97ae3127f10a1ecc23da17d0f443e5ca46a35a3d247b69dea854268a6bf083f"
+    },
+    {
+      "function": "define_patch_characteristics",
+      "label": "option4-raw-longwave-tensor-solar",
+      "input": "050-define_patch_characteristics-input.npz",
+      "input_sha256": "e174595d72f3478b67c70c8526ef44865fbab5fefdcbe1d7922533009e01fb4c",
+      "fields": {
+        "solar_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "solar_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "patch_altitude": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "patch_azimuth": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "steradian": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609
+          ]
+        },
+        "asvf": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "shmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "vbshvegshmat": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5,
+            609
+          ]
+        },
+        "Lsky_down": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky_side": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lsky": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            609,
+            3
+          ]
+        },
+        "Lup": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": [
+            3,
+            5
+          ]
+        },
+        "Ta": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "Tgwall": {
+          "kind": "tensor",
+          "dtype": "float32",
+          "shape": []
+        },
+        "ewall": {
+          "kind": "float",
+          "dtype": "float64"
+        },
+        "rows": {
+          "kind": "int",
+          "dtype": "int64"
+        },
+        "cols": {
+          "kind": "int",
+          "dtype": "int64"
+        }
+      },
+      "status": "captured",
+      "output": "050-define_patch_characteristics-output.npz",
+      "output_sha256": "96bcb6014b13f3b27090cc2ea48162df53634f0889b9a22549f3effda8318d63"
+    }
+  ],
+  "failures": [
+    {
+      "label": "option1-binary-box-python-azimuth",
+      "function": "Kside_veg_v2022a",
+      "exception": "TypeError",
+      "message": "where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 644, in Kside_veg_v2022a\n    KeastI = torch.where((azimuth > (360 - t)) | (azimuth <= (180 - t)),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n\n"
+    },
+    {
+      "label": "option1-binary-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option1-raw-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option2-binary-box-python-azimuth",
+      "function": "Kside_veg_v2022a",
+      "exception": "TypeError",
+      "message": "where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 644, in Kside_veg_v2022a\n    KeastI = torch.where((azimuth > (360 - t)) | (azimuth <= (180 - t)),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n\n"
+    },
+    {
+      "label": "option2-binary-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option2-raw-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option3-binary-box-python-azimuth",
+      "function": "Kside_veg_v2022a",
+      "exception": "TypeError",
+      "message": "where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 644, in Kside_veg_v2022a\n    KeastI = torch.where((azimuth > (360 - t)) | (azimuth <= (180 - t)),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n\n"
+    },
+    {
+      "label": "option3-binary-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option3-raw-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option4-binary-box-python-azimuth",
+      "function": "Kside_veg_v2022a",
+      "exception": "TypeError",
+      "message": "where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 644, in Kside_veg_v2022a\n    KeastI = torch.where((azimuth > (360 - t)) | (azimuth <= (180 - t)),\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: where() received an invalid combination of arguments - got (bool, Tensor, Tensor), but expected one of:\n * (Tensor condition)\n * (Tensor condition, Tensor input, Tensor other, *, Tensor out = None)\n * (Tensor condition, Number self, Tensor other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, Tensor)\n * (Tensor condition, Tensor input, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, Tensor, !Tensor!)\n * (Tensor condition, Number self, Number other)\n      didn't match because some of the arguments have invalid types: (!bool!, !Tensor!, !Tensor!)\n\n"
+    },
+    {
+      "label": "option4-binary-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    },
+    {
+      "label": "option4-raw-longwave-python-solar",
+      "function": "Lcyl_v2022a",
+      "exception": "TypeError",
+      "message": "tan(): argument 'input' (position 1) must be Tensor, not float",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_patch_radiation.py\", line 75, in execute\n    try:getattr(original,name)(**kwargs)\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1707, in Lcyl_v2022a\n    Least_, Lwest_, Lnorth_, Lsouth_ = define_patch_characteristics(solar_altitude, solar_azimuth,\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1532, in define_patch_characteristics\n    sunlit_patches, shaded_patches = shaded_or_sunlit(solar_altitude, solar_azimuth, patch_altitude[idx], patch_azimuth[idx], asvf)\n                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 549, in shaded_or_sunlit\n    yi = 2 * xi * torch.tan(solar_altitude * deg2rad)\n                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: tan(): argument 'input' (position 1) must be Tensor, not float\n"
+    }
+  ],
+  "main_input_provenance": {
+    "manifest_sha256": "09392adee2318446c206bbfce82d5d9d5c4c8450042daa6e0fa9e76492d80458",
+    "packet_sha256": "937315563ed0392e6c5f809ea52a1b122783f339968d72e73f26a5633f2d18a6",
+    "restoration": "array kind is original Torch tensor; solar/time scalar types restored from driver source"
+  }
+}

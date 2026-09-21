@@ -1,0 +1,4 @@
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/dense_urban/upstream/scene/output_folder removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/dense_urban/upstream/scene/processed_inputs/SVF removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/dense_urban/candidate/scene/output_folder removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/dense_urban/candidate/scene/processed_inputs/SVF removed_verified

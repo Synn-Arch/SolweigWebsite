@@ -1,0 +1,222 @@
+[
+  {
+    "class": "sun",
+    "boundary_row": 58,
+    "patch": 141,
+    "svf_bits": 1040938399,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 249.2307586669922,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "sun",
+    "boundary_row": 59,
+    "patch": 141,
+    "svf_bits": 1040938400,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 249.2307586669922,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "sun",
+    "boundary_row": 66,
+    "patch": 140,
+    "svf_bits": 1041132939,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 221.53846740722656,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "sun",
+    "boundary_row": 112,
+    "patch": 144,
+    "svf_bits": 1042645413,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 332.3077087402344,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "sun",
+    "boundary_row": 113,
+    "patch": 144,
+    "svf_bits": 1042645414,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 332.3077087402344,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "sun",
+    "boundary_row": 142,
+    "patch": 125,
+    "svf_bits": 1049272046,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 235.36842346191406,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "sun",
+    "boundary_row": 446,
+    "patch": 86,
+    "svf_bits": 1060367829,
+    "patch_altitude": 30.000001907348633,
+    "patch_azimuth": 323.4285888671875,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "sun",
+    "boundary_row": 447,
+    "patch": 86,
+    "svf_bits": 1060367830,
+    "patch_altitude": 30.000001907348633,
+    "patch_azimuth": 323.4285888671875,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "shade",
+    "boundary_row": 63,
+    "patch": 140,
+    "svf_bits": 1041132936,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 221.53846740722656,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "shade",
+    "boundary_row": 64,
+    "patch": 140,
+    "svf_bits": 1041132937,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 221.53846740722656,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "shade",
+    "boundary_row": 65,
+    "patch": 140,
+    "svf_bits": 1041132938,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 221.53846740722656,
+    "candidate": true,
+    "original": false
+  },
+  {
+    "class": "shade",
+    "boundary_row": 72,
+    "patch": 142,
+    "svf_bits": 1041141163,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 276.923095703125,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 108,
+    "patch": 144,
+    "svf_bits": 1042645409,
+    "patch_altitude": 66.0,
+    "patch_azimuth": 332.3077087402344,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 138,
+    "patch": 125,
+    "svf_bits": 1049272042,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 235.36842346191406,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 139,
+    "patch": 125,
+    "svf_bits": 1049272043,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 235.36842346191406,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 155,
+    "patch": 124,
+    "svf_bits": 1049561397,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 216.42105102539062,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 156,
+    "patch": 124,
+    "svf_bits": 1049561398,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 216.42105102539062,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 157,
+    "patch": 124,
+    "svf_bits": 1049561399,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 216.42105102539062,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 182,
+    "patch": 129,
+    "svf_bits": 1050479740,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 311.15789794921875,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 183,
+    "patch": 129,
+    "svf_bits": 1050479741,
+    "patch_altitude": 54.0,
+    "patch_azimuth": 311.15789794921875,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 309,
+    "patch": 110,
+    "svf_bits": 1057058748,
+    "patch_altitude": 42.0,
+    "patch_azimuth": 320.0,
+    "candidate": false,
+    "original": true
+  },
+  {
+    "class": "shade",
+    "boundary_row": 319,
+    "patch": 100,
+    "svf_bits": 1057371180,
+    "patch_altitude": 42.0,
+    "patch_azimuth": 170.0,
+    "candidate": false,
+    "original": true
+  }
+]

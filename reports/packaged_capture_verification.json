@@ -1,0 +1,194 @@
+{
+  "status": "passed",
+  "evidence_class": "original_upstream_cpu_capture_verification",
+  "run": "tests/reference/small_original_cpu",
+  "manifest_sha256": "09392adee2318446c206bbfce82d5d9d5c4c8450042daa6e0fa9e76492d80458",
+  "events": 222,
+  "call_counts": {
+    "Solweig_2022a_calc/input": 24,
+    "define_patch_characteristics/output": 24,
+    "Lcyl_v2022a/output": 24,
+    "Solweig_2022a_calc/output": 24,
+    "shadowingfunction_wallheight_23/output": 14,
+    "gvf_2018a/output": 14,
+    "TsWaveDelay_2015a/output": 84,
+    "Kside_veg_v2022a/output": 14
+  },
+  "timesteps": 24,
+  "state_links_checked": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "state_fields": [
+    "firstdaytime",
+    "timeadd",
+    "timestepdec",
+    "Tgmap1",
+    "Tgmap1E",
+    "Tgmap1S",
+    "Tgmap1W",
+    "Tgmap1N",
+    "TgOut1",
+    "CI except midnight reset"
+  ],
+  "raster_links_checked": [
+    "Tmrt",
+    "Kdown",
+    "Kup",
+    "Ldown",
+    "Lup",
+    "shadow"
+  ],
+  "output_dtype_sets": {
+    "Tmrt": [
+      "float32"
+    ],
+    "Kdown": [
+      "float32"
+    ],
+    "Kup": [
+      "float32"
+    ],
+    "Ldown": [
+      "float32"
+    ],
+    "Lup": [
+      "float32"
+    ],
+    "Tg": [
+      "float32"
+    ],
+    "ea": [
+      "float64"
+    ],
+    "esky": [
+      "float64"
+    ],
+    "I0": [
+      "float32",
+      "int64"
+    ],
+    "CI": [
+      "float32",
+      "float64"
+    ],
+    "shadow": [
+      "float32"
+    ],
+    "firstdaytime": [
+      "int64"
+    ],
+    "timestepdec": [
+      "float64"
+    ],
+    "timeadd": [
+      "float64",
+      "int64"
+    ],
+    "Tgmap1": [
+      "float32"
+    ],
+    "Tgmap1E": [
+      "float32"
+    ],
+    "Tgmap1S": [
+      "float32"
+    ],
+    "Tgmap1W": [
+      "float32"
+    ],
+    "Tgmap1N": [
+      "float32"
+    ],
+    "Keast": [
+      "float32"
+    ],
+    "Ksouth": [
+      "float32"
+    ],
+    "Kwest": [
+      "float32"
+    ],
+    "Knorth": [
+      "float32"
+    ],
+    "Least": [
+      "float32"
+    ],
+    "Lsouth": [
+      "float32"
+    ],
+    "Lwest": [
+      "float32"
+    ],
+    "Lnorth": [
+      "float32"
+    ],
+    "KsideI": [
+      "float32"
+    ],
+    "TgOut1": [
+      "float32"
+    ],
+    "TgOut": [
+      "float32"
+    ],
+    "radI": [
+      "float32",
+      "float64"
+    ],
+    "radD": [
+      "float32",
+      "float64"
+    ],
+    "Lside": [
+      "float32"
+    ],
+    "L_patches": [
+      "float32"
+    ],
+    "CI_Tg": [
+      "float32",
+      "float64"
+    ],
+    "CI_TgG": [
+      "float32",
+      "float64"
+    ],
+    "KsideD": [
+      "float32"
+    ],
+    "dRad": [
+      "float32"
+    ],
+    "Kside": [
+      "float32"
+    ]
+  },
+  "limitations": [
+    "One synthetic day; not restart verification or scientific validation",
+    "No candidate comparison or tolerance calibration implied",
+    "Diagnostic timings include capture overhead"
+  ]
+}

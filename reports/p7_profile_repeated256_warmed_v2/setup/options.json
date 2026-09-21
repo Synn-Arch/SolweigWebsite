@@ -1,0 +1,12 @@
+{
+  "block_pixels": 128,
+  "cache_dir": "/Users/alansynn/Workspace/solweig-light/reports/p7_profile_repeated256_warmed_v2/setup/geometry_cache",
+  "cache_enabled": true,
+  "checkpoint_interval": 1,
+  "cpu_budget": 1,
+  "legacy_cache_policy": "recompute",
+  "memory_budget_bytes": 4294967296,
+  "resume": false,
+  "threads_per_worker": 1,
+  "workers": 1
+}

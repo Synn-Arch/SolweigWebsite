@@ -1,0 +1,35 @@
+{
+  "excluded_available": {
+    "ee": false,
+    "geemap": false,
+    "geopandas": false,
+    "matplotlib": false,
+    "mkl": false,
+    "netCDF4": false,
+    "osmnx": false,
+    "pandas": false,
+    "rasterio": false,
+    "torch": false,
+    "xarray": false
+  },
+  "excluded_imported": {
+    "ee": false,
+    "geemap": false,
+    "geopandas": false,
+    "matplotlib": false,
+    "mkl": false,
+    "netCDF4": false,
+    "osmnx": false,
+    "pandas": false,
+    "rasterio": false,
+    "torch": false,
+    "xarray": false
+  },
+  "origin": "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/lib/python3.12/site-packages/solweig_light/__init__.py",
+  "outside_source": true,
+  "sleef_license_members": [],
+  "source_root": "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/src",
+  "wheel": "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/wheels/solweig_light-0.1.0.dev0-py3-none-any.whl",
+  "wheel_members": 53,
+  "wheel_sha256": "1974f59c7b2675dda471f1bdead5eabca0e9ebb36db67e1e432bbed1150ed568"
+}

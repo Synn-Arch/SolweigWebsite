@@ -1,0 +1,1 @@
+full pipeline not executed: both coherent profiles failed unchanged boundary-mask gate

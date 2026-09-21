@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "solweig-light-compat"
+version = "0.1.0.dev0"
+description = "Opt-in legacy import and CLI forwarding for solweig-light"
+requires-python = ">=3.11"
+license = "GPL-3.0-or-later"
+dependencies = ["solweig-light==0.1.0.dev0"]
+
+[project.scripts]
+thermal_comfort = "solweig_gpu.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

@@ -1,0 +1,12 @@
+{
+  "aborted": false,
+  "elapsed_monotonic": true,
+  "elapsed_seconds": 590.520449209027,
+  "outcome_exit_code": 0,
+  "passed": true,
+  "peak_summed_rss": 1513881600,
+  "positive_rss": true,
+  "sample_count": 18936,
+  "schema": "local-cpu-optimization-e0-monitor-validation.v1",
+  "within_cap": true
+}

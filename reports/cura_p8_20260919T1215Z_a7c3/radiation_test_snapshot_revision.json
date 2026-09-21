@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "remote_path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/tests/scientific/test_radiation_analytic.py",
+  "original_sha256": "2ffacba515e8b44f154510e1c9f5e289baad660ccfca6538213fcc46e8fdf76c",
+  "revised_sha256": "cc8e5a7a04e608b309f971f29bb260f7b66f693fa514c05244363051968ac030",
+  "scope": "Test precondition only: accept scalar landcover 0 or 1 and require no lc_grid water-class cells. Production source, fixture, expected expressions and numerical tolerances unchanged.",
+  "authorization": "Root requested explicit snapshot revision and bounded two-test Cura rerun."
+}

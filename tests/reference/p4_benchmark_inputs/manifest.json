@@ -1,0 +1,1650 @@
+{
+  "evidence_class": "original_upstream_cpu_component_synthetic_repeated_spatial_fixture",
+  "scope": "Original component calls on repeated entry arguments; not full simulation goldens or benchmark timings.",
+  "source_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "oracle_patch_hash": null,
+  "source_sha256": {
+    "Tgmaps_v1.py": "ae1c55f8a3793f3fc0f0f3ce443857c69bde2c5f4cc34ba21743ba9ba0cbfe23",
+    "__init__.py": "651d4afa6799990e9ee32da72f3b7cd4df70bb04d13c2176d202d45297554733",
+    "calculate_utci.py": "6f214f45df3a5c57f9c3911915e0d23b271c7819aa65820b5f731cf49d0d30dc",
+    "calculate_wbgt.py": "e9277be52c8cfc978f80b7843b25e047778d10533a603ee1ecb722dd9d3f03d6",
+    "cli.py": "a823eb72ba3b1cce1b581780bda9045ef3036c7ffc7b8b091bbd0c11fd92ecfc",
+    "create_inputs.py": "38b570dac030463b4801d5c10ff52dd9d2ea661820c9b1f34b13a1fb33206149",
+    "landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+    "preprocessor.py": "e818c3edbaf2901096cbc45aaad61112988e5500578b1c6363afa5ba9b5ea57d",
+    "shadow.py": "4e94d839f89cfa1a83dfe9fb681b6b36ab05b31bd09681a8904054ce2b50cc58",
+    "solweig.py": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+    "solweig_gpu.py": "db12f76f440ba6173a93c8f7936649a50622db736d5cb4823e4fc42efb9798f4",
+    "sun_position.py": "4ba31ed1f46a6868936e1ee7c67413e13a0829e82ab00f253c74385d78e6f1d4",
+    "utci_process.py": "2a90bcdbbd5f2ad0b191cfc86fb675c5980edf0ec6de6390a062756678003470",
+    "walls_aspect.py": "6aa17462df0c0d6219543ef5f9804bb73071bb85b9d7fc3787ca1ea695a0d1ad",
+    "wind_ext_coeff.py": "9a5d2fc93ad47bcff2450da5e1b859a51b7f135b80568aed8f966ad00fdfe822"
+  },
+  "protocol": "benchmarks/protocols/p4_radiation_v1.json",
+  "protocol_sha256": "c022e2b5d38bd607c0c09847a6bc94443d192eae86e95c5251ed6734aabb6a97",
+  "harness_sha256": "0daec4d5741a54fd72178495489402103f76020738b68200744652c34cfb0fba",
+  "invocation": [
+    "tools/capture_p4_benchmark_inputs.py"
+  ],
+  "original_main_input": {
+    "function": "Solweig_2022a_calc",
+    "boundary": "input",
+    "timestep": 10,
+    "path": "00067_Solweig_2022a_calc_input.npz",
+    "sha256": "cf6a21091f56f8c791aa1bfd8c58c9177af9b5783b0cf912732fb80ce368d2b2",
+    "fields": {
+      "i": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "dsm": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "scale": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "rows": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "cols": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "svf": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfN": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfW": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfE": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfS": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfNveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfEveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfSveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfWveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfaveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfEaveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfSaveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfWaveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfNaveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "vegdem": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "vegdem2": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "albedo_b": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "absK": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "absL": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "ewall": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "Fside": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "Fup": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "Fcyl": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "altitude": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "azimuth": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "zen": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "jday": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "usevegdem": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "onlyglobal": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "buildings": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "location": {
+        "kind": "dict",
+        "keys": [
+          "longitude",
+          "latitude",
+          "altitude"
+        ]
+      },
+      "location/longitude": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "location/latitude": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "location/altitude": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "psi": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": []
+      },
+      "landcover": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "lc_grid": {
+        "kind": "scalar",
+        "dtype": "bool"
+      },
+      "dectime": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "altmax": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "dirwalls": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "walls": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "cyl": {
+        "kind": "scalar",
+        "dtype": "bool"
+      },
+      "elvis": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "Ta": {
+        "kind": "array",
+        "dtype": "float64",
+        "shape": []
+      },
+      "RH": {
+        "kind": "array",
+        "dtype": "float64",
+        "shape": []
+      },
+      "radG": {
+        "kind": "array",
+        "dtype": "float64",
+        "shape": []
+      },
+      "radD": {
+        "kind": "array",
+        "dtype": "float64",
+        "shape": []
+      },
+      "radI": {
+        "kind": "array",
+        "dtype": "float64",
+        "shape": []
+      },
+      "P": {
+        "kind": "array",
+        "dtype": "float64",
+        "shape": []
+      },
+      "amaxvalue": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": []
+      },
+      "bush": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "Twater": {
+        "kind": "list",
+        "length": 0
+      },
+      "TgK": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "Tstart": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "alb_grid": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "emis_grid": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "TgK_wall": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "Tstart_wall": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "TmaxLST": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "TmaxLST_wall": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "first": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": []
+      },
+      "second": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": []
+      },
+      "svfalfa": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "svfbuveg": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "firstdaytime": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "timeadd": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "timestepdec": {
+        "kind": "scalar",
+        "dtype": "float64"
+      },
+      "Tgmap1": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "Tgmap1E": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "Tgmap1S": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "Tgmap1W": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "Tgmap1N": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "CI": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": []
+      },
+      "TgOut1": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "diffsh": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35,
+          153
+        ]
+      },
+      "shmat": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35,
+          153
+        ]
+      },
+      "vegshmat": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35,
+          153
+        ]
+      },
+      "vbshvegshmat": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35,
+          153
+        ]
+      },
+      "anisotropic_sky": {
+        "kind": "scalar",
+        "dtype": "int64"
+      },
+      "asvf": {
+        "kind": "array",
+        "dtype": "float32",
+        "shape": [
+          32,
+          35
+        ]
+      },
+      "patch_option": {
+        "kind": "scalar",
+        "dtype": "int64"
+      }
+    }
+  },
+  "original_main_input_sha256": "cf6a21091f56f8c791aa1bfd8c58c9177af9b5783b0cf912732fb80ce368d2b2",
+  "original_main_matches_archive": true,
+  "original_shape": [
+    32,
+    35
+  ],
+  "repeated_shape": [
+    128,
+    140
+  ],
+  "patch_count": 153,
+  "cases": [
+    {
+      "function": "gvf_2018a",
+      "input": "gvf_2018a_inputs.npz",
+      "input_sha256": "542f4f19565311d805923e8d40f359ef9bc132a9a78b737f79ca1b1d976d5f97",
+      "fields": {
+        "wallsun": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "walls": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "buildings": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "scale": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "shadow": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "first": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "second": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "dirwalls": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Tg": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Tgwall": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "Ta": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "emis_grid": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "ewall": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "alb_grid": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "SBC": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "albedo_b": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "rows": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "cols": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "Twater": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            0
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "lc_grid": {
+          "kind": "scalar",
+          "original_python_type": "builtins.bool",
+          "dtype": "bool",
+          "shape": []
+        },
+        "landcover": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        }
+      },
+      "output": "gvf_2018a_outputs.npz",
+      "output_sha256": "2c3409076b8a0cf66364ae4405ab8c3d82ee0fb9babc17370de4723772d07188",
+      "output_names": [
+        "gvfLup",
+        "gvfalb",
+        "gvfalbnosh",
+        "gvfLupE",
+        "gvfalbE",
+        "gvfalbnoshE",
+        "gvfLupS",
+        "gvfalbS",
+        "gvfalbnoshS",
+        "gvfLupW",
+        "gvfalbW",
+        "gvfalbnoshW",
+        "gvfLupN",
+        "gvfalbN",
+        "gvfalbnoshN",
+        "gvfSum",
+        "gvfNorm"
+      ],
+      "output_fields": {
+        "gvfLup": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalb": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbnosh": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfLupE": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbE": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbnoshE": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfLupS": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbS": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbnoshS": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfLupW": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbW": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbnoshW": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfLupN": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbN": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfalbnoshN": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfSum": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "gvfNorm": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        }
+      },
+      "mutations": {},
+      "mutation_snapshot": "gvf_2018a_mutations.npz",
+      "mutation_snapshot_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "function": "Kside_veg_v2022a",
+      "input": "Kside_veg_v2022a_inputs.npz",
+      "input_sha256": "39a59efe3a9be1e12a4f5324039ef9a2eabdf4e85036ef490634a2a1a40b1d8c",
+      "fields": {
+        "radI": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "radD": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "radG": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "shadow": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfS": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfW": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfN": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfE": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfEveg": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfSveg": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfWveg": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "svfNveg": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "azimuth": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "altitude": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "psi": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "t": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "albedo": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "F_sh": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "KupE": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "KupS": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "KupW": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "KupN": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "cyl": {
+          "kind": "scalar",
+          "original_python_type": "builtins.bool",
+          "dtype": "bool",
+          "shape": []
+        },
+        "lv": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "anisotropic_diffuse": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "diffsh": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "rows": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "cols": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "asvf": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "shmat": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "vegshmat": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "vbshvegshmat": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        }
+      },
+      "output": "Kside_veg_v2022a_outputs.npz",
+      "output_sha256": "f38590eb9ba2434f0a9289e800adfea46cdbe64ce10eb568593ca663b33566fd",
+      "output_names": [
+        "Keast",
+        "Ksouth",
+        "Kwest",
+        "Knorth",
+        "KsideI",
+        "KsideD",
+        "Kside"
+      ],
+      "output_fields": {
+        "Keast": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Ksouth": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Kwest": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Knorth": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "KsideI": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "KsideD": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Kside": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        }
+      },
+      "mutations": {},
+      "mutation_snapshot": "Kside_veg_v2022a_mutations.npz",
+      "mutation_snapshot_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "function": "Lcyl_v2022a",
+      "input": "Lcyl_v2022a_inputs.npz",
+      "input_sha256": "d7abe22ae11d8a022cf9c224385169e8e2b30992d42c331423d471ccb4716ab0",
+      "fields": {
+        "esky": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "sky_patches": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            153,
+            3
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Ta": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "Tgwall": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "ewall": {
+          "kind": "scalar",
+          "original_python_type": "builtins.float",
+          "dtype": "float64",
+          "shape": []
+        },
+        "Lup": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "shmat": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "vegshmat": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "vbshvegshmat": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140,
+            153
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "solar_altitude": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "solar_azimuth": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float64",
+          "shape": [],
+          "torch_dtype": "torch.float64",
+          "torch_device": "cpu"
+        },
+        "rows": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "cols": {
+          "kind": "scalar",
+          "original_python_type": "builtins.int",
+          "dtype": "int64",
+          "shape": []
+        },
+        "asvf": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        }
+      },
+      "output": "Lcyl_v2022a_outputs.npz",
+      "output_sha256": "98c64e9bc3bf5afffa4ae79d3bd14c43dc1681977ad7cff09bdd703ba26966cf",
+      "output_names": [
+        "Ldown",
+        "Lside",
+        "Least_",
+        "Lwest_",
+        "Lnorth_",
+        "Lsouth_"
+      ],
+      "output_fields": {
+        "Ldown": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Lside": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Least_": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Lwest_": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Lnorth_": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        },
+        "Lsouth_": {
+          "kind": "array",
+          "original_python_type": "torch.Tensor",
+          "dtype": "float32",
+          "shape": [
+            128,
+            140
+          ],
+          "torch_dtype": "torch.float32",
+          "torch_device": "cpu"
+        }
+      },
+      "mutations": {},
+      "mutation_snapshot": "Lcyl_v2022a_mutations.npz",
+      "mutation_snapshot_sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    }
+  ],
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "package_path": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch_threads": 1,
+    "cuda": "not available",
+    "packages": {
+      "timezonefinder": "9.0.0",
+      "kiwisolver": "1.5.1",
+      "coverage": "7.16.1",
+      "packaging": "26.3",
+      "iniconfig": "2.3.0",
+      "fonttools": "4.65.0",
+      "Pygments": "2.21.0",
+      "networkx": "3.6.1",
+      "pytz": "2026.3.post1",
+      "pytest-cov": "7.1.0",
+      "contourpy": "1.3.3",
+      "shapely": "2.1.2",
+      "torch": "2.14.0",
+      "numpy": "2.4.6",
+      "filelock": "4.0.0",
+      "sympy": "1.14.0",
+      "fsspec": "2026.7.0",
+      "tqdm": "4.70.1",
+      "pytest": "9.1.1",
+      "setuptools": "84.0.0",
+      "pycparser": "3.0",
+      "llvmlite": "0.49.0",
+      "timezonefinder-data": "3.2026.3.post1",
+      "python-dateutil": "2.9.0.post0",
+      "mpmath": "1.3.0",
+      "numba": "0.67.0",
+      "matplotlib": "3.11.2",
+      "xarray": "2026.7.0",
+      "cffi": "2.1.1",
+      "certifi": "2026.7.22",
+      "scipy": "1.17.1",
+      "cycler": "0.12.1",
+      "Jinja2": "3.1.6",
+      "pyparsing": "3.3.2",
+      "MarkupSafe": "3.0.3",
+      "solweig-gpu": "2.0.0",
+      "cftime": "1.6.5",
+      "pandas": "3.0.6",
+      "flatbuffers": "25.12.19",
+      "pluggy": "1.6.0",
+      "typing_extensions": "4.16.0",
+      "GDAL": "3.13.3",
+      "psutil": "7.2.2",
+      "pillow": "12.3.0",
+      "netCDF4": "1.7.4",
+      "six": "1.17.0",
+      "h3": "4.5.0"
+    }
+  }
+}

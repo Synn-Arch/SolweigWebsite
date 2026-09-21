@@ -1,0 +1,15 @@
+hostname analytica
+platform Linux-6.8.0-87-generic-x86_64-with-glibc2.39
+python 3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]
+numpy 1.26.4
+scipy 1.11.4
+numba 0.67.0
+pytest 9.1.1
+pytz 2024.1
+timezonefinder 9.0.0
+gdal 3.8.4
+OMP_NUM_THREADS None
+OPENBLAS_NUM_THREADS None
+MKL_NUM_THREADS None
+NUMBA_NUM_THREADS None
+CUDA_VISIBLE_DEVICES None

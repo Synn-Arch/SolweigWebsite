@@ -1,0 +1,68 @@
+{
+  "status": "ready_for_native_build_not_executed",
+  "scope": "Two predetermined coherent native library profiles; isolated diagnostics only; no main or packaging changes.",
+  "profiles": [
+    {
+      "name": "aocl_default_scalar",
+      "commit": "29fd054f383e6c5e2dec2fce781d5220059f1836",
+      "source": "https://github.com/amd/aocl-libm-ose/tree/29fd054f383e6c5e2dec2fce781d5220059f1836",
+      "license": "AMD contributions BSD-3-Clause; retain LICENSE and third-party NOTICES. Selected scalar public amd_ API; source-defined runtime dispatch only.",
+      "prefix": "amd_",
+      "rationale": "Distinct optimized tanf pi/32 table reduction and rational/reconstruction algorithm; evaluate complete public scalar math profile, not CORE-MATH-only assumption."
+    },
+    {
+      "name": "openlibm_default_scalar",
+      "commit": "5fe399749f9276eaa0b8403e507470da05cbbb3f",
+      "source": "https://github.com/JuliaMath/openlibm/tree/5fe399749f9276eaa0b8403e507470da05cbbb3f",
+      "license": "Library retains BSD/ISC/fdlibm and Julia MIT notices in LICENSE.md/source headers. LGPL test-double/test-float programs are not built or proposed for production.",
+      "prefix": "",
+      "rationale": "Independent fdlibm-derived complete scalar profile. No assumption correct rounding implies original MKL parity."
+    }
+  ],
+  "files": {
+    "openlibm_README_md": "6ac92fb7ce5381ad4af17624315f5b639d5f81eadd5be16e3564b584e48cbefd",
+    "aocl-libm-ose_README_md": "7b465b8950bb980703d18cc55dd1c762f53b4aedab18bc7cff235ba136d8ccca",
+    "openlibm.tar.gz": "91a8e0b21c3f2188d01a1dd57454673a1a6f2230be7e5d235e5d4878dee9424f",
+    "build_linux.sh": "92bf40dcd924a78882bf4c2084b54b3eca6aa65dd8f3d91700c2ea49e95118ef",
+    "probe_profile.py": "eca18efc4878498afd77502c63ca8e5330a5db5104533aa356b15e7f3c45ed7a",
+    "aocl-libm-ose.tar.gz": "925b9b8f71c7a795e4c859b9203c75870e4deb2b24dea17c98976cbe43cffb11",
+    "openlibm_commit.json": "8920ad92677db502b3f93b515e3644c80fa8e51824ca729b5a666418567414ea",
+    "aocl-libm-ose_LICENSE": "b3e230136ef2aedf177078069880b0072b779cc1bc8ad52b1f63218ee3c2a00a",
+    "aocl-libm-ose_commit.json": "0a3d6ef10c40a06720ac8c80cdee6f1ca17b9953c94fc5161c90e40674b40eee",
+    "function_loop.c": "f697fbdaa283111f4d0641cc8776468127375ef337adfc87cf395ce5dbd26714"
+  },
+  "inputs": {
+    "corpus": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/classifier_mkl_diagnostic/corpus.npz",
+      "sha256": "8bfaf4016f85c0939d4e72155e84420ffac89a16ce051c1afbb2c934f615d1cf"
+    },
+    "asvf_oracle": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/asvf_torch_characterization/torch_reference.npz",
+      "sha256": "d14ec7e2fe084eefc9280ac710e53c61c7fc10a4e68da17589e72a4066c46167"
+    },
+    "sqrt_oracle": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/mkl_dispatch_diagnostic/mkl_probe_bits.npz",
+      "sha256": "9c27c8a0c477993706ae95c07a13987b4111cb2827d98195f49d195f85ffc3a5"
+    },
+    "trace": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/torch_patch_scalar_trace/results/trace.npz",
+      "sha256": "9467d83c202b2ab9e50c2856f2d7350243b26afe7306d6fd23c1616b8d9e64fc"
+    }
+  },
+  "build": "bash build_linux.sh > build.log 2>&1 (packet directory cwd; CMake >=3.26 and GNU C/C++ compiler; single build job; no global install)",
+  "probe_template": "python probe_profile.py --library ABSOLUTE_BUILT_SHARED_LIBRARY --prefix PREFIX --corpus CORPUS --asvf-oracle ASVF_ORACLE --sqrt-oracle SQRT_ORACLE --trace TRACE --output OUTPUT_DIR",
+  "execution_requirements": [
+    "Cura owner executes in new ledger-owned directory; confirm idle before native build/probe; one process, OMP_NUM_THREADS=1, OPENBLAS_NUM_THREADS=1, MKL_NUM_THREADS=1.",
+    "Retain source tarballs/notices, compiler/CMake versions, CMakeCache/build logs, ldd output, library and probe hashes, report.json/results.npz. Discover built .so paths explicitly; never fall back to system libm. Probe checks each exported symbol origin.",
+    "No MKL/Torch dependency for candidate probe; retained upstream arrays are reference only. Original asvf diagnostic branch cannot constitute complete profile pass.",
+    "Run 189220 ASVF inputs then 774x153 actual scalar-call boundary oracle. Do not compare old vector classifier masks in torch_reference.npz.",
+    "If library build or Intel-host CPU dispatch fails, record failure; do not broaden to configuration sweep. Hash-verify local downloaded artifacts before removing owned remote scratch."
+  ],
+  "gates": {
+    "advance": "Complete profile sun=0 and shade=0 on actual boundary oracle; inspect all ASVF/primitive bit and nonfinite disagreements, no requirement to reject harmless bit differences automatically.",
+    "next_if_pass": "All frozen solar timesteps, block/layout/threads and M1 qualification; isolated genuine chronological dense1024+vegetation1024, all fields, 153 patches, 24h, unchanged frozen tolerances, 12GiB cap; installed wheel noTorch checks. Source-derived portability and licensing review before any production choice.",
+    "stop_if_fail": "Reject these profiles. Do not fit coefficients, switch algorithms by input, use lookup/surrogate/nextafter, relax masks/tolerances, or run full pipeline on a boundary-failing candidate."
+  },
+  "finite_research_limit": "Two new profiles only. Existing IGC MIT HA/FMA profile and SLEEF u10/u35 plus BSD SVML LA are already measured failures. No speculative compiler/FMA/config sweeps: FMA in source has defined semantics and removing it creates another algorithm, not an exactness repair. Failure does not prove mathematical impossibility; it establishes no demonstrated portable replacement from this finite source-licensed set. Original proprietary MKL compatibility remains unresolved and release numerical gates remain open.",
+  "verification": "Python compile(), bash -n, C syntax check passed locally. Linux builds/runtime tests not yet executed."
+}

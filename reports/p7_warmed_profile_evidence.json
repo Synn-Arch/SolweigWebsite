@@ -1,0 +1,50 @@
+{
+  "schema_version": "p7_warmed_profile_evidence.v1",
+  "evidence_class": "diagnostic_profile_only",
+  "invocation": {
+    "tool": "tools/profile_p7_pipeline.py",
+    "mode": "opt_in_warmup",
+    "source": "src",
+    "threads": 1,
+    "timeline_rows": 24,
+    "patches": 153,
+    "resume": false,
+    "source_tool_sha256": "4352b1754732e56591ff8cb45a92fa3e9ff091e44737f358fc1d15e947a37c53"
+  },
+  "runs": {
+    "small": {
+      "path": "reports/p7_profile_small_warmed_v2",
+      "outcome": "profile_completed_not_a_benchmark",
+      "profiled_wall_seconds": 9.180022374959663,
+      "new_output_tiffs": 10,
+      "schema": "10 outputs, each 32x35x24 with hourly Time metadata",
+      "warmup_output_comparison": "all 10 common model TIFFs byte-identical; warmup-only SVF_0_0.tif is outside the output-folder publication set",
+      "failure_artifact": false
+    },
+    "repeated_block_256": {
+      "path": "reports/p7_profile_repeated256_warmed_v2",
+      "outcome": "profile_completed_not_a_benchmark",
+      "profiled_wall_seconds": 25.667113584000617,
+      "new_output_tiffs": 10,
+      "schema": "10 outputs, each 256x256x24 with hourly Time metadata",
+      "warmup_output_comparison": "all 10 common model TIFFs byte-identical; warmup-only SVF_0_0.tif is outside the output-folder publication set",
+      "failure_artifact": false
+    }
+  },
+  "residual_compilation": {
+    "small": {"cprofile": "profile/worker_cumulative.txt", "numba_compile_seconds_approx": 6.2, "top_sites": ["numba.core.dispatcher.compile", "numba.core.compiler.compile_extra", "numba.core.dispatcher._compile_for_args"]},
+    "repeated_block_256": {"cprofile": "profile/worker_cumulative.txt", "numba_compile_seconds_approx": 6.2, "top_sites": ["numba.core.dispatcher.compile", "numba.core.compiler.compile_extra", "numba.core.dispatcher._compile_for_args"]},
+    "interpretation": "cache=True declarations exist across geometry, radiation and UTCI kernels, but the fresh profiled process still compiles roughly 60/64 signatures; cProfile cannot attribute native kernel internals beyond dispatcher/compiler call sites"
+  },
+  "v1_failure_diagnosis": {
+    "runs": ["reports/p7_profile_small_warmed_v1", "reports/p7_profile_repeated256_warmed_v1"],
+    "cause": "the first profiled worker's completed transaction metadata and output namespace were removed before the second worker, but the second invocation had no fresh publication state; it exited zero without creating new TIFFs",
+    "evidence": "v1 warm_profile had zero output TIFFs and validate_outputs raised missing output; v2 moves warmup output/.solweig-light transactions to warmup/ before the fresh profiled worker",
+    "status": "superseded_by_v2"
+  },
+  "limitations_and_recommendation": [
+    "This is cProfile attribution, not a timing benchmark; profiler overhead and process startup remain included.",
+    "Geometry cache and Numba cache are reused, but a fresh process still recompiles many signatures; warmup does not imply zero compilation.",
+    "The harness should retain the warmup directory and require newly published output artifacts before accepting a warmed profile; v2 now enforces this through output validation and job.failure.json inspection."
+  ]
+}

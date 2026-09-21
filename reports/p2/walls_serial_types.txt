@@ -1,0 +1,138 @@
+walls_serial (Array(float32, 2, 'C', False, aligned=True), float64)
+--------------------------------------------------------------------------------
+# File: /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/walls_compiled.py
+# --- LINE 36 --- 
+# label 0
+#   dsm = arg(0, name=dsm)  :: array(float32, 2d, C)
+#   walllimit = arg(1, name=walllimit)  :: float64
+
+@njit(cache=True, fastmath=False)
+
+# --- LINE 37 --- 
+
+def walls_serial(dsm, walllimit):
+
+    # --- LINE 38 --- 
+    #   $6load_attr.1 = getattr(value=dsm, attr=shape)  :: UniTuple(int64 x 2)
+    #   $16unpack_sequence.4 = exhaust_iter(value=$6load_attr.1, count=2)  :: UniTuple(int64 x 2)
+    #   del $6load_attr.1
+    #   $16unpack_sequence.2 = static_getitem(value=$16unpack_sequence.4, index=0, index_var=None, fn=<built-in function getitem>)  :: int64
+    #   $16unpack_sequence.3 = static_getitem(value=$16unpack_sequence.4, index=1, index_var=None, fn=<built-in function getitem>)  :: int64
+    #   del $16unpack_sequence.4
+    #   rows = $16unpack_sequence.2  :: int64
+    #   del $16unpack_sequence.2
+    #   cols = $16unpack_sequence.3  :: int64
+    #   del $16unpack_sequence.3
+
+    rows,cols=dsm.shape
+
+    # --- LINE 39 --- 
+    #   $24load_global.5 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)  :: Module(<module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    #   $36load_attr.7 = getattr(value=$24load_global.5, attr=zeros)  :: Function(<built-in function zeros>)
+    #   del $24load_global.5
+    #   $50build_tuple.10 = build_tuple(items=[Var(rows, walls_compiled.py:38), Var(cols, walls_compiled.py:38)])  :: UniTuple(int64 x 2)
+    #   $52load_global.11 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)  :: Module(<module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    #   $64load_attr.12 = getattr(value=$52load_global.11, attr=float64)  :: class(float64)
+    #   del $52load_global.11
+    #   output = call $36load_attr.7($50build_tuple.10, func=$36load_attr.7, args=[Var($50build_tuple.10, walls_compiled.py:39)], kws=[('dtype', Var($64load_attr.12, walls_compiled.py:39))], vararg=None, varkwarg=None, target=None)  :: (UniTuple(int64, 2), class(float64)) -> array(float64, 2d, C)
+    #   del $64load_attr.12
+    #   del $50build_tuple.10
+    #   del $36load_attr.7
+
+    output=np.zeros((rows,cols),dtype=np.float64)
+
+    # --- LINE 40 --- 
+    #   $92load_global.14 = global(range: <class 'range'>)  :: Function(<class 'range'>)
+    #   $const104.16.2 = const(int, 1)  :: Literal[int](1)
+    #   $const108.18.2 = const(int, 1)  :: Literal[int](1)
+    #   $binop_sub110.19 = rows - $const108.18.2  :: int64
+    #   del rows
+    #   del $const108.18.2
+    #   $118call.20 = call $92load_global.14($const104.16.2, $binop_sub110.19, func=$92load_global.14, args=[Var($const104.16.2, walls_compiled.py:40), Var($binop_sub110.19, walls_compiled.py:40)], kws=(), vararg=None, varkwarg=None, target=None)  :: (int64, int64) -> range_state_int64
+    #   del $const104.16.2
+    #   del $binop_sub110.19
+    #   del $92load_global.14
+    #   $128get_iter.21 = getiter(value=$118call.20)  :: range_iter_int64
+    #   del $118call.20
+    #   $phi130.0 = $128get_iter.21  :: range_iter_int64
+    #   del $128get_iter.21
+    #   jump 130
+    # label 130
+    #   $130for_iter.1 = iternext(value=$phi130.0)  :: pair<int64, bool>
+    #   $130for_iter.2 = pair_first(value=$130for_iter.1)  :: int64
+    #   $130for_iter.3 = pair_second(value=$130for_iter.1)  :: bool
+    #   del $130for_iter.1
+    #   $phi132.1 = $130for_iter.2  :: int64
+    #   del $130for_iter.2
+    #   branch $130for_iter.3, 132, 1474
+    # label 132
+    #   del $130for_iter.3
+    #   row = $phi132.1  :: int64
+    #   del $phi132.1
+
+    for row in range(1,rows-1):
+
+        # --- LINE 41 --- 
+        #   $134load_global.2 = global(range: <class 'range'>)  :: Function(<class 'range'>)
+        #   $const146.4.2 = const(int, 1)  :: Literal[int](1)
+        #   $const150.6.2 = const(int, 1)  :: Literal[int](1)
+        #   $binop_sub152.7 = cols - $const150.6.2  :: int64
+        #   del $const150.6.2
+        #   $160call.8 = call $134load_global.2($const146.4.2, $binop_sub152.7, func=$134load_global.2, args=[Var($const146.4.2, walls_compiled.py:41), Var($binop_sub152.7, walls_compiled.py:41)], kws=(), vararg=None, varkwarg=None, target=None)  :: (int64, int64) -> range_state_int64
+        #   del $const146.4.2
+        #   del $binop_sub152.7
+        #   del $134load_global.2
+        #   $170get_iter.9 = getiter(value=$160call.8)  :: range_iter_int64
+        #   del $160call.8
+        #   $phi172.1 = $170get_iter.9  :: range_iter_int64
+        #   del $170get_iter.9
+        #   jump 172
+        # label 172
+        #   $172for_iter.2 = iternext(value=$phi172.1)  :: pair<int64, bool>
+        #   $172for_iter.3 = pair_first(value=$172for_iter.2)  :: int64
+        #   $172for_iter.4 = pair_second(value=$172for_iter.2)  :: bool
+        #   del $172for_iter.2
+        #   $phi174.2 = $172for_iter.3  :: int64
+        #   del $172for_iter.3
+        #   branch $172for_iter.4, 174, 1473
+        # label 174
+        #   del $172for_iter.4
+        #   col = $phi174.2  :: int64
+        #   del $phi174.2
+        # label 1473
+        #   del row
+        #   del $phi174.2
+        #   del $phi172.1
+        #   del $172for_iter.4
+        #   jump 130
+
+        for col in range(1,cols-1):
+
+            # --- LINE 42 --- 
+            #   $176load_global.3 = global(_wall_pixel: CPUDispatcher(<function _wall_pixel at 0x11ce12b60>))  :: type(CPUDispatcher(<function _wall_pixel at 0x11ce12b60>))
+            #   del $176load_global.3
+            #   $216build_tuple.13 = build_tuple(items=[Var(row, walls_compiled.py:40), Var(col, walls_compiled.py:41)])  :: UniTuple(int64 x 2)
+            #   del col
+            #   output[$216build_tuple.13] = $200call.9  :: (Array(float64, 2, 'C', False, aligned=True), UniTuple(int64, 2), float64) -> none
+            #   del $216build_tuple.13
+            #   del $200call.9
+            #   jump 172
+
+            output[row,col]=_wall_pixel(dsm,row,col,walllimit)
+
+    # --- LINE 43 --- 
+    # label 1474
+    #   del walllimit
+    #   del dsm
+    #   del cols
+    #   del $phi132.1
+    #   del $phi130.0
+    #   del $130for_iter.3
+    #   $228return_value.1 = cast(value=output)  :: array(float64, 2d, C)
+    #   del output
+    #   return $228return_value.1
+
+    return output
+
+
+================================================================================

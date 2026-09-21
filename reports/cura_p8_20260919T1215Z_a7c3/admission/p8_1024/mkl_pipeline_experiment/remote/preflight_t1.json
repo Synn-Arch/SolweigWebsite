@@ -1,0 +1,42 @@
+{
+  "asvf": {
+    "all_bits": 0,
+    "finite_bits": 0,
+    "nan_masks_equal": true
+  },
+  "compiled_prepared": {
+    "shade": {
+      "cells": 9,
+      "inputs": 9
+    },
+    "sun": {
+      "cells": 15,
+      "inputs": 15
+    }
+  },
+  "profile": {
+    "helper_sha256": "86fe31746b3f9885c38e52982a81cd3f9766ec8ae127ed17ffdca869e3b663b5",
+    "library_sha256": "0f3c805b85c36f3aaf6792930b054d80a945af032f0a97c4926d7ad94a7d61d9",
+    "mode_hex": "0x00140102",
+    "profile": "cura-mkl-vml-2024.2-ha-ftzdazoff-v1",
+    "version": "Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications"
+  },
+  "serial": {
+    "shade": {
+      "cells": 9,
+      "inputs": 9
+    },
+    "sun": {
+      "cells": 15,
+      "inputs": 15
+    }
+  },
+  "serial_compiled_equal": true,
+  "thread_env": {
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "torch_maps": false,
+  "torch_spec": "None"
+}

@@ -1,0 +1,234 @@
+{
+  "backend": "original",
+  "package": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py",
+  "events": [
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 0,
+      "path": "0000_0_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 1,
+      "path": "0001_1_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 2,
+      "path": "0002_2_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 3,
+      "path": "0003_3_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 4,
+      "path": "0004_4_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 5,
+      "path": "0005_5_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 6,
+      "path": "0006_6_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 7,
+      "path": "0007_7_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 8,
+      "path": "0008_8_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "shadowingfunction_wallheight_23",
+      "boundary": "input",
+      "step": 8,
+      "path": "0009_8_shadowingfunction_wallheight_23_input.npz"
+    },
+    {
+      "name": "shadowingfunction_wallheight_23",
+      "boundary": "output",
+      "step": 8,
+      "path": "0010_8_shadowingfunction_wallheight_23_output.npz"
+    },
+    {
+      "name": "shadowingfunction_wallheight_23",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0011_8_shadowingfunction_wallheight_23_locals.npz"
+    },
+    {
+      "name": "gvf_2018a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0012_8_gvf_2018a_input.npz"
+    },
+    {
+      "name": "gvf_2018a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0013_8_gvf_2018a_output.npz"
+    },
+    {
+      "name": "gvf_2018a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0014_8_gvf_2018a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0015_8_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0016_8_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0017_8_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0018_8_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0019_8_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0020_8_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0021_8_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0022_8_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0023_8_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0024_8_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0025_8_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0026_8_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0027_8_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0028_8_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0029_8_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0030_8_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0031_8_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0032_8_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "Kup_veg_2015a",
+      "boundary": "input",
+      "step": 8,
+      "path": "0033_8_Kup_veg_2015a_input.npz"
+    },
+    {
+      "name": "Kup_veg_2015a",
+      "boundary": "output",
+      "step": 8,
+      "path": "0034_8_Kup_veg_2015a_output.npz"
+    },
+    {
+      "name": "Kup_veg_2015a",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0035_8_Kup_veg_2015a_locals.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "output",
+      "step": 8,
+      "path": "0036_8_Solweig_2022a_calc_output.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "locals",
+      "step": 8,
+      "path": "0037_8_Solweig_2022a_calc_locals.npz"
+    }
+  ]
+}

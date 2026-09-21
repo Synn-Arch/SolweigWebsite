@@ -1,0 +1,193 @@
+{
+  "cells": [
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 20.963945667026564,
+      "bootstrap95": [
+        1.5934428894838482,
+        1.6489733359663399
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 12.886704083066434,
+      "candidate_peak_MiB": 537.359375,
+      "cell": 0,
+      "fixture": "repeated_block_256",
+      "median_candidate_over_baseline": 0.6147079508670673,
+      "paired_median_ratio": 1.6267887841526445,
+      "regime": "geometry_warm",
+      "rss_guard_passed": true,
+      "threads": 4
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 20.782845166046172,
+      "bootstrap95": [
+        1.104937443923761,
+        1.143428036790088
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 18.620446084067225,
+      "candidate_peak_MiB": 539.53125,
+      "cell": 1,
+      "fixture": "repeated_block_256",
+      "median_candidate_over_baseline": 0.895466989451296,
+      "paired_median_ratio": 1.1167357499272612,
+      "regime": "geometry_warm",
+      "rss_guard_passed": true,
+      "threads": 1
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 5.102103500044905,
+      "bootstrap95": [
+        1.2018878010527168,
+        1.28116225355309
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 4.087282291962765,
+      "candidate_peak_MiB": 417.5,
+      "cell": 2,
+      "fixture": "small_original_cpu",
+      "median_candidate_over_baseline": 0.8020219676628089,
+      "paired_median_ratio": 1.2468486404607142,
+      "regime": "geometry_warm",
+      "rss_guard_passed": true,
+      "threads": 4
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 20.955439667101018,
+      "bootstrap95": [
+        1.5757781065158365,
+        1.6399016485237492
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 13.070152916945517,
+      "candidate_peak_MiB": 527.171875,
+      "cell": 3,
+      "fixture": "dense_urban_256",
+      "median_candidate_over_baseline": 0.6237117008556493,
+      "paired_median_ratio": 1.6033048580427998,
+      "regime": "geometry_warm",
+      "rss_guard_passed": true,
+      "threads": 4
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 21.427347708959132,
+      "bootstrap95": [
+        1.5293429096618116,
+        1.6551555104858977
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 13.290683040977456,
+      "candidate_peak_MiB": 503.75,
+      "cell": 4,
+      "fixture": "vegetation_rich_256",
+      "median_candidate_over_baseline": 0.6190608654504046,
+      "paired_median_ratio": 1.6153500500672722,
+      "regime": "geometry_warm",
+      "rss_guard_passed": true,
+      "threads": 4
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 28.71429012506269,
+      "bootstrap95": [
+        1.3717839172932886,
+        1.4120745669236565
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 20.736637874972075,
+      "candidate_peak_MiB": 487.25,
+      "cell": 5,
+      "fixture": "repeated_block_256",
+      "median_candidate_over_baseline": 0.7188596512067522,
+      "paired_median_ratio": 1.3910921253144428,
+      "regime": "geometry_cold",
+      "rss_guard_passed": true,
+      "threads": 4
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 12.33592625008896,
+      "bootstrap95": [
+        0.9634529533277464,
+        1.0159985936421734
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 12.430073417024687,
+      "candidate_peak_MiB": 538.03125,
+      "cell": 6,
+      "fixture": "small_original_cpu",
+      "median_candidate_over_baseline": 1.00231369412568,
+      "paired_median_ratio": 0.9976916466977952,
+      "regime": "first_use",
+      "rss_guard_passed": true,
+      "threads": 1
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 36.76613508304581,
+      "bootstrap95": [
+        1.1986694352424356,
+        1.2202853457390492
+      ],
+      "candidate_block": 1024,
+      "candidate_median_seconds": 30.340557749965228,
+      "candidate_peak_MiB": 576.546875,
+      "cell": 7,
+      "fixture": "repeated_block_256",
+      "median_candidate_over_baseline": 0.8240451709568059,
+      "paired_median_ratio": 1.2135257085954299,
+      "regime": "first_use",
+      "rss_guard_passed": true,
+      "threads": 4
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 20.95047379191965,
+      "bootstrap95": [
+        1.05890378091462,
+        1.106067234951374
+      ],
+      "candidate_block": 128,
+      "candidate_median_seconds": 19.414797208970413,
+      "candidate_peak_MiB": 485.359375,
+      "cell": 8,
+      "fixture": "repeated_block_256",
+      "median_candidate_over_baseline": 0.9369493577103203,
+      "paired_median_ratio": 1.0672935434245459,
+      "regime": "geometry_warm",
+      "rss_guard_passed": true,
+      "threads": 1
+    },
+    {
+      "all_numeric_criteria_passed": true,
+      "baseline_median_seconds": 12.722640542080626,
+      "bootstrap95": [
+        0.9793867730069774,
+        1.0374151191313243
+      ],
+      "candidate_block": 128,
+      "candidate_median_seconds": 12.405401417054236,
+      "candidate_peak_MiB": 529.859375,
+      "cell": 9,
+      "fixture": "small_original_cpu",
+      "median_candidate_over_baseline": 0.9687275740627022,
+      "paired_median_ratio": 1.0322819611773266,
+      "regime": "first_use",
+      "rss_guard_passed": true,
+      "threads": 1
+    }
+  ],
+  "independent_promotion_decision_pending": true,
+  "note": "Independent stdlib reconstruction from raw paired records and all3125 ordered bootstrap resamples per cell; RSS limits use recorded byte values.",
+  "pairs_verified": 50,
+  "protocol_sha256": "67725d57eb18c49535f7c32e11cc47b04a846e14e3ffbd5406f3cf9c6f8602af",
+  "raw_evidence_hashes_verified": 152,
+  "startup_tradeoff_required": false,
+  "statistics_sha256": "fa6f9d065ff6da673d129f5d5d81a216de367c8e1f0adb7fd3a08ed82b3cbe7b",
+  "status": "all_predeclared_numeric_gates_passed",
+  "upstream_speedup_claim": false
+}

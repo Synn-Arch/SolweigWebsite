@@ -1,0 +1,21 @@
+{
+  "command": "python3 tools/experiments/p7_hierarchical_skip.py --output reports/characterization/p7_hierarchical_skip_experiment/result.json",
+  "files": {
+    "reports/characterization/p7_hierarchical_skip_experiment/report.md": "c002471b6ad2f9b472fba45fded829843e88de276200a58dcbdd68147138be81",
+    "reports/characterization/p7_hierarchical_skip_experiment/result.json": "39aa7387c83b33a104456f058a3550ee3ba3028b87ad81f2f96bc721c6c882b0",
+    "src/solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+    "tests/reference/wall_shadows_original_cpu/manifest.json": "184987e84118c96bc22423a4ac605abbb9eb30e0c5e193971e655e2b41b97492",
+    "tools/experiments/p7_hierarchical_skip.py": "a536134207fcac1cfae69e54bffbe3a276d30a6c249b2f8a187e4ae877d26434"
+  },
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "scope": {
+    "actual_shadow_kernel_bound": true,
+    "building_only": true,
+    "end_to_end_speed_claim": false,
+    "production_files_changed": false,
+    "vegetation": false,
+    "walls": false
+  },
+  "status": "complete_safe_bound_current_design_rejected"
+}

@@ -1,0 +1,9 @@
+{
+  "junit_sha256": "081453eb75c97e31009a1e6e7e6f4b609531ac55e132702340ee3db8f4632a12",
+  "kind": "installed_core_harness_expectation",
+  "reason": "Existing harness test expects AttributeError, current harness records RuntimeError for a missing entrypoint; no installed package numerical test failed. Full core rerun retains this test failure and excludes only this explicit harness case.",
+  "result": "3320 passed, 1 failed",
+  "retained": true,
+  "status": "failed",
+  "test": "tests/unit/test_p7_serial_variant_harness.py::test_child_failure_is_retained_as_job_failure"
+}

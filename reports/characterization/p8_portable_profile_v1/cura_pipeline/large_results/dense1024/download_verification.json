@@ -1,0 +1,8 @@
+{
+  "bytes": 1342504830,
+  "case": "dense1024",
+  "failures": [],
+  "records": 100,
+  "schema": "portable-profile-large-download-verification.v1",
+  "verified": true
+}

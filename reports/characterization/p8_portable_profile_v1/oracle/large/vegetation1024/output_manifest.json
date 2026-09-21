@@ -1,0 +1,2378 @@
+{
+  "bands_per_output": 24,
+  "case": "vegetation1024",
+  "environment_sha256": "cb8b831e34e345b353cace0892c281688aa7a68da45def88909c3e4b2b91f867",
+  "evidence_class": "original_upstream_CPU_SLEEF_macOS_ARM64",
+  "kwargs_sha256": "a21845231f17cf0642eac37c9f5f1e0e23830fa42a26406fdfc57920d7ffe38a",
+  "launcher_measurement_sha256": "e5881e06dfaeb36e1924144c04d849f12ea80c5a0a2034f7b4973bb4579d6e52",
+  "outcome_sha256": "e508821c328a4265af91d149cb5e0322841df353b3e15938af810c1f79117acb",
+  "output_count": 10,
+  "outputs": {
+    "scene/output_folder/0_0/Kdown_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "be678e3ee539e9660c680c45278850de876f83450e4338094a2d4720082f1c77",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/Kup_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "f067566ef4ccde55ed09894184a03e57ab61f866d486860fc0b6cc1ff0d0de23",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/Ldown_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "72c00ac8c6604f45b36699959744c77019011afcbc585e2828b01438adcd81bc",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/Lup_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "8045acf7530554fd9a9690a5efe0e652e809c411ba795adf67e06b2857ff4a5b",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/Shadow_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "88640f99c86ae82fcf3be2f2677ff4d04e8c7e5a4112f8ae13b583d1f640e526",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/TMRT_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "b6f2871b7da11b3ddfdd929d1377441c78b684210a90902463c7bb77c0bc336a",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/Ta_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "4823107694d5a3cd1264696c0247c87a135ede2710959fa13fdf4dff92b70a1e",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/UTCI_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "a37e63d60564e6452222da61eabeed1f4cc1702184b329f0d4a165fc4cf5c77b",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/WBGT_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "cdbb8498feba519f9f4873611af8717693f92a2fd74d04b3185691509a78514a",
+      "width": 1024
+    },
+    "scene/output_folder/0_0/Wind_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 2,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 3,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 4,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 5,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 6,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 7,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 8,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 9,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 10,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 11,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 12,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 13,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 14,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 15,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 16,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 17,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 18,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 19,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 20,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 21,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 22,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 23,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nodata": null
+        },
+        {
+          "band": 24,
+          "datatype": "Float32",
+          "description": "",
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nodata": null
+        }
+      ],
+      "bytes": 100682150,
+      "dataset_metadata": {
+        "AREA_OR_POINT": "Area"
+      },
+      "geotransform": [
+        582505.5,
+        1.0,
+        0.0,
+        4507496.0,
+        0.0,
+        -1.0
+      ],
+      "height": 1024,
+      "projection": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "sha256": "34090f0f68baa18a9868eb3e9e6e0f88d1d1f6ac526a4047638bf20178a08b5a",
+      "width": 1024
+    }
+  },
+  "peak_process_tree_rss_bytes": 2923479040,
+  "performance_claim": "none",
+  "rss_cap_bytes": 12884901888,
+  "schema": "portable-profile-original-sleef-large-output.v1",
+  "status": "verified",
+  "workflow_seconds": 1313.216869792086
+}

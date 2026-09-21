@@ -1,0 +1,48 @@
+{
+  "abort_reason": null,
+  "cleanup": {
+    "errors": [],
+    "group_signal": "group_absent",
+    "launcher_exited_with_live_group": false,
+    "launcher_wait": "already_exited_reaped",
+    "ownership": {
+      "basis": "popen_start_new_session_contract",
+      "expected_process_group": 14445,
+      "expected_session": 14445,
+      "launcher_pid": 14445,
+      "live_verified": true,
+      "observed_process_group": 14445,
+      "observed_session": 14445,
+      "start_new_session": true,
+      "verified": true
+    },
+    "passed": true,
+    "post_cleanup_group_exists": false,
+    "post_cleanup_owned_pids": [],
+    "pre_cleanup_group_exists": false,
+    "pre_cleanup_owned_pids": [],
+    "timeout_seconds": 5.0
+  },
+  "cleanup_elapsed_seconds": 0.0008555829990655184,
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/tools/run_exact_cpu_pairs.py",
+    "--child",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/promotion_run_v1/cell-008/baseline/r01.spec.json"
+  ],
+  "disk_reserve_bytes": 10737418240,
+  "elapsed_seconds": 21.46930875000544,
+  "maximum_trial_seconds": 3600,
+  "memory_limit_aborted": false,
+  "memory_limit_bytes": 12884901888,
+  "monitor_error": null,
+  "monitoring_passed": true,
+  "returncode": 0,
+  "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+  "rss_valid": true,
+  "sample_interval_seconds": 0.02,
+  "sampled_process_tree_peak_rss_bytes": 488931328,
+  "samples": 715,
+  "supervisor_elapsed_seconds": 21.470971083967015,
+  "timing_scope": "Launch through first observed launcher exit; cleanup and evidence sync excluded. Poll interval is 20 ms."
+}

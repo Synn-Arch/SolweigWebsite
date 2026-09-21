@@ -1,0 +1,23 @@
+{
+  "state": "implemented_and_correctness_tested_not_promoted",
+  "source_sha256": {
+    "src/solweig_light/geometry/visibility_compiled.py": "f58959263175330162c5e9085be393d87ccb6320bead6d19d0a9d1445a03967a",
+    "src/solweig_light/geometry/visibility_native.py": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+    "src/solweig_light/radiation/patch_radiation.py": "c83cd169ac15fa7af4d81e8a5a2b305f1bbc6e24731d5bfd069321488230ecec",
+    "tests/unit/test_visibility_blocks.py": "0cbdadb47fbbc77b131e1077eee75adfa7d9cbda9c87aa09dd5db35fca1963e3"
+  },
+  "commands": [
+    "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/unit/test_visibility_blocks.py tests/unit/test_visibility.py tests/unit/test_visibility_native.py tests/differential/test_patch_radiation.py",
+    "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/unit/test_visibility_blocks.py",
+    "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_pipeline_reference.py",
+    "PYTHONPATH=src .venv-light/bin/python tools/profile_p7_patch.py --output reports/characterization/p7_native_decode_profile"
+  ],
+  "results": {
+    "combined": 699,
+    "blocks_final": 10,
+    "chronological": 9
+  },
+  "scope": "combined run contained8 block tests before two extra error/empty tests; final10 block run includes those. Only reserved-code handling changed after combined process imported module. No arithmetic/classification changes.",
+  "memory": "O(patches) borrowed readonly payload-view descriptors, modearray=patches bytes; zero encoded payload copies. Output4*block_pixels*patches bytes; lazy diffusion allocates two such blocks and reuses shadow output. Python/Numba descriptor object overhead separate and pending measured quiet window. No global cache, descriptor lifetime bound to owner, cleared at mapped close.",
+  "performance": "timed baseline run interrupted at root request, no benchmark results recorded; candidate cProfile attribution only under concurrent activity. Full P4+paired workload gate pending."
+}

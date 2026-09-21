@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/tools/run_p7_serial_variant.py",
+    "--child",
+    "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_persistent_jit_serial_variant/pairs_v1/pairs/small/geometry_and_compatible_jit_warm/n4/r1/candidate/measurement_process.spec.json"
+  ],
+  "elapsed_seconds": 4.649415583000518,
+  "memory_limit_aborted": false,
+  "memory_limit_bytes": 12884901888,
+  "returncode": 0,
+  "rss_caveat": "Summed process-tree RSS can double-count shared pages and 20 ms sampling can miss shorter peaks.",
+  "sample_interval_seconds": 0.02,
+  "sampled_process_tree_peak_rss_bytes": 424312832
+}

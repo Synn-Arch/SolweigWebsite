@@ -1,0 +1,12 @@
+{
+  "cleanup_evidence": "reports/characterization/p8_portable_profile_v1/linux_tan_fallback/remote_cleanup.log",
+  "cleanup_evidence_sha256": "14cc424792c8ad168c4e3a7f96c4dd15092f2bd83d603cef7b2fdb268df1af35",
+  "cleanup_pending": false,
+  "host": "cura",
+  "mode": "0700",
+  "owned_root": "/home/ssynn3/workspace/solweig-light-portable-v1-tanfallback-20260920T120000Z-curaexec",
+  "preexisting": false,
+  "retained": [],
+  "schema": "solweig-light.remote-cleanup-ledger.v1",
+  "status": "deleted_verified_absent"
+}

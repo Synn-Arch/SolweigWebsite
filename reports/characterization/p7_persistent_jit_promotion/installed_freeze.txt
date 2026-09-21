@@ -1,0 +1,13 @@
+cffi==2.1.1
+flatbuffers==25.12.19
+gdal==3.13.3
+h3==4.5.0
+llvmlite==0.49.0
+numba==0.67.0
+numpy==2.4.6
+pycparser==3.0
+pytz==2026.3.post1
+scipy==1.17.1
+solweig-light @ file:///Users/alansynn/Workspace/solweig-light/reports/characterization/p7_persistent_jit_promotion/wheel/solweig_light-0.1.0.dev0-py3-none-any.whl
+timezonefinder==9.0.0
+timezonefinder-data==3.2026.3.post1

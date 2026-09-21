@@ -1,0 +1,224 @@
+{
+  "actual_call_semantics": "153 original upstream scalar patch calls per timestep; float32 tensor patch scalars with float64 0-d solar tensors",
+  "command": [
+    "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "/Users/alansynn/Workspace/solweig-light/tools/capture_portable_profile_oracle.py",
+    "capture-classifier"
+  ],
+  "environment": {
+    "cuda": "not available",
+    "evidence_class": "original_upstream_CPU_SLEEF_macOS_ARM64",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "machine": "arm64",
+    "numpy": "2.4.6",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "solweig_package": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/__init__.py",
+    "solweig_source_sha256": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+    "torch": "2.14.0",
+    "torch_git": "08187d9e0fba026dc8217405802ab5381dc88d90",
+    "torch_interop_threads": 1,
+    "torch_threads": 1,
+    "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec"
+  },
+  "input_corpus_sha256": "4ef361c3487f2791d938b33c8e860daadeda9483ed4b51a07045528e50613d45",
+  "input_manifest_sha256": "418fcc7f526f8c79f2758c154859308afaf15a27e52d87bc2dbfcc0f784bd3d9",
+  "mask_storage": "numpy packbits little bitorder; shape [153, ceil(input_count/8)]",
+  "schema": "portable-profile-original-sleef-classifier.v1",
+  "status": "captured",
+  "timesteps": [
+    {
+      "altitude": -24.748963774106585,
+      "azimuth": 336.23211880734254,
+      "path": "classifier_timestep_00.npz",
+      "sha256": "736c85edc91a950362c8992621621add125169a2e8ca888cca9e9468525a3dea",
+      "source": "00000_Solweig_2022a_calc_input.npz",
+      "timestep": 0
+    },
+    {
+      "altitude": -27.924543400262863,
+      "azimuth": 351.45603091488465,
+      "path": "classifier_timestep_01.npz",
+      "sha256": "64d1d2e0d73c5a6903d98947b0223eedf0503c7217bb97bd6e18f0d2547d706e",
+      "source": "00004_Solweig_2022a_calc_input.npz",
+      "timestep": 1
+    },
+    {
+      "altitude": -28.053708502668115,
+      "azimuth": 7.320060425946394,
+      "path": "classifier_timestep_02.npz",
+      "sha256": "e85d9ff8c64e519d0e87f7ddc45b860f3c4ed76b9b6195700d27e62a17260a55",
+      "source": "00008_Solweig_2022a_calc_input.npz",
+      "timestep": 2
+    },
+    {
+      "altitude": -25.11766983325515,
+      "azimuth": 22.638463323605123,
+      "path": "classifier_timestep_03.npz",
+      "sha256": "c9b0f8835fa4642af0ae00644ea0dbc10c9546b58354b7a99381d98a531c2fd0",
+      "source": "00012_Solweig_2022a_calc_input.npz",
+      "timestep": 3
+    },
+    {
+      "altitude": -19.512717117392853,
+      "azimuth": 36.51581134630936,
+      "path": "classifier_timestep_04.npz",
+      "sha256": "fa9aa190ccbc1e522857950767e493843d71fb3c3d7f1f68f395b6d84959a1ea",
+      "source": "00016_Solweig_2022a_calc_input.npz",
+      "timestep": 4
+    },
+    {
+      "altitude": -11.843156754407573,
+      "azimuth": 48.679594435709134,
+      "path": "classifier_timestep_05.npz",
+      "sha256": "1f5315436d3f76a1b638e0a6080dbf44e9c3918ae4f3b2e04dcd08776db4cb07",
+      "source": "00020_Solweig_2022a_calc_input.npz",
+      "timestep": 5
+    },
+    {
+      "altitude": -1.924409945045312,
+      "azimuth": 59.34213923651649,
+      "path": "classifier_timestep_06.npz",
+      "sha256": "a71889b54f4b21d17235b3d73be6433eccbbb3b0ef2fa606260394d52c3a3393",
+      "source": "00024_Solweig_2022a_calc_input.npz",
+      "timestep": 6
+    },
+    {
+      "altitude": 7.756683441218144,
+      "azimuth": 68.94276461240031,
+      "path": "classifier_timestep_07.npz",
+      "sha256": "8bd5b6136a9687a2ae33f9ef22b09c78e61410a3c3437f1e37b4cd205d1fc33c",
+      "source": "00028_Solweig_2022a_calc_input.npz",
+      "timestep": 7
+    },
+    {
+      "altitude": 18.577189259958573,
+      "azimuth": 78.01056746873063,
+      "path": "classifier_timestep_08.npz",
+      "sha256": "499ac23850e59702646db29f1dc92fec4000ddbfe2b27ee880df64d2e99ee295",
+      "source": "00041_Solweig_2022a_calc_input.npz",
+      "timestep": 8
+    },
+    {
+      "altitude": 29.814725848313387,
+      "azimuth": 87.17337830150196,
+      "path": "classifier_timestep_09.npz",
+      "sha256": "c4b70cabe86aaad5b037df8477e1f4c0b4b48491112d497324823574f1be60c4",
+      "source": "00054_Solweig_2022a_calc_input.npz",
+      "timestep": 9
+    },
+    {
+      "altitude": 41.14788179997428,
+      "azimuth": 97.31362190323708,
+      "path": "classifier_timestep_10.npz",
+      "sha256": "3c0cfcaa28955d96b650a296f9ebbe3ee13f4f807045343ec732bd1042312294",
+      "source": "00067_Solweig_2022a_calc_input.npz",
+      "timestep": 10
+    },
+    {
+      "altitude": 52.17799158307819,
+      "azimuth": 109.98561946731307,
+      "path": "classifier_timestep_11.npz",
+      "sha256": "3b66afd375bf42750fa22803387ea453e86c827fa9b2fe2ccb8293cc7a1e487e",
+      "source": "00080_Solweig_2022a_calc_input.npz",
+      "timestep": 11
+    },
+    {
+      "altitude": 62.11689886114797,
+      "azimuth": 128.4242601044399,
+      "path": "classifier_timestep_12.npz",
+      "sha256": "eb128bf9c360fe2da91f72125c7b78b59f9789382d580ff1ce6a60def524f79a",
+      "source": "00093_Solweig_2022a_calc_input.npz",
+      "timestep": 12
+    },
+    {
+      "altitude": 68.99138909689283,
+      "azimuth": 158.48177494859263,
+      "path": "classifier_timestep_13.npz",
+      "sha256": "9011420a628ee09a7f41fade88549c52e9f4ebd16ee976fa3334b848ada84a01",
+      "source": "00106_Solweig_2022a_calc_input.npz",
+      "timestep": 13
+    },
+    {
+      "altitude": 69.2912892727005,
+      "azimuth": 198.52868197395114,
+      "path": "classifier_timestep_14.npz",
+      "sha256": "4566a21afe5bf6ef3c537a3c3633cabc31db5ccec5f42de4fe317d6589021483",
+      "source": "00119_Solweig_2022a_calc_input.npz",
+      "timestep": 14
+    },
+    {
+      "altitude": 62.792588172083704,
+      "azimuth": 229.6822789696189,
+      "path": "classifier_timestep_15.npz",
+      "sha256": "cb40e118ee7e4c9929cc2a24bfd32d16b3624c8206ed0d0475e111ce47668282",
+      "source": "00132_Solweig_2022a_calc_input.npz",
+      "timestep": 15
+    },
+    {
+      "altitude": 52.9928170535826,
+      "azimuth": 248.78275219132996,
+      "path": "classifier_timestep_16.npz",
+      "sha256": "d79ab90d2ecbaa321523426d80ce5181b3cfc71a2c7a12ab7342d5eff4708a2e",
+      "source": "00145_Solweig_2022a_calc_input.npz",
+      "timestep": 16
+    },
+    {
+      "altitude": 42.004709613797125,
+      "azimuth": 261.74996112510786,
+      "path": "classifier_timestep_17.npz",
+      "sha256": "996fe9a72746a5ba99df7fb97a619df603843af289384faaa2da66c403df722f",
+      "source": "00158_Solweig_2022a_calc_input.npz",
+      "timestep": 17
+    },
+    {
+      "altitude": 30.6702115156897,
+      "azimuth": 272.0130087114138,
+      "path": "classifier_timestep_18.npz",
+      "sha256": "42f2f2daaff81eb11e64ca5796e9b31c265c4ff9caca5047af2e7f2b098fbb2f",
+      "source": "00171_Solweig_2022a_calc_input.npz",
+      "timestep": 18
+    },
+    {
+      "altitude": 19.403277244053243,
+      "azimuth": 281.20965061904633,
+      "path": "classifier_timestep_19.npz",
+      "sha256": "a5774af0e3d451c31ee1fa9c25af45192ad5b2aed3d88a1c44b5cbc3f2b1ebce",
+      "source": "00184_Solweig_2022a_calc_input.npz",
+      "timestep": 19
+    },
+    {
+      "altitude": 8.522863496699557,
+      "azimuth": 290.2547579628107,
+      "path": "classifier_timestep_20.npz",
+      "sha256": "02909052b3f9cc0d03cc97b0a2654019e24855a9fff1f7451dc416472141c8de",
+      "source": "00197_Solweig_2022a_calc_input.npz",
+      "timestep": 20
+    },
+    {
+      "altitude": -1.1397083539692687,
+      "azimuth": 299.788990054931,
+      "path": "classifier_timestep_21.npz",
+      "sha256": "700143fa70462257964e9bd9cb213ecf0d4c3881831f540ff2330763a6895714",
+      "source": "00210_Solweig_2022a_calc_input.npz",
+      "timestep": 21
+    },
+    {
+      "altitude": -11.268436512849078,
+      "azimuth": 310.34908818443836,
+      "path": "classifier_timestep_22.npz",
+      "sha256": "faac81b195a09b89874581ccb0bb6e79e8f3c8b4adc8873a99e9f68f3f57874f",
+      "source": "00214_Solweig_2022a_calc_input.npz",
+      "timestep": 22
+    },
+    {
+      "altitude": -19.098394282693704,
+      "azimuth": 322.3881062440244,
+      "path": "classifier_timestep_23.npz",
+      "sha256": "5a6a1b26363bcd21ddd8a91b32f0f0ed61c7a55834e567558a9e10b8c7cac054",
+      "source": "00218_Solweig_2022a_calc_input.npz",
+      "timestep": 23
+    }
+  ],
+  "tool_sha256": "66f2b3770531debbf20d429c7ebb75102b455d3b9318c62a9cc4575792dfa01c"
+}

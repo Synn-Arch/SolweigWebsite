@@ -1,0 +1,250 @@
+{
+  "acceptance": {
+    "holdout": "Dense1024 and vegetation1024 original SLEEF fixtures remain correctness holdouts and require final candidate requalification. Full original/tuned CPU release benchmark matrix stays P7/P8 pending.",
+    "memory": "12GiB process-tree RSS cap at20ms; shared-page and between-sample caveats;10GiB diskreserve.",
+    "numerical": "Exact finite bits including signed zero, special masks, all artifacts and carried state; frozen original-reference gates unchanged. No fastmath, physics reduction, or chronological parallelism.",
+    "promotion": "Separate protocol frozen before evaluation: exactly five pairs per cell; full method bound below. Candidate median sampled peak RSS <=1.10*baseline median+64MiB in every cell, plus unchanged12GiB absolute cap. All benefit/regression, default/selected startup, exactness and final-source large admission gates required. Independent final review; no automatic promotion.",
+    "retention": "Last output histories retained for each cell/side; before replacing earlier successful histories, atomically persist and fsync exact comparisons, state/geometry/output hashes, raw metrics and failures. Never remove historical evidence or original goldens.",
+    "scope": "Same-host candidate promotion. All10cells mustpass; no pooling, early stopping or automatic promotion. Final installed-wheel, per-step, original-reference and dense/vegetation1024 exact admissions remain mandatory.",
+    "uncertainty": "Report every raw pair, paired ratios, range and bootstrap interval with five-pair limitation; no stopping when a favorable result appears."
+  },
+  "baseline_commit": "8ca23d444a3b05bdeb76655329c0a09c3dc4d6e8",
+  "bindings": {
+    "harness": "b7f52b0c897e16b0a4071af06c3fa549537e95cc201d94f57eafb04f00c0a80d",
+    "helpers": "d688ae60fbd82e13ecf58b2598f13ba3aa66201ddf56ed1857ffd9c7c12720d5"
+  },
+  "cells": [
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 5,
+      "role": "primary",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 1024,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 5,
+      "role": "single_thread_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "fixture": "small_original_cpu",
+      "regime": "geometry_warm",
+      "repetitions": 5,
+      "role": "small_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "fixture": "dense_urban_256",
+      "regime": "geometry_warm",
+      "repetitions": 5,
+      "role": "dense_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "fixture": "vegetation_rich_256",
+      "regime": "geometry_warm",
+      "repetitions": 5,
+      "role": "vegetation_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_cold",
+      "repetitions": 5,
+      "role": "geometry_cold_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 1024,
+      "fixture": "small_original_cpu",
+      "regime": "first_use",
+      "repetitions": 5,
+      "role": "single_thread_startup_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "fixture": "repeated_block_256",
+      "regime": "first_use",
+      "repetitions": 5,
+      "role": "selected_startup_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 5,
+      "role": "default_warm_guard",
+      "variant": "combined_v1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "fixture": "small_original_cpu",
+      "regime": "first_use",
+      "repetitions": 5,
+      "role": "default_startup_guard",
+      "variant": "combined_v1"
+    }
+  ],
+  "criteria": {
+    "absolute_rss_limit_bytes": 12884901888,
+    "bootstrap": "All3125 ordered resamples of5 paired log ratios, exp(mean), quantiles linear at (N-1)*p, p=.025/.975; no random resampling.",
+    "first_use_median_candidate_over_baseline_maximum": 1.1,
+    "first_use_tradeoff_above": 1.03,
+    "pairs_per_cell": 5,
+    "primary_bootstrap95_lower_minimum_exclusive": 1.0,
+    "primary_gain_required_for_startup_tradeoff": 1.15,
+    "primary_median_baseline_over_candidate_minimum": 1.05,
+    "rss_median_candidate_allowance_bytes": 67108864,
+    "rss_median_candidate_maximum_factor": 1.1,
+    "warm_and_geometry_cold_median_candidate_over_baseline_maximum": 1.03
+  },
+  "fixtures": {
+    "dense_urban_256": {
+      "expected_tiles": [
+        "0_0"
+      ],
+      "files": {
+        "Building_DSM.tif": "687655ed2122002eebc16214fa506537a433aec5ca12ef198572c8dc0bee430f",
+        "DEM.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+        "Trees.tif": "30f9e56852cc59aa196df9ce281666612a63608ee14cef76ee698227128ccdfa",
+        "manifest.json": "5dad8a5942742c472920822bc03720b645e02d5fd00c423e834fcfd5b07de646",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "tests/fixtures/generated/p7/dense_urban_256/kwargs.json",
+      "kwargs_sha256": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+      "scene": "tests/fixtures/generated/p7/dense_urban_256",
+      "shape": [
+        256,
+        256
+      ]
+    },
+    "repeated_block_256": {
+      "expected_tiles": [
+        "0_0"
+      ],
+      "files": {
+        "Building_DSM.tif": "04bbdad13f193fed032267a073494043208cb3065d51d606c5406d5d8e63ad46",
+        "DEM.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+        "Trees.tif": "c2be750fa8c2c263a968a097afc225e792015bf9dc86b9f828b76a746447a3bd",
+        "manifest.json": "71c5b8eb6aa15b981cea1a0b488d0faad556498374e484c360d8a4d094f173b3",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene/kwargs.json",
+      "kwargs_sha256": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+      "scene": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene",
+      "shape": [
+        256,
+        256
+      ]
+    },
+    "small_original_cpu": {
+      "expected_tiles": [
+        "0_0"
+      ],
+      "files": {
+        "Building_DSM.tif": "e13aefb56d224680fd0a04fbf1886faf840d73db032aa4bbe2bbc651c4d8f80a",
+        "DEM.tif": "a550dd0b6519621fff999eb6cc7bce224c27a3c5cc17d73660c41b52767a7105",
+        "Trees.tif": "aacbcf3ffe3296c1ad4528138555b19d59358210a4c2b5b1c636074975fc8bdc",
+        "manifest.json": "fe013dcdfebb28db2e45141afe86a1ac3b1c19b2987a82befaa9e6628c4fc5b6",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "tests/reference/small_original_cpu/kwargs.json",
+      "kwargs_sha256": "9b02513a0c691f462e13b6fa18bcfae871c5a64f85c1b358350730b904f3b4cf",
+      "scene": "tests/reference/small_original_cpu/scene",
+      "shape": [
+        32,
+        35
+      ]
+    },
+    "vegetation_rich_256": {
+      "expected_tiles": [
+        "0_0"
+      ],
+      "files": {
+        "Building_DSM.tif": "667879f544b9fc84975fac514492a48e84d508bd34b62dbe3abe9683a740175b",
+        "DEM.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+        "Trees.tif": "d2294d349b828fd9521826a027fb9945ad1620b32ce454496d6a5d1f34f71366",
+        "manifest.json": "2a268fa2c3ecba755f23bdab23d10b22a9a621c3fc5c67ce695cfaf4e0e457ff",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "tests/fixtures/generated/p7/vegetation_rich_256/kwargs.json",
+      "kwargs_sha256": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+      "scene": "tests/fixtures/generated/p7/vegetation_rich_256",
+      "shape": [
+        256,
+        256
+      ]
+    }
+  },
+  "patches": 153,
+  "promotion_method": {
+    "path": "reports/characterization/local_cpu_optimization_v1/promotion_method.md",
+    "sha256": "2adee23e38d79f0fbce43348c387b46d713422caf65a36c11b8624093491d7c8"
+  },
+  "purpose": "promotion",
+  "runtime": {
+    "checkpoint_interval": 1,
+    "maximum_trial_seconds": 3600
+  },
+  "schema_version": 1,
+  "seed": 20260922,
+  "selection_evidence": {
+    "eligible_ceiling_seconds": 13.002758539511124,
+    "global_minimum_candidate_median_seconds": 12.624037417001091,
+    "path": "reports/characterization/local_cpu_optimization_v1/combined_development_statistics_v1.json",
+    "rule": "Within1.03 of global minimum median; choose smallest budget then smallest block.",
+    "selected_block_pixels": 1024,
+    "selected_budget": 4,
+    "sha256": "c1670c65754d99dcf14f9246d53828f4e2e72291e1928d1b051e9cd73139cbcf"
+  },
+  "sources": {
+    "baseline": {
+      "admission": {
+        "path": "reports/characterization/local_cpu_optimization_v1/qualification/candidates/baseline/qualification.json",
+        "sha256": "60b45c8d40e9b96d2a55b740d28f2846f7e9ee505538e6024a4d806a72073e64"
+      },
+      "inventory_sha256": "03c30e8fed55c9aa15ae7e6f5f6f4a34a0709dbf7802156ccfb90be4449a4722",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/baseline/src"
+    },
+    "combined_v1": {
+      "admission": {
+        "path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/qualification.json",
+        "sha256": "5fe2499561c21ef1432b5bfeb406d9226a4f15fe8f663c632487efcda4c1fa3c"
+      },
+      "inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/combined_v1/src"
+    }
+  },
+  "status": "reviewed_frozen",
+  "timesteps": 24
+}

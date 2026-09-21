@@ -1,0 +1,4 @@
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/vegetation_rich/upstream/scene/output_folder	removed_verified_absent
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/vegetation_rich/upstream/scene/processed_inputs/SVF	removed_verified_absent
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/vegetation_rich/candidate/scene/output_folder	removed_verified_absent
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs_p8_1024/vegetation_rich/candidate/scene/processed_inputs/SVF	removed_verified_absent

@@ -1,0 +1,630 @@
+NumPy: 2.4.6 Numba: 0.67.0 configured threads: 10
+_run_serial
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), bool, Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'nopython': True, 'boundscheck': None}
+_run_parallel
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), bool, Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'nopython': True, 'boundscheck': None}
+_advance_parallel
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 1, 'C', False, aligned=True), float32, float32, float32, float32, bool, Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _advance_parallel, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/geometry/sky_compiled.py (123)  
+================================================================================
+
+
+Parallel loop listing for  Function _advance_parallel, /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/sky_compiled.py (123) 
+---------------------------------------------------------------------------------------------------|loop #ID
+@njit(cache=True,fastmath=False,parallel=True)                                                     | 
+def _advance_parallel(a,canopy,trunk,bounds,da,dv,dt,first_height,first,f,sh,vs,vb,tv):            | 
+    rows,cols=a.shape                                                                              | 
+    for pixel in prange(rows*cols):----------------------------------------------------------------| #4
+        row=pixel//cols                                                                            | 
+        col=pixel%cols                                                                             | 
+        _advance_pixel(row,col,a,canopy,trunk,bounds,da,dv,dt,first_height,first,f,sh,vs,vb,tv)    | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #4:
+  Has the following hoisted:
+    _advance_pixel_v37__maximum_v39__vbool102 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vbool1106 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vconst1130_3_2 = const(int, 1)
+    _advance_pixel_v37__vbool170 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vconst1276_24_1 = const(int, 0)
+    _advance_pixel_v37__vconst882_41_1 = const(int, 0)
+    _advance_pixel_v37__vbool890 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vconst914_3_1 = const(int, 0)
+    _advance_pixel_v37__vbool996 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__maximum_v38__vbool86 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vbool626 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vbool192 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__maximum_v39__vbool86 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vbool202 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vbool546 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__v6unpack_sequence_9 = exhaust_iter(value=bounds, count=8)
+    _advance_pixel_v37__v6unpack_sequence_1 = static_getitem(value=_advance_pixel_v37__v6unpack_sequence_9, index=0, index_var=None, fn=<built-in function getitem>)
+    _advance_pixel_v37__v6unpack_sequence_3 = static_getitem(value=_advance_pixel_v37__v6unpack_sequence_9, index=2, index_var=None, fn=<built-in function getitem>)
+    _advance_pixel_v37__v6unpack_sequence_5 = static_getitem(value=_advance_pixel_v37__v6unpack_sequence_9, index=4, index_var=None, fn=<built-in function getitem>)
+    _advance_pixel_v37__v6unpack_sequence_6 = static_getitem(value=_advance_pixel_v37__v6unpack_sequence_9, index=5, index_var=None, fn=<built-in function getitem>)
+    _advance_pixel_v37__v6unpack_sequence_7 = static_getitem(value=_advance_pixel_v37__v6unpack_sequence_9, index=6, index_var=None, fn=<built-in function getitem>)
+    _advance_pixel_v37__v6unpack_sequence_8 = static_getitem(value=_advance_pixel_v37__v6unpack_sequence_9, index=7, index_var=None, fn=<built-in function getitem>)
+    _advance_pixel_v37__vconst48_13_1 = const(int, 0)
+    _advance_pixel_v37__vconst88_18_1 = const(int, 0)
+    _advance_pixel_v37__vconst128_23_1 = const(int, 0)
+    _advance_pixel_v37__vbool160 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vconst650_3_1 = const(int, 0)
+    _advance_pixel_v37__vconst1046_8_1 = const(int, 0)
+    _advance_pixel_v37__vbool1054 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__maximum_v39__vbool42 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vconst1078_3_3 = const(int, 1000)
+    _advance_pixel_v37__maximum_v38__vbool42 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__maximum_v38__vbool102 = global(bool: <class 'bool'>)
+    _advance_pixel_v37__vconst570_3_2 = const(int, 1)
+  Failed to hoist the following:
+    dependency: _advance_pixel_v37__maximum_v39__v96compare_op_2 = _advance_pixel_v37__v482binary_subscr_16 > _advance_pixel_v37_building.2
+    dependency: _advance_pixel_v37__maximum_v39__v102pred = call $push_global_to_block.342(_advance_pixel_v37__maximum_v39__v96compare_op_2, func=$push_global_to_block.342, args=(Var(_advance_pixel_v37__maximum_v39__v96compare_op_2, sky_compiled.py:74),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1100compare_op_2 = _advance_pixel_v37_first_vegetation.2 < first__height
+    dependency: _advance_pixel_v37__v1106pred = call $push_global_to_block.343(_advance_pixel_v37__v1100compare_op_2, func=$push_global_to_block.343, args=(Var(_advance_pixel_v37__v1100compare_op_2, sky_compiled.py:110),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1120load_attr_2 = getattr(value=_advance_pixel_v37__v1108load_global_0, attr=float32)
+    dependency: _advance_pixel_v37__v1136call_4 = call _advance_pixel_v37__v1120load_attr_2(_advance_pixel_v37__vconst1130_3_2, func=_advance_pixel_v37__v1120load_attr_2, args=[Var(_advance_pixel_v37__vconst1130_3_2, sky_compiled.py:111)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1152build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v164compare_op_2 = row < _advance_pixel_v37__v6unpack_sequence_6
+    dependency: _advance_pixel_v37__v170pred = call $push_global_to_block.344(_advance_pixel_v37__v164compare_op_2, func=$push_global_to_block.344, args=(Var(_advance_pixel_v37__v164compare_op_2, sky_compiled.py:84),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1164build_tuple_3 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v1166binary_subscr_4 = getitem(value=vs, index=_advance_pixel_v37__v1164build_tuple_3, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v1188load_attr_7 = getattr(value=_advance_pixel_v37__v1176load_global_5, attr=float32)
+    dependency: _advance_pixel_v37__v1204build_tuple_11 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v1206binary_subscr_12 = getitem(value=trunk, index=_advance_pixel_v37__v1204build_tuple_11, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v1218compare_op_14 = _advance_pixel_v37__v1206binary_subscr_12 > _advance_pixel_v37_height
+    dependency: _advance_pixel_v37__v1228call_15 = call _advance_pixel_v37__v1188load_attr_7(_advance_pixel_v37__v1218compare_op_14, func=_advance_pixel_v37__v1188load_attr_7, args=[Var(_advance_pixel_v37__v1218compare_op_14, sky_compiled.py:112)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__vbinop_mul1238_16 = _advance_pixel_v37__v1166binary_subscr_4 * _advance_pixel_v37__v1228call_15
+    dependency: _advance_pixel_v37__v1248build_tuple_20 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v1266load_attr_23 = getattr(value=_advance_pixel_v37__v1254load_global_21, attr=float32)
+    dependency: _advance_pixel_v37__v1282call_25 = call _advance_pixel_v37__v1266load_attr_23(_advance_pixel_v37__vconst1276_24_1, func=_advance_pixel_v37__v1266load_attr_23, args=[Var(_advance_pixel_v37__vconst1276_24_1, sky_compiled.py:113)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1298build_tuple_29 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v836build_tuple_29 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v848build_tuple_33 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v850binary_subscr_34 = getitem(value=vs, index=_advance_pixel_v37__v848build_tuple_33, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v866build_tuple_38 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v868binary_subscr_39 = getitem(value=sh, index=_advance_pixel_v37__v866build_tuple_38, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__vbinop_mul878_40 = _advance_pixel_v37__v850binary_subscr_34 * _advance_pixel_v37__v868binary_subscr_39
+    dependency: _advance_pixel_v37__v884compare_op_42 = _advance_pixel_v37__vbinop_mul878_40 > _advance_pixel_v37__vconst882_41_1
+    dependency: _advance_pixel_v37__v890pred = call $push_global_to_block.345(_advance_pixel_v37__v884compare_op_42, func=$push_global_to_block.345, args=(Var(_advance_pixel_v37__v884compare_op_42, sky_compiled.py:103),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v904load_attr_2 = getattr(value=_advance_pixel_v37__v892load_global_0, attr=float32)
+    dependency: _advance_pixel_v37__v920call_4 = call _advance_pixel_v37__v904load_attr_2(_advance_pixel_v37__vconst914_3_1, func=_advance_pixel_v37__v904load_attr_2, args=[Var(_advance_pixel_v37__vconst914_3_1, sky_compiled.py:104)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v936build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v948build_tuple_3 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v950binary_subscr_4 = getitem(value=vb, index=_advance_pixel_v37__v948build_tuple_3, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v966build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v968binary_subscr_9 = getitem(value=vs, index=_advance_pixel_v37__v966build_tuple_8, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__vbinop_add978_10 = _advance_pixel_v37__v950binary_subscr_4 + _advance_pixel_v37__v968binary_subscr_9
+    dependency: _advance_pixel_v37__v988build_tuple_14 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    not pure: _advance_pixel_v37__v996pred = call $push_global_to_block.346(first, func=$push_global_to_block.346, args=(Var(first, sky_compiled.py:123),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v38__v60load_attr_2 = getattr(value=_advance_pixel_v37__maximum_v38__v48load_global_0, attr=isnan)
+    dependency: _advance_pixel_v37__maximum_v38__v76call_4 = call _advance_pixel_v37__maximum_v38__v60load_attr_2(_advance_pixel_v37_vegetation_shadow, func=_advance_pixel_v37__maximum_v38__v60load_attr_2, args=[Var(_advance_pixel_v37_vegetation_shadow, sky_compiled.py:101)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v38__v86pred = call $push_global_to_block.347(_advance_pixel_v37__maximum_v38__v76call_4, func=$push_global_to_block.347, args=(Var(_advance_pixel_v37__maximum_v38__v76call_4, sky_compiled.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v606build_tuple_3 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v608binary_subscr_4 = getitem(value=f, index=_advance_pixel_v37__v606build_tuple_3, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v620compare_op_6 = _advance_pixel_v37__v608binary_subscr_4 <= _advance_pixel_v37_height
+    dependency: _advance_pixel_v37__v626pred = call $push_global_to_block.348(_advance_pixel_v37__v620compare_op_6, func=$push_global_to_block.348, args=(Var(_advance_pixel_v37__v620compare_op_6, sky_compiled.py:97),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v186compare_op_2 = _advance_pixel_v37__v6unpack_sequence_7 <= col
+    dependency: _advance_pixel_v37__v192pred = call $push_global_to_block.349(_advance_pixel_v37__v186compare_op_2, func=$push_global_to_block.349, args=(Var(_advance_pixel_v37__v186compare_op_2, sky_compiled.py:84),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v39__v60load_attr_2 = getattr(value=_advance_pixel_v37__maximum_v39__v48load_global_0, attr=isnan)
+    dependency: _advance_pixel_v37__maximum_v39__v76call_4 = call _advance_pixel_v37__maximum_v39__v60load_attr_2(_advance_pixel_v37_building.2, func=_advance_pixel_v37__maximum_v39__v60load_attr_2, args=[Var(_advance_pixel_v37_building.2, sky_compiled.py:92)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v39__v86pred = call $push_global_to_block.350(_advance_pixel_v37__maximum_v39__v76call_4, func=$push_global_to_block.350, args=(Var(_advance_pixel_v37__maximum_v39__v76call_4, sky_compiled.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v196compare_op_2 = col < _advance_pixel_v37__v6unpack_sequence_8
+    dependency: _advance_pixel_v37__v202pred = call $push_global_to_block.351(_advance_pixel_v37__v196compare_op_2, func=$push_global_to_block.351, args=(Var(_advance_pixel_v37__v196compare_op_2, sky_compiled.py:84),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__vbinop_add214_2 = _advance_pixel_v37__v6unpack_sequence_1 + row
+    dependency: _advance_pixel_v37_source_row = _advance_pixel_v37__vbinop_add214_2 - _advance_pixel_v37__v6unpack_sequence_5
+    dependency: _advance_pixel_v37__vbinop_add230_7 = _advance_pixel_v37__v6unpack_sequence_3 + col
+    dependency: _advance_pixel_v37_source_col = _advance_pixel_v37__vbinop_add230_7 - _advance_pixel_v37__v6unpack_sequence_7
+    dependency: _advance_pixel_v37__v254load_attr_12 = getattr(value=_advance_pixel_v37__v242load_global_10, attr=float32)
+    dependency: _advance_pixel_v37__v270build_tuple_16 = build_tuple(items=[Var(_advance_pixel_v37_source_row, sky_compiled.py:85), Var(_advance_pixel_v37_source_col, sky_compiled.py:86)])
+    dependency: _advance_pixel_v37__v272binary_subscr_17 = getitem(value=a, index=_advance_pixel_v37__v270build_tuple_16, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__vbinop_sub284_19 = _advance_pixel_v37__v272binary_subscr_17 - da
+    dependency: _advance_pixel_v37_building.1 = call _advance_pixel_v37__v254load_attr_12(_advance_pixel_v37__vbinop_sub284_19, func=_advance_pixel_v37__v254load_attr_12, args=[Var(_advance_pixel_v37__vbinop_sub284_19, sky_compiled.py:89)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v316load_attr_23 = getattr(value=_advance_pixel_v37__v304load_global_21, attr=float32)
+    dependency: _advance_pixel_v37__v332build_tuple_27 = build_tuple(items=[Var(_advance_pixel_v37_source_row, sky_compiled.py:85), Var(_advance_pixel_v37_source_col, sky_compiled.py:86)])
+    dependency: _advance_pixel_v37__v334binary_subscr_28 = getitem(value=canopy, index=_advance_pixel_v37__v332build_tuple_27, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__vbinop_sub346_30 = _advance_pixel_v37__v334binary_subscr_28 - dv
+    dependency: _advance_pixel_v37_vegetation.1 = call _advance_pixel_v37__v316load_attr_23(_advance_pixel_v37__vbinop_sub346_30, func=_advance_pixel_v37__v316load_attr_23, args=[Var(_advance_pixel_v37__vbinop_sub346_30, sky_compiled.py:90)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v378load_attr_34 = getattr(value=_advance_pixel_v37__v366load_global_32, attr=float32)
+    dependency: _advance_pixel_v37__v394build_tuple_38 = build_tuple(items=[Var(_advance_pixel_v37_source_row, sky_compiled.py:85), Var(_advance_pixel_v37_source_col, sky_compiled.py:86)])
+    dependency: _advance_pixel_v37__v396binary_subscr_39 = getitem(value=trunk, index=_advance_pixel_v37__v394build_tuple_38, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__vbinop_sub408_41 = _advance_pixel_v37__v396binary_subscr_39 - dt
+    dependency: _advance_pixel_v37_trunk_value.1 = call _advance_pixel_v37__v378load_attr_34(_advance_pixel_v37__vbinop_sub408_41, func=_advance_pixel_v37__v378load_attr_34, args=[Var(_advance_pixel_v37__vbinop_sub408_41, sky_compiled.py:91)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v514build_tuple_22 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v526build_tuple_26 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v528binary_subscr_27 = getitem(value=f, index=_advance_pixel_v37__v526build_tuple_26, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v540compare_op_29 = _advance_pixel_v37__v528binary_subscr_27 > _advance_pixel_v37_height
+    dependency: _advance_pixel_v37__v546pred = call $push_global_to_block.352(_advance_pixel_v37__v540compare_op_29, func=$push_global_to_block.352, args=(Var(_advance_pixel_v37__v540compare_op_29, sky_compiled.py:95),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: pixel = $parfor__index_325.358
+    dependency: row = $parfor__index_325.358 // _cols_329
+    dependency: col = $parfor__index_325.358 % _cols_329
+    dependency: _advance_pixel_v37__v38load_attr_12 = getattr(value=_advance_pixel_v37__v26load_global_10, attr=float32)
+    dependency: _advance_pixel_v37_building = call _advance_pixel_v37__v38load_attr_12(_advance_pixel_v37__vconst48_13_1, func=_advance_pixel_v37__v38load_attr_12, args=[Var(_advance_pixel_v37__vconst48_13_1, sky_compiled.py:81)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v78load_attr_17 = getattr(value=_advance_pixel_v37__v66load_global_15, attr=float32)
+    dependency: _advance_pixel_v37_vegetation = call _advance_pixel_v37__v78load_attr_17(_advance_pixel_v37__vconst88_18_1, func=_advance_pixel_v37__v78load_attr_17, args=[Var(_advance_pixel_v37__vconst88_18_1, sky_compiled.py:82)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v118load_attr_22 = getattr(value=_advance_pixel_v37__v106load_global_20, attr=float32)
+    dependency: _advance_pixel_v37_trunk_value = call _advance_pixel_v37__v118load_attr_22(_advance_pixel_v37__vconst128_23_1, func=_advance_pixel_v37__v118load_attr_22, args=[Var(_advance_pixel_v37__vconst128_23_1, sky_compiled.py:83)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v154compare_op_27 = _advance_pixel_v37__v6unpack_sequence_5 <= row
+    dependency: _advance_pixel_v37__v160pred = call $push_global_to_block.353(_advance_pixel_v37__v154compare_op_27, func=$push_global_to_block.353, args=(Var(_advance_pixel_v37__v154compare_op_27, sky_compiled.py:84),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v640load_attr_2 = getattr(value=_advance_pixel_v37__v628load_global_0, attr=float32)
+    dependency: _advance_pixel_v37__v656call_4 = call _advance_pixel_v37__v640load_attr_2(_advance_pixel_v37__vconst650_3_1, func=_advance_pixel_v37__v640load_attr_2, args=[Var(_advance_pixel_v37__vconst650_3_1, sky_compiled.py:98)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v672build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v1010load_attr_2 = getattr(value=_advance_pixel_v37__v998load_global_0, attr=float32)
+    dependency: _advance_pixel_v37__vbinop_sub1024_5 = _advance_pixel_v37_vegetation.2 - _advance_pixel_v37_building.2
+    dependency: _advance_pixel_v37_first_vegetation = call _advance_pixel_v37__v1010load_attr_2(_advance_pixel_v37__vbinop_sub1024_5, func=_advance_pixel_v37__v1010load_attr_2, args=[Var(_advance_pixel_v37__vbinop_sub1024_5, sky_compiled.py:107)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1048compare_op_9 = _advance_pixel_v37_first_vegetation <= _advance_pixel_v37__vconst1046_8_1
+    dependency: _advance_pixel_v37__v1054pred = call $push_global_to_block.354(_advance_pixel_v37__v1048compare_op_9, func=$push_global_to_block.354, args=(Var(_advance_pixel_v37__v1048compare_op_9, sky_compiled.py:108),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v436build_tuple_4 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v448build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37_height = getitem(value=a, index=_advance_pixel_v37__v448build_tuple_8, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__v480build_tuple_15 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v482binary_subscr_16 = getitem(value=f, index=_advance_pixel_v37__v480build_tuple_15, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__maximum_v39__v16load_attr_2 = getattr(value=_advance_pixel_v37__maximum_v39__v4load_global_0, attr=isnan)
+    dependency: _advance_pixel_v37__maximum_v39__v32call_4 = call _advance_pixel_v37__maximum_v39__v16load_attr_2(_advance_pixel_v37__v482binary_subscr_16, func=_advance_pixel_v37__maximum_v39__v16load_attr_2, args=[Var(_advance_pixel_v37__v482binary_subscr_16, sky_compiled.py:94)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v39__v42pred = call $push_global_to_block.355(_advance_pixel_v37__maximum_v39__v32call_4, func=$push_global_to_block.355, args=(Var(_advance_pixel_v37__maximum_v39__v32call_4, sky_compiled.py:72),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v1068load_attr_2 = getattr(value=_advance_pixel_v37__v1056load_global_0, attr=float32)
+    dependency: _advance_pixel_v37_first_vegetation.1 = call _advance_pixel_v37__v1068load_attr_2(_advance_pixel_v37__vconst1078_3_3, func=_advance_pixel_v37__v1068load_attr_2, args=[Var(_advance_pixel_v37__vconst1078_3_3, sky_compiled.py:109)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37_above = _advance_pixel_v37_vegetation.2 > _advance_pixel_v37_height
+    dependency: _advance_pixel_v37_trunk_above = _advance_pixel_v37_trunk_value.2 > _advance_pixel_v37_height
+    dependency: _advance_pixel_v37__v714load_attr_8 = getattr(value=_advance_pixel_v37__v702load_global_6, attr=float32)
+    dependency: _advance_pixel_v37__v730call_10 = call _advance_pixel_v37__v714load_attr_8(_advance_pixel_v37_above, func=_advance_pixel_v37__v714load_attr_8, args=[Var(_advance_pixel_v37_above, sky_compiled.py:99)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v752load_attr_13 = getattr(value=_advance_pixel_v37__v740load_global_11, attr=float32)
+    dependency: _advance_pixel_v37__v768call_15 = call _advance_pixel_v37__v752load_attr_13(_advance_pixel_v37_trunk_above, func=_advance_pixel_v37__v752load_attr_13, args=[Var(_advance_pixel_v37_trunk_above, sky_compiled.py:100)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37_vegetation_shadow = _advance_pixel_v37__v730call_10 - _advance_pixel_v37__v768call_15
+    dependency: _advance_pixel_v37__v802build_tuple_22 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+    dependency: _advance_pixel_v37__v804binary_subscr_23 = getitem(value=vs, index=_advance_pixel_v37__v802build_tuple_22, fn=<built-in function getitem>)
+    dependency: _advance_pixel_v37__maximum_v38__v16load_attr_2 = getattr(value=_advance_pixel_v37__maximum_v38__v4load_global_0, attr=isnan)
+    dependency: _advance_pixel_v37__maximum_v38__v32call_4 = call _advance_pixel_v37__maximum_v38__v16load_attr_2(_advance_pixel_v37__v804binary_subscr_23, func=_advance_pixel_v37__maximum_v38__v16load_attr_2, args=[Var(_advance_pixel_v37__v804binary_subscr_23, sky_compiled.py:102)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v38__v42pred = call $push_global_to_block.356(_advance_pixel_v37__maximum_v38__v32call_4, func=$push_global_to_block.356, args=(Var(_advance_pixel_v37__maximum_v38__v32call_4, sky_compiled.py:72),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__maximum_v38__v96compare_op_2 = _advance_pixel_v37__v804binary_subscr_23 > _advance_pixel_v37_vegetation_shadow
+    dependency: _advance_pixel_v37__maximum_v38__v102pred = call $push_global_to_block.357(_advance_pixel_v37__maximum_v38__v96compare_op_2, func=$push_global_to_block.357, args=(Var(_advance_pixel_v37__maximum_v38__v96compare_op_2, sky_compiled.py:74),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v560load_attr_2 = getattr(value=_advance_pixel_v37__v548load_global_0, attr=float32)
+    dependency: _advance_pixel_v37__v576call_4 = call _advance_pixel_v37__v560load_attr_2(_advance_pixel_v37__vconst570_3_2, func=_advance_pixel_v37__v560load_attr_2, args=[Var(_advance_pixel_v37__vconst570_3_2, sky_compiled.py:96)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _advance_pixel_v37__v592build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:127), Var(col, sky_compiled.py:128)])
+--------------------------------------------------------------------------------
+_bush_parallel
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(int64, 1, 'C', False, aligned=True), float32, Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _bush_parallel, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/geometry/sky_compiled.py (161)  
+================================================================================
+
+
+Parallel loop listing for  Function _bush_parallel, /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/sky_compiled.py (161) 
+-------------------------------------------------------|loop #ID
+@njit(cache=True,fastmath=False,parallel=True)         | 
+def _bush_parallel(bush,bounds,delta,g,bp):            | 
+    rows,cols=bush.shape                               | 
+    for pixel in prange(rows*cols):--------------------| #5
+        row=pixel//cols                                | 
+        col=pixel%cols                                 | 
+        _bush_pixel(row,col,bush,bounds,delta,g,bp)    | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #5:
+  Has the following hoisted:
+    _bush_pixel_v42__vbool90 = global(bool: <class 'bool'>)
+    _bush_pixel_v42__vbool122 = global(bool: <class 'bool'>)
+    _bush_pixel_v42__maximum_v43__vbool42 = global(bool: <class 'bool'>)
+    _bush_pixel_v42__vbool112 = global(bool: <class 'bool'>)
+    _bush_pixel_v42__maximum_v43__vbool86 = global(bool: <class 'bool'>)
+    _bush_pixel_v42__maximum_v43__vbool102 = global(bool: <class 'bool'>)
+    _bush_pixel_v42__v6unpack_sequence_9 = exhaust_iter(value=bounds, count=8)
+    _bush_pixel_v42__v6unpack_sequence_1 = static_getitem(value=_bush_pixel_v42__v6unpack_sequence_9, index=0, index_var=None, fn=<built-in function getitem>)
+    _bush_pixel_v42__v6unpack_sequence_3 = static_getitem(value=_bush_pixel_v42__v6unpack_sequence_9, index=2, index_var=None, fn=<built-in function getitem>)
+    _bush_pixel_v42__v6unpack_sequence_5 = static_getitem(value=_bush_pixel_v42__v6unpack_sequence_9, index=4, index_var=None, fn=<built-in function getitem>)
+    _bush_pixel_v42__v6unpack_sequence_6 = static_getitem(value=_bush_pixel_v42__v6unpack_sequence_9, index=5, index_var=None, fn=<built-in function getitem>)
+    _bush_pixel_v42__v6unpack_sequence_7 = static_getitem(value=_bush_pixel_v42__v6unpack_sequence_9, index=6, index_var=None, fn=<built-in function getitem>)
+    _bush_pixel_v42__v6unpack_sequence_8 = static_getitem(value=_bush_pixel_v42__v6unpack_sequence_9, index=7, index_var=None, fn=<built-in function getitem>)
+    _bush_pixel_v42__vconst48_13_1 = const(int, 0)
+    _bush_pixel_v42__vbool80 = global(bool: <class 'bool'>)
+  Failed to hoist the following:
+    dependency: _bush_pixel_v42__v84compare_op_2 = row < _bush_pixel_v42__v6unpack_sequence_6
+    dependency: _bush_pixel_v42__v90pred = call $push_global_to_block.394(_bush_pixel_v42__v84compare_op_2, func=$push_global_to_block.394, args=(Var(_bush_pixel_v42__v84compare_op_2, sky_compiled.py:149),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__v116compare_op_2 = col < _bush_pixel_v42__v6unpack_sequence_8
+    dependency: _bush_pixel_v42__v122pred = call $push_global_to_block.395(_bush_pixel_v42__v116compare_op_2, func=$push_global_to_block.395, args=(Var(_bush_pixel_v42__v116compare_op_2, sky_compiled.py:149),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__v234build_tuple_5 = build_tuple(items=[Var(row, sky_compiled.py:165), Var(col, sky_compiled.py:166)])
+    dependency: _bush_pixel_v42__v236binary_subscr_6 = getitem(value=g, index=_bush_pixel_v42__v234build_tuple_5, fn=<built-in function getitem>)
+    dependency: _bush_pixel_v42__maximum_v43__v16load_attr_2 = getattr(value=_bush_pixel_v42__maximum_v43__v4load_global_0, attr=isnan)
+    dependency: _bush_pixel_v42__maximum_v43__v32call_4 = call _bush_pixel_v42__maximum_v43__v16load_attr_2(_bush_pixel_v42__v236binary_subscr_6, func=_bush_pixel_v42__maximum_v43__v16load_attr_2, args=[Var(_bush_pixel_v42__v236binary_subscr_6, sky_compiled.py:151)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__maximum_v43__v42pred = call $push_global_to_block.396(_bush_pixel_v42__maximum_v43__v32call_4, func=$push_global_to_block.396, args=(Var(_bush_pixel_v42__maximum_v43__v32call_4, sky_compiled.py:72),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__v142load_attr_2 = getattr(value=_bush_pixel_v42__v130load_global_0, attr=float32)
+    dependency: _bush_pixel_v42__vbinop_add158_6 = _bush_pixel_v42__v6unpack_sequence_1 + row
+    dependency: _bush_pixel_v42__vbinop_sub164_8 = _bush_pixel_v42__vbinop_add158_6 - _bush_pixel_v42__v6unpack_sequence_5
+    dependency: _bush_pixel_v42__vbinop_add172_11 = _bush_pixel_v42__v6unpack_sequence_3 + col
+    dependency: _bush_pixel_v42__vbinop_sub178_13 = _bush_pixel_v42__vbinop_add172_11 - _bush_pixel_v42__v6unpack_sequence_7
+    dependency: _bush_pixel_v42__v182build_tuple_14 = build_tuple(items=[Var(_bush_pixel_v42__vbinop_sub164_8, sky_compiled.py:150), Var(_bush_pixel_v42__vbinop_sub178_13, sky_compiled.py:150)])
+    dependency: _bush_pixel_v42__v184binary_subscr_15 = getitem(value=bush, index=_bush_pixel_v42__v182build_tuple_14, fn=<built-in function getitem>)
+    dependency: _bush_pixel_v42__vbinop_sub196_17 = _bush_pixel_v42__v184binary_subscr_15 - delta
+    dependency: _bush_pixel_v42_value.1 = call _bush_pixel_v42__v142load_attr_2(_bush_pixel_v42__vbinop_sub196_17, func=_bush_pixel_v42__v142load_attr_2, args=[Var(_bush_pixel_v42__vbinop_sub196_17, sky_compiled.py:150)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__v106compare_op_2 = _bush_pixel_v42__v6unpack_sequence_7 <= col
+    dependency: _bush_pixel_v42__v112pred = call $push_global_to_block.397(_bush_pixel_v42__v106compare_op_2, func=$push_global_to_block.397, args=(Var(_bush_pixel_v42__v106compare_op_2, sky_compiled.py:149),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__v268build_tuple_12 = build_tuple(items=[Var(row, sky_compiled.py:165), Var(col, sky_compiled.py:166)])
+    dependency: _bush_pixel_v42__v270binary_subscr_13 = getitem(value=bp, index=_bush_pixel_v42__v268build_tuple_12, fn=<built-in function getitem>)
+    dependency: _bush_pixel_v42__vbinop_mul280_14 = _bush_pixel_v42__v252call_8.4 * _bush_pixel_v42__v270binary_subscr_13
+    dependency: _bush_pixel_v42__v290build_tuple_18 = build_tuple(items=[Var(row, sky_compiled.py:165), Var(col, sky_compiled.py:166)])
+    dependency: _bush_pixel_v42__maximum_v43__v60load_attr_2 = getattr(value=_bush_pixel_v42__maximum_v43__v48load_global_0, attr=isnan)
+    dependency: _bush_pixel_v42__maximum_v43__v76call_4 = call _bush_pixel_v42__maximum_v43__v60load_attr_2(_bush_pixel_v42_value.2, func=_bush_pixel_v42__maximum_v43__v60load_attr_2, args=[Var(_bush_pixel_v42_value.2, sky_compiled.py:151)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__maximum_v43__v86pred = call $push_global_to_block.398(_bush_pixel_v42__maximum_v43__v76call_4, func=$push_global_to_block.398, args=(Var(_bush_pixel_v42__maximum_v43__v76call_4, sky_compiled.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__maximum_v43__v96compare_op_2 = _bush_pixel_v42__v236binary_subscr_6 > _bush_pixel_v42_value.2
+    dependency: _bush_pixel_v42__maximum_v43__v102pred = call $push_global_to_block.399(_bush_pixel_v42__maximum_v43__v96compare_op_2, func=$push_global_to_block.399, args=(Var(_bush_pixel_v42__maximum_v43__v96compare_op_2, sky_compiled.py:74),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: pixel = $parfor__index_377.401
+    dependency: row = $parfor__index_377.401 // _cols_381
+    dependency: col = $parfor__index_377.401 % _cols_381
+    dependency: _bush_pixel_v42__v38load_attr_12 = getattr(value=_bush_pixel_v42__v26load_global_10, attr=float32)
+    dependency: _bush_pixel_v42_value = call _bush_pixel_v42__v38load_attr_12(_bush_pixel_v42__vconst48_13_1, func=_bush_pixel_v42__v38load_attr_12, args=[Var(_bush_pixel_v42__vconst48_13_1, sky_compiled.py:148)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _bush_pixel_v42__v74compare_op_17 = _bush_pixel_v42__v6unpack_sequence_5 <= row
+    dependency: _bush_pixel_v42__v80pred = call $push_global_to_block.400(_bush_pixel_v42__v74compare_op_17, func=$push_global_to_block.400, args=(Var(_bush_pixel_v42__v74compare_op_17, sky_compiled.py:149),), kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------
+_finish_parallel
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), bool, Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _finish_parallel, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/geometry/sky_compiled.py (196)  
+================================================================================
+
+
+Parallel loop listing for  Function _finish_parallel, /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/sky_compiled.py (196) 
+------------------------------------------------------------------------------|loop #ID
+@njit(cache=True,fastmath=False,parallel=True)                                | 
+def _finish_parallel(bush,bush_positive,bp,g,sh,vs,vb,vegetation):            | 
+    rows,cols=bush.shape                                                      | 
+    for pixel in prange(rows*cols):-------------------------------------------| #6
+        row=pixel//cols                                                       | 
+        col=pixel%cols                                                        | 
+        _finish_pixel(row,col,bush,bush_positive,bp,g,sh,vs,vb,vegetation)    | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #6:
+  Has the following hoisted:
+    _finish_pixel_v46_difference.1 = const(int, 1)
+    _finish_pixel_v46__vconst150_3_1 = const(int, 1)
+    _finish_pixel_v46__vconst422_14_2 = const(int, 0)
+    _finish_pixel_v46__vbool430 = global(bool: <class 'bool'>)
+    _finish_pixel_v46_difference.2 = const(int, 0)
+    _finish_pixel_v46__vconst452_0_1 = const(int, 1)
+    _finish_pixel_v46__vconst236_10_1 = const(int, 1)
+    _finish_pixel_v46__vbool276 = global(bool: <class 'bool'>)
+    _finish_pixel_v46_value.2 = const(int, 0)
+    _finish_pixel_v46__vconst322_12_2 = const(int, 0)
+    _finish_pixel_v46__vbool330 = global(bool: <class 'bool'>)
+    _finish_pixel_v46__vconst338_1_2 = const(int, 0)
+    _finish_pixel_v46__vbool346 = global(bool: <class 'bool'>)
+    _finish_pixel_v46__vconst438_1_2 = const(int, 0)
+    _finish_pixel_v46__vbool446 = global(bool: <class 'bool'>)
+    _finish_pixel_v46__vconst46_8_1 = const(int, 1)
+    _finish_pixel_v46__vconst118_26_2 = const(int, 0)
+    _finish_pixel_v46__vbool126 = global(bool: <class 'bool'>)
+    _finish_pixel_v46_value.3 = const(int, 1)
+  Failed to hoist the following:
+    dependency: _finish_pixel_v46__v140load_attr_2 = getattr(value=_finish_pixel_v46__v128load_global_0, attr=float32)
+    dependency: _finish_pixel_v46_combined.1 = call _finish_pixel_v46__v140load_attr_2(_finish_pixel_v46__vconst150_3_1, func=_finish_pixel_v46__v140load_attr_2, args=[Var(_finish_pixel_v46__vconst150_3_1, sky_compiled.py:175)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__v364load_attr_2 = getattr(value=_finish_pixel_v46__v352load_global_0, attr=float32)
+    dependency: _finish_pixel_v46__v382build_tuple_7 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46__v384binary_subscr_8 = getitem(value=bp, index=_finish_pixel_v46__v382build_tuple_7, fn=<built-in function getitem>)
+    dependency: _finish_pixel_v46__vbinop_sub394_9 = _finish_pixel_v46_original_vs - _finish_pixel_v46__v384binary_subscr_8
+    dependency: _finish_pixel_v46__v402call_10 = call _finish_pixel_v46__v364load_attr_2(_finish_pixel_v46__vbinop_sub394_9, func=_finish_pixel_v46__v364load_attr_2, args=[Var(_finish_pixel_v46__vbinop_sub394_9, sky_compiled.py:183)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46_value.1 = _finish_pixel_v46__v402call_10 + _finish_pixel_v46_difference.4
+    dependency: _finish_pixel_v46__v424compare_op_15 = _finish_pixel_v46_value.1 < _finish_pixel_v46__vconst422_14_2
+    dependency: _finish_pixel_v46__v430pred = call $push_global_to_block.452(_finish_pixel_v46__v424compare_op_15, func=$push_global_to_block.452, args=(Var(_finish_pixel_v46__v424compare_op_15, sky_compiled.py:184),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__vbinop_sub456_2 = _finish_pixel_v46__vconst452_0_1 - _finish_pixel_v46_value.5
+    dependency: _finish_pixel_v46__v466build_tuple_6 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46__v180load_attr_2 = getattr(value=_finish_pixel_v46__v168load_global_0, attr=float32)
+    dependency: _finish_pixel_v46__vbinop_sub194_5 = _finish_pixel_v46_combined.2 - _finish_pixel_v46_original_vs
+    dependency: _finish_pixel_v46_combined_1 = call _finish_pixel_v46__v180load_attr_2(_finish_pixel_v46__vbinop_sub194_5, func=_finish_pixel_v46__v180load_attr_2, args=[Var(_finish_pixel_v46__vbinop_sub194_5, sky_compiled.py:176)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__v226load_attr_9 = getattr(value=_finish_pixel_v46__v214load_global_7, attr=float32)
+    dependency: _finish_pixel_v46__v242call_11 = call _finish_pixel_v46__v226load_attr_9(_finish_pixel_v46__vconst236_10_1, func=_finish_pixel_v46__v226load_attr_9, args=[Var(_finish_pixel_v46__vconst236_10_1, sky_compiled.py:177)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__vbinop_sub254_13 = _finish_pixel_v46__v242call_11 - _finish_pixel_v46_combined_1
+    dependency: _finish_pixel_v46__v264build_tuple_17 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    not pure: _finish_pixel_v46__v276pred = call $push_global_to_block.453(bush__positive, func=$push_global_to_block.453, args=(Var(bush__positive, sky_compiled.py:196),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__v284build_tuple_3 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46__v286binary_subscr_4 = getitem(value=g, index=_finish_pixel_v46__v284build_tuple_3, fn=<built-in function getitem>)
+    dependency: _finish_pixel_v46__v302build_tuple_8 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46__v304binary_subscr_9 = getitem(value=bush, index=_finish_pixel_v46__v302build_tuple_8, fn=<built-in function getitem>)
+    dependency: _finish_pixel_v46_difference = _finish_pixel_v46__v286binary_subscr_4 - _finish_pixel_v46__v304binary_subscr_9
+    dependency: _finish_pixel_v46__v324compare_op_13 = _finish_pixel_v46_difference > _finish_pixel_v46__vconst322_12_2
+    dependency: _finish_pixel_v46__v330pred = call $push_global_to_block.454(_finish_pixel_v46__v324compare_op_13, func=$push_global_to_block.454, args=(Var(_finish_pixel_v46__v324compare_op_13, sky_compiled.py:181),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__v340compare_op_2 = _finish_pixel_v46_difference.3 < _finish_pixel_v46__vconst338_1_2
+    dependency: _finish_pixel_v46__v346pred = call $push_global_to_block.455(_finish_pixel_v46__v340compare_op_2, func=$push_global_to_block.455, args=(Var(_finish_pixel_v46__v340compare_op_2, sky_compiled.py:182),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__v440compare_op_2 = _finish_pixel_v46_value.4 > _finish_pixel_v46__vconst438_1_2
+    dependency: _finish_pixel_v46__v446pred = call $push_global_to_block.456(_finish_pixel_v46__v440compare_op_2, func=$push_global_to_block.456, args=(Var(_finish_pixel_v46__v440compare_op_2, sky_compiled.py:185),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: pixel = $parfor__index_435.458
+    dependency: row = $parfor__index_435.458 // _cols_439
+    dependency: col = $parfor__index_435.458 % _cols_439
+    dependency: _finish_pixel_v46__v10build_tuple_3 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46_original_vs = getitem(value=vs, index=_finish_pixel_v46__v10build_tuple_3, fn=<built-in function getitem>)
+    dependency: _finish_pixel_v46__v36load_attr_7 = getattr(value=_finish_pixel_v46__v24load_global_5, attr=float32)
+    dependency: _finish_pixel_v46__v52call_9 = call _finish_pixel_v46__v36load_attr_7(_finish_pixel_v46__vconst46_8_1, func=_finish_pixel_v46__v36load_attr_7, args=[Var(_finish_pixel_v46__vconst46_8_1, sky_compiled.py:173)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _finish_pixel_v46__v68build_tuple_13 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46__v70binary_subscr_14 = getitem(value=sh, index=_finish_pixel_v46__v68build_tuple_13, fn=<built-in function getitem>)
+    dependency: _finish_pixel_v46__vbinop_sub80_15 = _finish_pixel_v46__v52call_9 - _finish_pixel_v46__v70binary_subscr_14
+    dependency: _finish_pixel_v46__v90build_tuple_19 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46__v102build_tuple_23 = build_tuple(items=[Var(row, sky_compiled.py:200), Var(col, sky_compiled.py:201)])
+    dependency: _finish_pixel_v46_combined = getitem(value=vb, index=_finish_pixel_v46__v102build_tuple_23, fn=<built-in function getitem>)
+    dependency: _finish_pixel_v46__v120compare_op_27 = _finish_pixel_v46_combined > _finish_pixel_v46__vconst118_26_2
+    dependency: _finish_pixel_v46__v126pred = call $push_global_to_block.457(_finish_pixel_v46__v120compare_op_27, func=$push_global_to_block.457, args=(Var(_finish_pixel_v46__v120compare_op_27, sky_compiled.py:175),), kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------
+_pixel_serial
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'nopython': True, 'boundscheck': None}
+_pixel_parallel
+nopython_signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True)) -> none]
+target_options: {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _pixel_parallel, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/geometry/sky_compiled.py (312)  
+================================================================================
+
+
+Parallel loop listing for  Function _pixel_parallel, /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/sky_compiled.py (312) 
+-----------------------------------------------------------------------------------------------------------------------|loop #ID
+@njit(cache=True,fastmath=False,parallel=True)                                                                         | 
+def _pixel_parallel(a,canopy,trunk,bush,bounds,da,dv,dt,first_heights,sh,vs,vb):                                       | 
+    rows,cols=a.shape                                                                                                  | 
+    for pixel in prange(rows*cols):------------------------------------------------------------------------------------| #7
+        row=pixel//cols                                                                                                | 
+        col=pixel%cols                                                                                                 | 
+        sh[row,col],vs[row,col],vb[row,col]=_trace_pixel(row,col,a,canopy,trunk,bush,bounds,da,dv,dt,first_heights)    | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #7:
+  Has the following hoisted:
+    _trace_pixel_v53__vconst290_17_1 = const(int, 0)
+    _trace_pixel_v53__vconst330_22_1 = const(int, 0)
+    _trace_pixel_v53__vconst370_27_1 = const(int, 0)
+    _trace_pixel_v53__vbool402 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vbool412 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__maximum_v55__vbool86 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1400_1_1 = const(int, 0)
+    _trace_pixel_v53__vbool1408 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__maximum_v54__vbool86 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vbool802 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1010_4_1 = const(int, 0)
+    _trace_pixel_v53__maximum_v54__vbool102 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1076_9_1 = const(int, 0)
+    _trace_pixel_v53__vbool1084 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vbool748 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst978_23_1 = const(int, 0)
+    _trace_pixel_v53__vbool986 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst50_9_1 = const(int, 0)
+    _trace_pixel_v53__vconst108_19_2 = const(int, 1)
+    _trace_pixel_v53__vconst154_25_1 = const(int, 0)
+    _trace_pixel_v53__v172load_global_27 = global(range: <class 'range'>)
+    _trace_pixel_v53__vbool434 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1432_3_2 = const(int, 1)
+    _trace_pixel_v53__vconst1498_8_1 = const(int, 0)
+    _trace_pixel_v53__vbool1506 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vbool444 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst826_4_1 = const(int, 0)
+    _trace_pixel_v53__maximum_v55__vbool102 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1134_9_1 = const(int, 0)
+    _trace_pixel_v53__vbool1142 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1530_3_2 = const(int, 1)
+    _trace_pixel_v53__vconst1570_3_2 = const(int, 1)
+    _trace_pixel_v53__vconst1614_10_2 = const(int, 1)
+    _trace_pixel_v53__vconst1658_17_2 = const(int, 1)
+    _trace_pixel_v53__vconst1166_4_3 = const(int, 1000)
+    _trace_pixel_v53__maximum_v54__vbool42 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vbool1206 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst772_4_2 = const(int, 1)
+    _trace_pixel_v53__maximum_v55__vbool42 = global(bool: <class 'bool'>)
+    _trace_pixel_v53__vconst1376_21_1 = const(int, 0)
+    _trace_pixel_v53__vconst1230_4_2 = const(int, 1)
+  Failed to hoist the following:
+    dependency: _trace_pixel_v53__v238binary_subscr_4 = getitem(value=bounds, index=_trace_pixel_v53__v230for_iter_2, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v248unpack_sequence_13 = exhaust_iter(value=_trace_pixel_v53__v238binary_subscr_4, count=8)
+    dependency: _trace_pixel_v53__v248unpack_sequence_5 = static_getitem(value=_trace_pixel_v53__v248unpack_sequence_13, index=0, index_var=None, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v248unpack_sequence_7 = static_getitem(value=_trace_pixel_v53__v248unpack_sequence_13, index=2, index_var=None, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v248unpack_sequence_9 = static_getitem(value=_trace_pixel_v53__v248unpack_sequence_13, index=4, index_var=None, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v248unpack_sequence_10 = static_getitem(value=_trace_pixel_v53__v248unpack_sequence_13, index=5, index_var=None, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v248unpack_sequence_11 = static_getitem(value=_trace_pixel_v53__v248unpack_sequence_13, index=6, index_var=None, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v248unpack_sequence_12 = static_getitem(value=_trace_pixel_v53__v248unpack_sequence_13, index=7, index_var=None, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v280load_attr_16 = getattr(value=_trace_pixel_v53__v268load_global_14, attr=float32)
+    dependency: _trace_pixel_v53_building = call _trace_pixel_v53__v280load_attr_16(_trace_pixel_v53__vconst290_17_1, func=_trace_pixel_v53__v280load_attr_16, args=[Var(_trace_pixel_v53__vconst290_17_1, sky_compiled.py:273)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v320load_attr_21 = getattr(value=_trace_pixel_v53__v308load_global_19, attr=float32)
+    dependency: _trace_pixel_v53_vegetation = call _trace_pixel_v53__v320load_attr_21(_trace_pixel_v53__vconst330_22_1, func=_trace_pixel_v53__v320load_attr_21, args=[Var(_trace_pixel_v53__vconst330_22_1, sky_compiled.py:274)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v360load_attr_26 = getattr(value=_trace_pixel_v53__v348load_global_24, attr=float32)
+    dependency: _trace_pixel_v53_trunk_value = call _trace_pixel_v53__v360load_attr_26(_trace_pixel_v53__vconst370_27_1, func=_trace_pixel_v53__v360load_attr_26, args=[Var(_trace_pixel_v53__vconst370_27_1, sky_compiled.py:275)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v396compare_op_31 = _trace_pixel_v53__v248unpack_sequence_9 <= row
+    dependency: _trace_pixel_v53__v402pred = call $push_global_to_block.525(_trace_pixel_v53__v396compare_op_31, func=$push_global_to_block.525, args=(Var(_trace_pixel_v53__v396compare_op_31, sky_compiled.py:276),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v406compare_op_3 = row < _trace_pixel_v53__v248unpack_sequence_10
+    dependency: _trace_pixel_v53__v412pred = call $push_global_to_block.526(_trace_pixel_v53__v406compare_op_3, func=$push_global_to_block.526, args=(Var(_trace_pixel_v53__v406compare_op_3, sky_compiled.py:276),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v55__v60load_attr_2 = getattr(value=_trace_pixel_v53__maximum_v55__v48load_global_0, attr=isnan)
+    dependency: _trace_pixel_v53__maximum_v55__v76call_4 = call _trace_pixel_v53__maximum_v55__v60load_attr_2(_trace_pixel_v53_building.2, func=_trace_pixel_v53__maximum_v55__v60load_attr_2, args=[Var(_trace_pixel_v53_building.2, sky_compiled.py:282)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v55__v86pred = call $push_global_to_block.527(_trace_pixel_v53__maximum_v55__v76call_4, func=$push_global_to_block.527, args=(Var(_trace_pixel_v53__maximum_v55__v76call_4, sky_compiled.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1402compare_op_2 = _trace_pixel_v53_vb.4 > _trace_pixel_v53__vconst1400_1_1
+    dependency: _trace_pixel_v53__v1408pred = call $push_global_to_block.528(_trace_pixel_v53__v1402compare_op_2, func=$push_global_to_block.528, args=(Var(_trace_pixel_v53__v1402compare_op_2, sky_compiled.py:299),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v54__v60load_attr_2 = getattr(value=_trace_pixel_v53__maximum_v54__v48load_global_0, attr=isnan)
+    dependency: _trace_pixel_v53__maximum_v54__v76call_4 = call _trace_pixel_v53__maximum_v54__v60load_attr_2(_trace_pixel_v53__vbinop_sub950_18, func=_trace_pixel_v53__maximum_v54__v60load_attr_2, args=[Var(_trace_pixel_v53__vbinop_sub950_18, sky_compiled.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v54__v86pred = call $push_global_to_block.529(_trace_pixel_v53__maximum_v54__v76call_4, func=$push_global_to_block.529, args=(Var(_trace_pixel_v53__maximum_v54__v76call_4, sky_compiled.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v796compare_op_3 = _trace_pixel_v53_f.6 <= _trace_pixel_v53_height
+    dependency: _trace_pixel_v53__v802pred = call $push_global_to_block.530(_trace_pixel_v53__v796compare_op_3, func=$push_global_to_block.530, args=(Var(_trace_pixel_v53__v796compare_op_3, sky_compiled.py:285),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v230for_iter_1 = iternext(value=_trace_pixel_v53__v226get_iter_34)
+    dependency: _trace_pixel_v53__v230for_iter_2 = pair_first(value=_trace_pixel_v53__v230for_iter_1)
+    dependency: _trace_pixel_v53__v230for_iter_3 = pair_second(value=_trace_pixel_v53__v230for_iter_1)
+    dependency: _trace_pixel_v53__v1000load_attr_3 = getattr(value=_trace_pixel_v53__v988load_global_1, attr=float32)
+    dependency: _trace_pixel_v53_vs.5 = call _trace_pixel_v53__v1000load_attr_3(_trace_pixel_v53__vconst1010_4_1, func=_trace_pixel_v53__v1000load_attr_3, args=[Var(_trace_pixel_v53__vconst1010_4_1, sky_compiled.py:289)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v54__v96compare_op_2 = _trace_pixel_v53_vs.9 > _trace_pixel_v53__vbinop_sub950_18
+    dependency: _trace_pixel_v53__maximum_v54__v102pred = call $push_global_to_block.531(_trace_pixel_v53__maximum_v54__v96compare_op_2, func=$push_global_to_block.531, args=(Var(_trace_pixel_v53__maximum_v54__v96compare_op_2, sky_compiled.py:74),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1040load_attr_3 = getattr(value=_trace_pixel_v53__v1028load_global_1, attr=float32)
+    dependency: _trace_pixel_v53__vbinop_add1054_6 = _trace_pixel_v53_vb.4 + _trace_pixel_v53_vs.11
+    dependency: _trace_pixel_v53_vb.1 = call _trace_pixel_v53__v1040load_attr_3(_trace_pixel_v53__vbinop_add1054_6, func=_trace_pixel_v53__v1040load_attr_3, args=[Var(_trace_pixel_v53__vbinop_add1054_6, sky_compiled.py:290)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1078compare_op_10 = _trace_pixel_v53__v230for_iter_2 == _trace_pixel_v53__vconst1076_9_1
+    dependency: _trace_pixel_v53__v1084pred = call $push_global_to_block.532(_trace_pixel_v53__v1078compare_op_10, func=$push_global_to_block.532, args=(Var(_trace_pixel_v53__v1078compare_op_10, sky_compiled.py:291),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v742compare_op_8 = _trace_pixel_v53_f.6 > _trace_pixel_v53_height
+    dependency: _trace_pixel_v53__v748pred = call $push_global_to_block.533(_trace_pixel_v53__v742compare_op_8, func=$push_global_to_block.533, args=(Var(_trace_pixel_v53__v742compare_op_8, sky_compiled.py:283),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_mul974_22 = _trace_pixel_v53_vs.12 * _trace_pixel_v53_sh.3
+    dependency: _trace_pixel_v53__v980compare_op_24 = _trace_pixel_v53__vbinop_mul974_22 > _trace_pixel_v53__vconst978_23_1
+    dependency: _trace_pixel_v53__v986pred = call $push_global_to_block.534(_trace_pixel_v53__v980compare_op_24, func=$push_global_to_block.534, args=(Var(_trace_pixel_v53__v980compare_op_24, sky_compiled.py:288),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: pixel = $parfor__index_508.544
+    dependency: row = $parfor__index_508.544 // _cols_512
+    dependency: col = $parfor__index_508.544 % _cols_512
+    dependency: _trace_pixel_v53__v10build_tuple_3 = build_tuple(items=[Var(row, sky_compiled.py:316), Var(col, sky_compiled.py:317)])
+    dependency: _trace_pixel_v53_height = getitem(value=a, index=_trace_pixel_v53__v10build_tuple_3, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v40load_attr_8 = getattr(value=_trace_pixel_v53__v28load_global_6, attr=float32)
+    dependency: _trace_pixel_v53_sh = call _trace_pixel_v53__v40load_attr_8(_trace_pixel_v53__vconst50_9_1, func=_trace_pixel_v53__v40load_attr_8, args=[Var(_trace_pixel_v53__vconst50_9_1, sky_compiled.py:268)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v80load_attr_13 = getattr(value=_trace_pixel_v53__v68load_global_11, attr=float32)
+    dependency: _trace_pixel_v53__v96build_tuple_17 = build_tuple(items=[Var(row, sky_compiled.py:316), Var(col, sky_compiled.py:317)])
+    dependency: _trace_pixel_v53__v98binary_subscr_18 = getitem(value=bush, index=_trace_pixel_v53__v96build_tuple_17, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v110compare_op_20 = _trace_pixel_v53__v98binary_subscr_18 > _trace_pixel_v53__vconst108_19_2
+    dependency: _trace_pixel_v53_vs = call _trace_pixel_v53__v80load_attr_13(_trace_pixel_v53__v110compare_op_20, func=_trace_pixel_v53__v80load_attr_13, args=[Var(_trace_pixel_v53__v110compare_op_20, sky_compiled.py:269)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v144load_attr_24 = getattr(value=_trace_pixel_v53__v132load_global_22, attr=float32)
+    dependency: _trace_pixel_v53_vb = call _trace_pixel_v53__v144load_attr_24(_trace_pixel_v53__vconst154_25_1, func=_trace_pixel_v53__v144load_attr_24, args=[Var(_trace_pixel_v53__vconst154_25_1, sky_compiled.py:270)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: _trace_pixel_v53__v216call_33 = call $push_global_to_block.535(bounds__size0_473, func=$push_global_to_block.535, args=[Var(bounds__size0_473, sky_compiled.py:312)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v226get_iter_34 = getiter(value=_trace_pixel_v53__v216call_33)
+    dependency: _trace_pixel_v53__v428compare_op_3 = _trace_pixel_v53__v248unpack_sequence_11 <= col
+    dependency: _trace_pixel_v53__v434pred = call $push_global_to_block.536(_trace_pixel_v53__v428compare_op_3, func=$push_global_to_block.536, args=(Var(_trace_pixel_v53__v428compare_op_3, sky_compiled.py:276),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1422load_attr_2 = getattr(value=_trace_pixel_v53__v1410load_global_0, attr=float32)
+    dependency: _trace_pixel_v53_vb.3 = call _trace_pixel_v53__v1422load_attr_2(_trace_pixel_v53__vconst1432_3_2, func=_trace_pixel_v53__v1422load_attr_2, args=[Var(_trace_pixel_v53__vconst1432_3_2, sky_compiled.py:299)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1462load_attr_2 = getattr(value=_trace_pixel_v53__v1450load_global_0, attr=float32)
+    dependency: _trace_pixel_v53__vbinop_sub1476_5 = _trace_pixel_v53_vb.6 - _trace_pixel_v53_vs.9
+    dependency: _trace_pixel_v53_vb_1 = call _trace_pixel_v53__v1462load_attr_2(_trace_pixel_v53__vbinop_sub1476_5, func=_trace_pixel_v53__v1462load_attr_2, args=[Var(_trace_pixel_v53__vbinop_sub1476_5, sky_compiled.py:300)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1500compare_op_9 = _trace_pixel_v53_vs.9 > _trace_pixel_v53__vconst1498_8_1
+    dependency: _trace_pixel_v53__v1506pred = call $push_global_to_block.537(_trace_pixel_v53__v1500compare_op_9, func=$push_global_to_block.537, args=(Var(_trace_pixel_v53__v1500compare_op_9, sky_compiled.py:301),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v438compare_op_3 = col < _trace_pixel_v53__v248unpack_sequence_12
+    dependency: _trace_pixel_v53__v444pred = call $push_global_to_block.538(_trace_pixel_v53__v438compare_op_3, func=$push_global_to_block.538, args=(Var(_trace_pixel_v53__v438compare_op_3, sky_compiled.py:276),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_add456_3 = _trace_pixel_v53__v248unpack_sequence_5 + row
+    dependency: _trace_pixel_v53_source_row = _trace_pixel_v53__vbinop_add456_3 - _trace_pixel_v53__v248unpack_sequence_9
+    dependency: _trace_pixel_v53__vbinop_add472_8 = _trace_pixel_v53__v248unpack_sequence_7 + col
+    dependency: _trace_pixel_v53_source_col = _trace_pixel_v53__vbinop_add472_8 - _trace_pixel_v53__v248unpack_sequence_11
+    dependency: _trace_pixel_v53__v496load_attr_13 = getattr(value=_trace_pixel_v53__v484load_global_11, attr=float32)
+    dependency: _trace_pixel_v53__v512build_tuple_17 = build_tuple(items=[Var(_trace_pixel_v53_source_row, sky_compiled.py:277), Var(_trace_pixel_v53_source_col, sky_compiled.py:278)])
+    dependency: _trace_pixel_v53__v514binary_subscr_18 = getitem(value=a, index=_trace_pixel_v53__v512build_tuple_17, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v528binary_subscr_21 = getitem(value=da, index=_trace_pixel_v53__v230for_iter_2, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__vbinop_sub538_22 = _trace_pixel_v53__v514binary_subscr_18 - _trace_pixel_v53__v528binary_subscr_21
+    dependency: _trace_pixel_v53_building.1 = call _trace_pixel_v53__v496load_attr_13(_trace_pixel_v53__vbinop_sub538_22, func=_trace_pixel_v53__v496load_attr_13, args=[Var(_trace_pixel_v53__vbinop_sub538_22, sky_compiled.py:279)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v570load_attr_26 = getattr(value=_trace_pixel_v53__v558load_global_24, attr=float32)
+    dependency: _trace_pixel_v53__v586build_tuple_30 = build_tuple(items=[Var(_trace_pixel_v53_source_row, sky_compiled.py:277), Var(_trace_pixel_v53_source_col, sky_compiled.py:278)])
+    dependency: _trace_pixel_v53__v588binary_subscr_31 = getitem(value=canopy, index=_trace_pixel_v53__v586build_tuple_30, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v602binary_subscr_34 = getitem(value=dv, index=_trace_pixel_v53__v230for_iter_2, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__vbinop_sub612_35 = _trace_pixel_v53__v588binary_subscr_31 - _trace_pixel_v53__v602binary_subscr_34
+    dependency: _trace_pixel_v53_vegetation.1 = call _trace_pixel_v53__v570load_attr_26(_trace_pixel_v53__vbinop_sub612_35, func=_trace_pixel_v53__v570load_attr_26, args=[Var(_trace_pixel_v53__vbinop_sub612_35, sky_compiled.py:280)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v644load_attr_39 = getattr(value=_trace_pixel_v53__v632load_global_37, attr=float32)
+    dependency: _trace_pixel_v53__v660build_tuple_43 = build_tuple(items=[Var(_trace_pixel_v53_source_row, sky_compiled.py:277), Var(_trace_pixel_v53_source_col, sky_compiled.py:278)])
+    dependency: _trace_pixel_v53__v662binary_subscr_44 = getitem(value=trunk, index=_trace_pixel_v53__v660build_tuple_43, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v676binary_subscr_47 = getitem(value=dt, index=_trace_pixel_v53__v230for_iter_2, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__vbinop_sub686_48 = _trace_pixel_v53__v662binary_subscr_44 - _trace_pixel_v53__v676binary_subscr_47
+    dependency: _trace_pixel_v53_trunk_value.1 = call _trace_pixel_v53__v644load_attr_39(_trace_pixel_v53__vbinop_sub686_48, func=_trace_pixel_v53__v644load_attr_39, args=[Var(_trace_pixel_v53__vbinop_sub686_48, sky_compiled.py:281)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v816load_attr_3 = getattr(value=_trace_pixel_v53__v804load_global_1, attr=float32)
+    dependency: _trace_pixel_v53_sh.2 = call _trace_pixel_v53__v816load_attr_3(_trace_pixel_v53__vconst826_4_1, func=_trace_pixel_v53__v816load_attr_3, args=[Var(_trace_pixel_v53__vconst826_4_1, sky_compiled.py:286)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v55__v96compare_op_2 = _trace_pixel_v53_f.5 > _trace_pixel_v53_building.2
+    dependency: _trace_pixel_v53__maximum_v55__v102pred = call $push_global_to_block.539(_trace_pixel_v53__maximum_v55__v96compare_op_2, func=$push_global_to_block.539, args=(Var(_trace_pixel_v53__maximum_v55__v96compare_op_2, sky_compiled.py:74),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1098load_attr_3 = getattr(value=_trace_pixel_v53__v1086load_global_1, attr=float32)
+    dependency: _trace_pixel_v53__vbinop_sub1112_6 = _trace_pixel_v53_vegetation.2 - _trace_pixel_v53_building.2
+    dependency: _trace_pixel_v53_first_vegetation = call _trace_pixel_v53__v1098load_attr_3(_trace_pixel_v53__vbinop_sub1112_6, func=_trace_pixel_v53__v1098load_attr_3, args=[Var(_trace_pixel_v53__vbinop_sub1112_6, sky_compiled.py:292)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1136compare_op_10 = _trace_pixel_v53_first_vegetation <= _trace_pixel_v53__vconst1134_9_1
+    dependency: _trace_pixel_v53__v1142pred = call $push_global_to_block.540(_trace_pixel_v53__v1136compare_op_10, func=$push_global_to_block.540, args=(Var(_trace_pixel_v53__v1136compare_op_10, sky_compiled.py:293),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1520load_attr_2 = getattr(value=_trace_pixel_v53__v1508load_global_0, attr=float32)
+    dependency: _trace_pixel_v53_vs.8 = call _trace_pixel_v53__v1520load_attr_2(_trace_pixel_v53__vconst1530_3_2, func=_trace_pixel_v53__v1520load_attr_2, args=[Var(_trace_pixel_v53__vconst1530_3_2, sky_compiled.py:301)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1560load_attr_2 = getattr(value=_trace_pixel_v53__v1548load_global_0, attr=float32)
+    dependency: _trace_pixel_v53__v1576call_4 = call _trace_pixel_v53__v1560load_attr_2(_trace_pixel_v53__vconst1570_3_2, func=_trace_pixel_v53__v1560load_attr_2, args=[Var(_trace_pixel_v53__vconst1570_3_2, sky_compiled.py:302)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_sub1588_6 = _trace_pixel_v53__v1576call_4 - _trace_pixel_v53_sh.4
+    dependency: _trace_pixel_v53__v1604load_attr_9 = getattr(value=_trace_pixel_v53__v1592load_global_7, attr=float32)
+    dependency: _trace_pixel_v53__v1620call_11 = call _trace_pixel_v53__v1604load_attr_9(_trace_pixel_v53__vconst1614_10_2, func=_trace_pixel_v53__v1604load_attr_9, args=[Var(_trace_pixel_v53__vconst1614_10_2, sky_compiled.py:302)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_sub1632_13 = _trace_pixel_v53__v1620call_11 - _trace_pixel_v53_vs.14
+    dependency: _trace_pixel_v53__v1648load_attr_16 = getattr(value=_trace_pixel_v53__v1636load_global_14, attr=float32)
+    dependency: _trace_pixel_v53__v1664call_18 = call _trace_pixel_v53__v1648load_attr_16(_trace_pixel_v53__vconst1658_17_2, func=_trace_pixel_v53__v1648load_attr_16, args=[Var(_trace_pixel_v53__vconst1658_17_2, sky_compiled.py:302)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_sub1676_20 = _trace_pixel_v53__v1664call_18 - _trace_pixel_v53_vb_1
+    dependency: _trace_pixel_v53__v1680build_tuple_21 = build_tuple(items=[Var(_trace_pixel_v53__vbinop_sub1588_6, sky_compiled.py:302), Var(_trace_pixel_v53__vbinop_sub1632_13, sky_compiled.py:302), Var(_trace_pixel_v53__vbinop_sub1676_20, sky_compiled.py:302)])
+    dependency: $132unpack_sequence.25 = exhaust_iter(value=_trace_pixel_v53__v1680build_tuple_21, count=3)
+    dependency: $132unpack_sequence.22 = static_getitem(value=$132unpack_sequence.25, index=0, index_var=None, fn=<built-in function getitem>)
+    dependency: $132unpack_sequence.23 = static_getitem(value=$132unpack_sequence.25, index=1, index_var=None, fn=<built-in function getitem>)
+    dependency: $132unpack_sequence.24 = static_getitem(value=$132unpack_sequence.25, index=2, index_var=None, fn=<built-in function getitem>)
+    dependency: $142build_tuple.29 = build_tuple(items=[Var(row, sky_compiled.py:316), Var(col, sky_compiled.py:317)])
+    dependency: $154build_tuple.33 = build_tuple(items=[Var(row, sky_compiled.py:316), Var(col, sky_compiled.py:317)])
+    dependency: $166build_tuple.37 = build_tuple(items=[Var(row, sky_compiled.py:316), Var(col, sky_compiled.py:317)])
+    dependency: _trace_pixel_v53__v1156load_attr_3 = getattr(value=_trace_pixel_v53__v1144load_global_1, attr=float32)
+    dependency: _trace_pixel_v53_first_vegetation.1 = call _trace_pixel_v53__v1156load_attr_3(_trace_pixel_v53__vconst1166_4_3, func=_trace_pixel_v53__v1156load_attr_3, args=[Var(_trace_pixel_v53__vconst1166_4_3, sky_compiled.py:294)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v870load_attr_6 = getattr(value=_trace_pixel_v53__v858load_global_4, attr=float32)
+    dependency: _trace_pixel_v53__v884compare_op_9 = _trace_pixel_v53_vegetation.2 > _trace_pixel_v53_height
+    dependency: _trace_pixel_v53__v894call_10 = call _trace_pixel_v53__v870load_attr_6(_trace_pixel_v53__v884compare_op_9, func=_trace_pixel_v53__v870load_attr_6, args=[Var(_trace_pixel_v53__v884compare_op_9, sky_compiled.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v916load_attr_13 = getattr(value=_trace_pixel_v53__v904load_global_11, attr=float32)
+    dependency: _trace_pixel_v53__v930compare_op_16 = _trace_pixel_v53_trunk_value.2 > _trace_pixel_v53_height
+    dependency: _trace_pixel_v53__v940call_17 = call _trace_pixel_v53__v916load_attr_13(_trace_pixel_v53__v930compare_op_16, func=_trace_pixel_v53__v916load_attr_13, args=[Var(_trace_pixel_v53__v930compare_op_16, sky_compiled.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_sub950_18 = _trace_pixel_v53__v894call_10 - _trace_pixel_v53__v940call_17
+    dependency: _trace_pixel_v53__maximum_v54__v16load_attr_2 = getattr(value=_trace_pixel_v53__maximum_v54__v4load_global_0, attr=isnan)
+    dependency: _trace_pixel_v53__maximum_v54__v32call_4 = call _trace_pixel_v53__maximum_v54__v16load_attr_2(_trace_pixel_v53_vs.9, func=_trace_pixel_v53__maximum_v54__v16load_attr_2, args=[Var(_trace_pixel_v53_vs.9, sky_compiled.py:287)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v54__v42pred = call $push_global_to_block.541(_trace_pixel_v53__maximum_v54__v32call_4, func=$push_global_to_block.541, args=(Var(_trace_pixel_v53__maximum_v54__v32call_4, sky_compiled.py:72),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1190binary_subscr_4 = getitem(value=first__heights, index=_trace_pixel_v53__v230for_iter_2, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v1200compare_op_5 = _trace_pixel_v53_first_vegetation.2 < _trace_pixel_v53__v1190binary_subscr_4
+    dependency: _trace_pixel_v53__v1206pred = call $push_global_to_block.542(_trace_pixel_v53__v1200compare_op_5, func=$push_global_to_block.542, args=(Var(_trace_pixel_v53__v1200compare_op_5, sky_compiled.py:295),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v762load_attr_3 = getattr(value=_trace_pixel_v53__v750load_global_1, attr=float32)
+    dependency: _trace_pixel_v53_sh.1 = call _trace_pixel_v53__v762load_attr_3(_trace_pixel_v53__vconst772_4_2, func=_trace_pixel_v53__v762load_attr_3, args=[Var(_trace_pixel_v53__vconst772_4_2, sky_compiled.py:284)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v55__v16load_attr_2 = getattr(value=_trace_pixel_v53__maximum_v55__v4load_global_0, attr=isnan)
+    dependency: _trace_pixel_v53__maximum_v55__v32call_4 = call _trace_pixel_v53__maximum_v55__v16load_attr_2(_trace_pixel_v53_f.5, func=_trace_pixel_v53__maximum_v55__v16load_attr_2, args=[Var(_trace_pixel_v53_f.5, sky_compiled.py:282)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__maximum_v55__v42pred = call $push_global_to_block.543(_trace_pixel_v53__maximum_v55__v32call_4, func=$push_global_to_block.543, args=(Var(_trace_pixel_v53__maximum_v55__v32call_4, sky_compiled.py:72),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1260load_attr_3 = getattr(value=_trace_pixel_v53__v1248load_global_1, attr=float32)
+    dependency: _trace_pixel_v53__v1284load_attr_7 = getattr(value=_trace_pixel_v53__v1272load_global_5, attr=float32)
+    dependency: _trace_pixel_v53__v1300build_tuple_11 = build_tuple(items=[Var(row, sky_compiled.py:316), Var(col, sky_compiled.py:317)])
+    dependency: _trace_pixel_v53__v1302binary_subscr_12 = getitem(value=trunk, index=_trace_pixel_v53__v1300build_tuple_11, fn=<built-in function getitem>)
+    dependency: _trace_pixel_v53__v1314compare_op_14 = _trace_pixel_v53__v1302binary_subscr_12 > _trace_pixel_v53_height
+    dependency: _trace_pixel_v53__v1324call_15 = call _trace_pixel_v53__v1284load_attr_7(_trace_pixel_v53__v1314compare_op_14, func=_trace_pixel_v53__v1284load_attr_7, args=[Var(_trace_pixel_v53__v1314compare_op_14, sky_compiled.py:297)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__vbinop_mul1334_16 = _trace_pixel_v53_vs.13 * _trace_pixel_v53__v1324call_15
+    dependency: _trace_pixel_v53_vs.7 = call _trace_pixel_v53__v1260load_attr_3(_trace_pixel_v53__vbinop_mul1334_16, func=_trace_pixel_v53__v1260load_attr_3, args=[Var(_trace_pixel_v53__vbinop_mul1334_16, sky_compiled.py:297)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1366load_attr_20 = getattr(value=_trace_pixel_v53__v1354load_global_18, attr=float32)
+    dependency: _trace_pixel_v53_vb.2 = call _trace_pixel_v53__v1366load_attr_20(_trace_pixel_v53__vconst1376_21_1, func=_trace_pixel_v53__v1366load_attr_20, args=[Var(_trace_pixel_v53__vconst1376_21_1, sky_compiled.py:298)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _trace_pixel_v53__v1220load_attr_3 = getattr(value=_trace_pixel_v53__v1208load_global_1, attr=float32)
+    dependency: _trace_pixel_v53_vs.6 = call _trace_pixel_v53__v1220load_attr_3(_trace_pixel_v53__vconst1230_4_2, func=_trace_pixel_v53__v1220load_attr_3, args=[Var(_trace_pixel_v53__vconst1230_4_2, sky_compiled.py:296)], kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------

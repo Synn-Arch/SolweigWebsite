@@ -1,0 +1,444 @@
+{
+  "name": "missing_fsr",
+  "invocation": {
+    "input_dir": "/Users/alansynn/Workspace/solweig-light/tests/reference/wind_original_cpu/missing_fsr/inputs",
+    "era5_dir": "/Users/alansynn/Workspace/solweig-light/tests/reference/wind_original_cpu/missing_fsr/era5",
+    "max_workers": 1
+  },
+  "selected_z0": 0.03,
+  "input_sha256": {
+    "Buildings.tif": "178575f1b9983da41133dd4c9990e5721fdb94ae430d25d54f065ea0f878b766",
+    "Trees.tif": "2123819614acbb1ed8c8bae70185d2322cb719f682e5dc914bb6bc9dc86d88b1",
+    "Building_DSM.tif": "dd719429124f491a0941fd976ba9e82926270b988a0ca6294845162af456cd48",
+    "DEM.tif": "f7e1b26b59c242cf2b0b1a5cbeb4cf10399509bfd8f587bf0609a8110a66d1ea"
+  },
+  "met_sha256": "bcde438d4a58deda055aa55cf74b5f74651266f36c4e9f0e0b02c9250b923543",
+  "status": "executed",
+  "returned_names": [
+    "WindCoeff_dir000.tif",
+    "WindCoeff_dir030.tif",
+    "WindCoeff_dir060.tif",
+    "WindCoeff_dir090.tif",
+    "WindCoeff_dir120.tif",
+    "WindCoeff_dir150.tif",
+    "WindCoeff_dir180.tif",
+    "WindCoeff_dir210.tif",
+    "WindCoeff_dir240.tif",
+    "WindCoeff_dir270.tif",
+    "WindCoeff_dir300.tif",
+    "WindCoeff_dir330.tif"
+  ],
+  "output_sha256": {
+    "WindCoeff_dir000.tif": "3a3bc922d00be4b1cd8af2b4ddabb030d8a11b8b979a451cda3a81c359a25229",
+    "WindCoeff_dir030.tif": "c9b5bcaa939c69fb2610593e8035dead3a75ac79bd8bc34cf306724f4893f57c",
+    "WindCoeff_dir060.tif": "c7077f32a8c21fbbdf1954973828f00f2ac1fa4abc129076d429f356c8e6c66b",
+    "WindCoeff_dir090.tif": "5e010875596df38f9ddb967f9bb0391942bf60b3e9cbf4a96c3cd9f4ac843cfe",
+    "WindCoeff_dir120.tif": "f2f415e796aae59229d5e7b94504a72f2f1abed26ef7f83525f5e13835053018",
+    "WindCoeff_dir150.tif": "7f4bc2ebe4dd967bc8b79501c06f40aecc82e85c66f16f5737854c1f4dcb50e4",
+    "WindCoeff_dir180.tif": "562ceb85ba49050d2565382fa140d250bf31a80066ebe450701574dd85f64d1d",
+    "WindCoeff_dir210.tif": "30e2d323543520ea5635ad8b148c3574b449d9a06cb0b04b51371d704a19e252",
+    "WindCoeff_dir240.tif": "a9241e9a7c4551ab0e832bc6e20d4a0bf9385c4fa2eaed4ac9739ca4040a28cb",
+    "WindCoeff_dir270.tif": "3a57ad8e69836b6ba1940472bfdd11b17e5a0ab554def03b3e11d962ea8c96dc",
+    "WindCoeff_dir300.tif": "6abc13381f7a88242a184337a61c6d92817211e81baf904f7385cf9d364db978",
+    "WindCoeff_dir330.tif": "2b11aebb48626d9e5c5caa1afa35daa1942cea482cf9de84fb8e59bc5e7d60f6"
+  },
+  "metadata": {
+    "WindCoeff_dir000.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir030.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir060.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir090.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir120.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir150.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir180.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir210.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir240.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir270.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir300.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    },
+    "WindCoeff_dir330.tif": {
+      "shape": [
+        32,
+        48
+      ],
+      "count": 1,
+      "dtype": "float32",
+      "crs": "PROJCS[\"WGS 84 / UTM zone 31N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",3],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32631\"]]",
+      "transform": [
+        2.0,
+        0.0,
+        500000.0,
+        0.0,
+        -2.0,
+        5700000.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "nodata": "NaN",
+      "compression": "ZSTD",
+      "tiled": false,
+      "block_shapes": [
+        [
+          32,
+          48
+        ]
+      ],
+      "tags": {
+        "AREA_OR_POINT": "Area"
+      },
+      "band_tags": {}
+    }
+  },
+  "fields_sha256": "30eaa450650a576108123491bbf6009b8f237083eb600cfdcc708a298404161f"
+}

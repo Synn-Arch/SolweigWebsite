@@ -1,0 +1,5356 @@
+{
+  "assertions": {
+    "all_output_schemas_and_timestamps": {
+      "passed": true
+    },
+    "exact_output_names": {
+      "passed": true
+    },
+    "exact_svf_zip_names_and_schemas": {
+      "passed": true
+    },
+    "npz_channels": {
+      "actual": {
+        "names": [
+          "shadowmat",
+          "vbshmat",
+          "vegshadowmat"
+        ],
+        "schemas": {
+          "shadowmat": {
+            "dtype": "float32",
+            "shape": [
+              32,
+              35,
+              153
+            ]
+          },
+          "vbshmat": {
+            "dtype": "float32",
+            "shape": [
+              32,
+              35,
+              153
+            ]
+          },
+          "vegshadowmat": {
+            "dtype": "float32",
+            "shape": [
+              32,
+              35,
+              153
+            ]
+          }
+        }
+      },
+      "expected": {
+        "dtype": "float32",
+        "names": [
+          "shadowmat",
+          "vegshadowmat",
+          "vbshmat"
+        ],
+        "shape": [
+          32,
+          35,
+          153
+        ]
+      },
+      "passed": true
+    },
+    "output_tiff_count": {
+      "actual": 10,
+      "expected": 10,
+      "passed": true
+    },
+    "output_tiff_schema": {
+      "actual": {
+        "bands": 24,
+        "columns": 35,
+        "dtype": "Float32",
+        "rows": 32
+      },
+      "expected": {
+        "bands": 24,
+        "columns": 35,
+        "dtype": "Float32",
+        "rows": 32
+      },
+      "passed": true
+    },
+    "svf_zip_members": {
+      "actual": 15,
+      "expected": 15,
+      "passed": true
+    },
+    "utci_exact_roof_locations": {
+      "passed": true
+    },
+    "utci_nan_mask": {
+      "actual_nan_per_band": [
+        56
+      ],
+      "expected_nan_per_band": 56,
+      "mask_sha256": [
+        "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e"
+      ],
+      "passed": true
+    }
+  },
+  "evidence_class": "original_upstream_cpu_artifact_snapshot",
+  "outputs": {
+    "Kdown_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "a0448d2b595dd0a8d231012a6ef6757afc7a37cb9483045d1217bd25d7c978c5",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 155.74603271484375,
+            "min": 31.238502502441406,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e4bad91bbaa097aa5ca6bf7c3a41f70b817db89e6b01b401c6e91534dc1510da",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 306.4469909667969,
+            "min": 26.807220458984375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "5b496d9947146880a219d7c9dd1f04c535933566e6b9e0b6d08b25030667e8ad",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 437.66827392578125,
+            "min": 62.15644073486328,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "bc01d3f15dbacad58819842128c6c11a2256c53b92946cfce619fd9e9101c25c",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 547.246337890625,
+            "min": 103.00210571289062,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "909a64e348f30bb0f3057a0d895e257e9f357d6be869634201934ec2d45a1cb4",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 629.8172607421875,
+            "min": 153.13046264648438,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "42c05d9ac94c2815ca5afdd22e4a85d7699e0d953fd38ac8f322013171106401",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 680.1025390625,
+            "min": 184.06015014648438,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "8448b5ddefdcede5d159a618b38b1713d4f3c7319a06f16acfc62d13b00de1ed",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 695.9796752929688,
+            "min": 213.03671264648438,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "fcece66e5bb460a81d7a2a3390696de9a80ba8eba050b179d46b3fab8ee1a562",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 678.242919921875,
+            "min": 231.66049194335938,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "938495b9122a558c83db8908d18f6b59f1b85570604149baf4c3c5c6e5548ecb",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 627.9248657226562,
+            "min": 199.4041290283203,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "d821a976a757c38ac39b409752f0ea260db0e3437e4a9a4d0c4cb6a40ca0a927",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 546.04541015625,
+            "min": 165.57000732421875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "85474928c225f0fee44fff12a79c2972f03eecffad4f45027f7ace58f03f0325",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 435.81158447265625,
+            "min": 127.39640045166016,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4febe56801ff7b40a8e2d74b40c2fe86bad081b1982f6364d925baf2ecd7df32",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 302.7506408691406,
+            "min": 116.52313232421875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c44ec0f0657fa567b21925e10ce48724435852242a8d627ac1b6d990ff2f8855",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 155.202392578125,
+            "min": 70.12100219726562,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "71b19f16137b2069d613b300a900935cf560c4a97570fb7a5b73656ff4dc944b",
+      "path": "output_folder/0_0/Kdown_0_0.tif"
+    },
+    "Kup_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "772502639382db0181e87d224ee896a6eaeee8dc45a5de1619422740cc7978a0",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.910076141357422,
+            "min": 8.959356307983398,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "9633bddd49e391b9df4ec77d31e7be7ca9beea09d0bc6746853244fe043427dc",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 53.19064712524414,
+            "min": 11.126058578491211,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "608e3a1bed3302c29690e4e9f9601c3a2d17ab3ebed48ac25f5732bb95ec08bd",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 72.5044174194336,
+            "min": 21.478076934814453,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "9d063a00c2c0e3c11e951a42afd7c7caf236214dbff1312a86b51db699b6431d",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 87.20443725585938,
+            "min": 31.40631675720215,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "28db82acebd43a2883d7adbe561fec54b4342d3d72f745664dcf938b58a4f079",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 97.32286071777344,
+            "min": 39.593101501464844,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "60af1603446debe9fe35ae7a84e12a2a4a1d4d29b8b1f5335466964cdc0f2c10",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 102.50935363769531,
+            "min": 46.76460647583008,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "682f832eaa8d785dc892fb35415ecde8e2de7652d722b5478f52a296c29c3a72",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 104.52656555175781,
+            "min": 50.31580352783203,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "d50d2507dbc6aa07633832466676cdc210f445c12ef663d9be0aaf14565237fe",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 101.87825012207031,
+            "min": 50.103271484375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "da058b316d1c60cd3112319eae76be7251c768d7900643e5869fcc63c3218b43",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 94.13362121582031,
+            "min": 46.91808319091797,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f74cc512c29e522c606b4e3183afdc1f5a985e43e5d23476cf4cadcc7d6bd393",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 81.6766357421875,
+            "min": 41.17340087890625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "345474ac5e0d200a433a36c3baad1aca245ad63359a1e28813a0667c39bd565c",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 65.12515258789062,
+            "min": 33.086238861083984,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "9202add78488d5825e22abe9b0292c6f9d3a48e237f1b1533667c71cd7121bec",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 45.302894592285156,
+            "min": 23.515012741088867,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3c4333586abc9e05c6281513d3d70e5928e2327a991f6a241ef208b00b577e65",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.20560646057129,
+            "min": 13.357927322387695,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "e544aa8daa5ee8118994a431f68df46c647730fedd412c848c02d0cf176e0e8f",
+      "path": "output_folder/0_0/Kup_0_0.tif"
+    },
+    "Ldown_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e32e85641adb4c84f60131c913aa5762b671bcf71ff04d914950f4aa2f54a41c",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 396.64495849609375,
+            "min": 368.55670166015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "60e68577918e19992f6e9f2e6066ebca6d162bfa27a077a3d516945723030b91",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.04791259765625,
+            "min": 377.9772033691406,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f63ebe0919e2424f91789ddab6c0058535ed4fcf192ffcbf13768f0bb4a51909",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 432.00494384765625,
+            "min": 386.44677734375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "0586eb6e0495e0994f58646088ca0b9ef9184c5e65b680593f6e5e50a2ac369c",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 447.7720642089844,
+            "min": 393.858642578125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f04df66f7687a4513bdcd6d2d3029f27143f1cccfec9091426803c2bf3cfd57a",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 460.2400817871094,
+            "min": 406.8760681152344,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "aae1af8bf02495d38e560073021edd25b4bc5667bd79e00e02f8ff11ce9ef605",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 470.7192687988281,
+            "min": 416.2909240722656,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f1eb6de799e407f10b9e560079cfbe9475cc63218fe6e2191f0e26af0afa6e0a",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 480.909423828125,
+            "min": 422.8480224609375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "6d1f90f0326bb3db86a0e6c299ff70497e3b8d98dcaf75df9f8f2c2dd1fcb66a",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 488.4804992675781,
+            "min": 426.0562744140625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "34604df6e472f8ec49c0a83f6f24cbeba312314e2b07d728ca457cd06cdaa966",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 481.87677001953125,
+            "min": 426.5730285644531,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "78b94a7f64919bdf5e186b749083bab8e85db38b32647f8386c66bfb767f8332",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 484.8912048339844,
+            "min": 424.07110595703125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "861e3057607f3752dfa4fc4213d2fa8e4e595c929fa7b00371bd765c66f6a81f",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 480.3017578125,
+            "min": 419.2367858886719,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "103b67c280fef8062e4630df0dfc7dd42c7a4707debef91f382e4b7bc548d58a",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 469.7304382324219,
+            "min": 412.7884216308594,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3836f0a6542a21a04a0333ae360c710225d9cebf7582aebcf7d56ec28c0f1e6e",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 455.399169921875,
+            "min": 405.7845153808594,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "54ce7dced4c7bcdabbcbbca75e09b4e2773210d5d427fd5be4fa0201dbfdd53c",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 438.5220031738281,
+            "min": 401.05084228515625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f3d7ce193a2baa2cd6a4284efdda2d1ea3c212b2fe3e7a598afe5df6f593af9e",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 429.0606689453125,
+            "min": 414.85870361328125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "63fb869cdd05ae1cad7328241c6de003065380d15fb9193c2d7a73e7f62d0ec2",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 421.55584716796875,
+            "min": 414.8276062011719,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "63fb869cdd05ae1cad7328241c6de003065380d15fb9193c2d7a73e7f62d0ec2",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 421.55584716796875,
+            "min": 414.8276062011719,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "63fb869cdd05ae1cad7328241c6de003065380d15fb9193c2d7a73e7f62d0ec2",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 421.55584716796875,
+            "min": 414.8276062011719,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "6c20fe5ca3da34faa0633e47876ef851cbe6d025478e23b314b55ed09538b116",
+      "path": "output_folder/0_0/Ldown_0_0.tif"
+    },
+    "Lup_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "dfdb325667c466a9a8d554d600792706e4a34b3edaf58e8949c05808a66bb826",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 470.9110107421875,
+            "min": 427.4339599609375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "b089388453ad6349d7cd418b67c83bd93c10976183e340ad8e7911f9408f4d8d",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 493.4324951171875,
+            "min": 437.33209228515625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "14d58d284b805bb083fd7022ce3918d80a53f2881080b87a1c49740e8d251f26",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 520.0096435546875,
+            "min": 447.89068603515625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e37dee1f60b81c03e56ded640c0d87c40faf21ab0023fb5cfd4162c025db5218",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 536.8021850585938,
+            "min": 457.967041015625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "1729e256cd42d03326f0228226a022b2444e3f103e45ae203375330c63e1ffb7",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 549.49609375,
+            "min": 465.2479248046875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4a6700ab29c14eb081845d7eb23ad5fd1b23dc9f75b78b153ae9959b8251f5af",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 557.5166625976562,
+            "min": 471.74700927734375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "0d4f93a174d6afc88e439acb8f90b6100e78883407e87ed247d50de060bcc6e5",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 561.213134765625,
+            "min": 475.4407043457031,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "fa2c797f7f7a459407659399358603a42b371e0e1e5a3ebe2d32ce1c93061ff9",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 562.9806518554688,
+            "min": 475.11981201171875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "1ec336c482801aff1fdd463991c976e2a6729d5f7cf399c11f18921f3758bf90",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 561.33642578125,
+            "min": 472.64447021484375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "581b591b858377a7bad38a21f95aa51d6969fac9eb999aac82d9d5b5f6ff1b5a",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 556.0179443359375,
+            "min": 467.65594482421875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "83360f79fdf5419cd33456ce7ef68886b31fa7438b4961da7ce23c3e9fd4d47e",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 545.9046630859375,
+            "min": 458.37530517578125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "1b4ef2d030fd49b687a4bd43c2a2424942330a1f59e1fdb6084e0b804905c889",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 530.5736694335938,
+            "min": 447.77508544921875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "d449099de825202c08734acfd915d910cf5148e6a4bac3807bc4f5633681c2fd",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 507.7833557128906,
+            "min": 436.3699951171875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "d2bca0faffa6ba88342bde2ae1f8157579a3cbb9d542ca8afcb0fd9fc9160284",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 462.4549560546875,
+            "min": 423.240966796875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "58833ee0318e5ae3d3a730e0e4bc119550371514e848261026d837e4fe4b3661",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 414.3741455078125,
+            "min": 414.3741455078125,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "4ed53690354866608c69ef85cb652c182a69c5fa9896b70d133d48c27fffb5f9",
+      "path": "output_folder/0_0/Lup_0_0.tif"
+    },
+    "Shadow_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "845bd08697519b7a63b7e089094d381eac296ff6323e5ae8f6d7dcf52aadd527",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "25126b88f0bb69b3fb80bfe5d698955ec3755a2f66c8e7fc36802eaa96d1bb1e",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "38c45e77f8228bc9c16378cc8d0c8c78939e441d9058b18837329cd252f70754",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "ce72ba1f1e1581d0962d12b1e14d021be8ff545c10c6b36c439e87bd2aa2178b",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "8e28e2387e2dc6fb699db751e59ce3d407f7c88f3c3b9e9485358d8d7f6e6d8f",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "b9d3452623ef9ae92f65d6e853dbd0c50c886dcb25d6e38703447043f5290571",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "57af87e125183c97340234b3f2481c3f1d69d26d258b692197348b37d83fb5ee",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "976f58e81571a1404f37ade754482d7786945b2cec88c8d1258a0d8faca0c9db",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "99e30529a5fbbe480bcb692369c0d3dd85623da2013d76576e0337f930b01b97",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "d22b666da51cc992b02c64e96880e90b6f8fd00e33f07a7d4ef07c697e14414a",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "b931daef9693879ba8629ad6d8e31d8ae740fc907415241f12d7717d876073ba",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "8cd976f99bb7314fba87bb3006ba0c4b0c9b87ca811d46a2192781918c615611",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "90ab49fe387ddbaadcae024718eb2d2ae86a53c323508f77e8b36adf8ac9d4c4",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3bc158434b8aee0fa0f326a5d2e5082302ad419c9e01ae66df70e6011570702e",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 1.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "214eb17dab9f7f122e8a491c38647166a4a8400e904afa5e8bb4913e67767d1e",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.0,
+            "min": 0.0,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "059a0930ecc0fe0ef48cc9ec654a9699c81a489fa20205da30d48b66761f0500",
+      "path": "output_folder/0_0/Shadow_0_0.tif"
+    },
+    "TMRT_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c98d56ac0f35bc6795bf05ac470ed1a3aff05b4c27adfc6352d7fd7b85ed4b4a",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 18.26513671875,
+            "min": 16.546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "78d70883ac73262bc3cf08841bea38e61741e367a27ce6f8f0ace120cfda78e3",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 49.7623291015625,
+            "min": 23.6107177734375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "5f892f8d001a16e15437fd73bf3741974740a585cbebd0dd6dd1ca01a5f0aaf2",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 58.623992919921875,
+            "min": 25.057830810546875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "1752ddbb72490343181d0c7ff4b438bb9e3a26529d096529427aaf34a84d2454",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 60.365936279296875,
+            "min": 29.009429931640625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e313b0d7f05f596aa5097bc8fe0dee07ee1166ed57e87eb4194e88c1b88fc76a",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 61.203582763671875,
+            "min": 32.805206298828125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "6846282148f79022b7fec65bbcf1a3e2c5cc4159cf4db5f3beea4af42598949b",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 60.966552734375,
+            "min": 36.145782470703125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "9aecf7ccd488fc73df1f03e36a638ba04dec90bd7a0d20ea0cced55f39dfca41",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 60.4036865234375,
+            "min": 38.7598876953125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "20143a286e07e4284ec129605b8acefde098586b611de79203e4fd13d9ce2cad",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 60.31915283203125,
+            "min": 39.23687744140625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "204808b770bf303575a09f87a93ffb2a0cd3dcc0b3d885337fb72f934213e481",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 60.040802001953125,
+            "min": 40.319122314453125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "5b0da7b6b8c7374b5e51f2df380f59aca9bb486ece1bc3cc4fe405dc8705b906",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 60.108367919921875,
+            "min": 39.904449462890625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c75976f88ea93a710a7fef70750e4e4489bf44bb8401173751a1549660be375a",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 59.235565185546875,
+            "min": 37.088348388671875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f0f246db142c93bb8e81e629e96ab29e171791fabb697f587eaaa77eaec29a16",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 56.303619384765625,
+            "min": 34.1419677734375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "b2479bec63fd140ff5df29e843d6330de866bb9eb5b4d198621264a1462b52a7",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 48.661285400390625,
+            "min": 31.319427490234375,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "04b818eb89dbe497c524b8294501494f3f134ebf11b28c33aaa428cb291ae3b0",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 38.868438720703125,
+            "min": 26.859893798828125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "0c5a6ca7c1e9c46b03702304bc99e2098ab10ba26e856d1f3457e3af10d818da",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 24.364410400390625,
+            "min": 20.417449951171875,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "2e744951594a04ecd371e4451014edda75244885c697f5c017f41696e9bf478c",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 19.79803466796875,
+            "min": 19.5347900390625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "2e744951594a04ecd371e4451014edda75244885c697f5c017f41696e9bf478c",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 19.79803466796875,
+            "min": 19.5347900390625,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "2e744951594a04ecd371e4451014edda75244885c697f5c017f41696e9bf478c",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 19.79803466796875,
+            "min": 19.5347900390625,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "a7971a760f8ed47039cf75cca8ae35c07e6708b5e02c2fe3d69fe6c0737c9d0a",
+      "path": "output_folder/0_0/TMRT_0_0.tif"
+    },
+    "Ta_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "af42f576d437aa218807858c89f6ab797b49c1f37b85c389a5514c990758dcd7",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 24.557645797729492,
+            "min": 24.557645797729492,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "38739cf6e89cf2e60a8cf3de0f4f4f4c96b648a4fc6355f2a033b6e75645a6b3",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 26.037185668945312,
+            "min": 26.037185668945312,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "eb01808acd58a9e429b1de1b7d6b4d3a1f82c54bae9605c4765fa4701550a87d",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 27.364429473876953,
+            "min": 27.364429473876953,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "ae64235359572cb316efb9f6b5b2a0524cd48bbc7850ef46dc329f657e786913",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 28.472820281982422,
+            "min": 28.472820281982422,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e6e6ac948a2aa594bf4aee1ba0257ce1bdf02ba7cadc8f3df483929a67c3b703",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 29.306781768798828,
+            "min": 29.306781768798828,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "a9dd65e2cdf597dd6fa8e5f2d4d0c0ebb5b27180c96f90ed7d4fc049bcff9b74",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 29.824495315551758,
+            "min": 29.824495315551758,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f359e7012fd56fb22350e383fac43c53230cdc851a108c82cfa5719d94df7d4c",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 30.0,
+            "min": 30.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "a9dd65e2cdf597dd6fa8e5f2d4d0c0ebb5b27180c96f90ed7d4fc049bcff9b74",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 29.824495315551758,
+            "min": 29.824495315551758,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e6e6ac948a2aa594bf4aee1ba0257ce1bdf02ba7cadc8f3df483929a67c3b703",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 29.306781768798828,
+            "min": 29.306781768798828,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "ae64235359572cb316efb9f6b5b2a0524cd48bbc7850ef46dc329f657e786913",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 28.472820281982422,
+            "min": 28.472820281982422,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "eb01808acd58a9e429b1de1b7d6b4d3a1f82c54bae9605c4765fa4701550a87d",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 27.364429473876953,
+            "min": 27.364429473876953,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "38739cf6e89cf2e60a8cf3de0f4f4f4c96b648a4fc6355f2a033b6e75645a6b3",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 26.037185668945312,
+            "min": 26.037185668945312,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "af42f576d437aa218807858c89f6ab797b49c1f37b85c389a5514c990758dcd7",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 24.557645797729492,
+            "min": 24.557645797729492,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "f26d4f4fc40efb7fa2631f65cba92bada2c8a5ee1d495f2af21bd69cbaf2e314",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.0,
+            "min": 23.0,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "2c924231decc20b6985ac656ea2f4d1a080de38008dc9b06639f1db218ce8ba3",
+      "path": "output_folder/0_0/Ta_0_0.tif"
+    },
+    "UTCI_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "abd1f8487749c155ed6fc617c0e1f2ab9da5f7665256335586f3fd504e99c52c",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.119211196899414,
+            "min": 20.630298614501953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "4fee281691ac8bebf8bb0bc53667426b27e7f3c62ff3588f7edab7b85f098e97",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 30.704139709472656,
+            "min": 23.68286895751953,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "cbea3c7b01ba48be4eb1374f876df7714b3679f970d65ddd630edd2f99f4c5fc",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 33.74668502807617,
+            "min": 25.0781307220459,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "3333a887240a1bdeaff49a313a83c593c1d72b71091d035f90679abf96630a02",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 34.93291473388672,
+            "min": 27.034635543823242,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "8a9a8642c3ba7ac528ca3a792f1340777fc43278e142a5338bd883ad77fc24fd",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 35.80134963989258,
+            "min": 28.772001266479492,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "9b82725c848f539eecdfa1b5221e13bb4a4d2b307d543a274680509a44de0a20",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 36.26264190673828,
+            "min": 30.185771942138672,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "1916ef9d4abdaa60125c377916e3777619c1779537dc4568bd4fd2490cad6eb4",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 36.45676040649414,
+            "min": 31.189741134643555,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "bf5f906ccf6f654033326883ee31a2c31374e44c26a54fe7a5c16caecbd4e8a3",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 36.54989242553711,
+            "min": 31.428619384765625,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "eaf5051704a8d1b5964d7d7f5f8a46ed4ca3a635e7e287ec1d72d78a8504b831",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 36.36878967285156,
+            "min": 31.571928024291992,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "07d420bf83b6a824eab66fe351349fcb9532fe038da7dac981e4bf284d674599",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 36.05416488647461,
+            "min": 31.115854263305664,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "70aeb47c90b581cb987d5499a71df89863614f6f4bce66e5d223051e6a27e643",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 35.32174301147461,
+            "min": 29.8511962890625,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "7c0b54c099af5c13584f0ad2616fc9068ee1c56ad6e636dc3fdfb8216e84b9d2",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 33.935482025146484,
+            "min": 28.362138748168945,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "00cb2a37cfaadb8b9ea4430d3042389acdad2334d6836e708d6b841f6dc4a667",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 31.252613067626953,
+            "min": 26.75261878967285,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "63198681d3e579eaae6c748584f53e56046ddc88170685240cd633b959f7922f",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 27.849998474121094,
+            "min": 24.58539581298828,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "3e12cfd74ccc6bcbd384fb90b07da706af7591890e2367f7c9ce96df306d472d",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 22.88812828063965,
+            "min": 21.74643325805664,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "6a5a57e742813f9b11f66a7294451efbb543bb7f732e385778edc4a2a4cec370",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.566247940063477,
+            "min": 21.493183135986328,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "6a5a57e742813f9b11f66a7294451efbb543bb7f732e385778edc4a2a4cec370",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.566247940063477,
+            "min": 21.493183135986328,
+            "nan": 56
+          }
+        },
+        {
+          "content_sha256": "6a5a57e742813f9b11f66a7294451efbb543bb7f732e385778edc4a2a4cec370",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "f08e51e8250d0cde0134f594045f6f688914019dc4fc275e3938377cebec9c7e",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1064,
+            "inf": 0,
+            "max": 21.566247940063477,
+            "min": 21.493183135986328,
+            "nan": 56
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+      "path": "output_folder/0_0/UTCI_0_0.tif"
+    },
+    "WBGT_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4bb0ca26b0cde51f285456b9b50e5b1a218ace40c2950aa8978807c02831979d",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.00859832763672,
+            "min": 19.903486251831055,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "322dbdc77e48cc64668eafd732f280bca529fe33e150151c00aeca1d60a369ed",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 22.516700744628906,
+            "min": 21.249191284179688,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "e9c528402895caae193c4d57afa94293c1b6f714c222f4360abf1ba961be13aa",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.81229019165039,
+            "min": 22.15460205078125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "23f0dfedbeb3994a2cca76fa7774fef3e3876297542756e63193e0a104e72c9b",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 24.59347152709961,
+            "min": 23.093250274658203,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "0f23cff3cde73839fb86beb3f80ce4de6fa8b8d83dcf46900be7df8b02cc9f8c",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.181468963623047,
+            "min": 23.87918472290039,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "ff206c062d28476c165794029c784cc42c63ff7c5a5ef224b3a06b1e448fe9c7",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.55758285522461,
+            "min": 24.484111785888672,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "0da8ad3c8864e8706b1909d048e377edfade616d5f35614ce0b2586b250025ee",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.76056671142578,
+            "min": 24.887893676757812,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "9751515d3f797bed6d04cf8b78b70c6fb429aa8483a6898a1f8cc8a0953e7f42",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.833751678466797,
+            "min": 24.99618148803711,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "d8c070a6ce611e068b937f49f420f307ad972fce6ba2fca2ba6f2789e26b09cb",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.741043090820312,
+            "min": 24.992839813232422,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "c16ffd1ef1711bcb6afa379b07fccc704f1db783f47b6dc6ef88af372e856890",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.510927200317383,
+            "min": 24.735607147216797,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "360524094a7bc8e6a5de4da76b7a0d74711f2fd66a458867c47c42769a2e3818",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 25.07341766357422,
+            "min": 24.161388397216797,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "358a59e0c61d34775385808d3eab482c9864871ed98a037b5766578ee7af8986",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 24.370052337646484,
+            "min": 23.426803588867188,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "9d42766b6836823c8b282be3e60f3445403bc2ed05969154490bc6c3b4619658",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 23.274314880371094,
+            "min": 22.55746078491211,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "df47e88cb421a03111f083ba5a8b8123b4595e8510e558120ba1c5912fd00633",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 21.960683822631836,
+            "min": 21.457683563232422,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "82f8914b1f73d3af7c1a510ec60af414753f5997b775eda85ec554ce5bd4a995",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.366884231567383,
+            "min": 20.142776489257812,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "52094355e38cab6c58171ae22ea740191b17dc398664237da5478925a1dc2396",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.10389518737793,
+            "min": 20.087432861328125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "52094355e38cab6c58171ae22ea740191b17dc398664237da5478925a1dc2396",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.10389518737793,
+            "min": 20.087432861328125,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "52094355e38cab6c58171ae22ea740191b17dc398664237da5478925a1dc2396",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 20.10389518737793,
+            "min": 20.087432861328125,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "cf079ab0ca21dfa6627767cc00ce23006fa0f4a2343900027b9eadb7269cf570",
+      "path": "output_folder/0_0/WBGT_0_0.tif"
+    },
+    "Wind_0_0.tif": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 24,
+      "bands": [
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {
+            "Time": "2020-07-18T00:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 2,
+          "metadata": {
+            "Time": "2020-07-18T01:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 3,
+          "metadata": {
+            "Time": "2020-07-18T02:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 4,
+          "metadata": {
+            "Time": "2020-07-18T03:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 5,
+          "metadata": {
+            "Time": "2020-07-18T04:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 6,
+          "metadata": {
+            "Time": "2020-07-18T05:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 7,
+          "metadata": {
+            "Time": "2020-07-18T06:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4c47454b1c6701bf1949ebab7f9a41eded28269723a50298e403204f23f5b684",
+          "dtype": "Float32",
+          "index": 8,
+          "metadata": {
+            "Time": "2020-07-18T07:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.111260414123535,
+            "min": 2.111260414123535,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "591fe75f510ca5b4370d5f3ca4577df9b8a95d9f7313d9e9f2b4c01cb393fd59",
+          "dtype": "Float32",
+          "index": 9,
+          "metadata": {
+            "Time": "2020-07-18T08:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.2169418334960938,
+            "min": 2.2169418334960938,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "90234dbce25836a036bc9cb2379b1821bdc2ddbab58d7ed0c441bc6fe1c1912d",
+          "dtype": "Float32",
+          "index": 10,
+          "metadata": {
+            "Time": "2020-07-18T09:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.3117449283599854,
+            "min": 2.3117449283599854,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "a9cc6bd2128741e5c365c7a95ac2ad9b91ae67e6468d68974db68d2964456706",
+          "dtype": "Float32",
+          "index": 11,
+          "metadata": {
+            "Time": "2020-07-18T10:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.390915632247925,
+            "min": 2.390915632247925,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "6539d66e23f09757bbc82571fdc68ef013534b47aa924a72d1b689d66e6933e2",
+          "dtype": "Float32",
+          "index": 12,
+          "metadata": {
+            "Time": "2020-07-18T11:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.45048451423645,
+            "min": 2.45048451423645,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "ad6a1e932308e04c808d11f73184ef49bf11443cef39c82938ad6cace20f4f9d",
+          "dtype": "Float32",
+          "index": 13,
+          "metadata": {
+            "Time": "2020-07-18T12:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.48746395111084,
+            "min": 2.48746395111084,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "20f3e2754b3a55f94102312bceb6deb59c7e31ff2bc900d7e9cb68dc21681d6f",
+          "dtype": "Float32",
+          "index": 14,
+          "metadata": {
+            "Time": "2020-07-18T13:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.5,
+            "min": 2.5,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "ad6a1e932308e04c808d11f73184ef49bf11443cef39c82938ad6cace20f4f9d",
+          "dtype": "Float32",
+          "index": 15,
+          "metadata": {
+            "Time": "2020-07-18T14:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.48746395111084,
+            "min": 2.48746395111084,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "6539d66e23f09757bbc82571fdc68ef013534b47aa924a72d1b689d66e6933e2",
+          "dtype": "Float32",
+          "index": 16,
+          "metadata": {
+            "Time": "2020-07-18T15:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.45048451423645,
+            "min": 2.45048451423645,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "a9cc6bd2128741e5c365c7a95ac2ad9b91ae67e6468d68974db68d2964456706",
+          "dtype": "Float32",
+          "index": 17,
+          "metadata": {
+            "Time": "2020-07-18T16:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.390915632247925,
+            "min": 2.390915632247925,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "90234dbce25836a036bc9cb2379b1821bdc2ddbab58d7ed0c441bc6fe1c1912d",
+          "dtype": "Float32",
+          "index": 18,
+          "metadata": {
+            "Time": "2020-07-18T17:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.3117449283599854,
+            "min": 2.3117449283599854,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "591fe75f510ca5b4370d5f3ca4577df9b8a95d9f7313d9e9f2b4c01cb393fd59",
+          "dtype": "Float32",
+          "index": 19,
+          "metadata": {
+            "Time": "2020-07-18T18:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.2169418334960938,
+            "min": 2.2169418334960938,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "4c47454b1c6701bf1949ebab7f9a41eded28269723a50298e403204f23f5b684",
+          "dtype": "Float32",
+          "index": 20,
+          "metadata": {
+            "Time": "2020-07-18T19:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.111260414123535,
+            "min": 2.111260414123535,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 21,
+          "metadata": {
+            "Time": "2020-07-18T20:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 22,
+          "metadata": {
+            "Time": "2020-07-18T21:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 23,
+          "metadata": {
+            "Time": "2020-07-18T22:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        },
+        {
+          "content_sha256": "3cd21517ad32ec67960ff36fb89db901838e70ac4b5ce197a27364a2455f5ebe",
+          "dtype": "Float32",
+          "index": 24,
+          "metadata": {
+            "Time": "2020-07-18T23:00:00"
+          },
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 2.0,
+            "min": 2.0,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "53b612b1fad20109bd04c10e4f9603c72824f37a66fcabe321a57130884ed1a2",
+      "path": "output_folder/0_0/Wind_0_0.tif"
+    }
+  },
+  "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/dependencies_cpu/scene",
+  "svf": {
+    "npz": {
+      "file_sha256": "7b35f89104798a045cffa2ecd880b7d86e70c262f2e83659b3928ad8b39b565b",
+      "members": {
+        "shadowmat": {
+          "content_sha256": "2eba980b3b778b0991cab52f829babe8f7345be3c4e2633c0a5aac1049c6e01f",
+          "dtype": "float32",
+          "numeric": {
+            "finite": 171360,
+            "inf": 0,
+            "nan": 0
+          },
+          "shape": [
+            32,
+            35,
+            153
+          ],
+          "unique_count": 2,
+          "unique_counts_capped": [
+            17787,
+            153573
+          ],
+          "unique_values_capped": [
+            0.0,
+            1.0
+          ],
+          "unique_values_truncated": false
+        },
+        "vbshmat": {
+          "content_sha256": "a49fc09a81426e26251a730e9dbf8a37aeb0d3189d42d4adce52a57b8403cc01",
+          "dtype": "float32",
+          "numeric": {
+            "finite": 171360,
+            "inf": 0,
+            "nan": 0
+          },
+          "shape": [
+            32,
+            35,
+            153
+          ],
+          "unique_count": 2,
+          "unique_counts_capped": [
+            292,
+            171068
+          ],
+          "unique_values_capped": [
+            0.0,
+            1.0
+          ],
+          "unique_values_truncated": false
+        },
+        "vegshadowmat": {
+          "content_sha256": "ffc0424b06e3b8bb5a1e64be7cce51a0be0cd437bf97b23c54fa1e2cbb635da5",
+          "dtype": "float32",
+          "numeric": {
+            "finite": 171360,
+            "inf": 0,
+            "nan": 0
+          },
+          "shape": [
+            32,
+            35,
+            153
+          ],
+          "unique_count": 2,
+          "unique_counts_capped": [
+            5800,
+            165560
+          ],
+          "unique_values_capped": [
+            0.0,
+            1.0
+          ],
+          "unique_values_truncated": false
+        }
+      },
+      "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/dependencies_cpu/scene/processed_inputs/SVF/shadowmats_0_0.npz"
+    },
+    "standalone": {
+      "affine": [
+        583000.0,
+        1.0,
+        0.0,
+        4507000.0,
+        0.0,
+        -1.0
+      ],
+      "band_count": 1,
+      "bands": [
+        {
+          "content_sha256": "a2f37ca3a989f959f540b47d26d2ff87aac259a495db90d1bae44fb4435ce167",
+          "dtype": "Float32",
+          "index": 1,
+          "metadata": {},
+          "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+          "nodata": null,
+          "nodata_present": false,
+          "numeric": {
+            "finite": 1120,
+            "inf": 0,
+            "max": 0.98907470703125,
+            "min": 0.512642502784729,
+            "nan": 0
+          }
+        }
+      ],
+      "crs_authority": "32618",
+      "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+      "dimensions": {
+        "columns": 35,
+        "rows": 32
+      },
+      "dtype": "Float32",
+      "file_sha256": "0f10eba06cba04e7abb8030dc0f0b1b08921cae410ba171ed1df4d3e089290cc",
+      "path": "processed_inputs/SVF/SkyViewFactor_0_0.tif"
+    },
+    "zip": {
+      "file_sha256": "bc6ca9cc71a808937153224e7a688eb2f96e80577f886b77cd5dfedf752c2fa1",
+      "member_count": 15,
+      "member_names": [
+        "svf.tif",
+        "svfE.tif",
+        "svfEaveg.tif",
+        "svfEveg.tif",
+        "svfN.tif",
+        "svfNaveg.tif",
+        "svfNveg.tif",
+        "svfS.tif",
+        "svfSaveg.tif",
+        "svfSveg.tif",
+        "svfW.tif",
+        "svfWaveg.tif",
+        "svfWveg.tif",
+        "svfaveg.tif",
+        "svfveg.tif"
+      ],
+      "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/dependencies_cpu/scene/processed_inputs/SVF/svfs_0_0.zip",
+      "tiff_schemas": {
+        "svf.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "1b68bd38c183c717cd385be6e762910b2b8b190bf9fa018943807f48cf13b52b",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.98907470703125,
+                "min": 0.5331308245658875,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svf.tif"
+        },
+        "svfE.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "1a1cc413b53caadf284d21bc1a24af8f126bda38c138d62bd9d6b6419c62d7d1",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 1.0,
+                "min": 0.18404965102672577,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfE.tif"
+        },
+        "svfEaveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "1f669669f2a98c1603e210a85b95769f3bf6dc48cceb249195070f6cd65b852d",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 1.0,
+                "min": 1.0,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfEaveg.tif"
+        },
+        "svfEveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "3dcca26175ed20bd0e20b2c9c62dc02652bba43bc495e8150d59c0acb445ff41",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 1.0,
+                "min": 0.5573647022247314,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfEveg.tif"
+        },
+        "svfN.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "2bf9487f88fb18cf8b5dc7b3045073e5fbdc42631fb73b908f60f141c7547ed5",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.9752265214920044,
+                "min": 0.11300713568925858,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfN.tif"
+        },
+        "svfNaveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "21fced1485f928a5fb84c780ce631df196d1e936751eac6dc9bbfb37ceadd221",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.9752265214920044,
+                "min": 0.9112647771835327,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfNaveg.tif"
+        },
+        "svfNveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "ee6847fc95b1cfdec653bf68af194b56d3bc38da1e10639948ee82e481cf0382",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.9752265214920044,
+                "min": 0.5502500534057617,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfNveg.tif"
+        },
+        "svfS.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "f81896b8fc288507416876677294a166b184bb8aeddb89439d554828eaf6f36e",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.9484643340110779,
+                "min": 0.06508874893188477,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfS.tif"
+        },
+        "svfSaveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "6c31eef9dac18435197a03a2011b122c8420f4b60eb0815b6812b4f9dd7cfc0b",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.9484643340110779,
+                "min": 0.8983005285263062,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfSaveg.tif"
+        },
+        "svfSveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "fa61dae462991c3d2b84c2fdc2dba7abad490527d138736da8192955ae291965",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.9484643340110779,
+                "min": 0.5056565999984741,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfSveg.tif"
+        },
+        "svfW.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "9b9bf5c84c67fe1976500fcc1c0a7c4f7a386fc050689b496f64400501ba7946",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.8594677448272705,
+                "min": 0.0412457138299942,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfW.tif"
+        },
+        "svfWaveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "9cfe088a298fd175e144ae97a448271fb0c39cee3c49d9d378cc1179a86cf656",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.8594677448272705,
+                "min": 0.7955058813095093,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfWaveg.tif"
+        },
+        "svfWveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "30de17ea0a4bef5ddfcf79069b46dfaa35358ed65a055109e4c263a02777ed99",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 0.8594677448272705,
+                "min": 0.4962429702281952,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfWveg.tif"
+        },
+        "svfaveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "2b9619a8ff0fbc8190cae3fbe591c123d3fbb7dd4ea3a899e7b22fa2cba5b32b",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 1.0,
+                "min": 0.9680203795433044,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfaveg.tif"
+        },
+        "svfveg.tif": {
+          "affine": [
+            583000.0,
+            1.0,
+            0.0,
+            4507000.0,
+            0.0,
+            -1.0
+          ],
+          "band_count": 1,
+          "bands": [
+            {
+              "content_sha256": "2f0cd95a1bae2404377028187edca8222e03607f42603bc9b262b98d4027822b",
+              "dtype": "Float32",
+              "index": 1,
+              "metadata": {},
+              "nan_mask_sha256": "5cc201eb697e57027dcf74bac0995467bc9b787848be4c0d740956a97ddf65a5",
+              "nodata": null,
+              "nodata_present": false,
+              "numeric": {
+                "finite": 1120,
+                "inf": 0,
+                "max": 1.0,
+                "min": 0.6672617197036743,
+                "nan": 0
+              }
+            }
+          ],
+          "crs_authority": "32618",
+          "crs_wkt": "PROJCS[\"WGS 84 / UTM zone 18N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32618\"]]",
+          "dimensions": {
+            "columns": 35,
+            "rows": 32
+          },
+          "dtype": "Float32",
+          "file_sha256": null,
+          "path": "svfveg.tif"
+        }
+      }
+    }
+  }
+}

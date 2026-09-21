@@ -1,0 +1,631 @@
+{
+  "mode_hex": "0x140102",
+  "stages": {
+    "patch_delta": {
+      "mismatches": 0,
+      "first_indices": []
+    },
+    "xi_numpy": {
+      "mismatches": 33,
+      "first_indices": [
+        [
+          0
+        ],
+        [
+          12
+        ],
+        [
+          15
+        ],
+        [
+          16
+        ],
+        [
+          20
+        ],
+        [
+          25
+        ],
+        [
+          26
+        ],
+        [
+          32
+        ],
+        [
+          41
+        ],
+        [
+          42
+        ],
+        [
+          43
+        ],
+        [
+          46
+        ]
+      ]
+    },
+    "xi_mkl": {
+      "mismatches": 0,
+      "first_indices": []
+    },
+    "solar_rad": {
+      "mismatches": 0,
+      "first_indices": []
+    },
+    "solar_tan_numpy": {
+      "mismatches": 0,
+      "first_indices": []
+    },
+    "solar_tan_mkl": {
+      "mismatches": 0,
+      "first_indices": []
+    },
+    "hsvf_numpy": {
+      "mismatches": 185,
+      "first_indices": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          58,
+          0
+        ],
+        [
+          59,
+          0
+        ],
+        [
+          60,
+          0
+        ]
+      ]
+    },
+    "hsvf_mkl": {
+      "mismatches": 0,
+      "first_indices": []
+    },
+    "numpy": {
+      "yi": {
+        "mismatches": 16,
+        "first_indices": [
+          [
+            15
+          ],
+          [
+            16
+          ],
+          [
+            20
+          ],
+          [
+            25
+          ],
+          [
+            26
+          ],
+          [
+            46
+          ],
+          [
+            54
+          ],
+          [
+            55
+          ],
+          [
+            58
+          ],
+          [
+            87
+          ],
+          [
+            105
+          ],
+          [
+            108
+          ]
+        ]
+      },
+      "tan_delta": {
+        "mismatches": 30196,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "atan": {
+        "mismatches": 34108,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "masks": {
+        "sun": {
+          "cell_mismatches": 29,
+          "input_mismatches": 29
+        },
+        "shade": {
+          "cell_mismatches": 31,
+          "input_mismatches": 31
+        }
+      }
+    },
+    "mkl_cos": {
+      "yi": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "tan_delta": {
+        "mismatches": 27587,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "atan": {
+        "mismatches": 32398,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "masks": {
+        "sun": {
+          "cell_mismatches": 31,
+          "input_mismatches": 31
+        },
+        "shade": {
+          "cell_mismatches": 30,
+          "input_mismatches": 30
+        }
+      }
+    },
+    "mkl_cos_dtan": {
+      "yi": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "tan_delta": {
+        "mismatches": 27587,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "atan": {
+        "mismatches": 32398,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "masks": {
+        "sun": {
+          "cell_mismatches": 31,
+          "input_mismatches": 31
+        },
+        "shade": {
+          "cell_mismatches": 30,
+          "input_mismatches": 30
+        }
+      }
+    },
+    "mkl_cos_dtan_tan": {
+      "yi": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "tan_delta": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "atan": {
+        "mismatches": 19787,
+        "first_indices": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            0,
+            7
+          ],
+          [
+            0,
+            8
+          ],
+          [
+            0,
+            9
+          ],
+          [
+            0,
+            10
+          ],
+          [
+            0,
+            11
+          ]
+        ]
+      },
+      "masks": {
+        "sun": {
+          "cell_mismatches": 29,
+          "input_mismatches": 29
+        },
+        "shade": {
+          "cell_mismatches": 14,
+          "input_mismatches": 14
+        }
+      }
+    },
+    "full_mkl_trig": {
+      "yi": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "tan_delta": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "atan": {
+        "mismatches": 0,
+        "first_indices": []
+      },
+      "masks": {
+        "sun": {
+          "cell_mismatches": 0,
+          "input_mismatches": 0
+        },
+        "shade": {
+          "cell_mismatches": 0,
+          "input_mismatches": 0
+        }
+      }
+    }
+  },
+  "minimal_fixture_inputs": 57,
+  "environment": {
+    "torch_import_spec": "None",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "library_sha256": "0f3c805b85c36f3aaf6792930b054d80a945af032f0a97c4926d7ad94a7d61d9"
+  },
+  "method": "Exact standalone MKL vmsCos/vmdTan/vmsTan/vmsAtan with float32 wrapped multiply/add and float64 solar scalar, matching original Torch dtypes."
+}

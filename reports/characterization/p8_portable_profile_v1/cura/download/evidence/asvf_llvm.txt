@@ -1,0 +1,637 @@
+; ModuleID = 'asvf_fma'
+source_filename = "<string>"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-i128:128-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-unknown-linux-gnu"
+
+@.const.asvf_fma = internal constant [9 x i8] c"asvf_fma\00"
+@_ZN08NumbaEnv13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE = common local_unnamed_addr global ptr null
+@".const.missing Environment: _ZN08NumbaEnv13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE" = internal constant [175 x i8] c"missing Environment: _ZN08NumbaEnv13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE\00"
+@PyExc_TypeError = external global i8
+@".const.can't unbox array from PyObject into native value.  The object maybe of a different type" = internal constant [89 x i8] c"can't unbox array from PyObject into native value.  The object maybe of a different type\00"
+@".const.`env.consts` is NULL in `read_const`" = internal constant [37 x i8] c"`env.consts` is NULL in `read_const`\00"
+@.const.pickledata.dfbcfdd39fcb26f4d0c680954487b8c0b53bb8a3 = internal constant [32 x i8] c"\80\04\95\15\00\00\00\00\00\00\00\8C\05numpy\94\8C\07ndarray\94\93\94."
+@.const.pickledata.dfbcfdd39fcb26f4d0c680954487b8c0b53bb8a3.sha1 = internal constant [20 x i8] c"\DF\BC\FD\D3\9F\CB&\F4\D0\C6\80\95D\87\B8\C0\B5;\B8\A3"
+@".const.Error creating Python tuple from runtime exception arguments" = internal constant [61 x i8] c"Error creating Python tuple from runtime exception arguments\00"
+@".const.Error creating Python tuple from runtime exception arguments.1" = internal constant [61 x i8] c"Error creating Python tuple from runtime exception arguments\00"
+@".const.<numba.core.cpu.CPUContext>" = internal constant [28 x i8] c"<numba.core.cpu.CPUContext>\00"
+@_ZN08NumbaEnv5numba2np8arrayobj11ol_np_empty12_3clocals_3e4implB2v7B54c8tJTIeFIjxB2IKSgI4CrvQCk0Z4yRYcWsBAw4hWqFpgsIBZmgA_3dEx18class_28float32_29 = common local_unnamed_addr global ptr null
+@.const.pickledata.331b8563bdb9dac81b38422273052c486fc1706b = internal constant [77 x i8] c"\80\04\95B\00\00\00\00\00\00\00\8C\08builtins\94\8C\0AValueError\94\93\94\8C\1Fnegative dimensions not allowed\94\85\94N\87\94."
+@.const.pickledata.331b8563bdb9dac81b38422273052c486fc1706b.sha1 = internal constant [20 x i8] c"3\1B\85c\BD\B9\DA\C8\1B8B\22s\05,Ho\C1pk"
+@.const.picklebuf.331b8563bdb9dac81b38422273052c486fc1706b = internal constant { ptr, i32, ptr, ptr, i32 } { ptr @.const.pickledata.331b8563bdb9dac81b38422273052c486fc1706b, i32 77, ptr @.const.pickledata.331b8563bdb9dac81b38422273052c486fc1706b.sha1, ptr null, i32 0 }
+@.const.pickledata.58e14eccb507b1e0206981740223e685cb8c3c57 = internal constant [137 x i8] c"\80\04\95~\00\00\00\00\00\00\00\8C\08builtins\94\8C\0AValueError\94\93\94\8C[array is too big; `arr.size * arr.dtype.itemsize` is larger than the maximum possible size.\94\85\94N\87\94."
+@.const.pickledata.58e14eccb507b1e0206981740223e685cb8c3c57.sha1 = internal constant [20 x i8] c"X\E1N\CC\B5\07\B1\E0 i\81t\02#\E6\85\CB\8C<W"
+@.const.picklebuf.58e14eccb507b1e0206981740223e685cb8c3c57 = internal constant { ptr, i32, ptr, ptr, i32 } { ptr @.const.pickledata.58e14eccb507b1e0206981740223e685cb8c3c57, i32 137, ptr @.const.pickledata.58e14eccb507b1e0206981740223e685cb8c3c57.sha1, ptr null, i32 0 }
+@PyExc_RuntimeError = external global i8
+@_ZN08NumbaEnv5numba2np8arrayobj15_call_allocatorB2v8B42c8tJTC_2fWQA93W1AaAIYBPIqRBFCjDSZRVAJmaQIAEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj = common local_unnamed_addr global ptr null
+@_ZN08NumbaEnv5numba2np8arrayobj18_ol_array_allocate12_3clocals_3e4implB2v9B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj = common local_unnamed_addr global ptr null
+@.const.pickledata.ba289d81f05c7020f3477c15734804df65abe209 = internal constant [86 x i8] c"\80\04\95K\00\00\00\00\00\00\00\8C\08builtins\94\8C\0BMemoryError\94\93\94\8C'Allocation failed (probably too large).\94\85\94N\87\94."
+@.const.pickledata.ba289d81f05c7020f3477c15734804df65abe209.sha1 = internal constant [20 x i8] c"\BA(\9D\81\F0\\p \F3G|\15sH\04\DFe\AB\E2\09"
+@.const.picklebuf.ba289d81f05c7020f3477c15734804df65abe209 = internal constant { ptr, i32, ptr, ptr, i32 } { ptr @.const.pickledata.ba289d81f05c7020f3477c15734804df65abe209, i32 86, ptr @.const.pickledata.ba289d81f05c7020f3477c15734804df65abe209.sha1, ptr null, i32 0 }
+
+define range(i32 0, 2) i32 @_ZN13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE(ptr noalias writeonly captures(none) %retptr, ptr noalias writeonly captures(none) %excinfo, ptr %arg.values.0, ptr readnone captures(none) %arg.values.1, i64 %arg.values.2, i64 %arg.values.3, ptr readonly captures(none) %arg.values.4, i64 %arg.values.5.0, i64 %arg.values.6.0) local_unnamed_addr {
+B0:
+  tail call void @NRT_incref(ptr %arg.values.0)
+  %.15.i = icmp slt i64 %arg.values.2, 0
+  br i1 %.15.i, label %B0.if.if, label %B0.endif.endif.i, !prof !0
+
+B0.endif.endif.i:                                 ; preds = %B0
+  %const = bitcast i64 2305843009213693944 to i64
+  %const_mat = add i64 %const, 7
+  %.31.i = icmp samesign ugt i64 %arg.values.2, %const_mat
+  br i1 %.31.i, label %B0.if.if, label %B0.endif.endif.endif.i, !prof !0
+
+B0.endif.endif.endif.i:                           ; preds = %B0.endif.endif.i
+  %.30.i = shl nuw nsw i64 %arg.values.2, 2
+  %.7.i.i.i = tail call ptr @NRT_MemInfo_alloc_aligned(i64 %.30.i, i32 32), !noalias !1
+  %.8.i.i.i = icmp eq ptr %.7.i.i.i, null
+  br i1 %.8.i.i.i, label %B0.if.if, label %B0.endif.endif, !prof !0
+
+B144:                                             ; preds = %B144.preheader19, %B2237
+  %.160163165 = phi i64 [ %.167, %B2237 ], [ %.160163165.ph, %B144.preheader19 ]
+  %.167 = add nuw nsw i64 %.160163165, 1
+  %0 = shl i64 %.160163165, 2
+  %scevgep20 = getelementptr i8, ptr %arg.values.4, i64 %0
+  %.226 = load float, ptr %scevgep20, align 4
+  %.234 = tail call float @sqrtf(float %.226)
+  %.243 = tail call float @llvm.fabs.f32(float %.234)
+  %.249 = fcmp olt float %.243, 5.000000e-01
+  br i1 %.249, label %B1329, label %B1335
+
+B1329:                                            ; preds = %B144
+  %.257 = fmul float %.234, %.234
+  br label %B1361
+
+B1335:                                            ; preds = %B144
+  %.264 = fsub float 1.000000e+00, %.243
+  %.266 = fmul float %.264, 5.000000e-01
+  %.307 = tail call float @sqrtf(float %.266)
+  %.312 = fmul float %.307, %.307
+  %.313 = fneg float %.312
+  %.314 = tail call float @llvm.fma.f32(float %.307, float %.307, float %.313)
+  %.315 = fadd float %.266, %.312
+  %.316 = fsub float %.315, %.266
+  %.317 = fsub float %.315, %.316
+  %.318 = fsub float %.266, %.317
+  %.319 = fsub float %.312, %.316
+  %.320 = fadd float %.319, %.318
+  %.321 = fadd float %.314, %.320
+  %.326 = fdiv float 1.000000e+00, %.307
+  %.327 = fneg float %.307
+  %.329 = tail call float @llvm.fma.f32(float %.327, float %.326, float 1.000000e+00)
+  %.330 = fmul float %.326, %.329
+  %.350 = fmul float %.326, %.315
+  %.361 = fneg float %.350
+  %.362 = tail call float @llvm.fma.f32(float %.315, float %.326, float %.361)
+  %.363 = tail call float @llvm.fma.f32(float %.321, float %.326, float %.362)
+  %.364 = tail call float @llvm.fma.f32(float %.315, float %.330, float %.363)
+  %.386 = fmul float %.350, 5.000000e-01
+  %.388 = fmul float %.364, 5.000000e-01
+  br label %B1361
+
+B1361:                                            ; preds = %B1335, %B1329
+  %acos_fma_v2__vphi172_0.2.1142 = phi float [ %.257, %B1329 ], [ %.266, %B1335 ]
+  %acos_fma_v2__vphi224_0.2.sroa.8.1 = phi float [ 0.000000e+00, %B1329 ], [ %.388, %B1335 ]
+  %acos_fma_v2__vphi224_0.2.sroa.0.1 = phi float [ %.243, %B1329 ], [ %.386, %B1335 ]
+  %1 = fcmp olt float %.243, 5.000000e-01
+  %.432 = fcmp oeq float %.243, 1.000000e+00
+  %acos_fma_v2_x.2.sroa.0.1 = select i1 %.432, float 0.000000e+00, float %acos_fma_v2__vphi224_0.2.sroa.0.1
+  %.454 = tail call float @llvm.fma.f32(float %acos_fma_v2__vphi172_0.2.1142, float 0x3FA57DB020000000, float 0x3F98D27DC0000000)
+  %.457 = tail call float @llvm.fma.f32(float %.454, float %acos_fma_v2__vphi172_0.2.1142, float 0x3FA7486640000000)
+  %.460 = tail call float @llvm.fma.f32(float %.457, float %acos_fma_v2__vphi172_0.2.1142, float 0x3FB32FF140000000)
+  %.463 = tail call float @llvm.fma.f32(float %.460, float %acos_fma_v2__vphi172_0.2.1142, float 0x3FC5555E40000000)
+  %.467 = fmul float %acos_fma_v2__vphi172_0.2.1142, %acos_fma_v2_x.2.sroa.0.1
+  %.470 = fmul float %.463, %.467
+  br i1 %1, label %for.body.2, label %B1715
+
+B1715:                                            ; preds = %B1361
+  %2 = fcmp oeq float %.243, 1.000000e+00
+  %acos_fma_v2_x.2.sroa.14.1 = select i1 %2, float 0.000000e+00, float %acos_fma_v2__vphi224_0.2.sroa.8.1
+  %.581 = fadd float %acos_fma_v2_x.2.sroa.0.1, %.470
+  %.584 = fsub float %acos_fma_v2_x.2.sroa.0.1, %.581
+  %.586 = fadd float %.470, %.584
+  %.595 = fadd float %acos_fma_v2_x.2.sroa.14.1, %.586
+  %.597 = fmul float %.581, 2.000000e+00
+  %.599 = fmul float %.595, 2.000000e+00
+  %.618 = fcmp olt float %.234, 0.000000e+00
+  br i1 %.618, label %B1995, label %B2237
+
+B1995:                                            ; preds = %B1715
+  %.642 = fsub float 0x400921FB60000000, %.597
+  %.644 = fsub float 0x400921FB60000000, %.642
+  %.646 = fsub float %.644, %.597
+  %.650 = fadd float %.646, 0xBE7777A5C0000000
+  %.654 = fsub float %.650, %.599
+  br label %B2237
+
+B2237:                                            ; preds = %for.body.2, %B1995, %B1715
+  %acos_fma_v2_y.3.sroa.11.1 = phi float [ %.555, %for.body.2 ], [ %.654, %B1995 ], [ %.599, %B1715 ]
+  %acos_fma_v2_y.3.sroa.0.1 = phi float [ %.543, %for.body.2 ], [ %.642, %B1995 ], [ %.597, %B1715 ]
+  %.688 = fadd float %acos_fma_v2_y.3.sroa.11.1, %acos_fma_v2_y.3.sroa.0.1
+  %3 = shl i64 %.160163165, 2
+  %scevgep = getelementptr i8, ptr %.6.i.i, i64 %3
+  store float %.688, ptr %scevgep, align 4
+  %exitcond.not = icmp eq i64 %arg.values.2, %.167
+  br i1 %exitcond.not, label %B2301, label %B144, !llvm.loop !11
+
+common.ret:                                       ; preds = %B0.if.if, %B2301
+  %common.ret.op = phi i32 [ 0, %B2301 ], [ 1, %B0.if.if ]
+  ret i32 %common.ret.op
+
+B2301:                                            ; preds = %B2237, %middle.block, %B0.endif.endif
+  store ptr %.7.i.i.i, ptr %retptr, align 8
+  %retptr.repack148 = getelementptr inbounds nuw i8, ptr %retptr, i64 8
+  store ptr null, ptr %retptr.repack148, align 8
+  %retptr.repack150 = getelementptr inbounds nuw i8, ptr %retptr, i64 16
+  store i64 %arg.values.2, ptr %retptr.repack150, align 8
+  %retptr.repack152 = getelementptr inbounds nuw i8, ptr %retptr, i64 24
+  store i64 4, ptr %retptr.repack152, align 8
+  %retptr.repack154 = getelementptr inbounds nuw i8, ptr %retptr, i64 32
+  store ptr %.6.i.i, ptr %retptr.repack154, align 8
+  %retptr.repack156 = getelementptr inbounds nuw i8, ptr %retptr, i64 40
+  store i64 %arg.values.2, ptr %retptr.repack156, align 8
+  %retptr.repack158 = getelementptr inbounds nuw i8, ptr %retptr, i64 48
+  store i64 4, ptr %retptr.repack158, align 8
+  tail call void @NRT_decref(ptr %arg.values.0)
+  br label %common.ret
+
+B0.if.if:                                         ; preds = %B0.endif.endif.i, %B0, %B0.endif.endif.endif.i
+  %excinfo.1.0.ph = phi ptr [ @.const.picklebuf.ba289d81f05c7020f3477c15734804df65abe209, %B0.endif.endif.endif.i ], [ @.const.picklebuf.58e14eccb507b1e0206981740223e685cb8c3c57, %B0.endif.endif.i ], [ @.const.picklebuf.331b8563bdb9dac81b38422273052c486fc1706b, %B0 ]
+  store ptr %excinfo.1.0.ph, ptr %excinfo, align 8
+  br label %common.ret
+
+B0.endif.endif:                                   ; preds = %B0.endif.endif.endif.i
+  %.5.i.i = getelementptr i8, ptr %.7.i.i.i, i64 24
+  %.6.i.i = load ptr, ptr %.5.i.i, align 8, !noalias !13
+  %.154164.not = icmp eq i64 %arg.values.2, 0
+  br i1 %.154164.not, label %B2301, label %B144.preheader
+
+B144.preheader:                                   ; preds = %B0.endif.endif
+  %4 = ptrtoint ptr %arg.values.4 to i64
+  %.6.i.i11 = ptrtoint ptr %.6.i.i to i64
+  %min.iters.check = icmp ult i64 %arg.values.2, 8
+  %5 = sub i64 %.6.i.i11, %4
+  %diff.check = icmp ult i64 %5, 32
+  %or.cond = select i1 %min.iters.check, i1 true, i1 %diff.check
+  br i1 %or.cond, label %B144.preheader19, label %vector.ph
+
+vector.ph:                                        ; preds = %B144.preheader
+  %n.vec = and i64 %arg.values.2, %const
+  %6 = lshr i64 %arg.values.2, 3
+  %7 = trunc i64 %6 to i58
+  %8 = zext i58 %7 to i64
+  %9 = shl nuw nsw i64 %8, 5
+  br label %vector.body
+
+vector.body:                                      ; preds = %vector.body, %vector.ph
+  %lsr.iv = phi i64 [ %lsr.iv.next, %vector.body ], [ 0, %vector.ph ]
+  %scevgep22 = getelementptr i8, ptr %arg.values.4, i64 %lsr.iv
+  %wide.load = load <8 x float>, ptr %scevgep22, align 4
+  %10 = tail call <8 x float> @llvm.sqrt.v8f32(<8 x float> %wide.load)
+  %11 = tail call <8 x float> @llvm.fabs.v8f32(<8 x float> %10)
+  %12 = fcmp uge <8 x float> %11, splat (float 5.000000e-01)
+  %13 = fsub <8 x float> splat (float 1.000000e+00), %11
+  %14 = fmul <8 x float> %13, splat (float 5.000000e-01)
+  %15 = tail call <8 x float> @llvm.sqrt.v8f32(<8 x float> %14)
+  %16 = fmul <8 x float> %15, %15
+  %17 = fneg <8 x float> %16
+  %18 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %15, <8 x float> %15, <8 x float> %17)
+  %19 = fadd <8 x float> %14, %16
+  %20 = fsub <8 x float> %19, %14
+  %21 = fsub <8 x float> %19, %20
+  %22 = fsub <8 x float> %14, %21
+  %23 = fsub <8 x float> %16, %20
+  %24 = fadd <8 x float> %23, %22
+  %25 = fadd <8 x float> %18, %24
+  %26 = fdiv <8 x float> splat (float 1.000000e+00), %15
+  %27 = fneg <8 x float> %15
+  %28 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %27, <8 x float> %26, <8 x float> splat (float 1.000000e+00))
+  %29 = fmul <8 x float> %26, %28
+  %30 = fmul <8 x float> %26, %19
+  %31 = fneg <8 x float> %30
+  %32 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %19, <8 x float> %26, <8 x float> %31)
+  %33 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %25, <8 x float> %26, <8 x float> %32)
+  %34 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %19, <8 x float> %29, <8 x float> %33)
+  %35 = fmul <8 x float> %30, splat (float 5.000000e-01)
+  %36 = fmul <8 x float> %34, splat (float 5.000000e-01)
+  %37 = fmul <8 x float> %10, %10
+  %predphi = select <8 x i1> %12, <8 x float> %14, <8 x float> %37
+  %predphi13 = select <8 x i1> %12, <8 x float> %36, <8 x float> zeroinitializer
+  %predphi14 = select <8 x i1> %12, <8 x float> %35, <8 x float> %11
+  %38 = fcmp oeq <8 x float> %11, splat (float 1.000000e+00)
+  %39 = select <8 x i1> %38, <8 x float> zeroinitializer, <8 x float> %predphi14
+  %40 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %predphi, <8 x float> splat (float 0x3FA57DB020000000), <8 x float> splat (float 0x3F98D27DC0000000))
+  %41 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %40, <8 x float> %predphi, <8 x float> splat (float 0x3FA7486640000000))
+  %42 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %41, <8 x float> %predphi, <8 x float> splat (float 0x3FB32FF140000000))
+  %43 = tail call <8 x float> @llvm.fma.v8f32(<8 x float> %42, <8 x float> %predphi, <8 x float> splat (float 0x3FC5555E40000000))
+  %44 = fmul <8 x float> %predphi, %39
+  %45 = fmul <8 x float> %43, %44
+  %46 = select <8 x i1> %38, <8 x float> zeroinitializer, <8 x float> %predphi13
+  %47 = fadd <8 x float> %39, %45
+  %48 = fsub <8 x float> %39, %47
+  %49 = fadd <8 x float> %45, %48
+  %50 = fadd <8 x float> %46, %49
+  %51 = fmul <8 x float> %47, splat (float 2.000000e+00)
+  %52 = fmul <8 x float> %50, splat (float 2.000000e+00)
+  %53 = tail call <8 x float> @llvm.copysign.v8f32(<8 x float> %39, <8 x float> %10)
+  %54 = tail call <8 x float> @llvm.copysign.v8f32(<8 x float> %45, <8 x float> %10)
+  %55 = fadd <8 x float> %53, %54
+  %56 = fsub <8 x float> %53, %55
+  %57 = fadd <8 x float> %54, %56
+  %58 = fsub <8 x float> splat (float 0x3FF921FB60000000), %55
+  %59 = fsub <8 x float> splat (float 0x3FF921FB60000000), %58
+  %60 = fsub <8 x float> %59, %55
+  %61 = fadd <8 x float> %60, splat (float 0xBE6777A5C0000000)
+  %62 = fsub <8 x float> %61, %57
+  %predphi16 = select <8 x i1> %12, <8 x float> %52, <8 x float> %62
+  %predphi18 = select <8 x i1> %12, <8 x float> %51, <8 x float> %58
+  %63 = fadd <8 x float> %predphi16, %predphi18
+  %scevgep21 = getelementptr i8, ptr %.6.i.i, i64 %lsr.iv
+  store <8 x float> %63, ptr %scevgep21, align 4
+  %lsr.iv.next = add nuw nsw i64 %lsr.iv, 32
+  %64 = icmp eq i64 %9, %lsr.iv.next
+  br i1 %64, label %middle.block, label %vector.body, !llvm.loop !14
+
+middle.block:                                     ; preds = %vector.body
+  %cmp.n = icmp eq i64 %arg.values.2, %n.vec
+  br i1 %cmp.n, label %B2301, label %B144.preheader19
+
+B144.preheader19:                                 ; preds = %B144.preheader, %middle.block
+  %.160163165.ph = phi i64 [ 0, %B144.preheader ], [ %n.vec, %middle.block ]
+  br label %B144
+
+for.body.2:                                       ; preds = %B1361
+  %.494.le = tail call float @llvm.copysign.f32(float %acos_fma_v2_x.2.sroa.0.1, float %.234)
+  %.510.le = tail call float @llvm.copysign.f32(float %.470, float %.234)
+  %.519 = fadd float %.494.le, %.510.le
+  %.520 = fsub float %.494.le, %.519
+  %.521 = fadd float %.510.le, %.520
+  %.543 = fsub float 0x3FF921FB60000000, %.519
+  %.545 = fsub float 0x3FF921FB60000000, %.543
+  %.547 = fsub float %.545, %.519
+  %.551 = fadd float %.547, 0xBE6777A5C0000000
+  %.555 = fsub float %.551, %.521
+  br label %B2237
+}
+
+; Function Attrs: mustprogress nocallback nofree nounwind willreturn memory(argmem: write)
+declare void @llvm.memset.p0.i64(ptr writeonly captures(none), i8, i64, i1 immarg) #0
+
+; Function Attrs: mustprogress nocallback nofree nosync nounwind willreturn memory(none)
+declare float @sqrtf(float) local_unnamed_addr #1
+
+; Function Attrs: mustprogress nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare float @llvm.fabs.f32(float) #2
+
+; Function Attrs: mustprogress nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare float @llvm.fma.f32(float, float, float) #2
+
+; Function Attrs: mustprogress nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare float @llvm.copysign.f32(float, float) #2
+
+define ptr @_ZN7cpython13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE(ptr readnone captures(none) %py_closure, ptr %py_args, ptr readnone captures(none) %py_kws) local_unnamed_addr {
+entry:
+  %.5 = alloca ptr, align 8
+  %.6 = call i32 (ptr, ptr, i64, i64, ...) @PyArg_UnpackTuple(ptr %py_args, ptr nonnull @.const.asvf_fma, i64 1, i64 1, ptr nonnull %.5)
+  %.7 = icmp eq i32 %.6, 0
+  %.19 = alloca { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] }, align 8
+  %.41 = alloca { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] }, align 8
+  %excinfo = alloca ptr, align 8
+  store ptr null, ptr %excinfo, align 8
+  %.100 = alloca { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] }, align 8
+  br i1 %.7, label %common.ret, label %entry.endif, !prof !0
+
+common.ret:                                       ; preds = %entry.endif.endif.if, %entry.endif.endif.endif.endif.endif.if.endif.if, %entry.endif.endif.endif.endif.endif.if.endif, %entry, %entry.endif.endif.endif.endif.endif.if.if.if, %entry.endif.endif.endif.endif.if.endif.endif, %entry.endif.if
+  %common.ret.op = phi ptr [ null, %entry.endif.endif.endif.endif.endif.if.if.if ], [ null, %entry ], [ null, %entry.endif.if ], [ null, %entry.endif.endif.endif.endif.endif.if.endif ], [ %.104, %entry.endif.endif.endif.endif.if.endif.endif ], [ null, %entry.endif.endif.if ], [ null, %entry.endif.endif.endif.endif.endif.if.endif.if ]
+  ret ptr %common.ret.op
+
+entry.endif:                                      ; preds = %entry
+  %.11 = load ptr, ptr @_ZN08NumbaEnv13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE, align 8
+  %.14 = icmp eq ptr %.11, null
+  br i1 %.14, label %entry.endif.if, label %entry.endif.endif, !prof !0
+
+entry.endif.if:                                   ; preds = %entry.endif
+  call void @PyErr_SetString(ptr nonnull @PyExc_RuntimeError, ptr nonnull @".const.missing Environment: _ZN08NumbaEnv13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE")
+  br label %common.ret
+
+entry.endif.endif:                                ; preds = %entry.endif
+  %.18 = load ptr, ptr %.5, align 8
+  call void @llvm.memset.p0.i64(ptr noundef nonnull align 8 dereferenceable(56) %.19, i8 0, i64 56, i1 false)
+  %.23 = call i32 @NRT_adapt_ndarray_from_python(ptr %.18, ptr nonnull %.19)
+  %sunkaddr = getelementptr inbounds i8, ptr %.19, i64 24
+  %.27 = load i64, ptr %sunkaddr, align 8
+  %.28 = icmp ne i64 %.27, 4
+  %.29 = icmp ne i32 %.23, 0
+  %.30 = or i1 %.29, %.28
+  br i1 %.30, label %entry.endif.endif.if, label %entry.endif.endif.endif.endif, !prof !0
+
+entry.endif.endif.if:                             ; preds = %entry.endif.endif
+  call void @PyErr_SetString(ptr nonnull @PyExc_TypeError, ptr nonnull @".const.can't unbox array from PyObject into native value.  The object maybe of a different type")
+  br label %common.ret
+
+entry.endif.endif.endif.endif:                    ; preds = %entry.endif.endif
+  %.34.fca.0.load = load ptr, ptr %.19, align 8
+  %sunkaddr1 = getelementptr inbounds i8, ptr %.19, i64 16
+  %.34.fca.2.load = load i64, ptr %sunkaddr1, align 8
+  %sunkaddr2 = getelementptr inbounds i8, ptr %.19, i64 32
+  %.34.fca.4.load = load ptr, ptr %sunkaddr2, align 8
+  call void @llvm.memset.p0.i64(ptr noundef nonnull align 8 dereferenceable(56) %.41, i8 0, i64 56, i1 false)
+  %.47 = call i32 @_ZN13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE(ptr nonnull %.41, ptr nonnull %excinfo, ptr %.34.fca.0.load, ptr poison, i64 %.34.fca.2.load, i64 poison, ptr %.34.fca.4.load, i64 poison, i64 poison) #4
+  %.48 = load ptr, ptr %excinfo, align 8
+  %.57.fca.0.load = load ptr, ptr %.41, align 8
+  %sunkaddr3 = getelementptr inbounds i8, ptr %.41, i64 8
+  %.57.fca.1.load = load ptr, ptr %sunkaddr3, align 8
+  %sunkaddr4 = getelementptr inbounds i8, ptr %.41, i64 16
+  %.57.fca.2.load = load i64, ptr %sunkaddr4, align 8
+  %sunkaddr5 = getelementptr inbounds i8, ptr %.41, i64 24
+  %.57.fca.3.load = load i64, ptr %sunkaddr5, align 8
+  %sunkaddr6 = getelementptr inbounds i8, ptr %.41, i64 32
+  %.57.fca.4.load = load ptr, ptr %sunkaddr6, align 8
+  %sunkaddr7 = getelementptr inbounds i8, ptr %.41, i64 40
+  %.57.fca.5.0.load = load i64, ptr %sunkaddr7, align 8
+  %sunkaddr8 = getelementptr inbounds i8, ptr %.41, i64 48
+  %.57.fca.6.0.load = load i64, ptr %sunkaddr8, align 8
+  call void @NRT_decref(ptr %.34.fca.0.load)
+  %cond = icmp eq i32 %.47, 0
+  br i1 %cond, label %entry.endif.endif.endif.endif.if.endif, label %entry.endif.endif.endif.endif.endif.if, !prof !16
+
+entry.endif.endif.endif.endif.if.endif:           ; preds = %entry.endif.endif.endif.endif
+  %.80 = getelementptr i8, ptr %.11, i64 24
+  %.81 = load ptr, ptr %.80, align 8
+  %.85.not = icmp eq ptr %.81, null
+  br i1 %.85.not, label %entry.endif.endif.endif.endif.if.endif.else, label %entry.endif.endif.endif.endif.if.endif.if
+
+entry.endif.endif.endif.endif.if.endif.if:        ; preds = %entry.endif.endif.endif.endif.if.endif
+  %.87 = call ptr @PyList_GetItem(ptr nonnull %.81, i64 0)
+  br label %entry.endif.endif.endif.endif.if.endif.endif
+
+entry.endif.endif.endif.endif.if.endif.else:      ; preds = %entry.endif.endif.endif.endif.if.endif
+  call void @PyErr_SetString(ptr nonnull @PyExc_RuntimeError, ptr nonnull @".const.`env.consts` is NULL in `read_const`")
+  br label %entry.endif.endif.endif.endif.if.endif.endif
+
+entry.endif.endif.endif.endif.if.endif.endif:     ; preds = %entry.endif.endif.endif.endif.if.endif.else, %entry.endif.endif.endif.endif.if.endif.if
+  %.82.0 = phi ptr [ %.87, %entry.endif.endif.endif.endif.if.endif.if ], [ null, %entry.endif.endif.endif.endif.if.endif.else ]
+  %.99 = call ptr @numba_unpickle(ptr nonnull @.const.pickledata.dfbcfdd39fcb26f4d0c680954487b8c0b53bb8a3, i32 32, ptr nonnull @.const.pickledata.dfbcfdd39fcb26f4d0c680954487b8c0b53bb8a3.sha1)
+  store ptr %.57.fca.0.load, ptr %.100, align 8
+  %sunkaddr9 = getelementptr inbounds i8, ptr %.100, i64 8
+  store ptr %.57.fca.1.load, ptr %sunkaddr9, align 8
+  %sunkaddr10 = getelementptr inbounds i8, ptr %.100, i64 16
+  store i64 %.57.fca.2.load, ptr %sunkaddr10, align 8
+  %sunkaddr11 = getelementptr inbounds i8, ptr %.100, i64 24
+  store i64 %.57.fca.3.load, ptr %sunkaddr11, align 8
+  %sunkaddr12 = getelementptr inbounds i8, ptr %.100, i64 32
+  store ptr %.57.fca.4.load, ptr %sunkaddr12, align 8
+  %sunkaddr13 = getelementptr inbounds i8, ptr %.100, i64 40
+  store i64 %.57.fca.5.0.load, ptr %sunkaddr13, align 8
+  %sunkaddr14 = getelementptr inbounds i8, ptr %.100, i64 48
+  store i64 %.57.fca.6.0.load, ptr %sunkaddr14, align 8
+  %.104 = call ptr @NRT_adapt_ndarray_to_python_acqref(ptr nonnull %.100, ptr %.99, i32 1, i32 1, ptr %.82.0)
+  call void @NRT_decref(ptr %.57.fca.0.load)
+  br label %common.ret
+
+entry.endif.endif.endif.endif.endif.if:           ; preds = %entry.endif.endif.endif.endif
+  call void @PyErr_Clear()
+  %.112 = load { ptr, i32, ptr, ptr, i32 }, ptr %.48, align 8
+  %.113 = extractvalue { ptr, i32, ptr, ptr, i32 } %.112, 4
+  %.114 = icmp sgt i32 %.113, 0
+  %.117 = extractvalue { ptr, i32, ptr, ptr, i32 } %.112, 0
+  %.119 = extractvalue { ptr, i32, ptr, ptr, i32 } %.112, 1
+  br i1 %.114, label %entry.endif.endif.endif.endif.endif.if.if, label %entry.endif.endif.endif.endif.endif.if.else
+
+entry.endif.endif.endif.endif.endif.if.if:        ; preds = %entry.endif.endif.endif.endif.endif.if
+  %.120 = sext i32 %.119 to i64
+  %.121 = call ptr @PyBytes_FromStringAndSize(ptr %.117, i64 %.120)
+  %.122 = load { ptr, i32, ptr, ptr, i32 }, ptr %.48, align 8
+  %.123 = extractvalue { ptr, i32, ptr, ptr, i32 } %.122, 2
+  %.125 = extractvalue { ptr, i32, ptr, ptr, i32 } %.122, 3
+  %.127 = call ptr %.125(ptr %.123)
+  %.128 = icmp eq ptr %.127, null
+  br i1 %.128, label %entry.endif.endif.endif.endif.endif.if.if.if, label %entry.endif.endif.endif.endif.endif.if.if.endif, !prof !0
+
+entry.endif.endif.endif.endif.endif.if.else:      ; preds = %entry.endif.endif.endif.endif.endif.if
+  %.141 = extractvalue { ptr, i32, ptr, ptr, i32 } %.112, 2
+  %.142 = call ptr @numba_unpickle(ptr %.117, i32 %.119, ptr %.141)
+  br label %entry.endif.endif.endif.endif.endif.if.endif
+
+entry.endif.endif.endif.endif.endif.if.endif:     ; preds = %entry.endif.endif.endif.endif.endif.if.if.endif, %entry.endif.endif.endif.endif.endif.if.else
+  %.144 = phi ptr [ %.132, %entry.endif.endif.endif.endif.endif.if.if.endif ], [ %.142, %entry.endif.endif.endif.endif.endif.if.else ]
+  %.145.not = icmp eq ptr %.144, null
+  br i1 %.145.not, label %common.ret, label %entry.endif.endif.endif.endif.endif.if.endif.if, !prof !0
+
+entry.endif.endif.endif.endif.endif.if.if.if:     ; preds = %entry.endif.endif.endif.endif.endif.if.if
+  call void @PyErr_SetString(ptr nonnull @PyExc_RuntimeError, ptr nonnull @".const.Error creating Python tuple from runtime exception arguments")
+  br label %common.ret
+
+entry.endif.endif.endif.endif.endif.if.if.endif:  ; preds = %entry.endif.endif.endif.endif.endif.if.if
+  %.132 = call ptr @numba_runtime_build_excinfo_struct(ptr %.121, ptr nonnull %.127)
+  call void @NRT_Free(ptr nonnull %.48)
+  br label %entry.endif.endif.endif.endif.endif.if.endif
+
+entry.endif.endif.endif.endif.endif.if.endif.if:  ; preds = %entry.endif.endif.endif.endif.endif.if.endif
+  call void @numba_do_raise(ptr nonnull %.144)
+  br label %common.ret
+}
+
+declare i32 @PyArg_UnpackTuple(ptr, ptr, i64, i64, ...) local_unnamed_addr
+
+declare void @PyErr_SetString(ptr, ptr) local_unnamed_addr
+
+declare i32 @NRT_adapt_ndarray_from_python(ptr captures(none), ptr captures(none)) local_unnamed_addr
+
+declare ptr @PyList_GetItem(ptr, i64) local_unnamed_addr
+
+declare ptr @numba_unpickle(ptr, i32, ptr) local_unnamed_addr
+
+declare ptr @NRT_adapt_ndarray_to_python_acqref(ptr captures(none), ptr, i32, i32, ptr) local_unnamed_addr
+
+declare void @PyErr_Clear() local_unnamed_addr
+
+declare ptr @PyBytes_FromStringAndSize(ptr, i64) local_unnamed_addr
+
+declare ptr @numba_runtime_build_excinfo_struct(ptr, ptr) local_unnamed_addr
+
+declare void @NRT_Free(ptr) local_unnamed_addr
+
+declare void @numba_do_raise(ptr) local_unnamed_addr
+
+define { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } @cfunc._ZN13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE({ ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %.1) local_unnamed_addr {
+entry:
+  %.3 = alloca { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] }, align 8
+  %.fca.1.gep = getelementptr inbounds nuw i8, ptr %.3, i64 8
+  %.fca.2.gep = getelementptr inbounds nuw i8, ptr %.3, i64 16
+  %.fca.3.gep = getelementptr inbounds nuw i8, ptr %.3, i64 24
+  %.fca.4.gep = getelementptr inbounds nuw i8, ptr %.3, i64 32
+  %.fca.5.0.gep = getelementptr inbounds nuw i8, ptr %.3, i64 40
+  %.fca.6.0.gep = getelementptr inbounds nuw i8, ptr %.3, i64 48
+  %excinfo = alloca ptr, align 8
+  call void @llvm.memset.p0.i64(ptr noundef nonnull align 8 dereferenceable(56) %.3, i8 0, i64 56, i1 false)
+  store ptr null, ptr %excinfo, align 8
+  %extracted.meminfo = extractvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %.1, 0
+  %extracted.nitems = extractvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %.1, 2
+  %extracted.data = extractvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %.1, 4
+  %.9 = call i32 @_ZN13solweig_light9radiation11_sleef_acos8asvf_fmaB2v1B54c8tJTIeFIjxB2IKSgI4CrvSCKg1MMbCQQPKkLTj8gMFYBFGuCQA_3dE5ArrayIfLi1E1C7mutable7alignedE(ptr nonnull %.3, ptr nonnull %excinfo, ptr %extracted.meminfo, ptr poison, i64 %extracted.nitems, i64 poison, ptr %extracted.data, i64 poison, i64 poison) #4
+  %.10 = load ptr, ptr %excinfo, align 8
+  %.19.fca.0.load = load ptr, ptr %.3, align 8
+  %.19.fca.1.load = load ptr, ptr %.fca.1.gep, align 8
+  %.19.fca.2.load = load i64, ptr %.fca.2.gep, align 8
+  %.19.fca.3.load = load i64, ptr %.fca.3.gep, align 8
+  %.19.fca.4.load = load ptr, ptr %.fca.4.gep, align 8
+  %.19.fca.5.0.load = load i64, ptr %.fca.5.0.gep, align 8
+  %.19.fca.6.0.load = load i64, ptr %.fca.6.0.gep, align 8
+  %inserted.meminfo = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } undef, ptr %.19.fca.0.load, 0
+  %inserted.parent = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %inserted.meminfo, ptr %.19.fca.1.load, 1
+  %inserted.nitems = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %inserted.parent, i64 %.19.fca.2.load, 2
+  %inserted.itemsize = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %inserted.nitems, i64 %.19.fca.3.load, 3
+  %inserted.data = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %inserted.itemsize, ptr %.19.fca.4.load, 4
+  %.28 = insertvalue [1 x i64] undef, i64 %.19.fca.5.0.load, 0
+  %inserted.shape = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %inserted.data, [1 x i64] %.28, 5
+  %.30 = insertvalue [1 x i64] undef, i64 %.19.fca.6.0.load, 0
+  %inserted.strides = insertvalue { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %inserted.shape, [1 x i64] %.30, 6
+  %.32 = alloca i32, align 4
+  store i32 0, ptr %.32, align 4
+  %cond = icmp eq i32 %.9, 0
+  br i1 %cond, label %common.ret, label %entry.if, !prof !16
+
+entry.if:                                         ; preds = %entry
+  call void @numba_gil_ensure(ptr nonnull %.32)
+  call void @PyErr_Clear()
+  %.38 = load { ptr, i32, ptr, ptr, i32 }, ptr %.10, align 8
+  %.39 = extractvalue { ptr, i32, ptr, ptr, i32 } %.38, 4
+  %.40 = icmp sgt i32 %.39, 0
+  %.43 = extractvalue { ptr, i32, ptr, ptr, i32 } %.38, 0
+  %.45 = extractvalue { ptr, i32, ptr, ptr, i32 } %.38, 1
+  br i1 %.40, label %entry.if.if.if, label %entry.if.if.else
+
+common.ret:                                       ; preds = %entry, %.35, %entry.if.if.if.if
+  %common.ret.op = phi { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } [ zeroinitializer, %entry.if.if.if.if ], [ %inserted.strides, %.35 ], [ %inserted.strides, %entry ]
+  ret { ptr, ptr, i64, i64, ptr, [1 x i64], [1 x i64] } %common.ret.op
+
+.35:                                              ; preds = %entry.if.if.endif, %entry.if.if.endif.if
+  %.83 = call ptr @PyUnicode_FromString(ptr nonnull @".const.<numba.core.cpu.CPUContext>")
+  call void @PyErr_WriteUnraisable(ptr %.83)
+  call void @Py_DecRef(ptr %.83)
+  call void @numba_gil_release(ptr nonnull %.32)
+  br label %common.ret
+
+entry.if.if.if:                                   ; preds = %entry.if
+  %.46 = sext i32 %.45 to i64
+  %.47 = call ptr @PyBytes_FromStringAndSize(ptr %.43, i64 %.46)
+  %.48 = load { ptr, i32, ptr, ptr, i32 }, ptr %.10, align 8
+  %.49 = extractvalue { ptr, i32, ptr, ptr, i32 } %.48, 2
+  %.51 = extractvalue { ptr, i32, ptr, ptr, i32 } %.48, 3
+  %.53 = call ptr %.51(ptr %.49)
+  %.54 = icmp eq ptr %.53, null
+  br i1 %.54, label %entry.if.if.if.if, label %entry.if.if.if.endif, !prof !0
+
+entry.if.if.else:                                 ; preds = %entry.if
+  %.67 = extractvalue { ptr, i32, ptr, ptr, i32 } %.38, 2
+  %.68 = call ptr @numba_unpickle(ptr %.43, i32 %.45, ptr %.67)
+  br label %entry.if.if.endif
+
+entry.if.if.endif:                                ; preds = %entry.if.if.if.endif, %entry.if.if.else
+  %.70 = phi ptr [ %.58, %entry.if.if.if.endif ], [ %.68, %entry.if.if.else ]
+  %.71.not = icmp eq ptr %.70, null
+  br i1 %.71.not, label %.35, label %entry.if.if.endif.if, !prof !0
+
+entry.if.if.if.if:                                ; preds = %entry.if.if.if
+  call void @PyErr_SetString(ptr nonnull @PyExc_RuntimeError, ptr nonnull @".const.Error creating Python tuple from runtime exception arguments.1")
+  br label %common.ret
+
+entry.if.if.if.endif:                             ; preds = %entry.if.if.if
+  %.58 = call ptr @numba_runtime_build_excinfo_struct(ptr %.47, ptr nonnull %.53)
+  call void @NRT_Free(ptr nonnull %.10)
+  br label %entry.if.if.endif
+
+entry.if.if.endif.if:                             ; preds = %entry.if.if.endif
+  call void @numba_do_raise(ptr nonnull %.70)
+  br label %.35
+}
+
+declare void @numba_gil_ensure(ptr) local_unnamed_addr
+
+declare ptr @PyUnicode_FromString(ptr) local_unnamed_addr
+
+declare void @PyErr_WriteUnraisable(ptr) local_unnamed_addr
+
+declare void @Py_DecRef(ptr) local_unnamed_addr
+
+declare void @numba_gil_release(ptr) local_unnamed_addr
+
+declare noalias ptr @NRT_MemInfo_alloc_aligned(i64, i32) local_unnamed_addr
+
+; Function Attrs: mustprogress nofree noinline norecurse nounwind willreturn memory(argmem: readwrite)
+define linkonce_odr void @NRT_incref(ptr captures(address_is_null) %.1) local_unnamed_addr #3 {
+.3:
+  %.4 = icmp eq ptr %.1, null
+  br i1 %.4, label %common.ret, label %.3.endif, !prof !0
+
+common.ret:                                       ; preds = %.3.endif, %.3
+  ret void
+
+.3.endif:                                         ; preds = %.3
+  %.4.i = atomicrmw add ptr %.1, i64 1 monotonic, align 8
+  br label %common.ret
+}
+
+; Function Attrs: noinline
+define linkonce_odr void @NRT_decref(ptr %.1) local_unnamed_addr #4 {
+.3:
+  %.4 = icmp eq ptr %.1, null
+  br i1 %.4, label %common.ret1, label %.3.endif, !prof !0
+
+common.ret1:                                      ; preds = %.3, %.3.endif
+  ret void
+
+.3.endif:                                         ; preds = %.3
+  fence release
+  %0 = tail call i8 @llvm.x86.atomic.sub.cc.i64(ptr nonnull %.1, i64 1, i32 4)
+  %1 = trunc i8 %0 to i1
+  br i1 %1, label %.3.endif.if, label %common.ret1, !prof !0
+
+.3.endif.if:                                      ; preds = %.3.endif
+  fence acquire
+  tail call void @NRT_MemInfo_call_dtor(ptr nonnull %.1)
+  ret void
+}
+
+; Function Attrs: nounwind
+declare i8 @llvm.x86.atomic.sub.cc.i64(ptr, i64, i32 immarg) #5
+
+declare void @NRT_MemInfo_call_dtor(ptr) local_unnamed_addr
+
+; Function Attrs: nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare <8 x float> @llvm.sqrt.v8f32(<8 x float>) #6
+
+; Function Attrs: nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare <8 x float> @llvm.fabs.v8f32(<8 x float>) #6
+
+; Function Attrs: nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare <8 x float> @llvm.fma.v8f32(<8 x float>, <8 x float>, <8 x float>) #6
+
+; Function Attrs: nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none)
+declare <8 x float> @llvm.copysign.v8f32(<8 x float>, <8 x float>) #6
+
+attributes #0 = { mustprogress nocallback nofree nounwind willreturn memory(argmem: write) }
+attributes #1 = { mustprogress nocallback nofree nosync nounwind willreturn memory(none) }
+attributes #2 = { mustprogress nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none) }
+attributes #3 = { mustprogress nofree noinline norecurse nounwind willreturn memory(argmem: readwrite) }
+attributes #4 = { noinline }
+attributes #5 = { nounwind }
+attributes #6 = { nocallback nocreateundeforpoison nofree nosync nounwind speculatable willreturn memory(none) }
+
+!0 = !{!"branch_weights", i32 1, i32 99}
+!1 = !{!2, !4, !5, !7, !8, !10}
+!2 = distinct !{!2, !3, !"_ZN5numba2np8arrayobj18_ol_array_allocate12_3clocals_3e4implB2v9B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj: %retptr"}
+!3 = distinct !{!3, !"_ZN5numba2np8arrayobj18_ol_array_allocate12_3clocals_3e4implB2v9B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj"}
+!4 = distinct !{!4, !3, !"_ZN5numba2np8arrayobj18_ol_array_allocate12_3clocals_3e4implB2v9B42c8tJTIeFIjxB2IKSgI4CrvQClcaMQ5hEEUSJJgA_3dEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj: %excinfo"}
+!5 = distinct !{!5, !6, !"_ZN5numba2np8arrayobj15_call_allocatorB2v8B42c8tJTC_2fWQA93W1AaAIYBPIqRBFCjDSZRVAJmaQIAEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj: %retptr"}
+!6 = distinct !{!6, !"_ZN5numba2np8arrayobj15_call_allocatorB2v8B42c8tJTC_2fWQA93W1AaAIYBPIqRBFCjDSZRVAJmaQIAEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj"}
+!7 = distinct !{!7, !6, !"_ZN5numba2np8arrayobj15_call_allocatorB2v8B42c8tJTC_2fWQA93W1AaAIYBPIqRBFCjDSZRVAJmaQIAEN29typeref_5b_3cclass_20_27numba4core5types8npytypes14Array_27_3e_5dExj: %excinfo"}
+!8 = distinct !{!8, !9, !"_ZN5numba2np8arrayobj11ol_np_empty12_3clocals_3e4implB2v7B54c8tJTIeFIjxB2IKSgI4CrvQCk0Z4yRYcWsBAw4hWqFpgsIBZmgA_3dEx18class_28float32_29: %retptr"}
+!9 = distinct !{!9, !"_ZN5numba2np8arrayobj11ol_np_empty12_3clocals_3e4implB2v7B54c8tJTIeFIjxB2IKSgI4CrvQCk0Z4yRYcWsBAw4hWqFpgsIBZmgA_3dEx18class_28float32_29"}
+!10 = distinct !{!10, !9, !"_ZN5numba2np8arrayobj11ol_np_empty12_3clocals_3e4implB2v7B54c8tJTIeFIjxB2IKSgI4CrvQCk0Z4yRYcWsBAw4hWqFpgsIBZmgA_3dEx18class_28float32_29: %excinfo"}
+!11 = distinct !{!11, !12}
+!12 = !{!"llvm.loop.isvectorized", i32 1}
+!13 = !{!8, !10}
+!14 = distinct !{!14, !12, !15}
+!15 = !{!"llvm.loop.unroll.runtime.disable"}
+!16 = !{!"branch_weights", i32 49, i32 1}

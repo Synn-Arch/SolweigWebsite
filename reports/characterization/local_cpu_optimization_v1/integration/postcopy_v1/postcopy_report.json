@@ -1,0 +1,228 @@
+{
+  "no_full_core_or_large_matrix_rerun": true,
+  "no_production_edits": true,
+  "package_origins": "All guarded package/module origins are under integration/postcopy_v1/site-packages; see target_guard.json.",
+  "performance_claim": null,
+  "purpose": "Post-copy packaging and permanent-test verification against the admitted combined source; no numerical matrix rerun.",
+  "schema": "local-cpu-optimization-v1-postcopy-qualification.v1",
+  "source_file_count": 49,
+  "source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+  "status": "passed",
+  "test_command": "PYTHONPATH=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/site-packages:/Users/alansynn/Workspace/solweig-light:/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1 PYTHONNOUSERSITE=1 PYTHONDONTWRITEBYTECODE=1 NUMBA_NUM_THREADS=10 OMP_NUM_THREADS=10 OPENBLAS_NUM_THREADS=10 MKL_NUM_THREADS=10 NUMEXPR_NUM_THREADS=10 NUMBA_CACHE_DIR=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/numba_cache TMPDIR=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/tmp SOLWEIG_POSTCOPY_SITE_TARGET=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/site-packages SOLWEIG_POSTCOPY_GUARD_RECORD=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/target_guard.json /Users/alansynn/Workspace/solweig-light/.venv-light/bin/pytest -q -o junit_family=legacy -p tests.helpers.installed_wheel_guard -p target_guard tests/differential/test_ground_view_dispatch_exact.py tests/unit/test_duplicate_visibility_decode.py tests/unit/test_exact_persistent_jit_cache.py tests/unit/test_p7_serial_variant_harness.py tests/differential/test_pipeline_reference.py tests/unit/test_portable_profile.py tests/unit/test_persistent_jit_cache.py --junitxml=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/junit.xml",
+  "tests": {
+    "explicit_target_guard": true,
+    "failed": 0,
+    "installed_wheel_guard": true,
+    "junit_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/junit.xml",
+    "junit_sha256": "da393a7363e33026ab85d48e50c1f17e66bae49a3ba8fffd8fd9bc7fb19db866",
+    "passed": 97,
+    "paths": [
+      "tests/differential/test_ground_view_dispatch_exact.py",
+      "tests/unit/test_duplicate_visibility_decode.py",
+      "tests/unit/test_exact_persistent_jit_cache.py",
+      "tests/unit/test_p7_serial_variant_harness.py",
+      "tests/differential/test_pipeline_reference.py",
+      "tests/unit/test_portable_profile.py",
+      "tests/unit/test_persistent_jit_cache.py"
+    ],
+    "skipped": 0,
+    "stderr_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/stderr.log",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/stdout.log",
+    "stdout_sha256": "1bb67349d2f174f5e8436e09a40cb5cb9565f8511cbaaea8c7c917839d97efe8",
+    "torch_imported": false,
+    "total": 97,
+    "warnings": 3
+  },
+  "thread_provenance": {
+    "configured_environment_threads": 10,
+    "effective_at_guard_configure": 10,
+    "effective_values": [
+      1,
+      4,
+      10
+    ],
+    "guard_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/tests/target_guard.json",
+    "guard_sha256": "ac1ffc5c6b91e783c2aeb295aa4d13fc392710f5a83d336bd010dcf56b2c85b5",
+    "records": [
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_water]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_nan_buildings]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_nan_shadow]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_nan_temperature]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_nonbinary]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_rounding_half]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_rounding_scale]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_beyond_raster]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_zero_distance]"
+      },
+      {
+        "effective_threads": 1,
+        "requested_threads": 1,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-1-gvf_float64]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_water]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_nan_buildings]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_nan_shadow]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_nan_temperature]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_nonbinary]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_rounding_half]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_rounding_scale]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_beyond_raster]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_zero_distance]"
+      },
+      {
+        "effective_threads": 4,
+        "requested_threads": 4,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-4-gvf_float64]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_water]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_nan_buildings]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_nan_shadow]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_nan_temperature]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_nonbinary]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_rounding_half]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_rounding_scale]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_beyond_raster]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_zero_distance]"
+      },
+      {
+        "effective_threads": 10,
+        "requested_threads": 10,
+        "test": "test_dispatch_preserves_every_field_mutation_and_error[budget-10-gvf_float64]"
+      }
+    ],
+    "requested_values": [
+      1,
+      4,
+      10
+    ]
+  },
+  "wheel": {
+    "all49_before_and_after_passed": true,
+    "build_command": "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python -m build --wheel --outdir /Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/wheel/dist /Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/wheel/staging",
+    "build_stderr_sha256": "76f145da5ed763a01093e0b93c0437c7bd35b29bd2d6c9071a1cf4b4435a1cf5",
+    "build_stdout_sha256": "0a5bd78db94bdeadd89447fd414a142f06fabc542ca9ee6b042bb0c6afe730ed",
+    "dependency_environment": "existing .venv-light; wheel installed --no-deps into owned target; not a fresh minimal environment",
+    "install_command": "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python -m pip install --no-deps --target /Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/site-packages /Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/wheel/dist/solweig_light-0.1.0.dev0-py3-none-any.whl",
+    "install_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "install_stdout_sha256": "4aafe3d908728977ececc28bfd1cf1af54d5b451bcc835fbd2b0b68c13cbc22e",
+    "pip_freeze_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/wheel/pip_freeze.txt",
+    "pip_freeze_sha256": "c027acf4920a393e7c6f43008e4ad9d6da74e19f255d6a2337eff4ddbcea0d10",
+    "source_compare_after_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/source_wheel_compare_after.json",
+    "source_compare_after_sha256": "cb5fe762d148f110b8593d616b1d59c9dac7cb19f1a0db2fb8cdd6269ec12a1e",
+    "source_compare_before_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/source_wheel_compare.json",
+    "source_compare_before_sha256": "cc3a01444d7f8dcc78feca5b5f47a9ede04c5a516438fc1deaee713c43ea1f8c",
+    "staging_metadata": [
+      "pyproject.toml",
+      "README.md",
+      "LICENSE"
+    ],
+    "wheel_path": "reports/characterization/local_cpu_optimization_v1/integration/postcopy_v1/wheel/dist/solweig_light-0.1.0.dev0-py3-none-any.whl",
+    "wheel_sha256": "40b99c8f19a56566b30dc1ee178e4f8acab0f738dc717b697f6c36c00a6b3778"
+  }
+}

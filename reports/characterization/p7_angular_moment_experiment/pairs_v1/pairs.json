@@ -1,0 +1,722 @@
+[
+  {
+    "baseline_seconds": 0.18225991597864777,
+    "budget": 1,
+    "candidate_seconds": 0.09232041705399752,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": 0.08695795899257064,
+    "budget": 1,
+    "candidate_seconds": 0.12467154196929187,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": 0.09471045807003975,
+    "budget": 1,
+    "candidate_seconds": 0.09435295895673335,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": 0.12181583303026855,
+    "budget": 1,
+    "candidate_seconds": 0.09327845799271017,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": 0.1253653330495581,
+    "budget": 1,
+    "candidate_seconds": 0.09045479097403586,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": 0.09532612503971905,
+    "budget": 4,
+    "candidate_seconds": 0.09402087505441159,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": 0.15025295899249613,
+    "budget": 4,
+    "candidate_seconds": 0.0909849579911679,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": 0.09184324997477233,
+    "budget": 4,
+    "candidate_seconds": 0.08378308301325887,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": 0.08226187503896654,
+    "budget": 4,
+    "candidate_seconds": 0.11178649996872991,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": 0.09035366598982364,
+    "budget": 4,
+    "candidate_seconds": 0.09021158295217901,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "small",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": 0.0931779999518767,
+    "budget": 1,
+    "candidate_seconds": 0.1229085000231862,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": 0.09106841695029289,
+    "budget": 1,
+    "candidate_seconds": 0.09436491690576077,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": 0.09155662509147078,
+    "budget": 1,
+    "candidate_seconds": 0.09481479111127555,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": 0.08983016689307988,
+    "budget": 1,
+    "candidate_seconds": 0.12094425002578646,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": 0.09383841592352837,
+    "budget": 1,
+    "candidate_seconds": 0.14849441696424037,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": 0.0900350840529427,
+    "budget": 4,
+    "candidate_seconds": 0.11814454209525138,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": 0.09334458399098366,
+    "budget": 4,
+    "candidate_seconds": 0.12204254197422415,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": 0.12225845793727785,
+    "budget": 4,
+    "candidate_seconds": 0.15062362502794713,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": 0.09401895804330707,
+    "budget": 4,
+    "candidate_seconds": 0.12461637507658452,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": 0.11948304099496454,
+    "budget": 4,
+    "candidate_seconds": 0.08756925002671778,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "first_use_empty_private_jit_and_geometry_cache",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 1,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 4
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 0
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 1
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 2
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "candidate",
+      "baseline"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 3
+  },
+  {
+    "baseline_seconds": null,
+    "budget": 4,
+    "candidate_seconds": null,
+    "case": "repeated_block_256",
+    "comparison": {
+      "execution_failed": true,
+      "passed": false,
+      "warmup_only_geometry_artifacts_excluded": true
+    },
+    "order": [
+      "baseline",
+      "candidate"
+    ],
+    "passed": false,
+    "regime": "geometry_and_compatible_jit_warm",
+    "repetition": 4
+  }
+]

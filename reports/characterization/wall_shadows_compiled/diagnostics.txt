@@ -1,0 +1,1076 @@
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _wall13, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/radiation/wall_shadows.py (76)  
+================================================================================
+
+
+Parallel loop listing for  Function _wall13, /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (76) 
+---------------------------------------------------------------------------------------------------------------|loop #ID
+@njit(fastmath=False, parallel=True)                                                                           | 
+def _wall13(a, walls, aspect, offsets, heights, low, high, mode):                                              | 
+    sx,sy=a.shape                                                                                              | 
+    out=np.empty((5,sx,sy),dtype=np.float32)                                                                   | 
+    for pixel in prange(sx*sy):--------------------------------------------------------------------------------| #0
+        row,col=pixel//sy,pixel%sy                                                                             | 
+        base=a[row,col]                                                                                        | 
+        f=base                                                                                                 | 
+        for step in range(heights.size):                                                                       | 
+            x,y=row+offsets[step,0],col+offsets[step,1]                                                        | 
+            temp=np.float32(0)                                                                                 | 
+            if 0<=x<sx and 0<=y<sy:                                                                            | 
+                temp=np.float32(a[x,y]-heights[step])                                                          | 
+            f=_maximum(f,temp)                                                                                 | 
+        wallbol=np.float32(walls[row,col]>0)                                                                   | 
+        if mode==0:                                                                                            | 
+            face=np.float32(np.float32(aspect[row,col]<low or aspect[row,col]>=high)-wallbol+np.float32(1))    | 
+        else:                                                                                                  | 
+            face=np.float32(1)-np.float32(aspect[row,col]>low or aspect[row,col]<=high)                        | 
+        volume=np.float32(f-base)                                                                              | 
+        sun=np.float32(walls[row,col]-volume)                                                                  | 
+        if sun<0 or face==1:                                                                                   | 
+            sun=np.float32(0)                                                                                  | 
+        out[0,row,col]=np.float32(volume==0)                                                                   | 
+        out[1,row,col]=np.float32(walls[row,col]-sun)                                                          | 
+        out[2,row,col]=sun                                                                                     | 
+        out[3,row,col]=face                                                                                    | 
+        out[4,row,col]=np.float32(face+wallbol==1 and walls[row,col]>0)                                        | 
+    return out                                                                                                 | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #0:
+  Has the following hoisted:
+    $180load_global.14 = global(range: <class 'range'>)
+    $194load_attr.17 = getattr(value=heights, attr=size)
+    $const704.12.4 = const(int, 1)
+    $const1030.4.3 = const(int, 0)
+    _maximum_v2__v106load_global_3 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    _maximum_v2__v118load_attr_4 = getattr(value=_maximum_v2__v106load_global_3, attr=nan)
+    $const1072.5.3 = const(int, 0)
+    $const1096.9.3 = const(int, 0)
+    $const1170.25.4 = const(int, 1)
+    $const1186.31.5 = const(int, 2)
+    $const1202.37.6 = const(int, 3)
+    $const1244.47.4 = const(int, 1)
+    $bool1252 = global(bool: <class 'bool'>)
+    $const1272.8.3 = const(int, 0)
+    $const1296.6.7 = const(int, 4)
+    _maximum_v2__vbool42 = global(bool: <class 'bool'>)
+    $bool340 = global(bool: <class 'bool'>)
+    $const986.20.3 = const(int, 0)
+    $bool994 = global(bool: <class 'bool'>)
+    $const348.2.3 = const(int, 0)
+    $bool362 = global(bool: <class 'bool'>)
+    $bool372 = global(bool: <class 'bool'>)
+    $const230.6.3 = const(int, 0)
+    $const254.13.4 = const(int, 1)
+    $const298.20.3 = const(int, 0)
+    $const316.22.3 = const(int, 0)
+    $bool330 = global(bool: <class 'bool'>)
+    $bool634 = global(bool: <class 'bool'>)
+    $const764.4.4 = const(int, 1)
+    $bool828 = global(bool: <class 'bool'>)
+    _maximum_v2__vbool82 = global(bool: <class 'bool'>)
+    $const528.9.3 = const(int, 0)
+    $const554.13.3 = const(int, 0)
+    $556compare_op.14 = mode == $const554.13.3
+    $bool562 = global(bool: <class 'bool'>)
+    $const998.2.4 = const(int, 1)
+    $bool1006 = global(bool: <class 'bool'>)
+    _maximum_v2__vbool154 = global(bool: <class 'bool'>)
+  Failed to hoist the following:
+    dependency: $836build_tuple.7 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $838binary_subscr.8 = getitem(value=aspect, index=$836build_tuple.7, fn=<built-in function getitem>)
+    dependency: $850compare_op.10 = $838binary_subscr.8 <= high
+    dependency: pixel = $parfor__index_37.76
+    dependency: $row.42 = $parfor__index_37.76 // _sy_41
+    dependency: col = $parfor__index_37.76 % _sy_41
+    dependency: $162build_tuple.11 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: base = getitem(value=a, index=$162build_tuple.11, fn=<built-in function getitem>)
+    not pure: $208call.18 = call $push_global_to_block.60($194load_attr.17, func=$push_global_to_block.60, args=[Var($194load_attr.17, wall_shadows.py:84)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $218get_iter.19 = getiter(value=$208call.18)
+    dependency: $666call.6 = call $598load_attr.6($phi662.5.2, func=$598load_attr.6, args=[Var($phi662.5.2, wall_shadows.py:92)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub678.8 = $666call.6 - wallbol
+    dependency: $694load_attr.11 = getattr(value=$682load_global.9, attr=float32)
+    dependency: $710call.13 = call $694load_attr.11($const704.12.4, func=$694load_attr.11, args=[Var($const704.12.4, wall_shadows.py:92)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add720.14 = $binop_sub678.8 + $710call.13
+    dependency: face = call $576load_attr.3($binop_add720.14, func=$576load_attr.3, args=[Var($binop_add720.14, wall_shadows.py:92)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $860call.5 = call $792load_attr.8($phi856.4.2, func=$792load_attr.8, args=[Var($phi856.4.2, wall_shadows.py:94)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: face.1 = $770call.5 - $860call.5
+    dependency: $1020load_attr.3 = getattr(value=$1008load_global.1, attr=float32)
+    dependency: sun.1 = call $1020load_attr.3($const1030.4.3, func=$1020load_attr.3, args=[Var($const1030.4.3, wall_shadows.py:98)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v2__v96load_attr_2 = getattr(value=_maximum_v2__v84load_global_0, attr=float32)
+    dependency: _maximum_v2__v132call_5 = call _maximum_v2__v96load_attr_2($push_getattr_to_block.61, func=_maximum_v2__v96load_attr_2, args=[Var($push_getattr_to_block.61, wall_shadows.py:72)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1060load_attr.3 = getattr(value=$1048load_global.1, attr=float32)
+    dependency: $1074compare_op.6 = volume == $const1072.5.3
+    dependency: $1084call.7 = call $1060load_attr.3($1074compare_op.6, func=$1060load_attr.3, args=[Var($1074compare_op.6, wall_shadows.py:99)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1102build_tuple.12 = build_tuple(items=[Var($const1096.9.3, wall_shadows.py:99), Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $1120load_attr.15 = getattr(value=$1108load_global.13, attr=float32)
+    dependency: $1136build_tuple.19 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $1138binary_subscr.20 = getitem(value=walls, index=$1136build_tuple.19, fn=<built-in function getitem>)
+    dependency: $binop_sub1150.22 = $1138binary_subscr.20 - sun.2
+    dependency: $1158call.23 = call $1120load_attr.15($binop_sub1150.22, func=$1120load_attr.15, args=[Var($binop_sub1150.22, wall_shadows.py:100)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1176build_tuple.28 = build_tuple(items=[Var($const1170.25.4, wall_shadows.py:100), Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $1192build_tuple.34 = build_tuple(items=[Var($const1186.31.5, wall_shadows.py:101), Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $1208build_tuple.40 = build_tuple(items=[Var($const1202.37.6, wall_shadows.py:102), Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $binop_add1240.46 = face.2 + wallbol
+    dependency: $1246compare_op.48 = $binop_add1240.46 == $const1244.47.4
+    dependency: $1252pred = call $push_global_to_block.63($1246compare_op.48, func=$push_global_to_block.63, args=(Var($1246compare_op.48, wall_shadows.py:103),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1260build_tuple.6 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $1262binary_subscr.7 = getitem(value=walls, index=$1260build_tuple.6, fn=<built-in function getitem>)
+    dependency: $1274compare_op.9 = $1262binary_subscr.7 > $const1272.8.3
+    dependency: $push_getattr_to_block.54 = getattr(value=$push_global_to_block.55, attr=float32)
+    dependency: $1284call.4 = call $push_getattr_to_block.54($phi1280.3.2, func=$push_getattr_to_block.54, args=[Var($phi1280.3.2, wall_shadows.py:103)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1302build_tuple.9 = build_tuple(items=[Var($const1296.6.7, wall_shadows.py:103), Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: _maximum_v2__v16load_attr_2 = getattr(value=_maximum_v2__v4load_global_0, attr=isnan)
+    dependency: _maximum_v2__v32call_4 = call _maximum_v2__v16load_attr_2(f.3, func=_maximum_v2__v16load_attr_2, args=[Var(f.3, wall_shadows.py:89)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v2__v42pred = call $push_global_to_block.64(_maximum_v2__v32call_4, func=$push_global_to_block.64, args=(Var(_maximum_v2__v32call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $334compare_op.4 = $x.44 < _sx_40
+    dependency: $340pred = call $push_global_to_block.65($334compare_op.4, func=$push_global_to_block.65, args=(Var($334compare_op.4, wall_shadows.py:87),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $888load_attr.3 = getattr(value=$876load_global.1, attr=float32)
+    dependency: $binop_sub902.6 = f.3 - base
+    dependency: volume = call $888load_attr.3($binop_sub902.6, func=$888load_attr.3, args=[Var($binop_sub902.6, wall_shadows.py:95)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $934load_attr.10 = getattr(value=$922load_global.8, attr=float32)
+    dependency: $950build_tuple.14 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $952binary_subscr.15 = getitem(value=walls, index=$950build_tuple.14, fn=<built-in function getitem>)
+    dependency: $binop_sub964.17 = $952binary_subscr.15 - volume
+    dependency: sun = call $934load_attr.10($binop_sub964.17, func=$934load_attr.10, args=[Var($binop_sub964.17, wall_shadows.py:96)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $988compare_op.21 = sun < $const986.20.3
+    dependency: $994pred = call $push_global_to_block.66($988compare_op.21, func=$push_global_to_block.66, args=(Var($988compare_op.21, wall_shadows.py:97),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $356compare_op.4 = $const348.2.3 <= y
+    dependency: $362pred = call $push_global_to_block.67($356compare_op.4, func=$push_global_to_block.67, args=(Var($356compare_op.4, wall_shadows.py:87),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $366compare_op.4 = y < _sy_41
+    dependency: $372pred = call $push_global_to_block.68($366compare_op.4, func=$push_global_to_block.68, args=(Var($366compare_op.4, wall_shadows.py:87),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $220for_iter.2 = iternext(value=$218get_iter.19)
+    dependency: $step.45 = pair_first(value=$220for_iter.2)
+    dependency: $220for_iter.4 = pair_second(value=$220for_iter.2)
+    dependency: $232build_tuple.7 = build_tuple(items=[Var($step.45, wall_shadows.py:84), Var($const230.6.3, wall_shadows.py:85)])
+    dependency: $234binary_subscr.8 = getitem(value=offsets, index=$232build_tuple.7, fn=<built-in function getitem>)
+    dependency: $x.44 = $row.42 + $234binary_subscr.8
+    dependency: $256build_tuple.14 = build_tuple(items=[Var($step.45, wall_shadows.py:84), Var($const254.13.4, wall_shadows.py:85)])
+    dependency: $258binary_subscr.15 = getitem(value=offsets, index=$256build_tuple.14, fn=<built-in function getitem>)
+    dependency: y = col + $258binary_subscr.15
+    dependency: $288load_attr.19 = getattr(value=$276load_global.17, attr=float32)
+    dependency: temp = call $288load_attr.19($const298.20.3, func=$288load_attr.19, args=[Var($const298.20.3, wall_shadows.py:86)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $324compare_op.24 = $const316.22.3 <= $x.44
+    dependency: $330pred = call $push_global_to_block.69($324compare_op.24, func=$push_global_to_block.69, args=(Var($324compare_op.24, wall_shadows.py:87),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $576load_attr.3 = getattr(value=$564load_global.1, attr=float32)
+    dependency: $598load_attr.6 = getattr(value=$586load_global.4, attr=float32)
+    dependency: $614build_tuple.10 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $616binary_subscr.11 = getitem(value=aspect, index=$614build_tuple.10, fn=<built-in function getitem>)
+    dependency: $628compare_op.13 = $616binary_subscr.11 < low
+    dependency: $634pred = call $push_global_to_block.70($628compare_op.13, func=$push_global_to_block.70, args=(Var($628compare_op.13, wall_shadows.py:92),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $754load_attr.3 = getattr(value=$742load_global.1, attr=float32)
+    dependency: $770call.5 = call $754load_attr.3($const764.4.4, func=$754load_attr.3, args=[Var($const764.4.4, wall_shadows.py:94)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $792load_attr.8 = getattr(value=$780load_global.6, attr=float32)
+    dependency: $808build_tuple.12 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $810binary_subscr.13 = getitem(value=aspect, index=$808build_tuple.12, fn=<built-in function getitem>)
+    dependency: $822compare_op.15 = $810binary_subscr.13 > low
+    dependency: $828pred = call $push_global_to_block.71($822compare_op.15, func=$push_global_to_block.71, args=(Var($822compare_op.15, wall_shadows.py:94),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v2__v56load_attr_2 = getattr(value=_maximum_v2__v44load_global_0, attr=isnan)
+    dependency: _maximum_v2__v72call_4 = call _maximum_v2__v56load_attr_2(temp.2, func=_maximum_v2__v56load_attr_2, args=[Var(temp.2, wall_shadows.py:89)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v2__v82pred = call $push_global_to_block.72(_maximum_v2__v72call_4, func=$push_global_to_block.72, args=(Var(_maximum_v2__v72call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $500load_attr.3 = getattr(value=$488load_global.1, attr=float32)
+    dependency: $516build_tuple.7 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $518binary_subscr.8 = getitem(value=walls, index=$516build_tuple.7, fn=<built-in function getitem>)
+    dependency: $530compare_op.10 = $518binary_subscr.8 > $const528.9.3
+    dependency: wallbol = call $500load_attr.3($530compare_op.10, func=$500load_attr.3, args=[Var($530compare_op.10, wall_shadows.py:90)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $562pred = call $push_global_to_block.73($556compare_op.14, func=$push_global_to_block.73, args=(Var($556compare_op.14, wall_shadows.py:91),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $392load_attr.4 = getattr(value=$380load_global.2, attr=float32)
+    dependency: $408build_tuple.8 = build_tuple(items=[Var($x.44, wall_shadows.py:85), Var(y, wall_shadows.py:85)])
+    dependency: $410binary_subscr.9 = getitem(value=a, index=$408build_tuple.8, fn=<built-in function getitem>)
+    dependency: $424binary_subscr.12 = getitem(value=heights, index=$step.45, fn=<built-in function getitem>)
+    dependency: $binop_sub434.13 = $410binary_subscr.9 - $424binary_subscr.12
+    dependency: temp.1 = call $392load_attr.4($binop_sub434.13, func=$392load_attr.4, args=[Var($binop_sub434.13, wall_shadows.py:88)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $642build_tuple.8 = build_tuple(items=[Var($row.42, wall_shadows.py:81), Var(col, wall_shadows.py:81)])
+    dependency: $644binary_subscr.9 = getitem(value=aspect, index=$642build_tuple.8, fn=<built-in function getitem>)
+    dependency: $656compare_op.11 = $644binary_subscr.9 >= high
+    dependency: $1000compare_op.3 = face.2 == $const998.2.4
+    dependency: $1006pred = call $push_global_to_block.74($1000compare_op.3, func=$push_global_to_block.74, args=(Var($1000compare_op.3, wall_shadows.py:97),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v2__v148compare_op_2 = f.3 >= temp.2
+    dependency: _maximum_v2__v154pred = call $push_global_to_block.75(_maximum_v2__v148compare_op_2, func=$push_global_to_block.75, args=(Var(_maximum_v2__v148compare_op_2, wall_shadows.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------
+_wall13 (Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), float32, float32, int64)
+--------------------------------------------------------------------------------
+# File: /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py
+# --- LINE 76 --- 
+# label 0
+#   a = arg(0, name=a)  :: array(float32, 2d, C)
+#   walls = arg(1, name=walls)  :: array(float32, 2d, C)
+#   aspect = arg(2, name=aspect)  :: array(float32, 2d, C)
+#   offsets = arg(3, name=offsets)  :: array(int64, 2d, C)
+#   heights = arg(4, name=heights)  :: array(float32, 1d, C)
+#   low = arg(5, name=low)  :: float32
+#   high = arg(6, name=high)  :: float32
+#   mode = arg(7, name=mode)  :: int64
+
+@njit(fastmath=False, parallel=True)
+
+# --- LINE 77 --- 
+
+def _wall13(a, walls, aspect, offsets, heights, low, high, mode):
+
+    # --- LINE 78 --- 
+    #   $6load_attr.1 = getattr(value=a, attr=shape)  :: UniTuple(int64 x 2)
+    #   $16unpack_sequence.4 = exhaust_iter(value=$6load_attr.1, count=2)  :: UniTuple(int64 x 2)
+    #   del $6load_attr.1
+    #   $sx.40 = static_getitem(value=$16unpack_sequence.4, index=0, index_var=None, fn=<built-in function getitem>)  :: int64
+    #   $sy.41 = static_getitem(value=$16unpack_sequence.4, index=1, index_var=None, fn=<built-in function getitem>)  :: int64
+    #   del $16unpack_sequence.4
+
+    sx,sy=a.shape
+
+    # --- LINE 79 --- 
+    #   $24load_global.5 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)  :: Module(<module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    #   $36load_attr.7 = getattr(value=$24load_global.5, attr=empty)  :: Function(<built-in function empty>)
+    #   del $24load_global.5
+    #   $const46.8.1 = const(int, 5)  :: Literal[int](5)
+    #   $52build_tuple.11 = build_tuple(items=[Var($const46.8.1, wall_shadows.py:79), Var($sx.40, wall_shadows.py:78), Var($sy.41, wall_shadows.py:78)])  :: Tuple(Literal[int](5), int64, int64)
+    #   del $const46.8.1
+    #   $54load_global.12 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)  :: Module(<module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    #   $66load_attr.13 = getattr(value=$54load_global.12, attr=float32)  :: class(float32)
+    #   del $54load_global.12
+    #   out = call $36load_attr.7($52build_tuple.11, func=$36load_attr.7, args=[Var($52build_tuple.11, wall_shadows.py:79)], kws=[('dtype', Var($66load_attr.13, wall_shadows.py:79))], vararg=None, varkwarg=None, target=None)  :: (UniTuple(int64, 3), class(float32)) -> array(float32, 3d, C)
+    #   del $66load_attr.13
+    #   del $52build_tuple.11
+    #   del $36load_attr.7
+
+    out=np.empty((5,sx,sy),dtype=np.float32)
+
+    # --- LINE 80 --- 
+    #   $binop_mul110.19 = $sx.40 * $sy.41  :: int64
+    #   id=0[LoopNest(index_variable = parfor_index.37, range = (0, $binop_mul110.19, 1))]{1280: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (94)>, 134: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (80)>, 662: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 1048: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (92)>, 1312: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (94)>, 1457: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (98)>, 564: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (72)>, 1469: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (99)>, 830: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 1473: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (103)>, 1475: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (103)>, 454: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (89)>, 332: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (87)>, 1357: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (95)>, 342: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (87)>, 856: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (89)>, 344: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (87)>, 220: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (84)>, 222: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (84)>, 996: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (92)>, 1254: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (94)>, 742: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 488: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (71)>, 876: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (90)>, 364: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (87)>, 1008: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (92)>, 1397: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (97)>, 374: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (87)>, 376: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (87)>, 636: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>}Var(parfor_index.37, wall_shadows.py:80)
+    #   del walls
+    #   del offsets
+    #   del mode
+    #   del low
+    #   del high
+    #   del heights
+    #   del aspect
+    #   del a
+    #   del $sy.41
+    #   del $sx.40
+
+    for pixel in prange(sx*sy):
+
+        # --- LINE 81 --- 
+
+        row,col=pixel//sy,pixel%sy
+
+        # --- LINE 82 --- 
+
+        base=a[row,col]
+
+        # --- LINE 83 --- 
+
+        f=base
+
+        # --- LINE 84 --- 
+
+        for step in range(heights.size):
+
+            # --- LINE 85 --- 
+
+            x,y=row+offsets[step,0],col+offsets[step,1]
+
+            # --- LINE 86 --- 
+
+            temp=np.float32(0)
+
+            # --- LINE 87 --- 
+
+            if 0<=x<sx and 0<=y<sy:
+
+                # --- LINE 88 --- 
+
+                temp=np.float32(a[x,y]-heights[step])
+
+            # --- LINE 89 --- 
+
+            f=_maximum(f,temp)
+
+        # --- LINE 90 --- 
+
+        wallbol=np.float32(walls[row,col]>0)
+
+        # --- LINE 91 --- 
+
+        if mode==0:
+
+            # --- LINE 92 --- 
+
+            face=np.float32(np.float32(aspect[row,col]<low or aspect[row,col]>=high)-wallbol+np.float32(1))
+
+        # --- LINE 93 --- 
+
+        else:
+
+            # --- LINE 94 --- 
+
+            face=np.float32(1)-np.float32(aspect[row,col]>low or aspect[row,col]<=high)
+
+        # --- LINE 95 --- 
+
+        volume=np.float32(f-base)
+
+        # --- LINE 96 --- 
+
+        sun=np.float32(walls[row,col]-volume)
+
+        # --- LINE 97 --- 
+
+        if sun<0 or face==1:
+
+            # --- LINE 98 --- 
+
+            sun=np.float32(0)
+
+        # --- LINE 99 --- 
+
+        out[0,row,col]=np.float32(volume==0)
+
+        # --- LINE 100 --- 
+
+        out[1,row,col]=np.float32(walls[row,col]-sun)
+
+        # --- LINE 101 --- 
+
+        out[2,row,col]=sun
+
+        # --- LINE 102 --- 
+
+        out[3,row,col]=face
+
+        # --- LINE 103 --- 
+
+        out[4,row,col]=np.float32(face+wallbol==1 and walls[row,col]>0)
+
+    # --- LINE 104 --- 
+    #   $1314return_value.1 = cast(value=out)  :: array(float32, 3d, C)
+    #   del out
+    #   return $1314return_value.1
+
+    return out
+
+
+================================================================================
+nopython signatures [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), float32, float32, int64) -> array(float32, 3d, C)]
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _wall23, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/radiation/wall_shadows.py (107)  
+================================================================================
+
+
+Parallel loop listing for  Function _wall23, /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (107) 
+---------------------------------------------------------------------------------------------------------------|loop #ID
+@njit(fastmath=False, parallel=True)                                                                           | 
+def _wall23(a, vegdem, vegdem2, bush, walls, aspect, offsets, heights, low, high, mode):                       | 
+    sx,sy=a.shape                                                                                              | 
+    out=np.empty((8,sx,sy),dtype=np.float32)                                                                   | 
+    for pixel in prange(sx*sy):--------------------------------------------------------------------------------| #1
+        row,col=pixel//sy,pixel%sy                                                                             | 
+        base=a[row,col]                                                                                        | 
+        f=base                                                                                                 | 
+        volumeveg=vegdem[row,col]                                                                              | 
+        vs=np.float32(bush[row,col]>1)                                                                         | 
+        building=np.float32(0)                                                                                 | 
+        vb=np.float32(0)                                                                                       | 
+        prev=np.float32(0)                                                                                     | 
+        for step in range(heights.size):                                                                       | 
+            x,y=row+offsets[step,0],col+offsets[step,1]                                                        | 
+            temp=tv=tv2=lastv=lastv2=np.float32(0)                                                             | 
+            if 0<=x<sx and 0<=y<sy:                                                                            | 
+                temp=np.float32(a[x,y]-heights[step])                                                          | 
+                tv=np.float32(vegdem[x,y]-heights[step])                                                       | 
+                tv2=np.float32(vegdem2[x,y]-heights[step])                                                     | 
+                lastv=np.float32(vegdem[x,y]-prev)                                                             | 
+                lastv2=np.float32(vegdem2[x,y]-prev)                                                           | 
+            f=_maximum(f,temp)                                                                                 | 
+            volumeveg=_maximum(volumeveg,tv)                                                                   | 
+            building=np.float32(f>base)                                                                        | 
+            count=np.float32(tv>base)+np.float32(tv2>base)+np.float32(lastv>base)+np.float32(lastv2>base)      | 
+            candidate=np.float32(count>0 and count!=4)                                                         | 
+            vs=_maximum(vs,candidate)                                                                          | 
+            if np.float32(vs*building)>0:                                                                      | 
+                vs=np.float32(0)                                                                               | 
+            vb=np.float32(vb+vs)                                                                               | 
+            prev=heights[step]                                                                                 | 
+        wallbol=np.float32(walls[row,col]>0)                                                                   | 
+        if mode==0:                                                                                            | 
+            face=np.float32(np.float32(aspect[row,col]<low or aspect[row,col]>=high)-wallbol+np.float32(1))    | 
+        else:                                                                                                  | 
+            face=np.float32(1)-np.float32(aspect[row,col]>low or aspect[row,col]<=high)                        | 
+        vb=np.float32(np.float32(vb>0)-vs)                                                                     | 
+        vs=np.float32(vs>0)                                                                                    | 
+        volumeveg=np.float32(np.float32(volumeveg-base)*vs)                                                    | 
+        sun=np.float32(walls[row,col]-np.float32(f-base))                                                      | 
+        if sun<0 or face==1:                                                                                   | 
+            sun=np.float32(0)                                                                                  | 
+        wallshade=np.float32(walls[row,col]-sun)                                                               | 
+        wallveg=np.float32(np.float32(volumeveg*wallbol)-wallshade)                                            | 
+        if wallveg<0:                                                                                          | 
+            wallveg=np.float32(0)                                                                              | 
+        sun=np.float32(sun-wallveg)                                                                            | 
+        if sun<0:                                                                                              | 
+            sun=np.float32(0)                                                                                  | 
+        if wallveg>walls[row,col]:                                                                             | 
+            wallveg=walls[row,col]                                                                             | 
+        out[0,row,col]=np.float32(1)-vs                                                                        | 
+        out[1,row,col]=np.float32(1)-building                                                                  | 
+        out[2,row,col]=np.float32(1)-vb                                                                        | 
+        out[3,row,col]=wallshade                                                                               | 
+        out[4,row,col]=sun                                                                                     | 
+        out[5,row,col]=wallveg                                                                                 | 
+        out[6,row,col]=face                                                                                    | 
+        out[7,row,col]=np.float32(face+wallbol==1 and walls[row,col]>0)                                        | 
+    return out                                                                                                 | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #1:
+  Has the following hoisted:
+    $const1394.18.4 = const(int, 0)
+    $bool1402 = global(bool: <class 'bool'>)
+    $const240.27.3 = const(int, 1)
+    $const286.33.4 = const(int, 0)
+    $const326.38.4 = const(int, 0)
+    $const366.43.4 = const(int, 0)
+    $384load_global.45 = global(range: <class 'range'>)
+    $398load_attr.48 = getattr(value=heights, attr=size)
+    $const2662.4.3 = const(int, 1)
+    $const2686.9.4 = const(int, 0)
+    $const2720.16.3 = const(int, 1)
+    $const2744.21.3 = const(int, 1)
+    $const2778.28.3 = const(int, 1)
+    $const2802.33.6 = const(int, 2)
+    $const2818.39.7 = const(int, 3)
+    $const2834.45.5 = const(int, 4)
+    $const2850.51.8 = const(int, 5)
+    $const2866.57.9 = const(int, 6)
+    $const2908.67.3 = const(int, 1)
+    $bool2916 = global(bool: <class 'bool'>)
+    $const2936.8.4 = const(int, 0)
+    _maximum_v9__vbool82 = global(bool: <class 'bool'>)
+    $const2960.6.10 = const(int, 7)
+    _maximum_v10__vbool82 = global(bool: <class 'bool'>)
+    _maximum_v8__vbool42 = global(bool: <class 'bool'>)
+    $const2574.4.4 = const(int, 0)
+    _maximum_v9__v106load_global_3 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    _maximum_v9__v118load_attr_4 = getattr(value=_maximum_v9__v106load_global_3, attr=nan)
+    $const1944.8.4 = const(int, 0)
+    $const2012.18.4 = const(int, 0)
+    $const2230.52.4 = const(int, 0)
+    $bool2238 = global(bool: <class 'bool'>)
+    _maximum_v8__vbool154 = global(bool: <class 'bool'>)
+    $const1426.5.4 = const(int, 0)
+    $bool562 = global(bool: <class 'bool'>)
+    $const436.6.4 = const(int, 0)
+    $const460.13.3 = const(int, 1)
+    $const504.20.4 = const(int, 0)
+    $const538.22.4 = const(int, 0)
+    $bool552 = global(bool: <class 'bool'>)
+    $bool1656 = global(bool: <class 'bool'>)
+    _maximum_v9__vbool42 = global(bool: <class 'bool'>)
+    $const570.2.4 = const(int, 0)
+    $bool584 = global(bool: <class 'bool'>)
+    $bool594 = global(bool: <class 'bool'>)
+    _maximum_v10__vbool154 = global(bool: <class 'bool'>)
+    _maximum_v8__vbool82 = global(bool: <class 'bool'>)
+    $bool2618 = global(bool: <class 'bool'>)
+    $const1726.12.3 = const(int, 1)
+    $const1786.4.3 = const(int, 1)
+    $bool1850 = global(bool: <class 'bool'>)
+    $const1282.54.4 = const(int, 0)
+    $bool1290 = global(bool: <class 'bool'>)
+    $const2242.2.3 = const(int, 1)
+    $bool2250 = global(bool: <class 'bool'>)
+    $const2274.4.4 = const(int, 0)
+    _maximum_v10__v106load_global_3 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    _maximum_v10__v118load_attr_4 = getattr(value=_maximum_v10__v106load_global_3, attr=nan)
+    $const2444.26.4 = const(int, 0)
+    $bool2452 = global(bool: <class 'bool'>)
+    $const2542.9.4 = const(int, 0)
+    $bool2550 = global(bool: <class 'bool'>)
+    $const2476.4.4 = const(int, 0)
+    $const1294.5.5 = const(int, 4)
+    $const1550.9.4 = const(int, 0)
+    $const1576.13.4 = const(int, 0)
+    $1578compare_op.14 = mode == $const1576.13.4
+    $bool1584 = global(bool: <class 'bool'>)
+    _maximum_v8__v106load_global_3 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    _maximum_v8__v118load_attr_4 = getattr(value=_maximum_v8__v106load_global_3, attr=nan)
+    _maximum_v10__vbool42 = global(bool: <class 'bool'>)
+    _maximum_v9__vbool154 = global(bool: <class 'bool'>)
+  Failed to hoist the following:
+    dependency: $1362load_attr.13 = getattr(value=$1350load_global.11, attr=float32)
+    dependency: $binop_mul1376.16 = vs.7 * building.1
+    dependency: $1384call.17 = call $1362load_attr.13($binop_mul1376.16, func=$1362load_attr.13, args=[Var($binop_mul1376.16, wall_shadows.py:135)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1396compare_op.19 = $1384call.17 > $const1394.18.4
+    dependency: $1402pred = call $push_global_to_block.164($1396compare_op.19, func=$push_global_to_block.164, args=(Var($1396compare_op.19, wall_shadows.py:135),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: pixel = $parfor__index_135.195
+    dependency: $row.141 = $parfor__index_135.195 // _sy_139
+    dependency: col = $parfor__index_135.195 % _sy_139
+    dependency: $162build_tuple.11 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: base = getitem(value=a, index=$162build_tuple.11, fn=<built-in function getitem>)
+    dependency: $186build_tuple.17 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: volumeveg = getitem(value=vegdem, index=$186build_tuple.17, fn=<built-in function getitem>)
+    dependency: $212load_attr.21 = getattr(value=$200load_global.19, attr=float32)
+    dependency: $228build_tuple.25 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $230binary_subscr.26 = getitem(value=bush, index=$228build_tuple.25, fn=<built-in function getitem>)
+    dependency: $242compare_op.28 = $230binary_subscr.26 > $const240.27.3
+    dependency: vs = call $212load_attr.21($242compare_op.28, func=$212load_attr.21, args=[Var($242compare_op.28, wall_shadows.py:116)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $276load_attr.32 = getattr(value=$264load_global.30, attr=float32)
+    dependency: building = call $276load_attr.32($const286.33.4, func=$276load_attr.32, args=[Var($const286.33.4, wall_shadows.py:117)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $316load_attr.37 = getattr(value=$304load_global.35, attr=float32)
+    dependency: vb = call $316load_attr.37($const326.38.4, func=$316load_attr.37, args=[Var($const326.38.4, wall_shadows.py:118)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $356load_attr.42 = getattr(value=$344load_global.40, attr=float32)
+    dependency: prev = call $356load_attr.42($const366.43.4, func=$356load_attr.42, args=[Var($const366.43.4, wall_shadows.py:119)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $412call.49 = call $push_global_to_block.165($398load_attr.48, func=$push_global_to_block.165, args=[Var($398load_attr.48, wall_shadows.py:120)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $422get_iter.50 = getiter(value=$412call.49)
+    dependency: $2652load_attr.3 = getattr(value=$2640load_global.1, attr=float32)
+    dependency: $2668call.5 = call $2652load_attr.3($const2662.4.3, func=$2652load_attr.3, args=[Var($const2662.4.3, wall_shadows.py:159)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub2680.7 = $2668call.5 - vs.2
+    dependency: $2692build_tuple.12 = build_tuple(items=[Var($const2686.9.4, wall_shadows.py:159), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2710load_attr.15 = getattr(value=$2698load_global.13, attr=float32)
+    dependency: $2726call.17 = call $2710load_attr.15($const2720.16.3, func=$2710load_attr.15, args=[Var($const2720.16.3, wall_shadows.py:160)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub2738.19 = $2726call.17 - building.2
+    dependency: $2750build_tuple.24 = build_tuple(items=[Var($const2744.21.3, wall_shadows.py:160), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2768load_attr.27 = getattr(value=$2756load_global.25, attr=float32)
+    dependency: $2784call.29 = call $2768load_attr.27($const2778.28.3, func=$2768load_attr.27, args=[Var($const2778.28.3, wall_shadows.py:161)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub2796.31 = $2784call.29 - vb.2
+    dependency: $2808build_tuple.36 = build_tuple(items=[Var($const2802.33.6, wall_shadows.py:161), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2824build_tuple.42 = build_tuple(items=[Var($const2818.39.7, wall_shadows.py:162), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2840build_tuple.48 = build_tuple(items=[Var($const2834.45.5, wall_shadows.py:163), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2856build_tuple.54 = build_tuple(items=[Var($const2850.51.8, wall_shadows.py:164), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2872build_tuple.60 = build_tuple(items=[Var($const2866.57.9, wall_shadows.py:165), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $binop_add2904.66 = face.2 + wallbol
+    dependency: $2910compare_op.68 = $binop_add2904.66 == $const2908.67.3
+    dependency: $2916pred = call $push_global_to_block.166($2910compare_op.68, func=$push_global_to_block.166, args=(Var($2910compare_op.68, wall_shadows.py:166),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2924build_tuple.6 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2926binary_subscr.7 = getitem(value=walls, index=$2924build_tuple.6, fn=<built-in function getitem>)
+    dependency: $2938compare_op.9 = $2926binary_subscr.7 > $const2936.8.4
+    dependency: _maximum_v9__v56load_attr_2 = getattr(value=_maximum_v9__v44load_global_0, attr=isnan)
+    dependency: _maximum_v9__v72call_4 = call _maximum_v9__v56load_attr_2(temp.2, func=_maximum_v9__v56load_attr_2, args=[Var(temp.2, wall_shadows.py:129)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v9__v82pred = call $push_global_to_block.167(_maximum_v9__v72call_4, func=$push_global_to_block.167, args=(Var(_maximum_v9__v72call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $push_getattr_to_block.152 = getattr(value=$push_global_to_block.153, attr=float32)
+    dependency: $2948call.4 = call $push_getattr_to_block.152($phi2944.3.2, func=$push_getattr_to_block.152, args=[Var($phi2944.3.2, wall_shadows.py:166)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2966build_tuple.9 = build_tuple(items=[Var($const2960.6.10, wall_shadows.py:166), Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: _maximum_v10__v56load_attr_2 = getattr(value=_maximum_v10__v44load_global_0, attr=isnan)
+    dependency: _maximum_v10__v72call_4 = call _maximum_v10__v56load_attr_2(tv.2, func=_maximum_v10__v56load_attr_2, args=[Var(tv.2, wall_shadows.py:129)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v10__v82pred = call $push_global_to_block.168(_maximum_v10__v72call_4, func=$push_global_to_block.168, args=(Var(_maximum_v10__v72call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: candidate = call $1270load_attr.52($phi1302.4.2, func=$1270load_attr.52, args=[Var($phi1302.4.2, wall_shadows.py:133)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v8__v16load_attr_2 = getattr(value=_maximum_v8__v4load_global_0, attr=isnan)
+    dependency: _maximum_v8__v32call_4 = call _maximum_v8__v16load_attr_2(vs.5, func=_maximum_v8__v16load_attr_2, args=[Var(vs.5, wall_shadows.py:133)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v8__v42pred = call $push_global_to_block.169(_maximum_v8__v32call_4, func=$push_global_to_block.169, args=(Var(_maximum_v8__v32call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2564load_attr.3 = getattr(value=$2552load_global.1, attr=float32)
+    dependency: sun.3 = call $2564load_attr.3($const2574.4.4, func=$2564load_attr.3, args=[Var($const2574.4.4, wall_shadows.py:156)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v9__v96load_attr_2 = getattr(value=_maximum_v9__v84load_global_0, attr=float32)
+    dependency: _maximum_v9__v132call_5 = call _maximum_v9__v96load_attr_2($push_getattr_to_block.170, func=_maximum_v9__v96load_attr_2, args=[Var($push_getattr_to_block.170, wall_shadows.py:72)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1910load_attr.3 = getattr(value=$1898load_global.1, attr=float32)
+    dependency: $1932load_attr.6 = getattr(value=$1920load_global.4, attr=float32)
+    dependency: $1946compare_op.9 = vb.3 > $const1944.8.4
+    dependency: $1956call.10 = call $1932load_attr.6($1946compare_op.9, func=$1932load_attr.6, args=[Var($1946compare_op.9, wall_shadows.py:144)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub1968.12 = $1956call.10 - vs.5
+    dependency: vb.2 = call $1910load_attr.3($binop_sub1968.12, func=$1910load_attr.3, args=[Var($binop_sub1968.12, wall_shadows.py:144)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2000load_attr.16 = getattr(value=$1988load_global.14, attr=float32)
+    dependency: $2014compare_op.19 = vs.5 > $const2012.18.4
+    dependency: vs.2 = call $2000load_attr.16($2014compare_op.19, func=$2000load_attr.16, args=[Var($2014compare_op.19, wall_shadows.py:145)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2048load_attr.23 = getattr(value=$2036load_global.21, attr=float32)
+    dependency: $2070load_attr.26 = getattr(value=$2058load_global.24, attr=float32)
+    dependency: $binop_sub2084.29 = volumeveg.4 - base
+    dependency: $2092call.30 = call $2070load_attr.26($binop_sub2084.29, func=$2070load_attr.26, args=[Var($binop_sub2084.29, wall_shadows.py:146)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_mul2104.32 = $2092call.30 * vs.2
+    dependency: volumeveg.1 = call $2048load_attr.23($binop_mul2104.32, func=$2048load_attr.23, args=[Var($binop_mul2104.32, wall_shadows.py:146)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2136load_attr.36 = getattr(value=$2124load_global.34, attr=float32)
+    dependency: $2152build_tuple.40 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2154binary_subscr.41 = getitem(value=walls, index=$2152build_tuple.40, fn=<built-in function getitem>)
+    dependency: $2176load_attr.44 = getattr(value=$2164load_global.42, attr=float32)
+    dependency: $binop_sub2190.47 = f.3 - base
+    dependency: $2198call.48 = call $2176load_attr.44($binop_sub2190.47, func=$2176load_attr.44, args=[Var($binop_sub2190.47, wall_shadows.py:147)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub2208.49 = $2154binary_subscr.41 - $2198call.48
+    dependency: sun = call $2136load_attr.36($binop_sub2208.49, func=$2136load_attr.36, args=[Var($binop_sub2208.49, wall_shadows.py:147)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2232compare_op.53 = sun < $const2230.52.4
+    dependency: $2238pred = call $push_global_to_block.172($2232compare_op.53, func=$push_global_to_block.172, args=(Var($2232compare_op.53, wall_shadows.py:148),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v8__v148compare_op_2 = vs.5 >= candidate
+    dependency: _maximum_v8__v154pred = call $push_global_to_block.173(_maximum_v8__v148compare_op_2, func=$push_global_to_block.173, args=(Var(_maximum_v8__v148compare_op_2, wall_shadows.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1416load_attr.4 = getattr(value=$1404load_global.2, attr=float32)
+    dependency: vs.1 = call $1416load_attr.4($const1426.5.4, func=$1416load_attr.4, args=[Var($const1426.5.4, wall_shadows.py:136)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $426for_iter.2 = iternext(value=$422get_iter.50)
+    dependency: $step.143 = pair_first(value=$426for_iter.2)
+    dependency: $426for_iter.4 = pair_second(value=$426for_iter.2)
+    dependency: $556compare_op.4 = $x.142 < _sx_138
+    dependency: $562pred = call $push_global_to_block.174($556compare_op.4, func=$push_global_to_block.174, args=(Var($556compare_op.4, wall_shadows.py:123),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $438build_tuple.7 = build_tuple(items=[Var($step.143, wall_shadows.py:120), Var($const436.6.4, wall_shadows.py:121)])
+    dependency: $440binary_subscr.8 = getitem(value=offsets, index=$438build_tuple.7, fn=<built-in function getitem>)
+    dependency: $x.142 = $row.141 + $440binary_subscr.8
+    dependency: $462build_tuple.14 = build_tuple(items=[Var($step.143, wall_shadows.py:120), Var($const460.13.3, wall_shadows.py:121)])
+    dependency: $464binary_subscr.15 = getitem(value=offsets, index=$462build_tuple.14, fn=<built-in function getitem>)
+    dependency: y = col + $464binary_subscr.15
+    dependency: $494load_attr.19 = getattr(value=$482load_global.17, attr=float32)
+    dependency: temp = call $494load_attr.19($const504.20.4, func=$494load_attr.19, args=[Var($const504.20.4, wall_shadows.py:122)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $546compare_op.24 = $const538.22.4 <= $x.142
+    dependency: $552pred = call $push_global_to_block.175($546compare_op.24, func=$push_global_to_block.175, args=(Var($546compare_op.24, wall_shadows.py:123),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1636build_tuple.10 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $1638binary_subscr.11 = getitem(value=aspect, index=$1636build_tuple.10, fn=<built-in function getitem>)
+    dependency: $1650compare_op.13 = $1638binary_subscr.11 < low
+    dependency: $1656pred = call $push_global_to_block.176($1650compare_op.13, func=$push_global_to_block.176, args=(Var($1650compare_op.13, wall_shadows.py:141),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v9__v16load_attr_2 = getattr(value=_maximum_v9__v4load_global_0, attr=isnan)
+    dependency: _maximum_v9__v32call_4 = call _maximum_v9__v16load_attr_2(f.3, func=_maximum_v9__v16load_attr_2, args=[Var(f.3, wall_shadows.py:129)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v9__v42pred = call $push_global_to_block.177(_maximum_v9__v32call_4, func=$push_global_to_block.177, args=(Var(_maximum_v9__v32call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $578compare_op.4 = $const570.2.4 <= y
+    dependency: $584pred = call $push_global_to_block.178($578compare_op.4, func=$push_global_to_block.178, args=(Var($578compare_op.4, wall_shadows.py:123),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $588compare_op.4 = y < _sy_139
+    dependency: $594pred = call $push_global_to_block.179($588compare_op.4, func=$push_global_to_block.179, args=(Var($588compare_op.4, wall_shadows.py:123),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v10__v148compare_op_2 = volumeveg.4 >= tv.2
+    dependency: _maximum_v10__v154pred = call $push_global_to_block.180(_maximum_v10__v148compare_op_2, func=$push_global_to_block.180, args=(Var(_maximum_v10__v148compare_op_2, wall_shadows.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v8__v56load_attr_2 = getattr(value=_maximum_v8__v44load_global_0, attr=isnan)
+    dependency: _maximum_v8__v72call_4 = call _maximum_v8__v56load_attr_2(candidate, func=_maximum_v8__v56load_attr_2, args=[Var(candidate, wall_shadows.py:133)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v8__v82pred = call $push_global_to_block.181(_maximum_v8__v72call_4, func=$push_global_to_block.181, args=(Var(_maximum_v8__v72call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2600build_tuple.5 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2602binary_subscr.6 = getitem(value=walls, index=$2600build_tuple.5, fn=<built-in function getitem>)
+    dependency: $2612compare_op.7 = wallveg.3 > $2602binary_subscr.6
+    dependency: $2618pred = call $push_global_to_block.182($2612compare_op.7, func=$push_global_to_block.182, args=(Var($2612compare_op.7, wall_shadows.py:157),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $push_getattr_to_block.154 = getattr(value=$push_global_to_block.155, attr=float32)
+    dependency: $1688call.6 = call $push_getattr_to_block.154($phi1684.5.2, func=$push_getattr_to_block.154, args=[Var($phi1684.5.2, wall_shadows.py:141)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub1700.8 = $1688call.6 - wallbol
+    dependency: $1716load_attr.11 = getattr(value=$1704load_global.9, attr=float32)
+    dependency: $1732call.13 = call $1716load_attr.11($const1726.12.3, func=$1716load_attr.11, args=[Var($const1726.12.3, wall_shadows.py:141)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1742.14 = $binop_sub1700.8 + $1732call.13
+    dependency: $push_getattr_to_block.156 = getattr(value=$push_global_to_block.157, attr=float32)
+    dependency: face = call $push_getattr_to_block.156($binop_add1742.14, func=$push_getattr_to_block.156, args=[Var($binop_add1742.14, wall_shadows.py:141)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1664build_tuple.8 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $1666binary_subscr.9 = getitem(value=aspect, index=$1664build_tuple.8, fn=<built-in function getitem>)
+    dependency: $1678compare_op.11 = $1666binary_subscr.9 >= high
+    dependency: $1776load_attr.3 = getattr(value=$1764load_global.1, attr=float32)
+    dependency: $1792call.5 = call $1776load_attr.3($const1786.4.3, func=$1776load_attr.3, args=[Var($const1786.4.3, wall_shadows.py:143)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1830build_tuple.12 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $1832binary_subscr.13 = getitem(value=aspect, index=$1830build_tuple.12, fn=<built-in function getitem>)
+    dependency: $1844compare_op.15 = $1832binary_subscr.13 > low
+    dependency: $1850pred = call $push_global_to_block.183($1844compare_op.15, func=$push_global_to_block.183, args=(Var($1844compare_op.15, wall_shadows.py:143),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1858build_tuple.7 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $1860binary_subscr.8 = getitem(value=aspect, index=$1858build_tuple.7, fn=<built-in function getitem>)
+    dependency: $1872compare_op.10 = $1860binary_subscr.8 <= high
+    dependency: $614load_attr.4 = getattr(value=$602load_global.2, attr=float32)
+    dependency: $630build_tuple.8 = build_tuple(items=[Var($x.142, wall_shadows.py:121), Var(y, wall_shadows.py:121)])
+    dependency: $632binary_subscr.9 = getitem(value=a, index=$630build_tuple.8, fn=<built-in function getitem>)
+    dependency: $646binary_subscr.12 = getitem(value=heights, index=$step.143, fn=<built-in function getitem>)
+    dependency: $binop_sub656.13 = $632binary_subscr.9 - $646binary_subscr.12
+    dependency: temp.1 = call $614load_attr.4($binop_sub656.13, func=$614load_attr.4, args=[Var($binop_sub656.13, wall_shadows.py:124)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $688load_attr.17 = getattr(value=$676load_global.15, attr=float32)
+    dependency: $704build_tuple.21 = build_tuple(items=[Var($x.142, wall_shadows.py:121), Var(y, wall_shadows.py:121)])
+    dependency: $706binary_subscr.22 = getitem(value=vegdem, index=$704build_tuple.21, fn=<built-in function getitem>)
+    dependency: $720binary_subscr.25 = getitem(value=heights, index=$step.143, fn=<built-in function getitem>)
+    dependency: $binop_sub730.26 = $706binary_subscr.22 - $720binary_subscr.25
+    dependency: tv.1 = call $688load_attr.17($binop_sub730.26, func=$688load_attr.17, args=[Var($binop_sub730.26, wall_shadows.py:125)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $762load_attr.30 = getattr(value=$750load_global.28, attr=float32)
+    dependency: $778build_tuple.34 = build_tuple(items=[Var($x.142, wall_shadows.py:121), Var(y, wall_shadows.py:121)])
+    dependency: $780binary_subscr.35 = getitem(value=vegdem2, index=$778build_tuple.34, fn=<built-in function getitem>)
+    dependency: $794binary_subscr.38 = getitem(value=heights, index=$step.143, fn=<built-in function getitem>)
+    dependency: $binop_sub804.39 = $780binary_subscr.35 - $794binary_subscr.38
+    dependency: tv2.1 = call $762load_attr.30($binop_sub804.39, func=$762load_attr.30, args=[Var($binop_sub804.39, wall_shadows.py:126)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $836load_attr.43 = getattr(value=$824load_global.41, attr=float32)
+    dependency: $852build_tuple.47 = build_tuple(items=[Var($x.142, wall_shadows.py:121), Var(y, wall_shadows.py:121)])
+    dependency: $854binary_subscr.48 = getitem(value=vegdem, index=$852build_tuple.47, fn=<built-in function getitem>)
+    dependency: $binop_sub866.50 = $854binary_subscr.48 - prev.2
+    dependency: lastv.1 = call $836load_attr.43($binop_sub866.50, func=$836load_attr.43, args=[Var($binop_sub866.50, wall_shadows.py:127)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $898load_attr.54 = getattr(value=$886load_global.52, attr=float32)
+    dependency: $914build_tuple.58 = build_tuple(items=[Var($x.142, wall_shadows.py:121), Var(y, wall_shadows.py:121)])
+    dependency: $916binary_subscr.59 = getitem(value=vegdem2, index=$914build_tuple.58, fn=<built-in function getitem>)
+    dependency: $binop_sub928.61 = $916binary_subscr.59 - prev.2
+    dependency: lastv2.1 = call $898load_attr.54($binop_sub928.61, func=$898load_attr.54, args=[Var($binop_sub928.61, wall_shadows.py:128)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1024load_attr.14 = getattr(value=$1012load_global.12, attr=float32)
+    dependency: $1038compare_op.17 = f.4 > base
+    dependency: building.1 = call $1024load_attr.14($1038compare_op.17, func=$1024load_attr.14, args=[Var($1038compare_op.17, wall_shadows.py:131)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1072load_attr.21 = getattr(value=$1060load_global.19, attr=float32)
+    dependency: $1086compare_op.24 = tv.2 > base
+    dependency: $1096call.25 = call $1072load_attr.21($1086compare_op.24, func=$1072load_attr.21, args=[Var($1086compare_op.24, wall_shadows.py:132)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1118load_attr.28 = getattr(value=$1106load_global.26, attr=float32)
+    dependency: $1132compare_op.31 = tv2.2 > base
+    dependency: $1142call.32 = call $1118load_attr.28($1132compare_op.31, func=$1118load_attr.28, args=[Var($1132compare_op.31, wall_shadows.py:132)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1152.33 = $1096call.25 + $1142call.32
+    dependency: $1168load_attr.36 = getattr(value=$1156load_global.34, attr=float32)
+    dependency: $1182compare_op.39 = lastv.2 > base
+    dependency: $1192call.40 = call $1168load_attr.36($1182compare_op.39, func=$1168load_attr.36, args=[Var($1182compare_op.39, wall_shadows.py:132)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_add1202.41 = $binop_add1152.33 + $1192call.40
+    dependency: $1218load_attr.44 = getattr(value=$1206load_global.42, attr=float32)
+    dependency: $1232compare_op.47 = lastv2.2 > base
+    dependency: $1242call.48 = call $1218load_attr.44($1232compare_op.47, func=$1218load_attr.44, args=[Var($1232compare_op.47, wall_shadows.py:132)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: count = $binop_add1202.41 + $1242call.48
+    dependency: $1270load_attr.52 = getattr(value=$1258load_global.50, attr=float32)
+    dependency: $1284compare_op.55 = count > $const1282.54.4
+    dependency: $1290pred = call $push_global_to_block.184($1284compare_op.55, func=$push_global_to_block.184, args=(Var($1284compare_op.55, wall_shadows.py:133),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $1456load_attr.4 = getattr(value=$1444load_global.2, attr=float32)
+    dependency: $binop_add1470.7 = vb.3 + vs.6
+    dependency: vb.1 = call $1456load_attr.4($binop_add1470.7, func=$1456load_attr.4, args=[Var($binop_add1470.7, wall_shadows.py:137)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: prev.1 = getitem(value=heights, index=$step.143, fn=<built-in function getitem>)
+    dependency: $2244compare_op.3 = face.2 == $const2242.2.3
+    dependency: $2250pred = call $push_global_to_block.185($2244compare_op.3, func=$push_global_to_block.185, args=(Var($2244compare_op.3, wall_shadows.py:148),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2264load_attr.3 = getattr(value=$2252load_global.1, attr=float32)
+    dependency: sun.1 = call $2264load_attr.3($const2274.4.4, func=$2264load_attr.3, args=[Var($const2274.4.4, wall_shadows.py:149)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v10__v96load_attr_2 = getattr(value=_maximum_v10__v84load_global_0, attr=float32)
+    dependency: _maximum_v10__v132call_5 = call _maximum_v10__v96load_attr_2($push_getattr_to_block.186, func=_maximum_v10__v96load_attr_2, args=[Var($push_getattr_to_block.186, wall_shadows.py:72)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2304load_attr.3 = getattr(value=$2292load_global.1, attr=float32)
+    dependency: $2320build_tuple.7 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $2322binary_subscr.8 = getitem(value=walls, index=$2320build_tuple.7, fn=<built-in function getitem>)
+    dependency: $binop_sub2334.10 = $2322binary_subscr.8 - sun.4
+    dependency: wallshade = call $2304load_attr.3($binop_sub2334.10, func=$2304load_attr.3, args=[Var($binop_sub2334.10, wall_shadows.py:150)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2366load_attr.14 = getattr(value=$2354load_global.12, attr=float32)
+    dependency: $2388load_attr.17 = getattr(value=$2376load_global.15, attr=float32)
+    dependency: $binop_mul2402.20 = volumeveg.1 * wallbol
+    dependency: $2410call.21 = call $2388load_attr.17($binop_mul2402.20, func=$2388load_attr.17, args=[Var($binop_mul2402.20, wall_shadows.py:151)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $binop_sub2422.23 = $2410call.21 - wallshade
+    dependency: wallveg = call $2366load_attr.14($binop_sub2422.23, func=$2366load_attr.14, args=[Var($binop_sub2422.23, wall_shadows.py:151)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2446compare_op.27 = wallveg < $const2444.26.4
+    dependency: $2452pred = call $push_global_to_block.188($2446compare_op.27, func=$push_global_to_block.188, args=(Var($2446compare_op.27, wall_shadows.py:152),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2506load_attr.3 = getattr(value=$2494load_global.1, attr=float32)
+    dependency: $binop_sub2520.6 = sun.4 - wallveg.3
+    dependency: sun.2 = call $2506load_attr.3($binop_sub2520.6, func=$2506load_attr.3, args=[Var($binop_sub2520.6, wall_shadows.py:154)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2544compare_op.10 = sun.2 < $const2542.9.4
+    dependency: $2550pred = call $push_global_to_block.189($2544compare_op.10, func=$push_global_to_block.189, args=(Var($2544compare_op.10, wall_shadows.py:155),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2466load_attr.3 = getattr(value=$2454load_global.1, attr=float32)
+    dependency: wallveg.1 = call $2466load_attr.3($const2476.4.4, func=$2466load_attr.3, args=[Var($const2476.4.4, wall_shadows.py:153)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $push_getattr_to_block.158 = getattr(value=$push_global_to_block.159, attr=float32)
+    dependency: $1882call.5 = call $push_getattr_to_block.158($phi1878.4.2, func=$push_getattr_to_block.158, args=[Var($phi1878.4.2, wall_shadows.py:143)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: face.1 = $1792call.5 - $1882call.5
+    dependency: $1296compare_op.6 = count != $const1294.5.5
+    dependency: $1522load_attr.3 = getattr(value=$1510load_global.1, attr=float32)
+    dependency: $1538build_tuple.7 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: $1540binary_subscr.8 = getitem(value=walls, index=$1538build_tuple.7, fn=<built-in function getitem>)
+    dependency: $1552compare_op.10 = $1540binary_subscr.8 > $const1550.9.4
+    dependency: wallbol = call $1522load_attr.3($1552compare_op.10, func=$1522load_attr.3, args=[Var($1552compare_op.10, wall_shadows.py:139)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: $1584pred = call $push_global_to_block.190($1578compare_op.14, func=$push_global_to_block.190, args=(Var($1578compare_op.14, wall_shadows.py:140),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v8__v96load_attr_2 = getattr(value=_maximum_v8__v84load_global_0, attr=float32)
+    dependency: _maximum_v8__v132call_5 = call _maximum_v8__v96load_attr_2($push_getattr_to_block.191, func=_maximum_v8__v96load_attr_2, args=[Var($push_getattr_to_block.191, wall_shadows.py:72)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v10__v16load_attr_2 = getattr(value=_maximum_v10__v4load_global_0, attr=isnan)
+    dependency: _maximum_v10__v32call_4 = call _maximum_v10__v16load_attr_2(volumeveg.4, func=_maximum_v10__v16load_attr_2, args=[Var(volumeveg.4, wall_shadows.py:144)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _maximum_v10__v42pred = call $push_global_to_block.193(_maximum_v10__v32call_4, func=$push_global_to_block.193, args=(Var(_maximum_v10__v32call_4, wall_shadows.py:71),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: $2626build_tuple.4 = build_tuple(items=[Var($row.141, wall_shadows.py:112), Var(col, wall_shadows.py:112)])
+    dependency: wallveg.2 = getitem(value=walls, index=$2626build_tuple.4, fn=<built-in function getitem>)
+    dependency: _maximum_v9__v148compare_op_2 = f.3 >= temp.2
+    dependency: _maximum_v9__v154pred = call $push_global_to_block.194(_maximum_v9__v148compare_op_2, func=$push_global_to_block.194, args=(Var(_maximum_v9__v148compare_op_2, wall_shadows.py:73),), kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------
+_wall23 (Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), float32, float32, int64)
+--------------------------------------------------------------------------------
+# File: /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py
+# --- LINE 107 --- 
+# label 0
+#   a = arg(0, name=a)  :: array(float32, 2d, C)
+#   vegdem = arg(1, name=vegdem)  :: array(float32, 2d, C)
+#   vegdem2 = arg(2, name=vegdem2)  :: array(float32, 2d, C)
+#   bush = arg(3, name=bush)  :: array(float32, 2d, C)
+#   walls = arg(4, name=walls)  :: array(float32, 2d, C)
+#   aspect = arg(5, name=aspect)  :: array(float32, 2d, C)
+#   offsets = arg(6, name=offsets)  :: array(int64, 2d, C)
+#   heights = arg(7, name=heights)  :: array(float32, 1d, C)
+#   low = arg(8, name=low)  :: float32
+#   high = arg(9, name=high)  :: float32
+#   mode = arg(10, name=mode)  :: int64
+
+@njit(fastmath=False, parallel=True)
+
+# --- LINE 108 --- 
+
+def _wall23(a, vegdem, vegdem2, bush, walls, aspect, offsets, heights, low, high, mode):
+
+    # --- LINE 109 --- 
+    #   $6load_attr.1 = getattr(value=a, attr=shape)  :: UniTuple(int64 x 2)
+    #   $16unpack_sequence.4 = exhaust_iter(value=$6load_attr.1, count=2)  :: UniTuple(int64 x 2)
+    #   del $6load_attr.1
+    #   $sx.138 = static_getitem(value=$16unpack_sequence.4, index=0, index_var=None, fn=<built-in function getitem>)  :: int64
+    #   $sy.139 = static_getitem(value=$16unpack_sequence.4, index=1, index_var=None, fn=<built-in function getitem>)  :: int64
+    #   del $16unpack_sequence.4
+
+    sx,sy=a.shape
+
+    # --- LINE 110 --- 
+    #   $24load_global.5 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)  :: Module(<module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    #   $36load_attr.7 = getattr(value=$24load_global.5, attr=empty)  :: Function(<built-in function empty>)
+    #   del $24load_global.5
+    #   $const46.8.1 = const(int, 8)  :: Literal[int](8)
+    #   $52build_tuple.11 = build_tuple(items=[Var($const46.8.1, wall_shadows.py:110), Var($sx.138, wall_shadows.py:109), Var($sy.139, wall_shadows.py:109)])  :: Tuple(Literal[int](8), int64, int64)
+    #   del $const46.8.1
+    #   $54load_global.12 = global(np: <module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)  :: Module(<module 'numpy' from '/Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/__init__.py'>)
+    #   $66load_attr.13 = getattr(value=$54load_global.12, attr=float32)  :: class(float32)
+    #   del $54load_global.12
+    #   out = call $36load_attr.7($52build_tuple.11, func=$36load_attr.7, args=[Var($52build_tuple.11, wall_shadows.py:110)], kws=[('dtype', Var($66load_attr.13, wall_shadows.py:110))], vararg=None, varkwarg=None, target=None)  :: (UniTuple(int64, 3), class(float32)) -> array(float32, 3d, C)
+    #   del $66load_attr.13
+    #   del $52build_tuple.11
+    #   del $36load_attr.7
+
+    out=np.empty((8,sx,sy),dtype=np.float32)
+
+    # --- LINE 111 --- 
+    #   $binop_mul110.19 = $sx.138 * $sy.139  :: int64
+    #   id=1[LoopNest(index_variable = parfor_index.135, range = (0, $binop_mul110.19, 1))]{2944: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (133)>, 134: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (111)>, 3463: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (159)>, 3467: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (166)>, 1292: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (71)>, 3469: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (166)>, 1684: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (71)>, 2454: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (133)>, 3351: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (156)>, 1302: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (72)>, 3226: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (144)>, 2592: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 2976: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (136)>, 1444: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 424: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (120)>, 554: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (123)>, 428: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (120)>, 3121: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (141)>, 1586: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 948: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (129)>, 564: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (123)>, 566: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (123)>, 2620: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 1852: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 2494: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (71)>, 3391: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (157)>, 2240: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 3137: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (141)>, 3133: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (141)>, 3139: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (143)>, 3140: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (143)>, 586: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (123)>, 2252: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (129)>, 3021: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (137)>, 2640: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 596: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (123)>, 3286: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (148)>, 598: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (123)>, 1878: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 3298: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (149)>, 1764: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (72)>, 3302: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (150)>, 2918: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 1510: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 3305: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (154)>, 1898: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>, 3304: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (153)>, 3186: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (143)>, 2292: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (133)>, 3061: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (139)>, 2552: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (72)>, 1658: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (129)>, 3451: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (158)>, 1404: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/wall_shadows.py (73)>}Var(parfor_index.135, wall_shadows.py:111)
+    #   del walls
+    #   del vegdem2
+    #   del vegdem
+    #   del offsets
+    #   del mode
+    #   del low
+    #   del high
+    #   del heights
+    #   del bush
+    #   del aspect
+    #   del a
+    #   del $sy.139
+    #   del $sx.138
+
+    for pixel in prange(sx*sy):
+
+        # --- LINE 112 --- 
+
+        row,col=pixel//sy,pixel%sy
+
+        # --- LINE 113 --- 
+
+        base=a[row,col]
+
+        # --- LINE 114 --- 
+
+        f=base
+
+        # --- LINE 115 --- 
+
+        volumeveg=vegdem[row,col]
+
+        # --- LINE 116 --- 
+
+        vs=np.float32(bush[row,col]>1)
+
+        # --- LINE 117 --- 
+
+        building=np.float32(0)
+
+        # --- LINE 118 --- 
+
+        vb=np.float32(0)
+
+        # --- LINE 119 --- 
+
+        prev=np.float32(0)
+
+        # --- LINE 120 --- 
+
+        for step in range(heights.size):
+
+            # --- LINE 121 --- 
+
+            x,y=row+offsets[step,0],col+offsets[step,1]
+
+            # --- LINE 122 --- 
+
+            temp=tv=tv2=lastv=lastv2=np.float32(0)
+
+            # --- LINE 123 --- 
+
+            if 0<=x<sx and 0<=y<sy:
+
+                # --- LINE 124 --- 
+
+                temp=np.float32(a[x,y]-heights[step])
+
+                # --- LINE 125 --- 
+
+                tv=np.float32(vegdem[x,y]-heights[step])
+
+                # --- LINE 126 --- 
+
+                tv2=np.float32(vegdem2[x,y]-heights[step])
+
+                # --- LINE 127 --- 
+
+                lastv=np.float32(vegdem[x,y]-prev)
+
+                # --- LINE 128 --- 
+
+                lastv2=np.float32(vegdem2[x,y]-prev)
+
+            # --- LINE 129 --- 
+
+            f=_maximum(f,temp)
+
+            # --- LINE 130 --- 
+
+            volumeveg=_maximum(volumeveg,tv)
+
+            # --- LINE 131 --- 
+
+            building=np.float32(f>base)
+
+            # --- LINE 132 --- 
+
+            count=np.float32(tv>base)+np.float32(tv2>base)+np.float32(lastv>base)+np.float32(lastv2>base)
+
+            # --- LINE 133 --- 
+
+            candidate=np.float32(count>0 and count!=4)
+
+            # --- LINE 134 --- 
+
+            vs=_maximum(vs,candidate)
+
+            # --- LINE 135 --- 
+
+            if np.float32(vs*building)>0:
+
+                # --- LINE 136 --- 
+
+                vs=np.float32(0)
+
+            # --- LINE 137 --- 
+
+            vb=np.float32(vb+vs)
+
+            # --- LINE 138 --- 
+
+            prev=heights[step]
+
+        # --- LINE 139 --- 
+
+        wallbol=np.float32(walls[row,col]>0)
+
+        # --- LINE 140 --- 
+
+        if mode==0:
+
+            # --- LINE 141 --- 
+
+            face=np.float32(np.float32(aspect[row,col]<low or aspect[row,col]>=high)-wallbol+np.float32(1))
+
+        # --- LINE 142 --- 
+
+        else:
+
+            # --- LINE 143 --- 
+
+            face=np.float32(1)-np.float32(aspect[row,col]>low or aspect[row,col]<=high)
+
+        # --- LINE 144 --- 
+
+        vb=np.float32(np.float32(vb>0)-vs)
+
+        # --- LINE 145 --- 
+
+        vs=np.float32(vs>0)
+
+        # --- LINE 146 --- 
+
+        volumeveg=np.float32(np.float32(volumeveg-base)*vs)
+
+        # --- LINE 147 --- 
+
+        sun=np.float32(walls[row,col]-np.float32(f-base))
+
+        # --- LINE 148 --- 
+
+        if sun<0 or face==1:
+
+            # --- LINE 149 --- 
+
+            sun=np.float32(0)
+
+        # --- LINE 150 --- 
+
+        wallshade=np.float32(walls[row,col]-sun)
+
+        # --- LINE 151 --- 
+
+        wallveg=np.float32(np.float32(volumeveg*wallbol)-wallshade)
+
+        # --- LINE 152 --- 
+
+        if wallveg<0:
+
+            # --- LINE 153 --- 
+
+            wallveg=np.float32(0)
+
+        # --- LINE 154 --- 
+
+        sun=np.float32(sun-wallveg)
+
+        # --- LINE 155 --- 
+
+        if sun<0:
+
+            # --- LINE 156 --- 
+
+            sun=np.float32(0)
+
+        # --- LINE 157 --- 
+
+        if wallveg>walls[row,col]:
+
+            # --- LINE 158 --- 
+
+            wallveg=walls[row,col]
+
+        # --- LINE 159 --- 
+
+        out[0,row,col]=np.float32(1)-vs
+
+        # --- LINE 160 --- 
+
+        out[1,row,col]=np.float32(1)-building
+
+        # --- LINE 161 --- 
+
+        out[2,row,col]=np.float32(1)-vb
+
+        # --- LINE 162 --- 
+
+        out[3,row,col]=wallshade
+
+        # --- LINE 163 --- 
+
+        out[4,row,col]=sun
+
+        # --- LINE 164 --- 
+
+        out[5,row,col]=wallveg
+
+        # --- LINE 165 --- 
+
+        out[6,row,col]=face
+
+        # --- LINE 166 --- 
+
+        out[7,row,col]=np.float32(face+wallbol==1 and walls[row,col]>0)
+
+    # --- LINE 167 --- 
+    #   $2978return_value.1 = cast(value=out)  :: array(float32, 3d, C)
+    #   del out
+    #   return $2978return_value.1
+
+    return out
+
+
+================================================================================
+nopython signatures [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(int64, 2, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), float32, float32, int64) -> array(float32, 3d, C)]

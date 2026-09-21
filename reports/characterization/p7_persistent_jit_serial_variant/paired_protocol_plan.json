@@ -1,0 +1,22 @@
+{
+  "schema_version": "p7_persistent_jit_serial_variant.paired_protocol_plan.v1",
+  "status": "proposed_not_frozen_not_executed",
+  "purpose": "paired diagnostic comparison of immutable current-source snapshot against serial-cache snapshot",
+  "scenes": {
+    "small": {"protocol_source": "benchmarks/protocols/p7_pairs_v4/small/protocol.json", "fixture": "tests/reference/small_original_cpu/scene", "shape": "32x35"},
+    "repeated_block_256": {"protocol_source": "benchmarks/protocols/p7_pairs_v4/repeated_block_256/protocol.json", "fixture": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene", "shape": "256x256"}
+  },
+  "matrix": {"regimes": ["first_use_geometry_cold_empty_private_jit", "geometry_warm_primed_compatible_jit"], "budgets": [1, 4], "repetitions": 5, "timesteps": 24, "patches": 153, "block_pixels": 128, "outputs": 10},
+  "paired_variants": {
+    "current": {"source": "reports/characterization/p7_repaired_p6_baseline_v2/src", "role": "immutable current-source snapshot"},
+    "serial_cache": {"source": "reports/characterization/p7_persistent_jit_serial_variant/src", "role": "snapshot with inherited five cache decorators plus serial dispatcher cache decorators"}
+  },
+  "cold_policy": "fresh private NUMBA_CACHE_DIR and fresh geometry cache per child; construction/cache population measured separately and excluded from paired model timing",
+  "warm_policy": "run complete setup on both variants into separate compatible caches, verify cache identities, reset output/transaction/chronological state, then fresh timed child with same exact work; retain setup costs and cache byte sizes separately",
+  "guards": ["source and fixture inventories before/after", "12 GiB process-tree RSS cap", "all failures retained and invalidate subgroup", "10 newly published TIFFs per child, 24 bands with timestamps", "artifact/schema/mask/metadata comparison using v4 rules", "cache manifest and generation identity before/after", "no resume", "no reduced physical workload"],
+  "recording": ["raw wall time", "process-tree RSS samples", "stage timings", "JIT/cache construction cost", "cache bytes/file inventory", "environment/package hashes", "stdout/stderr", "per-pair comparisons and failure artifacts"],
+  "planned_command": "tools/benchmark_p7_pipeline.py --protocol <new_serial_variant_protocol>/small/protocol.json --baseline-source reports/characterization/p7_repaired_p6_baseline_v2/src --candidate-source reports/characterization/p7_persistent_jit_serial_variant/src --run reports/characterization/p7_persistent_jit_serial_variant/pairs_v1/small --execute",
+  "repeat_command": "tools/benchmark_p7_pipeline.py --protocol <new_serial_variant_protocol>/repeated_block_256/protocol.json --baseline-source reports/characterization/p7_repaired_p6_baseline_v2/src --candidate-source reports/characterization/p7_persistent_jit_serial_variant/src --run reports/characterization/p7_persistent_jit_serial_variant/pairs_v1/repeated_block_256 --execute",
+  "frozen_inputs": {"existing_protocols_immutable": true, "existing_v4_hashes": {"small": "77cf8647f132a3bb0da4a852dffaf451cf86358a260224ab5af980a9e76733a", "instrument": "b827dd320cd4a8d2741d57e8f460eb62624e7d30902dd38159e53ee045fc565c"}},
+  "approval_boundary": "Do not execute until root reviews and freezes a new protocol namespace and candidate-source snapshot hashes."
+}

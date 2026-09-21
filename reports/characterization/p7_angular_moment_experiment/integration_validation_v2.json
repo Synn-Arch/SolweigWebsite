@@ -1,0 +1,92 @@
+{
+  "evidence": {
+    "component.log": {
+      "bytes": 35,
+      "sha256": "030634664026304e2d349c81bca87572becd172228497e7c1e4df496b4b7311b"
+    },
+    "component_results.json": {
+      "bytes": 3031,
+      "sha256": "9be0fb54dbd25be62462e7ecf6dbfea234d4aa5065c8c38047513e29bda1e0e9"
+    },
+    "regressions.junit.xml": {
+      "bytes": 2523,
+      "sha256": "9b6c8ed4ad1b7fc65dfa75e61c22853de573bf4999b952ad1540255fd1cc3c80"
+    },
+    "regressions.log": {
+      "bytes": 99,
+      "sha256": "6e25dd42bcf5aeed96941d3cf22f94f7ae9b29327fe6da262d92fa9d3fa19d3b"
+    },
+    "regressions_initial_failure.junit.xml": {
+      "bytes": 23031,
+      "sha256": "eddd95772901c3f8862baf99359f73726445768977440e658a9b4767ea59b410"
+    },
+    "regressions_initial_failure.log": {
+      "bytes": 22504,
+      "sha256": "c9bb704756efd8015cca8c49823cbace2f6013e1e02d00bf4140bec0010c88dd"
+    },
+    "regressions_second_failure.junit.xml": {
+      "bytes": 21125,
+      "sha256": "3cb4334735dba64bcaec47ad1ab4e4c79d051c1ffe3f436dacafab5e984062a2"
+    },
+    "regressions_second_failure.log": {
+      "bytes": 14831,
+      "sha256": "3f6f18be9e75874cea7a3fc36b1a604d3dc7ac05eb46552a4d4d4ac2af38122f"
+    },
+    "solweig_light-0.1.0.dev0-py3-none-any.whl": {
+      "bytes": 209694,
+      "sha256": "490fcdc3e803dddea45e755db995b5b3f5d5e85fdea479eb4a342959cd1d9e6d"
+    },
+    "source_pipeline.junit.xml": {
+      "bytes": 1476,
+      "sha256": "67b8e511fb4f2b830de927beb41a166fb927dee142cd6e87dfa5f539969d2364"
+    },
+    "source_pipeline.log": {
+      "bytes": 964,
+      "sha256": "12501007b970e3cbba945ea0608b337cd3336503e18b6953af295a7afcb184aa"
+    },
+    "wheel_build.log": {
+      "bytes": 13614,
+      "sha256": "97f01e878ef6d747dbae0889c5a37b1765f56214ab58e542b2b4b76e03d843aa"
+    },
+    "wheel_environment.txt": {
+      "bytes": 515,
+      "sha256": "f10f1816d84d1fcc2be3347d4a62b552a483776f9d46c00ba371ee5e5b64b7dc"
+    },
+    "wheel_install.log": {
+      "bytes": 189,
+      "sha256": "4ad385af2cee91b2d80bbf4c22ab53a3347953e30b2db242ac90b7f9812dadab"
+    },
+    "wheel_pipeline.junit.xml": {
+      "bytes": 1476,
+      "sha256": "7020eac9fcc8287faf49b258ce786e63569dc1faf0b811481209ab2e8d816970"
+    },
+    "wheel_pipeline.log": {
+      "bytes": 1003,
+      "sha256": "86215bfadf1725a75e3e8d1e5675266117d5f4eff75e17e0299114328d87a606"
+    },
+    "wheel_provenance.txt": {
+      "bytes": 948,
+      "sha256": "98f681a754683f1ea9bfb2f5e2ef8ef5120f656aa0cece5f54379720be4b0710"
+    }
+  },
+  "exact_commands": {
+    "component": "PYTHONPATH=reports/characterization/p7_angular_moment_experiment/snapshot/src:. .venv-light/bin/python reports/characterization/p7_angular_moment_experiment/run_component_gate.py",
+    "regressions": "PYTHONPATH=reports/characterization/p7_angular_moment_experiment/snapshot/src:. .venv-light/bin/python -m pytest reports/characterization/p7_angular_moment_experiment/test_snapshot_regressions.py -q --junitxml=reports/characterization/p7_angular_moment_experiment/evidence/regressions.junit.xml",
+    "source_pipeline": "PYTHONPATH=reports/characterization/p7_angular_moment_experiment/snapshot/src:. .venv-light/bin/python -m pytest -p reports.characterization.p7_angular_moment_experiment.snapshot_counter_plugin tests/differential/test_pipeline_reference.py -q --junitxml=reports/characterization/p7_angular_moment_experiment/evidence/source_pipeline.junit.xml",
+    "wheel_pipeline": "PYTHONPATH=. /tmp/solweig_p7_angular_integrated_v3/venv/bin/python -m pytest -p reports.characterization.p7_angular_moment_experiment.snapshot_counter_plugin tests/differential/test_pipeline_reference.py -q --junitxml=reports/characterization/p7_angular_moment_experiment/evidence/wheel_pipeline.junit.xml"
+  },
+  "initial_failures_retained": [
+    "regressions_initial_failure.log",
+    "regressions_initial_failure.junit.xml",
+    "regressions_second_failure.log",
+    "regressions_second_failure.junit.xml"
+  ],
+  "results": {
+    "component": "18 passed",
+    "regressions": "12 passed",
+    "source_pipeline": "9 passed",
+    "wheel_pipeline": "9 passed"
+  },
+  "schema": "p7_angular_integrated_validation_v2",
+  "status": "pass"
+}

@@ -1,0 +1,8 @@
+{
+  "manifest": "reports/characterization/p8_portable_profile_v1/source_manifest_v2.json",
+  "manifest_sha256": "fee94115fd3b4467cb106f202a7cd6eaeea728f190a54f6b9ae88fac0e37f962",
+  "mismatches": [],
+  "record_count": 56,
+  "schema": "portable-profile-source-guard.v1",
+  "status": "passed"
+}

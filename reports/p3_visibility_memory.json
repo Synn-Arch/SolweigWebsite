@@ -1,0 +1,60 @@
+{
+  "audit_version": 1,
+  "workload": {
+    "shape": [
+      256,
+      256,
+      153
+    ],
+    "channels": 3,
+    "values": [
+      "canonical float32 +0",
+      "canonical float32 +1"
+    ],
+    "patches_per_channel": 153,
+    "encoded_bytes_per_channel": 1253376,
+    "dense_bytes_per_channel": 40108032,
+    "workspace_bytes": 65536
+  },
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "numpy": "2.4.6"
+  },
+  "provenance": {
+    "invocation": "PYTHONPATH=src .venv-light/bin/python tools/audit_p3_visibility_memory.py",
+    "source_sha256": {
+      "tools/audit_p3_visibility_memory.py": "f65daa509fcb299604e9ddc3fd5b32874c47d112463de529fd1e8e987771d078",
+      "src/solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+      "src/solweig_light/geometry/visibility_native.py": "1d5adf9eb78d6692b4f738d6f289ee0c10c99cb9cf6cf31082c2d9dea5e3ef99"
+    }
+  },
+  "native_open_three_channels": {
+    "python_traced_current_bytes": 137805,
+    "python_traced_peak_bytes": 276691
+  },
+  "decode_one_plane": {
+    "python_traced_current_bytes": 262888,
+    "python_traced_peak_bytes": 397484,
+    "result_bytes": 262144
+  },
+  "legacy_export_three_channels": {
+    "python_traced_current_bytes": 2886,
+    "python_traced_peak_bytes": 396161,
+    "explicit_workspace_statistics": {
+      "numeric_workspace_limit_bytes": 65536,
+      "conservative_peak_numeric_workspace_bytes": 64896
+    }
+  },
+  "verification": {
+    "readonly_memmap_without_bytes_payload_copy": true,
+    "all_patch_modes_binary": true,
+    "all_459_exported_planes_bit_exact": true,
+    "all_three_mappings_explicitly_closed": true
+  },
+  "limitations": [
+    "tracemalloc measures traced Python/NumPy allocations, not process-tree RSS or all native allocations.",
+    "Memory-mapped resident disk pages, OS page cache, zlib internal buffers and untraced native allocations are excluded.",
+    "Import roundtrip is correctness verification; its allocations are not included in export measurements.",
+    "No timing or speedup claim; encoded storage and a returned decoded plane are separate from temporary workspace."
+  ]
+}

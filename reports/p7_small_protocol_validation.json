@@ -1,0 +1,410 @@
+{
+  "status": "validated_not_executed",
+  "provenance": {
+    "protocol_sha256": "f358371f0afb6c95f298e2033dc219f60894a21db390662a4a02fc1851af4eac",
+    "kwargs_sha256": "f99efb077366e00f1a27848890bd244e6460530035ae1a8aece0194d7b744293",
+    "fixture": {
+      "Building_DSM.tif": "e13aefb56d224680fd0a04fbf1886faf840d73db032aa4bbe2bbc651c4d8f80a",
+      "DEM.tif": "a550dd0b6519621fff999eb6cc7bce224c27a3c5cc17d73660c41b52767a7105",
+      "Trees.tif": "aacbcf3ffe3296c1ad4528138555b19d59358210a4c2b5b1c636074975fc8bdc",
+      "manifest.json": "fe013dcdfebb28db2e45141afe86a1ac3b1c19b2987a82befaa9e6628c4fc5b6",
+      "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+    },
+    "sources": {
+      "P6": {
+        "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+        "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+        "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+        "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+        "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+        "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+        "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+        "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+        "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+        "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+        "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+        "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+        "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+        "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+        "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+        "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+        "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+        "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+        "solweig_light/geometry/svf.py": "8a803b973e8a80935465c5ebe0e23d822e2624fe6a5823d2afe5c9bb54e38d21",
+        "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+        "solweig_light/geometry/visibility_native.py": "1d5adf9eb78d6692b4f738d6f289ee0c10c99cb9cf6cf31082c2d9dea5e3ef99",
+        "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+        "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+        "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+        "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+        "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+        "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+        "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+        "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+        "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+        "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+        "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+        "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solweig_light/radiation/engine.py": "5072fcef16f70148368496bbdf00f6b32de5d56978c4f35f542b380893b142d2",
+        "solweig_light/radiation/ground_view.py": "a5c0177752cad959901aa2287f66fb763c5c91b7b65bafc1ede788d3d0ba1440",
+        "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+        "solweig_light/radiation/patch_radiation.py": "68aa0b6612ff75a3c0994ac636a7b52d0cca42059939f014cb1f599a092c9e3e",
+        "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+        "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+        "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+        "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+        "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+        "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+      },
+      "candidate": {
+        "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+        "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+        "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+        "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+        "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+        "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+        "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+        "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+        "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+        "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+        "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+        "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+        "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+        "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+        "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+        "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+        "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+        "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+        "solweig_light/geometry/svf.py": "8a803b973e8a80935465c5ebe0e23d822e2624fe6a5823d2afe5c9bb54e38d21",
+        "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+        "solweig_light/geometry/visibility_compiled.py": "f58959263175330162c5e9085be393d87ccb6320bead6d19d0a9d1445a03967a",
+        "solweig_light/geometry/visibility_native.py": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+        "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+        "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+        "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+        "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+        "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+        "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+        "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+        "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+        "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+        "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+        "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+        "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solweig_light/radiation/engine.py": "5072fcef16f70148368496bbdf00f6b32de5d56978c4f35f542b380893b142d2",
+        "solweig_light/radiation/ground_view.py": "a5c0177752cad959901aa2287f66fb763c5c91b7b65bafc1ede788d3d0ba1440",
+        "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+        "solweig_light/radiation/patch_radiation.py": "c83cd169ac15fa7af4d81e8a5a2b305f1bbc6e24731d5bfd069321488230ecec",
+        "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+        "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+        "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+        "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+        "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+        "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554",
+        "solweig_light.egg-info/PKG-INFO": "54e5b9b51fe1b3ceaaa9b0903a18dc00d0dd3442d908c8648688bd2573e31ca8",
+        "solweig_light.egg-info/SOURCES.txt": "d331d39b90ccaaeb42c8b641445756518559694897071882ce97cff7ded52215",
+        "solweig_light.egg-info/dependency_links.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+        "solweig_light.egg-info/entry_points.txt": "48c66a89d9a6c906ed892c816b27b31eebdf12ab7e7ff5bda549d488113cfcbc",
+        "solweig_light.egg-info/requires.txt": "0ca25289ac30f9717b22e1ebad9ed1f821bb7dd655e0b6c9c2a567a6f68083c8",
+        "solweig_light.egg-info/top_level.txt": "1d4081f2f0ba73c39b1296337c12d931cadfaa8d06cc1138e85f8d5c70b2833e"
+      }
+    },
+    "harness_sha256": "f8f285f1081f1d18da3ceee4460e3e401e09f132f666f6279c2b73f623f8f4f3",
+    "protocol": {
+      "artifact_globs": [
+        "output_folder/**/*.tif",
+        "processed_inputs/SVF/*.tif",
+        "processed_inputs/SVF/*.zip",
+        "processed_inputs/SVF/*.npz"
+      ],
+      "cold_remove_relative": [
+        "processed_inputs",
+        "output_folder",
+        ".runtime_cache",
+        ".solweig-light",
+        ".solweig-light-locks"
+      ],
+      "comparison_protocol_sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+      "fixture": "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+      "fixture_hashes": {
+        "Building_DSM.tif": "e13aefb56d224680fd0a04fbf1886faf840d73db032aa4bbe2bbc651c4d8f80a",
+        "DEM.tif": "a550dd0b6519621fff999eb6cc7bce224c27a3c5cc17d73660c41b52767a7105",
+        "Trees.tif": "aacbcf3ffe3296c1ad4528138555b19d59358210a4c2b5b1c636074975fc8bdc",
+        "manifest.json": "fe013dcdfebb28db2e45141afe86a1ac3b1c19b2987a82befaa9e6628c4fc5b6",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "freezer_sha256": "e8e61c1ba45a9eafb23652bbfa6077e531b3405fa1ec94cee8e6b0a0bdfee119",
+      "kwargs_manifest": "/Users/alansynn/Workspace/solweig-light/benchmarks/protocols/p7_pairs/small/kwargs.json",
+      "limitations": [
+        "Development host; OS page cache uncontrolled",
+        "Warm means validated geometry warm, not JIT warm",
+        "No reduced patches, resolution, timesteps or output computation"
+      ],
+      "memory_budget_bytes": 12884901888,
+      "native_budgets": [
+        1,
+        4
+      ],
+      "preprocess_relative": "processed_inputs",
+      "regimes": [
+        "cold",
+        "geometry_warm"
+      ],
+      "repetitions": 5,
+      "runtime_options": {
+        "block_pixels": 128,
+        "cache_dir": "{scene}/.runtime_cache",
+        "cache_enabled": true,
+        "checkpoint_interval": 1,
+        "legacy_cache_policy": "recompute"
+      },
+      "schema_version": 1,
+      "scope": "P6 versus candidate, full chronological workload; not upstream speedup evidence",
+      "seed": 20260918,
+      "status": "frozen_before_optimization",
+      "tiff_field_rules": {
+        "Kdown": {
+          "atol": 0.05,
+          "rtol": 1e-05,
+          "unit": "W m-2"
+        },
+        "Kup": {
+          "atol": 0.05,
+          "rtol": 1e-05,
+          "unit": "W m-2"
+        },
+        "Ldown": {
+          "atol": 0.05,
+          "rtol": 1e-05,
+          "unit": "W m-2"
+        },
+        "Lup": {
+          "atol": 0.05,
+          "rtol": 1e-05,
+          "unit": "W m-2"
+        },
+        "SVF": {
+          "max_abs": 1e-06
+        },
+        "Shadow": {
+          "rule": "exact_value_and_masks",
+          "unit": "transmitted_visibility"
+        },
+        "TMRT": {
+          "max_abs": 0.01,
+          "unit": "degC"
+        },
+        "Ta": {
+          "rule": "match float32 operation order; exact on frozen forcing",
+          "unit": "degC"
+        },
+        "UTCI": {
+          "max_abs": 0.02,
+          "unit": "degC"
+        },
+        "WBGT": {
+          "max_abs": 0.02,
+          "unit": "degC"
+        },
+        "Wind": {
+          "rule": "exact selection, clamp and values on frozen fixtures",
+          "unit": "m s-1"
+        },
+        "svf": {
+          "max_abs": 1e-06
+        }
+      },
+      "warm_remove_relative": [
+        "output_folder",
+        ".solweig-light",
+        ".solweig-light-locks"
+      ]
+    },
+    "hardware": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "logical_cpus": 10
+    },
+    "trial_order": [
+      {
+        "regime": "cold",
+        "budget": 1,
+        "repetition": 0,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 1,
+        "repetition": 1,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 1,
+        "repetition": 2,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 1,
+        "repetition": 3,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 1,
+        "repetition": 4,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 4,
+        "repetition": 0,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 4,
+        "repetition": 1,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 4,
+        "repetition": 2,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 4,
+        "repetition": 3,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "cold",
+        "budget": 4,
+        "repetition": 4,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 1,
+        "repetition": 0,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 1,
+        "repetition": 1,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 1,
+        "repetition": 2,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 1,
+        "repetition": 3,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 1,
+        "repetition": 4,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 4,
+        "repetition": 0,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 4,
+        "repetition": 1,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 4,
+        "repetition": 2,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 4,
+        "repetition": 3,
+        "order": [
+          "candidate",
+          "P6"
+        ]
+      },
+      {
+        "regime": "geometry_warm",
+        "budget": 4,
+        "repetition": 4,
+        "order": [
+          "P6",
+          "candidate"
+        ]
+      }
+    ]
+  }
+}

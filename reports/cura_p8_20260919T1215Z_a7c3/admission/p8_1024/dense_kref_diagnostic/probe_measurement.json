@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/env/bin/python",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics_dense_kref/dense_tmrt_probe.py",
+    "--backend",
+    "candidate",
+    "--spec",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics_dense_kref/candidate/spec.json",
+    "--log",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics_dense_kref/candidate/probe.jsonl"
+  ],
+  "exit_code": 1,
+  "peak_process_tree_rss_bytes": 1889026048,
+  "memory_limit_bytes": 12884901888,
+  "memory_limit_aborted": false,
+  "elapsed_seconds": 186.0305484784767
+}

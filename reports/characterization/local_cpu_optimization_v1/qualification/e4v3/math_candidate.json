@@ -1,0 +1,52 @@
+{
+  "every_timestep_exactness_passed": true,
+  "performance_claim": null,
+  "promotion_approved": false,
+  "schema": "local-cpu-optimization-v1-e4v3-source-qualification.v1",
+  "source": "math_candidate",
+  "source_file_count": 49,
+  "source_inventory_sha256": "31488a39ee01ac88caca39c3d7d03926828852cdf9fa1cedce9c4d2873e826d7",
+  "source_manifest_sha256": "45a428f1b1f806c4886dbc893e8975dedf9f756b5ea02a615c9e9ac0859e6119",
+  "source_path": "reports/characterization/local_cpu_optimization_v1/candidates/e4v3/math_candidate/src",
+  "status": "passed",
+  "tests": {
+    "source_proof": {
+      "failed": 0,
+      "passed": 6,
+      "shared_evidence": "../source_proof",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "000a38c04dc9886fb5fea0271462ad017e556eeff1655c45c8eab12a3064311f"
+    },
+    "subprocess": {
+      "failed": 0,
+      "passed": 9,
+      "shared_evidence": "../subprocess",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "7213697d28a837d23c8c876b28083e874bfe331e1c8576d34d0679a1c9541257"
+    },
+    "targeted": {
+      "command": "origin-guarded pytest: test_wall_shadows_compiled.py test_portable_profile.py test_persistent_jit_cache.py test_pipeline_reference.py; NUMBA_NUM_THREADS=10",
+      "failed": 0,
+      "passed": 300,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "9982b280c1704b398a4a07ea25d29b08a91d45b39e49bb7780ed32ac696a29c9"
+    }
+  },
+  "trace": {
+    "artifacts_exact": true,
+    "baseline_records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+    "comparison_sha256": "b790685884a2046310f05a110170a81f579286f4588b7cf27f7afe77b16bbbb4",
+    "event_counts": {
+      "engine_return": 24,
+      "state_checkpoint": 24,
+      "writer_inputs": 24
+    },
+    "final_state_exact": true,
+    "geometry_exact": true,
+    "manifest_sha256": "6050f274a1fd814c79b0074a3dc151f8ded4743c9523d6bc22e220421c956dbe",
+    "path": "reports/characterization/local_cpu_optimization_v1/qualification/e4v3/traces/math_candidate",
+    "records": 72,
+    "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+    "trace_exact": true
+  }
+}

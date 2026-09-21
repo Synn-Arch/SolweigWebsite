@@ -1,0 +1,74 @@
+{
+  "status": "profiled",
+  "stages": {
+    "calculate_wbgt.py:isobaric_wet_bulb_temperature_from_rh": {
+      "calls": 1,
+      "inclusive_seconds": 0.0005332909058779478,
+      "excluding_selected_children_seconds": 0.0005332909058779478
+    },
+    "utci_process.py:load_cached_svf_outputs": {
+      "calls": 1,
+      "inclusive_seconds": 0.008401667000725865,
+      "excluding_selected_children_seconds": 0.008401667000725865
+    },
+    "solweig.py:Lcyl_v2022a": {
+      "calls": 24,
+      "inclusive_seconds": 1.3899890016764402,
+      "excluding_selected_children_seconds": 1.3899890016764402
+    },
+    "solweig.py:Solweig_2022a_calc": {
+      "calls": 24,
+      "inclusive_seconds": 2.5717710468452424,
+      "excluding_selected_children_seconds": 0.13515504251699895
+    },
+    "calculate_wbgt.py:black_globe_temperature": {
+      "calls": 24,
+      "inclusive_seconds": 0.0021053312812000513,
+      "excluding_selected_children_seconds": 0.0021053312812000513
+    },
+    "calculate_utci.py:utci_calculator": {
+      "calls": 24,
+      "inclusive_seconds": 0.04810629063285887,
+      "excluding_selected_children_seconds": 0.04810629063285887
+    },
+    "solweig.py:shadowingfunction_wallheight_23": {
+      "calls": 14,
+      "inclusive_seconds": 0.038909460068680346,
+      "excluding_selected_children_seconds": 0.038909460068680346
+    },
+    "solweig.py:gvf_2018a": {
+      "calls": 14,
+      "inclusive_seconds": 0.6944629153003916,
+      "excluding_selected_children_seconds": 0.6944629153003916
+    },
+    "solweig.py:TsWaveDelay_2015a": {
+      "calls": 84,
+      "inclusive_seconds": 0.0014313382562249899,
+      "excluding_selected_children_seconds": 0.0014313382562249899
+    },
+    "solweig.py:Kside_veg_v2022a": {
+      "calls": 14,
+      "inclusive_seconds": 0.31182328902650625,
+      "excluding_selected_children_seconds": 0.31182328902650625
+    },
+    "utci_process.py:compute_utci": {
+      "calls": 1,
+      "inclusive_seconds": 2.90629820805043,
+      "excluding_selected_children_seconds": 0.2753805813845247
+    },
+    "solweig_gpu.py:run_utci_tiles": {
+      "calls": 1,
+      "inclusive_seconds": 5.122377582942136,
+      "excluding_selected_children_seconds": 2.216079374891706
+    }
+  },
+  "elapsed_profiled_region_seconds": 5.122492750058882,
+  "profiler_sha256": "4cd301ba8bdcb9e2df9512d3d04f79d52538a3a0b2597cea4a0115b5fc243de1",
+  "measurement_class": "diagnostic read-only call profiler; includes profiler overhead",
+  "limitations": [
+    "Do not sum overlapping inclusive stage durations",
+    "Only selected boundaries; exclusive time includes unselected helpers and I/O",
+    "Not a paired speedup benchmark; child workers are included as wait time, not separately traced",
+    "Use separate non-profiled fresh-process timings for performance comparisons"
+  ]
+}

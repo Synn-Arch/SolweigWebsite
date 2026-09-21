@@ -1,0 +1,38 @@
+{
+  "torch_commit": "08187d9e0fba026dc8217405802ab5381dc88d90",
+  "sleef_commit": "5a1d179df9cf652951b59010a2d2075372d67f68",
+  "files": {
+    "src/libm/sleefsimdsp.c": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/libm/sleefsimdsp.c",
+      "sha256": "726d962aaa9cfb0b1696122f4d26765495491c0cbc26c084c899704de46b2f5c"
+    },
+    "src/common/df.h": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/common/df.h",
+      "sha256": "cd3c7de0e47f3751a15dd62878effabdec9e47a892a03fefd75981c26fdaf097"
+    },
+    "src/arch/helperadvsimd.h": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/arch/helperadvsimd.h",
+      "sha256": "8db49cb2881771dde2ac6b7fcf5031b3fecf302b92220ff4cf0ed04f169bb610"
+    },
+    "src/arch/helperavx2.h": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/arch/helperavx2.h",
+      "sha256": "9679ccb4d0b6f4f2063d3eb30462ff11b9ba019bdb02f38028e4f0da7f8c2488"
+    },
+    "src/arch/helperavx.h": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/arch/helperavx.h",
+      "sha256": "7197851d746d4fe696e8dbe1640726179c30ea9f1c45dd393a6c52d5709dbee5"
+    },
+    "LICENSE.txt": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/LICENSE.txt",
+      "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    "src/arch/helperavx512f.h": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/arch/helperavx512f.h",
+      "sha256": "10fbec431d4157f98cb5569c2aef00881f5312b1ddb8081063600e0c212e80b5"
+    },
+    "src/common/misc.h": {
+      "url": "https://raw.githubusercontent.com/shibatch/sleef/5a1d179df9cf652951b59010a2d2075372d67f68/src/common/misc.h",
+      "sha256": "516ddeb5cc9501039b104967f1830b92e94cc6053c401fbb6773873dfb1b6178"
+    }
+  }
+}

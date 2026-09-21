@@ -1,0 +1,92 @@
+{
+  "all_run_download_hash_checks_passed": true,
+  "files": [
+    {
+      "bytes": 1068,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/cleanup_ledger.json",
+      "sha256": "28ac5c7caf376a14f1418219f2c661e64aa5c294a8a7635ba27b70b678e0641b"
+    },
+    {
+      "bytes": 60503,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/dense1024/comparison_original_m1.json",
+      "sha256": "db1a407716073cb237e64837cfe6c56792bc80edd5a535e443333f3bc2f5ed18"
+    },
+    {
+      "bytes": 60624,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/vegetation1024/comparison_original_m1.json",
+      "sha256": "6184cd5481dc889b20c66c9156bbb3d319153e42bca1104dcdcb1de810900c1a"
+    },
+    {
+      "bytes": 18764,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/dense1024/run_inventory.sha256",
+      "sha256": "af46bd4e7689138b1b0402ffe2ccf0bc4f74c2aa82a2c2ecfe69a37d828f0b02"
+    },
+    {
+      "bytes": 18677,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/vegetation1024/run_inventory.sha256",
+      "sha256": "cba7a60e3e2184938168a26e047c5a4b1c65775cd0a7bfbb261474f2f5171234"
+    },
+    {
+      "bytes": 18585,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/dense1024_attempt1_completed_harness_fieldset_error/run_inventory.sha256",
+      "sha256": "7d948625488ea6f405c6ecdaf060d9d72faac4c1b5caf0d0fcf5994720a43ea5"
+    },
+    {
+      "bytes": 1748,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/final_new_evidence.sha256",
+      "sha256": "ea752a1aacef1ef9940fd6191b9bec5ea5521f160b397e2a3a43ee93678d8351"
+    },
+    {
+      "bytes": 818,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/final_new_evidence_hashcheck.log",
+      "sha256": "a4f6bc9114d901f39caab1ff2f9acd94be4fb4181ff3d2bb15daa133289b659b"
+    },
+    {
+      "bytes": 339,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/remote_cleanup.log",
+      "sha256": "4794128af50679b539ce9f1bb4e8c21ce240490cf4fb922c44bf845d6c1c7052"
+    },
+    {
+      "bytes": 18583,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/cura_mkl_comparison/report.json",
+      "sha256": "5a429129b745270c90c0efc825a36c7b68b483f88aaa701f343766bb6e01550b"
+    },
+    {
+      "bytes": 60582,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/cura_mkl_comparison/dense1024_original_cura_mkl_vs_linux_profile.json",
+      "sha256": "33fb622c99dce4ea605291d6ee25746c88b773f8aa084551aac18e99b05fc65f"
+    },
+    {
+      "bytes": 60725,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/cura_mkl_comparison/vegetation1024_original_cura_mkl_vs_linux_profile.json",
+      "sha256": "dec03251d53c864eeabc85d1a1d5c815dbfb860eca1c9c4db540fbe4fb90c5f0"
+    },
+    {
+      "bytes": 19669,
+      "path": "reports/characterization/p8_portable_profile_v1/cross_platform_candidate/report.json",
+      "sha256": "507bdec9354acc636756a1f59a2b4f3b2ce750ff32fd7f7f1122f591fbb85983"
+    },
+    {
+      "bytes": 60002,
+      "path": "reports/characterization/p8_portable_profile_v1/cross_platform_candidate/dense1024_m1_vs_linux_candidate.json",
+      "sha256": "d6334f2bb237e4744bcba3c19de4c3a096c6a22bad3aa984eac5532e40ae491d"
+    },
+    {
+      "bytes": 60113,
+      "path": "reports/characterization/p8_portable_profile_v1/cross_platform_candidate/vegetation1024_m1_vs_linux_candidate.json",
+      "sha256": "4edb31494f005669ff0ab60bb4d8f8fccc20f016e2bf5009033feb36a3254ae9"
+    },
+    {
+      "bytes": 13978,
+      "path": "reports/characterization/p8_portable_profile_v1/linux_tan_fallback/report.json",
+      "sha256": "8fac9358c192a93f4ce97e5d320e22b1dab6848bc9ef4e464cfbaaea71a0e28a"
+    },
+    {
+      "bytes": 6958,
+      "path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/full1024_admission_report.json",
+      "sha256": "80dab07ece08f659bc54be3f39e7f41364875957e08c3cbb8821ef490f162300"
+    }
+  ],
+  "remote_owned_root_absent": true,
+  "schema": "portable-profile-v1-linux-full1024-evidence-manifest.v1"
+}

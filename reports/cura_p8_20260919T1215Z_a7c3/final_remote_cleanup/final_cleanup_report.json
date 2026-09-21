@@ -1,0 +1,52 @@
+{
+  "authorization": "User explicitly authorized Cura work and required removal of task-created remote files at completion.",
+  "completed_at": "2026-09-20T02:20:00-04:00",
+  "deletion": {
+    "independent_ssh_absence_check": true,
+    "method": "single checked Python process using shutil.rmtree after exact root/name/parent/uid and /proc process checks",
+    "outside_owned_root_touched": false,
+    "post_delete_task_processes": 0,
+    "remote_free_space_after": "45G",
+    "root_absent_in_same_process": true
+  },
+  "host_alias": "cura",
+  "owned_root": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3",
+  "pre_delete": {
+    "live_task_processes": 0,
+    "remote_files": 143176,
+    "remote_free_space": "33G",
+    "remote_root_size": "14G",
+    "remote_total_file_bytes": 18639697163,
+    "root_owner_uid_matched_ssh_user": true,
+    "root_realpath_exact": true
+  },
+  "preservation": {
+    "bulk_duplicates": "Previously downloaded local reports/cura_p8_20260919T1215Z_a7c3 is 8.5G and retains raw admission evidence. Reproducible environments, build caches, and unexecuted generated fixtures were not redundantly downloaded; locks/manifests/generators/source patches are in the compact archive.",
+    "compact_selected_archive": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/selected_evidence.tar.gz",
+      "selected_files": 1060,
+      "selected_uncompressed_bytes": 80626389,
+      "sha256": "ebd5f12aa9f2d25b685758f4bd48a146c8523b20eed02ef570ce88f5336e5d44"
+    },
+    "selected_hash_manifest": {
+      "failures": 0,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/selected.sha256",
+      "sha256": "c1c62d3ac97e809b869b946237a92587922215190306a9643748becd359c37d1",
+      "verified_entries": 1060
+    },
+    "selection_policy": "compact unique/reproducibility evidence; excludes reproducible environments, caches, bulk fixture/output duplicates while retaining complete inventory",
+    "whole_tree_inventory": {
+      "file_count": 143176,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/final_remote_cleanup/whole_tree_inventory.json",
+      "sha256": "0dbdcd5c4ee3697a1f2be82cb256a34c7816f8ff3be306c507b2e637671a7d57"
+    }
+  },
+  "prior_cleanup_failure_preserved": {
+    "detail": "Earlier duplicate-rerun whole-file verification raised NameError before checks and the duplicate was removed; the original failure remains in remote_cleanup_ledger.json and downloaded diagnostic evidence. It is not represented as successfully verified.",
+    "status": "recorded_not_erased"
+  },
+  "resolved_hostname": "analytica",
+  "schema": "solweig-light.cura-final-cleanup.v1",
+  "status": "complete_verified_absent",
+  "verification_note": "Initial local command-line tar extraction omitted three AppleDouble files by platform behavior; deletion did not proceed. Python tarfile re-extraction restored them, and all 1,060 selected hashes then verified before deletion."
+}

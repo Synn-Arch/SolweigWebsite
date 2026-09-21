@@ -1,0 +1,9 @@
+{
+  "status": "invalidated_for_timing",
+  "reason": "Harness briefly changed during trials to copy its own source, then restored. Two trials observed added I/O. Numerical source and workload unchanged; timing protocol not uniform. Preserve this attempt and rerun entire predeclared experiment with immutable runner.",
+  "affected_trials": [
+    "trial_11_threads_default",
+    "trial_12_threads_4"
+  ],
+  "no_speedup_claim": true
+}

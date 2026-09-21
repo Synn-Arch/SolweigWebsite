@@ -1,0 +1,353 @@
+{
+  "count": 49,
+  "installed_target": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages",
+  "passed": true,
+  "passed_count": 49,
+  "records": [
+    {
+      "exists": true,
+      "expected_sha256": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+      "installed_sha256": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+      "passed": true,
+      "path": "solweig_light/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+      "installed_sha256": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+      "passed": true,
+      "path": "solweig_light/api.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+      "installed_sha256": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+      "passed": true,
+      "path": "solweig_light/cache/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+      "installed_sha256": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+      "passed": true,
+      "path": "solweig_light/cache/geometry.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+      "installed_sha256": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+      "passed": true,
+      "path": "solweig_light/cache/legacy.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+      "installed_sha256": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+      "passed": true,
+      "path": "solweig_light/cli.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+      "installed_sha256": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+      "passed": true,
+      "path": "solweig_light/comfort/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+      "installed_sha256": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+      "passed": true,
+      "path": "solweig_light/comfort/_utci_scalar.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+      "installed_sha256": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+      "passed": true,
+      "path": "solweig_light/comfort/utci.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+      "installed_sha256": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+      "passed": true,
+      "path": "solweig_light/comfort/utci_coefficients.json"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+      "installed_sha256": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+      "passed": true,
+      "path": "solweig_light/comfort/wbgt.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+      "installed_sha256": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+      "passed": true,
+      "path": "solweig_light/data/landcoverclasses_2016a.txt"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+      "installed_sha256": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+      "passed": true,
+      "path": "solweig_light/forcing/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+      "installed_sha256": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+      "passed": true,
+      "path": "solweig_light/forcing/local.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+      "installed_sha256": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+      "passed": true,
+      "path": "solweig_light/geometry/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+      "installed_sha256": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+      "passed": true,
+      "path": "solweig_light/geometry/service.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+      "installed_sha256": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+      "passed": true,
+      "path": "solweig_light/geometry/shadows.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+      "installed_sha256": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+      "passed": true,
+      "path": "solweig_light/geometry/sky_compiled.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+      "installed_sha256": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+      "passed": true,
+      "path": "solweig_light/geometry/svf.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+      "installed_sha256": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+      "passed": true,
+      "path": "solweig_light/geometry/visibility.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "b25bb9f6ea6fae52c9fe251737f9205285e4876969bce2554f7c12cdac5f30f8",
+      "installed_sha256": "b25bb9f6ea6fae52c9fe251737f9205285e4876969bce2554f7c12cdac5f30f8",
+      "passed": true,
+      "path": "solweig_light/geometry/visibility_compiled.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+      "installed_sha256": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+      "passed": true,
+      "path": "solweig_light/geometry/visibility_native.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+      "installed_sha256": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+      "passed": true,
+      "path": "solweig_light/geometry/walls.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+      "installed_sha256": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+      "passed": true,
+      "path": "solweig_light/geometry/walls_compiled.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "f415f15cb5a8ef6251b0b422798fbb3195faab8cf1818276595c7fc02a75b5ef",
+      "installed_sha256": "f415f15cb5a8ef6251b0b422798fbb3195faab8cf1818276595c7fc02a75b5ef",
+      "passed": true,
+      "path": "solweig_light/identities.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+      "installed_sha256": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+      "passed": true,
+      "path": "solweig_light/inputs/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+      "installed_sha256": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+      "passed": true,
+      "path": "solweig_light/inputs/construction.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+      "installed_sha256": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+      "passed": true,
+      "path": "solweig_light/io/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+      "installed_sha256": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+      "passed": true,
+      "path": "solweig_light/io/rasters.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+      "installed_sha256": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+      "passed": true,
+      "path": "solweig_light/models.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+      "installed_sha256": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+      "passed": true,
+      "path": "solweig_light/persistence.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e066873b6c322e9506cbcf25587d758bc8d9534c62bc380dac6cfe23936d8d42",
+      "installed_sha256": "e066873b6c322e9506cbcf25587d758bc8d9534c62bc380dac6cfe23936d8d42",
+      "passed": true,
+      "path": "solweig_light/pipeline.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+      "installed_sha256": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+      "passed": true,
+      "path": "solweig_light/preprocessor.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "installed_sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+      "passed": true,
+      "path": "solweig_light/radiation/SLEEF_LICENSE.txt"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "installed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "passed": true,
+      "path": "solweig_light/radiation/__init__.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "93cafde414ff020fa6810f5bb5a904e199ba22b0ebd780a9291a1257903b85ab",
+      "installed_sha256": "93cafde414ff020fa6810f5bb5a904e199ba22b0ebd780a9291a1257903b85ab",
+      "passed": true,
+      "path": "solweig_light/radiation/_jit_cache.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "7921432908b43aec6b99ac5c70df0f1f7e6566787c4e84cd741cbfa5b64e3ef7",
+      "installed_sha256": "7921432908b43aec6b99ac5c70df0f1f7e6566787c4e84cd741cbfa5b64e3ef7",
+      "passed": true,
+      "path": "solweig_light/radiation/_math_profile.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "9c7aff0c880a10db81cc6f96c314a7600ef77cb0008cbcd5ff344fa156511263",
+      "installed_sha256": "9c7aff0c880a10db81cc6f96c314a7600ef77cb0008cbcd5ff344fa156511263",
+      "passed": true,
+      "path": "solweig_light/radiation/_sleef_acos.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "444e27eb3e887145b0f9fc2447b9e6aafba3185c4f7cab0835bf862ae60447ec",
+      "installed_sha256": "444e27eb3e887145b0f9fc2447b9e6aafba3185c4f7cab0835bf862ae60447ec",
+      "passed": true,
+      "path": "solweig_light/radiation/_sleef_classifier.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "0d02ca81b8e700c243b424af95090374ff5a648f431a60e8012b2cee9d44177b",
+      "installed_sha256": "0d02ca81b8e700c243b424af95090374ff5a648f431a60e8012b2cee9d44177b",
+      "passed": true,
+      "path": "solweig_light/radiation/engine.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+      "installed_sha256": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+      "passed": true,
+      "path": "solweig_light/radiation/ground_view.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+      "installed_sha256": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+      "passed": true,
+      "path": "solweig_light/radiation/materials.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e0c1e375efa3f2166d97ddbb118e84aa7ee29568f9632d7a8f07ec9520938050",
+      "installed_sha256": "e0c1e375efa3f2166d97ddbb118e84aa7ee29568f9632d7a8f07ec9520938050",
+      "passed": true,
+      "path": "solweig_light/radiation/patch_radiation.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+      "installed_sha256": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+      "passed": true,
+      "path": "solweig_light/radiation/solar.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "4fae63c6fa8240b0ec7f940544cd328b9ab68e7183207ca97ee97f39da94a41c",
+      "installed_sha256": "4fae63c6fa8240b0ec7f940544cd328b9ab68e7183207ca97ee97f39da94a41c",
+      "passed": true,
+      "path": "solweig_light/radiation/wall_shadows.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+      "installed_sha256": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+      "passed": true,
+      "path": "solweig_light/runtime.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+      "installed_sha256": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+      "passed": true,
+      "path": "solweig_light/runtime_worker.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+      "installed_sha256": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+      "passed": true,
+      "path": "solweig_light/wind.py"
+    },
+    {
+      "exists": true,
+      "expected_sha256": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554",
+      "installed_sha256": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554",
+      "passed": true,
+      "path": "solweig_light/wind_resources.py"
+    }
+  ],
+  "schema": "local-cpu-optimization-final-combined-wheel-source-compare.v1",
+  "source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6"
+}

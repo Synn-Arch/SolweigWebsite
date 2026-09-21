@@ -1,0 +1,839 @@
+{
+  "protocol": {
+    "schema_version": 1,
+    "scope": "P0 small-fixture native-thread characterization",
+    "source_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+    "fixture_sha256": "475eff905a6d36d5c71242b70ce75f95824b01bf4a5eb40a1616cd6a7e4a82c3",
+    "runner_sha256": "306a8bd1103e20b57a1a38feb5fbaff1c4ac19281802a183f7cc384ca40bfa15",
+    "kwargs_sha256": "046557619ba77a32b8351a05e50b5860842f3a37ac69f8753cf5e0c07d6bcfab",
+    "hardware": {
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "logical_cpus": 10,
+      "sysctl_cpu_ram_cores": [
+        "Apple M1 Pro",
+        "17179869184",
+        "10"
+      ]
+    },
+    "trial_order": [
+      {
+        "threads": 1,
+        "repetition": 4
+      },
+      {
+        "threads": 1,
+        "repetition": 3
+      },
+      {
+        "threads": null,
+        "repetition": 1
+      },
+      {
+        "threads": 1,
+        "repetition": 0
+      },
+      {
+        "threads": null,
+        "repetition": 4
+      },
+      {
+        "threads": 1,
+        "repetition": 2
+      },
+      {
+        "threads": 4,
+        "repetition": 2
+      },
+      {
+        "threads": 4,
+        "repetition": 1
+      },
+      {
+        "threads": null,
+        "repetition": 2
+      },
+      {
+        "threads": 4,
+        "repetition": 3
+      },
+      {
+        "threads": null,
+        "repetition": 0
+      },
+      {
+        "threads": null,
+        "repetition": 3
+      },
+      {
+        "threads": 4,
+        "repetition": 0
+      },
+      {
+        "threads": 1,
+        "repetition": 1
+      },
+      {
+        "threads": 4,
+        "repetition": 4
+      }
+    ],
+    "cache_state": "Fresh process and fresh scene each trial, geometry absent; OS file cache uncontrolled",
+    "jit_state": "Upstream Numba vectorized helper import cost included; no candidate JIT",
+    "timing": "Child wall time includes imports, validation and full thermal_comfort; fixture copy excluded",
+    "memory": "20ms sampled summed process-tree resident sets; may double-count shared pages and miss short peaks",
+    "cpu_settings": "Default process worker policy unchanged; explicit native budgets set Torch/OMP/MKL/OpenBLAS/NumExpr",
+    "limitations": [
+      "Development host, not a dedicated performance machine",
+      "Tiny workload only; selected budget not assumed strongest for larger scenes",
+      "No candidate or CUDA timing; no speedup gate inferred",
+      "Geometry-warm, larger workloads and kernel-only matrices remain pending"
+    ]
+  },
+  "trials": [
+    {
+      "threads": 1,
+      "repetition": 4,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_00_threads_1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_00_threads_1",
+        "--threads",
+        "1"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_00_threads_1",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_00_threads_1/kwargs.json",
+          "--threads",
+          "1"
+        ],
+        "elapsed_seconds_including_imports": 10.355206583975814,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 321,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 527941632
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.899760207976215
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 1,
+      "repetition": 3,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_01_threads_1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_01_threads_1",
+        "--threads",
+        "1"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_01_threads_1",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_01_threads_1/kwargs.json",
+          "--threads",
+          "1"
+        ],
+        "elapsed_seconds_including_imports": 8.626175582990982,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 265,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 498122752
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.594721250003204
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": null,
+      "repetition": 1,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_02_threads_default",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_02_threads_default"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_02_threads_default",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_02_threads_default/kwargs.json"
+        ],
+        "elapsed_seconds_including_imports": 8.432004291913472,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 259,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 487964672
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.560397458029911
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 1,
+      "repetition": 0,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_03_threads_1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_03_threads_1",
+        "--threads",
+        "1"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_03_threads_1",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_03_threads_1/kwargs.json",
+          "--threads",
+          "1"
+        ],
+        "elapsed_seconds_including_imports": 8.17302133294288,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 252,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 529956864
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.289770958013833
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": null,
+      "repetition": 4,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_04_threads_default",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_04_threads_default"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_04_threads_default",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_04_threads_default/kwargs.json"
+        ],
+        "elapsed_seconds_including_imports": 8.493763625039719,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 259,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 500088832
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.732963667018339
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 1,
+      "repetition": 2,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_05_threads_1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_05_threads_1",
+        "--threads",
+        "1"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_05_threads_1",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_05_threads_1/kwargs.json",
+          "--threads",
+          "1"
+        ],
+        "elapsed_seconds_including_imports": 8.859557624906301,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 274,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 515358720
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.8785295829875395
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 4,
+      "repetition": 2,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_06_threads_4",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_06_threads_4",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_06_threads_4",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_06_threads_4/kwargs.json",
+          "--threads",
+          "4"
+        ],
+        "elapsed_seconds_including_imports": 8.718060500104912,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 266,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 456933376
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.932568249991164
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 4,
+      "repetition": 1,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_07_threads_4",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_07_threads_4",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_07_threads_4",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_07_threads_4/kwargs.json",
+          "--threads",
+          "4"
+        ],
+        "elapsed_seconds_including_imports": 8.160646875039674,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 252,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 514949120
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.468202832969837
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": null,
+      "repetition": 2,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_08_threads_default",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_08_threads_default"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_08_threads_default",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_08_threads_default/kwargs.json"
+        ],
+        "elapsed_seconds_including_imports": 9.055520583991893,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 279,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 512868352
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 7.009068959043361
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 4,
+      "repetition": 3,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_09_threads_4",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_09_threads_4",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_09_threads_4",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_09_threads_4/kwargs.json",
+          "--threads",
+          "4"
+        ],
+        "elapsed_seconds_including_imports": 8.581695457920432,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 264,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 480608256
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.582534624962136
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": null,
+      "repetition": 0,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_10_threads_default",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_10_threads_default"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_10_threads_default",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_10_threads_default/kwargs.json"
+        ],
+        "elapsed_seconds_including_imports": 8.337392540997826,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 256,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 490127360
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.495329542085528
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": null,
+      "repetition": 3,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_11_threads_default",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_11_threads_default"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_11_threads_default",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_11_threads_default/kwargs.json"
+        ],
+        "elapsed_seconds_including_imports": 8.484977833926678,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 260,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 511279104
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.557969749905169
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 4,
+      "repetition": 0,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_12_threads_4",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_12_threads_4",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_12_threads_4",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_12_threads_4/kwargs.json",
+          "--threads",
+          "4"
+        ],
+        "elapsed_seconds_including_imports": 8.3191117499955,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 255,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 544407552
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.47074675001204
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 1,
+      "repetition": 1,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_13_threads_1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_13_threads_1",
+        "--threads",
+        "1"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_13_threads_1",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_13_threads_1/kwargs.json",
+          "--threads",
+          "1"
+        ],
+        "elapsed_seconds_including_imports": 8.44293112505693,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 258,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 511213568
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.519621915998869
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    },
+    {
+      "threads": 4,
+      "repetition": 4,
+      "run": "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_14_threads_4",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+        "--fixture",
+        "/Users/alansynn/Workspace/solweig-light/tests/fixtures/generated/own_met_small",
+        "--kwargs",
+        "/Users/alansynn/Workspace/solweig-light/reports/initial_kwargs.json",
+        "--run",
+        "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_14_threads_4",
+        "--threads",
+        "4"
+      ],
+      "exit_code": 0,
+      "measurement": {
+        "cache_state": "fresh copied input fixture; OS file cache uncontrolled",
+        "command": [
+          "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+          "/Users/alansynn/Workspace/solweig-light/tools/run_reference.py",
+          "--child",
+          "--run",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_14_threads_4",
+          "--kwargs",
+          "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small/trial_14_threads_4/kwargs.json",
+          "--threads",
+          "4"
+        ],
+        "elapsed_seconds_including_imports": 8.14537416701205,
+        "exit_code": 0,
+        "measurement_class": "initial characterization, not release benchmark",
+        "rss_caveat": "Summed resident sets; shared pages may be counted more than once; between-sample peaks may be missed.",
+        "sample_count": 249,
+        "sample_interval_seconds": 0.02,
+        "sampled_process_tree_peak_rss_bytes": 517472256
+      },
+      "outcome": {
+        "return_repr": "None",
+        "status": "executed_not_yet_verified",
+        "workflow_seconds": 6.382024790975265
+      },
+      "exact_tiff_repeatability_exit_code": 0,
+      "verification_output": "19 TIFFs exactly equal including NaNs and checked metadata\n"
+    }
+  ],
+  "summaries": {
+    "default": {
+      "valid_trials": 5,
+      "raw_seconds": [
+        8.432004291913472,
+        8.493763625039719,
+        9.055520583991893,
+        8.337392540997826,
+        8.484977833926678
+      ],
+      "median_seconds": 8.484977833926678,
+      "min_seconds": 8.337392540997826,
+      "max_seconds": 9.055520583991893,
+      "sample_stdev_seconds": 0.2835006774891945,
+      "raw_peak_rss_bytes": [
+        487964672,
+        500088832,
+        512868352,
+        490127360,
+        511279104
+      ]
+    },
+    "1": {
+      "valid_trials": 5,
+      "raw_seconds": [
+        10.355206583975814,
+        8.626175582990982,
+        8.17302133294288,
+        8.859557624906301,
+        8.44293112505693
+      ],
+      "median_seconds": 8.626175582990982,
+      "min_seconds": 8.17302133294288,
+      "max_seconds": 10.355206583975814,
+      "sample_stdev_seconds": 0.8560490468240959,
+      "raw_peak_rss_bytes": [
+        527941632,
+        498122752,
+        529956864,
+        515358720,
+        511213568
+      ]
+    },
+    "4": {
+      "valid_trials": 5,
+      "raw_seconds": [
+        8.718060500104912,
+        8.160646875039674,
+        8.581695457920432,
+        8.3191117499955,
+        8.14537416701205
+      ],
+      "median_seconds": 8.3191117499955,
+      "min_seconds": 8.14537416701205,
+      "max_seconds": 8.718060500104912,
+      "sample_stdev_seconds": 0.2557902086792224,
+      "raw_peak_rss_bytes": [
+        456933376,
+        514949120,
+        480608256,
+        544407552,
+        517472256
+      ]
+    }
+  },
+  "status": "invalidated_for_timing",
+  "invalidation": {
+    "status": "invalidated_for_timing",
+    "reason": "Harness briefly changed during trials to copy its own source, then restored. Two trials observed added I/O. Numerical source and workload unchanged; timing protocol not uniform. Preserve this attempt and rerun entire predeclared experiment with immutable runner.",
+    "affected_trials": [
+      "trial_11_threads_default",
+      "trial_12_threads_4"
+    ],
+    "no_speedup_claim": true
+  }
+}

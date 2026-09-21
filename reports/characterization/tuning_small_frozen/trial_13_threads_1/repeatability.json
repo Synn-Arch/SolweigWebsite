@@ -1,0 +1,196 @@
+{
+  "evidence_class": "original_upstream_cpu_repeatability",
+  "runs": [
+    "/Users/alansynn/Workspace/solweig-light/reports/runs/dependencies_cpu/scene",
+    "/Users/alansynn/Workspace/solweig-light/reports/runs/tuning_small_frozen/trial_13_threads_1/scene"
+  ],
+  "status": "passed_for_listed_tiffs_only",
+  "results": [
+    {
+      "path": "Building_DSM.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "DEM.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "Trees.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Kdown_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Kup_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Ldown_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Lup_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Shadow_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/TMRT_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Ta_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/UTCI_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/WBGT_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "output_folder/0_0/Wind_0_0.tif",
+      "shape": [
+        24,
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "processed_inputs/Building_DSM/Building_DSM_0_0.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "processed_inputs/DEM/DEM_0_0.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "processed_inputs/SVF/SkyViewFactor_0_0.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "processed_inputs/Trees/Trees_0_0.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "processed_inputs/aspect/aspect_0_0.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    },
+    {
+      "path": "processed_inputs/walls/walls_0_0.tif",
+      "shape": [
+        32,
+        35
+      ],
+      "values_exact_equal": true,
+      "metadata_equal": true
+    }
+  ],
+  "limitations": [
+    "Two same-host runs, not cross-platform tolerance characterization",
+    "ZIP/NPZ repeatability and intermediate state not checked",
+    "No candidate comparison"
+  ]
+}

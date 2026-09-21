@@ -1,0 +1,685 @@
+{
+  "artifacts": {
+    "base_wheel": {
+      "bytes": 206119,
+      "current_source_match": {
+        "exact": true,
+        "files_compared": 44,
+        "mismatches": []
+      },
+      "exists": true,
+      "path": "reports/characterization/p8_ci_audit/solweig_light-0.1.0.dev0-py3-none-any.whl",
+      "sha256": "c4bad63d80384a19055734200fb15b47eac231973d793005c48e948e861554ea"
+    },
+    "commands": {
+      "bytes": 1144,
+      "exists": true,
+      "path": "reports/characterization/p8_release_contract_checkpoint/commands.txt",
+      "sha256": "e57b461889b1a16cda557a9e9c240b6d958435e25f5fc2730fd5bbcaeac5f0ab"
+    },
+    "compat_wheel": {
+      "bytes": 18412,
+      "current_compat_source_match": {
+        "exact": true,
+        "files_compared": 14,
+        "mismatches": []
+      },
+      "exists": true,
+      "path": "reports/characterization/p8_release_contract_checkpoint/wheels/solweig_light_compat-0.1.0.dev0-py3-none-any.whl",
+      "sha256": "4e700860fb07b464f365aadc73fea8776a1005cff177e7021578b93a87ba739b"
+    },
+    "earlier_installed_tiff_wheel": {
+      "bytes": 206119,
+      "current_source_match": {
+        "exact": true,
+        "files_compared": 44,
+        "mismatches": []
+      },
+      "exists": true,
+      "path": "reports/characterization/p7_persistent_jit_promotion/wheel/solweig_light-0.1.0.dev0-py3-none-any.whl",
+      "sha256": "099352d77d8e09a4560f8aaab83c6d97eb7980ff86334bba090e1d9f8abd8f40"
+    }
+  },
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]"
+  },
+  "evidence_links": [
+    {
+      "bytes": 5366,
+      "exists": true,
+      "notes": "4 installed persistent-JIT and 39 installed API/CLI tests passed; hosted CI unrun",
+      "path": "reports/characterization/p8_ci_audit/manifest.json",
+      "sha256": "45f88f44c6fb9d26e0cb033bb62fc931b5440e90937ed98a973dbb6561ce7f79",
+      "status": "reused_same_source_wheel"
+    },
+    {
+      "bytes": 10098,
+      "exists": true,
+      "notes": "831 source tests plus installed-wheel genuine TIFF/cache evidence; both retained wheels match all current package files",
+      "path": "reports/characterization/p7_persistent_jit_promotion/report.json",
+      "sha256": "ca87a0a433975693ae70c9ad2572d256b04fee5fdadf313ecd6e721f197e351f",
+      "status": "reused_same_source"
+    },
+    {
+      "bytes": 6322,
+      "exists": true,
+      "notes": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 49
+      },
+      "path": "reports/characterization/p8_release_contract_checkpoint/cache_restart.junit.xml",
+      "sha256": "7a3e7afad2763e8bb5ab7fe56c71f0eb85d24f5fffeb02a42dc63afc305fb9a9",
+      "status": "passed"
+    },
+    {
+      "bytes": 1458,
+      "exists": true,
+      "notes": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 8
+      },
+      "path": "reports/characterization/p8_release_contract_checkpoint/compatibility.junit.xml",
+      "sha256": "e3d800c8fcb5acad34c6f84ff1e5ea8f2b8f7115b89b4161e68f291639a85251",
+      "status": "passed"
+    },
+    {
+      "bytes": 130329,
+      "exists": true,
+      "notes": "Dense1024 current candidate TMRT max 0.04949951171875 exceeds 0.01; vegetation1024 passed",
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/batch_manifest.json",
+      "sha256": "97886a76ae4066d01c993686997903fba825219269b5c24017c0f96002c05fdf",
+      "status": "failed_dense_passed_vegetation"
+    },
+    {
+      "bytes": 9558,
+      "exists": true,
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_feasibility_manifest.json",
+      "sha256": "27047a986398a566e37f5b8004875e2208e93f2440b1b0cea90cecbe141518f3",
+      "status": "original_upstream_cuda_first_use_failed_memory_cap"
+    },
+    {
+      "bytes": 23815,
+      "exists": true,
+      "notes": "Explicit approved worker-count-only patched reference; distinct from original upstream",
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/patched_workerlimit/manifest.json",
+      "sha256": "84fb4691d4eeef1e468d31cc9e4a6ec642e17a6a148e51501db4b09efc59e622",
+      "status": "patched_upstream_cuda_passed"
+    },
+    {
+      "bytes": 2519,
+      "exists": true,
+      "notes": "Original and candidate all 19 outputs bitwise equal; independent unity assertions remain failed",
+      "path": "reports/characterization/p8_science_failure_disposition/svf_full_open_original_cpu/manifest.json",
+      "sha256": "505770fd25b146d6cec5fe95742cdbcff706df06aca1e0c5250c2321c2902ad5",
+      "status": "failed_independent_unity_inherited"
+    },
+    {
+      "bytes": 11006,
+      "exists": true,
+      "path": "reports/characterization/p8_portable_math_review/scientific_failure_disposition.md",
+      "sha256": "8dde63b02afe3d3ff91b9dd5df449527da3fd907e817f57adae40f5181cd2960",
+      "status": "pending_user_policy_decision"
+    },
+    {
+      "bytes": 8983,
+      "exists": true,
+      "path": "reports/characterization/p8_portable_math_review/feasibility_decision.md",
+      "sha256": "001f7967fa9dd3b82ed85ad032e1600d0fef8297f304936b341cb199943852bd",
+      "status": "portable_profiles_failed_mkl_production_declined"
+    },
+    {
+      "bytes": 19481,
+      "exists": true,
+      "path": "reports/p7_checkpoint_review.json",
+      "sha256": "95a5a0e5b7a76d17b425f60bb90761fc1fe13ed3a18583079c5d94b4745eee91",
+      "status": "p7_in_progress_p8_pending"
+    }
+  ],
+  "explicit_nonclaims": [
+    "This checkpoint does not complete P7 or P8.",
+    "No publish, tag, push, performance claim, source numerical change, tolerance change, or policy approval occurred.",
+    "Patched CUDA success is not an original-upstream pass.",
+    "Presence of required reports does not make their incomplete statuses pass."
+  ],
+  "generated_at": "2026-09-20T02:05:00-04:00",
+  "new_validation": {
+    "compatibility": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 8
+      },
+      "coverage": "installed forwarding, signatures, executable, optional-import laziness, synthetic upstream collision rejection",
+      "result": "passed"
+    },
+    "installed_cache_restart": {
+      "counts": {
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0,
+        "tests": 49
+      },
+      "coverage": "genuine runtime resume plus persistence/cache/restart tests",
+      "initial_guard_failure_preserved": "logs/cache_restart.stderr.log records rejected target lacking site-packages path; corrected target passed",
+      "result": "passed"
+    },
+    "origin_probe": {
+      "forbidden_modules_loaded": [],
+      "log": "logs/origin_probe.stdout.log",
+      "result": "passed",
+      "seven_workflows_importable": true
+    },
+    "staging_cleanup": "verified absent"
+  },
+  "release_gates": [
+    {
+      "evidence": "Installed imports/signatures and substantial paths verified; complete supported optional workflow installed matrix not executed here.",
+      "gate": "all seven public workflows operational on CPU",
+      "status": "partial"
+    },
+    {
+      "evidence": "Same-source installed genuine 24h TIFF evidence and installed origin/import checks.",
+      "gate": "core own-met TIFF path no Torch/CUDA",
+      "status": "passed_scoped"
+    },
+    {
+      "evidence": "Retained wheels; 8 compatibility tests including collision rejection passed.",
+      "gate": "normal and opt-in compatibility distributions",
+      "status": "passed_local_contract"
+    },
+    {
+      "evidence": "Current candidate dense1024 TMRT 0.04949951171875 > 0.01; independent scientific unity and UMEP checks retain failures.",
+      "gate": "numerical budgets",
+      "status": "failed"
+    },
+    {
+      "evidence": "Compatibility-retained versus versioned-correction policy alternatives remain unapproved.",
+      "gate": "scientific policy disposition",
+      "status": "pending_user_decision"
+    },
+    {
+      "evidence": "Scoped caps/evidence exist; original upstream CUDA first-use exceeded 12 GiB summed-RSS cap. Patched upstream passed separately.",
+      "gate": "memory bounded",
+      "status": "partial"
+    },
+    {
+      "evidence": "Required original upstream default/tuned CPU and all release regimes are not complete; P7 candidate-to-candidate matrices do not substitute.",
+      "gate": "full benchmark matrix and published performance claims",
+      "status": "not_complete"
+    },
+    {
+      "evidence": "GitHub macos-15 jobs were not dispatched; local workflow lint/formula validation is not hosted CI.",
+      "gate": "supported-platform CI",
+      "status": "not_run"
+    },
+    {
+      "evidence": "Original first-use failed cap; explicitly approved worker-limit patched upstream passed correctness. No CUDA speed claim.",
+      "gate": "CUDA reference",
+      "status": "qualified"
+    },
+    {
+      "evidence": "MKL production declined; all bounded portable candidates failed classifier boundary gate.",
+      "gate": "portable math profile",
+      "status": "unresolved"
+    }
+  ],
+  "reused_validation": {
+    "basis": "All 44 current src/solweig_light files byte-match each reused wheel.",
+    "ci_audit_installed_tests": "4 persistent-JIT + 39 API/CLI passed on byte-exact base wheel",
+    "installed_genuine_tiff": "10 fields x 24 bands, exact vs frozen candidate and empty/warm private JIT; same package source",
+    "source_suite": "831 passed same package source"
+  },
+  "schema": "solweig-light.section13-source-contract-checkpoint.v1",
+  "section13_required_reports": [
+    {
+      "bytes": 2577,
+      "exists": true,
+      "path": "docs/compatibility.md",
+      "sha256": "868989ab325c814a2c926a544d8173bb23aabef4ee0452b7a3143ae9373a6d4c",
+      "status": "present_not_release_approval"
+    },
+    {
+      "bytes": 17429,
+      "exists": true,
+      "path": "docs/model_deviations.md",
+      "sha256": "7f093db12f60325a717df1402fafa7c6c86971236e45ae0d4290bee81101f806",
+      "status": "present_with_unresolved_dispositions"
+    },
+    {
+      "bytes": 2411,
+      "exists": true,
+      "path": "docs/provenance.md",
+      "sha256": "17e728c7013c9347b98df1ca217ae22397899d7e2af6c3384b1eabd9c3b058da",
+      "status": "present"
+    },
+    {
+      "bytes": 18556,
+      "exists": true,
+      "path": "reports/source_manifest.json",
+      "sha256": "8da59abf17dd557b3a658d0651fd8101a324b2498ea31896eb6f986bf05ec98b",
+      "status": "present_historical_index"
+    },
+    {
+      "bytes": 26421,
+      "exists": true,
+      "path": "reports/contract_snapshot.json",
+      "sha256": "c1e6e4801334ff2b30b68cc0eb5e687388b4a431ee9391a3f94608fbf3b604e6",
+      "status": "present"
+    },
+    {
+      "bytes": 4136,
+      "exists": true,
+      "path": "reports/reference_environment.json",
+      "sha256": "45f9832faf593c66ae660de98a434896f2ef2746d14b1098b3c510d4acc426e9",
+      "status": "present"
+    },
+    {
+      "bytes": 7306,
+      "exists": true,
+      "path": "reports/numerical_comparison.json",
+      "sha256": "1ec88240317b40fc6ab36ff61a161557ce3ed3fbe3da6bf403c010cc2e3653e9",
+      "status": "explicitly_incomplete"
+    },
+    {
+      "bytes": 6863,
+      "exists": true,
+      "path": "reports/performance_results.json",
+      "sha256": "c70626a5bc96cd6ebb5dcf5fd613363aa29022c09e800444c99a443a574940cb",
+      "status": "explicitly_incomplete"
+    },
+    {
+      "bytes": 12521,
+      "exists": true,
+      "path": "reports/peak_memory.json",
+      "sha256": "a7ebeda10b4cdc0da8c2b27d6df9e775d9f43c1008641a5b7bb8bfbb89bdf8ee",
+      "status": "explicitly_incomplete"
+    },
+    {
+      "bytes": 5377,
+      "exists": true,
+      "path": "reports/optimization_experiments.md",
+      "sha256": "cc1b21ecf59a56f6c34994a694a5a0dba0f745095f48f1ca857b01976c68e405",
+      "status": "present_p7_evidence_not_release_completion"
+    }
+  ],
+  "source_identity": {
+    "git_head": null,
+    "inventory": [
+      {
+        "bytes": 481,
+        "exists": true,
+        "path": "src/solweig_light/__init__.py",
+        "sha256": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e"
+      },
+      {
+        "bytes": 11615,
+        "exists": true,
+        "path": "src/solweig_light/api.py",
+        "sha256": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165"
+      },
+      {
+        "bytes": 550,
+        "exists": true,
+        "path": "src/solweig_light/cache/__init__.py",
+        "sha256": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86"
+      },
+      {
+        "bytes": 14837,
+        "exists": true,
+        "path": "src/solweig_light/cache/geometry.py",
+        "sha256": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f"
+      },
+      {
+        "bytes": 6962,
+        "exists": true,
+        "path": "src/solweig_light/cache/legacy.py",
+        "sha256": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc"
+      },
+      {
+        "bytes": 7389,
+        "exists": true,
+        "path": "src/solweig_light/cli.py",
+        "sha256": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b"
+      },
+      {
+        "bytes": 317,
+        "exists": true,
+        "path": "src/solweig_light/comfort/__init__.py",
+        "sha256": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd"
+      },
+      {
+        "bytes": 29355,
+        "exists": true,
+        "path": "src/solweig_light/comfort/_utci_scalar.py",
+        "sha256": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb"
+      },
+      {
+        "bytes": 19589,
+        "exists": true,
+        "path": "src/solweig_light/comfort/utci.py",
+        "sha256": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a"
+      },
+      {
+        "bytes": 48216,
+        "exists": true,
+        "path": "src/solweig_light/comfort/utci_coefficients.json",
+        "sha256": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77"
+      },
+      {
+        "bytes": 22754,
+        "exists": true,
+        "path": "src/solweig_light/comfort/wbgt.py",
+        "sha256": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c"
+      },
+      {
+        "bytes": 426,
+        "exists": true,
+        "path": "src/solweig_light/data/landcoverclasses_2016a.txt",
+        "sha256": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7"
+      },
+      {
+        "bytes": 350,
+        "exists": true,
+        "path": "src/solweig_light/forcing/__init__.py",
+        "sha256": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5"
+      },
+      {
+        "bytes": 46814,
+        "exists": true,
+        "path": "src/solweig_light/forcing/local.py",
+        "sha256": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250"
+      },
+      {
+        "bytes": 77,
+        "exists": true,
+        "path": "src/solweig_light/geometry/__init__.py",
+        "sha256": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09"
+      },
+      {
+        "bytes": 15467,
+        "exists": true,
+        "path": "src/solweig_light/geometry/service.py",
+        "sha256": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604"
+      },
+      {
+        "bytes": 5246,
+        "exists": true,
+        "path": "src/solweig_light/geometry/shadows.py",
+        "sha256": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb"
+      },
+      {
+        "bytes": 14647,
+        "exists": true,
+        "path": "src/solweig_light/geometry/sky_compiled.py",
+        "sha256": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8"
+      },
+      {
+        "bytes": 9344,
+        "exists": true,
+        "path": "src/solweig_light/geometry/svf.py",
+        "sha256": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576"
+      },
+      {
+        "bytes": 17449,
+        "exists": true,
+        "path": "src/solweig_light/geometry/visibility.py",
+        "sha256": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5"
+      },
+      {
+        "bytes": 3895,
+        "exists": true,
+        "path": "src/solweig_light/geometry/visibility_compiled.py",
+        "sha256": "422750110cbfbb2a41023ac6d0d413bf9e0c3b923ecf1ceb01cd75454b06e57d"
+      },
+      {
+        "bytes": 11068,
+        "exists": true,
+        "path": "src/solweig_light/geometry/visibility_native.py",
+        "sha256": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140"
+      },
+      {
+        "bytes": 7668,
+        "exists": true,
+        "path": "src/solweig_light/geometry/walls.py",
+        "sha256": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810"
+      },
+      {
+        "bytes": 3346,
+        "exists": true,
+        "path": "src/solweig_light/geometry/walls_compiled.py",
+        "sha256": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c"
+      },
+      {
+        "bytes": 3704,
+        "exists": true,
+        "path": "src/solweig_light/identities.py",
+        "sha256": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca"
+      },
+      {
+        "bytes": 73,
+        "exists": true,
+        "path": "src/solweig_light/inputs/__init__.py",
+        "sha256": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877"
+      },
+      {
+        "bytes": 67513,
+        "exists": true,
+        "path": "src/solweig_light/inputs/construction.py",
+        "sha256": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122"
+      },
+      {
+        "bytes": 46,
+        "exists": true,
+        "path": "src/solweig_light/io/__init__.py",
+        "sha256": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523"
+      },
+      {
+        "bytes": 3446,
+        "exists": true,
+        "path": "src/solweig_light/io/rasters.py",
+        "sha256": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c"
+      },
+      {
+        "bytes": 3845,
+        "exists": true,
+        "path": "src/solweig_light/models.py",
+        "sha256": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e"
+      },
+      {
+        "bytes": 27569,
+        "exists": true,
+        "path": "src/solweig_light/persistence.py",
+        "sha256": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242"
+      },
+      {
+        "bytes": 16351,
+        "exists": true,
+        "path": "src/solweig_light/pipeline.py",
+        "sha256": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93"
+      },
+      {
+        "bytes": 16930,
+        "exists": true,
+        "path": "src/solweig_light/preprocessor.py",
+        "sha256": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9"
+      },
+      {
+        "bytes": 0,
+        "exists": true,
+        "path": "src/solweig_light/radiation/__init__.py",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 134810,
+        "exists": true,
+        "path": "src/solweig_light/radiation/engine.py",
+        "sha256": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1"
+      },
+      {
+        "bytes": 23107,
+        "exists": true,
+        "path": "src/solweig_light/radiation/ground_view.py",
+        "sha256": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64"
+      },
+      {
+        "bytes": 2064,
+        "exists": true,
+        "path": "src/solweig_light/radiation/materials.py",
+        "sha256": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0"
+      },
+      {
+        "bytes": 32624,
+        "exists": true,
+        "path": "src/solweig_light/radiation/patch_radiation.py",
+        "sha256": "331822efc80f26531ed74bdb8f33266ebffc409c0f32dcac2d3eb8e2b72b2ad4"
+      },
+      {
+        "bytes": 41873,
+        "exists": true,
+        "path": "src/solweig_light/radiation/solar.py",
+        "sha256": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6"
+      },
+      {
+        "bytes": 7985,
+        "exists": true,
+        "path": "src/solweig_light/radiation/wall_shadows.py",
+        "sha256": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c"
+      },
+      {
+        "bytes": 32716,
+        "exists": true,
+        "path": "src/solweig_light/runtime.py",
+        "sha256": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991"
+      },
+      {
+        "bytes": 2188,
+        "exists": true,
+        "path": "src/solweig_light/runtime_worker.py",
+        "sha256": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169"
+      },
+      {
+        "bytes": 42822,
+        "exists": true,
+        "path": "src/solweig_light/wind.py",
+        "sha256": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2"
+      },
+      {
+        "bytes": 9322,
+        "exists": true,
+        "path": "src/solweig_light/wind_resources.py",
+        "sha256": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+      },
+      {
+        "bytes": 124,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/Tgmaps_v1.py",
+        "sha256": "d89846d5bd1419a53dd4056b51a9919976e4cf229064e346fee4652286e6d8ef"
+      },
+      {
+        "bytes": 448,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/__init__.py",
+        "sha256": "74c393840d7c0c983e1d7b42908939dc6368a1aabed179ca1aae627c61795c32"
+      },
+      {
+        "bytes": 722,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/_guard.py",
+        "sha256": "72a84a15d8ba49d91624b8720abb7e0cc43897ca3224603b04e12ae4515d45ad"
+      },
+      {
+        "bytes": 122,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/calculate_utci.py",
+        "sha256": "ba1e3f4fc9e1f23ac9debb71e80687331e666c77a3cecd22ce1ae24afe09a2d9"
+      },
+      {
+        "bytes": 122,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/calculate_wbgt.py",
+        "sha256": "145bb5bb8528a97bb1fd69c44e727525441b9d72fdf17ebaece0d74c37136eb4"
+      },
+      {
+        "bytes": 225,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/cli.py",
+        "sha256": "ab0025e0d396e56ff4e00165697f36587953a4cf5f6095de956637170bb938ba"
+      },
+      {
+        "bytes": 136,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/create_inputs.py",
+        "sha256": "a7c00775119e29b37e2c8815a357d053c87f1a3937bcd2f2e80df23ad08a4ffb"
+      },
+      {
+        "bytes": 241,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/preprocessor.py",
+        "sha256": "30295314ceb854d276bfc695e22303fcbb65ebb45dfc78665cb402469b1c09cc"
+      },
+      {
+        "bytes": 173,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/shadow.py",
+        "sha256": "9cf88e69e691b5b8dfdf1e8e2c1cbdbf2f325d5816baf258d3244453f0c92152"
+      },
+      {
+        "bytes": 119,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/solweig.py",
+        "sha256": "1a9db1a332119ab175e786a97ba6d7e258c8df84e09c06b2c5e58e340bcde1b1"
+      },
+      {
+        "bytes": 361,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/solweig_gpu.py",
+        "sha256": "2ebedf5deeaa061bbf13f1534b2452653d4b8ecf04a873f274e1eefdb0cca82f"
+      },
+      {
+        "bytes": 123,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/sun_position.py",
+        "sha256": "283365869acab2dfa510f56631191009bf5f394148607710a043778835c2c3d5"
+      },
+      {
+        "bytes": 122,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/walls_aspect.py",
+        "sha256": "78aee7df425999f5ee42fff974cc467968acad978e5d20a988dac715f53ce6f8"
+      },
+      {
+        "bytes": 123,
+        "exists": true,
+        "path": "compat/src/solweig_gpu/wind_ext_coeff.py",
+        "sha256": "d86ba39429629f945f35dbc54672c2335ade8d9ee7f900a202b95c98a4503320"
+      },
+      {
+        "bytes": 1231,
+        "exists": true,
+        "path": "pyproject.toml",
+        "sha256": "364bebdee789a01dea37c32bdbc47ce4f67d575b63e49f86d4ca3679eda27a4e"
+      },
+      {
+        "bytes": 433,
+        "exists": true,
+        "path": "compat/pyproject.toml",
+        "sha256": "fc9dc5b339e06652b3b566a059441e922d186373e2b4e3dbfde2a072c387c6dc"
+      },
+      {
+        "bytes": 6549,
+        "exists": true,
+        "path": ".github/workflows/cpu-reference.yml",
+        "sha256": "9c58dee0d2f8a5c7174ee74a6f9a67c2081a2be7a4c99630310d915e54906b20"
+      }
+    ],
+    "reason": "repository has no resolvable HEAD; content inventory is authoritative",
+    "source_file_count": 61
+  },
+  "status": "contract_checkpoint_complete_release_not_complete"
+}

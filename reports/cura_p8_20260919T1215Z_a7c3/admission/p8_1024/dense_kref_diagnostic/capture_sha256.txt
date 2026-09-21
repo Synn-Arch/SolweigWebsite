@@ -1,0 +1,3 @@
+4ab3d9e3647b762454b059327671b5532da55644227edf2cfa426c97a3586e2a  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics_dense_kref/candidate/kref_step7_candidate_input.npz
+3d847a16a628a007ef5974e1c6c1639ca45873625c82ee53e5f60475ea5ed60c  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics_dense_kref/candidate/probe.jsonl
+b8548bead11bd123014006e67513d27617ac69ab04493e1a848ae077bcb7c7a0  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics_dense_kref/candidate/probe_measurement.json

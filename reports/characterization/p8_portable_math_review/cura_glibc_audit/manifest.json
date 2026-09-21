@@ -1,0 +1,77 @@
+{
+  "bundle": {
+    "path": "evidence_bundle.tar.gz",
+    "sha256": "9eac455f32df11168a80e6917c2b3d0c0d3efc9e56820b710109eab6d2244458"
+  },
+  "decision": "reject_no_full_pipeline",
+  "deployed": {
+    "build_id": "d53fcbff9f855463606b25cfbe2a2e10856ea3a7",
+    "glibc": "2.39",
+    "libm_sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+    "package": "Ubuntu libc6 2.39-0ubuntu8.9 amd64"
+  },
+  "dispatch": {
+    "double": "tan and atan are IFUNC symbols; glibc selector chooses FMA when AVX2+FMA usable; Cura advertises both and resolved implementation contains FMA instructions",
+    "float": "tanf and atanf are direct deployed libm scalar symbols at recorded offsets",
+    "qualification": "selector/path identification is source plus host-feature and resolved-code evidence"
+  },
+  "entry_condition": {
+    "evidence": "glibc tanf has distinct fast/large range reduction and kernel path versus pinned OpenLibm; atanf sources differ; double tan/atan use runtime IFUNC selection.",
+    "met": true,
+    "source_diffs": {
+      "atanf_lines": 104,
+      "tanf_lines": 121
+    }
+  },
+  "evidence_manifest": {
+    "all_entries_verified_locally": true,
+    "path": "evidence/evidence.sha256",
+    "sha256": "02cd0a6caba1735fc118849a8763ff18f56ed54f71bd41d893de4e0ddb21ba6f"
+  },
+  "gate": "complete actual boundary masks require sun=0 and shade=0",
+  "licenses": "Exact glibc COPYING/COPYING.LIB and source tarballs retained for provenance; no legal conclusion is made.",
+  "limitations": [
+    "Original-ASVF branch is diagnostic only.",
+    "No broader pipeline run because boundary gate failed."
+  ],
+  "reason": "complete profile differed at 10 sun and 13 shade cells",
+  "remote_cleanup": "verified_absent_after_python_shutil_rmtree",
+  "results": {
+    "acos_on_original_sqrt_diagnostic": {
+      "all_bit_mismatches": 5902,
+      "finite_bit_mismatches": 5901,
+      "max_abs": 1.1920928955078125e-07,
+      "nan_masks_equal": true
+    },
+    "asvf": {
+      "all_bit_mismatches": 6561,
+      "finite_bit_mismatches": 6558,
+      "max_abs": 8.940696716308594e-07,
+      "nan_masks_equal": true
+    },
+    "boundary_masks": {
+      "complete": {
+        "shade": 13,
+        "sun": 10
+      },
+      "original_asvf_diagnostic": {
+        "shade": 10,
+        "sun": 4
+      }
+    },
+    "library": "/usr/lib/x86_64-linux-gnu/libm.so.6",
+    "library_sha256": "fce00b6f25f459cf4ae0b7fae4257909a1a8a86f9149e7c029a5d617baf1ccd0",
+    "prefix": "",
+    "qualification": "Uniform native library sqrt/acos/tan/atan and float64 scalar cos/tan; actual scalar wrapping/order. Original-ASVF branch is diagnostic only. Benign bits are reported, boundary/output gates unchanged.",
+    "sqrt": {
+      "all_bit_mismatches": 1232,
+      "finite_bit_mismatches": 1230,
+      "max_abs": 5.960464477539063e-08,
+      "nan_masks_equal": true
+    },
+    "symbol_origins_verified": true
+  },
+  "schema_version": 1,
+  "scope": "Pinned deployed Cura glibc source/dispatch audit followed by one coherent system-libm diagnostic profile; main/dependencies/gates unchanged.",
+  "status": "complete_profile_rejected_boundary_gate"
+}

@@ -1,0 +1,666 @@
+{
+  "backend": "original",
+  "package": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py",
+  "events": [
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 0,
+      "path": "0000_0_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 1,
+      "path": "0001_1_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 2,
+      "path": "0002_2_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 3,
+      "path": "0003_3_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 4,
+      "path": "0004_4_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 5,
+      "path": "0005_5_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 6,
+      "path": "0006_6_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 7,
+      "path": "0007_7_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 8,
+      "path": "0008_8_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 9,
+      "path": "0009_9_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 10,
+      "path": "0010_10_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 11,
+      "path": "0011_11_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 12,
+      "path": "0012_12_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 13,
+      "path": "0013_13_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "input",
+      "step": 14,
+      "path": "0014_14_Solweig_2022a_calc_input.npz"
+    },
+    {
+      "name": "diffusefraction",
+      "boundary": "input",
+      "step": 14,
+      "path": "0015_14_diffusefraction_input.npz"
+    },
+    {
+      "name": "diffusefraction",
+      "boundary": "output",
+      "step": 14,
+      "path": "0016_14_diffusefraction_output.npz"
+    },
+    {
+      "name": "diffusefraction",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0017_14_diffusefraction_locals.npz"
+    },
+    {
+      "name": "Perez_v3",
+      "boundary": "input",
+      "step": 14,
+      "path": "0018_14_Perez_v3_input.npz"
+    },
+    {
+      "name": "Perez_v3",
+      "boundary": "output",
+      "step": 14,
+      "path": "0019_14_Perez_v3_output.npz"
+    },
+    {
+      "name": "Perez_v3",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0020_14_Perez_v3_locals.npz"
+    },
+    {
+      "name": "shadowingfunction_wallheight_23",
+      "boundary": "input",
+      "step": 14,
+      "path": "0021_14_shadowingfunction_wallheight_23_input.npz"
+    },
+    {
+      "name": "shadowingfunction_wallheight_23",
+      "boundary": "output",
+      "step": 14,
+      "path": "0022_14_shadowingfunction_wallheight_23_output.npz"
+    },
+    {
+      "name": "shadowingfunction_wallheight_23",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0023_14_shadowingfunction_wallheight_23_locals.npz"
+    },
+    {
+      "name": "diffusefraction",
+      "boundary": "input",
+      "step": 14,
+      "path": "0024_14_diffusefraction_input.npz"
+    },
+    {
+      "name": "diffusefraction",
+      "boundary": "output",
+      "step": 14,
+      "path": "0025_14_diffusefraction_output.npz"
+    },
+    {
+      "name": "diffusefraction",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0026_14_diffusefraction_locals.npz"
+    },
+    {
+      "name": "gvf_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0027_14_gvf_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0028_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0029_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0030_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0031_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0032_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0033_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0034_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0035_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0036_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0037_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0038_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0039_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0040_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0041_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0042_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0043_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0044_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0045_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0046_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0047_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0048_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0049_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0050_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0051_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0052_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0053_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0054_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0055_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0056_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0057_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0058_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0059_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0060_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0061_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0062_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0063_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0064_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0065_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0066_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0067_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0068_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0069_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0070_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0071_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0072_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0073_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0074_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0075_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0076_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0077_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0078_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0079_14_sunonsurface_2018a_input.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0080_14_sunonsurface_2018a_output.npz"
+    },
+    {
+      "name": "sunonsurface_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0081_14_sunonsurface_2018a_locals.npz"
+    },
+    {
+      "name": "gvf_2018a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0082_14_gvf_2018a_output.npz"
+    },
+    {
+      "name": "gvf_2018a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0083_14_gvf_2018a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0084_14_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0085_14_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0086_14_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0087_14_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0088_14_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0089_14_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0090_14_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0091_14_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0092_14_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0093_14_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0094_14_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0095_14_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0096_14_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0097_14_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0098_14_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0099_14_TsWaveDelay_2015a_input.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0100_14_TsWaveDelay_2015a_output.npz"
+    },
+    {
+      "name": "TsWaveDelay_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0101_14_TsWaveDelay_2015a_locals.npz"
+    },
+    {
+      "name": "cylindric_wedge",
+      "boundary": "input",
+      "step": 14,
+      "path": "0102_14_cylindric_wedge_input.npz"
+    },
+    {
+      "name": "cylindric_wedge",
+      "boundary": "output",
+      "step": 14,
+      "path": "0103_14_cylindric_wedge_output.npz"
+    },
+    {
+      "name": "cylindric_wedge",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0104_14_cylindric_wedge_locals.npz"
+    },
+    {
+      "name": "Kup_veg_2015a",
+      "boundary": "input",
+      "step": 14,
+      "path": "0105_14_Kup_veg_2015a_input.npz"
+    },
+    {
+      "name": "Kup_veg_2015a",
+      "boundary": "output",
+      "step": 14,
+      "path": "0106_14_Kup_veg_2015a_output.npz"
+    },
+    {
+      "name": "Kup_veg_2015a",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0107_14_Kup_veg_2015a_locals.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "output",
+      "step": 14,
+      "path": "0108_14_Solweig_2022a_calc_output.npz"
+    },
+    {
+      "name": "Solweig_2022a_calc",
+      "boundary": "locals",
+      "step": 14,
+      "path": "0109_14_Solweig_2022a_calc_locals.npz"
+    }
+  ]
+}

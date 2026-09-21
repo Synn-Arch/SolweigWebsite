@@ -1,0 +1,35 @@
+{
+  "sqrt": {
+    "finite_bit_mismatches": 1230,
+    "all_bit_mismatches": 1232,
+    "nan_masks_equal": true,
+    "max_abs": 5.960464477539063e-08
+  },
+  "acos_on_original_sqrt_diagnostic": {
+    "finite_bit_mismatches": 9060,
+    "all_bit_mismatches": 9060,
+    "nan_masks_equal": true,
+    "max_abs": 1.1920928955078125e-07
+  },
+  "asvf": {
+    "finite_bit_mismatches": 9693,
+    "all_bit_mismatches": 9695,
+    "nan_masks_equal": true,
+    "max_abs": 8.940696716308594e-07
+  },
+  "boundary_masks": {
+    "complete": {
+      "sun": 9,
+      "shade": 20
+    },
+    "original_asvf_diagnostic": {
+      "sun": 5,
+      "shade": 13
+    }
+  },
+  "library": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics/remaining_native_profiles_20260920T0220Z/build-openlibm/libopenlibm.so",
+  "library_sha256": "d691f5843f2f42ac8a9846b44c19fed9fbde0571a10922afef9b0fcfb15c0c4b",
+  "prefix": "",
+  "symbol_origins_verified": true,
+  "qualification": "Uniform native library sqrt/acos/tan/atan and float64 scalar cos/tan; actual scalar wrapping/order. Original-ASVF branch is diagnostic only. Benign bits are reported, boundary/output gates unchanged."
+}

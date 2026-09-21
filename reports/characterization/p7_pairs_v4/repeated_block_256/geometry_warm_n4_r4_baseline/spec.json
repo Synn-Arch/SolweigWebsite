@@ -1,0 +1,27 @@
+{
+  "budget": 4,
+  "entrypoint": "run_utci_tiles",
+  "kwargs": {
+    "base_path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/repeated_block_256/geometry_warm_n4_r4_baseline_scene",
+    "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/repeated_block_256/geometry_warm_n4_r4_baseline_scene/processed_inputs",
+    "save_kdown": true,
+    "save_kup": true,
+    "save_ldown": true,
+    "save_lup": true,
+    "save_shadow": true,
+    "save_svf": true,
+    "save_ta": true,
+    "save_tmrt": true,
+    "save_wbgt": true,
+    "save_wind": true,
+    "selected_date_str": "2020-07-18"
+  },
+  "runtime": {
+    "block_pixels": 128,
+    "cache_dir": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/repeated_block_256/geometry_warm_n4_r4_baseline_scene/.runtime_cache",
+    "cache_enabled": true,
+    "checkpoint_interval": 1,
+    "legacy_cache_policy": "recompute"
+  },
+  "source": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repaired_p6_baseline_v2/src"
+}

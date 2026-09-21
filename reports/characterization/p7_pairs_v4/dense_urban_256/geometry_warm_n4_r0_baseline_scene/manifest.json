@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "evidence_class": "synthetic_input_fixture_not_reference_output",
+  "fixture_id": "dense_urban_256",
+  "family": "dense_urban",
+  "files_sha256": {
+    "Building_DSM.tif": "687655ed2122002eebc16214fa506537a433aec5ca12ef198572c8dc0bee430f",
+    "DEM.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+    "Trees.tif": "30f9e56852cc59aa196df9ce281666612a63608ee14cef76ee698227128ccdfa",
+    "kwargs.json": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+    "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+  },
+  "fixture_sha256": "97620e4aeb98617e3691da437673181652be101f95d016cadaddecbaea2f5ed5",
+  "generator_sha256": "00318d13e1441c4567b5baa6c7a0bd5bcf04ef5fbf577ff9d4e8f920475c7bf6",
+  "source_met_sha256": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4",
+  "source_kwargs_sha256": "046557619ba77a32b8351a05e50b5860842f3a37ac69f8753cf5e0c07d6bcfab",
+  "rows": 256,
+  "cols": 256,
+  "transform": [
+    582889.5,
+    1.0,
+    0.0,
+    4507112.0,
+    0.0,
+    -1.0
+  ],
+  "epsg": 32618,
+  "dtype": "float32",
+  "nodata": null,
+  "timesteps": 24,
+  "patch_option": 2,
+  "tile_size": 3600,
+  "overlap": 20,
+  "building_fraction": 0.5,
+  "canopy_fraction": 0.0078125,
+  "visible_output_fraction": 0.5,
+  "determinism": "explicit 32-pixel motif; no RNG; synthetic analytic P0 forcing copied byte-for-byte",
+  "tree_semantics": "height above terrain; zero away from canopy",
+  "validation": "GDAL values, transform, CRS read-back passed",
+  "limitations": [
+    "Not real observed geometry or forcing",
+    "No model outputs or numerical equivalence generated",
+    "Input preparation alone does not admit a benchmark; differential prerequisites remain required"
+  ]
+}

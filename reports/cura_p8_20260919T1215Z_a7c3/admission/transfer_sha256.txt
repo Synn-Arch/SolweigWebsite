@@ -1,0 +1,6 @@
+71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/benchmarks/protocols/comparison_v1.json
+f99efb077366e00f1a27848890bd244e6460530035ae1a8aece0194d7b744293  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/benchmarks/protocols/p7_pairs_v2/small/kwargs.json
+6cf1d99e7e99306001bd58c7b0ae0cec0aec67adc9e6dd3217be2f9b31c17af6  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/benchmarks/protocols/p7_pairs_v3/small/protocol.json
+bb7fd3af1cff82952e614e6addac9b1ce304f790ad376311f15379d05184dca4  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py
+b827dd320cd4a8d2741d57e8f460eb62624e7d30902dd38159e53ee045fc565c  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/tools/benchmark_p7_pipeline.py
+2a5185b0eaec1de661829db01986070dcecbc7d26a411110b05c8ce13f39bb2a  /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/tools/check_p7_geometry_exports.py

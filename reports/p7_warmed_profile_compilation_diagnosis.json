@@ -1,0 +1,44 @@
+{
+  "schema_version": "p7_warmed_profile_compilation_diagnosis.v1",
+  "evidence_class": "diagnostic_profile_only",
+  "source": "src",
+  "source_tool_sha256": "4352b1754732e56591ff8cb45a92fa3e9ff091e44737f358fc1d15e947a37c53",
+  "reproduction": {
+    "command": "NUMBA_DEBUG_CACHE=1 PYTHONPATH=$PWD/src PYTHONNOUSERSITE=1 NUMBA_CACHE_DIR=reports/p7_profile_small_warmed_v2/jit OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 NUMBA_NUM_THREADS=1 .venv-light/bin/python -m solweig_light.runtime_worker --job reports/characterization/p7_numba_cache_diagnostic/job.json --options $(cat reports/characterization/p7_numba_cache_diagnostic/options.json)",
+    "returncode": 0,
+    "new_outputs": 10,
+    "debug_log": "reports/characterization/p7_numba_cache_diagnostic/stdout.log",
+    "durable_artifacts": "reports/characterization/p7_numba_cache_diagnostic",
+    "durable_artifact_hashes": {
+      "job.json": "3795b375418b2a570b56d2a67c48b68109c83b64091795920c0a2629d74cff25",
+      "options.json": "5af144f374c4a8d165cdbbe972c2cb55b4876e29c4cce07ec634da1f9959efdc",
+      "stdout.log": "ca6a6be676bdffd8edf7edffcde4366fec6e9ec90fa28b2104979469c1e08ab6",
+      "stderr.log": "8020a227f9802f6fef2c17d059ed9597066b598925c3757c4c0a87db9555aff1"
+    }
+  },
+  "observed_cache_hits": [
+    "timezonefinder.utils_numba.pt_in_poly_python",
+    "timezonefinder.utils_numba._residual_at",
+    "timezonefinder.utils_numba.pt_in_poly_packed",
+    "timezonefinder.utils_numba.int2coord",
+    "solweig_light.comfort.utci._uniform_vapour_pressure",
+    "solweig_light.comfort.utci._utci_uniform_serial",
+    "solweig_light.radiation.ground_view._gather_serial"
+  ],
+  "residual_compile_evidence": {
+    "small_profile": "reports/p7_profile_small_warmed_v2/profile/worker_cumulative.txt",
+    "repeated_profile": "reports/p7_profile_repeated256_warmed_v2/profile/worker_cumulative.txt",
+    "approx_seconds": 6.2,
+    "top_dispatcher_sites": ["numba.core.dispatcher.compile", "numba.core.compiler.compile_extra", "numba.core.dispatcher._compile_for_args"],
+    "likely_uncached_kernel_families_supported_by_source": [
+      "radiation.patch_radiation._shortwave and _longwave (njit helpers without cache=True); Kside_veg_v2022a, define_patch_characteristics and Lcyl_v2022a are Python wrappers",
+      "geometry.visibility_compiled._decode, _diff and _decode_diff (njit helpers without cache=True)",
+      "radiation.wall_shadows._wall13 and _wall23 (njit helpers without cache=True)"
+    ],
+    "qualification": "NUMBA_DEBUG_CACHE reported hits only for cache=True functions; it did not emit signatures for uncached functions. The listed residual families are source-supported candidates, not an asserted complete signature inventory. No readonly/mmap argtype mismatch was demonstrated."
+  },
+  "limitations": [
+    "cProfile and NUMBA_DEBUG_CACHE do not expose every native signature compiled by uncached decorators.",
+    "A fully compiled geometry-warm protocol would need cache=True coverage or a dedicated Numba dispatcher/signature trace; this artifact does not change either."
+  ]
+}

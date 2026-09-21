@@ -1,0 +1,39 @@
+{
+  "candidate_median_eligible_ceiling": 13.002758539511124,
+  "eligible_cells": [
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 1024,
+      "cell": 3,
+      "fixture": "repeated_block_256",
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "combined_v1"
+    }
+  ],
+  "method_sha256": "2adee23e38d79f0fbce43348c387b46d713422caf65a36c11b8624093491d7c8",
+  "minimum_candidate_median_seconds": 12.624037417001091,
+  "promotion_approved": false,
+  "selected": {
+    "block_pixels": 1024,
+    "budget": 4
+  },
+  "source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+  "statistics_sha256": "c1670c65754d99dcf14f9246d53828f4e2e72291e1928d1b051e9cd73139cbcf",
+  "status": "selected_for_independent_promotion_evaluation"
+}

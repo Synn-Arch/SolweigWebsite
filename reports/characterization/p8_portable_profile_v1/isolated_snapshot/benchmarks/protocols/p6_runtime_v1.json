@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "protocol_id": "p6_runtime_v1",
+  "status": "frozen_before_measurement",
+  "scope": "CPU-native runtime admission, chronological tile execution, and process-tree resource characterization",
+  "reference_fixture": {
+    "path": "tests/reference/small_original_cpu/scene",
+    "evidence_class": "synthetic_input_fixture_with_original_upstream_prepared_artifacts",
+    "required_raster_shape": [32, 35],
+    "patch_option": 2,
+    "patch_count": 153,
+    "requested_save_outputs": [
+      "tmrt", "svf", "kup", "kdown", "lup", "ldown", "shadow", "wbgt", "ta", "wind"
+    ],
+    "required_output": "utci",
+    "forcing_seed_rows": 24,
+    "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+    "upstream_reference_manifest": "tests/reference/small_original_cpu/reference_manifest.json"
+  },
+  "timeline_cases": [
+    {
+      "name": "timeline_24h",
+      "rows": 24,
+      "cycles": 1,
+      "interpretation": "same-day prepared fixture; candidate runtime characterization only"
+    },
+    {
+      "name": "timeline_96h",
+      "rows": 96,
+      "cycles": 4,
+      "interpretation": "four consecutive copies of the 24-row forcing with advanced day-of-year and hour fields; no long-horizon original parity claim"
+    },
+    {
+      "name": "timeline_288h",
+      "rows": 288,
+      "cycles": 12,
+      "interpretation": "twelve consecutive copies of the 24-row forcing with advanced day-of-year and hour fields; no long-horizon original parity claim"
+    }
+  ],
+  "parallel_cases": {
+    "timeline": "timeline_24h",
+    "independent_tiles": 2,
+    "tile_inputs": "two independent copies of the same logical 32x35 tile and forcing",
+    "workers": [1, 2],
+    "threads_per_worker": 1,
+    "comparison": "descriptive elapsed time and sampled process-tree RSS only; no speedup gate"
+  },
+  "case_names": [
+    "timeline_24h_cold_workers1",
+    "timeline_96h_cold_workers1",
+    "timeline_288h_cold_workers1",
+    "timeline_24h_cold_workers1_two_tiles",
+    "timeline_24h_cold_workers2_two_tiles"
+  ],
+  "cache_cases": [
+    {
+      "name": "cold",
+      "policy": "native geometry cache absent before execution",
+      "required": true
+    },
+    {
+      "name": "warm",
+      "policy": "native geometry cache populated and identity-verified before execution",
+      "required": false,
+      "unavailable_label": "not available until the integrated native cache exposes a verifiable manifest"
+    }
+  ],
+  "runtime_configuration": {
+    "cpu_budget": 1,
+    "threads_per_worker": 1,
+    "workers": 1,
+    "parallel_workers_case": 2,
+    "parallel_cpu_budget": 2,
+    "memory_budget_bytes": 4294967296,
+    "block_pixels": 128,
+    "patches": 153,
+    "windchannels": 12,
+    "checkpoint_interval": 1,
+    "resume": false
+  },
+  "measurement": {
+    "runner": "tools/measure_p6_runtime.py",
+    "process_tree_rss": "sum root process and recursive descendants",
+    "rss_sample_interval_seconds": 0.02,
+    "elapsed": "wall-clock process lifetime including imports, JIT compilation, geometry work, chronological execution, and output writing",
+    "first_use_and_warm_jit": "not separated; no JIT or startup timing claim",
+    "repetitions": 1,
+    "budget_action": "record and terminate a run that exceeds 4 GiB summed process-tree RSS; preserve failure evidence",
+    "shared_rss_caveat": "summed resident sets can count shared pages more than once and samples can miss between-sample peaks",
+    "required_records": [
+      "raw elapsed seconds",
+      "sampled process-tree peak RSS bytes",
+      "sample count and interval",
+      "exit code and traceback",
+      "native thread environment",
+      "runtime options",
+      "fixture and protocol hashes",
+      "output inventory, dimensions, bands, and completion state"
+    ]
+  },
+  "output_contract": {
+    "required_tile_outputs": [
+      "UTCI", "TMRT", "Kup", "Kdown", "Lup", "Ldown", "Shadow", "WBGT", "Ta", "Wind"
+    ],
+    "conditional_output": "SVF is recorded with its actual cold/warm write behavior",
+    "schema_checks": [
+      "files exist only after successful completion",
+      "GeoTIFF dimensions equal the logical 32x35 tile",
+      "band count and Time metadata are recorded",
+      "no output history is retained solely for measurement"
+    ]
+  },
+  "provenance": {
+    "candidate_commit": "record at execution; repository may be uncommitted",
+    "fixture_hash": "hash every copied input and generated met file",
+    "protocol_hash": "sha256 of this file",
+    "harness_hash": "sha256 of tools/measure_p6_runtime.py",
+    "environment": "Python, package distributions, platform, CPU, GDAL, native thread variables",
+    "reference_hashes": "upstream commit and small_original_cpu reference_manifest.json hash"
+  },
+  "interpretation_limits": [
+    "These are characterization measurements, not release benchmarks or speed claims.",
+    "The 96-hour and 288-hour forcings repeat the 24-hour fixture and are not original-upstream parity cases.",
+    "A tiny 32x35 fixture may not resolve a history-memory slope; report that limitation explicitly.",
+    "Missing native cache, unavailable multi-tile integration, failed runs, and unavailable hardware remain explicit statuses, never passes."
+  ]
+}

@@ -1,0 +1,854 @@
+{
+  "evidence_class": "original_upstream_cpu",
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "upstream_patch_hash": null,
+  "source_sha256": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+  "collector_sha256": "72d180c764dfab59f18c195829d9ef24a21069ac93875b6800539b72db463e6a",
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch_threads": 1,
+    "packages": {
+      "timezonefinder": "9.0.0",
+      "kiwisolver": "1.5.1",
+      "coverage": "7.16.1",
+      "packaging": "26.3",
+      "iniconfig": "2.3.0",
+      "fonttools": "4.65.0",
+      "Pygments": "2.21.0",
+      "networkx": "3.6.1",
+      "pytz": "2026.3.post1",
+      "pytest-cov": "7.1.0",
+      "contourpy": "1.3.3",
+      "shapely": "2.1.2",
+      "torch": "2.14.0",
+      "numpy": "2.4.6",
+      "filelock": "4.0.0",
+      "sympy": "1.14.0",
+      "fsspec": "2026.7.0",
+      "tqdm": "4.70.1",
+      "pytest": "9.1.1",
+      "setuptools": "84.0.0",
+      "pycparser": "3.0",
+      "llvmlite": "0.49.0",
+      "timezonefinder-data": "3.2026.3.post1",
+      "python-dateutil": "2.9.0.post0",
+      "mpmath": "1.3.0",
+      "numba": "0.67.0",
+      "matplotlib": "3.11.2",
+      "xarray": "2026.7.0",
+      "cffi": "2.1.1",
+      "certifi": "2026.7.22",
+      "scipy": "1.17.1",
+      "cycler": "0.12.1",
+      "Jinja2": "3.1.6",
+      "pyparsing": "3.3.2",
+      "MarkupSafe": "3.0.3",
+      "solweig-gpu": "2.0.0",
+      "cftime": "1.6.5",
+      "pandas": "3.0.6",
+      "flatbuffers": "25.12.19",
+      "pluggy": "1.6.0",
+      "typing_extensions": "4.16.0",
+      "GDAL": "3.13.3",
+      "psutil": "7.2.2",
+      "pillow": "12.3.0",
+      "netCDF4": "1.7.4",
+      "six": "1.17.0",
+      "h3": "4.5.0"
+    }
+  },
+  "invocation": [
+    "tools/characterize_wall_shadows.py",
+    "--output",
+    "tests/reference/wall_shadows_original_cpu"
+  ],
+  "cases": [
+    {
+      "name": "angle-0-13",
+      "family": 13,
+      "input": "angle-0-13-input.npz",
+      "input_sha256": "3894b6e9936f607d2a1a7e4828c5acbb1b669ed595ca627e9f426ede05dce40c",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-0-13-output.npz",
+      "output_sha256": "29354abea63d1c589fb95346d24ad80ddbd8f4e611313ca30992d38d97ced1e8",
+      "status": "captured"
+    },
+    {
+      "name": "angle-0-23",
+      "family": 23,
+      "input": "angle-0-23-input.npz",
+      "input_sha256": "d7e2b1a1a86f6c5c911a08a624efd7bc7e948163a971688ba5ddc19a9cfdcec3",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-0-23-output.npz",
+      "output_sha256": "d0a7668d9d76c100e2d4c4701f0d23308b93c79d913f0f6260ff124e972a216f",
+      "status": "captured"
+    },
+    {
+      "name": "angle-1-13",
+      "family": 13,
+      "input": "angle-1-13-input.npz",
+      "input_sha256": "02e5a27bb4309a6072a55d24df8fff10d461871d12a16b1cebd30bab0f2778b3",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-1-13-output.npz",
+      "output_sha256": "dada8769ed04d9431aef12f60b992614bb5c7fe780e407e2d30cbdf447fe605e",
+      "status": "captured"
+    },
+    {
+      "name": "angle-1-23",
+      "family": 23,
+      "input": "angle-1-23-input.npz",
+      "input_sha256": "62336b0a2a5f88d3ffb7f4e13b387e070727789146a1642d130fd038a91c73c0",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-1-23-output.npz",
+      "output_sha256": "8afe0c12d3020132d4fdad120b631bd8d198c1326ff6789a80bc643144e5c4c0",
+      "status": "captured"
+    },
+    {
+      "name": "angle-2-13",
+      "family": 13,
+      "input": "angle-2-13-input.npz",
+      "input_sha256": "1395796545062673cb92a83427b5b3f064c99e319ce5b82e3a399c916c0ce649",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-2-13-output.npz",
+      "output_sha256": "bfcfb0dde6a133fe29474055f3e55eab64bf75f900614aed33622e4f7ab7b060",
+      "status": "captured"
+    },
+    {
+      "name": "angle-2-23",
+      "family": 23,
+      "input": "angle-2-23-input.npz",
+      "input_sha256": "72a354cc6d6de80f6c024994610f98e5af949f9b58544e3ac609fe69ba2bdc9c",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-2-23-output.npz",
+      "output_sha256": "e389397af26269e5711076cb88ffb7c3a2f25a49c53ed577c28fb80bbd4ea9ce",
+      "status": "captured"
+    },
+    {
+      "name": "angle-3-13",
+      "family": 13,
+      "input": "angle-3-13-input.npz",
+      "input_sha256": "badfeed7d694b76951c14cd06eeb63ce589b2544dc11e42e70c6e6729c757870",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-3-13-output.npz",
+      "output_sha256": "aeb3c9cff3dc459608e7abb303851c5386cf309e71e90ffa0ea5ad0d96d6bc81",
+      "status": "captured"
+    },
+    {
+      "name": "angle-3-23",
+      "family": 23,
+      "input": "angle-3-23-input.npz",
+      "input_sha256": "7d2be713f39de1a28a4f54b9e6bc51910f2c3fcc516f204dea97f5301d2be72f",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-3-23-output.npz",
+      "output_sha256": "8afe0c12d3020132d4fdad120b631bd8d198c1326ff6789a80bc643144e5c4c0",
+      "status": "captured"
+    },
+    {
+      "name": "angle-4-13",
+      "family": 13,
+      "input": "angle-4-13-input.npz",
+      "input_sha256": "80995c1d57f522ad0f12c04fc39a4d919d77550360042989b50808216e3fe4fd",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-4-13-output.npz",
+      "output_sha256": "8b613efab0bc764260f099704e6435350ea51c53a4d1b483eaea9207b49a9da1",
+      "status": "captured"
+    },
+    {
+      "name": "angle-4-23",
+      "family": 23,
+      "input": "angle-4-23-input.npz",
+      "input_sha256": "2cc70971baa3556446033e963b8dba478492ae3d9cbabff09f2cb771516a9f82",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-4-23-output.npz",
+      "output_sha256": "adfa42a4dd11d0d610704809e406abd8a97bd02310d485a1c50d8488e19b3e7c",
+      "status": "captured"
+    },
+    {
+      "name": "angle-5-13",
+      "family": 13,
+      "input": "angle-5-13-input.npz",
+      "input_sha256": "7c6bfb4d9b1a5d4dc27e136fa582a65d1069609832d47d947fea196a064bdd7d",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-5-13-output.npz",
+      "output_sha256": "d84c29b9d51e15a4fa1c14008ad8088fba34e56d853b3251db8fb7066ac1cb9c",
+      "status": "captured"
+    },
+    {
+      "name": "angle-5-23",
+      "family": 23,
+      "input": "angle-5-23-input.npz",
+      "input_sha256": "3bb54e240c837338b62098b7066bf369bc68c54dd20f6ff8d23e393aaa1e07e3",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-5-23-output.npz",
+      "output_sha256": "3c4001ac777a3d005a3391955406be8bff986b5a70cd10ee8adf4aff1f399047",
+      "status": "captured"
+    },
+    {
+      "name": "angle-6-13",
+      "family": 13,
+      "input": "angle-6-13-input.npz",
+      "input_sha256": "dfe9729f61fe8c3183eaba8c0d619305b65764c3ae3b9f09b0b26065c6c1ac03",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-6-13-output.npz",
+      "output_sha256": "66f14f96cf9c176dd9c9739e21e65d93e391acd1c915904fa7c2d0b71d297ed2",
+      "status": "captured"
+    },
+    {
+      "name": "angle-6-23",
+      "family": 23,
+      "input": "angle-6-23-input.npz",
+      "input_sha256": "e88a0de6ea838309fa5fc695c5655744fe2537a7824b465c561ddacbc467828b",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-6-23-output.npz",
+      "output_sha256": "7f1becf31e768b97baa74b3dab5cde50837b2dcd7d5795b312ea0ec3f564c611",
+      "status": "captured"
+    },
+    {
+      "name": "angle-7-13",
+      "family": 13,
+      "input": "angle-7-13-input.npz",
+      "input_sha256": "33d960c7054d0c243f2fcb4cd9776dd3ade40da9c71e75d9ca2b5d300eddae76",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-7-13-output.npz",
+      "output_sha256": "fa750cb4f03a257164363bb8909aa8974477ef3079b40adb0da93be5b935ecd3",
+      "status": "captured"
+    },
+    {
+      "name": "angle-7-23",
+      "family": 23,
+      "input": "angle-7-23-input.npz",
+      "input_sha256": "3f170afd739d9b8d765b9e0c3aad64035bcd19cfb1df3419ca29b6286c16d662",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-7-23-output.npz",
+      "output_sha256": "af780187dda3c7f6e78f7e2c7e7ccdeaedcd13d128de25f90985e9a914e87a41",
+      "status": "captured"
+    },
+    {
+      "name": "angle-8-13",
+      "family": 13,
+      "input": "angle-8-13-input.npz",
+      "input_sha256": "56d16596bf53e77e2438b47205cc8e4dd626fe6df46eaa800c189e92d8759e04",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-8-13-output.npz",
+      "output_sha256": "1440e1293c97fb03cb352be1aab58d792f8ca16ecdee985abb67f811f6c5ab62",
+      "status": "captured"
+    },
+    {
+      "name": "angle-8-23",
+      "family": 23,
+      "input": "angle-8-23-input.npz",
+      "input_sha256": "689ce082f23be9b02be32628746ecce87b80847761fff13535806d9ba0f37f8e",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-8-23-output.npz",
+      "output_sha256": "859a7540afb5045101944e6360e2477fd0b9ca727639874af8ef949888739596",
+      "status": "captured"
+    },
+    {
+      "name": "angle-9-13",
+      "family": 13,
+      "input": "angle-9-13-input.npz",
+      "input_sha256": "32866e748ebc8686b10ce38cd73a0d02253e944670d718042f797d6a85651c76",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-9-13-output.npz",
+      "output_sha256": "ca767a5fdbc0a5028afa0ec1e807a038fa2ce60f65f4f92d8bb38d33e3fc2432",
+      "status": "captured"
+    },
+    {
+      "name": "angle-9-23",
+      "family": 23,
+      "input": "angle-9-23-input.npz",
+      "input_sha256": "635e4af375b70be227a11bda1061c87a2e4192d7fae86e5179bf8f80868c9164",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-9-23-output.npz",
+      "output_sha256": "3c88a0fe950422b78296815c6947aa823b75a0a09223413573ef1b9d80324f64",
+      "status": "captured"
+    },
+    {
+      "name": "angle-10-13",
+      "family": 13,
+      "input": "angle-10-13-input.npz",
+      "input_sha256": "527201441c37a1c9058f1d29b2b82eb44c31834e429904c997621f2634e24fb4",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-10-13-output.npz",
+      "output_sha256": "29354abea63d1c589fb95346d24ad80ddbd8f4e611313ca30992d38d97ced1e8",
+      "status": "captured"
+    },
+    {
+      "name": "angle-10-23",
+      "family": 23,
+      "input": "angle-10-23-input.npz",
+      "input_sha256": "2fab5a7d80ea7a4efa6afd0de5cbfc488014901ee1c9ea496b12b15bd7c5ab13",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-10-23-output.npz",
+      "output_sha256": "d0a7668d9d76c100e2d4c4701f0d23308b93c79d913f0f6260ff124e972a216f",
+      "status": "captured"
+    },
+    {
+      "name": "angle-11-13",
+      "family": 13,
+      "input": "angle-11-13-input.npz",
+      "input_sha256": "1395796545062673cb92a83427b5b3f064c99e319ce5b82e3a399c916c0ce649",
+      "scalar_types": {
+        "azimuth": "float64",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-11-13-output.npz",
+      "output_sha256": "bfcfb0dde6a133fe29474055f3e55eab64bf75f900614aed33622e4f7ab7b060",
+      "status": "captured"
+    },
+    {
+      "name": "angle-11-23",
+      "family": 23,
+      "input": "angle-11-23-input.npz",
+      "input_sha256": "72a354cc6d6de80f6c024994610f98e5af949f9b58544e3ac609fe69ba2bdc9c",
+      "scalar_types": {
+        "azimuth": "float64",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-11-23-output.npz",
+      "output_sha256": "e389397af26269e5711076cb88ffb7c3a2f25a49c53ed577c28fb80bbd4ea9ce",
+      "status": "captured"
+    },
+    {
+      "name": "angle-12-13",
+      "family": 13,
+      "input": "angle-12-13-input.npz",
+      "input_sha256": "56d16596bf53e77e2438b47205cc8e4dd626fe6df46eaa800c189e92d8759e04",
+      "scalar_types": {
+        "azimuth": "float64",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "angle-12-13-output.npz",
+      "output_sha256": "e191c8de61304fe8ec293f139ef51de6a6a4a1e8aee12ccc586c4993382350ab",
+      "status": "captured"
+    },
+    {
+      "name": "angle-12-23",
+      "family": 23,
+      "input": "angle-12-23-input.npz",
+      "input_sha256": "689ce082f23be9b02be32628746ecce87b80847761fff13535806d9ba0f37f8e",
+      "scalar_types": {
+        "azimuth": "float64",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "angle-12-23-output.npz",
+      "output_sha256": "2a303d005a8ae913c1eff7c8e4eaad6afd4902fda1dd49e707affb7f0dfd6df2",
+      "status": "captured"
+    },
+    {
+      "name": "angle-13-13",
+      "family": 13,
+      "input": "angle-13-13-input.npz",
+      "input_sha256": "694d0aa862147c62d0b1b8e13625146be182104410a3f78e6d799fc1172fbe28",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "status": "original_failure",
+      "exception": "ValueError",
+      "message": "cannot convert float NaN to integer",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_wall_shadows.py\", line 60, in main\n    result=getattr(original,f'shadowingfunction_wallheight_{family}')(**inputs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1019, in shadowingfunction_wallheight_13\n    yc1 = int((dy + absdy) / 2)\n          ^^^^^^^^^^^^^^^^^^^^^\nValueError: cannot convert float NaN to integer\n"
+    },
+    {
+      "name": "angle-13-23",
+      "family": 23,
+      "input": "angle-13-23-input.npz",
+      "input_sha256": "8b9eb2f7a1c71ff48febb46df052b44d72caa072994962aaf8819929711c59a7",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "status": "original_failure",
+      "exception": "ValueError",
+      "message": "cannot convert float NaN to integer",
+      "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/characterize_wall_shadows.py\", line 60, in main\n    result=getattr(original,f'shadowingfunction_wallheight_{family}')(**inputs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/alansynn/Workspace/solweig-light/.venv-oracle/lib/python3.11/site-packages/solweig_gpu/solweig.py\", line 1135, in shadowingfunction_wallheight_23\n    yc1 = int((dy + absdy) / 2)\n          ^^^^^^^^^^^^^^^^^^^^^\nValueError: cannot convert float NaN to integer\n"
+    },
+    {
+      "name": "alt-0-13",
+      "family": 13,
+      "input": "alt-0-13-input.npz",
+      "input_sha256": "ed86e09764e0e793268766d13d7fad2fcaa7fb92a6dea39ffe4874a210cae6ba",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "alt-0-13-output.npz",
+      "output_sha256": "a64b5b100224aeefa46bc9391e4c3bc2cd941a1e60022a169b11367e1c00bf07",
+      "status": "captured"
+    },
+    {
+      "name": "alt-0-23",
+      "family": 23,
+      "input": "alt-0-23-input.npz",
+      "input_sha256": "f3fa0324038b657a279f6ad5ed1943d5bea9e03e65f3849f1c2aa4ce5e426c89",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "alt-0-23-output.npz",
+      "output_sha256": "b2277bb07830d2e4a1ef2521374551f382c654a86038100276d643d21b5e68ee",
+      "status": "captured"
+    },
+    {
+      "name": "alt-1-13",
+      "family": 13,
+      "input": "alt-1-13-input.npz",
+      "input_sha256": "8f365b4a51fadcbe2826282dbc0c8f529d777ae370bb69f75357b3cb2baea80f",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "alt-1-13-output.npz",
+      "output_sha256": "0a7122ce67c5a0112800879eae37912cceb0feab1faf477b9b96c59f5de40371",
+      "status": "captured"
+    },
+    {
+      "name": "alt-1-23",
+      "family": 23,
+      "input": "alt-1-23-input.npz",
+      "input_sha256": "58c59722d3a4790bda75fa66b8d8089b6091c1486e5863b66755bc3ea68d8178",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "alt-1-23-output.npz",
+      "output_sha256": "57c6026f0aefffaf98a6b84dd2b82e3211c8e0e28c5d66dd0ed22fff027e6f66",
+      "status": "captured"
+    },
+    {
+      "name": "alt-2-13",
+      "family": 13,
+      "input": "alt-2-13-input.npz",
+      "input_sha256": "3b77e8317840a9de75732b8fc7fa7af1f848e39ebd2f8d108dcad37f70e53d99",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "alt-2-13-output.npz",
+      "output_sha256": "061b1bfd6718b4cf59944fadadfbd3dcdf0fc922475df7ed04f2ec752908ccf8",
+      "status": "captured"
+    },
+    {
+      "name": "alt-2-23",
+      "family": 23,
+      "input": "alt-2-23-input.npz",
+      "input_sha256": "98d5ba963f99fab5ec07b772c5f87e62b814314739a8aa0ff08d2cd5868dbdcc",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "alt-2-23-output.npz",
+      "output_sha256": "64c5142d64e2c35a060fa5250abae55ad6cbf2121b8d00e299de4ff0f4c6085c",
+      "status": "captured"
+    },
+    {
+      "name": "alt-3-13",
+      "family": 13,
+      "input": "alt-3-13-input.npz",
+      "input_sha256": "9a90975ca1cf2ea61391a7d9589aa8a8a8daac8985032753a21dcb930ccbfee7",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "alt-3-13-output.npz",
+      "output_sha256": "da7bd883166d0302c0804d633b4d5b272353c116efe92e422aaef2d58b51b612",
+      "status": "captured"
+    },
+    {
+      "name": "alt-3-23",
+      "family": 23,
+      "input": "alt-3-23-input.npz",
+      "input_sha256": "d2a0b071281347bf8a0de063dbb1432191ec88bfefe3cf59de9575083ce97f4d",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "alt-3-23-output.npz",
+      "output_sha256": "1cf3f44118a0262deeaa97c81aa23f57ea87af6ad5b12f23d41a4208564f9bd7",
+      "status": "captured"
+    },
+    {
+      "name": "alt-4-13",
+      "family": 13,
+      "input": "alt-4-13-input.npz",
+      "input_sha256": "18bcc2bc7d86bad7f032f95c6c74e99017325c1389e4ff7e25b08538adcbf3e7",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "alt-4-13-output.npz",
+      "output_sha256": "9e36c1d73f020c63b263658c2da31ec7349e1067d699e5a518e914414f32844e",
+      "status": "captured"
+    },
+    {
+      "name": "alt-4-23",
+      "family": 23,
+      "input": "alt-4-23-input.npz",
+      "input_sha256": "e700539fc05628e258e114e7d7da42b9bd28c2bcf549d253e1d7b05d141e9830",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "alt-4-23-output.npz",
+      "output_sha256": "2c0de4173b7a37878f43a04994201056a7a37577d2b608f167adebfc663ff4b1",
+      "status": "captured"
+    },
+    {
+      "name": "negative-13",
+      "family": 13,
+      "input": "negative-13-input.npz",
+      "input_sha256": "ff7f57bc52bce5b805fee19d4943bae0590c5d12b82f75510e27ffe6a38d50bf",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "negative-13-output.npz",
+      "output_sha256": "bb11c903a27de63494b97801d99502a72bfd933aaef569affc6affa06965235e",
+      "status": "captured"
+    },
+    {
+      "name": "negative-23",
+      "family": 23,
+      "input": "negative-23-input.npz",
+      "input_sha256": "968b653170a3cc3a8bc1fdedcadecf648afb331840afdb40fd885cd8e4e34ab6",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "negative-23-output.npz",
+      "output_sha256": "04ecf0773a5108ca24a0d846b617e77d2f7c5cf89d47a85bc2869d07e78f2daf",
+      "status": "captured"
+    },
+    {
+      "name": "nan-dsm-13",
+      "family": 13,
+      "input": "nan-dsm-13-input.npz",
+      "input_sha256": "11bdf9fda08a98bb9b4c4e373efc4069ddf59a13016f50cbca0eff62cfac5ee7",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "nan-dsm-13-output.npz",
+      "output_sha256": "4d848102c6daf361b5c4d61c0b837e5c699aa97e75605df837534a5d8dd9e372",
+      "status": "captured"
+    },
+    {
+      "name": "nan-dsm-23",
+      "family": 23,
+      "input": "nan-dsm-23-input.npz",
+      "input_sha256": "c670aa1088cce372fd4656f3d34e7a4d43cabada411923936a39bcafd4e4f456",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "nan-dsm-23-output.npz",
+      "output_sha256": "c26678dc4ba5afade63c271d982ef9808567848a3beed452060a1ccd33865d65",
+      "status": "captured"
+    },
+    {
+      "name": "nan-veg-13",
+      "family": 13,
+      "input": "nan-veg-13-input.npz",
+      "input_sha256": "55a332d6853eed8b1713aebfb7cf54217c1b5adced87fc626a416be065263e48",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "nan-veg-13-output.npz",
+      "output_sha256": "99ae54e04b209298c3eef4d97d9f44737b70afff3ef059641df11c68254e6318",
+      "status": "captured"
+    },
+    {
+      "name": "nan-veg-23",
+      "family": 23,
+      "input": "nan-veg-23-input.npz",
+      "input_sha256": "5738f497f14e6e4ee12483c86c0dccf8c3ebd5cffecc4d644bf97470258e20b6",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "nan-veg-23-output.npz",
+      "output_sha256": "bb6eda667d616e71fb75c8908c69f3fd304a262893cb47c09bf346198735e68a",
+      "status": "captured"
+    },
+    {
+      "name": "nan-trunk-13",
+      "family": 13,
+      "input": "nan-trunk-13-input.npz",
+      "input_sha256": "55a332d6853eed8b1713aebfb7cf54217c1b5adced87fc626a416be065263e48",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "nan-trunk-13-output.npz",
+      "output_sha256": "99ae54e04b209298c3eef4d97d9f44737b70afff3ef059641df11c68254e6318",
+      "status": "captured"
+    },
+    {
+      "name": "nan-trunk-23",
+      "family": 23,
+      "input": "nan-trunk-23-input.npz",
+      "input_sha256": "fc54b2dcdade8074f69b8a04ef36cdf72fd736019417c56604ecfcf0c5836509",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "nan-trunk-23-output.npz",
+      "output_sha256": "0d9874b2204dfc107a4ebdbd1daa50ca633dafe26680580030d0f084c1aa68a8",
+      "status": "captured"
+    },
+    {
+      "name": "nan-walls-13",
+      "family": 13,
+      "input": "nan-walls-13-input.npz",
+      "input_sha256": "1c51f7c2d555c5d46ba3a63dc3971b882d358a7198213159dc99a0ea8cb28001",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "nan-walls-13-output.npz",
+      "output_sha256": "cb38be2a656ded534fa5bc3b408cb73330215f1e834bdc85e9345e7a259fae6c",
+      "status": "captured"
+    },
+    {
+      "name": "nan-walls-23",
+      "family": 23,
+      "input": "nan-walls-23-input.npz",
+      "input_sha256": "f3610c568983ed0b4c29ffbf2c26201f1798caea4a1527076bca2694a2a6fcc7",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "nan-walls-23-output.npz",
+      "output_sha256": "1c303726d6f2f098fc0f6fd2397f27a6ce77e4c0dc14be7eb84072252b7adb27",
+      "status": "captured"
+    },
+    {
+      "name": "nan-aspect-13",
+      "family": 13,
+      "input": "nan-aspect-13-input.npz",
+      "input_sha256": "c1ca2504836ef6c6e894b396d1274dcd651ccecb5872ca21aa80fbe9a30b1841",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "nan-aspect-13-output.npz",
+      "output_sha256": "1fabeb2d8ac75bb7a5a59eff0b63b6522e43fc2d097cbfc8f9df8cfb24cfae68",
+      "status": "captured"
+    },
+    {
+      "name": "nan-aspect-23",
+      "family": 23,
+      "input": "nan-aspect-23-input.npz",
+      "input_sha256": "51d6239e140dcdf1d194fa08e6f3b215331686851f00e901f9ba07397a2dc790",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "nan-aspect-23-output.npz",
+      "output_sha256": "08d4961df6364dc433a82822c7789822874432d691b845f8670c811f359c0094",
+      "status": "captured"
+    },
+    {
+      "name": "zero-13",
+      "family": 13,
+      "input": "zero-13-input.npz",
+      "input_sha256": "fbf11293c566781662b2e278c1933a6f9132084484b323ffefdd108dc7e87cd6",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "zero-13-output.npz",
+      "output_sha256": "bb11c903a27de63494b97801d99502a72bfd933aaef569affc6affa06965235e",
+      "status": "captured"
+    },
+    {
+      "name": "zero-23",
+      "family": 23,
+      "input": "zero-23-input.npz",
+      "input_sha256": "74a26c92a8a0c235ca5532a717a40aa30194669430ec8ba5c6d7bf5b4b5c34ec",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "zero-23-output.npz",
+      "output_sha256": "350c4de7125f2c9442498919abad5a46ea822b170a6231e93bb2422c5893ca13",
+      "status": "captured"
+    },
+    {
+      "name": "single-13",
+      "family": 13,
+      "input": "single-13-input.npz",
+      "input_sha256": "3c70f312b2516d121c627268f2da2dccbf7a09adffeb09a9321bd50f3a12bf95",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float"
+      },
+      "output": "single-13-output.npz",
+      "output_sha256": "f0a29ff1853be239eef965458ae91a74f47da2471432f041f9c2ffd954ba18a8",
+      "status": "captured"
+    },
+    {
+      "name": "single-23",
+      "family": 23,
+      "input": "single-23-input.npz",
+      "input_sha256": "2f839e2d6792cd83d9e4fb9eec1ad8e4a8e4785620923a2830abd7abb421b3cc",
+      "scalar_types": {
+        "azimuth": "float",
+        "altitude": "float",
+        "scale": "float",
+        "amaxvalue": "float"
+      },
+      "output": "single-23-output.npz",
+      "output_sha256": "359fada77740d0f4a25b737788733ef258923dba35d9957e0575bff64a502276",
+      "status": "captured"
+    }
+  ]
+}

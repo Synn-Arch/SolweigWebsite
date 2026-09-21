@@ -1,0 +1,200 @@
+{
+  "created": "2026-06-30T19:58:46.323250+00:00",
+  "modified": "2026-06-30T19:58:46.623530+00:00",
+  "id": 21081622,
+  "conceptrecid": "17048977",
+  "doi": "10.5281/zenodo.21081622",
+  "conceptdoi": "10.5281/zenodo.17048977",
+  "doi_url": "https://doi.org/10.5281/zenodo.21081622",
+  "metadata": {
+    "title": "SOLWEIG-GPU Version: 2.0",
+    "doi": "10.5281/zenodo.21081622",
+    "publication_date": "2026-06-30",
+    "description": "<h2><strong>Please check the GitHub repository the the latest version of the software: <a href=\"https://github.com/nvnsudharsan/SOLWEIG-GPU\" rel=\"noopener\">GitHub</a></strong></h2>\n<h2><strong>Read the detailed documentation: <a href=\"https://solweig-gpu.readthedocs.io/en/latest/index.html\" rel=\"noopener\">Documentation</a></strong></h2>\n<h1>SOLWEIG-GPU Version 2: Sample Data and Usage Examples</h1>\n<p class=\"isSelectedEnd\">SOLWEIG-GPU is a GPU-accelerated Python framework for running the standalone SOLWEIG model for high-resolution urban thermal comfort and radiation modeling. It computes key urban microclimate variables including sky-view factor (SVF), mean radiant temperature (Tmrt), Universal Thermal Climate Index (UTCI), wet bulb globe temperature (WBGT), shadow patterns, and shortwave and longwave radiation components.</p>\n<p class=\"isSelectedEnd\">This Zenodo archive provides sample input data and forcing datasets that can be used to test, reproduce, and familiarize users with the SOLWEIG-GPU workflow. The sample data are intended to help users understand the required input structure, test the installation, and run example simulations using different meteorological forcing options.</p>\n<h2>What is new in Version 2</h2>\n<p class=\"isSelectedEnd\">Version 2 of SOLWEIG-GPU includes several major updates:</p>\n<ul>\n<li>Modular workflows for preprocessing, wall-height and wall-aspect calculation, sky-view factor calculation, and thermal comfort simulations</li>\n<li>Separate functions for calculating wall height/aspect, SVF, Tmrt, UTCI, and related radiation variables</li>\n<li>Ability to compute wet bulb globe temperature (WBGT)</li>\n<li>Bug fixes and improved model stability</li>\n<li>GLIDE-SOL-related capabilities, including:\n<ul>\n<li>Downloading and processing required input datasets</li>\n<li>Wind-direction-based wind-extension coefficient calculation when ERA5 data are used</li>\n<li>Diagnostic urban heat island intensity calculation when ERA5 forcing data are used</li>\n</ul>\n</li>\n</ul>\n<p class=\"isSelectedEnd\">These additions make the framework more flexible for research workflows, large-area simulations, urban digital twin applications, and diagnostic environmental modeling.</p>\n<div>\n</div>\n<h2>Model installation</h2>\n<p class=\"isSelectedEnd\">We recommend installing SOLWEIG-GPU inside a conda environment.</p>\n<pre><code>conda create -n solweig python=3.10\nconda activate solweig\nconda install -c conda-forge gdal cudnn pytorch timezonefinder matplotlib sip\npip install PyQt5\npip install solweig-gpu</code></pre>\n<p class=\"isSelectedEnd\">If you already have an older version installed, upgrade using:</p>\n<pre><code>pip install --upgrade solweig-gpu</code></pre>\n<p class=\"isSelectedEnd\">Note: <code>cudnn</code> is required only if you are using an NVIDIA GPU.</p>\n<div>\n</div>\n<h2>Input data</h2>\n<p class=\"isSelectedEnd\">The <code>Input_raster</code> folder contains the raster files required by SOLWEIG-GPU:</p>\n<ol>\n<li><code>Building_DSM.tif</code><br>Building digital surface model, including buildings and terrain elevation.</li>\n<li><code>DEM.tif</code><br>Digital elevation model excluding buildings.</li>\n<li><code>Trees.tif</code><br>Tree or vegetation height raster.</li>\n<li><code>Landcover.tif</code><br>Optional land-cover raster.</li>\n</ol>\n<p class=\"isSelectedEnd\">These files represent the spatial input datasets required for SOLWEIG-GPU simulations.</p>\n<div>\n</div>\n<h2>Meteorological forcing options</h2>\n<p class=\"isSelectedEnd\">SOLWEIG-GPU can be meteorologically forced in three ways:</p>\n<ol>\n<li>User-provided meteorological <code>.txt</code> file</li>\n<li>ERA5 reanalysis data</li>\n<li>Weather Research and Forecasting model output files (<code>wrfout</code>)</li>\n</ol>\n<p class=\"isSelectedEnd\">For WRF forcing, make sure filenames follow one of the following formats:</p>\n<pre><code>wrfout_d0x_yyyy-mm-dd_hh_mm_ss\nwrfout_d0x_yyyy-mm-dd_hh:mm:ss\nwrfout_d0x_yyyy-mm-dd_hh</code></pre>\n<p class=\"isSelectedEnd\">The preferred format is:</p>\n<pre><code>wrfout_d0x_yyyy-mm-dd_hh_mm_ss</code></pre>\n<p class=\"isSelectedEnd\">This format is recommended because it works more reliably across different operating systems.</p>\n<p class=\"isSelectedEnd\">The <code>Forcing_data</code> folder contains sample meteorological forcing data for all supported forcing methods.</p>\n<div>\n</div>\n<h2>Output structure</h2>\n<p class=\"isSelectedEnd\">SOLWEIG-GPU writes outputs under an <code>output_folder</code> directory inside the selected <code>base_path</code>.</p>\n<p class=\"isSelectedEnd\">For tiled simulations, each tile has its own output folder, for example:</p>\n<pre><code>output_folder/\n\u251c\u2500\u2500 0_0/\n\u251c\u2500\u2500 1000_0/\n\u251c\u2500\u2500 0_1000/\n\u2514\u2500\u2500 ...</code></pre>\n<p class=\"isSelectedEnd\">SVF outputs are saved as single-band rasters. Time-varying variables such as Tmrt, UTCI, radiation fluxes, shadow, and WBGT are saved as multi-band rasters, where each band corresponds to a model time step.</p>\n<div>\n</div>\n<h2>Example 1: Running SOLWEIG-GPU with WRF forcing</h2>\n<pre><code>from solweig_gpu import thermal_comfort\n\nthermal_comfort(\n    base_path=\"/path/to/input\",\n    selected_date_str=\"2020-08-13\",\n    building_dsm_filename=\"Building_DSM.tif\",\n    dem_filename=\"DEM.tif\",\n    trees_filename=\"Trees.tif\",\n    landcover_filename=None,\n    ERA_5_z0_find=False,\n    tile_size=1000,\n    overlap=100,\n    use_own_met=False,\n    own_met_file=None,\n    start_time=\"2020-08-13 06:00:00\",\n    end_time=\"2020-08-14 05:00:00\",\n    data_source_type=\"wrfout\",\n    data_folder=\"/path/to/wrfout/files\",\n    use_uhi=False,\n    save_tmrt=True,\n    save_svf=False,\n    save_kup=False,\n    save_kdown=False,\n    save_lup=False,\n    save_ldown=False,\n    save_shadow=False,\n    save_wbgt=False,\n)</code></pre>\n<p class=\"isSelectedEnd\">In this example, the model simulation date is <code>2020-08-13</code>.</p>\n<p class=\"isSelectedEnd\">The start and end times are provided in UTC:</p>\n<pre><code>2020-08-13 06:00:00 UTC to 2020-08-14 05:00:00 UTC</code></pre>\n<p class=\"isSelectedEnd\">For Austin, Texas, this corresponds approximately to:</p>\n<pre><code>2020-08-13 01:00:00 to 2020-08-13 23:00:00 local time</code></pre>\n<p class=\"isSelectedEnd\">The UTC-to-local-time conversion is handled internally by SOLWEIG-GPU.</p>\n<p class=\"isSelectedEnd\">The <code>tile_size</code> depends on the available GPU memory. A value of <code>1000</code> is suitable for this example, but users with lower-memory GPUs may need to reduce it.</p>\n<p class=\"isSelectedEnd\">The <code>overlap</code> parameter controls the number of additional pixels used around each tile for shadow transfer between neighboring tiles. For example, with:</p>\n<pre><code>tile_size = 1000\noverlap = 100</code></pre>\n<p class=\"isSelectedEnd\">the processed tile size becomes:</p>\n<pre><code>1100 &times; 1100 pixels</code></pre>\n<div>\n</div>\n<h2>Example 2: Running SOLWEIG-GPU with ERA5 forcing</h2>\n<pre><code>from solweig_gpu import thermal_comfort\n\nthermal_comfort(\n    base_path=\"/path/to/input\",\n    selected_date_str=\"2020-08-13\",\n    building_dsm_filename=\"Building_DSM.tif\",\n    dem_filename=\"DEM.tif\",\n    trees_filename=\"Trees.tif\",\n    landcover_filename=None,\n    ERA_5_z0_find=True,\n    tile_size=1000,\n    overlap=100,\n    use_own_met=False,\n    own_met_file=None,\n    start_time=\"2020-08-13 06:00:00\",\n    end_time=\"2020-08-13 23:00:00\",\n    data_source_type=\"ERA5\",\n    data_folder=\"/path/to/era5/files\",\n    use_uhi=True,\n    save_tmrt=True,\n    save_svf=False,\n    save_kup=False,\n    save_kdown=False,\n    save_lup=False,\n    save_ldown=False,\n    save_shadow=False,\n    save_wbgt=True,\n)</code></pre>\n<p class=\"isSelectedEnd\">For the ERA5 sample data, the forcing period is:</p>\n<pre><code>2020-08-13 06:00:00 UTC to 2020-08-13 23:00:00 UTC</code></pre>\n<p class=\"isSelectedEnd\">For Austin, Texas, this corresponds approximately to:</p>\n<pre><code>2020-08-13 01:00:00 to 2020-08-13 18:00:00 local time</code></pre>\n<p class=\"isSelectedEnd\">When ERA5 forcing is used, SOLWEIG-GPU can process the selected date and time range automatically, provided that ERA5 data are available for the requested period.</p>\n<p class=\"isSelectedEnd\">For example, if the ERA5 files contain data from:</p>\n<pre><code>2020-08-13 00:00:00 UTC to 2020-08-14 23:00:00 UTC</code></pre>\n<p class=\"isSelectedEnd\">and the selected simulation date is:</p>\n<pre><code>2020-08-13</code></pre>\n<p class=\"isSelectedEnd\">with start and end times:</p>\n<pre><code>2020-08-13 06:00:00 UTC to 2020-08-14 05:00:00 UTC</code></pre>\n<p class=\"isSelectedEnd\">the model will automatically extract and process the required time steps.</p>\n<p class=\"isSelectedEnd\">If <code>ERA_5_z0_find=True</code>, SOLWEIG-GPU expects the ERA5 instantaneous file needed for roughness-length-based wind-extension coefficient calculation to be available in the ERA5 data folder.</p>\n<p class=\"isSelectedEnd\">If <code>use_uhi=True</code>, SOLWEIG-GPU calculates diagnostic urban heat island intensity. This option should be used only with ERA5 forcing.</p>\n<div>\n</div>\n<h2>Example 3: Running SOLWEIG-GPU with a user-provided meteorological file</h2>\n<pre><code>from solweig_gpu import thermal_comfort\n\nthermal_comfort(\n    base_path=\"/path/to/input\",\n    selected_date_str=\"2020-08-13\",\n    building_dsm_filename=\"Building_DSM.tif\",\n    dem_filename=\"DEM.tif\",\n    trees_filename=\"Trees.tif\",\n    landcover_filename=None,\n    ERA_5_z0_find=False,\n    tile_size=1000,\n    overlap=100,\n    use_own_met=True,\n    own_met_file=\"/path/to/met.txt\",\n    start_time=None,\n    end_time=None,\n    data_source_type=None,\n    data_folder=None,\n    use_uhi=False,\n    save_tmrt=True,\n    save_svf=False,\n    save_kup=False,\n    save_kdown=False,\n    save_lup=False,\n    save_ldown=False,\n    save_shadow=False,\n    save_wbgt=False,\n)</code></pre>\n<p class=\"isSelectedEnd\">Use this option when forcing SOLWEIG-GPU with a user-provided meteorological <code>.txt</code> file.</p>\n<p class=\"isSelectedEnd\">When using a custom meteorological file:</p>\n<ul>\n<li>Set <code>use_own_met=True</code></li>\n<li>Provide the file path using <code>own_met_file</code></li>\n<li>Keep <code>ERA_5_z0_find=False</code> unless ERA5 roughness data are also available</li>\n<li>Keep <code>use_uhi=False</code>, because diagnostic urban heat island intensity calculation is intended for ERA5 forcing</li>\n</ul>\n<div>\n</div>\n<h2>Modular workflow in Version 2</h2>\n<p class=\"isSelectedEnd\">Version 2 also allows the model to be run in separate stages. This is useful when users want to preprocess the data once, calculate SVF separately, rerun selected tiles, or save intermediate products.</p>\n<h3>Step 1: Preprocess input data</h3>\n<pre><code>from solweig_gpu import preprocess\n\npreprocess(\n    base_path=\"/path/to/input\",\n    selected_date_str=\"2020-08-13\",\n    building_dsm_filename=\"Building_DSM.tif\",\n    dem_filename=\"DEM.tif\",\n    trees_filename=\"Trees.tif\",\n    landcover_filename=\"Landcover.tif\",\n    windcoeff_folder=\"/path/to/input\",\n    tile_size=1000,\n    overlap=100,\n    use_own_met=False,\n    start_time=\"2020-08-13 06:00:00\",\n    end_time=\"2020-08-14 05:00:00\",\n    data_source_type=\"ERA5\",\n    data_folder=\"/path/to/era5/files\",\n    own_met_file=None,\n    preprocess_dir=\"/path/to/input\",\n    use_uhi=True,\n)</code></pre>\n<h3>Step 2: Calculate wall height and wall aspect</h3>\n<pre><code>from solweig_gpu import run_walls_aspect\n\nrun_walls_aspect(\"/path/to/input\")</code></pre>\n<h3>Step 3: Calculate sky-view factor</h3>\n<pre><code>from solweig_gpu import calculate_svf\n\ncalculate_svf(\n    base_path=\"/path/to/input\",\n    patch_option=2,\n    overwrite=False,\n)</code></pre>\n<h3>Step 4: Run the thermal comfort model over tiles</h3>\n<pre><code>from solweig_gpu import run_utci_tiles\n\nrun_utci_tiles(\n    base_path=\"/path/to/input\",\n    preprocess_dir=\"/path/to/input\",\n    selected_date_str=\"2020-08-13\",\n    save_tmrt=True,\n    save_svf=False,\n    save_kup=False,\n    save_kdown=False,\n    save_lup=False,\n    save_ldown=False,\n    save_shadow=False,\n    save_wbgt=True,\n)</code></pre>\n<p class=\"isSelectedEnd\">This modular workflow is recommended for advanced users, large-domain applications, debugging, or repeated simulations using the same spatial inputs.</p>\n<div>\n</div>\n<h2>Optional input-data generation</h2>\n<p class=\"isSelectedEnd\">Version 2 includes support for downloading and processing required SOLWEIG-GPU input datasets from near-globally available urban datasets. Google Earth Engine must be authenticated before using this feature.</p>\n<pre><code>import os\nfrom solweig_gpu import build_inputs\n\nos.environ<span class=\"text-token-text-primary cursor-text rounded-sm\">[\"EE_PROJECT\"]</span> = \"your-gee-project-id\"\n\nbase_path = build_inputs(\n    lat=latitude,\n    lon=longitude,\n    city=\"City name\",\n    km_buffer=2,\n    km_reduced_lat=1,\n    km_reduced_lon=1,\n    base_folder=\"/path/to/save/inputs\",\n    resolution=2,\n)\n\nprint(\"SOLWEIG input folder:\", base_path)</code></pre>\n<div>\n</div>\n<h2>Optional wind-extension coefficient calculation</h2>\n<p class=\"isSelectedEnd\">Version 2 can compute wind-direction-based wind-extension coefficients when ERA5 data are available. This requires the ERA5 variable <code>Forecasted surface roughness</code>.</p>\n<pre><code>from solweig_gpu import build_wind_ext_coeff\n\nbuild_wind_ext_coeff(\n    \"/path/to/solweig/input\",\n    \"/path/to/era5/data_stream-oper_stepType-instant.nc\"\n)</code></pre>\n<div>\n</div>\n<h2>Windows users</h2>\n<p class=\"isSelectedEnd\">On Windows, Python uses the <code>spawn</code> start method for multiprocessing. Therefore, calls to <code>thermal_comfort()</code> should be placed inside a <code>main()</code> function and protected using:</p>\n<pre><code>if __name__ == \"__main__\":\n    main()</code></pre>\n<p class=\"isSelectedEnd\">Example:</p>\n<pre><code>from solweig_gpu import thermal_comfort\nimport multiprocessing as mp\n\ndef main():\n    thermal_comfort(\n        base_path=\"/path/to/input\",\n        selected_date_str=\"2020-08-13\",\n        building_dsm_filename=\"Building_DSM.tif\",\n        dem_filename=\"DEM.tif\",\n        trees_filename=\"Trees.tif\",\n        landcover_filename=\"Landcover.tif\",\n        ERA_5_z0_find=True,\n        tile_size=1000,\n        overlap=100,\n        use_own_met=False,\n        start_time=\"2020-08-13 06:00:00\",\n        end_time=\"2020-08-13 23:00:00\",\n        data_source_type=\"ERA5\",\n        data_folder=\"/path/to/era5/files\",\n        use_uhi=True,\n        save_wbgt=True,\n    )\n\nif __name__ == \"__main__\":\n    mp.freeze_support()\n    main()</code></pre>\n<p class=\"isSelectedEnd\">This prevents repeated execution in child processes and avoids multiprocessing-related errors.</p>\n<div>\n</div>\n<h2>Citation</h2>\n<p class=\"isSelectedEnd\">If you use SOLWEIG-GPU, please cite:</p>\n<p class=\"isSelectedEnd\">Kamath, H. G., Sudharsan, N., Singh, M., Wallenberg, N., Lindberg, F., &amp; Niyogi, D. (2026). SOLWEIG-GPU: GPU-Accelerated Thermal Comfort Modeling Framework for Urban Digital Twins. <em>Journal of Open Source Software</em>, 11(118), 9535. <a href=\"https://doi.org/10.21105/joss.09535\">https://doi.org/10.21105/joss.09535</a></p>\n<p class=\"isSelectedEnd\">If you use the GLIDE-SOL-related functionality, please also cite:</p>\n<p class=\"isSelectedEnd\">Zonato, A., Kamath, H. G., Sudharsan, N., Monaco, L., Kittner, J., Wolf, L., Demuzere, M. A., Middel, A., Bechtel, B., &amp; Milelli, M. (2026). GLIDE-SOL: A GPU-accelerated Global Lightweight Infrastructure for Diagnostic Environmental Modeling with SOLWEIG. <em>EGUsphere</em>, 2026, 1&ndash;30.</p>\n<p>SOLWEIG was originally developed by Dr. Fredrik Lindberg&rsquo;s group. Please also cite the original SOLWEIG and UMEP references where appropriate.</p>",
+    "access_right": "open",
+    "creators": [
+      {
+        "name": "Kamath, Harsh",
+        "affiliation": "Jackson School of Geosciences, The University of Texas at Austin, USA",
+        "orcid": "0000-0002-5210-8369"
+      },
+      {
+        "name": "Zonato, Andrea",
+        "affiliation": "CIMA Research Foundation, Savona, Italy",
+        "orcid": "0000-0002-9174-1618"
+      },
+      {
+        "name": "Sudharsan, Naveen",
+        "affiliation": "Jackson School of Geosciences, The University of Texas at Austin, USA",
+        "orcid": "0000-0002-1328-110X"
+      }
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "10.21105/joss.09535",
+        "relation": "isPublishedIn",
+        "resource_type": "publication-article",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5194/egusphere-2026-776",
+        "relation": "isPublishedIn",
+        "resource_type": "publication-article",
+        "scheme": "doi"
+      }
+    ],
+    "version": "2.0",
+    "language": "eng",
+    "custom": {
+      "code:codeRepository": "https://github.com/nvnsudharsan/SOLWEIG-GPU",
+      "code:programmingLanguage": [
+        {
+          "id": "python",
+          "title": {
+            "en": "Python"
+          }
+        }
+      ],
+      "code:developmentStatus": {
+        "id": "active",
+        "title": {
+          "en": "Active"
+        }
+      }
+    },
+    "resource_type": {
+      "title": "Model",
+      "type": "model"
+    },
+    "journal": {
+      "issue": "118",
+      "pages": "1-4",
+      "title": "The Journal of Open Source Software",
+      "volume": "11"
+    },
+    "license": {
+      "id": "gpl-3.0-or-later"
+    },
+    "communities": [
+      {
+        "id": "texus"
+      }
+    ],
+    "relations": {
+      "version": [
+        {
+          "index": 3,
+          "is_last": true,
+          "parent": {
+            "pid_type": "recid",
+            "pid_value": "17048977"
+          }
+        }
+      ]
+    }
+  },
+  "title": "SOLWEIG-GPU Version: 2.0",
+  "links": {
+    "self": "https://zenodo.org/api/records/21081622",
+    "self_html": "https://zenodo.org/records/21081622",
+    "preview_html": "https://zenodo.org/records/21081622?preview=1",
+    "doi": "https://doi.org/10.5281/zenodo.21081622",
+    "self_doi": "https://doi.org/10.5281/zenodo.21081622",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.21081622",
+    "reserve_doi": "https://zenodo.org/api/records/21081622/draft/pids/doi",
+    "parent": "https://zenodo.org/api/records/17048977",
+    "parent_html": "https://zenodo.org/records/17048977",
+    "parent_doi": "https://doi.org/10.5281/zenodo.17048977",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.17048977",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:21081622/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:21081622/sequence/default",
+    "files": "https://zenodo.org/api/records/21081622/files",
+    "media_files": "https://zenodo.org/api/records/21081622/media-files",
+    "archive": "https://zenodo.org/api/records/21081622/files-archive",
+    "archive_media": "https://zenodo.org/api/records/21081622/media-files-archive",
+    "latest": "https://zenodo.org/api/records/21081622/versions/latest",
+    "latest_html": "https://zenodo.org/records/21081622/latest",
+    "versions": "https://zenodo.org/api/records/21081622/versions",
+    "draft": "https://zenodo.org/api/records/21081622/draft",
+    "access_links": "https://zenodo.org/api/records/21081622/access/links",
+    "access_grants": "https://zenodo.org/api/records/21081622/access/grants",
+    "access_users": "https://zenodo.org/api/records/21081622/access/users",
+    "access_request": "https://zenodo.org/api/records/21081622/access/request",
+    "access": "https://zenodo.org/api/records/21081622/access",
+    "communities": "https://zenodo.org/api/records/21081622/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/21081622/communities-suggestions",
+    "request_deletion": "https://zenodo.org/api/records/21081622/request-deletion",
+    "file_modification": "https://zenodo.org/api/records/21081622/file-modification",
+    "quota_increase": "https://zenodo.org/api/records/21081622/quota-increase",
+    "requests": "https://zenodo.org/api/records/21081622/requests"
+  },
+  "updated": "2026-06-30T19:58:46.623530+00:00",
+  "recid": "21081622",
+  "revision": 4,
+  "files": [
+    {
+      "id": "22921746-2802-4a3a-af3a-3d5aabe2d65b",
+      "key": "Input_rasters.zip",
+      "size": 94896401,
+      "checksum": "md5:3da64b3eeb71a6838057674838c6c4a7",
+      "links": {
+        "self": "https://zenodo.org/api/records/21081622/files/Input_rasters.zip/content"
+      }
+    },
+    {
+      "id": "48d0adc0-d5d4-4851-bf8c-4adf275ea266",
+      "key": "Forcing_data.zip",
+      "size": 11053681420,
+      "checksum": "md5:97de4e5afa0c039b55984ddf6a9c6774",
+      "links": {
+        "self": "https://zenodo.org/api/records/21081622/files/Forcing_data.zip/content"
+      }
+    },
+    {
+      "id": "13c9bd66-08da-45c4-804b-6c718bffedfe",
+      "key": "ownmet_Forcing_data.txt",
+      "size": 4072,
+      "checksum": "md5:a282dd5bdd8b633e945134356573e8ce",
+      "links": {
+        "self": "https://zenodo.org/api/records/21081622/files/ownmet_Forcing_data.txt/content"
+      }
+    },
+    {
+      "id": "681b5258-1a7c-4627-bc02-801fff0d1363",
+      "key": "ERA-5_forcing_data.zip",
+      "size": 134471,
+      "checksum": "md5:a78734ff83787ed1319dafc3af4b8287",
+      "links": {
+        "self": "https://zenodo.org/api/records/21081622/files/ERA-5_forcing_data.zip/content"
+      }
+    },
+    {
+      "id": "e414834d-303a-4a30-9d96-75c25203f5bb",
+      "key": "SOLWEIG-GPU_Version-2.0.zip",
+      "size": 43713252,
+      "checksum": "md5:246032d066dc5ca80a029f3e85ec7440",
+      "links": {
+        "self": "https://zenodo.org/api/records/21081622/files/SOLWEIG-GPU_Version-2.0.zip/content"
+      }
+    }
+  ],
+  "swh": {},
+  "owners": [
+    {
+      "id": "319851"
+    }
+  ],
+  "status": "published",
+  "stats": {
+    "downloads": 1141,
+    "unique_downloads": 972,
+    "views": 1478,
+    "unique_views": 1312,
+    "version_downloads": 108,
+    "version_unique_downloads": 92,
+    "version_unique_views": 151,
+    "version_views": 171
+  },
+  "state": "done",
+  "submitted": true
+}

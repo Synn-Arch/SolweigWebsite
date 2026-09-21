@@ -1,0 +1,15 @@
+--- a/solweig_gpu/walls_aspect.py
++++ b/solweig_gpu/walls_aspect.py
+@@ -297,9 +297,10 @@
+     # Reduce max_workers to prevent excessive concurrent file access
+     cpu_count = os.cpu_count() or 1
+     if os.name == 'nt':  # Windows
+-        max_workers = min(8, max(1, cpu_count // 2))
++        platform_workers = min(8, max(1, cpu_count // 2))
+     else:
+-        max_workers = min(32, cpu_count)
++        platform_workers = min(32, cpu_count)
++    max_workers = max(1, min(platform_workers, len(args_list)))
+     print(f"Using {max_workers} parallel workers")
+ 
+     with ProcessPoolExecutor(max_workers=max_workers) as executor:

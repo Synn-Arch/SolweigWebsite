@@ -1,0 +1,134 @@
+{
+  "failure": "post-run harness expected SVF in output_folder and omitted UTCI",
+  "safe_to_delete_duplicate": false,
+  "schema": "dense-attempt1-duplicate-verification.v1",
+  "sets": {
+    "output_folder": {
+      "attempt1": {
+        "0_0/Kdown_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "d475fb79d5cbc0a572c148c58a8e65f0d2f7999e400d5adff481e6a435ea9480"
+        },
+        "0_0/Kup_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "1e6fc592bd431b9a39560b77e5e5794f327b65fc0ec902e9aa319f30109cc8b1"
+        },
+        "0_0/Ldown_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "c9e612aa2c859b00ac6b58016a3654a3d1babccb6b9320693f5c6a8c779b71bc"
+        },
+        "0_0/Lup_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "b518984b9b263c66bb5b44be43e36798c156d4adfc79087e6b5883365ebbb749"
+        },
+        "0_0/Shadow_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "381989e381452f9fbed816581aa69fd903fb800fee227e72f7949761c5b4e9bb"
+        },
+        "0_0/TMRT_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "947f7cbd2013341928f9939f67659b04523f0834fab568d773db647f3c115a6c"
+        },
+        "0_0/Ta_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "203160b0824a3af6f125a264999cb14538bb68e9f8b9f12c65b0bfdf5d633b95"
+        },
+        "0_0/UTCI_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "7dedcffc51fa20f160aef371247c9f8c098e9a16f9f4221897bc3f04320ae1bd"
+        },
+        "0_0/WBGT_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "6f92b7e70898a20659e7afcbe0ad8c4dd2d14fbab55ad27409a315806d490c85"
+        },
+        "0_0/Wind_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "a2581e7b45c706b563c804ead5af5c8d2fea575ec2365c50c3d9cab1e78b1098"
+        }
+      },
+      "attempt1_bytes": 1008998220,
+      "attempt1_count": 10,
+      "equal": true,
+      "successful": {
+        "0_0/Kdown_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "d475fb79d5cbc0a572c148c58a8e65f0d2f7999e400d5adff481e6a435ea9480"
+        },
+        "0_0/Kup_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "1e6fc592bd431b9a39560b77e5e5794f327b65fc0ec902e9aa319f30109cc8b1"
+        },
+        "0_0/Ldown_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "c9e612aa2c859b00ac6b58016a3654a3d1babccb6b9320693f5c6a8c779b71bc"
+        },
+        "0_0/Lup_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "b518984b9b263c66bb5b44be43e36798c156d4adfc79087e6b5883365ebbb749"
+        },
+        "0_0/Shadow_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "381989e381452f9fbed816581aa69fd903fb800fee227e72f7949761c5b4e9bb"
+        },
+        "0_0/TMRT_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "947f7cbd2013341928f9939f67659b04523f0834fab568d773db647f3c115a6c"
+        },
+        "0_0/Ta_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "203160b0824a3af6f125a264999cb14538bb68e9f8b9f12c65b0bfdf5d633b95"
+        },
+        "0_0/UTCI_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "7dedcffc51fa20f160aef371247c9f8c098e9a16f9f4221897bc3f04320ae1bd"
+        },
+        "0_0/WBGT_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "6f92b7e70898a20659e7afcbe0ad8c4dd2d14fbab55ad27409a315806d490c85"
+        },
+        "0_0/Wind_0_0.tif": {
+          "bytes": 100899822,
+          "sha256": "a2581e7b45c706b563c804ead5af5c8d2fea575ec2365c50c3d9cab1e78b1098"
+        }
+      },
+      "successful_bytes": 1008998220,
+      "successful_count": 10
+    },
+    "processed_inputs/SVF": {
+      "attempt1": {
+        "SkyViewFactor_0_0.tif": {
+          "bytes": 4197736,
+          "sha256": "9211eed123fe7e09cb262d10ca2beca6f036b2e1e4d24a87f4ca76b363eff763"
+        },
+        "shadowmats_0_0.npz": {
+          "bytes": 14114623,
+          "sha256": "aa4746b5beda7c3422f49f30bb1c1e8e76569436efbc4cc043cc71dfb2346969"
+        },
+        "svfs_0_0.zip": {
+          "bytes": 1694785,
+          "sha256": "d106a7a57dae86d71ee22f3fdbba6f4e5981d88fdf6d48740864d7c713337294"
+        }
+      },
+      "attempt1_bytes": 20007144,
+      "attempt1_count": 3,
+      "equal": false,
+      "successful": {
+        "SkyViewFactor_0_0.tif": {
+          "bytes": 4197736,
+          "sha256": "9211eed123fe7e09cb262d10ca2beca6f036b2e1e4d24a87f4ca76b363eff763"
+        },
+        "shadowmats_0_0.npz": {
+          "bytes": 14114623,
+          "sha256": "aa4746b5beda7c3422f49f30bb1c1e8e76569436efbc4cc043cc71dfb2346969"
+        },
+        "svfs_0_0.zip": {
+          "bytes": 1694785,
+          "sha256": "7806cdc62abff2fac5474bfe61a490ffeb6ced3b8f9e07d5892d27f68bddf956"
+        }
+      },
+      "successful_bytes": 20007144,
+      "successful_count": 3
+    }
+  },
+  "successful_run": "dense1024"
+}

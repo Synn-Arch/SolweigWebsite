@@ -1,0 +1,704 @@
+{
+  "evidence_class": "original_upstream_cpu",
+  "source_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "source_sha256": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+  "patch": null,
+  "candidate_import": false,
+  "generator_sha256": "1778e48556c48643d0bd373f90c6b7bfac9c579a74041a9e075ca7ffa6dd0f4e",
+  "invocation": [
+    "tools/characterize_ground_view.py"
+  ],
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "torch_threads": 1,
+  "cuda": "not_available",
+  "environment": {
+    "timezonefinder": "9.0.0",
+    "kiwisolver": "1.5.1",
+    "coverage": "7.16.1",
+    "packaging": "26.3",
+    "iniconfig": "2.3.0",
+    "fonttools": "4.65.0",
+    "Pygments": "2.21.0",
+    "networkx": "3.6.1",
+    "pytz": "2026.3.post1",
+    "pytest-cov": "7.1.0",
+    "contourpy": "1.3.3",
+    "shapely": "2.1.2",
+    "torch": "2.14.0",
+    "numpy": "2.4.6",
+    "filelock": "4.0.0",
+    "sympy": "1.14.0",
+    "fsspec": "2026.7.0",
+    "tqdm": "4.70.1",
+    "pytest": "9.1.1",
+    "setuptools": "84.0.0",
+    "pycparser": "3.0",
+    "llvmlite": "0.49.0",
+    "timezonefinder-data": "3.2026.3.post1",
+    "python-dateutil": "2.9.0.post0",
+    "mpmath": "1.3.0",
+    "numba": "0.67.0",
+    "matplotlib": "3.11.2",
+    "xarray": "2026.7.0",
+    "cffi": "2.1.1",
+    "certifi": "2026.7.22",
+    "scipy": "1.17.1",
+    "cycler": "0.12.1",
+    "Jinja2": "3.1.6",
+    "pyparsing": "3.3.2",
+    "MarkupSafe": "3.0.3",
+    "solweig-gpu": "2.0.0",
+    "cftime": "1.6.5",
+    "pandas": "3.0.6",
+    "flatbuffers": "25.12.19",
+    "pluggy": "1.6.0",
+    "typing_extensions": "4.16.0",
+    "GDAL": "3.13.3",
+    "psutil": "7.2.2",
+    "pillow": "12.3.0",
+    "netCDF4": "1.7.4",
+    "six": "1.17.0",
+    "h3": "4.5.0"
+  },
+  "cases": [
+    {
+      "name": "sun_direction_5",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_5_inputs.npz",
+        "sha256": "fc27c30107b595512200a9fe9580dc19c92493d704085c799397dd6a3194ffb9"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_5_outputs.npz",
+        "sha256": "ed38def2d2f38f2e0ffcba3d8244d86225e4b80f6e91ce7890e2590f4a4c5e91"
+      },
+      "after_artifact": {
+        "path": "sun_direction_5_after.npz",
+        "sha256": "01ecb89e2e4c313f5d980da7002530052874e167e1fd4990cea69b7db57acd28"
+      }
+    },
+    {
+      "name": "sun_direction_25",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_25_inputs.npz",
+        "sha256": "8c0f71bd12b74dfe7f3dc2c60fc3c9b5964c777bddd35b4710cfba8a8458154a"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_25_outputs.npz",
+        "sha256": "230d5dcf0ab496c4661c233830d8532fa2028d18b08a1816bc84eca2cdafcfc5"
+      },
+      "after_artifact": {
+        "path": "sun_direction_25_after.npz",
+        "sha256": "8c35ca3d0edaed9b22c225155855c8900d5652d24587af9d873e3ab79c52fa4f"
+      }
+    },
+    {
+      "name": "sun_direction_45",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_45_inputs.npz",
+        "sha256": "8f64c0dbf85cffbddb814833191d8fa275a29c08e9eb2dd816fbf74f419633c1"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_45_outputs.npz",
+        "sha256": "5ac02d8fa69b5a8ac8817d98d6e073cd7960fbbdc15e3839296e6bce500e5f84"
+      },
+      "after_artifact": {
+        "path": "sun_direction_45_after.npz",
+        "sha256": "c39b9de09e549c8c4ec59c65967a92a21b25c0180d311e717fb14920df639dff"
+      }
+    },
+    {
+      "name": "sun_direction_65",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_65_inputs.npz",
+        "sha256": "bca2cf92d2fe5d6a979c25c5114f9903d97abb43488edd29e810e0c560d57d41"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_65_outputs.npz",
+        "sha256": "a06fadec30098868169f918506465158717bd2c1a4dca9147c0202855f108458"
+      },
+      "after_artifact": {
+        "path": "sun_direction_65_after.npz",
+        "sha256": "19ad323201fad16ca5faec0174284ebb881800af7c98517140104032bafb04ad"
+      }
+    },
+    {
+      "name": "sun_direction_85",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_85_inputs.npz",
+        "sha256": "6b9b6c7f9422e5c3c3352b794984f57127e5c1e7208e74e30f349b2684e224a8"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_85_outputs.npz",
+        "sha256": "d3f29b0dbdcbc30347e59b0ba708ad24337daf414727f9c54ec0690e4cc2f07f"
+      },
+      "after_artifact": {
+        "path": "sun_direction_85_after.npz",
+        "sha256": "29b5d7470295b0390ce9e3c7985ea746a5ffcd8711af884762a8221f77d565c3"
+      }
+    },
+    {
+      "name": "sun_direction_105",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_105_inputs.npz",
+        "sha256": "4dce4b35601065233037f6eac75006f83eceee9047329fd215d68f5f8e20a779"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_105_outputs.npz",
+        "sha256": "5b03c6664adb2601ce2ed0a18cc29170b04df51f9e26779bca7e87f651d25830"
+      },
+      "after_artifact": {
+        "path": "sun_direction_105_after.npz",
+        "sha256": "b0d051bcce653f53b2da279401b806f8f345bcd1c73309494257889a1a00e464"
+      }
+    },
+    {
+      "name": "sun_direction_125",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_125_inputs.npz",
+        "sha256": "7dc14e5c15f64b9e07b3fbb5be13f3bc554aae124c962de4402e20186234b108"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_125_outputs.npz",
+        "sha256": "5360ab282931499bddcd3420dba8291f7ffff1cc7827f2f376fb044b3f2e7a83"
+      },
+      "after_artifact": {
+        "path": "sun_direction_125_after.npz",
+        "sha256": "626cb83bf6decf2c520953b2019859cce14b8c7e6a1d44c6369a59c6dce33445"
+      }
+    },
+    {
+      "name": "sun_direction_145",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_145_inputs.npz",
+        "sha256": "ef99de00db7c89e3ea9af57484cbc8d4f6f369daf590aa18aa45f1d9e1a8b0cb"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_145_outputs.npz",
+        "sha256": "e81342156647b628d0de78c9f1cc6d7d4eb1d637578bc7ac74b1440114efffa1"
+      },
+      "after_artifact": {
+        "path": "sun_direction_145_after.npz",
+        "sha256": "410210890cd3c747450e7de2616b6b7d93139e415ef4641247537d18a968c3e4"
+      }
+    },
+    {
+      "name": "sun_direction_165",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_165_inputs.npz",
+        "sha256": "033cf9d09471e99a4a95c5d4ff283591eacca9f9063166f28449b1532e033af7"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_165_outputs.npz",
+        "sha256": "7a2917f84f05490fe26d8459b3440a7606034c5c417f71e8cddad5dac1715406"
+      },
+      "after_artifact": {
+        "path": "sun_direction_165_after.npz",
+        "sha256": "30a489fceb17a65d48f88c25c98713cc537fe10d5b02b4ccdf88826a6d2bcf4a"
+      }
+    },
+    {
+      "name": "sun_direction_185",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_185_inputs.npz",
+        "sha256": "6b7cc73a0c794dade28b38ee1a19ef44b38da27e2acee7058160945e08d20dbd"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_185_outputs.npz",
+        "sha256": "40f9dd5ebbc219c5f82b81483649d4d25954c77eae0a64f3c76aa3575a496e74"
+      },
+      "after_artifact": {
+        "path": "sun_direction_185_after.npz",
+        "sha256": "17af59b18b3d1e6d3259336254f1558354447c9f28efa1477527d955f088f339"
+      }
+    },
+    {
+      "name": "sun_direction_205",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_205_inputs.npz",
+        "sha256": "8d546031137b77c3364f18cce36066e676d433f79c9295607a78645209516100"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_205_outputs.npz",
+        "sha256": "e8c924c7e16caaa44c4d20ab474d17bcef1b4722c8f25a889b4bc577fd72cff2"
+      },
+      "after_artifact": {
+        "path": "sun_direction_205_after.npz",
+        "sha256": "6cff1db905b341ac82172d96a467963f8dd32b6c0b69947a142711b92fd99877"
+      }
+    },
+    {
+      "name": "sun_direction_225",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_225_inputs.npz",
+        "sha256": "70ec017a96f528db4aa1b76306a8e353d780634535f0aa953435be7b55e96f34"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_225_outputs.npz",
+        "sha256": "c7e6dbec9c7b4fdde73c4c93ffbfde4dae06b3552c3c8fb95ecdce96198950cc"
+      },
+      "after_artifact": {
+        "path": "sun_direction_225_after.npz",
+        "sha256": "eb5ab193819f2be218eb79ec22dba3d0ea9c576b961da23d4887236c7e42492a"
+      }
+    },
+    {
+      "name": "sun_direction_245",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_245_inputs.npz",
+        "sha256": "5ea889fe318b6870c39bac9f9c24d0ca6c06061cff31fd391a942dd7774bd9d4"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_245_outputs.npz",
+        "sha256": "a8c4f08b00187ba6f169f43c1c0b389a538873540d6fae402cab662a5905a221"
+      },
+      "after_artifact": {
+        "path": "sun_direction_245_after.npz",
+        "sha256": "13218b84b07b9b8da67a0f0735a49cf9f8711a5e49e107167d3d45eca2ed5f25"
+      }
+    },
+    {
+      "name": "sun_direction_265",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_265_inputs.npz",
+        "sha256": "4a4e97b2e2d7379733221b323fe92e48c6eba9cf8fbaa5091972d4248c8ade51"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_265_outputs.npz",
+        "sha256": "4f43224daa9e552b655096f41441fb26bd1183582e8ac80fd85c23964a84dcc2"
+      },
+      "after_artifact": {
+        "path": "sun_direction_265_after.npz",
+        "sha256": "d2d7772da87018accfe4fe2d455463c1e8f6abd90a6a35a5cd82cc2cfdbea61f"
+      }
+    },
+    {
+      "name": "sun_direction_285",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_285_inputs.npz",
+        "sha256": "ad20dcb7cd18516804048b6e9c27e1084932ba025e3af7345122090f32b81623"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_285_outputs.npz",
+        "sha256": "8d1cf5a6a18a3a7ef80f0b5808722da19942b1e1b4542d561db0b575399da481"
+      },
+      "after_artifact": {
+        "path": "sun_direction_285_after.npz",
+        "sha256": "b04767d0e663edb315ecfc75a1a9eb760e98d4da7f46401a11cfdc4da729b335"
+      }
+    },
+    {
+      "name": "sun_direction_305",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_305_inputs.npz",
+        "sha256": "6b60e207ac663a1f6c7969a516c9982ed9189bfabc59e54027b09685a960d265"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_305_outputs.npz",
+        "sha256": "793080ca498de0c77234e4ac7df2d054a44099a8f4be83f541427436f0553542"
+      },
+      "after_artifact": {
+        "path": "sun_direction_305_after.npz",
+        "sha256": "56149c41d5be27f3f404e6e215fb8948a69b2cc9c045a90d006797a0f4cd969c"
+      }
+    },
+    {
+      "name": "sun_direction_325",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_325_inputs.npz",
+        "sha256": "db7aafdc1dfff0c1871e51fdf01afd1a6f1b955afce3cb73879d03ab2dcbc28b"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_325_outputs.npz",
+        "sha256": "2f9c7364d90107cc7920293de20a0eca634cceca419c08c7b8a54cc91f5db0fa"
+      },
+      "after_artifact": {
+        "path": "sun_direction_325_after.npz",
+        "sha256": "74805e4867d54f544acce46860a3f8bbff38af240791ad12110054acf9abc095"
+      }
+    },
+    {
+      "name": "sun_direction_345",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_direction_345_inputs.npz",
+        "sha256": "cd12407199764e39fc4a075a68bd54875d3866dbeee55236bf65418788b445ac"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_direction_345_outputs.npz",
+        "sha256": "112e308aa880d40df6f0ac9068aacebc947848ed97f44a9621cc148e6a09090f"
+      },
+      "after_artifact": {
+        "path": "sun_direction_345_after.npz",
+        "sha256": "c144f60bdfd238e6a44e9a3bd60ec64306fbb4de8dc2ef43f76c15627ed6d9e2"
+      }
+    },
+    {
+      "name": "sun_water",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_water_inputs.npz",
+        "sha256": "f897a5f31cf26f5985611b161d1bb70659796f3d435da611fb7251d9d3831c67"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_water_outputs.npz",
+        "sha256": "54146909308a6b581f2de1f671ce16cb9e194306758877156dbc9bb6b70782ae"
+      },
+      "after_artifact": {
+        "path": "sun_water_after.npz",
+        "sha256": "0b08785215dfbe19b5144db629642d8df3d2e6ba252de2c3b3638d31db2bd6fb"
+      }
+    },
+    {
+      "name": "gvf_water",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_water_inputs.npz",
+        "sha256": "eaed2ba066d44986c96b2a8ee222ec2e63b735759f7f6777bab7f04736bda3d5"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_water_outputs.npz",
+        "sha256": "8e6faacc8b8cbaae31e6a695bf1a7b432b83c1175fc0fb92bec40c245eeba969"
+      },
+      "after_artifact": {
+        "path": "gvf_water_after.npz",
+        "sha256": "1f27fea66f7dffae5abe8fcfea7ddd8e22d33cfb048910e64cd6d2eb01bee26c"
+      }
+    },
+    {
+      "name": "sun_nan_buildings",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_nan_buildings_inputs.npz",
+        "sha256": "a9169c4eab0d8c9e9fd2ed8c3104e0b1fa562636d0c7efacca3ed760583ddb77"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_nan_buildings_outputs.npz",
+        "sha256": "5377f0480bb34ebe7291b27e43bebcc43732f559ead244e4f937cabd00a75999"
+      },
+      "after_artifact": {
+        "path": "sun_nan_buildings_after.npz",
+        "sha256": "6f2236a41dd9dc60d5f389973c130279817b1f167821637f2d6978ab951985df"
+      }
+    },
+    {
+      "name": "gvf_nan_buildings",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_nan_buildings_inputs.npz",
+        "sha256": "0e5551444f8b23f9ed930ba58a6697689f0464d7195b8d8f20b7afe831b384b7"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_nan_buildings_outputs.npz",
+        "sha256": "e79683600a3c95025a0ccb07b314a9568d258d8f32b0de847e8dd5105fed2457"
+      },
+      "after_artifact": {
+        "path": "gvf_nan_buildings_after.npz",
+        "sha256": "0e5551444f8b23f9ed930ba58a6697689f0464d7195b8d8f20b7afe831b384b7"
+      }
+    },
+    {
+      "name": "sun_nan_shadow",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_nan_shadow_inputs.npz",
+        "sha256": "e9842ec7134ea99231a3e35607795e4afa80fbd2cbabdd057c252b4e0629fecf"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_nan_shadow_outputs.npz",
+        "sha256": "36fe228b10dbd18f495480380a623a9ff88b4d7b2342cca4d492a73528d635ac"
+      },
+      "after_artifact": {
+        "path": "sun_nan_shadow_after.npz",
+        "sha256": "759168b13529fef56daebb7038bb99082e50bffbf86f393b64a3e9699c8e06ae"
+      }
+    },
+    {
+      "name": "gvf_nan_shadow",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_nan_shadow_inputs.npz",
+        "sha256": "4665cca5863875431e74a3acd2dc48a43afb1580fab892477913f2feeae20ddd"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_nan_shadow_outputs.npz",
+        "sha256": "7b1328123ebd1513e5659c8cf2134dddb86b44f250485fa01296d1209686b8d6"
+      },
+      "after_artifact": {
+        "path": "gvf_nan_shadow_after.npz",
+        "sha256": "4665cca5863875431e74a3acd2dc48a43afb1580fab892477913f2feeae20ddd"
+      }
+    },
+    {
+      "name": "sun_nan_temperature",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_nan_temperature_inputs.npz",
+        "sha256": "8b58f99e102423711f67d596a22ddee06ac50db1fe3c3d78ff149f589c9b5f33"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_nan_temperature_outputs.npz",
+        "sha256": "bb5ca33691d74918939418583db88d89e28f2e9e872568b323b25aa8e836888a"
+      },
+      "after_artifact": {
+        "path": "sun_nan_temperature_after.npz",
+        "sha256": "da62efda4050dbd80ae0f3e73656eba2972b9aeec3bee78b8518d2d0e046fd9f"
+      }
+    },
+    {
+      "name": "gvf_nan_temperature",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_nan_temperature_inputs.npz",
+        "sha256": "f6a8cfb22758c1f260789898e3c7367ddc85f7eb1f84b466640581de151d5f35"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_nan_temperature_outputs.npz",
+        "sha256": "32bfe959376f78ed5918cad56799cec7efdee76cc11752d9f7b383cd9f0b4411"
+      },
+      "after_artifact": {
+        "path": "gvf_nan_temperature_after.npz",
+        "sha256": "f6a8cfb22758c1f260789898e3c7367ddc85f7eb1f84b466640581de151d5f35"
+      }
+    },
+    {
+      "name": "sun_nonbinary",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_nonbinary_inputs.npz",
+        "sha256": "500f9f563eacba4cb3dc0c920ae785bc3cdb198770e5f9181a3b6127bb59bdf8"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_nonbinary_outputs.npz",
+        "sha256": "fd83698deae209405b554b2fc82eb8bde90172c5a649af8dcda290a70a1b0a9d"
+      },
+      "after_artifact": {
+        "path": "sun_nonbinary_after.npz",
+        "sha256": "dc1ea9e6381bb679eaf101066f3c16544b2441ee06ec4891c5474cd8f5b8a32d"
+      }
+    },
+    {
+      "name": "gvf_nonbinary",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_nonbinary_inputs.npz",
+        "sha256": "546360aa30a8e772a3dd3d71b864d80dfe11d333b995cbd380e6b89e1ac90994"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_nonbinary_outputs.npz",
+        "sha256": "c7b957bd87d625fe1c9ed08c9ed15672a6a765e46130c98f546e4446f57f85a1"
+      },
+      "after_artifact": {
+        "path": "gvf_nonbinary_after.npz",
+        "sha256": "546360aa30a8e772a3dd3d71b864d80dfe11d333b995cbd380e6b89e1ac90994"
+      }
+    },
+    {
+      "name": "sun_rounding_half",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_rounding_half_inputs.npz",
+        "sha256": "61e9aa9f0810aab520cf11163f55efaae36a3eee32366940fa54e30b9cbadd87"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_rounding_half_outputs.npz",
+        "sha256": "ee9db0ae3c250ed16db972612b8a6dbc3364f0fce621215fef47b0b4567c5e6a"
+      },
+      "after_artifact": {
+        "path": "sun_rounding_half_after.npz",
+        "sha256": "5125b2c75a9141e1766eeb0c576eaec65b5b3de9d8792d1d51d0dbeb7082ec86"
+      }
+    },
+    {
+      "name": "gvf_rounding_half",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_rounding_half_inputs.npz",
+        "sha256": "f3257ca0eb0fd09554e5066ac7f129a0a441032deb37b15b4b72951c00372660"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_rounding_half_outputs.npz",
+        "sha256": "cd574dca361733279c65cfd9fd935bdf29e4eaacf1ded1f09c7a87c11d024051"
+      },
+      "after_artifact": {
+        "path": "gvf_rounding_half_after.npz",
+        "sha256": "f3257ca0eb0fd09554e5066ac7f129a0a441032deb37b15b4b72951c00372660"
+      }
+    },
+    {
+      "name": "sun_rounding_scale",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_rounding_scale_inputs.npz",
+        "sha256": "77412096b9d0f6545271c5bada4bd514bfdf4819d28447ade2ad7dc348573ace"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_rounding_scale_outputs.npz",
+        "sha256": "c054a5789a4e5e9ae29e11f82f94ba66cedc79bb6e884049b1b3e3f11969d7b6"
+      },
+      "after_artifact": {
+        "path": "sun_rounding_scale_after.npz",
+        "sha256": "a31c8be7fbc25bc552c722699e76a2f7712ca479c10d7147c7650bc3b066d0a5"
+      }
+    },
+    {
+      "name": "gvf_rounding_scale",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_rounding_scale_inputs.npz",
+        "sha256": "188e34962e7f5330855caa54b99106d4c9357b119b87a0d930a89dbfda12ce50"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_rounding_scale_outputs.npz",
+        "sha256": "c2df5f5452f0f8f5c50d02a8e31a6bbc22c492d1321a7362b7b54d94c0833b1a"
+      },
+      "after_artifact": {
+        "path": "gvf_rounding_scale_after.npz",
+        "sha256": "188e34962e7f5330855caa54b99106d4c9357b119b87a0d930a89dbfda12ce50"
+      }
+    },
+    {
+      "name": "sun_beyond_raster",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_beyond_raster_inputs.npz",
+        "sha256": "abf452a09f2178f5865655259b090d21d262c94e294ac7d3d03b9c6ff22648f0"
+      },
+      "status": "failed",
+      "exception": "RuntimeError",
+      "message": "The expanded size of the tensor (0) must match the existing size (16) at non-singleton dimension 0.  Target sizes: [0, 5].  Tensor sizes: [16, 5]",
+      "after_artifact": {
+        "path": "sun_beyond_raster_after.npz",
+        "sha256": "05fb61ef8ba50bb4fedac5ba477278d6007ebb2563c420ba117321f4d1e5880a"
+      }
+    },
+    {
+      "name": "gvf_beyond_raster",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_beyond_raster_inputs.npz",
+        "sha256": "d6857da78b22258c5015e0c95718863a0b639de4d908d9d97778e3a174e00c11"
+      },
+      "status": "failed",
+      "exception": "RuntimeError",
+      "message": "The expanded size of the tensor (0) must match the existing size (16) at non-singleton dimension 0.  Target sizes: [0, 21].  Tensor sizes: [16, 21]",
+      "after_artifact": {
+        "path": "gvf_beyond_raster_after.npz",
+        "sha256": "d6857da78b22258c5015e0c95718863a0b639de4d908d9d97778e3a174e00c11"
+      }
+    },
+    {
+      "name": "sun_zero_distance",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_zero_distance_inputs.npz",
+        "sha256": "366606322abfb1b951cc64570bac9b483fb0e32b73309e1c906aa10147917732"
+      },
+      "status": "failed",
+      "exception": "UnboundLocalError",
+      "message": "cannot access local variable 'weightsumwall_first' where it is not associated with a value",
+      "after_artifact": {
+        "path": "sun_zero_distance_after.npz",
+        "sha256": "3e8d428c8fb806ede0166be2bcb5c20c141b73f055d1828cd39ed1585a4b8374"
+      }
+    },
+    {
+      "name": "gvf_zero_distance",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_zero_distance_inputs.npz",
+        "sha256": "a4286cd46fb67e9fbb50757f5488d0e311af5ead583e57a27699d7c5999be87c"
+      },
+      "status": "failed",
+      "exception": "UnboundLocalError",
+      "message": "cannot access local variable 'weightsumwall_first' where it is not associated with a value",
+      "after_artifact": {
+        "path": "gvf_zero_distance_after.npz",
+        "sha256": "a4286cd46fb67e9fbb50757f5488d0e311af5ead583e57a27699d7c5999be87c"
+      }
+    },
+    {
+      "name": "sun_float64",
+      "function": "sunonsurface_2018a",
+      "input_artifact": {
+        "path": "sun_float64_inputs.npz",
+        "sha256": "0470594589da7aacc3e97784aaa6c70adae3d8cc8fc9c47cf6eea8fb6c2fb015"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "sun_float64_outputs.npz",
+        "sha256": "6417bff7f41e494841f72433f709b7fbc272d99f24c026cac22c9dddc77d1b72"
+      },
+      "after_artifact": {
+        "path": "sun_float64_after.npz",
+        "sha256": "6cf64b64838adc9f9a645f6aab470a8363d963c42b234d883fe048e601de7dca"
+      }
+    },
+    {
+      "name": "gvf_float64",
+      "function": "gvf_2018a",
+      "input_artifact": {
+        "path": "gvf_float64_inputs.npz",
+        "sha256": "24e5fbee28a67b25a98a44091d0ac3d181e1a5347dfafe930a85adac7c277c2b"
+      },
+      "status": "executed",
+      "output_artifact": {
+        "path": "gvf_float64_outputs.npz",
+        "sha256": "dfb7bedc61bcb945f97379d7d5d743673fd30e6869aaa481dd898466c19bd046"
+      },
+      "after_artifact": {
+        "path": "gvf_float64_after.npz",
+        "sha256": "24e5fbee28a67b25a98a44091d0ac3d181e1a5347dfafe930a85adac7c277c2b"
+      }
+    }
+  ]
+}

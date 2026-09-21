@@ -1,0 +1,137 @@
+{
+  "measurement": {
+    "command": [
+      "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+      "/Users/alansynn/Workspace/solweig-light/tools/run_p7_angular_moment.py",
+      "--child",
+      "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry3/pair/baseline/process.spec.json"
+    ],
+    "elapsed_seconds": 12.462750124977902,
+    "memory_limit_aborted": false,
+    "memory_limit_bytes": 12884901888,
+    "returncode": 0,
+    "rss_caveat": "Summed process-tree RSS can double-count shared pages and 20 ms sampling can miss shorter peaks.",
+    "sample_interval_seconds": 0.02,
+    "sampled_process_tree_peak_rss_bytes": 408109056
+  },
+  "outputs": {
+    "expected_bands_per_tiff": 24,
+    "expected_fields": [
+      "UTCI",
+      "TMRT",
+      "Kup",
+      "Kdown",
+      "Lup",
+      "Ldown",
+      "Shadow",
+      "WBGT",
+      "Ta",
+      "Wind"
+    ],
+    "passed": true,
+    "records": [
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Kdown",
+        "passed": true,
+        "path": "output_folder/0_0/Kdown_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Kup",
+        "passed": true,
+        "path": "output_folder/0_0/Kup_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Ldown",
+        "passed": true,
+        "path": "output_folder/0_0/Ldown_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Lup",
+        "passed": true,
+        "path": "output_folder/0_0/Lup_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Shadow",
+        "passed": true,
+        "path": "output_folder/0_0/Shadow_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "TMRT",
+        "passed": true,
+        "path": "output_folder/0_0/TMRT_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Ta",
+        "passed": true,
+        "path": "output_folder/0_0/Ta_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "UTCI",
+        "passed": true,
+        "path": "output_folder/0_0/UTCI_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "WBGT",
+        "passed": true,
+        "path": "output_folder/0_0/WBGT_0_0.tif",
+        "tile": "0_0"
+      },
+      {
+        "bands": 24,
+        "error": null,
+        "field": "Wind",
+        "passed": true,
+        "path": "output_folder/0_0/Wind_0_0.tif",
+        "tile": "0_0"
+      }
+    ],
+    "tiles": {
+      "0_0": [
+        "Kdown",
+        "Kup",
+        "Ldown",
+        "Lup",
+        "Shadow",
+        "TMRT",
+        "Ta",
+        "UTCI",
+        "WBGT",
+        "Wind"
+      ]
+    }
+  },
+  "scene": "reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry3/pair/baseline/scene",
+  "status": {
+    "failure_artifacts": [],
+    "outcome": {
+      "status": "executed_not_yet_compared"
+    },
+    "passed": true
+  }
+}

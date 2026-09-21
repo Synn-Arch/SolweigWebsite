@@ -1,0 +1,4 @@
+CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=$ROOT/upstream/SOLWEIG-GPU $ROOT/envs/upstream-cpu/bin/python run_capture.py --mode original --output original.npz
+CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=$ROOT/source/src $ROOT/env/bin/python run_capture.py --mode candidate_dense --output candidate_dense.npz
+CUDA_VISIBLE_DEVICES="" OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 PYTHONPATH=$ROOT/source/src $ROOT/env/bin/python run_capture.py --mode candidate_compact --output candidate_compact.npz
+$ROOT/env/bin/python compare.py

@@ -1,0 +1,52 @@
+{
+  "measurement": {
+    "command": [
+      "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+      "/Users/alansynn/Workspace/solweig-light/tools/run_p7_angular_moment.py",
+      "--child",
+      "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry2/smoke_candidate/process.spec.json"
+    ],
+    "elapsed_seconds": 3.8876155000180006,
+    "memory_limit_aborted": false,
+    "memory_limit_bytes": 12884901888,
+    "returncode": 1,
+    "rss_caveat": "Summed process-tree RSS can double-count shared pages and 20 ms sampling can miss shorter peaks.",
+    "sample_interval_seconds": 0.02,
+    "sampled_process_tree_peak_rss_bytes": 241827840
+  },
+  "outputs": {
+    "expected_bands_per_tiff": 24,
+    "expected_fields": [
+      "UTCI",
+      "TMRT",
+      "Kup",
+      "Kdown",
+      "Lup",
+      "Ldown",
+      "Shadow",
+      "WBGT",
+      "Ta",
+      "Wind"
+    ],
+    "passed": false,
+    "records": [],
+    "tiles": {}
+  },
+  "scene": "reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry2/smoke_candidate/scene",
+  "status": {
+    "failure_artifacts": [
+      "reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry2/smoke_candidate/process/job.failure.json"
+    ],
+    "outcome": {
+      "failure": {
+        "exception_module": "solweig_light.runtime",
+        "exception_type": "TileExecutionError",
+        "message": "tile job 0 failed with exit code 1: /Users/alansynn/Workspace/solweig-light/.venv-light/bin/python: Error while finding module specification for 'solweig_light.runtime_worker' (ModuleNotFoundError: No module named 'solweig_light')",
+        "schema_version": 1,
+        "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/run_p7_angular_moment.py\", line 392, in _child\n    getattr(solweig_light, spec[\"entrypoint\"])(**spec[\"kwargs\"])\n  File \"/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry2/frozen_sources/candidate/src/solweig_light/api.py\", line 210, in thermal_comfort\n    run_utci_tiles(base_path=base_path, preprocess_dir=preprocess_dir, selected_date_str=selected_date_str,\n  File \"/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry2/frozen_sources/candidate/src/solweig_light/api.py\", line 160, in run_utci_tiles\n    execute_tiles(jobs, runtime)\n  File \"/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_angular_moment_experiment/rehearsal_v3_retry2/frozen_sources/candidate/src/solweig_light/runtime.py\", line 780, in execute_tiles\n    raise TileExecutionError(\nsolweig_light.runtime.TileExecutionError: tile job 0 failed with exit code 1: /Users/alansynn/Workspace/solweig-light/.venv-light/bin/python: Error while finding module specification for 'solweig_light.runtime_worker' (ModuleNotFoundError: No module named 'solweig_light')\n"
+      },
+      "status": "failed"
+    },
+    "passed": false
+  }
+}

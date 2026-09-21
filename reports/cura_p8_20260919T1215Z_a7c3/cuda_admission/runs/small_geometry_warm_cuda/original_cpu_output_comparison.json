@@ -1,0 +1,2268 @@
+{
+  "evidence_class": "original_cpu_vs_original_upstream_cuda_geometry_warm",
+  "passed": true,
+  "missing_left": [],
+  "missing_right": [],
+  "artifacts": [
+    {
+      "path": "output_folder/0_0/Kdown_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            27
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            22,
+            19
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            1,
+            32
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            17,
+            32
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            0,
+            10
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            0,
+            21
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            0,
+            33
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            1,
+            27
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 0.00018310546875,
+          "worst_coordinate": [
+            27,
+            28
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            1,
+            7
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            4,
+            14
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            8,
+            22
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            1
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/Kup_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 1.1444091796875e-05,
+          "worst_coordinate": [
+            11,
+            15
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            11,
+            14
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            23,
+            8
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 3.814697265625e-05,
+          "worst_coordinate": [
+            22,
+            2
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            20,
+            8
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            11,
+            6
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            7,
+            3
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            1,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            3,
+            1
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 3.814697265625e-05,
+          "worst_coordinate": [
+            17,
+            13
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            17,
+            13
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            1,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 9.5367431640625e-06,
+          "worst_coordinate": [
+            1,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/Ldown_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 0.000213623046875,
+          "worst_coordinate": [
+            17,
+            24
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            8,
+            5
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            3,
+            14
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            9,
+            6
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            23,
+            26
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 0.000152587890625,
+          "worst_coordinate": [
+            19,
+            17
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            7,
+            12
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 0.00042724609375,
+          "worst_coordinate": [
+            0,
+            17
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 0.00042724609375,
+          "worst_coordinate": [
+            1,
+            14
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 0.000396728515625,
+          "worst_coordinate": [
+            22,
+            4
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 0.000396728515625,
+          "worst_coordinate": [
+            2,
+            24
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 9.1552734375e-05,
+          "worst_coordinate": [
+            15,
+            23
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 0.000152587890625,
+          "worst_coordinate": [
+            19,
+            14
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            5,
+            15
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            1,
+            13
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            1,
+            13
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            1,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/Lup_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            1,
+            5
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            0,
+            1
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            2,
+            2
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            22,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            8,
+            1
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            23,
+            8
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            19,
+            23
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            1,
+            13
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            6,
+            22
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            6,
+            25
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            1,
+            33
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 0.0001220703125,
+          "worst_coordinate": [
+            15,
+            9
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            3,
+            31
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            3,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/Shadow_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/TMRT_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            25
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            6,
+            16
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            1,
+            8
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            3
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            16
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 6.103515625e-05,
+          "worst_coordinate": [
+            5,
+            18
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            2
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            5
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            0,
+            34
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            4,
+            2
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            1,
+            21
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            1,
+            21
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 3.0517578125e-05,
+          "worst_coordinate": [
+            1,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/Ta_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/UTCI_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 1.9073486328125e-05,
+          "worst_coordinate": [
+            20,
+            24
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 2.47955322265625e-05,
+          "worst_coordinate": [
+            16,
+            28
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 2.6702880859375e-05,
+          "worst_coordinate": [
+            7,
+            21
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 4.9591064453125e-05,
+          "worst_coordinate": [
+            10,
+            30
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 5.340576171875e-05,
+          "worst_coordinate": [
+            16,
+            32
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            31,
+            1
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 3.814697265625e-05,
+          "worst_coordinate": [
+            0,
+            4
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 4.1961669921875e-05,
+          "worst_coordinate": [
+            5,
+            18
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            24,
+            13
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 4.57763671875e-05,
+          "worst_coordinate": [
+            30,
+            2
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 3.814697265625e-05,
+          "worst_coordinate": [
+            13,
+            1
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 3.4332275390625e-05,
+          "worst_coordinate": [
+            13,
+            34
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 2.86102294921875e-05,
+          "worst_coordinate": [
+            17,
+            27
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 2.288818359375e-05,
+          "worst_coordinate": [
+            0,
+            34
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 1.71661376953125e-05,
+          "worst_coordinate": [
+            17,
+            11
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 1.33514404296875e-05,
+          "worst_coordinate": [
+            10,
+            18
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 1.33514404296875e-05,
+          "worst_coordinate": [
+            10,
+            18
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 1.33514404296875e-05,
+          "worst_coordinate": [
+            10,
+            18
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/WBGT_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            0,
+            8
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            19,
+            7
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            17,
+            2
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            14,
+            6
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            7,
+            4
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 5.340576171875e-05,
+          "worst_coordinate": [
+            10,
+            8
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 3.814697265625e-05,
+          "worst_coordinate": [
+            5,
+            8
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 3.814697265625e-05,
+          "worst_coordinate": [
+            2,
+            30
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 5.340576171875e-05,
+          "worst_coordinate": [
+            11,
+            19
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            11,
+            23
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            6,
+            9
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            6,
+            12
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            8,
+            15
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            9,
+            18
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            15,
+            26
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            2,
+            14
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            2,
+            14
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 5.53131103515625e-05,
+          "worst_coordinate": [
+            2,
+            14
+          ]
+        }
+      ]
+    },
+    {
+      "path": "output_folder/0_0/Wind_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 2,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 3,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 4,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 5,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 6,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 7,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 8,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 9,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 10,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 11,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 12,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 13,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 14,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 15,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 16,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 17,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 18,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 19,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 20,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 21,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 22,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 23,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        },
+        {
+          "band": 24,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "processed_inputs/SVF/SkyViewFactor_0_0.tif",
+      "schema_equal": true,
+      "passed": true,
+      "bands": [
+        {
+          "band": 1,
+          "passed": true,
+          "max_abs": 0.0,
+          "worst_coordinate": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "path": "processed_inputs/SVF/shadowmats_0_0.npz",
+      "presence_matched": true,
+      "values_checked": false
+    },
+    {
+      "path": "processed_inputs/SVF/svfs_0_0.zip",
+      "presence_matched": true,
+      "values_checked": false
+    }
+  ],
+  "limitations": [
+    "Non-TIFF legacy artifacts checked for presence only; intermediate chronological state requires separate numerical gates"
+  ],
+  "scope": "CUDA geometry-warm correctness admission; not first-use and not benchmark"
+}

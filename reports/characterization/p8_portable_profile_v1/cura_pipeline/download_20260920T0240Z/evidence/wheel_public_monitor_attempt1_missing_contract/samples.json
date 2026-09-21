@@ -1,0 +1,279 @@
+[
+  {
+    "elapsed": 0.011507474817335606,
+    "summed_rss": 9437184,
+    "summed_uss": 7385088,
+    "summed_pss": 7513088,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 9437184,
+        "vms": 17334272,
+        "uss": 7385088,
+        "pss": 7513088
+      }
+    ]
+  },
+  {
+    "elapsed": 0.04483097046613693,
+    "summed_rss": 15925248,
+    "summed_uss": 14286848,
+    "summed_pss": 14454784,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 15925248,
+        "vms": 24055808,
+        "uss": 14286848,
+        "pss": 14454784
+      }
+    ]
+  },
+  {
+    "elapsed": 0.07537779584527016,
+    "summed_rss": 21823488,
+    "summed_uss": 20525056,
+    "summed_pss": 20696064,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 21823488,
+        "vms": 30625792,
+        "uss": 20525056,
+        "pss": 20696064
+      }
+    ]
+  },
+  {
+    "elapsed": 0.10475377831608057,
+    "summed_rss": 25952256,
+    "summed_uss": 24596480,
+    "summed_pss": 24767488,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 25952256,
+        "vms": 35164160,
+        "uss": 24596480,
+        "pss": 24767488
+      }
+    ]
+  },
+  {
+    "elapsed": 0.13421596307307482,
+    "summed_rss": 28901376,
+    "summed_uss": 27783168,
+    "summed_pss": 27955200,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 28901376,
+        "vms": 38002688,
+        "uss": 27783168,
+        "pss": 27955200
+      }
+    ]
+  },
+  {
+    "elapsed": 0.1635658424347639,
+    "summed_rss": 32153600,
+    "summed_uss": 30109696,
+    "summed_pss": 30282752,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 32153600,
+        "vms": 40140800,
+        "uss": 30109696,
+        "pss": 30282752
+      }
+    ]
+  },
+  {
+    "elapsed": 0.19316740613430738,
+    "summed_rss": 35102720,
+    "summed_uss": 33607680,
+    "summed_pss": 33780736,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 35102720,
+        "vms": 43745280,
+        "uss": 33607680,
+        "pss": 33780736
+      }
+    ]
+  },
+  {
+    "elapsed": 0.22316672280430794,
+    "summed_rss": 39231488,
+    "summed_uss": 37199872,
+    "summed_pss": 37372928,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 39231488,
+        "vms": 47607808,
+        "uss": 37199872,
+        "pss": 37372928
+      }
+    ]
+  },
+  {
+    "elapsed": 0.25234607607126236,
+    "summed_rss": 38182912,
+    "summed_uss": 36151296,
+    "summed_pss": 36324352,
+    "processes": [
+      {
+        "pid": 965643,
+        "ppid": 965640,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/env/bin/python",
+          "-m",
+          "pytest",
+          "-q",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_public_api.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_cli.py",
+          "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/source/tests/unit/test_compatibility.py",
+          "--rootdir=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs",
+          "--basetemp=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/runs/public_tmp",
+          "--junitxml=/home/ssynn3/workspace/solweig-light-portable-v1-20260920T023111Z-pipeline/evidence/wheel_public.junit.xml"
+        ],
+        "threads": 1,
+        "rss": 38182912,
+        "vms": 46559232,
+        "uss": 36151296,
+        "pss": 36324352
+      }
+    ]
+  },
+  {
+    "elapsed": 0.2804967714473605,
+    "summed_rss": 0,
+    "summed_uss": 0,
+    "summed_pss": 0,
+    "processes": []
+  }
+]

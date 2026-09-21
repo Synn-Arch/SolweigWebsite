@@ -1,0 +1,12 @@
+{
+  "cleanup_evidence": "reports/characterization/p8_portable_profile_v1/fallback_repair/remote_cleanup.log",
+  "cleanup_evidence_sha256": "96196242fc3356f29c7730a015e8ebade0535ac04dd66e7bdd595566d96c1c1c",
+  "cleanup_pending": false,
+  "host": "cura",
+  "mode": "0700",
+  "owned_root": "/home/ssynn3/workspace/solweig-light-portable-v1-fallbackrepair-20260920T121500Z-curaexec",
+  "preexisting": false,
+  "retained": [],
+  "schema": "solweig-light.remote-cleanup-ledger.v1",
+  "status": "deleted_verified_absent"
+}

@@ -1,0 +1,251 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "identity": {
+        "dependencies": {
+          "GDAL": "3.13.3",
+          "numba": "0.67.0",
+          "numpy": "2.4.6"
+        },
+        "implementation": {
+          "geometry/shadows.py": {
+            "sha256": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+            "size_bytes": 5246
+          },
+          "geometry/sky_compiled.py": {
+            "sha256": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+            "size_bytes": 14647
+          },
+          "geometry/svf.py": {
+            "sha256": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+            "size_bytes": 9344
+          },
+          "geometry/visibility.py": {
+            "sha256": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+            "size_bytes": 17449
+          },
+          "geometry/visibility_native.py": {
+            "sha256": "1d5adf9eb78d6692b4f738d6f289ee0c10c99cb9cf6cf31082c2d9dea5e3ef99",
+            "size_bytes": 11000
+          },
+          "identities.py": {
+            "sha256": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+            "size_bytes": 3704
+          },
+          "pipeline.py": {
+            "sha256": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+            "size_bytes": 16351
+          }
+        },
+        "inputs": {
+          "Building_DSM": {
+            "bands": [
+              {
+                "categories": null,
+                "color_interpretation": 1,
+                "description": "",
+                "dtype": "Float32",
+                "mask_flags": 1,
+                "metadata": {
+                  "": {}
+                },
+                "nodata": null,
+                "offset": null,
+                "scale": null,
+                "unit": ""
+              }
+            ],
+            "gcp_projection": "",
+            "gcps": [],
+            "geotransform": [
+              619508.7066,
+              2.0,
+              0.0,
+              3359664.3479,
+              0.0,
+              -2.0
+            ],
+            "metadata": {
+              "": {
+                "AREA_OR_POINT": "Area"
+              },
+              "DERIVED_SUBDATASETS": {
+                "DERIVED_SUBDATASET_1_DESC": "log10 of amplitude of input bands from /Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_vegetation_rich/geometry_warm_n1_r2_baseline_scene/processed_inputs/Building_DSM/Building_DSM_0_0.tif",
+                "DERIVED_SUBDATASET_1_NAME": "DERIVED_SUBDATASET:LOGAMPLITUDE:/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_vegetation_rich/geometry_warm_n1_r2_baseline_scene/processed_inputs/Building_DSM/Building_DSM_0_0.tif"
+              },
+              "IMAGE_STRUCTURE": {
+                "INTERLEAVE": "BAND"
+              }
+            },
+            "projection": "PROJCS[\"WGS 84 / UTM zone 14N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-99],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32614\"]]",
+            "sha256": "35a57b6a1641c2f706910b576504e66ac73f0b45688b6a1e39708f65a3537063",
+            "shape": [
+              256,
+              256
+            ],
+            "size_bytes": 262696
+          },
+          "DEM": {
+            "bands": [
+              {
+                "categories": null,
+                "color_interpretation": 1,
+                "description": "",
+                "dtype": "Float32",
+                "mask_flags": 1,
+                "metadata": {
+                  "": {}
+                },
+                "nodata": null,
+                "offset": null,
+                "scale": null,
+                "unit": ""
+              }
+            ],
+            "gcp_projection": "",
+            "gcps": [],
+            "geotransform": [
+              619508.7066,
+              2.0,
+              0.0,
+              3359664.3479,
+              0.0,
+              -2.0
+            ],
+            "metadata": {
+              "": {
+                "AREA_OR_POINT": "Area"
+              },
+              "DERIVED_SUBDATASETS": {
+                "DERIVED_SUBDATASET_1_DESC": "log10 of amplitude of input bands from /Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_vegetation_rich/geometry_warm_n1_r2_baseline_scene/processed_inputs/DEM/DEM_0_0.tif",
+                "DERIVED_SUBDATASET_1_NAME": "DERIVED_SUBDATASET:LOGAMPLITUDE:/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_vegetation_rich/geometry_warm_n1_r2_baseline_scene/processed_inputs/DEM/DEM_0_0.tif"
+              },
+              "IMAGE_STRUCTURE": {
+                "INTERLEAVE": "BAND"
+              }
+            },
+            "projection": "PROJCS[\"WGS 84 / UTM zone 14N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-99],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32614\"]]",
+            "sha256": "09d52b3693709df003dc76b7cfa6a2e255b4b7b9e0bfe90766117a42a59f38e7",
+            "shape": [
+              256,
+              256
+            ],
+            "size_bytes": 262696
+          },
+          "Trees": {
+            "bands": [
+              {
+                "categories": null,
+                "color_interpretation": 1,
+                "description": "",
+                "dtype": "Float32",
+                "mask_flags": 8,
+                "metadata": {
+                  "": {}
+                },
+                "nodata": 0.0,
+                "offset": null,
+                "scale": null,
+                "unit": ""
+              }
+            ],
+            "gcp_projection": "",
+            "gcps": [],
+            "geotransform": [
+              619508.7066,
+              2.0,
+              0.0,
+              3359664.3479,
+              0.0,
+              -2.0
+            ],
+            "metadata": {
+              "": {
+                "AREA_OR_POINT": "Area"
+              },
+              "DERIVED_SUBDATASETS": {
+                "DERIVED_SUBDATASET_1_DESC": "log10 of amplitude of input bands from /Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_vegetation_rich/geometry_warm_n1_r2_baseline_scene/processed_inputs/Trees/Trees_0_0.tif",
+                "DERIVED_SUBDATASET_1_NAME": "DERIVED_SUBDATASET:LOGAMPLITUDE:/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_pairs_v4/real_vegetation_rich/geometry_warm_n1_r2_baseline_scene/processed_inputs/Trees/Trees_0_0.tif"
+              },
+              "IMAGE_STRUCTURE": {
+                "INTERLEAVE": "BAND"
+              }
+            },
+            "projection": "PROJCS[\"WGS 84 / UTM zone 14N\",GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",-99],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH],AUTHORITY[\"EPSG\",\"32614\"]]",
+            "sha256": "fef326ce3877d156f7a5ad4df752568a5aa403269b6faa1be5210dc68beb6d6b",
+            "shape": [
+              256,
+              256
+            ],
+            "size_bytes": 262708
+          }
+        },
+        "normalization": {
+          "boundary": "original-logical-tile",
+          "negative_trees": "clamp-zero",
+          "nodata": "original-unmasked",
+          "raster_dtype": "float32",
+          "svf_transmission": ".03",
+          "trunk_fraction": ".25"
+        },
+        "patch_arrays": [
+          {
+            "dtype": "<f4",
+            "sha256": "98ee0b19d0dba9811d798faa6bc906897b7857e21eee7532865d464d00b3ab00",
+            "shape": [
+              153
+            ]
+          },
+          {
+            "dtype": "<f4",
+            "sha256": "43ea71772a19ee84fe852ade7de59a15e2ded681b0a58234170e1389215e79aa",
+            "shape": [
+              153
+            ]
+          },
+          {
+            "dtype": "<i8",
+            "sha256": "f0dae587e7806c8b9abb4de5457de669c3257146ceefe73b40d32a3d2e07f635",
+            "shape": [
+              9
+            ]
+          },
+          {
+            "dtype": "<i8",
+            "sha256": "7a3da70c7254af43c588d5efe63b2aed411821b4b47b4e50285bc9434d348c3b",
+            "shape": [
+              8
+            ]
+          },
+          {
+            "dtype": "<i8",
+            "sha256": "7a3220d0998e387b1e99c2c9a30dceac0d0549940cb7d601d3f3c274fd7dd029",
+            "shape": [
+              8
+            ]
+          },
+          {
+            "dtype": "<f4",
+            "sha256": "39b107dc3f715bd7ce5084b0ee29948ba873abab04d65f35b2093a4cfd5a6aa1",
+            "shape": [
+              8
+            ]
+          },
+          {
+            "dtype": "<i8",
+            "sha256": "dccb26aacca405f34e87347eb6010cf08929a5546503378280336a4874513f6a",
+            "shape": [
+              8
+            ]
+          }
+        ],
+        "patch_option": 2,
+        "policy": "legacy-logical-domain-geometry-v1",
+        "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec"
+      },
+      "key": "6aaf9800528d5fa5452eebb8727fc5c61efc34150575cc5b69a4c49ff4e8b728",
+      "tile": "0_0"
+    }
+  ]
+}

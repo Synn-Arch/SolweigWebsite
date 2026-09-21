@@ -1,0 +1,48 @@
+_utci_points_parallel (Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True), Array(bool, 1, 'C', False, aligned=True), Array(float32, 1, 'C', False, aligned=True))
+--------------------------------------------------------------------------------
+# File: /Users/alansynn/Workspace/solweig-light/src/solweig_light/comfort/utci.py
+# --- LINE 346 --- 
+# label 0
+#   ta = arg(0, name=ta)  :: array(float32, 1d, C)
+#   rh = arg(1, name=rh)  :: array(float32, 1d, C)
+#   tmrt = arg(2, name=tmrt)  :: array(float32, 1d, C)
+#   wind = arg(3, name=wind)  :: array(float32, 1d, C)
+#   supported = arg(4, name=supported)  :: array(bool, 1d, C)
+#   output = arg(5, name=output)  :: array(float32, 1d, C)
+
+@njit(cache=True, parallel=True, fastmath=False, error_model='numpy')
+
+# --- LINE 347 --- 
+
+def _utci_points_parallel(ta, rh, tmrt, wind, supported, output):
+
+    # --- LINE 348 --- 
+
+    # Each iteration owns exactly one output element; no reductions/shared words.
+
+    # --- LINE 349 --- 
+    #   $18load_attr.3 = getattr(value=ta, attr=size)  :: int64
+    #   id=0[LoopNest(index_variable = parfor_index.12, range = (0, $18load_attr.3, 1))]{64: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/comfort/utci.py (351)>, 154: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/comfort/utci.py (351)>, 46: <ir.Block at /Users/alansynn/Workspace/solweig-light/src/solweig_light/comfort/utci.py (349)>}Var(parfor_index.12, utci.py:349)
+    #   del wind
+    #   del tmrt
+    #   del ta
+    #   del supported
+    #   del rh
+    #   del output
+    #   $const156.0.0 = const(NoneType, None)  :: none
+    #   $158return_value.1 = cast(value=$const156.0.0)  :: none
+    #   del $const156.0.0
+    #   return $158return_value.1
+
+    for point in prange(ta.size):
+
+        # --- LINE 350 --- 
+
+        if supported[point]:
+
+            # --- LINE 351 --- 
+
+            output[point] = utci_scalar(ta[point], rh[point], tmrt[point], wind[point])
+
+
+================================================================================

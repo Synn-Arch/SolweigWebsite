@@ -1,0 +1,604 @@
+{
+  "acceptance": {
+    "all_subgroups": "All 8 subgroup medians must be <= 1.000.",
+    "correctness_memory_provenance": "Any failure invalidates its subgroup and the complete promotion decision.",
+    "interpretation": "Unmet speed rule rejects or leaves default promotion inconclusive; thresholds cannot change after results. This is an engineering rule, not a statistical-significance claim.",
+    "priority_256_geometry_warm": "For each of the 1-thread and 4-thread 256 warm subgroups, median r <= 0.970 and at least 4 of 5 pairs have r < 1.000.",
+    "ratio_definition": "r = variant_elapsed / baseline_elapsed"
+  },
+  "blocker": null,
+  "correctness": {
+    "protocol": "benchmarks/protocols/comparison_v1.json",
+    "requirements": [
+      "all ten fields,24 bands,metadata,masks,timestamps",
+      "unchanged TMRT 0.01 K and UTCI 0.02 K gates",
+      "any failed pair invalidates its five-pair subgroup",
+      "retain every failure and raw artifact"
+    ],
+    "sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd"
+  },
+  "evidence_class": "current_candidate_snapshot_vs_isolated_six_moment_candidate_not_upstream_speedup",
+  "fixtures": {
+    "repeated_block_256": {
+      "files": {
+        "Building_DSM.tif": "04bbdad13f193fed032267a073494043208cb3065d51d606c5406d5d8e63ad46",
+        "DEM.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+        "Trees.tif": "c2be750fa8c2c263a968a097afc225e792015bf9dc86b9f828b76a746447a3bd",
+        "manifest.json": "71c5b8eb6aa15b981cea1a0b488d0faad556498374e484c360d8a4d094f173b3",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene/kwargs.json",
+      "kwargs_sha256": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+      "scene": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene",
+      "shape": [
+        256,
+        256
+      ]
+    },
+    "small": {
+      "files": {
+        "Building_DSM.tif": "e13aefb56d224680fd0a04fbf1886faf840d73db032aa4bbe2bbc651c4d8f80a",
+        "DEM.tif": "a550dd0b6519621fff999eb6cc7bce224c27a3c5cc17d73660c41b52767a7105",
+        "Trees.tif": "aacbcf3ffe3296c1ad4528138555b19d59358210a4c2b5b1c636074975fc8bdc",
+        "manifest.json": "fe013dcdfebb28db2e45141afe86a1ac3b1c19b2987a82befaa9e6628c4fc5b6",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "tests/reference/small_original_cpu/kwargs.json",
+      "kwargs_sha256": "9b02513a0c691f462e13b6fa18bcfae871c5a64f85c1b358350730b904f3b4cf",
+      "scene": "tests/reference/small_original_cpu/scene",
+      "shape": [
+        32,
+        35
+      ]
+    }
+  },
+  "matrix": {
+    "block_pixels": 128,
+    "expected_pairs": 40,
+    "native_budgets": [
+      1,
+      4
+    ],
+    "output_fields": [
+      "UTCI",
+      "TMRT",
+      "Kup",
+      "Kdown",
+      "Lup",
+      "Ldown",
+      "Shadow",
+      "WBGT",
+      "Ta",
+      "Wind"
+    ],
+    "patches": 153,
+    "regimes": [
+      "first_use_empty_private_jit_and_geometry_cache",
+      "geometry_and_compatible_jit_warm"
+    ],
+    "repetitions": 5,
+    "scenes": [
+      "small",
+      "repeated_block_256"
+    ],
+    "timesteps": 24
+  },
+  "memory": {
+    "record": [
+      "process-tree summed RSS at 20ms",
+      "PID-level samples",
+      "bundle allocation bytes and lifetime",
+      "JIT bytes",
+      "retained geometry bytes"
+    ],
+    "reject": [
+      "12 GiB cap breach",
+      "bundle retained after tile completion",
+      "unbounded duplicate bundle per timestep",
+      "concurrent tile identity collision"
+    ]
+  },
+  "no_execution": true,
+  "pair_order": {
+    "frozen_pairs": [
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n1-r0",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 0,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n1-r1",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 1,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n1-r2",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 2,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n1-r3",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 3,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n1-r4",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 4,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n4-r0",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 0,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n4-r1",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 1,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n4-r2",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 2,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n4-r3",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 3,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-first_use_empty_private_jit_and_geometry_cache-n4-r4",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 4,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n1-r0",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 0,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n1-r1",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 1,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n1-r2",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 2,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n1-r3",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 3,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n1-r4",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 4,
+        "scene": "small",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n4-r0",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 0,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n4-r1",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 1,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n4-r2",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 2,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n4-r3",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 3,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "small-geometry_and_compatible_jit_warm-n4-r4",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 4,
+        "scene": "small",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n1-r0",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 0,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n1-r1",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 1,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n1-r2",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 2,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n1-r3",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 3,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n1-r4",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 4,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n4-r0",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 0,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n4-r1",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 1,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n4-r2",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 2,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n4-r3",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 3,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-first_use_empty_private_jit_and_geometry_cache-n4-r4",
+        "regime": "first_use_empty_private_jit_and_geometry_cache",
+        "repetition": 4,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n1-r0",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 0,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n1-r1",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 1,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n1-r2",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 2,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n1-r3",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 3,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n1-r4",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 4,
+        "scene": "repeated_block_256",
+        "threads": 1
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n4-r0",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 0,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n4-r1",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 1,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n4-r2",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 2,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "baseline",
+          "variant"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n4-r3",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 3,
+        "scene": "repeated_block_256",
+        "threads": 4
+      },
+      {
+        "order": [
+          "variant",
+          "baseline"
+        ],
+        "pair_id": "repeated_block_256-geometry_and_compatible_jit_warm-n4-r4",
+        "regime": "geometry_and_compatible_jit_warm",
+        "repetition": 4,
+        "scene": "repeated_block_256",
+        "threads": 4
+      }
+    ],
+    "rule": "freeze one balanced randomized baseline/variant order for all 40 pairs before execution; retain pair IDs and order even on failure",
+    "seed": 20260919
+  },
+  "provenance": {
+    "baseline_protocol_sha256": "b6839eb242b97072792e6a97b571fc092814b86db772c1a52da190b91ec73ec1",
+    "bundle_checks_sha256": "1485676394b9bba00debfbf5178247bed1f7820cb1c4952266b6036871f439b8",
+    "bundle_source_sha256": "dc8b7182f9e28ebdd95dc92ebb477253b01f2574be762e154b5ce334afed4184",
+    "design_sha256": "f87972909ca7f45e238a91b4f8c8f31f59a2ee205ca092758d6e2636e862052f",
+    "integration_validation_sha256": "d1cde79a9a5e87e73bd613c4b264ac0c34f2a0cfae1c695b577801f24003a8a6",
+    "snapshot_manifest_sha256": "adf62c1e36b7747e6f55a8a0bb17ae29ccbfbea6c240fa25d86ee56400076873"
+  },
+  "question": "Does a precomputed tile-owned six-moment reflection bundle improve equal-work end-to-end execution without correctness or memory regression?",
+  "reporting": [
+    "raw paired elapsed and RSS",
+    "baseline/variant ratio distribution by subgroup",
+    "median/range and pair order",
+    "cold construction and warm tradeoff",
+    "no upstream speedup inference"
+  ],
+  "review_gate": "Lead must review this frozen packet before any timing. No execution authorization is inferred.",
+  "runtime": {
+    "memory_budget_bytes": 12884901888,
+    "minimum_free_disk_bytes": 5368709120,
+    "private_output_and_cache_per_source_pair": true,
+    "resume": false,
+    "rss_sample_interval_seconds": 0.02,
+    "workers": 1
+  },
+  "schema": "p7_angular_moment_pairs_draft_v1",
+  "sources": {
+    "baseline": "immutable copy of current src at freeze time",
+    "baseline_inventory": "baseline_inventory.json",
+    "baseline_inventory_sha256": "c9f3e4b5816a534a030211cd4fe41cd792e6f7fe1ad76b7811282391ffb6dc2b",
+    "variant": "snapshot/src",
+    "variant_manifest": "snapshot_manifest.json",
+    "variant_manifest_sha256": "adf62c1e36b7747e6f55a8a0bb17ae29ccbfbea6c240fa25d86ee56400076873"
+  },
+  "status": "preexecution_frozen_pending_lead_review",
+  "timed_scope": {
+    "diagnostic_only": [
+      "bundle construction",
+      "bundle application",
+      "first sweep"
+    ],
+    "first_use": [
+      "fresh worker/imports",
+      "JIT",
+      "geometry and MomentBundle construction",
+      "24 chronological timesteps",
+      "all ten TIFF writes"
+    ],
+    "warm": [
+      "fresh measured worker/imports",
+      "compatible retained JIT and geometry",
+      "MomentBundle construction once per tile",
+      "24 chronological timesteps",
+      "all ten TIFF writes"
+    ]
+  }
+}

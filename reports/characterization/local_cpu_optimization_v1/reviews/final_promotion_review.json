@@ -1,0 +1,39 @@
+{
+  "P7_complete": false,
+  "P8_complete": false,
+  "checks": {
+    "all100_trial_RSS_samples_and_peaks_recomputed": true,
+    "all_cache_cleanup_schedule_source_guards_passed": true,
+    "all_regression_startup_RSS_guards_passed": true,
+    "exact_pairs_passed": 50,
+    "maximum_observed_summed_RSS_bytes": 604553216,
+    "primary_geometric_mean_bootstrap95": [
+      1.5934428894838482,
+      1.6489733359663399
+    ],
+    "primary_paired_median_ratio": 1.6267887841526445,
+    "startup_tradeoff_triggered": false
+  },
+  "integration_copy_sha256": "b99571f29eebe4fc86441003ae6e9c42c531fea9f1c2de30a5dac234c98b2967",
+  "limitations": [
+    "One Apple M1 Pro host with 16GiB RAM; candidate-versus-candidate comparison against checkpoint 8ca23d4.",
+    "No original-upstream, Linux, GPU, default 3600 or full-release speedup claim.",
+    "OS page cache is uncontrolled; geometry-warm still includes uncached compilation.",
+    "Five pairs per configuration give limited uncertainty and do not model thermal drift or other machines.",
+    "Summed process-tree RSS may double-count shared pages; configured 20 ms sampling can miss brief peaks and actual intervals are longer.",
+    "All trial hashes, measurements and exact comparison records remain; only final successful output histories are retained.",
+    "Large admissions are single correctness/feasibility runs, separate from paired performance evidence; no large every-timestep trace.",
+    "Existing dependency environment is not a fresh minimal environment."
+  ],
+  "method_sha256": "2adee23e38d79f0fbce43348c387b46d713422caf65a36c11b8624093491d7c8",
+  "postcopy_verification_pending": true,
+  "protocol_sha256": "67725d57eb18c49535f7c32e11cc47b04a846e14e3ffbd5406f3cf9c6f8602af",
+  "qualification_review_sha256": "eb70d298dae33da0b02b13edd3805469b1c500ffb1bd4db3d92c8ea262325c83",
+  "reporting_correction": "The raw completion packet has an empty limitations list; this review carries the limitations from raw summary, protocol and sampling evidence. The packet remains unchanged.",
+  "reviewer": "Astra /root/exact_promotion_review",
+  "root_numeric_check_sha256": "9c4b45d28bb0e6365e6c53c7cece97a65115f0b8c5207f075873ca6a10ddca01",
+  "scope": "Exact eight source files and four permanent test/probe files from qualified combined_v1, with explicit 4-thread/block1024 recommendation; public defaults unchanged.",
+  "source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+  "statistics_sha256": "fa6f9d065ff6da673d129f5d5d81a216de367c8e1f0adb7fd3a08ed82b3cbe7b",
+  "status": "approved_for_local_integration"
+}

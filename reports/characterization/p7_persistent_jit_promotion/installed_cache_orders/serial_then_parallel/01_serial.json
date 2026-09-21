@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "longwave_serial": {
+      "parallel_target": false,
+      "parfors_keys": [],
+      "parfors_present": false
+    },
+    "shortwave_serial": {
+      "parallel_target": false,
+      "parfors_keys": [],
+      "parfors_present": false
+    }
+  },
+  "mode": "serial"
+}

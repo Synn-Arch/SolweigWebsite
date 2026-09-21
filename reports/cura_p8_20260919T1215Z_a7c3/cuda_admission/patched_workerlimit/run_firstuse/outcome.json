@@ -1,0 +1,4 @@
+{
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/patched_workerlimit/runner.py\", line 60, in child\n    raise RuntimeError(f\"Unexpected patched upstream state: {revision}; {status}\")\nRuntimeError: Unexpected patched upstream state: 0d7fe742abeeddd890dd58fc76ed7f78bd47faec; M solweig_gpu.egg-info/PKG-INFO\n M solweig_gpu.egg-info/SOURCES.txt\n M solweig_gpu.egg-info/entry_points.txt\n M solweig_gpu.egg-info/requires.txt\n M solweig_gpu/walls_aspect.py\n?? build/\n"
+}

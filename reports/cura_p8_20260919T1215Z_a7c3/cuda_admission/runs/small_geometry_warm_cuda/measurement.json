@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_geometry_warm_runner.py",
+    "--child",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/runs/small_geometry_warm_cuda/spec.json"
+  ],
+  "elapsed_seconds_including_imports_jit_io": 11.32225226983428,
+  "exit_code": 0,
+  "measurement_class": "correctness admission diagnostic; not benchmark timing",
+  "memory_limit_aborted": false,
+  "memory_limit_bytes": 12884901888,
+  "peak_process_tree_rss_bytes": 1517314048,
+  "sample_interval_seconds": 0.02
+}

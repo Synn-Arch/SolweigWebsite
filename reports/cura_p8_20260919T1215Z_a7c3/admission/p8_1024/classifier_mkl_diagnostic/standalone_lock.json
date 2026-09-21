@@ -1,0 +1,255 @@
+{
+  "install_command": "python3 -m pip install --ignore-installed --prefix <owned-env> numpy==2.3.3 mkl==2024.2.0",
+  "libraries": [
+    {
+      "bytes": 2763824,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libiomp5.so",
+      "sha256": "19cd02fbb18d948db4c4936afc5e07929ef16d676f72d0e76e9e853e665b5146"
+    },
+    {
+      "bytes": 848520,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libiomp5_db.so",
+      "sha256": "ffad7ca98b75dd5d5332188dc3ef673860c8c6fca167c4043a894e5b15a7b848"
+    },
+    {
+      "bytes": 220712,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libiompstubs5.so",
+      "sha256": "5d144648a0f5cad44843f1967d7b3d45308a674a127f09301b2480507a8607f9"
+    },
+    {
+      "bytes": 44414296,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_avx2.so.2",
+      "sha256": "49592efe2fecb0e7a10d1f0a77b5440390daf2dfbaacd820fb5e5d194406bac8"
+    },
+    {
+      "bytes": 65303320,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_avx512.so.2",
+      "sha256": "8dfbbebfd91324b86d2b6d5c957e7800f4eb4683d0fc2c5723d41db37bae7931"
+    },
+    {
+      "bytes": 544304,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_blacs_intelmpi_ilp64.so.2",
+      "sha256": "34a33f9780aebd5bf1b29aad9b25bb1ac3331091bf30ab894ac96e71615c20e2"
+    },
+    {
+      "bytes": 279656,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_blacs_intelmpi_lp64.so.2",
+      "sha256": "204f866a44c3d998da4b4dd3d494c9af3f5fd4ad5df569441247da00283afee0"
+    },
+    {
+      "bytes": 553592,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_blacs_openmpi_ilp64.so.2",
+      "sha256": "6c116f756c46c316e51487ac03d2b13e6ff1652f3b4075815f42c1318692fa4e"
+    },
+    {
+      "bytes": 280752,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_blacs_openmpi_lp64.so.2",
+      "sha256": "f49ed0c639d49c621058fa0a3bf15007ec984f3c3b62281d554406095ef4d322"
+    },
+    {
+      "bytes": 189296,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_cdft_core.so.2",
+      "sha256": "94139828c34645df6b38236bdaacb9e0d71e22c8fc8cdac88402a1c82d90a577"
+    },
+    {
+      "bytes": 69600576,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_core.so.2",
+      "sha256": "dd2cdfcb74bcff6a2d9df0edfab2822ebacffb5a326223d4e2299fa439912840"
+    },
+    {
+      "bytes": 38439840,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_def.so.2",
+      "sha256": "7443958030423ce859a41a6b0debbc7799e58b8a84a3304141545918d1f81432"
+    },
+    {
+      "bytes": 13437968,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_gf_ilp64.so.2",
+      "sha256": "b522463e091ca257d3f880ddcaf09b73c17d74e4ed739c249c3a74a247867ce6"
+    },
+    {
+      "bytes": 15180616,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_gf_lp64.so.2",
+      "sha256": "25409e28b3090975b60fe24640742f2ccb1785754785584dd7e9e719fe07cd87"
+    },
+    {
+      "bytes": 27261656,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_gnu_thread.so.2",
+      "sha256": "11ed59776d47b74ccb7e29f7752e59a94ea08cea9470c195e0a25c40b86e26e9"
+    },
+    {
+      "bytes": 16231808,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_intel_ilp64.so.2",
+      "sha256": "e5b868b69620e9a00f8a2827c88aebf090305b43733bb1bf672d40018cddceb2"
+    },
+    {
+      "bytes": 17987488,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_intel_lp64.so.2",
+      "sha256": "ac7c9840b8735282e4781f15272d28b0e494ac56399506993ba30defa24c768d"
+    },
+    {
+      "bytes": 38669656,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_intel_thread.so.2",
+      "sha256": "455a4d6ca516b24c45264290823e5044d288c9bff31ad5b3c7b455c13d7312d2"
+    },
+    {
+      "bytes": 45741168,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_mc3.so.2",
+      "sha256": "861a94ea9ad1ae379210b07e2cb6ab654d4aa4faa1abd494c015c70fc2dbb81a"
+    },
+    {
+      "bytes": 31249024,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_pgi_thread.so.2",
+      "sha256": "83d64bf6dfc1f85b5844db8b4330d3a7817a11798ea4fe823303b3ae302c89c6"
+    },
+    {
+      "bytes": 16231096,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_rt.so.2",
+      "sha256": "0f3c805b85c36f3aaf6792930b054d80a945af032f0a97c4926d7ad94a7d61d9"
+    },
+    {
+      "bytes": 7596080,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_scalapack_ilp64.so.2",
+      "sha256": "6264c9ad239858d131ef472fd896f456d1cf05a89be059deb51d1bfa823a6270"
+    },
+    {
+      "bytes": 7568712,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_scalapack_lp64.so.2",
+      "sha256": "6eb8f27a047141468d0a8f063f3bf97c164836ca9a1bbdb6363273d42905ae1f"
+    },
+    {
+      "bytes": 23196640,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_sequential.so.2",
+      "sha256": "afdfa0a3d332c2a5beaf1138a303d25cd41e1809102313670a38c7000d5eeda2"
+    },
+    {
+      "bytes": 32594624,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_tbb_thread.so.2",
+      "sha256": "5f9685ae3a5b4846ad9b8eb683e958faf2737d7b97bfc0db9c098e37d34ad0b3"
+    },
+    {
+      "bytes": 15428560,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_vml_avx2.so.2",
+      "sha256": "8c7940b73e6eda2115ad14b8e7f8e48e6c77a324e4f19509d5549515e73b0d54"
+    },
+    {
+      "bytes": 16256640,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_vml_avx512.so.2",
+      "sha256": "6f5bdeccc76722439786d04b487f96302a2a93d61955a525724a86c032452825"
+    },
+    {
+      "bytes": 7984680,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_vml_cmpt.so.2",
+      "sha256": "511c800a1ecf67328a5a26cb30cd2ef165989daf8179a4076a0ab04a7340dcba"
+    },
+    {
+      "bytes": 9291032,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_vml_def.so.2",
+      "sha256": "e86422e1f87b7128103732cfffdaa682b9da28f1de76ae78f0a0ef1f8bf2bdbb"
+    },
+    {
+      "bytes": 13223680,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_vml_mc3.so.2",
+      "sha256": "0e48b920914d2b412716c092124910ada7aa0069c36dfd3ad51c293fbc85bf64"
+    },
+    {
+      "bytes": 3869904,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbb.so",
+      "sha256": "0b272a68edb28d22572c375119e13b34b67757fa1765235b1d079ad40a4e19db"
+    },
+    {
+      "bytes": 3869904,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbb.so.12",
+      "sha256": "0b272a68edb28d22572c375119e13b34b67757fa1765235b1d079ad40a4e19db"
+    },
+    {
+      "bytes": 3869904,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbb.so.12.13",
+      "sha256": "0b272a68edb28d22572c375119e13b34b67757fa1765235b1d079ad40a4e19db"
+    },
+    {
+      "bytes": 234904,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind.so",
+      "sha256": "5efda00003b836cd45dae7427a040ff09a28a34ed957b862c88a0b7e0c8c1a33"
+    },
+    {
+      "bytes": 234904,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind.so.3",
+      "sha256": "5efda00003b836cd45dae7427a040ff09a28a34ed957b862c88a0b7e0c8c1a33"
+    },
+    {
+      "bytes": 234904,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind.so.3.13",
+      "sha256": "5efda00003b836cd45dae7427a040ff09a28a34ed957b862c88a0b7e0c8c1a33"
+    },
+    {
+      "bytes": 234512,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind_2_0.so",
+      "sha256": "c6272e057ca85f6a50a1fc5b24f261fe41999978a231c9217515074bd713f492"
+    },
+    {
+      "bytes": 234512,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind_2_0.so.3",
+      "sha256": "c6272e057ca85f6a50a1fc5b24f261fe41999978a231c9217515074bd713f492"
+    },
+    {
+      "bytes": 234512,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind_2_0.so.3.13",
+      "sha256": "c6272e057ca85f6a50a1fc5b24f261fe41999978a231c9217515074bd713f492"
+    },
+    {
+      "bytes": 238720,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind_2_5.so",
+      "sha256": "19f21ba302b1f6ee331bf205fdbc41c8b7c4ee1d87783d1719ace79d765ba514"
+    },
+    {
+      "bytes": 238720,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind_2_5.so.3",
+      "sha256": "19f21ba302b1f6ee331bf205fdbc41c8b7c4ee1d87783d1719ace79d765ba514"
+    },
+    {
+      "bytes": 238720,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbbind_2_5.so.3.13",
+      "sha256": "19f21ba302b1f6ee331bf205fdbc41c8b7c4ee1d87783d1719ace79d765ba514"
+    },
+    {
+      "bytes": 1164216,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc.so",
+      "sha256": "59373b72f71c03db20013c66cd783c960e82c99e21a6b7d0e7a58e757e012cda"
+    },
+    {
+      "bytes": 1164216,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc.so.2",
+      "sha256": "59373b72f71c03db20013c66cd783c960e82c99e21a6b7d0e7a58e757e012cda"
+    },
+    {
+      "bytes": 1164216,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc.so.2.13",
+      "sha256": "59373b72f71c03db20013c66cd783c960e82c99e21a6b7d0e7a58e757e012cda"
+    },
+    {
+      "bytes": 89560,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc_proxy.so",
+      "sha256": "ba00ff83ad1bceb232ff84c24855f1fd9fea684d29fc540781c105e5f424bf4e"
+    },
+    {
+      "bytes": 89560,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc_proxy.so.2",
+      "sha256": "ba00ff83ad1bceb232ff84c24855f1fd9fea684d29fc540781c105e5f424bf4e"
+    },
+    {
+      "bytes": 89560,
+      "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc_proxy.so.2.13",
+      "sha256": "ba00ff83ad1bceb232ff84c24855f1fd9fea684d29fc540781c105e5f424bf4e"
+    }
+  ],
+  "note": "Observed resolver selected transitive Intel runtime 2026.1.2; future reproducible integration must pin all listed versions explicitly.",
+  "packages": {
+    "intel-cmplr-lib-ur": "2026.1.2",
+    "intel-openmp": "2026.1.2",
+    "mkl": "2024.2.0",
+    "numpy": "2.3.3",
+    "tbb": "2021.13.1",
+    "tcmlib": "1.5.0",
+    "umf": "1.1.0"
+  }
+}

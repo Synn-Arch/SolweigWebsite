@@ -1,0 +1,741 @@
+{
+  "candidate_origin": "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/isolated_snapshot/src/solweig_light/__init__.py",
+  "input_count": 45172,
+  "input_manifest_sha256": "341172efd6e3918306944aaef7b3ecf4a77a436fedc1cf16fd497a183ec0f0d4",
+  "oracle_manifest_sha256": "64e5d6f7c94e5368cf6d23c8f29b7d47748e2c50c01cc85665baa35856c468ff",
+  "passed": true,
+  "profile": {
+    "fingerprint": "982fa77f7f674562e9e086b1d1bba987cb850ea8140598701e3436a2a34f2427",
+    "id": "solweig-portable-sleef-5a1d179d-v1",
+    "implementation": {
+      "coefficient_policy": "numpy-float64-cos-tan-scalar-v1",
+      "profile_id": "solweig-portable-sleef-5a1d179d-v1",
+      "sleef_commit": "5a1d179df9cf652951b59010a2d2075372d67f68",
+      "source_sha256": {
+        "SLEEF_LICENSE.txt": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566",
+        "_math_profile.py": "b2020b4dd1c2ef4efd00c717ea3bdf75ba1ecd5399d5df1c0324c54ff03cc2cd",
+        "_sleef_acos.py": "cc59c1fac382db67219ee07f662d08a9f8da29349a460b854d74b7d44a9316c6",
+        "_sleef_classifier.py": "fdc7bbdc77777cbe75760f394bdf28af76f8d12b637368b8c187c606313b9552"
+      },
+      "tan_domain_policy": "sleef-u10-fast-abs-lt-125;explicit-legacy-numpy-otherwise-v1"
+    },
+    "runtime": {
+      "byteorder": "little",
+      "fastmath": false,
+      "float_rounds": 1,
+      "fma": "explicit-llvm.fma.f32",
+      "llvmlite": "0.49.0",
+      "machine": "x86_64",
+      "numba": "0.67.0",
+      "numpy": "2.4.6",
+      "python": "CPython-3.12.3",
+      "system": "Linux"
+    }
+  },
+  "schema": "solweig-light.portable-profile-v1-stage-c-mask-result.v1",
+  "timesteps": [
+    {
+      "coefficient_bit_mismatches": 78,
+      "coefficient_float32_bit_mismatches": 75,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 0
+    },
+    {
+      "coefficient_bit_mismatches": 76,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 1
+    },
+    {
+      "coefficient_bit_mismatches": 79,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 2
+    },
+    {
+      "coefficient_bit_mismatches": 78,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 3
+    },
+    {
+      "coefficient_bit_mismatches": 79,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 4
+    },
+    {
+      "coefficient_bit_mismatches": 81,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 5
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 6
+    },
+    {
+      "coefficient_bit_mismatches": 75,
+      "coefficient_float32_bit_mismatches": 75,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 7
+    },
+    {
+      "coefficient_bit_mismatches": 79,
+      "coefficient_float32_bit_mismatches": 79,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 8
+    },
+    {
+      "coefficient_bit_mismatches": 79,
+      "coefficient_float32_bit_mismatches": 78,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 9
+    },
+    {
+      "coefficient_bit_mismatches": 78,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 10
+    },
+    {
+      "coefficient_bit_mismatches": 79,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 11
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 12
+    },
+    {
+      "coefficient_bit_mismatches": 76,
+      "coefficient_float32_bit_mismatches": 75,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 13
+    },
+    {
+      "coefficient_bit_mismatches": 76,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 14
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 15
+    },
+    {
+      "coefficient_bit_mismatches": 80,
+      "coefficient_float32_bit_mismatches": 78,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 16
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 17
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 18
+    },
+    {
+      "coefficient_bit_mismatches": 78,
+      "coefficient_float32_bit_mismatches": 78,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 19
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 20
+    },
+    {
+      "coefficient_bit_mismatches": 77,
+      "coefficient_float32_bit_mismatches": 75,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 21
+    },
+    {
+      "coefficient_bit_mismatches": 76,
+      "coefficient_float32_bit_mismatches": 76,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 22
+    },
+    {
+      "coefficient_bit_mismatches": 79,
+      "coefficient_float32_bit_mismatches": 77,
+      "paths": {
+        "prepared": {
+          "shade": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          },
+          "sun": {
+            "count": 0,
+            "first_input_index": null,
+            "first_patch": null
+          }
+        },
+        "serial": {
+          "shade": {
+            "count": 0,
+            "first": null
+          },
+          "sun": {
+            "count": 0,
+            "first": null
+          }
+        }
+      },
+      "timestep": 23
+    }
+  ],
+  "torch_imported": false,
+  "totals": {
+    "prepared_shade": 0,
+    "prepared_sun": 0,
+    "serial_shade": 0,
+    "serial_sun": 0
+  }
+}

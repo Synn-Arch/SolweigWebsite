@@ -1,0 +1,33 @@
+         908673 function calls in 0.467 seconds
+
+   Ordered by: cumulative time
+   List reduced from 86 to 25 due to restriction <25>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.003    0.003    0.467    0.467 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py:178(Kside_veg_v2022a)
+      140    0.027    0.000    0.413    0.003 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py:115(_classes)
+    21420    0.114    0.000    0.384    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/engine.py:410(shaded_or_sunlit)
+   152809    0.115    0.000    0.215    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/engine.py:1703(_operate)
+   195652    0.072    0.000    0.125    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/engine.py:1691(_operands)
+    42843    0.032    0.000    0.057    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/engine.py:1687(_divide)
+   434313    0.053    0.000    0.053    0.000 {built-in method numpy.asarray}
+      700    0.000    0.000    0.039    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py:232(<genexpr>)
+      560    0.001    0.000    0.039    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py:96(_block)
+      560    0.004    0.000    0.037    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/visibility_compiled.py:69(decode_block)
+      420    0.019    0.000    0.019    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/visibility_compiled.py:17(_decode)
+      140    0.011    0.000    0.011    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/visibility_compiled.py:48(_decode_diff)
+      140    0.008    0.000    0.008    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py:128(_shortwave)
+    21420    0.001    0.000    0.001    0.000 /Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/_core/multiarray.py:403(where)
+    22864    0.001    0.000    0.001    0.000 {built-in method builtins.isinstance}
+      140    0.001    0.000    0.001    0.000 /Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numpy/_core/numeric.py:97(zeros_like)
+      560    0.000    0.000    0.001    0.000 /opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/contextlib.py:558(__exit__)
+      562    0.000    0.000    0.000    0.000 {built-in method builtins.all}
+     1400    0.000    0.000    0.000    0.000 /Users/alansynn/Workspace/solweig-light/.venv-light/lib/python3.11/site-packages/numba/core/serialize.py:30(_numba_unpickle)
+      702    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:405(parent)
+      282    0.000    0.000    0.000    0.000 {built-in method numpy.zeros}
+        1    0.000    0.000    0.000    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/patch_radiation.py:212(<listcomp>)
+     1260    0.000    0.000    0.000    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/visibility_compiled.py:72(<genexpr>)
+      700    0.000    0.000    0.000    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/visibility_compiled.py:54(_descriptor)
+      560    0.000    0.000    0.000    0.000 /Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/visibility_compiled.py:75(<dictcomp>)
+
+

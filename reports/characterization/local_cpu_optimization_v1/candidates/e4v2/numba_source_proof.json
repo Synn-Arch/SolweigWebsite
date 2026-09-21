@@ -1,0 +1,36 @@
+{
+  "environment": {
+    "python_site": ".venv-light/lib/python3.11/site-packages",
+    "numba": "0.67.0",
+    "numpy": "2.4.6",
+    "llvmlite": "0.49.0"
+  },
+  "files": {
+    "numba/core/caching.py": "026f46d8681711ff7d4ff981c54207536630e38cb6d8fb86b84f4191674635c6",
+    "numba/core/funcdesc.py": "d555fd1211a2513c43f22c50842e869573b38fd1f1129b1885ffd1c4bc9e391f",
+    "numba/core/environment.py": "c02c9d6e3fa052aab2d1097f44598705ace4ed66fbdb6a9aef548841146f7b57"
+  },
+  "findings": [
+    {
+      "source": "numba/core/caching.py:386-444",
+      "claim": "CacheImpl reads py_func.__qualname__ before constructing filename_base; get_filename_base includes the qualified name."
+    },
+    {
+      "source": "numba/core/caching.py:121-129,537-541,589-607",
+      "claim": "Source freshness is only the source file mtime and size; the index filename is based on filename_base."
+    },
+    {
+      "source": "numba/core/caching.py:764-782",
+      "claim": "The overload key hashes function bytecode and closure plus codegen.magic_tuple; a same-size/same-mtime comment or captured-helper edit is not represented."
+    },
+    {
+      "source": "numba/core/environment.py:13-51",
+      "claim": "Cached environment reconstruction imports the module and uses its globals and env_name; it does not resolve the Python function by qualified name."
+    },
+    {
+      "source": "numba/core/funcdesc.py:103-106 and repository-wide rg",
+      "claim": "FunctionDescriptor.lookup_function would use getattr(module, qualname), but no Python call sites exist in the installed Numba tree. Fresh-process warm-cache qualification remains required to cover native or unobserved paths."
+    }
+  ],
+  "assessment": "No source-level serialization or location blocker was found. The decorator must remain below njit so it runs first; execution admission requires fresh-process warm cache loads."
+}

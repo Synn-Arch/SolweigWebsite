@@ -1,0 +1,60 @@
+{
+  "schema": "solweig-light.scientific-release-exception.v1",
+  "id": "inherited-svf-umep-compatibility-v1",
+  "status": "user_approved",
+  "authorization": "Retain upstream behavior; document exception",
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "scope": "Only the four named independent scientific failures at the retained fixtures and inherited behavior.",
+  "checks": [
+    {
+      "nodeid": "tests/scientific/test_svf_analytic.py::test_default_full_patch_svf_fields_are_physically_bounded[open-svf_calculator]",
+      "test_result": "failed",
+      "release_disposition": "approved_known_inherited_limitation"
+    },
+    {
+      "nodeid": "tests/scientific/test_svf_analytic.py::test_default_full_patch_svf_fields_are_physically_bounded[open-svf_calculator_compact]",
+      "test_result": "failed",
+      "release_disposition": "approved_known_inherited_limitation"
+    },
+    {
+      "nodeid": "tests/scientific/test_umep_ground_view_independent.py::test_umep_full_ground_view[0]",
+      "test_result": "failed",
+      "release_disposition": "approved_known_inherited_limitation"
+    },
+    {
+      "nodeid": "tests/scientific/test_umep_ground_view_independent.py::test_umep_full_ground_view[1]",
+      "test_result": "failed",
+      "release_disposition": "approved_known_inherited_limitation"
+    }
+  ],
+  "required_preservation": [
+    "Keep tests, fixtures, assertions, numerical tolerances and failed execution records unchanged.",
+    "Retain upstream SVF initialization and float32 ground-view arithmetic.",
+    "A changed or worsened result requires renewed investigation; approval is not an automatic allowlist for future failures."
+  ],
+  "claim_limits": [
+    "Do not claim unobstructed directional vegetation SVF equals unity.",
+    "Do not claim complete UMEP agreement at the authored independent tolerance."
+  ],
+  "not_covered": [
+    "Current-main dense1024 original-CPU TMRT failure",
+    "Portable math/reference policy",
+    "Other scientific failures including exact-zenith visibility",
+    "Remaining numerical, packaging, CI, performance and release gates"
+  ],
+  "release_complete": false,
+  "evidence": [
+    {
+      "path": "reports/characterization/p8_science_failure_disposition/svf_full_open_original_cpu/manifest.json",
+      "sha256": "505770fd25b146d6cec5fe95742cdbcff706df06aca1e0c5250c2321c2902ad5"
+    },
+    {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/results/p8_queued_science_tests.xml",
+      "sha256": "7600a4723efa65c75e86b93cd068f6aeade607b538713b60452cdbb9fe9c8c14"
+    },
+    {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/upstream_cpu_ground_view_diagnostic.md",
+      "sha256": "8809f89243df6254e1a6b8a2d371cfd05e23e220454fd5693d7a166cecc417b3"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+available_before=43626795008
+cpu_env_bytes=2771178049
+conservative_new_env_bytes=9771178049
+reserve_bytes=10737418240

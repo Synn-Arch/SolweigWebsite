@@ -1,0 +1,36 @@
+{
+  "repository": "https://github.com/UMEP-dev/UMEP",
+  "commit": "3fcc0c3dca67d1d5644a6d34b9148d7a365743ba",
+  "retrieved_date": "2026-09-19",
+  "status": "source_acquisition_only_matching_and_execution_pending",
+  "files": [
+    {
+      "upstream_path": "SOLWEIG/SOLWEIGpython/gvf_2018a.py",
+      "url": "https://raw.githubusercontent.com/UMEP-dev/UMEP/3fcc0c3dca67d1d5644a6d34b9148d7a365743ba/SOLWEIG/SOLWEIGpython/gvf_2018a.py",
+      "local_path": "reports/characterization/p8_umep_source/gvf_2018a.py",
+      "sha256": "9bfb49dd281924bff5352d57d9c28a8274d1a2c4660c4fbca532afa6de167c94",
+      "bytes": 4160
+    },
+    {
+      "upstream_path": "SOLWEIG/SOLWEIGpython/TsWaveDelay_2015a.py",
+      "url": "https://raw.githubusercontent.com/UMEP-dev/UMEP/3fcc0c3dca67d1d5644a6d34b9148d7a365743ba/SOLWEIG/SOLWEIGpython/TsWaveDelay_2015a.py",
+      "local_path": "reports/characterization/p8_umep_source/TsWaveDelay_2015a.py",
+      "sha256": "5310481421e5f144e7a813e1ab41873a48cdf47b7e294f481aa59bd0ae9ed034",
+      "bytes": 791
+    },
+    {
+      "upstream_path": "SOLWEIG/SOLWEIGpython/Solweig_2022a_calc.py",
+      "url": "https://raw.githubusercontent.com/UMEP-dev/UMEP/3fcc0c3dca67d1d5644a6d34b9148d7a365743ba/SOLWEIG/SOLWEIGpython/Solweig_2022a_calc.py",
+      "local_path": "reports/characterization/p8_umep_source/Solweig_2022a_calc.py",
+      "sha256": "9af393e34d059bcbd08f67100a37badafeff60b2bc59a359a7a2570a0d071c5c",
+      "bytes": 20737
+    },
+    {
+      "upstream_path": "SOLWEIG/SOLWEIGpython/sunonsurface_2018a.py",
+      "url": "https://raw.githubusercontent.com/UMEP-dev/UMEP/3fcc0c3dca67d1d5644a6d34b9148d7a365743ba/SOLWEIG/SOLWEIGpython/sunonsurface_2018a.py",
+      "local_path": "reports/characterization/p8_umep_source/sunonsurface_2018a.py",
+      "sha256": "b5abe6568ffad18781b1011e13681238c63a2ebfba21c11c61e40d986089e089",
+      "bytes": 9396
+    }
+  ]
+}

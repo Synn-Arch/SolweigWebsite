@@ -1,0 +1,23 @@
+	Command being timed: "bash -c ulimit -v 12582912; exec env PYTHONNOUSERSITE=1 PYTHONPATH="/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/runtime/stubs:/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/runtime/site:/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/isolated_snapshot/src" NUMBA_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -S tools/run_stage_c_masks.py --paths both --output evidence/stage_c_linux_masks_minimal.json"
+	User time (seconds): 12.15
+	System time (seconds): 9.38
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:21.54
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 280864
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 15
+	Minor (reclaiming a frame) page faults: 516905
+	Voluntary context switches: 83
+	Involuntary context switches: 94
+	Swaps: 0
+	File system inputs: 2560
+	File system outputs: 80
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

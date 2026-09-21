@@ -1,0 +1,167 @@
+{
+  "Kside_difference": 0.32382965087890625,
+  "candidate_asvf": {
+    "uint32_bits": 1057360531,
+    "value": 0.523598849773407
+  },
+  "candidate_extra_Kref_sh_sum": 0.3238292634487152,
+  "classifier": {
+    "shade_changed_patches": [
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      88
+    ],
+    "sun_sets_equal": true
+  },
+  "compiled_outputs_candidate_asvf": [
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    0.0,
+    73.04964447021484,
+    105.30752563476562
+  ],
+  "compiled_outputs_upstream_asvf": [
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    0.0,
+    73.04964447021484,
+    104.98369598388672
+  ],
+  "per_patch": [
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 2.0,
+      "building": true,
+      "candidate_extra_Kref_sh": 0.0809573158621788,
+      "patch": 61
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 14.85714340209961,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 62
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 27.71428680419922,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 63
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 40.57143020629883,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 64
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 53.42857360839844,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 65
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 66.28572082519531,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 66
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 79.14286041259766,
+      "building": true,
+      "candidate_extra_Kref_sh": 0.0809573158621788,
+      "patch": 67
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 92.0,
+      "building": true,
+      "candidate_extra_Kref_sh": 0.0809573158621788,
+      "patch": 68
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 104.85714721679688,
+      "building": true,
+      "candidate_extra_Kref_sh": 0.0809573158621788,
+      "patch": 69
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 117.71429443359375,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 70
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 130.57144165039062,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 71
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 143.42857360839844,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 72
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 156.2857208251953,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 73
+    },
+    {
+      "altitude": 30.000001907348633,
+      "azimuth": 349.14288330078125,
+      "building": false,
+      "candidate_extra_Kref_sh": 0.0,
+      "patch": 88
+    }
+  ],
+  "serial_outputs_candidate_asvf": [
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    0.0,
+    73.04964447021484,
+    105.30752563476562
+  ],
+  "serial_outputs_upstream_asvf": [
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    4.384219169616699,
+    0.0,
+    73.04964447021484,
+    104.98369598388672
+  ],
+  "upstream_torch_asvf": {
+    "uint32_bits": 1057360530,
+    "value": 0.5235987901687622
+  }
+}

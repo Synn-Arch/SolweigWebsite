@@ -1,0 +1,83 @@
+{
+  "every_timestep_exactness_passed": true,
+  "failures_retained": [
+    {
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/targeted/attempt_v1_failure.json",
+      "reason": "Guard attempted nonexistent solweig_light.radiation.ground_view_compiled module; pytest did not start. Correct module is solweig_light.radiation.ground_view.",
+      "sha256": "6dbbe43ca522a9ae82e95a4122439c37d0da3fe884d9e748f5b1c467e247f8ae"
+    },
+    {
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/targeted/attempt_v2_failure.json",
+      "reason": "Guard attempted visibility_compiled from radiation; actual module is solweig_light.geometry.visibility_compiled; pytest did not start.",
+      "sha256": "2f966ea3545f65e7bbddc9e345369510ba814554914fa7a7bb4743ccd0a86115"
+    }
+  ],
+  "performance_claim": null,
+  "promotion_approved": false,
+  "purpose": "combined component admission and exact correctness traces; no timing",
+  "review_path": "reports/characterization/local_cpu_optimization_v1/reviews/combined_source_review.json",
+  "review_sha256": "84c500dd05af1dea9106ac1d07e1c7b4f9fa1c011d0557544d85b9024425177d",
+  "schema": "local-cpu-optimization-v1-combined-v1-qualification.v1",
+  "source_file_count": 49,
+  "source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+  "source_manifest_sha256": "93b1726ced500666edb40697fac53ba5b61d26f2a666be26a41c2ed8a7efc30a",
+  "source_path": "reports/characterization/local_cpu_optimization_v1/candidates/combined_v1/src",
+  "status": "passed",
+  "targeted_suite": {
+    "failed": 0,
+    "junit_path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/targeted/junit.xml",
+    "junit_sha256": "de86903697e67f3c0ebfe7b2669319c81f7d322ac7245532cc551bf316607e4d",
+    "origin_guarded": true,
+    "passed": 1131,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "077958a53acb2b5fe8b55cb673735c7367a635133555ccd300c014226a97c72e",
+    "torch_imported": false
+  },
+  "traces": {
+    "t10_b1024": {
+      "artifacts_exact": true,
+      "comparison_sha256": "c3be5b4eb456d84ee1427ca689166b74da064982e42d852c5c0d8576d805d59b",
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "final_state_exact": true,
+      "geometry_exact": true,
+      "manifest_sha256": "19a9b07e38f1b4e433c1a86ff74c3bae54755103d1fd8757b794d448f8b70ee8",
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/traces/t10_b1024",
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "trace_records": 72
+    },
+    "t1_b128": {
+      "artifacts_exact": true,
+      "comparison_sha256": "a4ec974c2d0bc1e1475db8370222a8ee7876d2c206e17bf4f55c6a9f9a05b424",
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "final_state_exact": true,
+      "geometry_exact": true,
+      "manifest_sha256": "aeecfff18df595ad195b01a108de6151f9c1591cd057ee3e4b7272381b62af61",
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/traces/t1_b128",
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "trace_records": 72
+    },
+    "t4_b1024": {
+      "artifacts_exact": true,
+      "comparison_sha256": "84023407d3dcf76ca32f6035bc1d6b62c607988a48c46b6f28982f2fda52b29a",
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "final_state_exact": true,
+      "geometry_exact": true,
+      "manifest_sha256": "158db24d802a1f2ed3ef702afe52ecaa831231fcd13593a54913c6a7a0273a65",
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/combined_v1/traces/t4_b1024",
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "trace_records": 72
+    }
+  }
+}

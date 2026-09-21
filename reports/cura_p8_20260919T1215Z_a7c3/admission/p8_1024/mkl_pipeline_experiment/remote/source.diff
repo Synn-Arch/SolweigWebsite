@@ -1,0 +1,118 @@
+diff -ru '--exclude=__pycache__' '--exclude=*.pyc' /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/identities.py source/src/solweig_light/identities.py
+--- /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/identities.py	2026-09-18 15:40:12.622724517 -0400
++++ source/src/solweig_light/identities.py	2026-09-19 18:25:33.328586328 -0400
+@@ -39,9 +39,11 @@
+ 
+ def geometry_identity(paths, patch_option):
+     from .geometry.shadows import create_patches
++    from .radiation.math_profile import profile_identity
+ 
+     return {
+         'policy': 'legacy-logical-domain-geometry-v1', 'upstream_commit': BASELINE,
++        'diagnostic_math_profile': profile_identity(),
+         'inputs': {name: raster_fingerprint(paths[name])
+                    for name in ('Building_DSM', 'Trees', 'DEM')},
+         'patch_option': int(patch_option),
+@@ -52,17 +54,19 @@
+         'implementation': implementation_identity([
+             'identities.py', 'pipeline.py',
+             'geometry/svf.py', 'geometry/shadows.py', 'geometry/sky_compiled.py',
+-            'geometry/visibility.py', 'geometry/visibility_native.py']),
++            'geometry/visibility.py', 'geometry/visibility_native.py', 'radiation/math_profile.py']),
+         'dependencies': {name: version(name) for name in ('numpy', 'numba', 'GDAL')},
+     }
+ 
+ 
+ def simulation_identity(paths, wind_paths, selected_date, tile, flags, location, utc):
++    from .radiation.math_profile import profile_identity
+     files = ['pipeline.py', 'models.py', 'data/landcoverclasses_2016a.txt']
+     for folder in ('radiation', 'comfort', 'geometry'):
+         files.extend(str(path.relative_to(PACKAGE)) for path in (PACKAGE / folder).glob('*.py'))
+     return {
+         'policy': 'chronological-compatibility-v1', 'upstream_commit': BASELINE,
++        'diagnostic_math_profile': profile_identity(),
+         'tile': tile, 'selected_date': selected_date,
+         'location': {key: float(value).hex() for key, value in location.items()},
+         'utc_offset_hours': float(utc).hex(), 'requested_outputs': dict(flags),
+diff -ru '--exclude=__pycache__' '--exclude=*.pyc' /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/pipeline.py source/src/solweig_light/pipeline.py
+--- /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/pipeline.py	2026-09-18 15:42:03.703912349 -0400
++++ source/src/solweig_light/pipeline.py	2026-09-19 18:25:33.327586325 -0400
+@@ -192,7 +192,8 @@
+             geometry = produce_geometry()
+     svf, svfveg = geometry["svf"], geometry["svfveg"]
+     svfbuveg = svf - (1 - svfveg) * np.float32(1 - .03)
+-    asvf = np.arccos(np.sqrt(svf))
++    from .radiation.math_profile import sqrt_acos
++    asvf = sqrt_acos(svf)
+     diffsh = LazyDiffVisibility(geometry["shmat"], geometry["vegshmat"])
+     tmp = np.maximum(svf + svfveg - 1, np.float32(0))
+     with np.errstate(divide="ignore"):
+diff -ru '--exclude=__pycache__' '--exclude=*.pyc' /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/radiation/engine.py source/src/solweig_light/radiation/engine.py
+--- /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/radiation/engine.py	2026-09-18 16:38:18.755654288 -0400
++++ source/src/solweig_light/radiation/engine.py	2026-09-19 18:29:28.484487792 -0400
+@@ -422,17 +422,18 @@
+     Returns:
+         np.ndarray: Binary mask (1=sunlit, 0=shaded)
+     """
++    from . import math_profile
+     patch_to_sun_azi = np.abs(_operate(np.subtract, solar_azimuth, patch_azimuth))
+     deg2rad = _divide(np.pi, 180.0)
+     rad2deg = _divide(180.0, np.pi)
+-    xi = np.cos(_operate(np.multiply, patch_to_sun_azi, deg2rad))
++    xi = math_profile.cos(_operate(np.multiply, patch_to_sun_azi, deg2rad))
+     if not isinstance(solar_altitude, np.ndarray):
+         raise TypeError('tan(): solar_altitude must be a tensor-origin array')
+-    yi = _operate(np.multiply, _operate(np.multiply, 2, xi), np.tan(_operate(np.multiply, solar_altitude, deg2rad)))
+-    hsvf = np.tan(asvf)
++    yi = _operate(np.multiply, _operate(np.multiply, 2, xi), math_profile.tan(_operate(np.multiply, solar_altitude, deg2rad)))
++    hsvf = math_profile.tan(asvf)
+     yi_ = np.where(yi > 0, 0.0, yi)
+     tan_delta = _operate(np.add, hsvf, yi_)
+-    sunlit_degrees = _operate(np.multiply, np.arctan(tan_delta), rad2deg)
++    sunlit_degrees = _operate(np.multiply, math_profile.atan(tan_delta), rad2deg)
+     sunlit_patches = sunlit_degrees < patch_altitude
+     shaded_patches = sunlit_degrees > patch_altitude
+     return (sunlit_patches, shaded_patches)
+Only in source/src/solweig_light/radiation: math_profile.py
+diff -ru '--exclude=__pycache__' '--exclude=*.pyc' /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/radiation/patch_radiation.py source/src/solweig_light/radiation/patch_radiation.py
+--- /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/radiation/patch_radiation.py	2026-09-18 16:28:23.572227869 -0400
++++ source/src/solweig_light/radiation/patch_radiation.py	2026-09-19 18:29:28.484487792 -0400
+@@ -123,6 +123,7 @@
+     the engine does when adding it to the raster. This is per-call state.
+     """
+     from . import engine as e
++    from . import math_profile
+     field=np.asarray(asvf)
+     if (field.dtype != np.float32 or geometry.altitude.dtype != np.float32
+             or geometry.azimuth.dtype != np.float32 or np.ndim(altitude) != 0
+@@ -133,16 +134,17 @@
+     for column,patch in enumerate(indices):
+         difference=np.abs(e._operate(np.subtract,azimuth,geometry.azimuth[patch]))
+         deg2rad=e._divide(np.pi,180.0)
+-        xi=np.cos(e._operate(np.multiply,difference,deg2rad))
++        xi=math_profile.cos(np.asarray(e._operate(np.multiply,difference,deg2rad)))
+         if not isinstance(altitude,np.ndarray):
+             raise TypeError('tan(): solar_altitude must be a tensor-origin array')
+-        yi=e._operate(np.multiply,e._operate(np.multiply,2,xi),np.tan(e._operate(np.multiply,altitude,deg2rad)))
++        yi=e._operate(np.multiply,e._operate(np.multiply,2,xi),math_profile.tan(e._operate(np.multiply,altitude,deg2rad)))
+         coefficients[column]=np.where(yi>0,0.0,yi)
+     return indices,coefficients,e._divide(180.0,np.pi)
+ 
+ 
+ def _classes(altitude,azimuth,geometry,asvf,start,stop,active=None,prepared=None):
+     from . import engine as e
++    from . import math_profile
+     field=np.asarray(asvf).reshape(-1)[start:stop].reshape(-1,1)
+     sun=np.zeros((stop-start,geometry.altitude.size),dtype=np.bool_)
+     shade=np.zeros_like(sun)
+@@ -152,8 +154,8 @@
+         indices,coefficients,rad2deg=prepared
+         if indices.size:
+             # Both raster operations remain float32 and retain their grouping.
+-            delta=np.add(np.tan(field),coefficients[None,:])
+-            degrees=np.multiply(np.arctan(delta),np.asarray(rad2deg,dtype=field.dtype))
++            delta=np.add(math_profile.tan(field),coefficients[None,:])
++            degrees=np.multiply(math_profile.atan(delta),np.asarray(rad2deg,dtype=field.dtype))
+             sun[:,indices]=degrees<geometry.altitude[indices]
+             shade[:,indices]=degrees>geometry.altitude[indices]
+         return sun,shade

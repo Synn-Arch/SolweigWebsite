@@ -1,0 +1,34 @@
+{
+  "status": "verified_angular_compatibility_repair",
+  "numerical_files": {
+    "src/solweig_light/radiation/ground_view.py": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+    "src/solweig_light/radiation/engine.py": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1"
+  },
+  "reference_manifest_sha256": "f976630b94d143f5dfbec53e6a305abf70bf20753ea01bb323895053a760b6a3",
+  "tests": [
+    {
+      "command": "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_ground_view_compiled.py tests/differential/test_p7_ground_view_angular.py",
+      "passed": 186,
+      "log": "p7-groundview-mask-final.log"
+    },
+    {
+      "command": "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_patch_radiation.py tests/differential/test_state_sequence_reference.py tests/differential/test_delay_reference.py",
+      "passed": 682,
+      "log": "p7-final-patch-state.log"
+    },
+    {
+      "command": "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_state_resume.py",
+      "passed": 5,
+      "log": "p7-final-state-resume.log"
+    }
+  ],
+  "first_daytime_gvf": "17 original return channels bitwise equal",
+  "full_real_verification": "reports/runs/p7_real_dense_urban_angular_final_check/verification.json",
+  "full_real_verification_sha256": "1a204639a37669109fdb2dd6c4ff82e2dd6270412c0342ecbca9703c22257c81",
+  "limitations": [
+    "Not a performance benchmark",
+    "All other fixture final gates owned by lead",
+    "Preserved P6 real-scene failure remains unchanged"
+  ],
+  "reporting_correction": "Updated linked report digest after candidate-variant label correction; numerical evidence unchanged."
+}

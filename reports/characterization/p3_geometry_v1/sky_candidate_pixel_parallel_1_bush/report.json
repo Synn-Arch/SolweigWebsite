@@ -1,0 +1,73 @@
+{
+  "backend": "candidate",
+  "task": "sky",
+  "method": "pixel",
+  "parallel": true,
+  "bush": true,
+  "threads": 1,
+  "input_sha256": "04a33d5023b108308dc0b77ef7dcab1daa4441c8535b5cc2c72f212a5d2b5658",
+  "protocol_sha256": "ed584faba248d7b4db64756c6c47907564769562f196d12356f5daa332ba322e",
+  "first_call_seconds": 1.9005733330268413,
+  "warm_seconds": [
+    0.013368249987252057,
+    0.013746750075370073,
+    0.013059207936748862,
+    0.013786583091132343,
+    0.01383091602474451
+  ],
+  "process_lifetime_peak_rss_bytes": 171917312,
+  "retained_output_or_visibility_payload_bytes": 245760,
+  "artifacts": {
+    "fields.npz": "a860a9a84967d9f249f40fa67a1b1a4fdd4096cf606ea367848679e254383cc2"
+  },
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "invocation": [
+    "/Users/alansynn/Workspace/solweig-light/tools/benchmark_p3_geometry.py",
+    "--backend",
+    "candidate",
+    "--task",
+    "sky",
+    "--method",
+    "pixel",
+    "--threads",
+    "1",
+    "--output",
+    "/Users/alansynn/Workspace/solweig-light/reports/runs/p3_geometry_v1/sky_candidate_pixel_parallel_1_bush",
+    "--parallel",
+    "--bush"
+  ],
+  "environment": {
+    "solweig-light": "0.1.0.dev0",
+    "timezonefinder": "9.0.0",
+    "packaging": "26.3",
+    "iniconfig": "2.3.0",
+    "Pygments": "2.21.0",
+    "pytz": "2026.3.post1",
+    "numpy": "2.4.6",
+    "build": "1.6.1",
+    "pip": "26.2.1",
+    "pytest": "9.1.1",
+    "setuptools": "84.0.0",
+    "pycparser": "3.0",
+    "llvmlite": "0.49.0",
+    "timezonefinder-data": "3.2026.3.post1",
+    "pyproject_hooks": "1.3.3",
+    "numba": "0.67.0",
+    "cffi": "2.1.1",
+    "scipy": "1.17.1",
+    "flatbuffers": "25.12.19",
+    "pluggy": "1.6.0",
+    "GDAL": "3.13.3",
+    "h3": "4.5.0"
+  },
+  "thread_environment": {
+    "NUMBA_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "numba_cache_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/p3_geometry_v1/sky_candidate_pixel_parallel_1_bush_cache",
+  "peak_memory_includes": "imports,fixture,JIT,calls,finalexport; not process-tree RSS"
+}

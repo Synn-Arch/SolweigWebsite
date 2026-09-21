@@ -1,0 +1,15 @@
+{
+  "scope": "E1: route engine GVF to existing pixel-owned parallel gather when runtime threads >1; no arithmetic change",
+  "snapshot": "/var/folders/3d/cclyxf1x3bjf_y3pf071s1r00000gr/T/solweig-exact-gvf-qew9anrf",
+  "source_manifest": "/var/folders/3d/cclyxf1x3bjf_y3pf071s1r00000gr/T/solweig-exact-gvf-qew9anrf/source_manifest.json",
+  "tests": 216,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "new_exact_dispatch_cases": 30,
+  "junit": "/var/folders/3d/cclyxf1x3bjf_y3pf071s1r00000gr/T/solweig-exact-gvf-qew9anrf/gvf.junit.xml",
+  "log": "/var/folders/3d/cclyxf1x3bjf_y3pf071s1r00000gr/T/solweig-exact-gvf-qew9anrf/gvf.log",
+  "benchmarks_executed": false,
+  "promotion": false,
+  "proof": "Existing pixel gather body is unchanged. Outer directions and inner ray steps retain order; independent pixel writes. Unsupported dtype/failure path unchanged. Water Tg and all inputs are compared after calls."
+}

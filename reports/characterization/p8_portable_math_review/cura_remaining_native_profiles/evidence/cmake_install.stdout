@@ -1,0 +1,5 @@
+Collecting cmake==4.1.0
+  Using cached cmake-4.1.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.5 kB)
+Using cached cmake-4.1.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (29.7 MB)
+Installing collected packages: cmake
+Successfully installed cmake-4.1.0

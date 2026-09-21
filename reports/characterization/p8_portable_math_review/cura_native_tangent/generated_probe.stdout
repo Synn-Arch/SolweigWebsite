@@ -1,0 +1,98 @@
+{
+  "core_math": {
+    "sleef_u35_avx512": {
+      "four_residual_rows_hsvf_bits": [
+        1075788189,
+        1075788189,
+        1075788189,
+        1075788186
+      ],
+      "shade_mismatches": 13,
+      "sun_mismatches": 27
+    },
+    "sleef_u35_scalar": {
+      "four_residual_rows_hsvf_bits": [
+        1075788189,
+        1075788189,
+        1075788189,
+        1075788186
+      ],
+      "shade_mismatches": 13,
+      "sun_mismatches": 27
+    },
+    "svml_la": {
+      "four_residual_rows_hsvf_bits": [
+        1075788190,
+        1075788190,
+        1075788190,
+        1075788186
+      ],
+      "shade_mismatches": 31,
+      "sun_mismatches": 19
+    }
+  },
+  "intel_igc_ha": {
+    "sleef_u35_avx512": {
+      "four_residual_rows_hsvf_bits": [
+        1075788189,
+        1075788189,
+        1075788189,
+        1075788186
+      ],
+      "shade_mismatches": 9,
+      "sun_mismatches": 25
+    },
+    "sleef_u35_scalar": {
+      "four_residual_rows_hsvf_bits": [
+        1075788189,
+        1075788189,
+        1075788189,
+        1075788186
+      ],
+      "shade_mismatches": 9,
+      "sun_mismatches": 25
+    },
+    "svml_la": {
+      "four_residual_rows_hsvf_bits": [
+        1075788190,
+        1075788190,
+        1075788190,
+        1075788186
+      ],
+      "shade_mismatches": 24,
+      "sun_mismatches": 17
+    }
+  },
+  "sleef_fma": {
+    "sleef_u35_avx512": {
+      "four_residual_rows_hsvf_bits": [
+        1075788189,
+        1075788189,
+        1075788189,
+        1075788186
+      ],
+      "shade_mismatches": 15,
+      "sun_mismatches": 25
+    },
+    "sleef_u35_scalar": {
+      "four_residual_rows_hsvf_bits": [
+        1075788189,
+        1075788189,
+        1075788189,
+        1075788186
+      ],
+      "shade_mismatches": 15,
+      "sun_mismatches": 25
+    },
+    "svml_la": {
+      "four_residual_rows_hsvf_bits": [
+        1075788190,
+        1075788190,
+        1075788190,
+        1075788186
+      ],
+      "shade_mismatches": 31,
+      "sun_mismatches": 15
+    }
+  }
+}

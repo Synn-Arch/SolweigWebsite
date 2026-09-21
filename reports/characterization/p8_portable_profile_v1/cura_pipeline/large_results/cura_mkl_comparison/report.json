@@ -1,0 +1,686 @@
+{
+  "candidate": "installed Linux portable-profile wheel outputs produced on Cura",
+  "cases": {
+    "dense1024": {
+      "comparison_path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/cura_mkl_comparison/dense1024_original_cura_mkl_vs_linux_profile.json",
+      "comparison_sha256": "33fb622c99dce4ea605291d6ee25746c88b773f8aa084551aac18e99b05fc65f",
+      "geometry_worst": [
+        {
+          "field": "svf.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfE.tif",
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            27,
+            2
+          ]
+        },
+        {
+          "field": "svfEaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfEveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfN.tif",
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            77,
+            32
+          ]
+        },
+        {
+          "field": "svfNaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfNveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfS.tif",
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            20,
+            29
+          ]
+        },
+        {
+          "field": "svfSaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfSveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfW.tif",
+          "max_abs": 7.450580596923828e-09,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            12,
+            29
+          ]
+        },
+        {
+          "field": "svfWaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfWveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "shadowmats/shadowmat",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": null
+        },
+        {
+          "field": "shadowmats/vbshmat",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": null
+        },
+        {
+          "field": "shadowmats/vegshadowmat",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": null
+        }
+      ],
+      "output_worst": [
+        {
+          "field": "Kdown",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.00018310546875,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 13,
+          "worst_coordinate_row_col": [
+            26,
+            39
+          ],
+          "worst_timestep_index_0_based": 12
+        },
+        {
+          "field": "Kup",
+          "masks_equal_all_bands": true,
+          "max_abs": 1.52587890625e-05,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 11,
+          "worst_coordinate_row_col": [
+            28,
+            24
+          ],
+          "worst_timestep_index_0_based": 10
+        },
+        {
+          "field": "Ldown",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.00048828125,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 15,
+          "worst_coordinate_row_col": [
+            58,
+            118
+          ],
+          "worst_timestep_index_0_based": 14
+        },
+        {
+          "field": "Lup",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 11,
+          "worst_coordinate_row_col": [
+            95,
+            8
+          ],
+          "worst_timestep_index_0_based": 10
+        },
+        {
+          "field": "Shadow",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 1,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ],
+          "worst_timestep_index_0_based": 0
+        },
+        {
+          "field": "TMRT",
+          "masks_equal_all_bands": true,
+          "max_abs": 9.1552734375e-05,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 10,
+          "worst_coordinate_row_col": [
+            58,
+            121
+          ],
+          "worst_timestep_index_0_based": 9
+        },
+        {
+          "field": "Ta",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 1,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ],
+          "worst_timestep_index_0_based": 0
+        },
+        {
+          "field": "UTCI",
+          "masks_equal_all_bands": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 11,
+          "worst_coordinate_row_col": [
+            77,
+            1023
+          ],
+          "worst_timestep_index_0_based": 10
+        },
+        {
+          "field": "WBGT",
+          "masks_equal_all_bands": true,
+          "max_abs": 8.392333984375e-05,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 12,
+          "worst_coordinate_row_col": [
+            20,
+            2
+          ],
+          "worst_timestep_index_0_based": 11
+        },
+        {
+          "field": "Wind",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 1,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ],
+          "worst_timestep_index_0_based": 0
+        }
+      ],
+      "passed": true,
+      "summary": {
+        "failed_geometry": [],
+        "failed_outputs": [],
+        "geometry_count": 18,
+        "inventory_ok": true,
+        "output_band_count": 240,
+        "output_count": 10
+      }
+    },
+    "vegetation1024": {
+      "comparison_path": "reports/characterization/p8_portable_profile_v1/cura_pipeline/large_results/cura_mkl_comparison/vegetation1024_original_cura_mkl_vs_linux_profile.json",
+      "comparison_sha256": "dec03251d53c864eeabc85d1a1d5c815dbfb860eca1c9c4db540fbe4fb90c5f0",
+      "geometry_worst": [
+        {
+          "field": "svf.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfE.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfEaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfEveg.tif",
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            12,
+            20
+          ]
+        },
+        {
+          "field": "svfN.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfNaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfNveg.tif",
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            39,
+            99
+          ]
+        },
+        {
+          "field": "svfS.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfSaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfSveg.tif",
+          "max_abs": 1.4901161193847656e-08,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            21,
+            114
+          ]
+        },
+        {
+          "field": "svfW.tif",
+          "max_abs": 3.725290298461914e-09,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            16,
+            19
+          ]
+        },
+        {
+          "field": "svfWaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfWveg.tif",
+          "max_abs": 7.450580596923828e-09,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            18,
+            73
+          ]
+        },
+        {
+          "field": "svfaveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "svfveg.tif",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ]
+        },
+        {
+          "field": "shadowmats/shadowmat",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": null
+        },
+        {
+          "field": "shadowmats/vbshmat",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": null
+        },
+        {
+          "field": "shadowmats/vegshadowmat",
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_coordinate_row_col": null
+        }
+      ],
+      "output_worst": [
+        {
+          "field": "Kdown",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.00547027587890625,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 14,
+          "worst_coordinate_row_col": [
+            43,
+            84
+          ],
+          "worst_timestep_index_0_based": 13
+        },
+        {
+          "field": "Kup",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.000843048095703125,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 14,
+          "worst_coordinate_row_col": [
+            51,
+            116
+          ],
+          "worst_timestep_index_0_based": 13
+        },
+        {
+          "field": "Ldown",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.000457763671875,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 15,
+          "worst_coordinate_row_col": [
+            15,
+            111
+          ],
+          "worst_timestep_index_0_based": 14
+        },
+        {
+          "field": "Lup",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 13,
+          "worst_coordinate_row_col": [
+            13,
+            89
+          ],
+          "worst_timestep_index_0_based": 12
+        },
+        {
+          "field": "Shadow",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 1,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ],
+          "worst_timestep_index_0_based": 0
+        },
+        {
+          "field": "TMRT",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0001220703125,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 13,
+          "worst_coordinate_row_col": [
+            75,
+            106
+          ],
+          "worst_timestep_index_0_based": 12
+        },
+        {
+          "field": "Ta",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 1,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ],
+          "worst_timestep_index_0_based": 0
+        },
+        {
+          "field": "UTCI",
+          "masks_equal_all_bands": true,
+          "max_abs": 6.103515625e-05,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 11,
+          "worst_coordinate_row_col": [
+            1022,
+            82
+          ],
+          "worst_timestep_index_0_based": 10
+        },
+        {
+          "field": "WBGT",
+          "masks_equal_all_bands": true,
+          "max_abs": 8.392333984375e-05,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 12,
+          "worst_coordinate_row_col": [
+            20,
+            115
+          ],
+          "worst_timestep_index_0_based": 11
+        },
+        {
+          "field": "Wind",
+          "masks_equal_all_bands": true,
+          "max_abs": 0.0,
+          "passed": true,
+          "schema_equal": true,
+          "worst_band_1_based": 1,
+          "worst_coordinate_row_col": [
+            0,
+            0
+          ],
+          "worst_timestep_index_0_based": 0
+        }
+      ],
+      "passed": true,
+      "summary": {
+        "failed_geometry": [],
+        "failed_outputs": [],
+        "geometry_count": 18,
+        "inventory_ok": true,
+        "output_band_count": 240,
+        "output_count": 10
+      }
+    }
+  },
+  "comparison_protocol": {
+    "path": "benchmarks/protocols/comparison_v1.json",
+    "sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd"
+  },
+  "historical_pre_profile_main_evidence_preserved": {
+    "dense1024": {
+      "candidate": "historical pre-profile main candidate",
+      "failures": [
+        {
+          "failed_band_count": 12,
+          "field": "output_folder/0_0/TMRT_0_0.tif",
+          "max_abs": 0.04949951171875,
+          "worst_band_1_based": 17,
+          "worst_coordinate_row_col": [
+            36,
+            185
+          ],
+          "worst_timestep_index_0_based": 16
+        }
+      ],
+      "geometry_passed": true,
+      "geometry_report": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/dense_urban/geometry_comparison.json",
+      "geometry_report_sha256": "6283daff2f66ba0c611d54144d09302008e70cebeb9195cbcf1f833a379bdb54",
+      "output_passed": false,
+      "output_report": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/dense_urban/output_comparison.json",
+      "output_report_sha256": "3fc86b36fb950207a2ef0ebcf5fe30a5f86dd465f21aa7fa07df22f390690be1"
+    },
+    "vegetation1024": {
+      "candidate": "historical pre-profile main candidate",
+      "failures": [],
+      "geometry_passed": true,
+      "geometry_report": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/vegetation_rich/geometry_comparison.json",
+      "geometry_report_sha256": "5e4f585293b31a7e5a0b7cb7490f4d7343929b03b200b6490f5bb559895222b3",
+      "output_passed": true,
+      "output_report": "reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/vegetation_rich/output_comparison.json",
+      "output_report_sha256": "9bab663c503a82f0ce624f944a0e9f377fc2706f285f735491da5e7c48fbd6f4"
+    }
+  },
+  "interpretation": "The new Linux portable profile passes the historical field/schema/mask and geometry gates against original Cura MKL for both fixtures. The prior dense failure belongs to the historical pre-profile main candidate and remains preserved; it is not overwritten or reclassified.",
+  "new_profile_passed_historical_gates": true,
+  "no_gate_waiver": true,
+  "no_new_execution": true,
+  "purpose": "Mandatory cross-platform disagreement characterization; this does not replace or waive the canonical original M1 SLEEF admission gate.",
+  "reference": "original upstream CPU MKL raw outputs produced on Cura",
+  "schema": "portable-profile-v1-original-cura-mkl-disagreement.v1"
+}

@@ -1,0 +1,41 @@
+--- reports/characterization/p7_p6_baseline/src/solweig_light/geometry/svf.py	2026-09-18 14:03:50
++++ src/solweig_light/geometry/svf.py	2026-09-18 16:57:13
+@@ -16,10 +16,11 @@
+ import tempfile
+ import zipfile
+ import numpy as np
++from numba import njit
+ from .shadows import shadow, create_patches
+ 
+ 
+-def annulus_weight(altitude, aziinterval):
++def _annulus_weight_numpy(altitude, aziinterval):
+     n=np.float32(90)
+     altitude=np.asarray(altitude)
+     # Integer inputs become float32 when mixed with the default floating scalar.
+@@ -30,6 +31,25 @@
+     return steprad*w
+ 
+ 
++@njit(cache=True, fastmath=False, error_model="numpy")
++def _annulus_weight_scalar(altitude, interval):
++    """Preserve reflected scalar division and native float32 sine calls."""
++    n = np.float32(90)
++    annulus = np.float32(91) - altitude
++    steprad = ((np.float32(1) / interval) * np.float32(360)) * np.float32(np.pi / 180)
++    # Upstream Python scalar / tensor uses reciprocal then multiply.
++    angle = (np.float32(1) / (np.float32(2) * n)) * np.float32(np.pi)
++    other = (np.float32(np.pi) * (np.float32(2) * annulus - np.float32(1))) / (np.float32(2) * n)
++    weight = np.float32(1 / (2 * np.pi)) * np.sin(angle) * np.sin(other)
++    return np.float32(steprad * weight)
++
++
++def annulus_weight(altitude, aziinterval):
++    if np.ndim(altitude) or np.ndim(aziinterval):
++        return _annulus_weight_numpy(altitude, aziinterval)
++    return np.float32(_annulus_weight_scalar(np.float32(altitude), np.float32(aziinterval)))
++
++
+ def save_raster_like_gdal(template,path,array):
+     from osgeo import gdal
+     gdal.UseExceptions()

@@ -1,0 +1,155 @@
+{
+  "acceptance": {
+    "development_selection": "Diagnostic only. Advance candidates with median baseline/candidate >=1.03 in at least one cell, subject to exactness. Smaller changes may be combined only when independently proven and a specific mechanism justifies another frozen experiment; do not label a 3-pair development result a release speedup.",
+    "holdout": "Dense1024 and vegetation1024 original SLEEF fixtures remain correctness holdouts and require final candidate requalification. Full original/tuned CPU release benchmark matrix stays P7/P8 pending.",
+    "memory": "12GiB process-tree RSS cap at20ms; shared-page and between-sample caveats;10GiB diskreserve.",
+    "numerical": "Exact finite bits including signed zero, special masks, all artifacts and carried state; frozen original-reference gates unchanged. No fastmath, physics reduction, or chronological parallelism.",
+    "promotion": "Separate protocol frozen before held-out performance, at least five pairs per cell. Primary warm repeated256 chosen budget must have median baseline/candidate >=1.05 and paired geometric-mean bootstrap 95% lower bound >1.0. Required small/single-thread/warm guard cells must have candidate/baseline median <=1.03. First-use median <=1.10; any >1.03 first-use regression requires >=1.15 primary warm gain and explicit disclosure. Peak RSS <=12GiB and no material unexplained memory increase. All required current-profile/original-reference, per-step trace, and artifact gates pass. Independent final review; no automatic promotion.",
+    "retention": "Last output histories retained for each cell/side; before replacing earlier successful histories, atomically persist and fsync exact comparisons, state/geometry/output hashes, raw metrics and failures. Never remove historical evidence or original goldens.",
+    "uncertainty": "Report every raw pair, paired ratios, range and bootstrap interval with five-pair limitation; no stopping when a favorable result appears."
+  },
+  "baseline_commit": "8ca23d444a3b05bdeb76655329c0a09c3dc4d6e8",
+  "bindings": {
+    "harness": "b7f52b0c897e16b0a4071af06c3fa549537e95cc201d94f57eafb04f00c0a80d",
+    "helpers": "d688ae60fbd82e13ecf58b2598f13ba3aa66201ddf56ed1857ffd9c7c12720d5"
+  },
+  "cells": [
+    {
+      "baseline_block_pixels": 128,
+      "budget": 4,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "e1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 10,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "e1"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "e2"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 10,
+      "candidate_block_pixels": 128,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "e2"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 1024,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "block"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 10,
+      "candidate_block_pixels": 1024,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "block"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 1,
+      "candidate_block_pixels": 4096,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "block"
+    },
+    {
+      "baseline_block_pixels": 128,
+      "budget": 10,
+      "candidate_block_pixels": 4096,
+      "fixture": "repeated_block_256",
+      "regime": "geometry_warm",
+      "repetitions": 3,
+      "variant": "block"
+    }
+  ],
+  "fixtures": {
+    "repeated_block_256": {
+      "expected_tiles": [
+        "0_0"
+      ],
+      "files": {
+        "Building_DSM.tif": "04bbdad13f193fed032267a073494043208cb3065d51d606c5406d5d8e63ad46",
+        "DEM.tif": "85ab26fcec6fa193ca5d5d116eb1560c03b44d9f87c32dce0988b0d3ef29334e",
+        "Trees.tif": "c2be750fa8c2c263a968a097afc225e792015bf9dc86b9f828b76a746447a3bd",
+        "manifest.json": "71c5b8eb6aa15b981cea1a0b488d0faad556498374e484c360d8a4d094f173b3",
+        "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+      },
+      "kwargs": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene/kwargs.json",
+      "kwargs_sha256": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+      "scene": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene",
+      "shape": [
+        256,
+        256
+      ]
+    }
+  },
+  "patches": 153,
+  "purpose": "development_selection",
+  "runtime": {
+    "checkpoint_interval": 1,
+    "maximum_trial_seconds": 3600
+  },
+  "schema_version": 1,
+  "seed": 20260920,
+  "sources": {
+    "baseline": {
+      "admission": {
+        "path": "reports/characterization/local_cpu_optimization_v1/qualification/candidates/baseline/qualification.json",
+        "sha256": "60b45c8d40e9b96d2a55b740d28f2846f7e9ee505538e6024a4d806a72073e64"
+      },
+      "inventory_sha256": "03c30e8fed55c9aa15ae7e6f5f6f4a34a0709dbf7802156ccfb90be4449a4722",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/baseline/src"
+    },
+    "block": {
+      "admission": {
+        "path": "reports/characterization/local_cpu_optimization_v1/qualification/candidates/baseline/qualification.json",
+        "sha256": "60b45c8d40e9b96d2a55b740d28f2846f7e9ee505538e6024a4d806a72073e64"
+      },
+      "inventory_sha256": "03c30e8fed55c9aa15ae7e6f5f6f4a34a0709dbf7802156ccfb90be4449a4722",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/baseline/src"
+    },
+    "e1": {
+      "admission": {
+        "path": "reports/characterization/local_cpu_optimization_v1/qualification/candidates/e1/qualification.json",
+        "sha256": "f34c0da72ce0a1c02918076541e721f8d6e31c3b2b8126947f74410c3a284959"
+      },
+      "inventory_sha256": "2969eed07382ca458462f1a8d9f0bd5003ddaead73d4988540db526fdeb3b67b",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/e1/src"
+    },
+    "e2": {
+      "admission": {
+        "path": "reports/characterization/local_cpu_optimization_v1/qualification/candidates/e2/qualification.json",
+        "sha256": "cc5890405c21e8a8831d58899e3dc1b6b027e56970abeb789da7480216234e11"
+      },
+      "inventory_sha256": "cb9db2e53482642f080362ff75546a8c299fd069c3ed0185474a968d37bcab53",
+      "path": "reports/characterization/local_cpu_optimization_v1/candidates/e2/src"
+    }
+  },
+  "status": "reviewed_frozen",
+  "timesteps": 24
+}

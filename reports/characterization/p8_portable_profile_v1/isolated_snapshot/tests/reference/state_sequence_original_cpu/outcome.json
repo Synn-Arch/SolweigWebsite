@@ -1,0 +1,2054 @@
+{
+  "status": "verified_original_capture",
+  "return_repr": "None",
+  "timesteps": 48,
+  "engine_boundary_events": 96,
+  "state_links_checked": 423,
+  "daily_Twater_means": [
+    25.588613264166668,
+    29.588613264166668
+  ],
+  "driver_context": [
+    {
+      "step": 0,
+      "dectime": 200.0,
+      "midnight": true,
+      "Twater_recomputed": true,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": 1,
+      "CI_reset_branch": "else: CI = 1."
+    },
+    {
+      "step": 1,
+      "dectime": 200.04166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 2,
+      "dectime": 200.08333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 3,
+      "dectime": 200.125,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 4,
+      "dectime": 200.16666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 5,
+      "dectime": 200.20833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 6,
+      "dectime": 200.25,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 7,
+      "dectime": 200.29166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 8,
+      "dectime": 200.33333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 9,
+      "dectime": 200.375,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 10,
+      "dectime": 200.41666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.9947697520256042,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 11,
+      "dectime": 200.45833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.9035689830780029,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 12,
+      "dectime": 200.5,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.8368232250213623,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 13,
+      "dectime": 200.54166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.7859716415405273,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 14,
+      "dectime": 200.58333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.7492141127586365,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 15,
+      "dectime": 200.625,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.7291687726974487,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 16,
+      "dectime": 200.66666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.724055826663971,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 17,
+      "dectime": 200.70833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.7261403799057007,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 18,
+      "dectime": 200.75,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.7283871173858643,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 19,
+      "dectime": 200.79166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.7199468016624451,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 20,
+      "dectime": 200.83333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.6657730937004089,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 21,
+      "dectime": 200.875,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.33897244930267334,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 22,
+      "dectime": 200.91666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.33897244930267334,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 23,
+      "dectime": 200.95833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 25.588613264166668,
+      "CI_entering_engine": 0.33897244930267334,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 24,
+      "dectime": 201.0,
+      "midnight": true,
+      "Twater_recomputed": true,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": 1,
+      "CI_reset_branch": "else: CI = 1."
+    },
+    {
+      "step": 25,
+      "dectime": 201.04166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 26,
+      "dectime": 201.08333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 27,
+      "dectime": 201.125,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 28,
+      "dectime": 201.16666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 29,
+      "dectime": 201.20833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 30,
+      "dectime": 201.25,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 31,
+      "dectime": 201.29166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 32,
+      "dectime": 201.33333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 33,
+      "dectime": 201.375,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 34,
+      "dectime": 201.41666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 1.0,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 35,
+      "dectime": 201.45833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.9144572019577026,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 36,
+      "dectime": 201.5,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.8466829061508179,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 37,
+      "dectime": 201.54166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.7952062487602234,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 38,
+      "dectime": 201.58333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.758068859577179,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 39,
+      "dectime": 201.625,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.7377491593360901,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 40,
+      "dectime": 201.66666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.7324278950691223,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 41,
+      "dectime": 201.70833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.7344108819961548,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 42,
+      "dectime": 201.75,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.736636221408844,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 43,
+      "dectime": 201.79166666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.7281801104545593,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 44,
+      "dectime": 201.83333333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.6736264228820801,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 45,
+      "dectime": 201.875,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.34085822105407715,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 46,
+      "dectime": 201.91666666666666,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.34085822105407715,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    },
+    {
+      "step": 47,
+      "dectime": 201.95833333333334,
+      "midnight": false,
+      "Twater_recomputed": false,
+      "Twater": 29.588613264166668,
+      "CI_entering_engine": 0.34085822105407715,
+      "daylines_tuple_length": null,
+      "CI_reset_branch": "no midnight reset"
+    }
+  ],
+  "engine_altitudes": [
+    -24.748963774106585,
+    -27.924543400262863,
+    -28.053708502668115,
+    -25.11766983325515,
+    -19.512717117392853,
+    -11.843156754407573,
+    -1.924409945045312,
+    7.756683441218144,
+    18.577189259958573,
+    29.814725848313387,
+    41.14788179997428,
+    52.17799158307819,
+    62.11689886114797,
+    68.99138909689283,
+    69.2912892727005,
+    62.792588172083704,
+    52.9928170535826,
+    42.004709613797125,
+    30.6702115156897,
+    19.403277244053243,
+    8.522863496699557,
+    -1.1397083539692687,
+    -11.268436512849078,
+    -19.098394282693704,
+    -24.914370574524952,
+    -28.10224087896637,
+    -28.235610150692096,
+    -25.29497625770685,
+    -19.679294565988954,
+    -11.996543321468096,
+    -2.106882315619316,
+    7.627233090725383,
+    18.453870910914418,
+    29.694926067561425,
+    41.02656928973069,
+    52.047376726722746,
+    61.965143950477966,
+    68.81112513335559,
+    69.1169801774235,
+    62.65651420634217,
+    52.882830309070705,
+    41.90599544329791,
+    30.573490085053614,
+    19.302575854639755,
+    8.414451507004088,
+    -1.2637546206448604,
+    -11.405465701530773,
+    -19.253065916587715
+  ],
+  "outputs": {
+    "Kdown_0_0.tif": {
+      "sha256": "33467d29d8329573c54f461fec7c66e9adf2f0eac3747e09b3165de8d06a701b",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "Kup_0_0.tif": {
+      "sha256": "6d6afd5e41828143ee2b1f28f6a4831eb53d1ecacb633bea7bcd1d6a5c740ad7",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "Ldown_0_0.tif": {
+      "sha256": "139ad40ce3ae1c88cfd576be288b0a387c49438eb878729e91b2a0de8b3590af",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "Lup_0_0.tif": {
+      "sha256": "b5fb1ba50153174036f2a2959b24aadc3d1719cac9693708274619fc214a42f9",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "Shadow_0_0.tif": {
+      "sha256": "f2883dc1da860bd193aa892fe51302cfb513fa0dae8d4b82b7a8a36ea3e2d27d",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "TMRT_0_0.tif": {
+      "sha256": "037235f5b10ab5b7e13aa9acfaf1f6f29622ab1b1aedd181455b753be354e1a7",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "Ta_0_0.tif": {
+      "sha256": "2fa526e87bed6e17dc6acf1809c0b3f3844513ce129c40586228c6777263e0c3",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "UTCI_0_0.tif": {
+      "sha256": "7ce5289e3bf0ee4987d91159062f8f43cb054c53716fded03c9f40ea564c2137",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "WBGT_0_0.tif": {
+      "sha256": "0c09d8cd1a3796d1cf12442f5292ff7427a47738ea960ab01fc33b03753f0316",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    },
+    "Wind_0_0.tif": {
+      "sha256": "be55bfee662c7830649e0467f7d9dae337f3e3d375d711058660ca3a925b24db",
+      "bands": 48,
+      "band_metadata": [
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        },
+        {
+          "Time": "2020-07-18T00:00:00"
+        },
+        {
+          "Time": "2020-07-18T01:00:00"
+        },
+        {
+          "Time": "2020-07-18T02:00:00"
+        },
+        {
+          "Time": "2020-07-18T03:00:00"
+        },
+        {
+          "Time": "2020-07-18T04:00:00"
+        },
+        {
+          "Time": "2020-07-18T05:00:00"
+        },
+        {
+          "Time": "2020-07-18T06:00:00"
+        },
+        {
+          "Time": "2020-07-18T07:00:00"
+        },
+        {
+          "Time": "2020-07-18T08:00:00"
+        },
+        {
+          "Time": "2020-07-18T09:00:00"
+        },
+        {
+          "Time": "2020-07-18T10:00:00"
+        },
+        {
+          "Time": "2020-07-18T11:00:00"
+        },
+        {
+          "Time": "2020-07-18T12:00:00"
+        },
+        {
+          "Time": "2020-07-18T13:00:00"
+        },
+        {
+          "Time": "2020-07-18T14:00:00"
+        },
+        {
+          "Time": "2020-07-18T15:00:00"
+        },
+        {
+          "Time": "2020-07-18T16:00:00"
+        },
+        {
+          "Time": "2020-07-18T17:00:00"
+        },
+        {
+          "Time": "2020-07-18T18:00:00"
+        },
+        {
+          "Time": "2020-07-18T19:00:00"
+        },
+        {
+          "Time": "2020-07-18T20:00:00"
+        },
+        {
+          "Time": "2020-07-18T21:00:00"
+        },
+        {
+          "Time": "2020-07-18T22:00:00"
+        },
+        {
+          "Time": "2020-07-18T23:00:00"
+        }
+      ]
+    }
+  },
+  "scope": "Unmodified original compute_utci tile driver executes 48 met rows continuously; public run_utci_tiles selected-day discovery is not exercised.",
+  "quirks": [
+    "Midnight daylines is a one-element np.where tuple, so daylines.__len__()>1 is false and original CI resets to Python float 1.",
+    "selected_date_str is a base date for raster labels; original solar forcing and daily water mean use met day-of-year."
+  ],
+  "limitations": [
+    "Read-only capture changes runtime; no benchmark or scientific validation claim.",
+    "No persistent restart API is exercised; full original inputs, outputs and carried state are recorded for candidate restart comparison."
+  ]
+}

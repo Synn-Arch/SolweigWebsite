@@ -1,0 +1,321 @@
+{
+  "candidate_commit": null,
+  "candidate_state": "uncommitted worktree; individual records bind exact sources",
+  "cuda": {
+    "assessment": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/assessment.md",
+      "sha256": "80045c6470cc56ab2d375c89c7d42a89525073da9a8b16ef0b9bb7051f48873d"
+    },
+    "cold_failure": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_feasibility_manifest.json",
+      "sha256": "27047a986398a566e37f5b8004875e2208e93f2440b1b0cea90cecbe141518f3"
+    },
+    "cura": "original_warm_passed_original_cold_resource_failed_patched_cold_passed_performance_unmeasured",
+    "historical_m1": "not_available",
+    "memory_diagnosis": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_startup_memory_diagnostic.json",
+      "sha256": "78a3712b4875bedee53d0a6ce4ef682e44a55c1dfdf7a67524e29796d3914a8a"
+    },
+    "patched_cold_correctness": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/patched_workerlimit/manifest.json",
+      "sha256": "84fb4691d4eeef1e468d31cc9e4a6ec642e17a6a148e51501db4b09efc59e622"
+    },
+    "warm_correctness": {
+      "path": "reports/cura_p8_20260919T1215Z_a7c3/cuda_admission/cuda_geometry_warm_admission.json",
+      "sha256": "6717e277fc149100a05d5c3c801add39da70a74625e7d5a931824653b737f530"
+    }
+  },
+  "current_p7": {
+    "completed_scene_summaries": [
+      {
+        "case_id": "dense_urban_256",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/dense_urban_256/summary.json",
+          "sha256": "6e8f6b7291e0b6e6bbde67c65d053371ef3ee8d374700b4a461c7b6b8d199a51"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "real_dense_urban",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/real_dense_urban/summary.json",
+          "sha256": "c86adb65ac6b42a64a32d3b79fe59b8145aa2aa9528acbdbc04b3bcc659c888b"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "real_sparse",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/real_sparse/summary.json",
+          "sha256": "5f62ee5a7772d0895c4a605aa93a2b2bd43a1d53f6305e73031119d2ab78a16f"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "real_vegetation_rich",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/real_vegetation_rich/summary.json",
+          "sha256": "4958ff52abc73f9028a4629d5573b30693c5af890cb0e7b5ad17f20730d42d75"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "repeated_block_256",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/repeated_block_256/summary.json",
+          "sha256": "dba11f3b419fbd142dea55c79190ca948c601ff36bc5d2c81c976809fdb86c65"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "small",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/small/summary.json",
+          "sha256": "08a275537313b2051aea2fce86556caae90c74eca9b0b6d0344adff5721b8134"
+        },
+        "global_evidence_eligible": true
+      },
+      {
+        "case_id": "vegetation_rich_256",
+        "evidence": {
+          "path": "reports/characterization/p7_pairs_v4/vegetation_rich_256/summary.json",
+          "sha256": "7427043877d329722c1c40b222ff6de93747d82151b3b4d237a2ebbd5a377c9c"
+        },
+        "global_evidence_eligible": true
+      }
+    ],
+    "raw_directory": "reports/characterization/p7_pairs_v4",
+    "status": "full_matrix_not_yet_assessed"
+  },
+  "evidence": [
+    {
+      "path": "reports/characterization/p6_runtime_v1_retry2_psutil/summary.json",
+      "sha256": "d1bf2ba993429a01a90a9dbedc5526b8eece9a85c2fb6860a23daccc2bac3f66"
+    },
+    {
+      "path": "reports/characterization/p6_runtime_v1_retry2_psutil/provenance.json",
+      "sha256": "4a5447ea12956bc0e5a1fc9409120b3ef3f84a3850ed97c1bba730294f4a5f22"
+    },
+    {
+      "path": "reports/characterization/p6_wind_resources_v1/summary.json",
+      "sha256": "0f5767e11cf02ea566a803ee07c84b5be82379a4fb03b819bf6654ef04b3e789"
+    },
+    {
+      "path": "reports/characterization/p6_wind_resources_v1/provenance.json",
+      "sha256": "373e8c7abc10adfaf65bf6f33d0a4f0187d5ab0f6d44a62b28180762b27bda3b"
+    },
+    {
+      "path": "reports/p3_visibility_memory.json",
+      "sha256": "8b8b27c3ddb530846b99b89bbe7c0a45e98f5d651cc02b71a85aed06bc3bb94e"
+    }
+  ],
+  "historical_sampled_cases": [
+    {
+      "case": "timeline_24h_cold_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_24h_cold_workers1/scene",
+        "--case-name",
+        "timeline_24h_cold_workers1",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 277,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 403685376
+    },
+    {
+      "case": "timeline_24h_warm_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_24h_warm_workers1/scene",
+        "--case-name",
+        "timeline_24h_warm_workers1",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 254,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 403456000
+    },
+    {
+      "case": "timeline_96h_cold_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_96h_cold_workers1/scene",
+        "--case-name",
+        "timeline_96h_cold_workers1",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 512,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 394051584
+    },
+    {
+      "case": "timeline_96h_warm_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_96h_warm_workers1/scene",
+        "--case-name",
+        "timeline_96h_warm_workers1",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 517,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 401489920
+    },
+    {
+      "case": "timeline_288h_cold_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_288h_cold_workers1/scene",
+        "--case-name",
+        "timeline_288h_cold_workers1",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 1118,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 404897792
+    },
+    {
+      "case": "timeline_288h_warm_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_288h_warm_workers1/scene",
+        "--case-name",
+        "timeline_288h_warm_workers1",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 1147,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 392609792
+    },
+    {
+      "case": "timeline_24h_cold_workers1_two_tiles",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_24h_cold_workers1_two_tiles/scene",
+        "--case-name",
+        "timeline_24h_cold_workers1_two_tiles",
+        "--workers",
+        "1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 467,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 400998400
+    },
+    {
+      "case": "timeline_24h_cold_workers2_two_tiles",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_runtime.py",
+        "--child",
+        "--scene",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_24h_cold_workers2_two_tiles/scene",
+        "--case-name",
+        "timeline_24h_cold_workers2_two_tiles",
+        "--workers",
+        "2"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 274,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 628211712
+    },
+    {
+      "case": "wind_workers1",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-optional/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_wind.py",
+        "--child",
+        "1",
+        "--directory",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_wind_resources_v1/workers1"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 61,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 152797184
+    },
+    {
+      "case": "wind_workers2",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-optional/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_wind.py",
+        "--child",
+        "2",
+        "--directory",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_wind_resources_v1/workers2"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 62,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 154992640
+    },
+    {
+      "case": "wind_workers4",
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-optional/bin/python",
+        "/Users/alansynn/Workspace/solweig-light/tools/measure_p6_wind.py",
+        "--child",
+        "4",
+        "--directory",
+        "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_wind_resources_v1/workers4"
+      ],
+      "memory_budget_bytes": 4294967296,
+      "sample_count": 48,
+      "sample_interval_seconds": 0.02,
+      "sampled_peak_process_tree_rss_bytes": 157073408
+    }
+  ],
+  "limitations": [
+    "P6 core samples predate final wind/cgroup fixes and current P7 repairs; they are not measurements of the current wheel",
+    "Historical small-fixture single trials do not establish a universal scaling bound",
+    "Summed process RSS may double-count shared pages and miss between-sample peaks",
+    "Component lifetime RSS and process-tree sampled RSS are different measurements"
+  ],
+  "outstanding": [
+    "Current full-workload memory/regression assessment",
+    "P8 required large-workload memory matrix with failures and unavailable cases retained"
+  ],
+  "recorder": {
+    "path": "tools/record_release_measurement_indices.py",
+    "sha256": "e63fbc6f3c71ba9aea1a1cd71416884b7171382440a4b70c020bd43ca93c5fd6"
+  },
+  "release_gate_passed": false,
+  "remote_ci": "configured_not_executed",
+  "status": "incomplete_release_evidence_index",
+  "upstream_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec"
+}

@@ -1,0 +1,1051 @@
+{
+  "cli": {
+    "evidence": "static",
+    "file": "solweig_gpu/cli.py",
+    "flags": [
+      {
+        "action": "version",
+        "default": null,
+        "default_expression": null,
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--version"
+        ],
+        "line": 51,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": null,
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--base_path"
+        ],
+        "line": 54,
+        "required": true,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": null,
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--date"
+        ],
+        "line": 55,
+        "required": true,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": "Building_DSM.tif",
+        "default_expression": "'Building_DSM.tif'",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--building_dsm"
+        ],
+        "line": 58,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": "DEM.tif",
+        "default_expression": "'DEM.tif'",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--dem"
+        ],
+        "line": 59,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": "Trees.tif",
+        "default_expression": "'Trees.tif'",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--trees"
+        ],
+        "line": 60,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--landcover"
+        ],
+        "line": 61,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": 3600,
+        "default_expression": "3600",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--tile_size"
+        ],
+        "line": 64,
+        "required": null,
+        "type": "int"
+      },
+      {
+        "action": null,
+        "default": 20,
+        "default_expression": "20",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--overlap"
+        ],
+        "line": 65,
+        "required": null,
+        "type": "int"
+      },
+      {
+        "action": null,
+        "default": true,
+        "default_expression": "True",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--use_own_met"
+        ],
+        "line": 68,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--own_metfile"
+        ],
+        "line": 69,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--data_source_type"
+        ],
+        "line": 70,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--data_folder"
+        ],
+        "line": 71,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--start"
+        ],
+        "line": 74,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--end"
+        ],
+        "line": 75,
+        "required": null,
+        "type": null
+      },
+      {
+        "action": null,
+        "default": null,
+        "default_expression": "None",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--era5_z0_find"
+        ],
+        "line": 78,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": true,
+        "default_expression": "True",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--use_uhi"
+        ],
+        "line": 82,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": true,
+        "default_expression": "True",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_tmrt"
+        ],
+        "line": 87,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_svf"
+        ],
+        "line": 88,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_kup"
+        ],
+        "line": 89,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_kdown"
+        ],
+        "line": 90,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_lup"
+        ],
+        "line": 91,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_ldown"
+        ],
+        "line": 92,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_shadow"
+        ],
+        "line": 93,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_wbgt"
+        ],
+        "line": 94,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_ta"
+        ],
+        "line": 95,
+        "required": null,
+        "type": "str2bool"
+      },
+      {
+        "action": null,
+        "default": false,
+        "default_expression": "False",
+        "dest": null,
+        "evidence": "static",
+        "flags": [
+          "--save_wind"
+        ],
+        "line": 96,
+        "required": null,
+        "type": "str2bool"
+      }
+    ]
+  },
+  "commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "entry_points": {
+    "console_scripts": {
+      "solweig_gpu": "solweig_gpu.cli:main",
+      "thermal_comfort": "solweig_gpu.cli:main"
+    },
+    "evidence": "static",
+    "file": "setup.py"
+  },
+  "evidence": "static",
+  "public_functions": {
+    "build_inputs": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 136,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "build_inputs",
+      "parameters": [
+        {
+          "annotation": "float",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "lat"
+        },
+        {
+          "annotation": "float",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "lon"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "city"
+        },
+        {
+          "annotation": "float",
+          "default": "8.0",
+          "default_value": 8.0,
+          "kind": "positional_or_keyword",
+          "name": "km_buffer"
+        },
+        {
+          "annotation": "float",
+          "default": "3.0",
+          "default_value": 3.0,
+          "kind": "positional_or_keyword",
+          "name": "km_reduced_lat"
+        },
+        {
+          "annotation": "float",
+          "default": "1.0",
+          "default_value": 1.0,
+          "kind": "positional_or_keyword",
+          "name": "km_reduced_lon"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "base_folder"
+        },
+        {
+          "annotation": "float",
+          "default": "2.0",
+          "default_value": 2.0,
+          "kind": "positional_or_keyword",
+          "name": "resolution"
+        }
+      ],
+      "return_annotation": "str"
+    },
+    "build_wind_ext_coeff": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 184,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "build_wind_ext_coeff",
+      "parameters": [
+        {
+          "annotation": "PathLike",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "input_dir"
+        },
+        {
+          "annotation": "PathLike",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "era5_dir"
+        },
+        {
+          "annotation": "Sequence[int]",
+          "default": "tuple(range(0, 360, 30))",
+          "default_value": {
+            "expression": "tuple(range(0, 360, 30))"
+          },
+          "kind": "keyword_only",
+          "name": "directions"
+        },
+        {
+          "annotation": "float",
+          "default": "0.03",
+          "default_value": 0.03,
+          "kind": "keyword_only",
+          "name": "z0_ref"
+        },
+        {
+          "annotation": "float",
+          "default": "1.0",
+          "default_value": 1.0,
+          "kind": "keyword_only",
+          "name": "hmin_b"
+        },
+        {
+          "annotation": "float",
+          "default": "1.0",
+          "default_value": 1.0,
+          "kind": "keyword_only",
+          "name": "hmin_t"
+        },
+        {
+          "annotation": "float",
+          "default": "10.0",
+          "default_value": 10.0,
+          "kind": "keyword_only",
+          "name": "z_eval"
+        },
+        {
+          "annotation": "float",
+          "default": "10.0",
+          "default_value": 10.0,
+          "kind": "keyword_only",
+          "name": "zref"
+        },
+        {
+          "annotation": "float",
+          "default": "2.0",
+          "default_value": 2.0,
+          "kind": "keyword_only",
+          "name": "LAI_t"
+        },
+        {
+          "annotation": "float",
+          "default": "0.5",
+          "default_value": 0.5,
+          "kind": "keyword_only",
+          "name": "a0_t"
+        },
+        {
+          "annotation": "float",
+          "default": "0.4",
+          "default_value": 0.4,
+          "kind": "keyword_only",
+          "name": "a1_t"
+        },
+        {
+          "annotation": "float",
+          "default": "0.2",
+          "default_value": 0.2,
+          "kind": "keyword_only",
+          "name": "alpha_min_t"
+        },
+        {
+          "annotation": "float",
+          "default": "2.5",
+          "default_value": 2.5,
+          "kind": "keyword_only",
+          "name": "alpha_max_t"
+        },
+        {
+          "annotation": "float",
+          "default": "0.1",
+          "default_value": 0.1,
+          "kind": "keyword_only",
+          "name": "coeff_min"
+        },
+        {
+          "annotation": "float",
+          "default": "1.0",
+          "default_value": 1.0,
+          "kind": "keyword_only",
+          "name": "coeff_max"
+        },
+        {
+          "annotation": "float",
+          "default": "0.02",
+          "default_value": 0.02,
+          "kind": "keyword_only",
+          "name": "lp_min_open"
+        },
+        {
+          "annotation": "Optional[int]",
+          "default": "None",
+          "default_value": null,
+          "kind": "keyword_only",
+          "name": "max_workers"
+        }
+      ],
+      "return_annotation": "str"
+    },
+    "calculate_svf": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 274,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "calculate_svf",
+      "parameters": [
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "base_path"
+        },
+        {
+          "annotation": "int",
+          "default": "2",
+          "default_value": 2,
+          "kind": "positional_or_keyword",
+          "name": "patch_option"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "overwrite"
+        }
+      ],
+      "return_annotation": "None"
+    },
+    "preprocess": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 22,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "preprocess",
+      "parameters": [
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "base_path"
+        },
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "selected_date_str"
+        },
+        {
+          "annotation": "str",
+          "default": "'Building_DSM.tif'",
+          "default_value": "Building_DSM.tif",
+          "kind": "positional_or_keyword",
+          "name": "building_dsm_filename"
+        },
+        {
+          "annotation": "str",
+          "default": "'DEM.tif'",
+          "default_value": "DEM.tif",
+          "kind": "positional_or_keyword",
+          "name": "dem_filename"
+        },
+        {
+          "annotation": "str",
+          "default": "'Trees.tif'",
+          "default_value": "Trees.tif",
+          "kind": "positional_or_keyword",
+          "name": "trees_filename"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "landcover_filename"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "windcoeff_folder"
+        },
+        {
+          "annotation": "int",
+          "default": "3600",
+          "default_value": 3600,
+          "kind": "positional_or_keyword",
+          "name": "tile_size"
+        },
+        {
+          "annotation": "int",
+          "default": "20",
+          "default_value": 20,
+          "kind": "positional_or_keyword",
+          "name": "overlap"
+        },
+        {
+          "annotation": "bool",
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "use_own_met"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "start_time"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "end_time"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "data_source_type"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "data_folder"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "own_met_file"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "preprocess_dir"
+        },
+        {
+          "annotation": "bool",
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "use_uhi"
+        }
+      ],
+      "return_annotation": "str"
+    },
+    "run_utci_tiles": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 387,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "run_utci_tiles",
+      "parameters": [
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "base_path"
+        },
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "preprocess_dir"
+        },
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "selected_date_str"
+        },
+        {
+          "annotation": "Optional[List[str]]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "tile_keys"
+        },
+        {
+          "annotation": "bool",
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "save_tmrt"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_svf"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_kup"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_kdown"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_lup"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_ldown"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_shadow"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_wbgt"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_ta"
+        },
+        {
+          "annotation": "bool",
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_wind"
+        }
+      ],
+      "return_annotation": "None"
+    },
+    "run_walls_aspect": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 255,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "run_walls_aspect",
+      "parameters": [
+        {
+          "annotation": "str",
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "preprocess_dir"
+        }
+      ],
+      "return_annotation": "None"
+    },
+    "thermal_comfort": {
+      "evidence": "static",
+      "file": "solweig_gpu/solweig_gpu.py",
+      "line": 500,
+      "module": "solweig_gpu.solweig_gpu",
+      "name": "thermal_comfort",
+      "parameters": [
+        {
+          "annotation": null,
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "base_path"
+        },
+        {
+          "annotation": null,
+          "default": null,
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "selected_date_str"
+        },
+        {
+          "annotation": null,
+          "default": "'Building_DSM.tif'",
+          "default_value": "Building_DSM.tif",
+          "kind": "positional_or_keyword",
+          "name": "building_dsm_filename"
+        },
+        {
+          "annotation": null,
+          "default": "'DEM.tif'",
+          "default_value": "DEM.tif",
+          "kind": "positional_or_keyword",
+          "name": "dem_filename"
+        },
+        {
+          "annotation": null,
+          "default": "'Trees.tif'",
+          "default_value": "Trees.tif",
+          "kind": "positional_or_keyword",
+          "name": "trees_filename"
+        },
+        {
+          "annotation": "Optional[str]",
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "landcover_filename"
+        },
+        {
+          "annotation": null,
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "ERA_5_z0_find"
+        },
+        {
+          "annotation": null,
+          "default": "3600",
+          "default_value": 3600,
+          "kind": "positional_or_keyword",
+          "name": "tile_size"
+        },
+        {
+          "annotation": null,
+          "default": "20",
+          "default_value": 20,
+          "kind": "positional_or_keyword",
+          "name": "overlap"
+        },
+        {
+          "annotation": null,
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "use_own_met"
+        },
+        {
+          "annotation": null,
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "start_time"
+        },
+        {
+          "annotation": null,
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "end_time"
+        },
+        {
+          "annotation": null,
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "data_source_type"
+        },
+        {
+          "annotation": null,
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "data_folder"
+        },
+        {
+          "annotation": null,
+          "default": "None",
+          "default_value": null,
+          "kind": "positional_or_keyword",
+          "name": "own_met_file"
+        },
+        {
+          "annotation": null,
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "use_uhi"
+        },
+        {
+          "annotation": null,
+          "default": "True",
+          "default_value": true,
+          "kind": "positional_or_keyword",
+          "name": "save_tmrt"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_svf"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_kup"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_kdown"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_lup"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_ldown"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_shadow"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_wbgt"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_ta"
+        },
+        {
+          "annotation": null,
+          "default": "False",
+          "default_value": false,
+          "kind": "positional_or_keyword",
+          "name": "save_wind"
+        }
+      ],
+      "return_annotation": null
+    }
+  },
+  "repository": "https://github.com/nvnsudharsan/SOLWEIG-GPU",
+  "source_files": {
+    "api": "solweig_gpu/solweig_gpu.py",
+    "cli": "solweig_gpu/cli.py",
+    "packaging": "setup.py"
+  }
+}

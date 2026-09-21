@@ -1,0 +1,154 @@
+{
+  "schema": "local-cpu-optimization-e0-report.v1",
+  "status": "correctness_admission_passed_profile_completed",
+  "scope": "CURRENT final v3 source-bound wheel admission and warmed cProfile attribution; no release speedup claim",
+  "candidate": {
+    "git_commit": "8ca23d444a3b05bdeb76655329c0a09c3dc4d6e8",
+    "source_snapshot": "reports/characterization/local_cpu_optimization_v1/e0/source_snapshot",
+    "source_snapshot_manifest": "reports/characterization/local_cpu_optimization_v1/e0/source_snapshot_manifest.json",
+    "source_snapshot_sha256": "5edb152e147383837ca61e01536ecfa2bd3c35d124e621649a1f20e9fa2e83f2",
+    "source_files": 48,
+    "wheel": "reports/characterization/local_cpu_optimization_v1/e0/dist/solweig_light-0.1.0.dev0-py3-none-any.whl",
+    "wheel_bytes": 212236,
+    "wheel_sha256": "92c8a5b268005065fbbe3c5f4ade4fc41a3da3d3be29981fea6a026ead6880f6",
+    "installed_target": "reports/characterization/local_cpu_optimization_v1/e0/site-packages",
+    "preflight": "reports/characterization/local_cpu_optimization_v1/e0/preflight.json",
+    "source_snapshot_matches_current": true,
+    "installed_package_matches_source": true,
+    "torch_imported": false
+  },
+  "environment": {
+    "python": ".venv-light/bin/python",
+    "environment_kind": "existing .venv-light with isolated wheel install target; no fresh full venv",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "dependencies": {
+      "numpy": "2.4.6",
+      "numba": "0.67.0",
+      "scipy": "1.17.1",
+      "psutil": "7.2.2",
+      "GDAL": "3.13.3"
+    }
+  },
+  "admission_policy": {
+    "workload": "M1 dense1024 and vegetation1024, original SLEEF CPU outputs",
+    "timesteps": 24,
+    "sky_patches": 153,
+    "tile_size": 3600,
+    "overlap": 20,
+    "block_pixels": 128,
+    "workers": 1,
+    "threads_per_worker": 10,
+    "memory_budget_bytes": 12884901888,
+    "checkpoint_interval": 1,
+    "outputs": ["Kdown", "Kup", "Ldown", "Lup", "Shadow", "TMRT", "Ta", "UTCI", "WBGT", "Wind"],
+    "comparison": {
+      "bands": 240,
+      "geometry_exports": 18,
+      "tolerances": {
+        "Kdown": [0.05, 0.00001],
+        "Kup": [0.05, 0.00001],
+        "Ldown": [0.05, 0.00001],
+        "Lup": [0.05, 0.00001],
+        "Shadow": [0.0, 0.0],
+        "TMRT": [0.01, 0.0],
+        "Ta": [0.0, 0.0],
+        "UTCI": [0.02, 0.0],
+        "WBGT": [0.02, 0.0],
+        "Wind": [0.0, 0.0]
+      }
+    }
+  },
+  "reference_verification": {
+    "summary": "reports/characterization/p8_portable_profile_v1/oracle/large_capture_summary.json",
+    "summary_sha256": "1357386fecb3e99aad217a69df398b237dadfddf29d46ed9b1731901d6c29b8d",
+    "reference_class": "canonical original upstream CPU SLEEF macOS ARM64",
+    "files_checked_per_case": 24
+  },
+  "admissions": [
+    {
+      "case": "dense1024",
+      "fixture": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024",
+      "fixture_manifest": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/manifest.json",
+      "fixture_manifest_sha256": "51e5aac79281644d20b5e9f9fd518056fc503cca1d538a5cf603c88f5aed755d",
+      "canonical_reference": "reports/characterization/p8_portable_profile_v1/oracle/large/dense1024/run/scene",
+      "reference_verification": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/reference_verification.json",
+      "candidate_outcome": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/outcome_retry1.json",
+      "monitor_validation": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/monitor_retry1/validation.json",
+      "comparison_postverify": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/comparison_postverify.json",
+      "comparison_status": "passed",
+      "workflow_seconds": 590.2710236660205,
+      "monitor_elapsed_seconds": 590.520449209027,
+      "peak_summed_rss_bytes": 1513881600,
+      "monitor_samples": 18936,
+      "monitor_cap_passed": true,
+      "torch_imported_before_or_after": false
+    },
+    {
+      "case": "vegetation1024",
+      "fixture": "reports/characterization/local_cpu_optimization_v1/e0/admission/vegetation1024",
+      "fixture_manifest": "reports/characterization/local_cpu_optimization_v1/e0/admission/vegetation1024/manifest.json",
+      "fixture_manifest_sha256": "6cc92180356417e1565ce6efd2c3db34093baf44f5e50a87d23cf036ed7ed5b7",
+      "canonical_reference": "reports/characterization/p8_portable_profile_v1/oracle/large/vegetation1024/run/scene",
+      "reference_verification": "reports/characterization/local_cpu_optimization_v1/e0/admission/vegetation1024/reference_verification.json",
+      "candidate_outcome": "reports/characterization/local_cpu_optimization_v1/e0/admission/vegetation1024/outcome.json",
+      "monitor_validation": "reports/characterization/local_cpu_optimization_v1/e0/admission/vegetation1024/monitor/validation.json",
+      "comparison_postverify": "reports/characterization/local_cpu_optimization_v1/e0/admission/vegetation1024/comparison_postverify.json",
+      "comparison_status": "passed",
+      "workflow_seconds": 526.0039066250902,
+      "monitor_elapsed_seconds": 526.2454165419331,
+      "peak_summed_rss_bytes": 1576828928,
+      "monitor_samples": 16842,
+      "monitor_cap_passed": true,
+      "torch_imported_before_or_after": false
+    }
+  ],
+  "profile": {
+    "fixture": "reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene",
+    "source": "reports/characterization/local_cpu_optimization_v1/e0/source_snapshot",
+    "run": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1",
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv-light/bin/python tools/profile_p7_pipeline.py --execute --warmup --threads 1 --fixture reports/characterization/p7_pairs_v4/repeated_block_256/cold_n1_r0_candidate_scene --source reports/characterization/local_cpu_optimization_v1/e0/source_snapshot --run reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1",
+    "outcome": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1/outcome.json",
+    "output_comparison": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1/profile_output_comparison.json",
+    "pstats": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1/profile/worker.pstats",
+    "cumulative_text": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1/profile/worker_cumulative.txt",
+    "functions_json": "reports/characterization/local_cpu_optimization_v1/e0/profile/repeated256_warmed_v1/profile/worker_functions.json",
+    "status": "profile_completed_not_a_benchmark",
+    "profiled_wall_seconds": 22.905043083941564,
+    "output_validation_passed": true,
+    "exact_shared_outputs": 10,
+    "expected_warmup_only": ["0_0/SVF_0_0.tif"],
+    "attribution": {
+      "top_cumulative_seconds": [
+        ["pipeline._run_tile", 20.259023792],
+        ["radiation.engine.Solweig_2022a_calc", 16.969253536],
+        ["radiation.ground_view.gvf_2018a", 5.454311456],
+        ["radiation.ground_view._sun", 5.414193958],
+        ["radiation.engine.Lcyl_v2022a", 5.068919667],
+        ["radiation.patch_radiation.define_patch_characteristics", 5.047481082]
+      ],
+      "top_self_seconds": [
+        ["radiation.ground_view._gather_serial", 4.654528834],
+        ["radiation.patch_radiation._longwave_serial", 2.508691852],
+        ["geometry.visibility_compiled._decode", 1.824660],
+        ["radiation.engine._operate", 1.099676],
+        ["radiation.patch_radiation._classes", 0.639559694],
+        ["radiation.patch_radiation._shortwave_serial", 0.483503]
+      ],
+      "residual_compilation_entries_seconds_cumulative_not_additive": [
+        ["numba.core.dispatcher.compile", 3.460514956],
+        ["numba.core.compiler.compile_extra", 3.302656041],
+        ["numba.core.dispatcher._compile_for_args", 2.938207206],
+        ["numba.core.compiler_machinery.run", 3.286015042]
+      ]
+    }
+  },
+  "retained_failure": {
+    "path": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/monitor",
+    "exit_code": 1,
+    "reason": "initial harness compared the copied fixture manifest's generator kwargs hash with the canonical run kwargs; it stopped before model execution",
+    "stderr": "reports/characterization/local_cpu_optimization_v1/e0/admission/dense1024/monitor/stderr.log",
+    "handling": "retained; harness was corrected to preserve the original failed attempt and separately record canonical run kwargs"
+  },
+  "performance_claim": null,
+  "raw_artifact_bytes_observed": "approximately 3.1 GiB for E0; preserved locally, with no cleanup outside E0"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "671f2c7355d76c670f59d714d41a99eb1cf620b6",
+  "short_id": "671f2c73",
+  "created_at": "2026-09-19T07:55:03.000+02:00",
+  "parent_ids": [
+    "64ea70836b4736c436aea9a06aa09f84c397627f"
+  ],
+  "title": "[hypot.wc] added inputs with spurious inexact",
+  "message": "[hypot.wc] added inputs with spurious inexact\n",
+  "author_name": "Paul Zimmermann",
+  "author_email": "Paul.Zimmermann@inria.fr",
+  "authored_date": "2026-09-19T07:55:03.000+02:00",
+  "committer_name": "Paul Zimmermann",
+  "committer_email": "Paul.Zimmermann@inria.fr",
+  "committed_date": "2026-09-19T07:55:03.000+02:00",
+  "trailers": {},
+  "extended_trailers": {},
+  "web_url": "https://gitlab.inria.fr/core-math/core-math/-/commit/671f2c7355d76c670f59d714d41a99eb1cf620b6",
+  "stats": {
+    "additions": 21,
+    "deletions": 19,
+    "total": 40
+  },
+  "status": "failed",
+  "project_id": 35719,
+  "last_pipeline": {
+    "id": 1485726,
+    "iid": 3608,
+    "project_id": 35719,
+    "sha": "671f2c7355d76c670f59d714d41a99eb1cf620b6",
+    "ref": "master",
+    "status": "failed",
+    "source": "push",
+    "created_at": "2026-09-19T07:55:27.207+02:00",
+    "updated_at": "2026-09-19T15:57:02.953+02:00",
+    "web_url": "https://gitlab.inria.fr/core-math/core-math/-/pipelines/1485726"
+  }
+}

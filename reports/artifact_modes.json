@@ -1,0 +1,1189 @@
+{
+  "evidence_class": "original_upstream_cpu",
+  "source_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "oracle_patch_hash": null,
+  "source_package_sha256": {
+    "landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+    "Tgmaps_v1.py": "ae1c55f8a3793f3fc0f0f3ce443857c69bde2c5f4cc34ba21743ba9ba0cbfe23",
+    "wind_ext_coeff.py": "9a5d2fc93ad47bcff2450da5e1b859a51b7f135b80568aed8f966ad00fdfe822",
+    "solweig.py": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+    "calculate_utci.py": "6f214f45df3a5c57f9c3911915e0d23b271c7819aa65820b5f731cf49d0d30dc",
+    "create_inputs.py": "38b570dac030463b4801d5c10ff52dd9d2ea661820c9b1f34b13a1fb33206149",
+    "utci_process.py": "2a90bcdbbd5f2ad0b191cfc86fb675c5980edf0ec6de6390a062756678003470",
+    "__init__.py": "651d4afa6799990e9ee32da72f3b7cd4df70bb04d13c2176d202d45297554733",
+    "walls_aspect.py": "6aa17462df0c0d6219543ef5f9804bb73071bb85b9d7fc3787ca1ea695a0d1ad",
+    "preprocessor.py": "e818c3edbaf2901096cbc45aaad61112988e5500578b1c6363afa5ba9b5ea57d",
+    "solweig_gpu.py": "db12f76f440ba6173a93c8f7936649a50622db736d5cb4823e4fc42efb9798f4",
+    "sun_position.py": "4ba31ed1f46a6868936e1ee7c67413e13a0829e82ab00f253c74385d78e6f1d4",
+    "cli.py": "a823eb72ba3b1cce1b581780bda9045ef3036c7ffc7b8b091bbd0c11fd92ecfc",
+    "calculate_wbgt.py": "e9277be52c8cfc978f80b7843b25e047778d10533a603ee1ecb722dd9d3f03d6",
+    "shadow.py": "4e94d839f89cfa1a83dfe9fb681b6b36ab05b31bd09681a8904054ce2b50cc58"
+  },
+  "script_sha256": "60937e900cb1c4a4dbf65e8db7ff1e24cbac843a75c7451778b70c80ed482d5b",
+  "invocation": [
+    "tools/characterize_artifact_modes.py",
+    "--run",
+    "reports/runs/artifact_modes",
+    "--report",
+    "reports/artifact_modes.json"
+  ],
+  "environment": {
+    "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+    "executable": "/Users/alansynn/Workspace/solweig-light/.venv-oracle/bin/python",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "torch_threads": 1,
+    "packages": {
+      "timezonefinder": "9.0.0",
+      "kiwisolver": "1.5.1",
+      "coverage": "7.16.1",
+      "packaging": "26.3",
+      "iniconfig": "2.3.0",
+      "fonttools": "4.65.0",
+      "Pygments": "2.21.0",
+      "networkx": "3.6.1",
+      "pytz": "2026.3.post1",
+      "pytest-cov": "7.1.0",
+      "contourpy": "1.3.3",
+      "shapely": "2.1.2",
+      "torch": "2.14.0",
+      "numpy": "2.4.6",
+      "filelock": "4.0.0",
+      "sympy": "1.14.0",
+      "fsspec": "2026.7.0",
+      "tqdm": "4.70.1",
+      "pytest": "9.1.1",
+      "setuptools": "84.0.0",
+      "pycparser": "3.0",
+      "llvmlite": "0.49.0",
+      "timezonefinder-data": "3.2026.3.post1",
+      "python-dateutil": "2.9.0.post0",
+      "mpmath": "1.3.0",
+      "numba": "0.67.0",
+      "matplotlib": "3.11.2",
+      "xarray": "2026.7.0",
+      "cffi": "2.1.1",
+      "certifi": "2026.7.22",
+      "scipy": "1.17.1",
+      "cycler": "0.12.1",
+      "Jinja2": "3.1.6",
+      "pyparsing": "3.3.2",
+      "MarkupSafe": "3.0.3",
+      "solweig-gpu": "2.0.0",
+      "cftime": "1.6.5",
+      "pandas": "3.0.6",
+      "flatbuffers": "25.12.19",
+      "pluggy": "1.6.0",
+      "typing_extensions": "4.16.0",
+      "GDAL": "3.13.3",
+      "psutil": "7.2.2",
+      "pillow": "12.3.0",
+      "netCDF4": "1.7.4",
+      "six": "1.17.0",
+      "h3": "4.5.0"
+    }
+  },
+  "input_files_sha256": {
+    "Trees.tif": "aacbcf3ffe3296c1ad4528138555b19d59358210a4c2b5b1c636074975fc8bdc",
+    "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4",
+    "manifest.json": "fe013dcdfebb28db2e45141afe86a1ac3b1c19b2987a82befaa9e6628c4fc5b6",
+    "Building_DSM.tif": "e13aefb56d224680fd0a04fbf1886faf840d73db032aa4bbe2bbc651c4d8f80a",
+    "DEM.tif": "a550dd0b6519621fff999eb6cc7bce224c27a3c5cc17d73660c41b52767a7105",
+    "processed_inputs/metfiles/metfile_0_0.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4",
+    "processed_inputs/walls/walls_0_0.tif": "a5d78d7d7c6808402d363de3809d6c8dc5f5edf3898fdfbfa70b5572bfca1d14",
+    "processed_inputs/SVF/shadowmats_0_0.npz": "7b35f89104798a045cffa2ecd880b7d86e70c262f2e83659b3928ad8b39b565b",
+    "processed_inputs/SVF/SkyViewFactor_0_0.tif": "0f10eba06cba04e7abb8030dc0f0b1b08921cae410ba171ed1df4d3e089290cc",
+    "processed_inputs/SVF/svfs_0_0.zip": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a",
+    "processed_inputs/Trees/Trees_0_0.tif": "aacbcf3ffe3296c1ad4528138555b19d59358210a4c2b5b1c636074975fc8bdc",
+    "processed_inputs/DEM/DEM_0_0.tif": "a550dd0b6519621fff999eb6cc7bce224c27a3c5cc17d73660c41b52767a7105",
+    "processed_inputs/aspect/aspect_0_0.tif": "e936838ef576f1c1b2f32f284c24e58933469b1dc140e06a9c91de1c3c3c1980",
+    "processed_inputs/Building_DSM/Building_DSM_0_0.tif": "e13aefb56d224680fd0a04fbf1886faf840d73db032aa4bbe2bbc651c4d8f80a"
+  },
+  "cases": [
+    {
+      "name": "all_off",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/all_off",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/all_off/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "default",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/default",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/default/processed_inputs",
+        "selected_date_str": "2020-07-18"
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "TMRT_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "TMRT_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "TMRT_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "TMRT_0_0.tif": {
+          "sha256": "a7971a760f8ed47039cf75cca8ae35c07e6708b5e02c2fe3d69fe6c0737c9d0a",
+          "array_sha256": "49c10d658a547ac0f4cd5543b281a5f2fd8ad24d353aeec515ee84081545cf28",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_tmrt",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_tmrt",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_tmrt/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": true,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "TMRT_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "TMRT_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "TMRT_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "TMRT_0_0.tif": {
+          "sha256": "a7971a760f8ed47039cf75cca8ae35c07e6708b5e02c2fe3d69fe6c0737c9d0a",
+          "array_sha256": "49c10d658a547ac0f4cd5543b281a5f2fd8ad24d353aeec515ee84081545cf28",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_svf",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_svf",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_svf/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": true,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_kup",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_kup",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_kup/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": true,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Kup_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Kup_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "Kup_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "Kup_0_0.tif": {
+          "sha256": "e544aa8daa5ee8118994a431f68df46c647730fedd412c848c02d0cf176e0e8f",
+          "array_sha256": "c97ff9c7d01feb9cb8962aa8505631eec33382d6636e0967656b8d1aca5f5609",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_kdown",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_kdown",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_kdown/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": true,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Kdown_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Kdown_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "Kdown_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "Kdown_0_0.tif": {
+          "sha256": "71b19f16137b2069d613b300a900935cf560c4a97570fb7a5b73656ff4dc944b",
+          "array_sha256": "81fc5aa9c08be189b2634f49bd79adfaf4ae25ef89f25376f99d8ec76c1d8f4b",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_lup",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_lup",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_lup/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": true,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Lup_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Lup_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "Lup_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "Lup_0_0.tif": {
+          "sha256": "4ed53690354866608c69ef85cb652c182a69c5fa9896b70d133d48c27fffb5f9",
+          "array_sha256": "c38ea50bc8b47b6e2352f5e0837cb3aa491d37dffdf1ef67241070145444ac62",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_ldown",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_ldown",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_ldown/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": true,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Ldown_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Ldown_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "Ldown_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "Ldown_0_0.tif": {
+          "sha256": "6c20fe5ca3da34faa0633e47876ef851cbe6d025478e23b314b55ed09538b116",
+          "array_sha256": "cad30c8ced07d3baa2ab0a229c177775246d80cacfe29cadd553f7243c479c3a",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_shadow",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_shadow",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_shadow/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": true,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Shadow_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Shadow_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "Shadow_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "Shadow_0_0.tif": {
+          "sha256": "059a0930ecc0fe0ef48cc9ec654a9699c81a489fa20205da30d48b66761f0500",
+          "array_sha256": "6a088ca0995e5363d208fbe1bd9d697e65d27fd46d507b01ee61dcf7232df7df",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_wbgt",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_wbgt",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_wbgt/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": true,
+        "save_ta": false,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "UTCI_0_0.tif": true,
+        "WBGT_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "UTCI_0_0.tif",
+        "WBGT_0_0.tif"
+      ],
+      "actual_names": [
+        "UTCI_0_0.tif",
+        "WBGT_0_0.tif"
+      ],
+      "artifacts": {
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "WBGT_0_0.tif": {
+          "sha256": "cf079ab0ca21dfa6627767cc00ce23006fa0f4a2343900027b9eadb7269cf570",
+          "array_sha256": "25526a2a64446aaf854ab895a65aea8b46bdfe60466784844b1535713ca725c1",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_ta",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_ta",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_ta/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": true,
+        "save_wind": false
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Ta_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Ta_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "actual_names": [
+        "Ta_0_0.tif",
+        "UTCI_0_0.tif"
+      ],
+      "artifacts": {
+        "Ta_0_0.tif": {
+          "sha256": "2c924231decc20b6985ac656ea2f4d1a080de38008dc9b06639f1db218ce8ba3",
+          "array_sha256": "0a3bc22886326027d9600ef5de9463808ebdb578d23908c6e300a6afbaf4f0e8",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "only_wind",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_wind",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/only_wind/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": false,
+        "save_svf": false,
+        "save_kup": false,
+        "save_kdown": false,
+        "save_lup": false,
+        "save_ldown": false,
+        "save_shadow": false,
+        "save_wbgt": false,
+        "save_ta": false,
+        "save_wind": true
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "UTCI_0_0.tif": true,
+        "Wind_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "UTCI_0_0.tif",
+        "Wind_0_0.tif"
+      ],
+      "actual_names": [
+        "UTCI_0_0.tif",
+        "Wind_0_0.tif"
+      ],
+      "artifacts": {
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Wind_0_0.tif": {
+          "sha256": "53b612b1fad20109bd04c10e4f9603c72824f37a66fcabe321a57130884ed1a2",
+          "array_sha256": "1ae04e6bb20cbf1e9c0bba19734920a69d0544212c86ba5c6099545ddadb25ef",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "all_on",
+      "cache_state": "warm",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/all_on",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/all_on/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": true,
+        "save_svf": true,
+        "save_kup": true,
+        "save_kdown": true,
+        "save_lup": true,
+        "save_ldown": true,
+        "save_shadow": true,
+        "save_wbgt": true,
+        "save_ta": true,
+        "save_wind": true
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Kdown_0_0.tif": true,
+        "Kup_0_0.tif": true,
+        "Ldown_0_0.tif": true,
+        "Lup_0_0.tif": true,
+        "Shadow_0_0.tif": true,
+        "TMRT_0_0.tif": true,
+        "Ta_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "WBGT_0_0.tif": true,
+        "Wind_0_0.tif": true,
+        "cache_artifact_names": true,
+        "warm_cache_unchanged": true
+      },
+      "expected_names": [
+        "Kdown_0_0.tif",
+        "Kup_0_0.tif",
+        "Ldown_0_0.tif",
+        "Lup_0_0.tif",
+        "Shadow_0_0.tif",
+        "TMRT_0_0.tif",
+        "Ta_0_0.tif",
+        "UTCI_0_0.tif",
+        "WBGT_0_0.tif",
+        "Wind_0_0.tif"
+      ],
+      "actual_names": [
+        "Kdown_0_0.tif",
+        "Kup_0_0.tif",
+        "Ldown_0_0.tif",
+        "Lup_0_0.tif",
+        "Shadow_0_0.tif",
+        "TMRT_0_0.tif",
+        "Ta_0_0.tif",
+        "UTCI_0_0.tif",
+        "WBGT_0_0.tif",
+        "Wind_0_0.tif"
+      ],
+      "artifacts": {
+        "Kdown_0_0.tif": {
+          "sha256": "71b19f16137b2069d613b300a900935cf560c4a97570fb7a5b73656ff4dc944b",
+          "array_sha256": "81fc5aa9c08be189b2634f49bd79adfaf4ae25ef89f25376f99d8ec76c1d8f4b",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Kup_0_0.tif": {
+          "sha256": "e544aa8daa5ee8118994a431f68df46c647730fedd412c848c02d0cf176e0e8f",
+          "array_sha256": "c97ff9c7d01feb9cb8962aa8505631eec33382d6636e0967656b8d1aca5f5609",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Ldown_0_0.tif": {
+          "sha256": "6c20fe5ca3da34faa0633e47876ef851cbe6d025478e23b314b55ed09538b116",
+          "array_sha256": "cad30c8ced07d3baa2ab0a229c177775246d80cacfe29cadd553f7243c479c3a",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Lup_0_0.tif": {
+          "sha256": "4ed53690354866608c69ef85cb652c182a69c5fa9896b70d133d48c27fffb5f9",
+          "array_sha256": "c38ea50bc8b47b6e2352f5e0837cb3aa491d37dffdf1ef67241070145444ac62",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Shadow_0_0.tif": {
+          "sha256": "059a0930ecc0fe0ef48cc9ec654a9699c81a489fa20205da30d48b66761f0500",
+          "array_sha256": "6a088ca0995e5363d208fbe1bd9d697e65d27fd46d507b01ee61dcf7232df7df",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "TMRT_0_0.tif": {
+          "sha256": "a7971a760f8ed47039cf75cca8ae35c07e6708b5e02c2fe3d69fe6c0737c9d0a",
+          "array_sha256": "49c10d658a547ac0f4cd5543b281a5f2fd8ad24d353aeec515ee84081545cf28",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Ta_0_0.tif": {
+          "sha256": "2c924231decc20b6985ac656ea2f4d1a080de38008dc9b06639f1db218ce8ba3",
+          "array_sha256": "0a3bc22886326027d9600ef5de9463808ebdb578d23908c6e300a6afbaf4f0e8",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "WBGT_0_0.tif": {
+          "sha256": "cf079ab0ca21dfa6627767cc00ce23006fa0f4a2343900027b9eadb7269cf570",
+          "array_sha256": "25526a2a64446aaf854ab895a65aea8b46bdfe60466784844b1535713ca725c1",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Wind_0_0.tif": {
+          "sha256": "53b612b1fad20109bd04c10e4f9603c72824f37a66fcabe321a57130884ed1a2",
+          "array_sha256": "1ae04e6bb20cbf1e9c0bba19734920a69d0544212c86ba5c6099545ddadb25ef",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    },
+    {
+      "name": "cold_all_on",
+      "cache_state": "cold",
+      "kwargs": {
+        "base_path": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/cold_all_on",
+        "preprocess_dir": "/Users/alansynn/Workspace/solweig-light/reports/runs/artifact_modes/cold_all_on/processed_inputs",
+        "selected_date_str": "2020-07-18",
+        "save_tmrt": true,
+        "save_svf": true,
+        "save_kup": true,
+        "save_kdown": true,
+        "save_lup": true,
+        "save_ldown": true,
+        "save_shadow": true,
+        "save_wbgt": true,
+        "save_ta": true,
+        "save_wind": true
+      },
+      "status": "passed",
+      "checks": {
+        "exact_names": true,
+        "return_none": true,
+        "Kdown_0_0.tif": true,
+        "Kup_0_0.tif": true,
+        "Ldown_0_0.tif": true,
+        "Lup_0_0.tif": true,
+        "SVF_0_0.tif": true,
+        "Shadow_0_0.tif": true,
+        "TMRT_0_0.tif": true,
+        "Ta_0_0.tif": true,
+        "UTCI_0_0.tif": true,
+        "WBGT_0_0.tif": true,
+        "Wind_0_0.tif": true,
+        "cache_artifact_names": true
+      },
+      "expected_names": [
+        "Kdown_0_0.tif",
+        "Kup_0_0.tif",
+        "Ldown_0_0.tif",
+        "Lup_0_0.tif",
+        "SVF_0_0.tif",
+        "Shadow_0_0.tif",
+        "TMRT_0_0.tif",
+        "Ta_0_0.tif",
+        "UTCI_0_0.tif",
+        "WBGT_0_0.tif",
+        "Wind_0_0.tif"
+      ],
+      "actual_names": [
+        "Kdown_0_0.tif",
+        "Kup_0_0.tif",
+        "Ldown_0_0.tif",
+        "Lup_0_0.tif",
+        "SVF_0_0.tif",
+        "Shadow_0_0.tif",
+        "TMRT_0_0.tif",
+        "Ta_0_0.tif",
+        "UTCI_0_0.tif",
+        "WBGT_0_0.tif",
+        "Wind_0_0.tif"
+      ],
+      "artifacts": {
+        "Kdown_0_0.tif": {
+          "sha256": "71b19f16137b2069d613b300a900935cf560c4a97570fb7a5b73656ff4dc944b",
+          "array_sha256": "81fc5aa9c08be189b2634f49bd79adfaf4ae25ef89f25376f99d8ec76c1d8f4b",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Kup_0_0.tif": {
+          "sha256": "e544aa8daa5ee8118994a431f68df46c647730fedd412c848c02d0cf176e0e8f",
+          "array_sha256": "c97ff9c7d01feb9cb8962aa8505631eec33382d6636e0967656b8d1aca5f5609",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Ldown_0_0.tif": {
+          "sha256": "6c20fe5ca3da34faa0633e47876ef851cbe6d025478e23b314b55ed09538b116",
+          "array_sha256": "cad30c8ced07d3baa2ab0a229c177775246d80cacfe29cadd553f7243c479c3a",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Lup_0_0.tif": {
+          "sha256": "4ed53690354866608c69ef85cb652c182a69c5fa9896b70d133d48c27fffb5f9",
+          "array_sha256": "c38ea50bc8b47b6e2352f5e0837cb3aa491d37dffdf1ef67241070145444ac62",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "SVF_0_0.tif": {
+          "sha256": "0f10eba06cba04e7abb8030dc0f0b1b08921cae410ba171ed1df4d3e089290cc",
+          "array_sha256": "a2f37ca3a989f959f540b47d26d2ff87aac259a495db90d1bae44fb4435ce167",
+          "shape": [
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Shadow_0_0.tif": {
+          "sha256": "059a0930ecc0fe0ef48cc9ec654a9699c81a489fa20205da30d48b66761f0500",
+          "array_sha256": "6a088ca0995e5363d208fbe1bd9d697e65d27fd46d507b01ee61dcf7232df7df",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "TMRT_0_0.tif": {
+          "sha256": "a7971a760f8ed47039cf75cca8ae35c07e6708b5e02c2fe3d69fe6c0737c9d0a",
+          "array_sha256": "49c10d658a547ac0f4cd5543b281a5f2fd8ad24d353aeec515ee84081545cf28",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Ta_0_0.tif": {
+          "sha256": "2c924231decc20b6985ac656ea2f4d1a080de38008dc9b06639f1db218ce8ba3",
+          "array_sha256": "0a3bc22886326027d9600ef5de9463808ebdb578d23908c6e300a6afbaf4f0e8",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "UTCI_0_0.tif": {
+          "sha256": "95385e30350ab476f5839fef15c8d7321d656a7e7175cdbd07756045dc41ed97",
+          "array_sha256": "bf1a2a49ce3f952c19c7aabedb7d010699468168b6a331eaa6eb0f49c0c20a93",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "WBGT_0_0.tif": {
+          "sha256": "cf079ab0ca21dfa6627767cc00ce23006fa0f4a2343900027b9eadb7269cf570",
+          "array_sha256": "25526a2a64446aaf854ab895a65aea8b46bdfe60466784844b1535713ca725c1",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        },
+        "Wind_0_0.tif": {
+          "sha256": "53b612b1fad20109bd04c10e4f9603c72824f37a66fcabe321a57130884ed1a2",
+          "array_sha256": "1ae04e6bb20cbf1e9c0bba19734920a69d0544212c86ba5c6099545ddadb25ef",
+          "shape": [
+            24,
+            32,
+            35
+          ],
+          "dtype": "float32",
+          "exact_values": true,
+          "exact_schema": true
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "One small scene; not every combination or stale/corrupt cache behavior",
+    "No performance claim; runs share a process",
+    "No candidate output"
+  ]
+}

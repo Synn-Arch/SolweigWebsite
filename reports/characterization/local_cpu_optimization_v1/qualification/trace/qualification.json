@@ -1,0 +1,110 @@
+{
+  "all_artifacts_exact": true,
+  "all_trace_records_exact": true,
+  "artifact_comparisons": [
+    {
+      "final_state_passed": true,
+      "geometry_passed": true,
+      "output_records": 11,
+      "passed": true,
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/trace/baseline_t10_b128-artifact-comparison.json",
+      "run": "baseline_t10_b128",
+      "sha256": "82022887016a188f32d0fd19ea800df3e07f02ab21506b555fa87bd9170935ea"
+    },
+    {
+      "final_state_passed": true,
+      "geometry_passed": true,
+      "output_records": 11,
+      "passed": true,
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/trace/e1_t10_b128-artifact-comparison.json",
+      "run": "e1_t10_b128",
+      "sha256": "82022887016a188f32d0fd19ea800df3e07f02ab21506b555fa87bd9170935ea"
+    },
+    {
+      "final_state_passed": true,
+      "geometry_passed": true,
+      "output_records": 11,
+      "passed": true,
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/trace/e2_t10_b128-artifact-comparison.json",
+      "run": "e2_t10_b128",
+      "sha256": "82022887016a188f32d0fd19ea800df3e07f02ab21506b555fa87bd9170935ea"
+    },
+    {
+      "final_state_passed": true,
+      "geometry_passed": true,
+      "output_records": 11,
+      "passed": true,
+      "path": "reports/characterization/local_cpu_optimization_v1/qualification/trace/baseline_t10_b4096-artifact-comparison.json",
+      "run": "baseline_t10_b4096",
+      "sha256": "82022887016a188f32d0fd19ea800df3e07f02ab21506b555fa87bd9170935ea"
+    }
+  ],
+  "comparison_semantics": "JSONL payload records include dtype, shape, strides, raw array bytes and finite/NaN/inf/signed-zero masks; artifact helper compares TIFF schemas, exact finite bits/special masks, all geometry archives and final checkpoint state.",
+  "fixture": "tests/reference/small_original_cpu/scene",
+  "fixture_kind": "real small original CPU fixture",
+  "performance_claim": null,
+  "schema": "local-cpu-optimization-v1-trace-qualification.v1",
+  "status": "passed",
+  "trace_runs": [
+    {
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "exact_to_baseline": true,
+      "manifest_sha256": "e4beb4f42b23fd353d48df5ba88da975e2aecc5037503ec747b68d2f44973ce2",
+      "records": 72,
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "run": "baseline_t1_b128"
+    },
+    {
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "exact_to_baseline": true,
+      "manifest_sha256": "27b3d820c70054f46f242c76a15ed9a1f33af34a6bf410da8e4dfbfdad8f4835",
+      "records": 72,
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "run": "baseline_t10_b128"
+    },
+    {
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "exact_to_baseline": true,
+      "manifest_sha256": "c7de51b57a0802e7fd98ecc4c488a5e3e49c1e777cc2eb557db8f28c10ab0369",
+      "records": 72,
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "run": "e1_t10_b128"
+    },
+    {
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "exact_to_baseline": true,
+      "manifest_sha256": "913a75864939daf69c83673e1a0b07ac9da8c0b773a21d2c743a1e78ee5e0d1c",
+      "records": 72,
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "run": "e2_t10_b128"
+    },
+    {
+      "event_counts": {
+        "engine_return": 24,
+        "state_checkpoint": 24,
+        "writer_inputs": 24
+      },
+      "exact_to_baseline": true,
+      "manifest_sha256": "e92fca63d2482eaa6b84c68c3d68462c1a08eda2a5a74da87a866ed67c9d44e3",
+      "records": 72,
+      "records_sha256": "73c6d8a544717142d0c6f74f989f630ab97071242e60e73df69bbe1c6ac8a9c6",
+      "run": "baseline_t10_b4096"
+    }
+  ]
+}

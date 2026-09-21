@@ -1,0 +1,25 @@
+{
+  "entrypoint": "solweig_gpu.utci_process.compute_utci",
+  "geometry_paths": [
+    "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/processed_inputs/Building_DSM/Building_DSM_0_0.tif",
+    "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/processed_inputs/Trees/Trees_0_0.tif",
+    "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/processed_inputs/DEM/DEM_0_0.tif",
+    "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/processed_inputs/walls/walls_0_0.tif",
+    "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/processed_inputs/aspect/aspect_0_0.tif"
+  ],
+  "landcover_path": "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/processed_inputs/Landcover/Landcover_0_0.tif",
+  "windcoeff_path": null,
+  "met_file": "scene/met.txt",
+  "output_path": "/Users/alansynn/Workspace/solweig-light/tests/reference/state_sequence_original_cpu/scene/output_folder/0_0",
+  "number": "0_0",
+  "selected_date_str": "2020-07-18",
+  "save_tmrt": true,
+  "save_kup": true,
+  "save_kdown": true,
+  "save_lup": true,
+  "save_ldown": true,
+  "save_shadow": true,
+  "save_wbgt": true,
+  "save_ta": true,
+  "save_wind": true
+}

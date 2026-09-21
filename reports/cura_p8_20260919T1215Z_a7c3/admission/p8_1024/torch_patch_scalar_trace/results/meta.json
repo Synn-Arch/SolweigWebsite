@@ -1,0 +1,92 @@
+{
+  "arrays": {
+    "atan": {
+      "dtype": "float32",
+      "shape": [
+        774,
+        153
+      ]
+    },
+    "cos_input": {
+      "dtype": "float64",
+      "shape": [
+        153
+      ]
+    },
+    "degrees": {
+      "dtype": "float32",
+      "shape": [
+        774,
+        153
+      ]
+    },
+    "hsvf": {
+      "dtype": "float32",
+      "shape": [
+        774,
+        153
+      ]
+    },
+    "shade": {
+      "dtype": "bool",
+      "shape": [
+        774,
+        153
+      ]
+    },
+    "solar_tan": {
+      "dtype": "float64",
+      "shape": [
+        153
+      ]
+    },
+    "sun": {
+      "dtype": "bool",
+      "shape": [
+        774,
+        153
+      ]
+    },
+    "tan_delta": {
+      "dtype": "float32",
+      "shape": [
+        774,
+        153
+      ]
+    },
+    "xi": {
+      "dtype": "float64",
+      "shape": [
+        153
+      ]
+    },
+    "yi": {
+      "dtype": "float64",
+      "shape": [
+        153
+      ]
+    },
+    "yi_clamped": {
+      "dtype": "float64",
+      "shape": [
+        153
+      ]
+    }
+  },
+  "capture_counts": {
+    "atan": 153,
+    "cos": 153,
+    "tan": 306
+  },
+  "corpus_sha256": "8bfaf4016f85c0939d4e72155e84420ffac89a16ce051c1afbb2c934f615d1cf",
+  "interop_threads": 1,
+  "oracle_masks_exact": true,
+  "package": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/solweig.py",
+  "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
+  "python": "3.12.14 (main, Sep  2 2026, 23:27:36) [GCC 15.3.0]",
+  "reference_sha256": "3ee55989eaf011ac63cbcb0d1f3344534c9d45ca5a39d79c91650452c2d98994",
+  "source_sha256": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c",
+  "status": "passed",
+  "threads": 1,
+  "torch": "2.14.0+cpu"
+}

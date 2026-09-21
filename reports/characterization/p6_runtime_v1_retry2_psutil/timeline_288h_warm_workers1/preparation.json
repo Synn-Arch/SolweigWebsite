@@ -1,0 +1,37 @@
+{
+  "cache_dir": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_288h_warm_workers1/scene/.runtime_cache",
+  "cold_geometry": false,
+  "forcing": {
+    "cycles": 12,
+    "day_fields": [
+      200,
+      201,
+      202,
+      203,
+      204,
+      205,
+      206,
+      207,
+      208,
+      209,
+      210,
+      211
+    ],
+    "first_timestamp": [
+      2020,
+      200,
+      0,
+      0
+    ],
+    "last_timestamp": [
+      2020,
+      211,
+      23,
+      0
+    ],
+    "rows": 288,
+    "source_rows": 24
+  },
+  "native_cache_manifest_before": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p6_runtime_v1_retry2_psutil/timeline_288h_warm_workers1/scene/.runtime_cache/828c1da492d488fa1cbb6149b0ae7c6963d1e56dadca686825f533cc39cc3c08/manifest.json",
+  "two_tiles": false
+}

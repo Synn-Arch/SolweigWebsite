@@ -1,0 +1,26 @@
+{
+  "status": "ready_for_independent_design_review_then_isolated_worker",
+  "ownership": "isolated candidate snapshot and tests/evidence under this experiment only; main integration after independent review",
+  "ordered_steps": [
+    "Verify all policy bindings and record full canonical oracle environment lock/source verification before new captures.",
+    "Audit accepted helper domains and actual float64 coefficient promotion; resolve domain holes without new exceptions or hidden dispatch.",
+    "Adapt retained M1 snapshot to named portable profile; add content identities and stale-cache/restart rejection; retain license and serial/parallel cache separation.",
+    "Capture missing canonical original-SLEEF reference arrays in isolated original installation before candidate comparison.",
+    "Run primitives/classifiers/components on M1 and Linux; no large run before gates pass. If NumPy scalar coefficients change categories, source-port canonical double dispatch under same gates.",
+    "Run complete chronological and installed-wheel admissions on both hosts; retain all errors and original-Cura deviation comparisons.",
+    "Return exact source inventory/diff, commands, raw outputs, JUnit, wheels, environment and input/reference hashes for independent review; no release claim."
+  ],
+  "remote": "Old Cura root removed; request new ledger-owned root via owner, run one task at a time, hash-verify download/cleanup. No use of deleted paths.",
+  "independent_reviewer_checks": [
+    "reference amendment correctly labeled; no source-generated upstream oracle",
+    "actual scalar promotion and source dispatch/FMA",
+    "accepted-input domain complete, explicit coefficient limitations",
+    "all categorical and unchanged adopted field gates",
+    "cache/checkpoint identity and concurrency",
+    "installed runtime dependency/source isolation and license",
+    "Linux and M1 complete evidence, no inherited-pass transfer",
+    "original Cura failures and approved science exceptions distinct"
+  ],
+  "policy_sha256": "f0d1506eb806482bb96011e52f9e130f161aabbb306e28b8d46e96184b75fd3e",
+  "documentation_sha256": "34f8be579996ac96e4b98c17008b959b4050c1485ab81b29247c25ad5cd534f5"
+}

@@ -1,0 +1,8 @@
+{
+  "attempt": "tools/run_exact_cpu_pairs.compare_scenes invoked by an ad hoc checker with tuple shape (32,35)",
+  "failure": "comparison helper expects JSON/list shape and therefore set expected_schema false for every TIFF despite zero data-window mismatches; no numerical process failed",
+  "performance_claim": null,
+  "resolution": "reran the same artifact comparisons with the helper contract list [32,35]; baseline, E1, E2 and block4096 comparisons passed with geometry and final state exact",
+  "schema": "local-cpu-optimization-v1-retained-harness-attempt.v1",
+  "status": "retained_harness_attempt"
+}

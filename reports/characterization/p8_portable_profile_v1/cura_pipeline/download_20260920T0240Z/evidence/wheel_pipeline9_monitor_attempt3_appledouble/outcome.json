@@ -1,0 +1,8 @@
+{
+  "exit_code": 1,
+  "aborted": false,
+  "limit": 12884901888,
+  "peak_summed_rss": 552210432,
+  "peak_summed_uss": 318484480,
+  "peak_summed_pss": 432857088
+}

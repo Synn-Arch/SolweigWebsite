@@ -1,0 +1,58 @@
+{
+  "experiment": "E4v2_persistent_jit_namespaced_entrypoints",
+  "baseline_commit": "8ca23d444a3b05bdeb76655329c0a09c3dc4d6e8",
+  "supersedes_packet": "/tmp/solweig-exact-e4-8s8t7i",
+  "status": "source_complete_unexecuted",
+  "scope": "E4 only; E3 and the main repository were not changed.",
+  "execution": {
+    "candidate_imported": false,
+    "jit_compiled": false,
+    "tests_run": false,
+    "timings_run": false,
+    "reason": "Numerical host held exclusively by another worker."
+  },
+  "cache_identity": {
+    "helper": "solweig_light/radiation/_jit_cache.py:17-50",
+    "inputs": [
+      "defining module content",
+      "namespace helper content",
+      "Python implementation/version/cache tag",
+      "NumPy/Numba/llvmlite versions",
+      "system/machine/processor/byteorder/pointer width"
+    ],
+    "mutation": "function.__qualname__ only",
+    "function_and_code_identity": "same function returned; no wrapper or __code__ write",
+    "coexistence": "Digest is embedded in Numba filename_base; no cache directory mutation/deletion.",
+    "source_assessment": "No source-level serialization/location blocker found; fresh-process warm load remains mandatory."
+  },
+  "wall_candidate": {
+    "decision": "ready_for_qualification",
+    "source": "wall_shadows.py:77-137,140-200,203-264,267-278",
+    "proof": "Independent serial definitions have AST-identical arguments/bodies to parallel definitions; serial decorators add cache=True and metadata binding; parallel decorators remain unchanged and uncached."
+  },
+  "math_candidate": {
+    "decision": "ready_for_qualification",
+    "source": "_sleef_acos.py:89-95; _sleef_classifier.py:14-32,128-146",
+    "proof": "Array entrypoint bodies and scalar arithmetic are unchanged. Classifier F/fma/dfmul definitions, including decorator options, are AST-identical to canonical definitions and source-local."
+  },
+  "numba_source_proof": "numba_source_proof.json",
+  "draft_tests": {
+    "source_proof_cases": 6,
+    "subprocess_cases_after_parametrization": 6,
+    "critical_regressions": [
+      "cached warm process never calls inspect_llvm",
+      "warm wall run reverses first-call order in the same cache",
+      "same-size/same-mtime defining-module comment edit creates a new namespace and miss",
+      "same-size/same-mtime helper comment edit creates a new namespace and miss",
+      "mutated warm results equal independent mutated-cold results",
+      "copied helper bodies and decorator options equal canonical definitions"
+    ]
+  },
+  "claims": {
+    "speedup": null,
+    "numerical_equivalence": "pending_execution",
+    "persistent_cache_hit": "pending_execution",
+    "same_stamp_stale_cache_rejection": "pending_execution",
+    "profile_id_semantics": "unchanged_by_source_inspection"
+  }
+}

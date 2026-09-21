@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.109" timestamp="2026-09-19T23:15:24.178547-04:00" hostname="COD-MBP16-LOAN2"><testcase classname="" name="" time="0.000"><error message="collection failure">reports/characterization/p8_portable_profile_v1/isolated_snapshot/tests/unit/test_public_api.py:10: in &lt;module&gt;
+    'reports/contract_snapshot.json').read_text())['public_functions']
+                                      ^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1058: in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/opt/homebrew/Cellar/python@3.11/3.11.16/Frameworks/Python.framework/Versions/3.11/lib/python3.11/pathlib.py:1044: in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   FileNotFoundError: [Errno 2] No such file or directory: '/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_portable_profile_v1/isolated_snapshot/reports/contract_snapshot.json'</error></testcase></testsuite></testsuites>

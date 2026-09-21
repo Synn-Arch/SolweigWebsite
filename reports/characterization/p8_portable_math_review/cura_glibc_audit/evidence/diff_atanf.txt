@@ -1,0 +1,104 @@
+--- openlibm-5fe399749f9276eaa0b8403e507470da05cbbb3f/src/s_atanf.c	2026-09-02 04:18:40.000000000 -0400
++++ src/sysdeps/ieee754/flt-32/s_atanf.c	2024-01-30 19:34:58.000000000 -0500
+@@ -1,5 +1,4 @@
+ /* s_atanf.c -- float version of s_atan.c.
+- * Conversion to float by Ian Lance Taylor, Cygnus Support, ian@cygnus.com.
+  */
+ 
+ /*
+@@ -13,12 +12,15 @@
+  * ====================================================
+  */
+ 
+-#include "cdefs-compat.h"
+-//__FBSDID("$FreeBSD: src/lib/msun/src/s_atanf.c,v 1.10 2008/08/01 01:24:25 das Exp $");
+-
+-#include <openlibm_math.h>
+-
+-#include "math_private.h"
++#if defined(LIBM_SCCS) && !defined(lint)
++static char rcsid[] = "$NetBSD: s_atanf.c,v 1.4 1995/05/10 20:46:47 jtc Exp $";
++#endif
++
++#include <float.h>
++#include <math.h>
++#include <math_private.h>
++#include <math-underflow.h>
++#include <libm-alias-float.h>
+ 
+ static const float atanhi[] = {
+   4.6364760399e-01, /* atan(0.5)hi 0x3eed6338 */
+@@ -35,32 +37,38 @@
+ };
+ 
+ static const float aT[] = {
+-  3.3333328366e-01,
+- -1.9999158382e-01,
+-  1.4253635705e-01,
+- -1.0648017377e-01,
+-  6.1687607318e-02,
++  3.3333334327e-01, /* 0x3eaaaaaa */
++ -2.0000000298e-01, /* 0xbe4ccccd */
++  1.4285714924e-01, /* 0x3e124925 */
++ -1.1111110449e-01, /* 0xbde38e38 */
++  9.0908870101e-02, /* 0x3dba2e6e */
++ -7.6918758452e-02, /* 0xbd9d8795 */
++  6.6610731184e-02, /* 0x3d886b35 */
++ -5.8335702866e-02, /* 0xbd6ef16b */
++  4.9768779427e-02, /* 0x3d4bda59 */
++ -3.6531571299e-02, /* 0xbd15a221 */
++  1.6285819933e-02, /* 0x3c8569d7 */
+ };
+ 
+ static const float
+ one   = 1.0,
+ huge   = 1.0e30;
+ 
+-OLM_DLLEXPORT float
+-atanf(float x)
++float __atanf(float x)
+ {
+ 	float w,s1,s2,z;
+ 	int32_t ix,hx,id;
+ 
+ 	GET_FLOAT_WORD(hx,x);
+ 	ix = hx&0x7fffffff;
+-	if(ix>=0x4c800000) {	/* if |x| >= 2**26 */
++	if(ix>=0x4c000000) {	/* if |x| >= 2^25 */
+ 	    if(ix>0x7f800000)
+ 		return x+x;		/* NaN */
+-	    if(hx>0) return  atanhi[3]+*(volatile float *)&atanlo[3];
+-	    else     return -atanhi[3]-*(volatile float *)&atanlo[3];
++	    if(hx>0) return  atanhi[3]+atanlo[3];
++	    else     return -atanhi[3]-atanlo[3];
+ 	} if (ix < 0x3ee00000) {	/* |x| < 0.4375 */
+-	    if (ix < 0x39800000) {	/* |x| < 2**-12 */
++	    if (ix < 0x31000000) {	/* |x| < 2^-29 */
++		math_check_force_underflow (x);
+ 		if(huge+x>one) return x;	/* raise inexact */
+ 	    }
+ 	    id = -1;
+@@ -75,7 +83,7 @@
+ 	} else {
+ 	    if (ix < 0x401c0000) {	/* |x| < 2.4375 */
+ 		id = 2; x  = (x-(float)1.5)/(one+(float)1.5*x);
+-	    } else {			/* 2.4375 <= |x| < 2**26 */
++	    } else {			/* 2.4375 <= |x| < 2^66 */
+ 		id = 3; x  = -(float)1.0/x;
+ 	    }
+ 	}}
+@@ -83,11 +91,12 @@
+ 	z = x*x;
+ 	w = z*z;
+     /* break sum from i=0 to 10 aT[i]z**(i+1) into odd and even poly */
+-	s1 = z*(aT[0]+w*(aT[2]+w*aT[4]));
+-	s2 = w*(aT[1]+w*aT[3]);
++	s1 = z*(aT[0]+w*(aT[2]+w*(aT[4]+w*(aT[6]+w*(aT[8]+w*aT[10])))));
++	s2 = w*(aT[1]+w*(aT[3]+w*(aT[5]+w*(aT[7]+w*aT[9]))));
+ 	if (id<0) return x - x*(s1+s2);
+ 	else {
+ 	    z = atanhi[id] - ((x*(s1+s2) - atanlo[id]) - x);
+ 	    return (hx<0)? -z:z;
+ 	}
+ }
++libm_alias_float (__atan, atan)

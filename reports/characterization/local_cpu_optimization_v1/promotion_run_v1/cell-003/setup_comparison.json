@@ -1,0 +1,1364 @@
+{
+  "final_state": [
+    {
+      "Kdown_0_0.tif|Kup_0_0.tif|Ldown_0_0.tif|Lup_0_0.tif|Shadow_0_0.tif|TMRT_0_0.tif|Ta_0_0.tif|UTCI_0_0.tif|WBGT_0_0.tif|Wind_0_0.tif": {
+        "files": {
+          "array-0.npy": "658b169f34765c97f46a01ec89c87920ce364f69e04a7a75c527e2a5ba740a7b",
+          "array-1.npy": "69cf11a2831ece04133cee3734fe93115b91f2d4679b70ff06e2d8bff380418b",
+          "array-2.npy": "f5e99fc8932dd194bb9a89dd40b0a044df182a8741ecb6d28f759567c77b362a",
+          "array-3.npy": "1a887bf29995d8acaed4e67d0ec147aefb2cfba42f30a00d7a5785b890f26234",
+          "array-4.npy": "dc6885361ed32b93e7acbd4fb0a68c0de7f8f3a42056867524ca517a97c1624b",
+          "array-5.npy": "eb9382d19955377191c5e2c38bc9c81dc5d035d8e1114a7e5f527a3616433322",
+          "array-6.npy": "511d6c059690a6e9bcd59bd048cf882c9aa749925c550e503c6a5f6912c03119",
+          "array-7.npy": "03ec389c90508a46a86967d5879c0debfb4f96e8d45dc51c727ffb2d9439d6cd",
+          "state.json": "527e675657fa950482d96a49d5fb95a899fcdc1c647bcdf4c25d873dd43b8e8d"
+        },
+        "next_timestep": 24
+      }
+    },
+    {
+      "Kdown_0_0.tif|Kup_0_0.tif|Ldown_0_0.tif|Lup_0_0.tif|Shadow_0_0.tif|TMRT_0_0.tif|Ta_0_0.tif|UTCI_0_0.tif|WBGT_0_0.tif|Wind_0_0.tif": {
+        "files": {
+          "array-0.npy": "658b169f34765c97f46a01ec89c87920ce364f69e04a7a75c527e2a5ba740a7b",
+          "array-1.npy": "69cf11a2831ece04133cee3734fe93115b91f2d4679b70ff06e2d8bff380418b",
+          "array-2.npy": "f5e99fc8932dd194bb9a89dd40b0a044df182a8741ecb6d28f759567c77b362a",
+          "array-3.npy": "1a887bf29995d8acaed4e67d0ec147aefb2cfba42f30a00d7a5785b890f26234",
+          "array-4.npy": "dc6885361ed32b93e7acbd4fb0a68c0de7f8f3a42056867524ca517a97c1624b",
+          "array-5.npy": "eb9382d19955377191c5e2c38bc9c81dc5d035d8e1114a7e5f527a3616433322",
+          "array-6.npy": "511d6c059690a6e9bcd59bd048cf882c9aa749925c550e503c6a5f6912c03119",
+          "array-7.npy": "03ec389c90508a46a86967d5879c0debfb4f96e8d45dc51c727ffb2d9439d6cd",
+          "state.json": "527e675657fa950482d96a49d5fb95a899fcdc1c647bcdf4c25d873dd43b8e8d"
+        },
+        "next_timestep": 24
+      }
+    }
+  ],
+  "final_state_passed": true,
+  "geometry_archives": [
+    {
+      "shadowmats_0_0.npz": {
+        "shadowmat.npy": "b2c73e0df13a99c0bca4b89524a5eac6459a3597fae37e5339043c57165d4c00",
+        "vbshmat.npy": "664237f5798be7da2592bbdeab1f52b3b7890137eb3b4054cac3aaec7ef08049",
+        "vegshadowmat.npy": "833ecbc6922abde8e56713161a681824cb36183052b5030054d728b9a276242b"
+      },
+      "svfs_0_0.zip": {
+        "svf.tif": "92084fa95e6c32fc78a2150a70e9d4b93a867341192e80dfd35ba128925cb268",
+        "svfE.tif": "45f4fd7f07aea63597c98ed7966c66be2bd12ac8889bb351939f53678ba83456",
+        "svfEaveg.tif": "80c2f0042e15341ddaeb0fa4674767206d3e15ab368b9c4947bd6f0e7c6ef28e",
+        "svfEveg.tif": "7a98e9ff1defe3bfd11817406769ac931849e00ae8f6a772ae9e951947b040f2",
+        "svfN.tif": "83c1bf1c3bea4bd685610927020f9de8f2c150bdbad7b059edb09b75ef6f264b",
+        "svfNaveg.tif": "c13d97d3bddca8e354abfc5f0220dc13294efc49452137bd50996e6d6f9be71d",
+        "svfNveg.tif": "4ceeb97bbb82ec782c7472d7ae75c6b8a4d611ee081e723154fe522bfdf00ad6",
+        "svfS.tif": "3074c17f30b1a3f436a0709bd9166de4dcfbdd541164bb0e4a99c246920015e2",
+        "svfSaveg.tif": "dfd59563a0d79003a639f9902765812763fc7974f1d62b09a8ba3df2f75c6233",
+        "svfSveg.tif": "59a73587f111b4b9520032f3b68f3d41d533edf6243818f2f9346c6ea28c7692",
+        "svfW.tif": "c7d8e4a4730d23106a61c2d81b00b3a21efcfc94155af294f36b0b8522de3459",
+        "svfWaveg.tif": "de474f1cb6e8fed3b6cf77b302dcd10e76ce2e88bd84a8dbd39484dbb60690cf",
+        "svfWveg.tif": "04bc6e87d48d09eba653b4ad7a03678262447fb9d58cccd906dd7103a34408ea",
+        "svfaveg.tif": "8cdb805db08952987b1cc38a2128298ad5fcb5d4fb873adb75c1c781dcc0c3b5",
+        "svfveg.tif": "9c322f381869927c430eefd48b26d3f9fbf8f7f7cfbf1ff00aad7658eeec7c6c"
+      }
+    },
+    {
+      "shadowmats_0_0.npz": {
+        "shadowmat.npy": "b2c73e0df13a99c0bca4b89524a5eac6459a3597fae37e5339043c57165d4c00",
+        "vbshmat.npy": "664237f5798be7da2592bbdeab1f52b3b7890137eb3b4054cac3aaec7ef08049",
+        "vegshadowmat.npy": "833ecbc6922abde8e56713161a681824cb36183052b5030054d728b9a276242b"
+      },
+      "svfs_0_0.zip": {
+        "svf.tif": "92084fa95e6c32fc78a2150a70e9d4b93a867341192e80dfd35ba128925cb268",
+        "svfE.tif": "45f4fd7f07aea63597c98ed7966c66be2bd12ac8889bb351939f53678ba83456",
+        "svfEaveg.tif": "80c2f0042e15341ddaeb0fa4674767206d3e15ab368b9c4947bd6f0e7c6ef28e",
+        "svfEveg.tif": "7a98e9ff1defe3bfd11817406769ac931849e00ae8f6a772ae9e951947b040f2",
+        "svfN.tif": "83c1bf1c3bea4bd685610927020f9de8f2c150bdbad7b059edb09b75ef6f264b",
+        "svfNaveg.tif": "c13d97d3bddca8e354abfc5f0220dc13294efc49452137bd50996e6d6f9be71d",
+        "svfNveg.tif": "4ceeb97bbb82ec782c7472d7ae75c6b8a4d611ee081e723154fe522bfdf00ad6",
+        "svfS.tif": "3074c17f30b1a3f436a0709bd9166de4dcfbdd541164bb0e4a99c246920015e2",
+        "svfSaveg.tif": "dfd59563a0d79003a639f9902765812763fc7974f1d62b09a8ba3df2f75c6233",
+        "svfSveg.tif": "59a73587f111b4b9520032f3b68f3d41d533edf6243818f2f9346c6ea28c7692",
+        "svfW.tif": "c7d8e4a4730d23106a61c2d81b00b3a21efcfc94155af294f36b0b8522de3459",
+        "svfWaveg.tif": "de474f1cb6e8fed3b6cf77b302dcd10e76ce2e88bd84a8dbd39484dbb60690cf",
+        "svfWveg.tif": "04bc6e87d48d09eba653b4ad7a03678262447fb9d58cccd906dd7103a34408ea",
+        "svfaveg.tif": "8cdb805db08952987b1cc38a2128298ad5fcb5d4fb873adb75c1c781dcc0c3b5",
+        "svfveg.tif": "9c322f381869927c430eefd48b26d3f9fbf8f7f7cfbf1ff00aad7658eeec7c6c"
+      }
+    }
+  ],
+  "geometry_passed": true,
+  "geometry_total_rasters": {
+    "SkyViewFactor_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "passed": true
+    }
+  },
+  "limitation": "Final state alone is not every-timestep evidence; separate trace admission is required.",
+  "passed": true,
+  "records": {
+    "output_folder/0_0/Kdown_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/Kup_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/Ldown_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/Lup_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/Shadow_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/TMRT_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/Ta_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/UTCI_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/WBGT_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    },
+    "output_folder/0_0/Wind_0_0.tif": {
+      "bands": [
+        {
+          "band": 1,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 2,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 3,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 4,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 5,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 6,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 7,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 8,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 9,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 10,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 11,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 12,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 13,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 14,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 15,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 16,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 17,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 18,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 19,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 20,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 21,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 22,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 23,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        },
+        {
+          "band": 24,
+          "mismatched_windows": 0,
+          "schema_passed": true
+        }
+      ],
+      "expected_schema": true,
+      "passed": true
+    }
+  }
+}

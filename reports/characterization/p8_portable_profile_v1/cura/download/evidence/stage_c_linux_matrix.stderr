@@ -1,0 +1,23 @@
+	Command being timed: "bash -c ulimit -v 12582912; exec env PYTHONNOUSERSITE=1 PYTHONPATH="/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/runtime/stubs:/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/runtime/site:/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec/isolated_snapshot/src" NUMBA_NUM_THREADS=36 OMP_NUM_THREADS=36 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -S tools/run_stage_c_matrix.py --root "/home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec" --output evidence/stage_c_linux_matrix.json"
+	User time (seconds): 33.96
+	System time (seconds): 1.11
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:35.07
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 249520
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 14
+	Minor (reclaiming a frame) page faults: 92886
+	Voluntary context switches: 75
+	Involuntary context switches: 138
+	Swaps: 0
+	File system inputs: 184
+	File system outputs: 6360
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

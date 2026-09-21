@@ -1,0 +1,52 @@
+[
+  {
+    "path": "Building_DSM/Building_DSM_0_0.tif",
+    "dtype": [
+      "float32",
+      "float32"
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0,
+    "metadata_equal": true
+  },
+  {
+    "path": "DEM/DEM_0_0.tif",
+    "dtype": [
+      "float32",
+      "float32"
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0,
+    "metadata_equal": true
+  },
+  {
+    "path": "Trees/Trees_0_0.tif",
+    "dtype": [
+      "float32",
+      "float32"
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0,
+    "metadata_equal": true
+  },
+  {
+    "path": "walls/walls_0_0.tif",
+    "dtype": [
+      "float32",
+      "float32"
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0,
+    "metadata_equal": true
+  },
+  {
+    "path": "aspect/aspect_0_0.tif",
+    "dtype": [
+      "float32",
+      "float32"
+    ],
+    "bitwise_equal": true,
+    "max_abs": 0.0,
+    "metadata_equal": true
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "status": "failed",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/capture_portable_profile_oracle.py\", line 364, in large_child\n    returned = solweig_gpu.thermal_comfort(**kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: thermal_comfort() got an unexpected keyword argument 'save_utci'\n",
+  "workflow_seconds": 0.0003439999418333173
+}

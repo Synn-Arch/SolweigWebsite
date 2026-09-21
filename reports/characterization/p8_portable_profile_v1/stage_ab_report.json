@@ -1,0 +1,272 @@
+{
+  "domain_audit": {
+    "path": "reports/characterization/p8_portable_profile_v1/domain_audit.json",
+    "result": "complete accepted domain preserved with explicit identity-qualified NumPy paths outside source-derived float32 helper domain",
+    "sha256": "4b0e693b1d7e20fc52108f6857a3af045786d4c43850c5cc227db4707aab5851"
+  },
+  "implementation": {
+    "cache": "whole geometry identity invalidates; missing/changed identity produces fresh atomic generation",
+    "changed_files": [
+      "identities.py",
+      "pipeline.py",
+      "radiation/SLEEF_LICENSE.txt",
+      "radiation/_math_profile.py",
+      "radiation/_sleef_acos.py",
+      "radiation/_sleef_classifier.py",
+      "radiation/engine.py",
+      "radiation/patch_radiation.py"
+    ],
+    "checkpoint": "simulation identity embeds complete profile and mismatched resume rejects",
+    "main_changed": false,
+    "patch": {
+      "path": "reports/characterization/p8_portable_profile_v1/source.patch",
+      "sha256": "2899404e831138305fa24400bc68284f1dd36005316a5fe45831b82ea5ac1ec1"
+    },
+    "profile_identity": "semantic ID plus source/coefficient/runtime/ISA/floating-setting fingerprint",
+    "public_signatures_preserved": true,
+    "snapshot": "reports/characterization/p8_portable_profile_v1/isolated_snapshot",
+    "source_manifest": {
+      "path": "reports/characterization/p8_portable_profile_v1/source_manifest.json",
+      "sha256": "6c2aa56b59fd948f06555f4621519c4f7cf8c5891c5e7e959e52fcade9dc5890"
+    },
+    "tan_domain": "finite float32 |x|<125 uses pinned source sequence; all other accepted float32 inputs explicitly preserve legacy NumPy tan; promoted dtypes explicitly preserve NumPy paths"
+  },
+  "next_gate": "Capture/verify missing canonical original-SLEEF arrays before inspecting new candidate results, then execute predeclared M1 and Linux primitive/classifier matrix. No full1024 until categorical boundary gates pass.",
+  "nonclaims": [
+    "Prior M1 snapshot passes are starting evidence only.",
+    "No main promotion or release claim.",
+    "Original Cura failures remain separate.",
+    "No MKL runtime or dependency."
+  ],
+  "not_run": [
+    "new portable-v1 oracle comparisons",
+    "Linux x86_64 admission",
+    "full small/dense1024/vegetation1024 chronology",
+    "installed wheels on both required platforms"
+  ],
+  "policy_bindings": [
+    {
+      "actual": "34f8be579996ac96e4b98c17008b959b4050c1485ab81b29247c25ad5cd534f5",
+      "expected": "34f8be579996ac96e4b98c17008b959b4050c1485ab81b29247c25ad5cd534f5",
+      "path": "docs/portable_math_profile.md",
+      "verified": true
+    },
+    {
+      "actual": "f4b48743018c015377f41afe3d58c7786288a42ac6a115d16070b153f2e806c5",
+      "expected": "f4b48743018c015377f41afe3d58c7786288a42ac6a115d16070b153f2e806c5",
+      "path": "reports/characterization/p8_asvf_parity_review/oracle_environment.json",
+      "verified": true
+    },
+    {
+      "actual": "59bf2cbd16b8937e8e835f731bbeb954490076746b28ff1b2f65ab6ba2ecf0c0",
+      "expected": "59bf2cbd16b8937e8e835f731bbeb954490076746b28ff1b2f65ab6ba2ecf0c0",
+      "path": "reports/characterization/p8_asvf_parity_review/oracle.npz",
+      "verified": true
+    },
+    {
+      "actual": "96749d763174cda8cc8333688454405480ba9498d2012163afb92d5a493c6de2",
+      "expected": "96749d763174cda8cc8333688454405480ba9498d2012163afb92d5a493c6de2",
+      "path": "reports/characterization/p8_asvf_parity_review/inputs.npy",
+      "verified": true
+    },
+    {
+      "actual": "53ba533fc10a505564970b8d3604bb1369455bece7d59153db6cb7c04187cbce",
+      "expected": "53ba533fc10a505564970b8d3604bb1369455bece7d59153db6cb7c04187cbce",
+      "path": "reports/characterization/p8_asvf_parity_review/sleef_source/provenance.json",
+      "verified": true
+    },
+    {
+      "actual": "3101e0ec929eaf08e3bd08389e280c4c1cfa54bff67fc139bacf16f67c6065a6",
+      "expected": "3101e0ec929eaf08e3bd08389e280c4c1cfa54bff67fc139bacf16f67c6065a6",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_metadata.json",
+      "verified": true
+    },
+    {
+      "actual": "3997ba559d8be52bdd79e68ea32fe7a147880d4c2bdc5c98d9f7ff554d2f7b85",
+      "expected": "3997ba559d8be52bdd79e68ea32fe7a147880d4c2bdc5c98d9f7ff554d2f7b85",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/final_review.json",
+      "verified": true
+    },
+    {
+      "actual": "f099274e9eb3f1a2932cad9ae2762f112f26c77d956f9c6f1f69b9dd1fc1f0cf",
+      "expected": "f099274e9eb3f1a2932cad9ae2762f112f26c77d956f9c6f1f69b9dd1fc1f0cf",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_pipeline_experiment/source_manifest.json",
+      "verified": true
+    },
+    {
+      "actual": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+      "expected": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+      "path": "benchmarks/protocols/comparison_v1.json",
+      "verified": true
+    },
+    {
+      "actual": "6c8ba3312d0cbb16db2207a8ce43c14e8305f234fd37b6ef3f8c7a310762b70d",
+      "expected": "6c8ba3312d0cbb16db2207a8ce43c14e8305f234fd37b6ef3f8c7a310762b70d",
+      "path": "reports/scientific_release_exceptions.json",
+      "verified": true
+    },
+    {
+      "actual": "ed48893a46b987836c089253b31b5cd4730d464eba3cbf5651a2b2b2f33b0c9a",
+      "expected": "ed48893a46b987836c089253b31b5cd4730d464eba3cbf5651a2b2b2f33b0c9a",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_00.npz",
+      "verified": true
+    },
+    {
+      "actual": "2182caf8274ce19595553eef932fe776f94ec435900531a5d4a594b94bd5e940",
+      "expected": "2182caf8274ce19595553eef932fe776f94ec435900531a5d4a594b94bd5e940",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_01.npz",
+      "verified": true
+    },
+    {
+      "actual": "6b878c5640b6ea83773a4e3e8a391c1706c492c5fdf9a42000e29775385795ac",
+      "expected": "6b878c5640b6ea83773a4e3e8a391c1706c492c5fdf9a42000e29775385795ac",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_02.npz",
+      "verified": true
+    },
+    {
+      "actual": "b196c39f62cf429471abb2fbb01e1bc9cdafde57ba5bf28a4ff4831220f00466",
+      "expected": "b196c39f62cf429471abb2fbb01e1bc9cdafde57ba5bf28a4ff4831220f00466",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_03.npz",
+      "verified": true
+    },
+    {
+      "actual": "ba3d8ef8a117a25261adee572333d2cacb8e2c9bbd52c878c6eac83bdf59c6e6",
+      "expected": "ba3d8ef8a117a25261adee572333d2cacb8e2c9bbd52c878c6eac83bdf59c6e6",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_04.npz",
+      "verified": true
+    },
+    {
+      "actual": "1ebd577dcdf37ed534bb33bfb188da9358a73edc1cc6e37fb83b2aac03bf2bb1",
+      "expected": "1ebd577dcdf37ed534bb33bfb188da9358a73edc1cc6e37fb83b2aac03bf2bb1",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_05.npz",
+      "verified": true
+    },
+    {
+      "actual": "c84b419a7459d857743755eccda3aaa30980cd471cc52537640d71a7d25f6d54",
+      "expected": "c84b419a7459d857743755eccda3aaa30980cd471cc52537640d71a7d25f6d54",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_06.npz",
+      "verified": true
+    },
+    {
+      "actual": "4852253a81fe6da87ac91927079137495f61fc832d8e839c00ffc79ef457173c",
+      "expected": "4852253a81fe6da87ac91927079137495f61fc832d8e839c00ffc79ef457173c",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_07.npz",
+      "verified": true
+    },
+    {
+      "actual": "07e0d23d2e4d1eba5cc57e14718ff630ff646d708234bd1f2ade8cf7a3543e4b",
+      "expected": "07e0d23d2e4d1eba5cc57e14718ff630ff646d708234bd1f2ade8cf7a3543e4b",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_08.npz",
+      "verified": true
+    },
+    {
+      "actual": "b315784ef95d9b5af37382227ae09f60b3f0735e337cd4ec6d8450e0c2e953aa",
+      "expected": "b315784ef95d9b5af37382227ae09f60b3f0735e337cd4ec6d8450e0c2e953aa",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_09.npz",
+      "verified": true
+    },
+    {
+      "actual": "1ee72f9e2f20c6f714fadb0ddc58da06f0b851495c16e35602a14bd46575c0ac",
+      "expected": "1ee72f9e2f20c6f714fadb0ddc58da06f0b851495c16e35602a14bd46575c0ac",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_10.npz",
+      "verified": true
+    },
+    {
+      "actual": "cbaffcd0a6bb4f9c252eefd68804131ac244e6f5976d52904f097c25d7122dca",
+      "expected": "cbaffcd0a6bb4f9c252eefd68804131ac244e6f5976d52904f097c25d7122dca",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_11.npz",
+      "verified": true
+    },
+    {
+      "actual": "e69a57ac9420f624731b571c4a4370255931b939f1fca40be11002853b8f65b6",
+      "expected": "e69a57ac9420f624731b571c4a4370255931b939f1fca40be11002853b8f65b6",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_12.npz",
+      "verified": true
+    },
+    {
+      "actual": "12aee219587388d8fd8cf8d2658878939b5e6aafe6692017f9072bb998cd4292",
+      "expected": "12aee219587388d8fd8cf8d2658878939b5e6aafe6692017f9072bb998cd4292",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_13.npz",
+      "verified": true
+    },
+    {
+      "actual": "d1dfcd5294a347d655c250722d43d5fa31f06f74c32b718c199ce51aa0d7911c",
+      "expected": "d1dfcd5294a347d655c250722d43d5fa31f06f74c32b718c199ce51aa0d7911c",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_14.npz",
+      "verified": true
+    },
+    {
+      "actual": "d54cf05eac8e0ccbc4995a6e8df1a71b4f07874fa99b41b6c4789634de73272b",
+      "expected": "d54cf05eac8e0ccbc4995a6e8df1a71b4f07874fa99b41b6c4789634de73272b",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_15.npz",
+      "verified": true
+    },
+    {
+      "actual": "cbfe9b0624766ee0075879a8a98b215f564033063530664b032206e66ab38392",
+      "expected": "cbfe9b0624766ee0075879a8a98b215f564033063530664b032206e66ab38392",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_16.npz",
+      "verified": true
+    },
+    {
+      "actual": "5402813a0711d7897dc1cffcf654a2694f8d00983355c21f4e06ef26bd9786b7",
+      "expected": "5402813a0711d7897dc1cffcf654a2694f8d00983355c21f4e06ef26bd9786b7",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_17.npz",
+      "verified": true
+    },
+    {
+      "actual": "06df7f23ebf80835b5de23fe5d9083a39768b7444aa8449245e6d87aaa207640",
+      "expected": "06df7f23ebf80835b5de23fe5d9083a39768b7444aa8449245e6d87aaa207640",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_18.npz",
+      "verified": true
+    },
+    {
+      "actual": "851cc3bc018c9e2da39dfa13cda9f6069112a7b1df1ae8294da3f6b0fe39869e",
+      "expected": "851cc3bc018c9e2da39dfa13cda9f6069112a7b1df1ae8294da3f6b0fe39869e",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_19.npz",
+      "verified": true
+    },
+    {
+      "actual": "5841f67ff8c48d3f90932c88ffe71076725a4a84091b0c10951d2147ef0bc4dc",
+      "expected": "5841f67ff8c48d3f90932c88ffe71076725a4a84091b0c10951d2147ef0bc4dc",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_20.npz",
+      "verified": true
+    },
+    {
+      "actual": "007c1d492f405dd2f581120fdef27a8ceec1579f8b39bd8caf80c120e2d5b044",
+      "expected": "007c1d492f405dd2f581120fdef27a8ceec1579f8b39bd8caf80c120e2d5b044",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_21.npz",
+      "verified": true
+    },
+    {
+      "actual": "0938177a0c8d7a53e5b6276eeba0b5bef3343a846631007f634a7acd37c56c13",
+      "expected": "0938177a0c8d7a53e5b6276eeba0b5bef3343a846631007f634a7acd37c56c13",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_22.npz",
+      "verified": true
+    },
+    {
+      "actual": "37110d67543b8d6b23f9cbe72d55dc723bda9e82772ea22470160be29fa392ce",
+      "expected": "37110d67543b8d6b23f9cbe72d55dc723bda9e82772ea22470160be29fa392ce",
+      "path": "reports/characterization/p8_asvf_parity_review/m1_full_solar/oracle_23.npz",
+      "verified": true
+    }
+  ],
+  "profile_id": "solweig-portable-sleef-5a1d179d-v1",
+  "schema": "solweig-light.portable-profile-v1-stage-ab.v1",
+  "status": "stage_a_b_complete_ready_for_oracle_and_two_platform_admission_not_promoted",
+  "tests": {
+    "persistent_serial_parallel_collision": {
+      "command": "PYTHONPATH=<snapshot>/src PYTHONNOUSERSITE=1 .venv-light/bin/python -m pytest -q tests/unit/test_persistent_jit_cache.py --junitxml=<experiment>/persistent_collision.junit.xml",
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 4
+    },
+    "profile_domain_identity_cache_restart_fma": {
+      "command": "PYTHONPATH=<snapshot>/src .venv-light/bin/python -m pytest -q <experiment>/tests/test_portable_profile_v1.py --junitxml=<experiment>/stage_b.junit.xml",
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 9
+    }
+  }
+}

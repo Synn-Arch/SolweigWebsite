@@ -1,0 +1,25 @@
+{
+  "experiment": "P7 classification; not promoted",
+  "source_sha256": {
+    "src/solweig_light/radiation/patch_radiation.py": "632d478c29efceed3f6646ac764ac20b562feb75ac71f19783a78d249d948233",
+    "src/solweig_light/radiation/engine.py": "5072fcef16f70148368496bbdf00f6b32de5d56978c4f35f542b380893b142d2",
+    "tests/unit/test_patch_classification.py": "9e0a404adbad2bea8a257bee4c2a8ba980f22ffa9a944a692734c193567fa564"
+  },
+  "commands": [
+    "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_patch_radiation.py",
+    "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/unit/test_patch_classification.py tests/unit/test_visibility_blocks.py",
+    "PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_pipeline_reference.py"
+  ],
+  "results": {
+    "radiation_passed": 635,
+    "classification_and_blocks_passed": 66,
+    "chronological_tiff_passed": 9
+  },
+  "performance": "not measured",
+  "memory": "O(patches) per-call scalar coefficients, O(block_pixels * patches) block scratch; no forcing-dependent cache",
+  "baseline": "reports/characterization/p7_decode_snapshot/src",
+  "changed": [
+    "src/solweig_light/radiation/patch_radiation.py",
+    "tests/unit/test_patch_classification.py"
+  ]
+}

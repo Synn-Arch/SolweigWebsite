@@ -1,0 +1,2 @@
+PYTHONPATH=src .venv-light/bin/python -m pytest -q tests/differential/test_patch_radiation.py
+635 passed in 48.65s

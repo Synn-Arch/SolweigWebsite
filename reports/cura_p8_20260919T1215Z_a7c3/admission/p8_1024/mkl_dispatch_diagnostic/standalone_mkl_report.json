@@ -1,0 +1,102 @@
+{
+  "classifications": {
+    "boundary": {
+      "count": 774,
+      "shade": {
+        "cell_mismatches": 31,
+        "input_mismatches": 31
+      },
+      "sun": {
+        "cell_mismatches": 29,
+        "input_mismatches": 29
+      }
+    },
+    "edge": {
+      "count": 10,
+      "shade": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      },
+      "sun": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      }
+    },
+    "frozen": {
+      "count": 88669,
+      "shade": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      },
+      "sun": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      }
+    },
+    "hotspot": {
+      "count": 1,
+      "shade": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      },
+      "sun": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      }
+    },
+    "random": {
+      "count": 99937,
+      "shade": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      },
+      "sun": {
+        "cell_mismatches": 0,
+        "input_mismatches": 0
+      }
+    }
+  },
+  "environment": {
+    "loaded_mkl_paths": [
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libiomp5.so",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_avx512.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_core.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_intel_lp64.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_intel_thread.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_rt.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_vml_avx512.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libtbbmalloc.so.2",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/python3.12/dist-packages/numpy.libs/libgfortran-040039e1-0352e75f.so.5.0.0",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/python3.12/dist-packages/numpy.libs/libquadmath-96973f99-934c22de.so.0.0.0",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/python3.12/dist-packages/numpy.libs/libscipy_openblas64_-8fb3d286.so",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/python3.12/dist-packages/numpy/_core/_multiarray_umath.cpython-312-x86_64-linux-gnu.so",
+      "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/python3.12/dist-packages/numpy/linalg/_umath_linalg.cpython-312-x86_64-linux-gnu.so"
+    ],
+    "packages": {
+      "intel-cmplr-lib-ur": "2026.1.2",
+      "intel-openmp": "2026.1.2",
+      "mkl": "2024.2.0",
+      "numpy": "2.3.3",
+      "tbb": "2021.13.1",
+      "tcmlib": "1.5.0",
+      "umf": "1.1.0"
+    },
+    "platform": "Linux-6.8.0-87-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+    "torch_import_spec": "None",
+    "torch_in_proc_maps": false
+  },
+  "expression": {
+    "all_bit_mismatches": 0,
+    "finite_bit_mismatches": 0,
+    "nan_masks_equal": true
+  },
+  "inputs": 189220,
+  "library": {
+    "bytes": 16231096,
+    "path": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/mkl2024-standalone-probe/local/lib/libmkl_rt.so.2",
+    "sha256": "0f3c805b85c36f3aaf6792930b054d80a945af032f0a97c4926d7ad94a7d61d9"
+  },
+  "mkl_version": "Intel(R) oneAPI Math Kernel Library Version 2024.2-Product Build 20240605 for Intel(R) 64 architecture applications",
+  "mode_hex": "0x140102"
+}

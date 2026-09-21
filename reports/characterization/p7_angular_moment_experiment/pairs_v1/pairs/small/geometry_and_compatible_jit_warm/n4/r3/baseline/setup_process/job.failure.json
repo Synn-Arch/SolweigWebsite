@@ -1,0 +1,7 @@
+{
+  "exception_module": "builtins",
+  "exception_type": "ModuleNotFoundError",
+  "message": "No module named 'solweig_light'",
+  "schema_version": 1,
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/alansynn/Workspace/solweig-light/tools/run_p7_angular_moment.py\", line 374, in _child\n    import solweig_light\nModuleNotFoundError: No module named 'solweig_light'\n"
+}

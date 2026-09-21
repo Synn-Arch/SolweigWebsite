@@ -1,0 +1,41 @@
+{
+  "cell": {
+    "baseline_block_pixels": 128,
+    "budget": 10,
+    "candidate_block_pixels": 1024,
+    "cell": 5,
+    "fixture": "repeated_block_256",
+    "orders": [
+      [
+        "baseline",
+        "candidate"
+      ],
+      [
+        "candidate",
+        "baseline"
+      ],
+      [
+        "baseline",
+        "candidate"
+      ]
+    ],
+    "regime": "geometry_warm",
+    "repetitions": 3,
+    "variant": "combined_v1"
+  },
+  "eligibility_reason": "Only the final complete-matrix report can authorize a scoped claim.",
+  "median_baseline_over_candidate": 1.763496994980172,
+  "pair_count": 3,
+  "passed": true,
+  "performance_claim_eligible": false,
+  "ratio_range": [
+    1.7031628094377957,
+    1.8072301620867324
+  ],
+  "ratios": [
+    1.8072301620867324,
+    1.763496994980172,
+    1.7031628094377957
+  ],
+  "upstream_speedup_claim_eligible": false
+}

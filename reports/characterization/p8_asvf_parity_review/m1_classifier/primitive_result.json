@@ -1,0 +1,16 @@
+{
+  "tan": {
+    "n": 411685,
+    "finite_bit_mismatches": 0,
+    "nan_masks_equal": true,
+    "infinity_masks_equal": true,
+    "fma_intrinsic": true
+  },
+  "atan": {
+    "n": 411685,
+    "finite_bit_mismatches": 0,
+    "nan_masks_equal": true,
+    "infinity_masks_equal": true,
+    "fma_intrinsic": true
+  }
+}

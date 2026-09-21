@@ -1,0 +1,14 @@
+{
+  "observation": "Post-run provenance verification; benchmark asserted installed upstream module hashes against this checkout during every original process.",
+  "commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "checkout_status": "",
+  "source_sha256": {
+    "solweig_gpu/shadow.py": "4e94d839f89cfa1a83dfe9fb681b6b36ab05b31bd09681a8904054ce2b50cc58",
+    "solweig_gpu/solweig.py": "1ac27bcd56edcd690d11fce756bedc17cc53d1259e0fe60313e868921a28095c"
+  },
+  "candidate_commit": null,
+  "candidate_state": "uncommitted; per-file hashes and source snapshot in execution_manifest.json",
+  "hardware": "Apple M1 Pro, 10 logical CPUs, 16 GiB RAM",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "cuda": "not_available"
+}

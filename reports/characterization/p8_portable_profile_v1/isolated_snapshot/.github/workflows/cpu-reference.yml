@@ -1,0 +1,129 @@
+name: CPU reference
+env:
+  GDAL_FORMULA_COMMIT: 3c01d2c89227ced6d17c28d6a784b675c991b33e
+  GDAL_FORMULA_SHA256: 71ecda409f008f599b15b10f0fe6f51f8f7d052ee91f1082a801ce2ca9d3c05f
+on:
+  pull_request:
+  push:
+  workflow_dispatch:
+
+jobs:
+  own-met-wheel:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install native GDAL
+        run: |
+          test "$(uname -m)" = "arm64"
+          curl --fail --location --silent --show-error \
+            "https://raw.githubusercontent.com/Homebrew/homebrew-core/${GDAL_FORMULA_COMMIT}/Formula/g/gdal.rb" \
+            --output "${RUNNER_TEMP}/gdal.rb"
+          echo "${GDAL_FORMULA_SHA256}  ${RUNNER_TEMP}/gdal.rb" | shasum -a 256 --check
+          HOMEBREW_NO_AUTO_UPDATE=1 brew tap-new solweig-light/pinned
+          cp "${RUNNER_TEMP}/gdal.rb" "$(brew --repository solweig-light/pinned)/Formula/gdal.rb"
+          HOMEBREW_NO_AUTO_UPDATE=1 brew trust --formula solweig-light/pinned/gdal
+          HOMEBREW_NO_AUTO_UPDATE=1 brew install solweig-light/pinned/gdal
+          test "$(gdal-config --version)" = "3.13.3"
+      - name: Install frozen test environment
+        run: python -m pip install -r requirements/macos-arm64-py311.txt
+      - name: Build and install distribution
+        run: |
+          python -m build --wheel
+          python -m pip install --no-deps dist/solweig_light-*.whl
+      - name: Check installed package and isolated dependencies
+        run: |
+          python - <<'PY'
+          import importlib.util
+          import pathlib
+          import solweig_light
+          assert 'site-packages' in pathlib.Path(solweig_light.__file__).parts
+          for name in ('torch', 'xarray', 'cdsapi', 'wrf'):
+              assert importlib.util.find_spec(name) is None, name
+          PY
+          solweig-light --help
+      - name: Run genuine CPU TIFF comparisons
+        run: python -m pytest -p tests.helpers.installed_wheel_guard tests/differential/test_pipeline_reference.py -q
+      - name: Verify angular boundaries, SVF arithmetic and analytic geometry
+        run: python -m pytest -p tests.helpers.installed_wheel_guard tests/differential/test_p7_ground_view_angular.py tests/differential/test_p7_svf_annulus.py tests/scientific/test_geometry_analytic.py -q
+      - name: Verify cache, restart and bounded execution
+        run: python -m pytest -p tests.helpers.installed_wheel_guard tests/integration/test_runtime_pipeline.py tests/unit/test_geometry_cache.py tests/unit/test_geometry_service.py tests/unit/test_persistence.py tests/unit/test_runtime.py tests/unit/test_identities.py tests/unit/test_persistent_jit_cache.py -q
+      - name: Verify CLI, public signatures and companion wheels
+        run: python -m pytest -p tests.helpers.installed_wheel_guard tests/unit/test_cli.py tests/unit/test_public_api.py tests/unit/test_compatibility.py tests/unit/test_models.py -q
+
+  optional-local-wheel:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install native GDAL
+        run: |
+          test "$(uname -m)" = "arm64"
+          curl --fail --location --silent --show-error \
+            "https://raw.githubusercontent.com/Homebrew/homebrew-core/${GDAL_FORMULA_COMMIT}/Formula/g/gdal.rb" \
+            --output "${RUNNER_TEMP}/gdal.rb"
+          echo "${GDAL_FORMULA_SHA256}  ${RUNNER_TEMP}/gdal.rb" | shasum -a 256 --check
+          HOMEBREW_NO_AUTO_UPDATE=1 brew tap-new solweig-light/pinned
+          cp "${RUNNER_TEMP}/gdal.rb" "$(brew --repository solweig-light/pinned)/Formula/gdal.rb"
+          HOMEBREW_NO_AUTO_UPDATE=1 brew trust --formula solweig-light/pinned/gdal
+          HOMEBREW_NO_AUTO_UPDATE=1 brew install solweig-light/pinned/gdal
+          test "$(gdal-config --version)" = "3.13.3"
+      - name: Install frozen optional local environment
+        run: python -m pip install -r requirements/optional-macos-arm64-py311.txt
+      - name: Build and install distribution
+        run: |
+          python -m build --wheel
+          python -m pip install --no-deps dist/solweig_light-*.whl
+      - name: Verify real local optional workflows
+        run: |
+          python - <<'PYCODE'
+          import importlib.util
+          import pathlib
+          import solweig_light
+          assert 'site-packages' in pathlib.Path(solweig_light.__file__).parts
+          assert importlib.util.find_spec('torch') is None
+          PYCODE
+          python -m pytest -p tests.helpers.installed_wheel_guard tests/optional -q
+
+  forcing-extra-wheel:
+    runs-on: macos-15
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install native GDAL and build frontend
+        run: |
+          test "$(uname -m)" = "arm64"
+          curl --fail --location --silent --show-error \
+            "https://raw.githubusercontent.com/Homebrew/homebrew-core/${GDAL_FORMULA_COMMIT}/Formula/g/gdal.rb" \
+            --output "${RUNNER_TEMP}/gdal.rb"
+          echo "${GDAL_FORMULA_SHA256}  ${RUNNER_TEMP}/gdal.rb" | shasum -a 256 --check
+          HOMEBREW_NO_AUTO_UPDATE=1 brew tap-new solweig-light/pinned
+          cp "${RUNNER_TEMP}/gdal.rb" "$(brew --repository solweig-light/pinned)/Formula/gdal.rb"
+          HOMEBREW_NO_AUTO_UPDATE=1 brew trust --formula solweig-light/pinned/gdal
+          HOMEBREW_NO_AUTO_UPDATE=1 brew install solweig-light/pinned/gdal
+          test "$(gdal-config --version)" = "3.13.3"
+          python -m pip install build
+      - name: Install only forcing and test extras
+        run: |
+          python -m build --wheel
+          python -m pip install -c requirements/optional-macos-arm64-py311.txt 'dist/solweig_light-0.1.0.dev0-py3-none-any.whl[forcing,test]'
+      - name: Execute public forcing workflows without other extras
+        run: |
+          python - <<'PYCODE'
+          import importlib.util
+          import pathlib
+          import solweig_light
+          assert 'site-packages' in pathlib.Path(solweig_light.__file__).parts
+          for name in ('torch', 'rasterio', 'geopandas', 'ee', 'osmnx', 'geemap'):
+              assert importlib.util.find_spec(name) is None, name
+          PYCODE
+          python -m pytest -p tests.helpers.installed_wheel_guard tests/optional/test_forcing_optional.py tests/optional/test_public_forcing.py -q

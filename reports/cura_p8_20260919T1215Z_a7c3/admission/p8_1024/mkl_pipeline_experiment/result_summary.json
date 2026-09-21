@@ -1,0 +1,73 @@
+{
+  "claim_boundary": "Correctness/dependency-decision evidence only; no speed, packaging, or production promotion claim.",
+  "evidence": {
+    "all_completed_run_files_verified": true,
+    "all_remote_completed_run_dirs_removed_after_verification": true,
+    "dense_comparison_sha256": "8f7026c133b8fc71b3bba7ccd550d0a3e85901d3f1097bb6f307bc6a078c6855",
+    "remote_compact_experiment_retained": true,
+    "source_diff_sha256": "ff942923a9e04a8a40bffac8bcb51f35f8cefdaf67c75f35292aaabc2570eff7",
+    "source_inventory_sha256": "ddceecb0650eda38552dd1227bfaae6206504f7ca911b86484a96fb3a1470d89",
+    "vegetation_comparison_sha256": "97f7549febf29a8a59d3bf1bd7ebe1e074989987a3519a879ee706e1ddb4575e"
+  },
+  "first_failure": {
+    "preserved_local": "/Users/alansynn/Workspace/solweig-light/reports/cura_p8_20260919T1215Z_a7c3/admission/p8_1024/mkl_pipeline_experiment/remote/dense_urban",
+    "reason": "PROJ database lookup failed before model execution",
+    "retry_change": "explicit PROJ_DATA pointing to the same existing candidate environment proj.db; source/fixture/model unchanged"
+  },
+  "main_sleef_prototype_sha256": "9a9b420c527f1626009d345f3815da8b7ecc8b26dc1ab55a2f4e750a17f2edcf",
+  "notable_max_abs": {
+    "dense_TMRT": 9.1552734375e-05,
+    "vegetation_Kdown": 0.00547027587890625,
+    "vegetation_TMRT": 0.0001220703125
+  },
+  "preflight": {
+    "actual_original_classifier_inputs": 774,
+    "asvf_bit_mismatches": 0,
+    "asvf_inputs": 189220,
+    "note": "Earlier vectorized Torch oracle was rejected after actual per-patch scalar promotion differed; failed preflight retained.",
+    "patches": 153,
+    "prepared_mask_mismatches": 0,
+    "serial_mask_mismatches": 0,
+    "thread_artifacts_byte_identical": true,
+    "threads_tested": [
+      1,
+      36
+    ]
+  },
+  "production_source_changed": false,
+  "runs": {
+    "dense_urban_1024": {
+      "bands_each": 24,
+      "comparison_passed": true,
+      "exit_code": 0,
+      "geometry_fields": 18,
+      "geometry_passed": true,
+      "memory_cap": 12884901888,
+      "outputs": 10,
+      "peak_process_tree_rss_bytes": 2377129984,
+      "seconds": 545.1048342566937,
+      "threads": 1
+    },
+    "vegetation_rich_1024": {
+      "bands_each": 24,
+      "comparison_passed": true,
+      "exit_code": 0,
+      "geometry_fields": 18,
+      "geometry_passed": true,
+      "memory_cap": 12884901888,
+      "outputs": 10,
+      "peak_process_tree_rss_bytes": 2372767744,
+      "seconds": 508.3577223904431,
+      "threads": 1
+    }
+  },
+  "runtime": {
+    "mkl_rt_sha256": "0f3c805b85c36f3aaf6792930b054d80a945af032f0a97c4926d7ad94a7d61d9",
+    "mode_hex": "0x00140102",
+    "no_libtorch_fallback": true,
+    "profile": "cura-mkl-vml-2024.2-ha-ftzdazoff-v1",
+    "profile_in_geometry_and_simulation_identities": true
+  },
+  "source_base": "retained immutable Cura admission candidate snapshot copy",
+  "status": "isolated_diagnostic_full_pipeline_passed"
+}

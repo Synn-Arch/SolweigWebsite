@@ -1,0 +1,601 @@
+{
+  "baseline_label": "P6 plus angular and SVF weight compatibility repairs; not unchanged accepted P6",
+  "baseline_validation": {
+    "accepted_parent_validation": {
+      "accepted_manifest": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_p6_baseline/manifest.json",
+      "accepted_manifest_sha256": "8993e3e725e5f6e2663bbffcd4bbbed9c503436897730662072d63c1358ba438",
+      "installed_verification": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_p6_baseline/p6_installed_verification.json",
+      "installed_verification_sha256": "667b71ad8aaf6ec4576247bb2fe402595b8c02c2ffaf64281cc240b2e5040090",
+      "passed": true,
+      "source_hashes": {
+        "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+        "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+        "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+        "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+        "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+        "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+        "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+        "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+        "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+        "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+        "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+        "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+        "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+        "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+        "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+        "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+        "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+        "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+        "solweig_light/geometry/svf.py": "8a803b973e8a80935465c5ebe0e23d822e2624fe6a5823d2afe5c9bb54e38d21",
+        "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+        "solweig_light/geometry/visibility_native.py": "1d5adf9eb78d6692b4f738d6f289ee0c10c99cb9cf6cf31082c2d9dea5e3ef99",
+        "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+        "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+        "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+        "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+        "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+        "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+        "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+        "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+        "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+        "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+        "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+        "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "solweig_light/radiation/engine.py": "5072fcef16f70148368496bbdf00f6b32de5d56978c4f35f542b380893b142d2",
+        "solweig_light/radiation/ground_view.py": "a5c0177752cad959901aa2287f66fb763c5c91b7b65bafc1ede788d3d0ba1440",
+        "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+        "solweig_light/radiation/patch_radiation.py": "68aa0b6612ff75a3c0994ac636a7b52d0cca42059939f014cb1f599a092c9e3e",
+        "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+        "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+        "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+        "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+        "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+        "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+      }
+    },
+    "baseline_manifest": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repaired_p6_baseline_v2/manifest.json",
+    "baseline_manifest_sha256": "5a9874c41d5f4daf4a939fa46e2c5857e4416b98713ddf7404666dad86015aa2",
+    "full_repair_diff_sha256": "2bd0d629d63894d5d2ee95b8d83230d651b710340a80bf3b6f2535e46047eb54",
+    "label": "P6 plus angular and SVF weight compatibility repairs; not unchanged accepted P6",
+    "numerical_gate": {
+      "evidence": {
+        "angular_ground_view": {
+          "baseline": {
+            "boundary_passed": true,
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repair_v2_correctness/baseline_angular.json",
+              "sha256": "b400fb6aa7e2bbc5c8b2502825617c03b3124ee1f9428545322aafb0b11d782b"
+            },
+            "field_count": 17,
+            "passed": true
+          },
+          "candidate": {
+            "boundary_passed": true,
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repair_v2_correctness/candidate_angular.json",
+              "sha256": "e7cf062fde71a67bebb07339c0ce9bf4d59f5580b02027424087ea65fba25dd3"
+            },
+            "field_count": 17,
+            "passed": true
+          }
+        },
+        "cases": [
+          {
+            "case_id": "real_vegetation_rich",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/real_vegetation_rich/verification.json",
+              "sha256": "74f51e92c0f93aa3a7f65e1892b2950e64dea899fe0a2f69b97102e9ae94a460"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/real_vegetation_rich/geometry_exports.json",
+              "sha256": "33333a74ed3208928f510573ecd1620a14f9f64869711521018933642f0bf168"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "real_sparse",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/real_sparse/verification.json",
+              "sha256": "26b319110eed73e762b39cd10e24c69703e1f9417306e288c26d62046889b15b"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/real_sparse/geometry_exports.json",
+              "sha256": "744186c6808c88c298a64123bad22292ed7366e6a9d905ca604ea46f0851e766"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "small",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/small/verification.json",
+              "sha256": "ab1f5c58d62f10e83612cc6326b3fc1a1446d735fc6520e9348966f4fd297e18"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/small/geometry_exports.json",
+              "sha256": "7b54ecd73b2c6a99bb3537b6be4417949ce1126aee05702ec4d48dec687d1b77"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "repeated_block_256",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/repeated_block_256/verification.json",
+              "sha256": "e67227f70baa481ffa02669d047e74e97354874d82ae33e598ee57db603f0e98"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/repeated_block_256/geometry_exports.json",
+              "sha256": "1cfa0c0ff137fe8322002efe352edf22bcb27a109b743fbf476e398ddf031e17"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "dense_urban_256",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/dense_urban_256/verification.json",
+              "sha256": "45e67559142be8ed27a000ceed965666fc362f323232904798995d64b84167cd"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/dense_urban_256/geometry_exports.json",
+              "sha256": "1cfa0c0ff137fe8322002efe352edf22bcb27a109b743fbf476e398ddf031e17"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "vegetation_rich_256",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/vegetation_rich_256/verification.json",
+              "sha256": "0216cc95f1f971d37bf2be2a5de5fd29233d107662d0756a3b8f1b2692b319e6"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/vegetation_rich_256/geometry_exports.json",
+              "sha256": "1cfa0c0ff137fe8322002efe352edf22bcb27a109b743fbf476e398ddf031e17"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "real_dense_urban",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/real_dense_urban/verification.json",
+              "sha256": "9bcfab4b86b6da0431e35db085e309156d5a2da264385cc5593fbb5c354ebfce"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_baseline/real_dense_urban/geometry_exports.json",
+              "sha256": "7c43979ef65a5308955487685b164b137745d9360b0311ca9c534c0e7b21c61e"
+            },
+            "passed": true,
+            "variant": "baseline"
+          },
+          {
+            "case_id": "real_vegetation_rich",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/real_vegetation_rich/verification.json",
+              "sha256": "88a960bca8946d0f182b8ed3b222942d64a69988884cdaa3422fb46c9c0870e5"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/real_vegetation_rich/geometry_exports.json",
+              "sha256": "33333a74ed3208928f510573ecd1620a14f9f64869711521018933642f0bf168"
+            },
+            "passed": true,
+            "variant": "candidate"
+          },
+          {
+            "case_id": "real_sparse",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/real_sparse/verification.json",
+              "sha256": "ab0f7897ca3bbce27322b93894b9bb298532b8d26ff5f7dbf43e02e227740cd5"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/real_sparse/geometry_exports.json",
+              "sha256": "744186c6808c88c298a64123bad22292ed7366e6a9d905ca604ea46f0851e766"
+            },
+            "passed": true,
+            "variant": "candidate"
+          },
+          {
+            "case_id": "small",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/small/verification.json",
+              "sha256": "659f7406a010217c032e6b86a2dd6a0a64005868aac00be41b2825b8a5d782bd"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/small/geometry_exports.json",
+              "sha256": "7b54ecd73b2c6a99bb3537b6be4417949ce1126aee05702ec4d48dec687d1b77"
+            },
+            "passed": true,
+            "variant": "candidate"
+          },
+          {
+            "case_id": "repeated_block_256",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/repeated_block_256/verification.json",
+              "sha256": "8c050231793e400d56782a66f582b6140b6ce6f2570e44e65cbc9104f48eb511"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/repeated_block_256/geometry_exports.json",
+              "sha256": "1cfa0c0ff137fe8322002efe352edf22bcb27a109b743fbf476e398ddf031e17"
+            },
+            "passed": true,
+            "variant": "candidate"
+          },
+          {
+            "case_id": "dense_urban_256",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/dense_urban_256/verification.json",
+              "sha256": "a3cec2a2e8fe0eeaa8ae5f79b1692afecdaa6e56350eb6bee30089474dcf53f3"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/dense_urban_256/geometry_exports.json",
+              "sha256": "1cfa0c0ff137fe8322002efe352edf22bcb27a109b743fbf476e398ddf031e17"
+            },
+            "passed": true,
+            "variant": "candidate"
+          },
+          {
+            "case_id": "vegetation_rich_256",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/vegetation_rich_256/verification.json",
+              "sha256": "0cbfa31ebf07cc8fefd61f3a42ac22cf47587ee23773a6aebe47252491a4c396"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/vegetation_rich_256/geometry_exports.json",
+              "sha256": "1cfa0c0ff137fe8322002efe352edf22bcb27a109b743fbf476e398ddf031e17"
+            },
+            "passed": true,
+            "variant": "candidate"
+          },
+          {
+            "case_id": "real_dense_urban",
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/real_dense_urban/verification.json",
+              "sha256": "7d530fd07aa1c10fe14b9529650a53c1ed21f9f0c5662a9a4651d4ddae7613fe"
+            },
+            "geometry_evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/runs/p7_repair_v2_optimized/real_dense_urban/geometry_exports.json",
+              "sha256": "7c43979ef65a5308955487685b164b137745d9360b0311ca9c534c0e7b21c61e"
+            },
+            "passed": true,
+            "variant": "candidate"
+          }
+        ],
+        "fixture_case_ids": [
+          "dense_urban_256",
+          "real_dense_urban",
+          "real_sparse",
+          "real_vegetation_rich",
+          "repeated_block_256",
+          "small",
+          "vegetation_rich_256"
+        ],
+        "limitation": "Original CPU compatibility on characterized fixtures; no performance or physical-accuracy claim",
+        "original_regression": {
+          "baseline": {
+            "cases": 9,
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/p7_repaired_v2_baseline_regressions.xml",
+              "sha256": "3e54c582f057f806870b052f690e42e30615c5c49a9186716ca07074e8924a46"
+            },
+            "passed": true
+          },
+          "candidate": {
+            "cases": 9,
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/p7_repair_v2_installed_tests.xml",
+              "sha256": "e4fffb30d30c48a79425be54f25b489c884649d1c6001924c46c4d9fd5ed7a6c"
+            },
+            "passed": true
+          }
+        },
+        "recorder_sha256": "efdc72f65ea25cfd8d432eeecc75e3fd268ed5de6be1238a2368b667c79053d9",
+        "source_hashes": {
+          "baseline": {
+            "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+            "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+            "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+            "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+            "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+            "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+            "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+            "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+            "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+            "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+            "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+            "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+            "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+            "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+            "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+            "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+            "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+            "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+            "solweig_light/geometry/svf.py": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+            "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+            "solweig_light/geometry/visibility_native.py": "1d5adf9eb78d6692b4f738d6f289ee0c10c99cb9cf6cf31082c2d9dea5e3ef99",
+            "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+            "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+            "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+            "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+            "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+            "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+            "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+            "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+            "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+            "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+            "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+            "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "solweig_light/radiation/engine.py": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1",
+            "solweig_light/radiation/ground_view.py": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+            "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+            "solweig_light/radiation/patch_radiation.py": "68aa0b6612ff75a3c0994ac636a7b52d0cca42059939f014cb1f599a092c9e3e",
+            "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+            "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+            "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+            "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+            "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+            "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+          },
+          "candidate": {
+            "solweig_light.egg-info/PKG-INFO": "54e5b9b51fe1b3ceaaa9b0903a18dc00d0dd3442d908c8648688bd2573e31ca8",
+            "solweig_light.egg-info/SOURCES.txt": "ba918c15b590c234d78d3327fb2d5cd7c4e186db0785c91ee98615f89cb81cde",
+            "solweig_light.egg-info/dependency_links.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+            "solweig_light.egg-info/entry_points.txt": "48c66a89d9a6c906ed892c816b27b31eebdf12ab7e7ff5bda549d488113cfcbc",
+            "solweig_light.egg-info/requires.txt": "0ca25289ac30f9717b22e1ebad9ed1f821bb7dd655e0b6c9c2a567a6f68083c8",
+            "solweig_light.egg-info/top_level.txt": "1d4081f2f0ba73c39b1296337c12d931cadfaa8d06cc1138e85f8d5c70b2833e",
+            "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+            "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+            "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+            "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+            "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+            "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+            "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+            "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+            "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+            "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+            "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+            "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+            "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+            "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+            "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+            "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+            "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+            "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+            "solweig_light/geometry/svf.py": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+            "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+            "solweig_light/geometry/visibility_compiled.py": "f58959263175330162c5e9085be393d87ccb6320bead6d19d0a9d1445a03967a",
+            "solweig_light/geometry/visibility_native.py": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+            "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+            "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+            "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+            "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+            "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+            "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+            "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+            "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+            "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+            "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+            "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+            "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "solweig_light/radiation/engine.py": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1",
+            "solweig_light/radiation/ground_view.py": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+            "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+            "solweig_light/radiation/patch_radiation.py": "632d478c29efceed3f6646ac764ac20b562feb75ac71f19783a78d249d948233",
+            "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+            "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+            "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+            "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+            "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+            "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+          }
+        },
+        "status": "passed",
+        "svf_weights": {
+          "baseline": {
+            "boundary_pixel_count": 2,
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repair_v2_correctness/baseline_svf_weights.json",
+              "sha256": "b3544a1a704cf850c858b7fabdf2fa43a7bb42ce7414d6d71749421e256a1c1d"
+            },
+            "maximum_weight_ulp": 1,
+            "passed": true,
+            "weight_count": 180
+          },
+          "candidate": {
+            "boundary_pixel_count": 2,
+            "evidence": {
+              "path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repair_v2_correctness/candidate_svf_weights.json",
+              "sha256": "452b5cc304a31ac4a13e1713eb46296b8f51b337a1cdd9f24791d7e0f37062a7"
+            },
+            "maximum_weight_ulp": 1,
+            "passed": true,
+            "weight_count": 180
+          }
+        }
+      },
+      "fixture_case_ids": [
+        "dense_urban_256",
+        "real_dense_urban",
+        "real_sparse",
+        "real_vegetation_rich",
+        "repeated_block_256",
+        "small",
+        "vegetation_rich_256"
+      ],
+      "path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/p7_repair_v2_correctness/gate.json",
+      "sha256": "a8911fbc15639ec8ac7ac2af05ad7a9bca4bb1a44bf468a45c97a95ef64a1e9b",
+      "status": "validated_external_gate"
+    },
+    "parent_manifest_sha256": "8993e3e725e5f6e2663bbffcd4bbbed9c503436897730662072d63c1358ba438",
+    "passed": true,
+    "source_hashes": {
+      "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+      "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+      "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+      "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+      "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+      "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+      "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+      "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+      "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+      "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+      "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+      "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+      "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+      "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+      "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+      "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+      "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+      "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+      "solweig_light/geometry/svf.py": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+      "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+      "solweig_light/geometry/visibility_native.py": "1d5adf9eb78d6692b4f738d6f289ee0c10c99cb9cf6cf31082c2d9dea5e3ef99",
+      "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+      "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+      "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+      "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+      "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+      "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+      "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+      "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+      "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+      "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+      "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+      "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "solweig_light/radiation/engine.py": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1",
+      "solweig_light/radiation/ground_view.py": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+      "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+      "solweig_light/radiation/patch_radiation.py": "68aa0b6612ff75a3c0994ac636a7b52d0cca42059939f014cb1f599a092c9e3e",
+      "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+      "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+      "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+      "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+      "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+      "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+    }
+  },
+  "comparison_baseline": "explicitly labeled candidate baseline; not upstream golden",
+  "evidence_class": "P6_vs_candidate_not_upstream_golden",
+  "frozen_inputs_unchanged": true,
+  "global_evidence_eligible": true,
+  "summaries": [
+    {
+      "budget": 1,
+      "failed_pairs": 0,
+      "median_ratio": 2.782723663073531,
+      "paired_seconds_standard_error": 1.2423530097681568,
+      "performance_claim_eligible": true,
+      "range_ratio": [
+        2.5302151203844865,
+        2.8623721798375645
+      ],
+      "raw_paired_ratios": [
+        2.794147244809917,
+        2.782723663073531,
+        2.8623721798375645,
+        2.7240728866060855,
+        2.5302151203844865
+      ],
+      "raw_paired_seconds_saved": [
+        89.30131629202515,
+        89.23141045798548,
+        92.30846879107412,
+        95.59731529210694,
+        89.51960079208948
+      ],
+      "regime": "cold",
+      "sample_stdev_ratio": 0.12647844205076506,
+      "subgroup_comparison_passed": true,
+      "valid_pairs": 5
+    },
+    {
+      "budget": 4,
+      "failed_pairs": 0,
+      "median_ratio": 2.780869723322111,
+      "paired_seconds_standard_error": 1.6189353168370206,
+      "performance_claim_eligible": true,
+      "range_ratio": [
+        2.5892428775922154,
+        2.8915435394332336
+      ],
+      "raw_paired_ratios": [
+        2.780869723322111,
+        2.5892428775922154,
+        2.7055765750590273,
+        2.8915435394332336,
+        2.882703599898981
+      ],
+      "raw_paired_seconds_saved": [
+        94.94946954096667,
+        90.29241062398069,
+        89.79300641606096,
+        98.21685470803641,
+        95.5984584169928
+      ],
+      "regime": "cold",
+      "sample_stdev_ratio": 0.12690212612912238,
+      "subgroup_comparison_passed": true,
+      "valid_pairs": 5
+    },
+    {
+      "budget": 1,
+      "failed_pairs": 0,
+      "median_ratio": 4.298243081140591,
+      "paired_seconds_standard_error": 0.7314362800487516,
+      "performance_claim_eligible": true,
+      "range_ratio": [
+        4.107245568931436,
+        4.366475573685988
+      ],
+      "raw_paired_ratios": [
+        4.107245568931436,
+        4.198660143554823,
+        4.366475573685988,
+        4.298243081140591,
+        4.34719547473828
+      ],
+      "raw_paired_seconds_saved": [
+        87.43952316709328,
+        91.2975937500596,
+        90.89392312499695,
+        88.70324887498282,
+        90.50088883400895
+      ],
+      "regime": "geometry_warm",
+      "sample_stdev_ratio": 0.1088985958442191,
+      "subgroup_comparison_passed": true,
+      "valid_pairs": 5
+    },
+    {
+      "budget": 4,
+      "failed_pairs": 0,
+      "median_ratio": 4.272485237929672,
+      "paired_seconds_standard_error": 0.900890298399163,
+      "performance_claim_eligible": true,
+      "range_ratio": [
+        4.166160788905687,
+        4.429909257128645
+      ],
+      "raw_paired_ratios": [
+        4.429909257128645,
+        4.272766886849061,
+        4.166160788905687,
+        4.195516944597227,
+        4.272485237929672
+      ],
+      "raw_paired_seconds_saved": [
+        93.90999995893799,
+        89.82455375010613,
+        88.78097816603258,
+        89.48895666596945,
+        90.96277620806359
+      ],
+      "regime": "geometry_warm",
+      "sample_stdev_ratio": 0.10232358979241152,
+      "subgroup_comparison_passed": true,
+      "valid_pairs": 5
+    }
+  ]
+}

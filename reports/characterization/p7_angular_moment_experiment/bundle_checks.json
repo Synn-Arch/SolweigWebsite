@@ -1,0 +1,23 @@
+{
+  "allocation_bytes": 53760,
+  "closed_owner_fail_closed": "pass",
+  "concurrent_tile_owners": 4,
+  "failure_cleanup": "pass",
+  "identity_invalidation": {
+    "base": "97a558402021db80d9a1abbce88d5367dab353de8c5c0d32098a43512783e6f3",
+    "reordered": "aef15c5d778636a68e76ddb96a31d91621749688eb3384a15fb491dac69c2b29",
+    "solid_changed": "113657bce729dfeaf0b5fd1f3dfb97db99aa27733b76e0ceaf2463ba42790f9e",
+    "visibility_changed": "abfe19db53fed1b7ba31a44d6494a9251a110f94b2a182d587f474d19201da5e"
+  },
+  "lifetime_release": "pass",
+  "packed_decode_calls": [
+    48960,
+    48960,
+    48960
+  ],
+  "packed_max_block": 7,
+  "patches": 153,
+  "pixels": 1120,
+  "schema": "p7_angular_moment_bundle_checks_v1",
+  "status": "pass"
+}

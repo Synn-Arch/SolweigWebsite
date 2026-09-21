@@ -1,0 +1,125 @@
+{
+  "all_source_fixture_harness_guards_passed": true,
+  "evidence_class": "current_candidate_snapshot_vs_isolated_six_moment_candidate_not_upstream_speedup",
+  "frozen_acceptance": {
+    "all_eight_medians_le_1": false,
+    "engineering_rule_not_significance_claim": true,
+    "passed": false,
+    "priority_256_warm_median_le_0_970_and_four_of_five_lt_1": false,
+    "ratio_definition": "candidate_elapsed / baseline_elapsed"
+  },
+  "limitations": [
+    "OS page cache is uncontrolled.",
+    "Process-tree RSS is sampled and may double-count shared pages or miss sub-20-ms peaks.",
+    "This compares two candidate source snapshots and is not upstream speedup evidence."
+  ],
+  "pair_count": 40,
+  "performance_claim_eligible": false,
+  "status": "failed",
+  "summaries": [
+    {
+      "budget": 1,
+      "case": "small",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "first_use_empty_private_jit_and_geometry_cache",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 4,
+      "case": "small",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "first_use_empty_private_jit_and_geometry_cache",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 1,
+      "case": "small",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "geometry_and_compatible_jit_warm",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 4,
+      "case": "small",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "geometry_and_compatible_jit_warm",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 1,
+      "case": "repeated_block_256",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "first_use_empty_private_jit_and_geometry_cache",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 4,
+      "case": "repeated_block_256",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "first_use_empty_private_jit_and_geometry_cache",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 1,
+      "case": "repeated_block_256",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "geometry_and_compatible_jit_warm",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    },
+    {
+      "budget": 4,
+      "case": "repeated_block_256",
+      "failed_pairs": 5,
+      "median_ratio": null,
+      "pair_count": 5,
+      "performance_claim_eligible": false,
+      "range_ratio": null,
+      "raw_paired_ratios": [],
+      "regime": "geometry_and_compatible_jit_warm",
+      "subgroup_passed": false,
+      "valid_pairs": 0
+    }
+  ]
+}

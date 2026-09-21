@@ -1,0 +1,1306 @@
+{
+  "cells": [
+    {
+      "baseline_median_seconds": 20.994898541015573,
+      "baseline_seconds": [
+        20.994898541015573,
+        21.020656334003434,
+        20.82818320801016
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 17.0171414159704,
+      "candidate_seconds": [
+        17.08771637501195,
+        17.0171414159704,
+        16.844809499918483
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 4,
+        "candidate_block_pixels": 128,
+        "cell": 0,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "e1"
+      },
+      "geometric_mean_baseline_over_candidate": 1.233459518917682,
+      "median_baseline_over_candidate": 1.2352636568134634,
+      "median_candidate_over_baseline": 0.8095437718775285,
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.2286544369215566,
+        1.2352636568134634,
+        1.2364748445573666
+      ],
+      "ratio_range": [
+        1.2286544369215566,
+        1.2364748445573666
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          506101760,
+          448839680,
+          495534080
+        ],
+        "candidate": [
+          485310464,
+          507314176,
+          575569920
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.039915709057822824,
+              "median": 0.03161345794796944,
+              "minimum": 0.02624274999834597
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 678
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04388587502762675,
+              "median": 0.031575083965435624,
+              "minimum": 0.026311249937862158
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 678
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04343237495049834,
+              "median": 0.03152537497226149,
+              "minimum": 0.026185749913565814
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 674
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03806254209484905,
+              "median": 0.03159627050627023,
+              "minimum": 0.026333666988648474
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 551
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04161425004713237,
+              "median": 0.03155904199229553,
+              "minimum": 0.02645166590809822
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 551
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03468174999579787,
+              "median": 0.031652792007662356,
+              "minimum": 0.026366000063717365
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 543
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 23.139583167037927,
+      "baseline_seconds": [
+        23.139583167037927,
+        23.067629750003107,
+        23.177866374957375
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 19.037455374957062,
+      "candidate_seconds": [
+        18.843517416971736,
+        19.037455374957062,
+        20.12357775005512
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 10,
+        "candidate_block_pixels": 128,
+        "cell": 1,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "e1"
+      },
+      "geometric_mean_baseline_over_candidate": 1.1967000159436125,
+      "median_baseline_over_candidate": 1.2116971147492517,
+      "median_candidate_over_baseline": 0.8252887523025421,
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.2279864026976655,
+        1.2116971147492517,
+        1.1517766205809943
+      ],
+      "ratio_range": [
+        1.1517766205809943,
+        1.2279864026976655
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          469499904,
+          449085440,
+          534216704
+        ],
+        "candidate": [
+          462290944,
+          457064448,
+          489799680
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.033005665987730026,
+              "median": 0.031466145475860685,
+              "minimum": 0.026357749942690134
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 751
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03299945895560086,
+              "median": 0.03151912509929389,
+              "minimum": 0.026690458063967526
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 746
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.046282291994430125,
+              "median": 0.03159533301368356,
+              "minimum": 0.025946459034457803
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 748
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03523629205301404,
+              "median": 0.03150835452834144,
+              "minimum": 0.02598895796108991
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 611
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.045909666921943426,
+              "median": 0.03152087493799627,
+              "minimum": 0.02649308298714459
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 616
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.06164512492250651,
+              "median": 0.03172718751011416,
+              "minimum": 0.026416625012643635
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 647
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 20.524045582977124,
+      "baseline_seconds": [
+        21.60766237496864,
+        20.524045582977124,
+        20.423877290915698
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 20.21831549995113,
+      "candidate_seconds": [
+        20.86683300009463,
+        20.21831549995113,
+        20.057568709016778
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 1,
+        "candidate_block_pixels": 128,
+        "cell": 2,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "e2"
+      },
+      "geometric_mean_baseline_over_candidate": 1.0229232505720873,
+      "median_baseline_over_candidate": 1.0182628606294764,
+      "median_candidate_over_baseline": 0.9820646894474905,
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.035502722184562,
+        1.0151214418939467,
+        1.0182628606294764
+      ],
+      "ratio_range": [
+        1.0151214418939467,
+        1.035502722184562
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          423936000,
+          443711488,
+          461717504
+        ],
+        "candidate": [
+          427245568,
+          514719744,
+          525451264
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.0946225420339033,
+              "median": 0.03137339552631602,
+              "minimum": 0.02615645795594901
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 697
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.06230550003238022,
+              "median": 0.0313822504831478,
+              "minimum": 0.02623754204250872
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 665
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.034245582995936275,
+              "median": 0.03125537507003173,
+              "minimum": 0.025791167048737407
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 667
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.05518616596236825,
+              "median": 0.03135812497930601,
+              "minimum": 0.026157750049605966
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 677
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03594337496906519,
+              "median": 0.031367333547677845,
+              "minimum": 0.02634704194497317
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 657
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.034080457990057766,
+              "median": 0.03143110399832949,
+              "minimum": 0.02617683308199048
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 651
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 23.843673708033748,
+      "baseline_seconds": [
+        23.330662166932598,
+        24.098539749975316,
+        23.843673708033748
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 23.150098582962528,
+      "candidate_seconds": [
+        23.150098582962528,
+        23.32634958298877,
+        22.680583165958524
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 10,
+        "candidate_block_pixels": 128,
+        "cell": 3,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "e2"
+      },
+      "geometric_mean_baseline_over_candidate": 1.0305736645377004,
+      "median_baseline_over_candidate": 1.0331037723772125,
+      "median_candidate_over_baseline": 0.9679569727046495,
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.0077996896351429,
+        1.0331037723772125,
+        1.0512813331811026
+      ],
+      "ratio_range": [
+        1.0077996896351429,
+        1.0512813331811026
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          517668864,
+          492077056,
+          498253824
+        ],
+        "candidate": [
+          512737280,
+          516161536,
+          516259840
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.051665332983247936,
+              "median": 0.030738916946575046,
+              "minimum": 0.025611250079236925
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 772
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.3407074590213597,
+              "median": 0.03149837494129315,
+              "minimum": 0.026030333014205098
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 757
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.08657045802101493,
+              "median": 0.031634562474209815,
+              "minimum": 0.02639350004028529
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 767
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04555054102092981,
+              "median": 0.03076327091548592,
+              "minimum": 0.025648374925367534
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 769
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.05841800000052899,
+              "median": 0.03155741700902581,
+              "minimum": 0.026386667042970657
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 752
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.10471766698174179,
+              "median": 0.031531917047686875,
+              "minimum": 0.026308249915018678
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 732
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 20.871478875051253,
+      "baseline_seconds": [
+        20.995030167046934,
+        20.65208312496543,
+        20.871478875051253
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 20.148951333016157,
+      "candidate_seconds": [
+        20.353433249983937,
+        20.148951333016157,
+        19.936965667060576
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 1,
+        "candidate_block_pixels": 1024,
+        "cell": 4,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "block"
+      },
+      "geometric_mean_baseline_over_candidate": 1.0344149802728004,
+      "median_baseline_over_candidate": 1.0315227858210851,
+      "median_candidate_over_baseline": 0.9694405336902052,
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.0315227858210851,
+        1.0249706192463148,
+        1.0468733920495563
+      ],
+      "ratio_range": [
+        1.0249706192463148,
+        1.0468733920495563
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          479559680,
+          498548736,
+          561807360
+        ],
+        "candidate": [
+          557219840,
+          526401536,
+          504463360
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.035355957923457026,
+              "median": 0.03178416652372107,
+              "minimum": 0.02657958399504423
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 675
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.09062070900108665,
+              "median": 0.03175679105333984,
+              "minimum": 0.02642075007315725
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 660
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.05535358295310289,
+              "median": 0.031691208481788635,
+              "minimum": 0.02652349998243153
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 669
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.035922792041674256,
+              "median": 0.03181533305905759,
+              "minimum": 0.02678600000217557
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 652
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.033936584019102156,
+              "median": 0.03174287499859929,
+              "minimum": 0.02656729205045849
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 647
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.0406007079873234,
+              "median": 0.031661728979088366,
+              "minimum": 0.026532291900366545
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 643
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 23.609701749985106,
+      "baseline_seconds": [
+        23.515682916040532,
+        24.787352707935497,
+        23.609701749985106
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 18.360547458054498,
+      "candidate_seconds": [
+        18.311093500000425,
+        18.360547458054498,
+        19.028651792090386
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 10,
+        "candidate_block_pixels": 1024,
+        "cell": 5,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "block"
+      },
+      "geometric_mean_baseline_over_candidate": 1.29089258378221,
+      "median_baseline_over_candidate": 1.2842314914748256,
+      "median_candidate_over_baseline": 0.7786758124515301,
+      "orders": [
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.2842314914748256,
+        1.3500334216375263,
+        1.240744851918459
+      ],
+      "ratio_range": [
+        1.240744851918459,
+        1.3500334216375263
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          492830720,
+          460210176,
+          498614272
+        ],
+        "candidate": [
+          503808000,
+          535494656,
+          515162112
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.037309625069610775,
+              "median": 0.031619500019587576,
+              "minimum": 0.026080500101670623
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 758
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.0496309578884393,
+              "median": 0.031638083048164845,
+              "minimum": 0.02642183401621878
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 800
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.06750354100950062,
+              "median": 0.03156295797089115,
+              "minimum": 0.026516707963310182
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 763
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03640191594604403,
+              "median": 0.03151583345606923,
+              "minimum": 0.02631583297625184
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 595
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04746279201935977,
+              "median": 0.03152910398785025,
+              "minimum": 0.026469790958799422
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 593
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.052142666070722044,
+              "median": 0.031553582986816764,
+              "minimum": 0.026145500014536083
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 613
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 20.803368916967884,
+      "baseline_seconds": [
+        20.903800250031054,
+        20.803368916967884,
+        20.482110582990572
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 20.144641250022687,
+      "candidate_seconds": [
+        20.01946624997072,
+        20.204303750069812,
+        20.144641250022687
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 1,
+        "candidate_block_pixels": 4096,
+        "cell": 6,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "block"
+      },
+      "geometric_mean_baseline_over_candidate": 1.0301312632725286,
+      "median_baseline_over_candidate": 1.0296503742127714,
+      "median_candidate_over_baseline": 0.9712034541477821,
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.0441737051836548,
+        1.0296503742127714,
+        1.0167523128746463
+      ],
+      "ratio_range": [
+        1.0167523128746463,
+        1.0441737051836548
+      ],
+      "rss_guard_passed": false,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          460095488,
+          407191552,
+          483409920
+        ],
+        "candidate": [
+          594526208,
+          511590400,
+          600981504
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.07701537501998246,
+              "median": 0.030490958015434444,
+              "minimum": 0.02553479198832065
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 700
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.034636458032764494,
+              "median": 0.030503250018227845,
+              "minimum": 0.02545166597701609
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 699
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03570012503769249,
+              "median": 0.03056614549132064,
+              "minimum": 0.02543599996715784
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 685
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03278583299834281,
+              "median": 0.030486792093142867,
+              "minimum": 0.025089083006605506
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 672
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04954904189798981,
+              "median": 0.030497374944388866,
+              "minimum": 0.025269582984037697
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 678
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04194829205516726,
+              "median": 0.030544041539542377,
+              "minimum": 0.02542766695842147
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 673
+          }
+        ]
+      }
+    },
+    {
+      "baseline_median_seconds": 23.426594457938336,
+      "baseline_seconds": [
+        23.480104082962498,
+        23.426594457938336,
+        23.28277462499682
+      ],
+      "bootstrap": null,
+      "bootstrap_eligible_for_promotion": false,
+      "candidate_median_seconds": 18.316251915995963,
+      "candidate_seconds": [
+        18.406644125003368,
+        18.077659874921665,
+        18.316251915995963
+      ],
+      "cell": {
+        "baseline_block_pixels": 128,
+        "budget": 10,
+        "candidate_block_pixels": 4096,
+        "cell": 7,
+        "fixture": "repeated_block_256",
+        "orders": [
+          [
+            "candidate",
+            "baseline"
+          ],
+          [
+            "baseline",
+            "candidate"
+          ],
+          [
+            "candidate",
+            "baseline"
+          ]
+        ],
+        "regime": "geometry_warm",
+        "repetitions": 3,
+        "variant": "block"
+      },
+      "geometric_mean_baseline_over_candidate": 1.2808457322202236,
+      "median_baseline_over_candidate": 1.2756319904651932,
+      "median_candidate_over_baseline": 0.7839251504153039,
+      "orders": [
+        [
+          "candidate",
+          "baseline"
+        ],
+        [
+          "baseline",
+          "candidate"
+        ],
+        [
+          "candidate",
+          "baseline"
+        ]
+      ],
+      "pair_count": 3,
+      "paired_baseline_over_candidate": [
+        1.2756319904651932,
+        1.2958864488006554,
+        1.2711538764469323
+      ],
+      "ratio_range": [
+        1.2711538764469323,
+        1.2958864488006554
+      ],
+      "rss_guard_passed": true,
+      "sampled_process_tree_peak_rss_bytes": {
+        "baseline": [
+          541409280,
+          509526016,
+          502562816
+        ],
+        "candidate": [
+          516308992,
+          532480000,
+          524353536
+        ]
+      },
+      "sampling": {
+        "baseline": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.07514412503223866,
+              "median": 0.03047035401687026,
+              "minimum": 0.025401375023648143
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 779
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.03670558298472315,
+              "median": 0.03047333296854049,
+              "minimum": 0.02532345801591873
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 786
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.04837158299051225,
+              "median": 0.030537583981640637,
+              "minimum": 0.025203292025253177
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 778
+          }
+        ],
+        "candidate": [
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.034323500003665686,
+              "median": 0.030781707959249616,
+              "minimum": 0.025542290997691453
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 610
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.08519875002093613,
+              "median": 0.030531604017596692,
+              "minimum": 0.025292249978519976
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 603
+          },
+          {
+            "configured_interval_seconds": 0.02,
+            "interval_caveat": "Configured sleep is not an upper bound on sampling gaps; monitor work adds delay.",
+            "observed_interval_seconds": {
+              "maximum": 0.10594645806122571,
+              "median": 0.030650999979116023,
+              "minimum": 0.025485666003078222
+            },
+            "rss_caveat": "Summed RSS double-counts shared pages; 20 ms sampling can miss shorter peaks.",
+            "samples": 594
+          }
+        ]
+      }
+    }
+  ],
+  "decision_required": "Independent review against all predeclared benefit, regression, numerical and memory gates.",
+  "evidence_sha256": {
+    "cell-000/baseline/r00/rss_samples.jsonl": "f50ab498f197d23806201bb6969d9bbcda63ab39820ccdea94da2db7fcc6570c",
+    "cell-000/baseline/r01/rss_samples.jsonl": "d492bcb391000f6e2955878fd22fe88c9bd7fb6fabae36425ccc7ea3dd56f9b0",
+    "cell-000/baseline/r02/rss_samples.jsonl": "33a8410e361f331e459f0b2625d023e6fa638115bdc7a5bebd0d3e5217e5c682",
+    "cell-000/candidate/r00/rss_samples.jsonl": "fcad7120027c7473b66eef82a70f52443abd3fdb937c66c572510f4e0ffd8733",
+    "cell-000/candidate/r01/rss_samples.jsonl": "30bd8062b1d572698491160a9d794cd6ccdaced4b9f5aed3ed16d260ccde8706",
+    "cell-000/candidate/r02/rss_samples.jsonl": "ad3e0db41b96f6c34166a99cc196155de1b6e857ecd0d51f61b0308004e4ed7c",
+    "cell-000/pair-00.json": "cc5888e6cce52ba7bab0746a8beb4e8d43b8ec758ce43dd6aa5049b48a43933b",
+    "cell-000/pair-01.json": "b9e75d50ed6b27633abe6cb07af987db64fa41e25c9b8e1fcba57888ac41167c",
+    "cell-000/pair-02.json": "b50f928e2d088eb6179a6d2d3db4b36881d5c3cbb08c65f9e1412f9653a7ebc5",
+    "cell-001/baseline/r00/rss_samples.jsonl": "e613c914ac7cd96e99588194a538b85e09214ae5491087de01d2434f66cf40cc",
+    "cell-001/baseline/r01/rss_samples.jsonl": "429c594a7f55e5cbaf3a6386b65c0687b0446bec589bc41263f512643fcb82f0",
+    "cell-001/baseline/r02/rss_samples.jsonl": "ca2587f25ba89d3873928685d1d146e941c991e90f7ce7d628a50b88a4d3538f",
+    "cell-001/candidate/r00/rss_samples.jsonl": "4fc64dfd8610b055c767e526720fdc094ed4b815d96cbb5f612aea4f164b528f",
+    "cell-001/candidate/r01/rss_samples.jsonl": "6ffb5b17758cd8f6390f4180729d8e9030d1781c81948c4c866ecfe1900abec7",
+    "cell-001/candidate/r02/rss_samples.jsonl": "bc0fdde15250df9d87c440c7024ec524ebdb8dda6cbfd9cf05442604418cf969",
+    "cell-001/pair-00.json": "1d5eee2515d82898d45fa668d31203ea77571993b116612c4a4c443045daaffa",
+    "cell-001/pair-01.json": "c0133dbe266b872d9e939526d7efe1da29582ad53a9eb622208ff9f7f5fc47d0",
+    "cell-001/pair-02.json": "ec43795476f2b1f0f4ff8f9eeb65164fd68de615f947a92a0ddc93b25b816753",
+    "cell-002/baseline/r00/rss_samples.jsonl": "4a0bbd92e087c56de34113831951eda8761da243e289e695545052cb09a4888b",
+    "cell-002/baseline/r01/rss_samples.jsonl": "9a7aabf8895a613f15443e26a134d32575cc7ff790ef04b001b6246e10234207",
+    "cell-002/baseline/r02/rss_samples.jsonl": "c63b524d304849d79937a4ca6e633e55131f89f92c498648d05be82b621982a4",
+    "cell-002/candidate/r00/rss_samples.jsonl": "2794401538ebe0ebecfd86973ec61c29c21b4070eb1480212897e3b3f8ad0f23",
+    "cell-002/candidate/r01/rss_samples.jsonl": "1c412e210df11dbe98095aac72eab5f9415c3b195328fc2dc8e5096a23fbba11",
+    "cell-002/candidate/r02/rss_samples.jsonl": "3a2d512c0f827aa1dfc176365fc9e9dd21e55362da16ea5ece70f27e2193ca40",
+    "cell-002/pair-00.json": "84c8f84a2f11326fb329afa22c6be44c87193506ce42b13241b445d137786691",
+    "cell-002/pair-01.json": "29dcc292caeab242513933a05724b365eca4429834c9dbbcc522c93f47d372a5",
+    "cell-002/pair-02.json": "a3e7ded46c586b1fc14028cf435fe61502004e7c92b6488052c15d62767befc1",
+    "cell-003/baseline/r00/rss_samples.jsonl": "89a9629c1eac97d91f4bbdd90c1e3e7a72549b46d776d26b9bb0cba1a2e817d7",
+    "cell-003/baseline/r01/rss_samples.jsonl": "b59746008ea05c1a0306e53a1d77ece566d5b6214b4b204afc9964205490440d",
+    "cell-003/baseline/r02/rss_samples.jsonl": "fedb4a628179cd18d164d018ab383ee24bcebe4e47b498e57f5e98c6349c4743",
+    "cell-003/candidate/r00/rss_samples.jsonl": "e66a0253abdfff8c70f8ecd09f16d19f94213f0df2ed14556cb73769c9448e5f",
+    "cell-003/candidate/r01/rss_samples.jsonl": "8dd6fe4cf105e6dd63833f1ae24db122bb898e6f0e361e8e64ae3bed80d85576",
+    "cell-003/candidate/r02/rss_samples.jsonl": "cb32e32b9d6b4823a1b4f4fa60fac15009440be44f0cc05f8b4ee3da5e443fde",
+    "cell-003/pair-00.json": "e3fcc8c6d91f5213375f56d2f6bdf185143118f6024e61b94542d260af65f27a",
+    "cell-003/pair-01.json": "af92fda0fc7021dcfe069536da2ec10df0478b4c9a4b24e48de35d4832661724",
+    "cell-003/pair-02.json": "3d9854135c4889ff556f4f425ceb19bd1dc5492c2841e138f7856d22d3f3a7e4",
+    "cell-004/baseline/r00/rss_samples.jsonl": "e76bb1a134da28618815a711877a1dd141f8faf7eeea18541f2d493ba7584fa0",
+    "cell-004/baseline/r01/rss_samples.jsonl": "89b8cbc8e172f9182987db43fac3a6b431224025d7c1222b1058c172d933566b",
+    "cell-004/baseline/r02/rss_samples.jsonl": "ff3befaae1b65891fbbe7d69bf3e75e39cc0b57d427d51b27dc58b357d280a01",
+    "cell-004/candidate/r00/rss_samples.jsonl": "d6aadc6e19c32fc59f816687c7dda48e5be64a9343d8da4e97140af2858f8949",
+    "cell-004/candidate/r01/rss_samples.jsonl": "2028353354ef5bc5d2fc03b42cd8ccd8b733d66af6f2969dcaa7d75cf43b89ea",
+    "cell-004/candidate/r02/rss_samples.jsonl": "cd2e1eb017fb325a2a7116a5150eedf6268fc704807ca88359b19f5ca162f73b",
+    "cell-004/pair-00.json": "b00bb2b2f9d93f3d6bcd22ecb5e36f99db882e40b9bca1146d4e75fc057ecc60",
+    "cell-004/pair-01.json": "ca2a4e4c662a1d52dd5d4202224bc58a7e93858f0f0c675b87996d328a3f5512",
+    "cell-004/pair-02.json": "b421d3399c96325c7689ed6b9029d468ef5ed23f6baa9005049d49e167f66a1f",
+    "cell-005/baseline/r00/rss_samples.jsonl": "d1740ce0ff7b5f6780617282175c06bce0bb3aeb2f300277391ca180c282cda5",
+    "cell-005/baseline/r01/rss_samples.jsonl": "0988d187c9095de898767bed70e828564ee149354e083b0f91f95dbe53321cb2",
+    "cell-005/baseline/r02/rss_samples.jsonl": "573c4bf4edd4da4dc048f396a38b60d557029291de34fb9cdf722934fecbee4b",
+    "cell-005/candidate/r00/rss_samples.jsonl": "66063cde582149b31428b584de38e96c317b3c6e7779c6b8d98ebbd533a9a96e",
+    "cell-005/candidate/r01/rss_samples.jsonl": "1efc354518a229a08671ff4b0cdbdddc3e2f72c140ccc8b4938891cc6fc03e3a",
+    "cell-005/candidate/r02/rss_samples.jsonl": "6ed2b5e690d982c5029dca32af3e9aeb0fd050282c876ce4427c8bfdb3e1970d",
+    "cell-005/pair-00.json": "6c8e6e5b9951d0b708df6dd27af9e19a04af30cc4c4f3dfb2d1311deda1467e2",
+    "cell-005/pair-01.json": "3ea62fae006aa94ecc45ee42b50236c695d945a12b94545604b02d4ca1cb29d5",
+    "cell-005/pair-02.json": "34bf96dd542cda704af42f33520474ff0218a575ab6787b0f6101d749f96ccfe",
+    "cell-006/baseline/r00/rss_samples.jsonl": "aa6ca0ce0143a7dcffa4d2bf69048bc0fa52ede2f1a3762c5581787ffe7b3556",
+    "cell-006/baseline/r01/rss_samples.jsonl": "0eda5b7803d6c1487e5cdbe71245746bebd121424f2063df64f9b8730053c49d",
+    "cell-006/baseline/r02/rss_samples.jsonl": "78b5daea90d944d54af4b01323c54d83fc89133908c1a7d65cde76feefcea6e0",
+    "cell-006/candidate/r00/rss_samples.jsonl": "f21dce0c160ddd19f33c071ae1c92187531a0bb58ef89b472b1e14d6a2cce4bb",
+    "cell-006/candidate/r01/rss_samples.jsonl": "436535f6f241150d3b9a77da75ce9474b2629f5aedee3a48ac747c2f718b332d",
+    "cell-006/candidate/r02/rss_samples.jsonl": "e3a5df98b1fd9774965426979d8f1b9003abe99f5a2b288e1404edd2a6347122",
+    "cell-006/pair-00.json": "0574aa2479fd8e77bb69fbddf06cdb071533f0f0b78ed8fe7f4052bd2ccde0ea",
+    "cell-006/pair-01.json": "0b36dcecae576cf92e6436830ae684340c1296e0b546f1a4ce5bab9f4ec24679",
+    "cell-006/pair-02.json": "1e0d9a8ba591efee94dd603946b75df8b47a8037bb247b22a6072c6b3c1a3a37",
+    "cell-007/baseline/r00/rss_samples.jsonl": "efd9b798f099b817faccff2ff521ffad439253479535e6286fafd26c512bcec6",
+    "cell-007/baseline/r01/rss_samples.jsonl": "c69d1f8b04309667b094f2e2ca058abb4520613ceaa2563b9f485fb5a74be018",
+    "cell-007/baseline/r02/rss_samples.jsonl": "153437799e6baa082e36fd16a7f83176a24fad72dd1d705c9473eb7e4282a9ad",
+    "cell-007/candidate/r00/rss_samples.jsonl": "8b3eb7085e72021b260047074d12be00f3240f9b50a428eb2ab0993252236a0f",
+    "cell-007/candidate/r01/rss_samples.jsonl": "e64de76e2a7175cd450f106abae4614b189e5845c46ea78a2033420bb0c78f36",
+    "cell-007/candidate/r02/rss_samples.jsonl": "1c40329f48e3df375459355db0d128d1e27f932c5e6da92118a29cb9d89222ef",
+    "cell-007/pair-00.json": "4b3ed6930c612c50612b8eee2f30f4d3223c90da23935c0d72c268c8642182c5",
+    "cell-007/pair-01.json": "89bb4f2ddd9d5153fb863c76b9b9dbead1d99380c1dafba54ffd4a3f9c6687d9",
+    "cell-007/pair-02.json": "ee9f1df4a780b97759f5e91ad562d8f1481737e43007626f318f506e254c0a6b",
+    "frozen.json": "0b99e649b7f7f6d86f2c1543346be1242d2525927db3274f4170af94a8fc6e5d",
+    "summary.json": "de67777cf8ccf433258cbb2838492e3b6a8f1887342b3f7f9c7849a6e1c33b75"
+  },
+  "original_protocol_bytes": "/Users/alansynn/Workspace/solweig-light/benchmarks/protocols/local_cpu_optimization_v1/development.json",
+  "performance_claim_eligible": false,
+  "promotion_approved": false,
+  "protocol_sha256": "d6e4ba1bdc5da6612d8a90fb13d86bfa96f4ae56551f08b4a901f521d0308587",
+  "purpose": "development_selection",
+  "run": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/development_run_v1",
+  "status": "complete_matrix_summarized",
+  "summarizer_sha256": "80650a5f5a6b15066c924934706886747fb0780344c9da1e8aa000fb22532869",
+  "upstream_speedup_claim_eligible": false
+}

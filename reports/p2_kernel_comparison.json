@@ -1,0 +1,482 @@
+{
+  "scope": "kernel-only; no end-to-end speedup inference",
+  "comparisons_passed": 28,
+  "results": [
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_candidate_parallel_1.json",
+      "backend": "candidate",
+      "kernel": "aspect",
+      "threads": 1,
+      "callable": "solweig_light.geometry.walls:filter1Goodwin_as_aspect_v3_parallel",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.7384433330735192,
+      "warm_median_seconds": 0.004591000033542514,
+      "warm_min_seconds": 0.004498166963458061,
+      "warm_max_seconds": 0.004846625030040741,
+      "process_lifetime_peak_rss_bytes": 142213120
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_candidate_parallel_10.json",
+      "backend": "candidate",
+      "kernel": "aspect",
+      "threads": 10,
+      "callable": "solweig_light.geometry.walls:filter1Goodwin_as_aspect_v3_parallel",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.5732874170644209,
+      "warm_median_seconds": 0.0038154999492689967,
+      "warm_min_seconds": 0.0037550829583778977,
+      "warm_max_seconds": 0.003887958009727299,
+      "process_lifetime_peak_rss_bytes": 149356544
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_candidate_parallel_4.json",
+      "backend": "candidate",
+      "kernel": "aspect",
+      "threads": 4,
+      "callable": "solweig_light.geometry.walls:filter1Goodwin_as_aspect_v3_parallel",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.607968624914065,
+      "warm_median_seconds": 0.004542625043541193,
+      "warm_min_seconds": 0.004303082940168679,
+      "warm_max_seconds": 0.005273125017993152,
+      "process_lifetime_peak_rss_bytes": 149192704
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_candidate_serial_1.json",
+      "backend": "candidate",
+      "kernel": "aspect",
+      "threads": 1,
+      "callable": "solweig_light.geometry.walls:filter1Goodwin_as_aspect_v3_serial",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.552108749980107,
+      "warm_median_seconds": 0.004910790943540633,
+      "warm_min_seconds": 0.004616832942701876,
+      "warm_max_seconds": 0.005024665966629982,
+      "process_lifetime_peak_rss_bytes": 139493376
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_upstream_original_1.json",
+      "backend": "upstream",
+      "kernel": "aspect",
+      "threads": 1,
+      "callable": "solweig_gpu.walls_aspect:filter1Goodwin_as_aspect_v3",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.22142941690981388,
+      "warm_median_seconds": 0.22169158409815282,
+      "warm_min_seconds": 0.21948216704186052,
+      "warm_max_seconds": 0.22394029202405363,
+      "process_lifetime_peak_rss_bytes": 246906880
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_upstream_original_10.json",
+      "backend": "upstream",
+      "kernel": "aspect",
+      "threads": 10,
+      "callable": "solweig_gpu.walls_aspect:filter1Goodwin_as_aspect_v3",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.22607537498697639,
+      "warm_median_seconds": 0.22150708304252476,
+      "warm_min_seconds": 0.21903249993920326,
+      "warm_max_seconds": 0.22797004191670567,
+      "process_lifetime_peak_rss_bytes": 230752256
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/aspect_upstream_original_4.json",
+      "backend": "upstream",
+      "kernel": "aspect",
+      "threads": 4,
+      "callable": "solweig_gpu.walls_aspect:filter1Goodwin_as_aspect_v3",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.2591719579650089,
+      "warm_median_seconds": 0.22428354097064584,
+      "warm_min_seconds": 0.22065050003584474,
+      "warm_max_seconds": 0.22562204208225012,
+      "process_lifetime_peak_rss_bytes": 263127040
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_candidate_parallel_1.json",
+      "backend": "candidate",
+      "kernel": "utci",
+      "threads": 1,
+      "callable": "solweig_light.comfort.utci:utci_calculator_compiled",
+      "max_abs": 0.0040283203125,
+      "worst_coordinate": [
+        0,
+        358
+      ],
+      "first_call_seconds": 2.607747667003423,
+      "warm_median_seconds": 0.04742654110305011,
+      "warm_min_seconds": 0.04675149999093264,
+      "warm_max_seconds": 0.04833029198925942,
+      "process_lifetime_peak_rss_bytes": 181207040
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_candidate_parallel_10.json",
+      "backend": "candidate",
+      "kernel": "utci",
+      "threads": 10,
+      "callable": "solweig_light.comfort.utci:utci_calculator_compiled",
+      "max_abs": 0.0040283203125,
+      "worst_coordinate": [
+        0,
+        358
+      ],
+      "first_call_seconds": 2.4704137089429423,
+      "warm_median_seconds": 0.00885770795866847,
+      "warm_min_seconds": 0.00871270801872015,
+      "warm_max_seconds": 0.00957458303309977,
+      "process_lifetime_peak_rss_bytes": 185335808
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_candidate_parallel_4.json",
+      "backend": "candidate",
+      "kernel": "utci",
+      "threads": 4,
+      "callable": "solweig_light.comfort.utci:utci_calculator_compiled",
+      "max_abs": 0.0040283203125,
+      "worst_coordinate": [
+        0,
+        358
+      ],
+      "first_call_seconds": 2.44441854103934,
+      "warm_median_seconds": 0.013279167003929615,
+      "warm_min_seconds": 0.013004165957681835,
+      "warm_max_seconds": 0.013465208001434803,
+      "process_lifetime_peak_rss_bytes": 196476928
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_candidate_serial_1.json",
+      "backend": "candidate",
+      "kernel": "utci",
+      "threads": 1,
+      "callable": "solweig_light.comfort.utci:utci_calculator_compiled",
+      "max_abs": 0.0040283203125,
+      "worst_coordinate": [
+        0,
+        358
+      ],
+      "first_call_seconds": 2.262467790977098,
+      "warm_median_seconds": 0.04677304101642221,
+      "warm_min_seconds": 0.04602812498342246,
+      "warm_max_seconds": 0.04741162504069507,
+      "process_lifetime_peak_rss_bytes": 182353920
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_candidate_parallel_1.json",
+      "backend": "candidate",
+      "kernel": "utci_uniform",
+      "threads": 1,
+      "callable": "solweig_light.comfort.utci:utci_calculator_uniform",
+      "max_abs": 0.00025513768196105957,
+      "worst_coordinate": [
+        119,
+        302
+      ],
+      "first_call_seconds": 2.539730416960083,
+      "warm_median_seconds": 0.03973329102154821,
+      "warm_min_seconds": 0.0355778340017423,
+      "warm_max_seconds": 0.07412566698621958,
+      "process_lifetime_peak_rss_bytes": 186384384
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_candidate_parallel_10.json",
+      "backend": "candidate",
+      "kernel": "utci_uniform",
+      "threads": 10,
+      "callable": "solweig_light.comfort.utci:utci_calculator_uniform",
+      "max_abs": 0.00025513768196105957,
+      "worst_coordinate": [
+        119,
+        302
+      ],
+      "first_call_seconds": 2.521471041953191,
+      "warm_median_seconds": 0.007888624910265207,
+      "warm_min_seconds": 0.007569334004074335,
+      "warm_max_seconds": 0.007974875043146312,
+      "process_lifetime_peak_rss_bytes": 183369728
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_candidate_parallel_4.json",
+      "backend": "candidate",
+      "kernel": "utci_uniform",
+      "threads": 4,
+      "callable": "solweig_light.comfort.utci:utci_calculator_uniform",
+      "max_abs": 0.00025513768196105957,
+      "worst_coordinate": [
+        119,
+        302
+      ],
+      "first_call_seconds": 2.4702404170529917,
+      "warm_median_seconds": 0.00974354101344943,
+      "warm_min_seconds": 0.009683749987743795,
+      "warm_max_seconds": 0.009848040994256735,
+      "process_lifetime_peak_rss_bytes": 195084288
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_candidate_serial_1.json",
+      "backend": "candidate",
+      "kernel": "utci_uniform",
+      "threads": 1,
+      "callable": "solweig_light.comfort.utci:utci_calculator_uniform",
+      "max_abs": 0.00025513768196105957,
+      "worst_coordinate": [
+        119,
+        302
+      ],
+      "first_call_seconds": 2.276947750011459,
+      "warm_median_seconds": 0.035420125001110137,
+      "warm_min_seconds": 0.03524300002027303,
+      "warm_max_seconds": 0.03560237493366003,
+      "process_lifetime_peak_rss_bytes": 191578112
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_upstream_original_1.json",
+      "backend": "upstream",
+      "kernel": "utci_uniform",
+      "threads": 1,
+      "callable": "solweig_gpu.calculate_utci:utci_calculator",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.18186962499748915,
+      "warm_median_seconds": 0.15778954105917364,
+      "warm_min_seconds": 0.15484245808329433,
+      "warm_max_seconds": 0.15953791700303555,
+      "process_lifetime_peak_rss_bytes": 228687872
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_upstream_original_10.json",
+      "backend": "upstream",
+      "kernel": "utci_uniform",
+      "threads": 10,
+      "callable": "solweig_gpu.calculate_utci:utci_calculator",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.10518558300100267,
+      "warm_median_seconds": 0.08433400001376867,
+      "warm_min_seconds": 0.08259974990505725,
+      "warm_max_seconds": 0.1080253750551492,
+      "process_lifetime_peak_rss_bytes": 239665152
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_uniform_upstream_original_4.json",
+      "backend": "upstream",
+      "kernel": "utci_uniform",
+      "threads": 4,
+      "callable": "solweig_gpu.calculate_utci:utci_calculator",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.0868722089799121,
+      "warm_median_seconds": 0.08400762500241399,
+      "warm_min_seconds": 0.08270825003273785,
+      "warm_max_seconds": 0.08703220798633993,
+      "process_lifetime_peak_rss_bytes": 239828992
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_upstream_original_1.json",
+      "backend": "upstream",
+      "kernel": "utci",
+      "threads": 1,
+      "callable": "solweig_gpu.calculate_utci:utci_calculator",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.18371033400762826,
+      "warm_median_seconds": 0.15849708404857665,
+      "warm_min_seconds": 0.15695095795672387,
+      "warm_max_seconds": 0.1606648339657113,
+      "process_lifetime_peak_rss_bytes": 243695616
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_upstream_original_10.json",
+      "backend": "upstream",
+      "kernel": "utci",
+      "threads": 10,
+      "callable": "solweig_gpu.calculate_utci:utci_calculator",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.10391466692090034,
+      "warm_median_seconds": 0.10040545894298702,
+      "warm_min_seconds": 0.09773458307608962,
+      "warm_max_seconds": 0.2027754579903558,
+      "process_lifetime_peak_rss_bytes": 242352128
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/utci_upstream_original_4.json",
+      "backend": "upstream",
+      "kernel": "utci",
+      "threads": 4,
+      "callable": "solweig_gpu.calculate_utci:utci_calculator",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.08898691600188613,
+      "warm_median_seconds": 0.08389737503603101,
+      "warm_min_seconds": 0.08351995795965195,
+      "warm_max_seconds": 0.0844512500334531,
+      "process_lifetime_peak_rss_bytes": 240959488
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_candidate_parallel_1.json",
+      "backend": "candidate",
+      "kernel": "walls",
+      "threads": 1,
+      "callable": "solweig_light.geometry.walls:findwalls_parallel",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.8113618330098689,
+      "warm_median_seconds": 0.0007157089421525598,
+      "warm_min_seconds": 0.0006769590545445681,
+      "warm_max_seconds": 0.0009418340632691979,
+      "process_lifetime_peak_rss_bytes": 160972800
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_candidate_parallel_10.json",
+      "backend": "candidate",
+      "kernel": "walls",
+      "threads": 10,
+      "callable": "solweig_light.geometry.walls:findwalls_parallel",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.8251542079960927,
+      "warm_median_seconds": 0.00036325003020465374,
+      "warm_min_seconds": 0.00032600003760308027,
+      "warm_max_seconds": 0.0006160420598462224,
+      "process_lifetime_peak_rss_bytes": 164364288
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_candidate_parallel_4.json",
+      "backend": "candidate",
+      "kernel": "walls",
+      "threads": 4,
+      "callable": "solweig_light.geometry.walls:findwalls_parallel",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.8161799170775339,
+      "warm_median_seconds": 0.00031054101418703794,
+      "warm_min_seconds": 0.00029204203747212887,
+      "warm_max_seconds": 0.00048341602087020874,
+      "process_lifetime_peak_rss_bytes": 161546240
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_candidate_serial_1.json",
+      "backend": "candidate",
+      "kernel": "walls",
+      "threads": 1,
+      "callable": "solweig_light.geometry.walls:findwalls_serial",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.5987309580668807,
+      "warm_median_seconds": 0.0005342080257833004,
+      "warm_min_seconds": 0.0005306659732013941,
+      "warm_max_seconds": 0.0007260419661179185,
+      "process_lifetime_peak_rss_bytes": 153174016
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_upstream_original_1.json",
+      "backend": "upstream",
+      "kernel": "walls",
+      "threads": 1,
+      "callable": "solweig_gpu.walls_aspect:findwalls",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.6101735419360921,
+      "warm_median_seconds": 0.6083859580103308,
+      "warm_min_seconds": 0.6033692909404635,
+      "warm_max_seconds": 0.6242111249594018,
+      "process_lifetime_peak_rss_bytes": 245596160
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_upstream_original_10.json",
+      "backend": "upstream",
+      "kernel": "walls",
+      "threads": 10,
+      "callable": "solweig_gpu.walls_aspect:findwalls",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.5932753341039643,
+      "warm_median_seconds": 0.5948321670293808,
+      "warm_min_seconds": 0.5862552089383826,
+      "warm_max_seconds": 0.6136306250700727,
+      "process_lifetime_peak_rss_bytes": 268599296
+    },
+    {
+      "file": "reports/characterization/p2_kernels_v1/walls_upstream_original_4.json",
+      "backend": "upstream",
+      "kernel": "walls",
+      "threads": 4,
+      "callable": "solweig_gpu.walls_aspect:findwalls",
+      "max_abs": 0.0,
+      "worst_coordinate": [
+        0,
+        0
+      ],
+      "first_call_seconds": 0.6091410419903696,
+      "warm_median_seconds": 0.6069642910733819,
+      "warm_min_seconds": 0.6006191250635311,
+      "warm_max_seconds": 0.6113923749653623,
+      "process_lifetime_peak_rss_bytes": 245088256
+    }
+  ]
+}

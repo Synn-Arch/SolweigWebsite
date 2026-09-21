@@ -1,0 +1,313 @@
+{
+  "cases": [
+    {
+      "actual_kernel_mask_equal": true,
+      "altitude": 10.0,
+      "azimuth": 30.0,
+      "equal": false,
+      "first_mismatch": [
+        4,
+        2
+      ],
+      "max_abs": 19.592790603637695,
+      "mismatch_count": 6,
+      "name": "oblique_phase_counterexample",
+      "receiver": [
+        4,
+        3
+      ],
+      "receiver_exact_horizon": 19.592790603637695,
+      "receiver_scan_horizon": 0.0,
+      "sample_increments": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          1
+        ]
+      ],
+      "samples": [
+        [
+          -1,
+          1,
+          0.20360484719276428
+        ],
+        [
+          -2,
+          1,
+          0.40720969438552856
+        ],
+        [
+          -3,
+          2,
+          0.6108145713806152
+        ],
+        [
+          -4,
+          2,
+          0.8144193887710571
+        ],
+        [
+          -5,
+          3,
+          1.018024206161499
+        ],
+        [
+          -6,
+          3,
+          1.2216291427612305
+        ],
+        [
+          -7,
+          4,
+          1.4252339601516724
+        ]
+      ],
+      "shadow_mask_mismatch_count": 6,
+      "shape": [
+        7,
+        7
+      ]
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "altitude": 8.0,
+      "azimuth": 0.0,
+      "equal": false,
+      "first_mismatch": [
+        5,
+        0
+      ],
+      "max_abs": 1.9073486328125e-06,
+      "mismatch_count": 2,
+      "name": "cardinal_tall_border",
+      "receiver": null,
+      "receiver_exact_horizon": null,
+      "receiver_scan_horizon": null,
+      "sample_increments": [
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ],
+        [
+          -1,
+          0
+        ]
+      ],
+      "samples": [
+        [
+          -1,
+          0,
+          0.14054083824157715
+        ],
+        [
+          -2,
+          0,
+          0.2810816764831543
+        ],
+        [
+          -3,
+          0,
+          0.42162251472473145
+        ],
+        [
+          -4,
+          0,
+          0.5621633529663086
+        ],
+        [
+          -5,
+          0,
+          0.7027041912078857
+        ],
+        [
+          -6,
+          0,
+          0.8432450294494629
+        ],
+        [
+          -7,
+          0,
+          0.98378586769104
+        ]
+      ],
+      "shadow_mask_mismatch_count": 0,
+      "shape": [
+        7,
+        7
+      ]
+    }
+  ],
+  "decision": "reject_standard_single-translation_scan_for_general_oblique_rays",
+  "family": [
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 0.0,
+      "equal": false,
+      "exact_construction_seconds": 0.008817250025458634,
+      "exact_storage_bytes": 4480,
+      "max_abs": 4.57763671875e-05,
+      "mismatch_count": 894,
+      "query_10000_seconds": 0.010314167011529207,
+      "query_checksum": 10330000,
+      "samples": 32,
+      "scan_seconds": 0.0004987919237464666,
+      "shadow_mask_mismatch_count": 0,
+      "unique_increments": 1
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 30.0,
+      "equal": false,
+      "exact_construction_seconds": 0.007418291992507875,
+      "exact_storage_bytes": 4480,
+      "max_abs": 98.22720336914062,
+      "mismatch_count": 959,
+      "query_10000_seconds": 0.01037966599687934,
+      "query_checksum": 10110000,
+      "samples": 32,
+      "scan_seconds": 0.0005109580233693123,
+      "shadow_mask_mismatch_count": 9,
+      "unique_increments": 2
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 45.0,
+      "equal": false,
+      "exact_construction_seconds": 0.0059888329124078155,
+      "exact_storage_bytes": 4480,
+      "max_abs": 3.0517578125e-05,
+      "mismatch_count": 883,
+      "query_10000_seconds": 0.010140165919438004,
+      "query_checksum": 10090000,
+      "samples": 32,
+      "scan_seconds": 0.0005341250216588378,
+      "shadow_mask_mismatch_count": 0,
+      "unique_increments": 1
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 73.0,
+      "equal": false,
+      "exact_construction_seconds": 0.0086444589542225,
+      "exact_storage_bytes": 4480,
+      "max_abs": 110.00126647949219,
+      "mismatch_count": 996,
+      "query_10000_seconds": 0.01041683298535645,
+      "query_checksum": 10290000,
+      "samples": 35,
+      "scan_seconds": 0.0004855410661548376,
+      "shadow_mask_mismatch_count": 24,
+      "unique_increments": 2
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 90.0,
+      "equal": false,
+      "exact_construction_seconds": 0.010347625007852912,
+      "exact_storage_bytes": 4480,
+      "max_abs": 3.814697265625e-05,
+      "mismatch_count": 908,
+      "query_10000_seconds": 0.010616083047352731,
+      "query_checksum": 10370000,
+      "samples": 35,
+      "scan_seconds": 0.0005231670802459121,
+      "shadow_mask_mismatch_count": 0,
+      "unique_increments": 1
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 135.0,
+      "equal": false,
+      "exact_construction_seconds": 0.006619042018428445,
+      "exact_storage_bytes": 4480,
+      "max_abs": 4.57763671875e-05,
+      "mismatch_count": 884,
+      "query_10000_seconds": 0.01063720800448209,
+      "query_checksum": 10100000,
+      "samples": 32,
+      "scan_seconds": 0.0005093340296298265,
+      "shadow_mask_mismatch_count": 0,
+      "unique_increments": 1
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 225.0,
+      "equal": false,
+      "exact_construction_seconds": 0.006572499987669289,
+      "exact_storage_bytes": 4480,
+      "max_abs": 2.288818359375e-05,
+      "mismatch_count": 883,
+      "query_10000_seconds": 0.010499665979295969,
+      "query_checksum": 10080000,
+      "samples": 32,
+      "scan_seconds": 0.00048704096116125584,
+      "shadow_mask_mismatch_count": 0,
+      "unique_increments": 1
+    },
+    {
+      "actual_kernel_mask_equal": true,
+      "azimuth": 315.0,
+      "equal": false,
+      "exact_construction_seconds": 0.006783375050872564,
+      "exact_storage_bytes": 4480,
+      "max_abs": 6.103515625e-05,
+      "mismatch_count": 885,
+      "query_10000_seconds": 0.010449292021803558,
+      "query_checksum": 10110000,
+      "samples": 32,
+      "scan_seconds": 0.0005031659966334701,
+      "shadow_mask_mismatch_count": 0,
+      "unique_increments": 1
+    }
+  ],
+  "operand_dtypes": {
+    "DSM": "float32",
+    "dx_dy_initial": "float32",
+    "dz_assignment": "NumPy scalar from ds*index*tas; cast to float32 on DSM subtraction",
+    "python_azimuth_altitude": "converted to float32 before degree-to-radian multiply",
+    "rounding": "numpy.round ties-to-even"
+  },
+  "reason": "Rounded minor-axis offsets have phase-dependent increments; a horizon propagated from one fixed predecessor visits a different support than the frozen shifted-array traversal. Cardinal/diagonal cases showed sampled binary-mask agreement only; reusable float32 horizon equality remains unproved.",
+  "reference_binding": {
+    "all_fixture_masks_equal": true,
+    "callable": "shadow_numpy (characterized serial recurrence)",
+    "kernel": "/Users/alansynn/Workspace/solweig-light/src/solweig_light/geometry/shadows.py",
+    "mask_relation": "shadow == (sunlight_output == 0)"
+  },
+  "scope": "building-only diagnostic; vegetation, walls, and end-to-end speed are excluded"
+}

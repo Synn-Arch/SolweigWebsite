@@ -1,0 +1,7 @@
+{
+  "command_sha256": "4b22b99bcabeeea4f78e8b0d37b4bebd3b038f4c89c33093a56c546f16f36dbf",
+  "kind": "origin_guard_import",
+  "reason": "Guard attempted nonexistent solweig_light.radiation.ground_view_compiled module; pytest did not start. Correct module is solweig_light.radiation.ground_view.",
+  "retained": true,
+  "status": "failed"
+}

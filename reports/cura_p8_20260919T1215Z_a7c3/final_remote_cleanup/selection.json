@@ -1,0 +1,6 @@
+{
+  "selected_count": 1060,
+  "selected_bytes": 80626389,
+  "policy": "compact unique/reproducibility evidence; excludes reproducible environments, caches, bulk fixture/output duplicates while retaining complete inventory",
+  "excluded_bulk_locally_preserved": "local reports/cura_p8_20260919T1215Z_a7c3 contains prior verified raw evidence"
+}

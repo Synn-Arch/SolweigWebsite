@@ -1,0 +1,35 @@
+{
+  "sqrt": {
+    "finite_bit_mismatches": 1230,
+    "all_bit_mismatches": 1232,
+    "nan_masks_equal": true,
+    "max_abs": 5.960464477539063e-08
+  },
+  "acos_on_original_sqrt_diagnostic": {
+    "finite_bit_mismatches": 24113,
+    "all_bit_mismatches": 24113,
+    "nan_masks_equal": true,
+    "max_abs": 1.1920928955078125e-07
+  },
+  "asvf": {
+    "finite_bit_mismatches": 24670,
+    "all_bit_mismatches": 24672,
+    "nan_masks_equal": true,
+    "max_abs": 8.940696716308594e-07
+  },
+  "boundary_masks": {
+    "complete": {
+      "sun": 60,
+      "shade": 40
+    },
+    "original_asvf_diagnostic": {
+      "sun": 0,
+      "shade": 4
+    }
+  },
+  "library": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics/remaining_native_profiles_20260920T0220Z/aocl-libm-ose-29fd054f383e6c5e2dec2fce781d5220059f1836/build/dev-release-gcc/lib/libalm.so",
+  "library_sha256": "adc0c302930bb60b09489e1c60f1fed94e7abaf6b7723a0cbe2edc5179f328ed",
+  "prefix": "amd_",
+  "symbol_origins_verified": true,
+  "qualification": "Uniform native library sqrt/acos/tan/atan and float64 scalar cos/tan; actual scalar wrapping/order. Original-ASVF branch is diagnostic only. Benign bits are reported, boundary/output gates unchanged."
+}

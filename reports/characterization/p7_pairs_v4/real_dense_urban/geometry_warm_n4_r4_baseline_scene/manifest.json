@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "evidence_class": "source_published_model_input_window_with_synthetic_forcing",
+  "fixture_id": "dense_urban",
+  "files_sha256": {
+    "Building_DSM.tif": "a1cfa2a0445f810342f8e9cf9d334a90b3bd6e353afbd7e326e2a4f99d8d488a",
+    "DEM.tif": "ac2c5e42bdadeccec4215ad02cdc48c2d65a68ae0513478942b227f6e0a9eedc",
+    "Landcover.tif": "237b6354da98e52bef544423e507602d237d09ec890b099ce8d154a820874ce9",
+    "Trees.tif": "0bc1374636adc1a9cf2dbd3fc21678df28ef0d7d40fcb1bcbaf1f7aa73f409dc",
+    "kwargs.json": "c2dff3b6c449690e84886b1f5d01e519ad2b34e6bd8bcfc3090585474a26715f",
+    "met.txt": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4"
+  },
+  "fixture_sha256": "7ba155ea8ef5454eec5a4f142aff9da16b362842bad28d33d7974d4d802d1f4c",
+  "source_record": "https://zenodo.org/records/21081622",
+  "record_license": "gpl-3.0-or-later",
+  "archive_sha256": "9429fac970a29b3bd21217cbd0876f61d3df35e923efd077b7754e9134960a34",
+  "generator_sha256": "00318d13e1441c4567b5baa6c7a0bd5bcf04ef5fbf577ff9d4e8f920475c7bf6",
+  "source_window": {
+    "row": 0,
+    "col": 1280,
+    "building_fraction": 0.2939300537109375,
+    "canopy_fraction": 0.0987701416015625,
+    "dem_range": [
+      214.4549102783203,
+      224.53298950195312
+    ],
+    "trees_range": [
+      0.0,
+      18.486419677734375
+    ],
+    "landcover_values": [
+      1.0,
+      2.0,
+      4.0,
+      5.0,
+      6.0
+    ]
+  },
+  "rows": 256,
+  "cols": 256,
+  "transform": [
+    621556.7066,
+    2.0,
+    0.0,
+    3359664.3479,
+    0.0,
+    -2.0
+  ],
+  "epsg": 32614,
+  "resolution_m": 2,
+  "timesteps": 24,
+  "patch_option": 2,
+  "tile_size": 3600,
+  "overlap": 20,
+  "forcing": "synthetic analytic P0 meteorology; not observed Austin forcing",
+  "source_met_sha256": "bc8ee6361071dd109649857127d6b777571e868bdb06db0e47968b39e99189e4",
+  "source_kwargs_sha256": "046557619ba77a32b8351a05e50b5860842f3a37ac69f8753cf5e0c07d6bcfab",
+  "interpretation": "source documentation: DEM excludes buildings; Building_DSM includes terrain; Trees canopy height; zero interpreted as canopy absence as upstream model inputs",
+  "landcover": "source values retained but disabled (None); no undocumented mapping admitted",
+  "validation": "source-window arrays read back exactly; no resampling",
+  "limitations": [
+    "Unknown original acquisition lineage and vertical datum",
+    "Trees source NoData is zero; retained unchanged",
+    "Relative density labels within one published sample, not independent observed regions",
+    "Not independent scientific ground truth; no numerical comparison or performance result"
+  ],
+  "value_audit": {
+    "building_minus_dem_min_m": 0.0,
+    "building_minus_dem_max_m": 13.929733276367188,
+    "building_below_terrain_pixels": 0,
+    "negative_tree_height_pixels": 0,
+    "nonfinite_pixels": 0
+  }
+}

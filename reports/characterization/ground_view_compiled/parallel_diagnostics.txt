@@ -1,0 +1,231 @@
+nopython signatures: [(Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), Array(float32, 2, 'C', False, aligned=True), float32, Array(int64, 2, 'C', True, aligned=True), float32, Array(float32, 3, 'C', False, aligned=True)) -> none]
+target options: {'fastmath': False, 'parallel': True, 'nopython': True, 'boundscheck': None}
+ 
+================================================================================
+ Parallel Accelerator Optimizing:  Function _gather_parallel, 
+/Users/alansynn/Workspace/solweig-
+light/src/solweig_light/radiation/ground_view.py (133)  
+================================================================================
+
+
+Parallel loop listing for  Function _gather_parallel, /Users/alansynn/Workspace/solweig-light/src/solweig_light/radiation/ground_view.py (133) 
+--------------------------------------------------------------------------------------------------------------|loop #ID
+@njit(cache=True,fastmath=False,parallel=True)                                                                | 
+def _gather_parallel(buildings,shadow,sunwall,lup,albshadow,alb,lwall,albedo,bounds,first,output):            | 
+    rows,cols=buildings.shape                                                                                 | 
+    for pixel in prange(rows*cols):---------------------------------------------------------------------------| #0
+        row=pixel//cols;col=pixel%cols                                                                        | 
+        _gather_pixel(row,col,buildings,shadow,sunwall,lup,albshadow,alb,lwall,albedo,bounds,first,output)    | 
+--------------------------------- Fusing loops ---------------------------------
+Attempting fusion of parallel loops (combines loops with similar properties)...
+----------------------------- Before Optimisation ------------------------------
+--------------------------------------------------------------------------------
+------------------------------ After Optimisation ------------------------------
+Parallel structure is already optimal.
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+ 
+---------------------------Loop invariant code motion---------------------------
+Allocation hoisting:
+No allocation hoisting found
+
+Instruction hoisting:
+loop #0:
+  Has the following hoisted:
+    _gather_pixel_v2__vbool374 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vconst1118_75_3 = const(int, -1)
+    _gather_pixel_v2__vconst1174_82_2 = const(int, 1)
+    _gather_pixel_v2__vconst1276_96_1 = const(int, 0)
+    _gather_pixel_v2__vconst1366_109_1 = const(int, 0)
+    _gather_pixel_v2__vconst1718_163_2 = const(int, 1)
+    _gather_pixel_v2__vbool1732 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vbool384 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__minimum_v3__vbool86 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vconst1774_2_1 = const(int, 0)
+    _gather_pixel_v2__vconst1790_8_2 = const(int, 1)
+    _gather_pixel_v2__vconst1806_14_4 = const(int, 2)
+    _gather_pixel_v2__vconst1822_20_5 = const(int, 3)
+    _gather_pixel_v2__vconst1838_26_6 = const(int, 4)
+    _gather_pixel_v2__vconst1854_32_7 = const(int, 5)
+    _gather_pixel_v2__vconst1870_38_8 = const(int, 6)
+    _gather_pixel_v2__vconst1886_44_9 = const(int, 7)
+    _gather_pixel_v2__vconst1902_50_10 = const(int, 8)
+    _gather_pixel_v2__vconst1918_56_11 = const(int, 9)
+    _gather_pixel_v2__vconst1934_62_12 = const(int, 10)
+    _gather_pixel_v2__vconst1950_68_13 = const(int, 11)
+    _gather_pixel_v2__vconst1966_74_14 = const(int, 12)
+    _gather_pixel_v2__vconst1982_80_15 = const(int, 13)
+    _gather_pixel_v2__vconst1998_86_16 = const(int, 14)
+    _gather_pixel_v2__vconst2014_92_17 = const(int, 15)
+    _gather_pixel_v2__vconst46_8_1 = const(int, 0)
+    _gather_pixel_v2__vconst106_13_1 = const(int, 0)
+    _gather_pixel_v2__vconst150_18_1 = const(int, 0)
+    _gather_pixel_v2__vconst218_23_1 = const(int, 0)
+    _gather_pixel_v2__v264load_global_25 = global(range: <class 'range'>)
+    _gather_pixel_v2__minimum_v3__vbool102 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__minimum_v3__vbool42 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vbool406 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vbool416 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vconst432_4_2 = const(int, 1)
+    _gather_pixel_v2__vbool440 = global(bool: <class 'bool'>)
+    _gather_pixel_v2__vconst470_5_2 = const(int, 1)
+    _gather_pixel_v2__vbool478 = global(bool: <class 'bool'>)
+  Failed to hoist the following:
+    dependency: _gather_pixel_v2__v322for_iter_1 = iternext(value=_gather_pixel_v2__v318get_iter_32)
+    dependency: _gather_pixel_v2__v322for_iter_2 = pair_first(value=_gather_pixel_v2__v322for_iter_1)
+    dependency: _gather_pixel_v2__v322for_iter_3 = pair_second(value=_gather_pixel_v2__v322for_iter_1)
+    dependency: _gather_pixel_v2__vbinop_add488_3 = _gather_pixel_v2__v340unpack_sequence_7 + col
+    dependency: _gather_pixel_v2__vbinop_sub494_5 = _gather_pixel_v2__vbinop_add488_3 - _gather_pixel_v2__v340unpack_sequence_11
+    dependency: _gather_pixel_v2__v330binary_subscr_4 = getitem(value=bounds, index=_gather_pixel_v2__v322for_iter_2, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_13 = exhaust_iter(value=_gather_pixel_v2__v330binary_subscr_4, count=8)
+    dependency: _gather_pixel_v2__v340unpack_sequence_5 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=0, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_6 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=1, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_7 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=2, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_8 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=3, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_9 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=4, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_10 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=5, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_11 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=6, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v340unpack_sequence_12 = static_getitem(value=_gather_pixel_v2__v340unpack_sequence_13, index=7, index_var=None, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v368compare_op_16 = _gather_pixel_v2__v340unpack_sequence_9 <= row
+    dependency: _gather_pixel_v2__v374pred = call $push_global_to_block.79(_gather_pixel_v2__v368compare_op_16, func=$push_global_to_block.79, args=(Var(_gather_pixel_v2__v368compare_op_16, ground_view.py:93),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v664load_attr_8 = getattr(value=_gather_pixel_v2__v652load_global_6, attr=float32)
+    dependency: _gather_pixel_v2__v688load_attr_12 = getattr(value=_gather_pixel_v2__v676load_global_10, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul702_15 = _gather_pixel_v2_sh.2 * _gather_pixel_v2_f.6
+    dependency: _gather_pixel_v2__v710call_16 = call _gather_pixel_v2__v688load_attr_12(_gather_pixel_v2__vbinop_mul702_15, func=_gather_pixel_v2__v688load_attr_12, args=[Var(_gather_pixel_v2__vbinop_mul702_15, ground_view.py:100)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add720_17 = _gather_pixel_v2_sumsh.2 + _gather_pixel_v2__v710call_16
+    dependency: _gather_pixel_v2_sumsh.1 = call _gather_pixel_v2__v664load_attr_8(_gather_pixel_v2__vbinop_add720_17, func=_gather_pixel_v2__v664load_attr_8, args=[Var(_gather_pixel_v2__vbinop_add720_17, ground_view.py:100)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v752load_attr_21 = getattr(value=_gather_pixel_v2__v740load_global_19, attr=float32)
+    dependency: _gather_pixel_v2__v776load_attr_25 = getattr(value=_gather_pixel_v2__v764load_global_23, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul790_28 = _gather_pixel_v2_lu.2 * _gather_pixel_v2_f.6
+    dependency: _gather_pixel_v2__v798call_29 = call _gather_pixel_v2__v776load_attr_25(_gather_pixel_v2__vbinop_mul790_28, func=_gather_pixel_v2__v776load_attr_25, args=[Var(_gather_pixel_v2__vbinop_mul790_28, ground_view.py:101)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add808_30 = _gather_pixel_v2_sumlu.2 + _gather_pixel_v2__v798call_29
+    dependency: _gather_pixel_v2_sumlu.1 = call _gather_pixel_v2__v752load_attr_21(_gather_pixel_v2__vbinop_add808_30, func=_gather_pixel_v2__v752load_attr_21, args=[Var(_gather_pixel_v2__vbinop_add808_30, ground_view.py:101)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v840load_attr_34 = getattr(value=_gather_pixel_v2__v828load_global_32, attr=float32)
+    dependency: _gather_pixel_v2__v864load_attr_38 = getattr(value=_gather_pixel_v2__v852load_global_36, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul878_41 = _gather_pixel_v2_al.2 * _gather_pixel_v2_f.6
+    dependency: _gather_pixel_v2__v886call_42 = call _gather_pixel_v2__v864load_attr_38(_gather_pixel_v2__vbinop_mul878_41, func=_gather_pixel_v2__v864load_attr_38, args=[Var(_gather_pixel_v2__vbinop_mul878_41, ground_view.py:102)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add896_43 = _gather_pixel_v2_sumal.2 + _gather_pixel_v2__v886call_42
+    dependency: _gather_pixel_v2_sumal.1 = call _gather_pixel_v2__v840load_attr_34(_gather_pixel_v2__vbinop_add896_43, func=_gather_pixel_v2__v840load_attr_34, args=[Var(_gather_pixel_v2__vbinop_add896_43, ground_view.py:102)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v928load_attr_47 = getattr(value=_gather_pixel_v2__v916load_global_45, attr=float32)
+    dependency: _gather_pixel_v2__v952load_attr_51 = getattr(value=_gather_pixel_v2__v940load_global_49, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul966_54 = _gather_pixel_v2_an.2 * _gather_pixel_v2_f.6
+    dependency: _gather_pixel_v2__v974call_55 = call _gather_pixel_v2__v952load_attr_51(_gather_pixel_v2__vbinop_mul966_54, func=_gather_pixel_v2__v952load_attr_51, args=[Var(_gather_pixel_v2__vbinop_mul966_54, ground_view.py:103)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add984_56 = _gather_pixel_v2_suman.2 + _gather_pixel_v2__v974call_55
+    dependency: _gather_pixel_v2_suman.1 = call _gather_pixel_v2__v928load_attr_47(_gather_pixel_v2__vbinop_add984_56, func=_gather_pixel_v2__v928load_attr_47, args=[Var(_gather_pixel_v2__vbinop_add984_56, ground_view.py:103)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1016load_attr_60 = getattr(value=_gather_pixel_v2__v1004load_global_58, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul1030_63 = _gather_pixel_v2_sw.2 * _gather_pixel_v2_f.6
+    dependency: _gather_pixel_v2_tempb = call _gather_pixel_v2__v1016load_attr_60(_gather_pixel_v2__vbinop_mul1030_63, func=_gather_pixel_v2__v1016load_attr_60, args=[Var(_gather_pixel_v2__vbinop_mul1030_63, ground_view.py:104)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1062load_attr_67 = getattr(value=_gather_pixel_v2__v1050load_global_65, attr=float32)
+    dependency: _gather_pixel_v2__v1084load_attr_70 = getattr(value=_gather_pixel_v2__v1072load_global_68, attr=float32)
+    dependency: _gather_pixel_v2__v1108load_attr_74 = getattr(value=_gather_pixel_v2__v1096load_global_72, attr=float32)
+    dependency: _gather_pixel_v2__v1124call_76 = call _gather_pixel_v2__v1108load_attr_74(_gather_pixel_v2__vconst1118_75_3, func=_gather_pixel_v2__v1108load_attr_74, args=[Var(_gather_pixel_v2__vconst1118_75_3, ground_view.py:105)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_mul1134_77 = _gather_pixel_v2_f.6 * _gather_pixel_v2__v1124call_76
+    dependency: _gather_pixel_v2__v1142call_78 = call _gather_pixel_v2__v1084load_attr_70(_gather_pixel_v2__vbinop_mul1134_77, func=_gather_pixel_v2__v1084load_attr_70, args=[Var(_gather_pixel_v2__vbinop_mul1134_77, ground_view.py:105)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1164load_attr_81 = getattr(value=_gather_pixel_v2__v1152load_global_79, attr=float32)
+    dependency: _gather_pixel_v2__v1180call_83 = call _gather_pixel_v2__v1164load_attr_81(_gather_pixel_v2__vconst1174_82_2, func=_gather_pixel_v2__v1164load_attr_81, args=[Var(_gather_pixel_v2__vconst1174_82_2, ground_view.py:105)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add1190_84 = _gather_pixel_v2__v1142call_78 + _gather_pixel_v2__v1180call_83
+    dependency: _gather_pixel_v2_tempbwall = call _gather_pixel_v2__v1062load_attr_67(_gather_pixel_v2__vbinop_add1190_84, func=_gather_pixel_v2__v1062load_attr_67, args=[Var(_gather_pixel_v2__vbinop_add1190_84, ground_view.py:105)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1222load_attr_88 = getattr(value=_gather_pixel_v2__v1210load_global_86, attr=float32)
+    dependency: _gather_pixel_v2__v1244load_attr_91 = getattr(value=_gather_pixel_v2__v1232load_global_89, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_add1258_94 = _gather_pixel_v2_tempb + _gather_pixel_v2_bub.2
+    dependency: _gather_pixel_v2__v1266call_95 = call _gather_pixel_v2__v1244load_attr_91(_gather_pixel_v2__vbinop_add1258_94, func=_gather_pixel_v2__v1244load_attr_91, args=[Var(_gather_pixel_v2__vbinop_add1258_94, ground_view.py:106)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1278compare_op_97 = _gather_pixel_v2__v1266call_95 > _gather_pixel_v2__vconst1276_96_1
+    dependency: _gather_pixel_v2_bub.1 = call _gather_pixel_v2__v1222load_attr_88(_gather_pixel_v2__v1278compare_op_97, func=_gather_pixel_v2__v1222load_attr_88, args=[Var(_gather_pixel_v2__v1278compare_op_97, ground_view.py:106)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1312load_attr_101 = getattr(value=_gather_pixel_v2__v1300load_global_99, attr=float32)
+    dependency: _gather_pixel_v2__v1334load_attr_104 = getattr(value=_gather_pixel_v2__v1322load_global_102, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_add1348_107 = _gather_pixel_v2_tempbwall + _gather_pixel_v2_bubwall.2
+    dependency: _gather_pixel_v2__v1356call_108 = call _gather_pixel_v2__v1334load_attr_104(_gather_pixel_v2__vbinop_add1348_107, func=_gather_pixel_v2__v1334load_attr_104, args=[Var(_gather_pixel_v2__vbinop_add1348_107, ground_view.py:107)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1368compare_op_110 = _gather_pixel_v2__v1356call_108 > _gather_pixel_v2__vconst1366_109_1
+    dependency: _gather_pixel_v2_bubwall.1 = call _gather_pixel_v2__v1312load_attr_101(_gather_pixel_v2__v1368compare_op_110, func=_gather_pixel_v2__v1312load_attr_101, args=[Var(_gather_pixel_v2__v1368compare_op_110, ground_view.py:107)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1402load_attr_114 = getattr(value=_gather_pixel_v2__v1390load_global_112, attr=float32)
+    dependency: _gather_pixel_v2__v1426load_attr_118 = getattr(value=_gather_pixel_v2__v1414load_global_116, attr=float32)
+    dependency: _gather_pixel_v2__v1444build_tuple_123 = build_tuple(items=[Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1446binary_subscr_124 = getitem(value=lwall, index=_gather_pixel_v2__v1444build_tuple_123, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__vbinop_mul1456_125 = _gather_pixel_v2_bub.1 * _gather_pixel_v2__v1446binary_subscr_124
+    dependency: _gather_pixel_v2__v1464call_126 = call _gather_pixel_v2__v1426load_attr_118(_gather_pixel_v2__vbinop_mul1456_125, func=_gather_pixel_v2__v1426load_attr_118, args=[Var(_gather_pixel_v2__vbinop_mul1456_125, ground_view.py:108)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add1474_127 = _gather_pixel_v2_sumlw.2 + _gather_pixel_v2__v1464call_126
+    dependency: _gather_pixel_v2_sumlw.1 = call _gather_pixel_v2__v1402load_attr_114(_gather_pixel_v2__vbinop_add1474_127, func=_gather_pixel_v2__v1402load_attr_114, args=[Var(_gather_pixel_v2__vbinop_add1474_127, ground_view.py:108)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1506load_attr_131 = getattr(value=_gather_pixel_v2__v1494load_global_129, attr=float32)
+    dependency: _gather_pixel_v2__v1530load_attr_135 = getattr(value=_gather_pixel_v2__v1518load_global_133, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul1544_138 = _gather_pixel_v2_bub.1 * albedo
+    dependency: _gather_pixel_v2__v1552call_139 = call _gather_pixel_v2__v1530load_attr_135(_gather_pixel_v2__vbinop_mul1544_138, func=_gather_pixel_v2__v1530load_attr_135, args=[Var(_gather_pixel_v2__vbinop_mul1544_138, ground_view.py:109)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add1562_140 = _gather_pixel_v2_sumaw.2 + _gather_pixel_v2__v1552call_139
+    dependency: _gather_pixel_v2_sumaw.1 = call _gather_pixel_v2__v1506load_attr_131(_gather_pixel_v2__vbinop_add1562_140, func=_gather_pixel_v2__v1506load_attr_131, args=[Var(_gather_pixel_v2__vbinop_add1562_140, ground_view.py:109)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1594load_attr_144 = getattr(value=_gather_pixel_v2__v1582load_global_142, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_add1608_147 = _gather_pixel_v2_sumwall.2 + _gather_pixel_v2_bub.1
+    dependency: _gather_pixel_v2_sumwall.1 = call _gather_pixel_v2__v1594load_attr_144(_gather_pixel_v2__vbinop_add1608_147, func=_gather_pixel_v2__v1594load_attr_144, args=[Var(_gather_pixel_v2__vbinop_add1608_147, ground_view.py:110)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v1640load_attr_151 = getattr(value=_gather_pixel_v2__v1628load_global_149, attr=float32)
+    dependency: _gather_pixel_v2__v1664load_attr_155 = getattr(value=_gather_pixel_v2__v1652load_global_153, attr=float32)
+    dependency: _gather_pixel_v2__vbinop_mul1678_158 = _gather_pixel_v2_bubwall.1 * albedo
+    dependency: _gather_pixel_v2__v1686call_159 = call _gather_pixel_v2__v1664load_attr_155(_gather_pixel_v2__vbinop_mul1678_158, func=_gather_pixel_v2__v1664load_attr_155, args=[Var(_gather_pixel_v2__vbinop_mul1678_158, ground_view.py:111)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add1696_160 = _gather_pixel_v2_sumanw.2 + _gather_pixel_v2__v1686call_159
+    dependency: _gather_pixel_v2_sumanw.1 = call _gather_pixel_v2__v1640load_attr_151(_gather_pixel_v2__vbinop_add1696_160, func=_gather_pixel_v2__v1640load_attr_151, args=[Var(_gather_pixel_v2__vbinop_add1696_160, ground_view.py:111)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add1720_164 = _gather_pixel_v2__v322for_iter_2 + _gather_pixel_v2__vconst1718_163_2
+    dependency: _gather_pixel_v2__v1726compare_op_166 = _gather_pixel_v2__vbinop_add1720_164 <= first
+    dependency: _gather_pixel_v2__v1732pred = call $push_global_to_block.80(_gather_pixel_v2__v1726compare_op_166, func=$push_global_to_block.80, args=(Var(_gather_pixel_v2__v1726compare_op_166, ground_view.py:112),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v378compare_op_3 = row < _gather_pixel_v2__v340unpack_sequence_10
+    dependency: _gather_pixel_v2__v384pred = call $push_global_to_block.81(_gather_pixel_v2__v378compare_op_3, func=$push_global_to_block.81, args=(Var(_gather_pixel_v2__v378compare_op_3, ground_view.py:93),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__minimum_v3__v60load_attr_2 = getattr(value=_gather_pixel_v2__minimum_v3__v48load_global_0, attr=isnan)
+    dependency: _gather_pixel_v2__minimum_v3__v76call_4 = call _gather_pixel_v2__minimum_v3__v60load_attr_2(_gather_pixel_v2_bu.2, func=_gather_pixel_v2__minimum_v3__v60load_attr_2, args=[Var(_gather_pixel_v2_bu.2, ground_view.py:99)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__minimum_v3__v86pred = call $push_global_to_block.82(_gather_pixel_v2__minimum_v3__v76call_4, func=$push_global_to_block.82, args=(Var(_gather_pixel_v2__minimum_v3__v76call_4, ground_view.py:79),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v506build_tuple_5 = build_tuple(items=[Var(_gather_pixel_v2__vphi460_1.2, ground_view.py:94), Var(_gather_pixel_v2__vphi498_1.2, ground_view.py:95)])
+    dependency: _gather_pixel_v2_bu.1 = getitem(value=buildings, index=_gather_pixel_v2__v506build_tuple_5, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v526build_tuple_10 = build_tuple(items=[Var(_gather_pixel_v2__vphi460_1.2, ground_view.py:94), Var(_gather_pixel_v2__vphi498_1.2, ground_view.py:95)])
+    dependency: _gather_pixel_v2_sh.1 = getitem(value=shadow, index=_gather_pixel_v2__v526build_tuple_10, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v546build_tuple_15 = build_tuple(items=[Var(_gather_pixel_v2__vphi460_1.2, ground_view.py:94), Var(_gather_pixel_v2__vphi498_1.2, ground_view.py:95)])
+    dependency: _gather_pixel_v2_lu.1 = getitem(value=lup, index=_gather_pixel_v2__v546build_tuple_15, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v566build_tuple_20 = build_tuple(items=[Var(_gather_pixel_v2__vphi460_1.2, ground_view.py:94), Var(_gather_pixel_v2__vphi498_1.2, ground_view.py:95)])
+    dependency: _gather_pixel_v2_al.1 = getitem(value=albshadow, index=_gather_pixel_v2__v566build_tuple_20, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v586build_tuple_25 = build_tuple(items=[Var(_gather_pixel_v2__vphi460_1.2, ground_view.py:94), Var(_gather_pixel_v2__vphi498_1.2, ground_view.py:95)])
+    dependency: _gather_pixel_v2_an.1 = getitem(value=alb, index=_gather_pixel_v2__v586build_tuple_25, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v606build_tuple_30 = build_tuple(items=[Var(_gather_pixel_v2__vphi460_1.2, ground_view.py:94), Var(_gather_pixel_v2__vphi498_1.2, ground_view.py:95)])
+    dependency: _gather_pixel_v2_sw.1 = getitem(value=sunwall, index=_gather_pixel_v2__v606build_tuple_30, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v1780build_tuple_5 = build_tuple(items=[Var(_gather_pixel_v2__vconst1774_2_1, ground_view.py:116), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1796build_tuple_11 = build_tuple(items=[Var(_gather_pixel_v2__vconst1790_8_2, ground_view.py:116), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1812build_tuple_17 = build_tuple(items=[Var(_gather_pixel_v2__vconst1806_14_4, ground_view.py:117), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1828build_tuple_23 = build_tuple(items=[Var(_gather_pixel_v2__vconst1822_20_5, ground_view.py:117), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1844build_tuple_29 = build_tuple(items=[Var(_gather_pixel_v2__vconst1838_26_6, ground_view.py:118), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1860build_tuple_35 = build_tuple(items=[Var(_gather_pixel_v2__vconst1854_32_7, ground_view.py:118), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1876build_tuple_41 = build_tuple(items=[Var(_gather_pixel_v2__vconst1870_38_8, ground_view.py:119), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1892build_tuple_47 = build_tuple(items=[Var(_gather_pixel_v2__vconst1886_44_9, ground_view.py:119), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1908build_tuple_53 = build_tuple(items=[Var(_gather_pixel_v2__vconst1902_50_10, ground_view.py:120), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1924build_tuple_59 = build_tuple(items=[Var(_gather_pixel_v2__vconst1918_56_11, ground_view.py:120), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1940build_tuple_65 = build_tuple(items=[Var(_gather_pixel_v2__vconst1934_62_12, ground_view.py:121), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1956build_tuple_71 = build_tuple(items=[Var(_gather_pixel_v2__vconst1950_68_13, ground_view.py:121), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1972build_tuple_77 = build_tuple(items=[Var(_gather_pixel_v2__vconst1966_74_14, ground_view.py:122), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v1988build_tuple_83 = build_tuple(items=[Var(_gather_pixel_v2__vconst1982_80_15, ground_view.py:122), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v2004build_tuple_89 = build_tuple(items=[Var(_gather_pixel_v2__vconst1998_86_16, ground_view.py:123), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2__v2020build_tuple_95 = build_tuple(items=[Var(_gather_pixel_v2__vconst2014_92_17, ground_view.py:123), Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: pixel = $parfor__index_62.90
+    dependency: row = $parfor__index_62.90 // _cols_66
+    dependency: col = $parfor__index_62.90 % _cols_66
+    dependency: _gather_pixel_v2__v10build_tuple_3 = build_tuple(items=[Var(row, ground_view.py:137), Var(col, ground_view.py:137)])
+    dependency: _gather_pixel_v2_f = getitem(value=buildings, index=_gather_pixel_v2__v10build_tuple_3, fn=<built-in function getitem>)
+    dependency: _gather_pixel_v2__v36load_attr_7 = getattr(value=_gather_pixel_v2__v24load_global_5, attr=float32)
+    dependency: _gather_pixel_v2_bu = call _gather_pixel_v2__v36load_attr_7(_gather_pixel_v2__vconst46_8_1, func=_gather_pixel_v2__v36load_attr_7, args=[Var(_gather_pixel_v2__vconst46_8_1, ground_view.py:87)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v96load_attr_12 = getattr(value=_gather_pixel_v2__v84load_global_10, attr=float32)
+    dependency: _gather_pixel_v2_bub = call _gather_pixel_v2__v96load_attr_12(_gather_pixel_v2__vconst106_13_1, func=_gather_pixel_v2__v96load_attr_12, args=[Var(_gather_pixel_v2__vconst106_13_1, ground_view.py:88)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v140load_attr_17 = getattr(value=_gather_pixel_v2__v128load_global_15, attr=float32)
+    dependency: _gather_pixel_v2_sumsh = call _gather_pixel_v2__v140load_attr_17(_gather_pixel_v2__vconst150_18_1, func=_gather_pixel_v2__v140load_attr_17, args=[Var(_gather_pixel_v2__vconst150_18_1, ground_view.py:89)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v208load_attr_22 = getattr(value=_gather_pixel_v2__v196load_global_20, attr=float32)
+    dependency: _gather_pixel_v2_firstsh = call _gather_pixel_v2__v208load_attr_22(_gather_pixel_v2__vconst218_23_1, func=_gather_pixel_v2__v208load_attr_22, args=[Var(_gather_pixel_v2__vconst218_23_1, ground_view.py:90)], kws=(), vararg=None, varkwarg=None, target=None)
+    not pure: _gather_pixel_v2__v308call_31 = call $push_global_to_block.83(bounds__size0_22, func=$push_global_to_block.83, args=[Var(bounds__size0_22, ground_view.py:133)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v318get_iter_32 = getiter(value=_gather_pixel_v2__v308call_31)
+    dependency: _gather_pixel_v2__minimum_v3__v96compare_op_2 = _gather_pixel_v2_f.5 < _gather_pixel_v2_bu.2
+    dependency: _gather_pixel_v2__minimum_v3__v102pred = call $push_global_to_block.84(_gather_pixel_v2__minimum_v3__v96compare_op_2, func=$push_global_to_block.84, args=(Var(_gather_pixel_v2__minimum_v3__v96compare_op_2, ground_view.py:80),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__minimum_v3__v16load_attr_2 = getattr(value=_gather_pixel_v2__minimum_v3__v4load_global_0, attr=isnan)
+    dependency: _gather_pixel_v2__minimum_v3__v32call_4 = call _gather_pixel_v2__minimum_v3__v16load_attr_2(_gather_pixel_v2_f.5, func=_gather_pixel_v2__minimum_v3__v16load_attr_2, args=[Var(_gather_pixel_v2_f.5, ground_view.py:99)], kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__minimum_v3__v42pred = call $push_global_to_block.85(_gather_pixel_v2__minimum_v3__v32call_4, func=$push_global_to_block.85, args=(Var(_gather_pixel_v2__minimum_v3__v32call_4, ground_view.py:78),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v400compare_op_3 = _gather_pixel_v2__v340unpack_sequence_11 <= col
+    dependency: _gather_pixel_v2__v406pred = call $push_global_to_block.86(_gather_pixel_v2__v400compare_op_3, func=$push_global_to_block.86, args=(Var(_gather_pixel_v2__v400compare_op_3, ground_view.py:93),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__v410compare_op_3 = col < _gather_pixel_v2__v340unpack_sequence_12
+    dependency: _gather_pixel_v2__v416pred = call $push_global_to_block.87(_gather_pixel_v2__v410compare_op_3, func=$push_global_to_block.87, args=(Var(_gather_pixel_v2__v410compare_op_3, ground_view.py:93),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_sub428_3 = _gather_pixel_v2__v340unpack_sequence_6 - _gather_pixel_v2__v340unpack_sequence_5
+    dependency: _gather_pixel_v2__v434compare_op_5 = _gather_pixel_v2__vbinop_sub428_3 == _gather_pixel_v2__vconst432_4_2
+    dependency: _gather_pixel_v2__v440pred = call $push_global_to_block.88(_gather_pixel_v2__v434compare_op_5, func=$push_global_to_block.88, args=(Var(_gather_pixel_v2__v434compare_op_5, ground_view.py:94),), kws=(), vararg=None, varkwarg=None, target=None)
+    dependency: _gather_pixel_v2__vbinop_add450_3 = _gather_pixel_v2__v340unpack_sequence_5 + row
+    dependency: _gather_pixel_v2__vbinop_sub456_5 = _gather_pixel_v2__vbinop_add450_3 - _gather_pixel_v2__v340unpack_sequence_9
+    dependency: _gather_pixel_v2__vbinop_sub466_4 = _gather_pixel_v2__v340unpack_sequence_8 - _gather_pixel_v2__v340unpack_sequence_7
+    dependency: _gather_pixel_v2__v472compare_op_6 = _gather_pixel_v2__vbinop_sub466_4 == _gather_pixel_v2__vconst470_5_2
+    dependency: _gather_pixel_v2__v478pred = call $push_global_to_block.89(_gather_pixel_v2__v472compare_op_6, func=$push_global_to_block.89, args=(Var(_gather_pixel_v2__v472compare_op_6, ground_view.py:95),), kws=(), vararg=None, varkwarg=None, target=None)
+--------------------------------------------------------------------------------

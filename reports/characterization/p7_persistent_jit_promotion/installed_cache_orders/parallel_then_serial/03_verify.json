@@ -1,0 +1,13 @@
+{
+  "longwave_exact": true,
+  "longwave_max_abs": 0.0,
+  "mode": "verify",
+  "shortwave_exact": true,
+  "shortwave_max_abs": 0.0,
+  "target_options": {
+    "longwave_parallel": true,
+    "longwave_serial": false,
+    "shortwave_parallel": true,
+    "shortwave_serial": false
+  }
+}

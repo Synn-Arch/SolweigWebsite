@@ -1,0 +1,5790 @@
+{
+  "cases": {
+    "repeated1024": {
+      "candidate_measurement": {
+        "command": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/env/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+          "--child",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/candidate/spec.json"
+        ],
+        "elapsed_seconds_including_imports_jit_io": 453.95186806842685,
+        "exit_code": 0,
+        "measurement_class": "correctness admission diagnostic; not benchmark timing",
+        "memory_limit_aborted": false,
+        "memory_limit_bytes": 12884901888,
+        "peak_process_tree_rss_bytes": 2352721920,
+        "sample_interval_seconds": 0.02
+      },
+      "candidate_run": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/candidate",
+      "geometry_comparison": {
+        "records": [
+          {
+            "artifact": "shadowmats_0_0.npz",
+            "bitwise_equal": true,
+            "field": "shadowmat",
+            "shape": [
+              1024,
+              1024,
+              153
+            ]
+          },
+          {
+            "artifact": "shadowmats_0_0.npz",
+            "bitwise_equal": true,
+            "field": "vegshadowmat",
+            "shape": [
+              1024,
+              1024,
+              153
+            ]
+          },
+          {
+            "artifact": "shadowmats_0_0.npz",
+            "bitwise_equal": true,
+            "field": "vbshmat",
+            "shape": [
+              1024,
+              1024,
+              153
+            ]
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svf.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfE.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfS.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfW.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 3.725290298461914e-09
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfN.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfEveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfSveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfWveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfNveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfEaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfSaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfWaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfNaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          }
+        ],
+        "status": "passed"
+      },
+      "output_comparison": {
+        "artifacts": [
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  4
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  36
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  3,
+                  954
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  3,
+                  979
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  3,
+                  4
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.00018310546875,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  1008
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  3
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.00018310546875,
+                "passed": true,
+                "worst_coordinate": [
+                  29,
+                  14
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.00018310546875,
+                "passed": true,
+                "worst_coordinate": [
+                  17,
+                  999
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  4
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  12,
+                  99
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  14
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  53
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Kdown_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.814697265625e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  8
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 1.1444091796875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  10,
+                  1010
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 7.62939453125e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  1023
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  22
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  22
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  1013
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  62
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  38
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  991
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 1.1444091796875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  1004
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 7.62939453125e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  1003
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.814697265625e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  36,
+                  21
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Kup_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1018
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.000244140625,
+                "passed": true,
+                "worst_coordinate": [
+                  19,
+                  972
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  954
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.000457763671875,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  35
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1008,
+                  983
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  22,
+                  57
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.00018310546875,
+                "passed": true,
+                "worst_coordinate": [
+                  49,
+                  24
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  12,
+                  71
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.000518798828125,
+                "passed": true,
+                "worst_coordinate": [
+                  982,
+                  98
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.000518798828125,
+                "passed": true,
+                "worst_coordinate": [
+                  86,
+                  66
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.000396728515625,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  78
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.000396728515625,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  86
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  71
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.00018310546875,
+                "passed": true,
+                "worst_coordinate": [
+                  19,
+                  1007
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  986
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1015,
+                  986
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1015,
+                  986
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1015,
+                  986
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Ldown_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  9,
+                  1010
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1008,
+                  952
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  3,
+                  23
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  3
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  40
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  963
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1011,
+                  1011
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  32
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  23
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  21
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  21
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  1010
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Lup_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Shadow_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  30
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  7
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  8
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  988
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  43
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  4
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  74,
+                  81
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  76
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  4
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  29
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  9
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/TMRT_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Ta_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  969,
+                  997
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.814697265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  3,
+                  1004
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 5.340576171875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  993,
+                  998
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1020,
+                  978
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  960
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1010,
+                  1014
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  46,
+                  61
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 6.4849853515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  18,
+                  29
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  79
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 8.0108642578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  73,
+                  68
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 6.4849853515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  982,
+                  12
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 5.340576171875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  14,
+                  40
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 4.38690185546875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  58,
+                  103
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  988,
+                  52
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 2.47955322265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1006,
+                  28
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 2.47955322265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  79,
+                  59
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 2.47955322265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  79,
+                  59
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 2.47955322265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  79,
+                  59
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/UTCI_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 8.20159912109375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  41,
+                  42
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  14,
+                  22
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  961
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  62
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  30
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 8.392333984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  45,
+                  11
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 8.392333984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  965,
+                  997
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 6.29425048828125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  53,
+                  59
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 6.4849853515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  9,
+                  48
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 8.392333984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  43,
+                  48
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 6.4849853515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1004,
+                  24
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  43
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  1014
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  14
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  14,
+                  26
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  998
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  998
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  998
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/WBGT_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Wind_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "processed_inputs/SVF/SkyViewFactor_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "path": "processed_inputs/SVF/shadowmats_0_0.npz",
+            "presence_matched": true,
+            "values_checked": false
+          },
+          {
+            "path": "processed_inputs/SVF/svfs_0_0.zip",
+            "presence_matched": true,
+            "values_checked": false
+          }
+        ],
+        "comparison_protocol_sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+        "evidence_class": "original_upstream_cpu_vs_candidate",
+        "limitations": [
+          "Non-TIFF legacy artifacts checked for presence only; intermediate chronological state requires separate numerical gates"
+        ],
+        "missing_left": [],
+        "missing_right": [],
+        "passed": true,
+        "scope": "repeated1024 correctness admission not benchmark"
+      },
+      "raw_artifact_inventory": {
+        "candidate": {
+          "0_0/Kdown_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "cd3608c7d42788ae037403efa762f2f23643a48fd732dde6a1a351d5b7d8902d"
+          },
+          "0_0/Kup_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "3baa25d2d3f9466a1d9b61f837ffd1bc1ef90d5356fba799912fdfc082b2e71f"
+          },
+          "0_0/Ldown_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "2db678f80832c190f234113697af45dece0d870bc3a960f5ca48f58d2af49541"
+          },
+          "0_0/Lup_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "ea0b1a7921b9950f6ca57f11603d33225d859a45278ba1467c48945dda44450e"
+          },
+          "0_0/Shadow_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "88e9cbf93d55bbe81a6722f0354d615001794ec01ea07abdd8bb44869102ad9f"
+          },
+          "0_0/TMRT_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "a1af81d21f7ca60f024cf36d788670347bce60bdc5d8fa3b798b049cd463f345"
+          },
+          "0_0/Ta_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "203160b0824a3af6f125a264999cb14538bb68e9f8b9f12c65b0bfdf5d633b95"
+          },
+          "0_0/UTCI_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "0b180048dd139e24c69c9be10c5415183389a95f228c9d41d08373e544102704"
+          },
+          "0_0/WBGT_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "f8951ae5914f9f809585a88fd7591bad87fb2c32ffbd0fd3de8a863b611d99e4"
+          },
+          "0_0/Wind_0_0.tif": {
+            "bytes": 100899822,
+            "sha256": "a2581e7b45c706b563c804ead5af5c8d2fea575ec2365c50c3d9cab1e78b1098"
+          },
+          "processed_inputs/SVF/SkyViewFactor_0_0.tif": {
+            "bytes": 4197736,
+            "sha256": "86fc86e6abd534a4addaa294a09cdde87f8c48efff5a2fd6770c48656642a67e"
+          },
+          "processed_inputs/SVF/shadowmats_0_0.npz": {
+            "bytes": 34062162,
+            "sha256": "1ff8ebd7bb4f72970d912b4d73a7e7f773cac187934b562997f796ee91acff2e"
+          },
+          "processed_inputs/SVF/svfs_0_0.zip": {
+            "bytes": 2563764,
+            "sha256": "106e2f068b815ea1f5cd7277e21b08588f6c339a7eea59750a8963d9a108d9a2"
+          }
+        },
+        "upstream": {
+          "0_0/Kdown_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "193d19343052a3e4421b6b71ee573014ff4db91c3fedbc7e4031c7cd7d1a3c85"
+          },
+          "0_0/Kup_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "49213733c748da58f9f5e162a6fd87406e95a1640025b205b81a9fec04d6cf60"
+          },
+          "0_0/Ldown_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "fa049e91ca4cc3ad06b9faabd44cd97b4330d03269aa9e3f86f19bbd740013f1"
+          },
+          "0_0/Lup_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "695f7d66db15a882a4e0336fa6b384ee2bdfd3596ae73c6b262dbb5fc2ace20b"
+          },
+          "0_0/Shadow_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "ed23601ce9113c3551fa4a9d5ceb3e179ad0cffdce3f85d2008ed648fec8729b"
+          },
+          "0_0/TMRT_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "31205df71591b621e27bed8288372e913d52674f9aa901eccf7c11be21beaaee"
+          },
+          "0_0/Ta_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "4823107694d5a3cd1264696c0247c87a135ede2710959fa13fdf4dff92b70a1e"
+          },
+          "0_0/UTCI_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "b5f1d58d6a961cb38bfc96306924006d22ce580eded0dfd8ec3901d6c7527a6a"
+          },
+          "0_0/WBGT_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "9ff36315dfcdd9db54c16ca51aafd2514424e2543643b6092553838ebc173352"
+          },
+          "0_0/Wind_0_0.tif": {
+            "bytes": 100682150,
+            "sha256": "34090f0f68baa18a9868eb3e9e6e0f88d1d1f6ac526a4047638bf20178a08b5a"
+          },
+          "processed_inputs/SVF/SkyViewFactor_0_0.tif": {
+            "bytes": 4197736,
+            "sha256": "86fc86e6abd534a4addaa294a09cdde87f8c48efff5a2fd6770c48656642a67e"
+          },
+          "processed_inputs/SVF/shadowmats_0_0.npz": {
+            "bytes": 34062162,
+            "sha256": "1ff8ebd7bb4f72970d912b4d73a7e7f773cac187934b562997f796ee91acff2e"
+          },
+          "processed_inputs/SVF/svfs_0_0.zip": {
+            "bytes": 2563764,
+            "sha256": "a79d6f1bf6ab83117975b1e6691a4eeae62f69d1bb2bbc75ce3d5839b67a9d9a"
+          }
+        }
+      },
+      "selected_run_evidence": {
+        "candidate": {
+          "environment.json": {
+            "bytes": 8595,
+            "sha256": "c9f7342f5f231adfd4947aca1cd4e10a124071fdda26776fe96ea929b3102887"
+          },
+          "measurement.json": {
+            "bytes": 700,
+            "sha256": "90cddab58c3e075124e9f6f7bb1ebbc5eb912cc11c912ab49e7e71ccee53f87d"
+          },
+          "outcome.json": {
+            "bytes": 111,
+            "sha256": "150362920fdef1f747ea8557300f6c66db30579984996a7d3e4eedfb6dda9d54"
+          },
+          "spec.json": {
+            "bytes": 1702,
+            "sha256": "ca3d8b22746a2dd8855c3a41609a4588b7ed46531c47af9df9edcadef201c4eb"
+          },
+          "stderr.log": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "bytes": 1075,
+            "sha256": "979868f37149002cde66a41b540654e45d7ffaa3d9d98010998a62e14ef1a67e"
+          }
+        },
+        "upstream": {
+          "environment.json": {
+            "bytes": 5362,
+            "sha256": "f6854b04a50249ed6900bb08c8b1cdef28600d02d8d0742c0cb57dc2515f26fa"
+          },
+          "measurement.json": {
+            "bytes": 713,
+            "sha256": "c44970a77774cb963855a93906b66c222fa08b1218e8e41a649c9cb032d34be2"
+          },
+          "outcome.json": {
+            "bytes": 111,
+            "sha256": "7f8b2d9d9b7c70e1ed33f556f6dda42f40308fefcec2e3894b24ccf0a2d6c0af"
+          },
+          "spec.json": {
+            "bytes": 1709,
+            "sha256": "2d7d05ddda6842664a1e7360f6b449e42ecc54fd64967a11dc7b70ad2fd52538"
+          },
+          "stderr.log": {
+            "bytes": 530,
+            "sha256": "5b02a7237a8ae0506aec46da6046ae537ce390897859c1a38d87fdde427bee3b"
+          },
+          "stdout.log": {
+            "bytes": 1467,
+            "sha256": "70799fe85211dbae494898d7bd5d08db46f9ace317522e522beabbd69ddb0b60"
+          }
+        }
+      },
+      "upstream_measurement": {
+        "command": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+          "--child",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream/spec.json"
+        ],
+        "elapsed_seconds_including_imports_jit_io": 1023.0379913616925,
+        "exit_code": 0,
+        "measurement_class": "correctness admission diagnostic; not benchmark timing",
+        "memory_limit_aborted": false,
+        "memory_limit_bytes": 12884901888,
+        "peak_process_tree_rss_bytes": 9184600064,
+        "sample_interval_seconds": 0.02
+      },
+      "upstream_run": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream"
+    },
+    "small": {
+      "candidate_measurement": {
+        "command": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/env/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+          "--child",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/candidate/spec.json"
+        ],
+        "elapsed_seconds_including_imports_jit_io": 9.240435678511858,
+        "exit_code": 0,
+        "measurement_class": "correctness admission diagnostic; not benchmark timing",
+        "memory_limit_aborted": false,
+        "memory_limit_bytes": 12884901888,
+        "peak_process_tree_rss_bytes": 519376896,
+        "sample_interval_seconds": 0.02
+      },
+      "candidate_run": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/candidate",
+      "geometry_comparison": {
+        "records": [
+          {
+            "artifact": "shadowmats_0_0.npz",
+            "bitwise_equal": true,
+            "field": "shadowmat",
+            "shape": [
+              32,
+              35,
+              153
+            ]
+          },
+          {
+            "artifact": "shadowmats_0_0.npz",
+            "bitwise_equal": true,
+            "field": "vegshadowmat",
+            "shape": [
+              32,
+              35,
+              153
+            ]
+          },
+          {
+            "artifact": "shadowmats_0_0.npz",
+            "bitwise_equal": true,
+            "field": "vbshmat",
+            "shape": [
+              32,
+              35,
+              153
+            ]
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svf.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfE.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfS.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfW.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfN.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfEveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfSveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfWveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfNveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfEaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfSaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfWaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          },
+          {
+            "artifact": "svfs_0_0.zip",
+            "field": "svfNaveg.tif",
+            "frozen_max_abs": 1e-06,
+            "max_abs": 0.0
+          }
+        ],
+        "status": "passed"
+      },
+      "output_comparison": {
+        "artifacts": [
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 4.57763671875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  13,
+                  28
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 3.4332275390625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  17,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  17,
+                  27
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  17
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  3,
+                  15
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.00018310546875,
+                "passed": true,
+                "worst_coordinate": [
+                  4,
+                  7
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  19
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  8
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  4,
+                  8
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  18
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  4,
+                  25
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Kdown_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.814697265625e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 1.1444091796875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  10,
+                  18
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 7.62939453125e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  15
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  33
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  24
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  10
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  11,
+                  25
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  11
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  14
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 1.52587890625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  4,
+                  9
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 7.62939453125e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 7.62939453125e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  19,
+                  11
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 1.9073486328125e-06,
+                "passed": true,
+                "worst_coordinate": [
+                  24,
+                  11
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Kup_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.000213623046875,
+                "passed": true,
+                "worst_coordinate": [
+                  18,
+                  23
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  5
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.00042724609375,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  17
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 9.1552734375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  9,
+                  6
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.000152587890625,
+                "passed": true,
+                "worst_coordinate": [
+                  11,
+                  14
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  14,
+                  22
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.00042724609375,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  17
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.000457763671875,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  17
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.000396728515625,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  1
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.000396728515625,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  24
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  26
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  11,
+                  17
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  15
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  6
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  6
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  7,
+                  6
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Ldown_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  9,
+                  18
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  2
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  16,
+                  4
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  31,
+                  22
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  3
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  21
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0001220703125,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  18
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  14
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  17
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  29
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Lup_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Shadow_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  2
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  10
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  16
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  10
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  20
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  13
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  18
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  5
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/TMRT_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Ta_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  13
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 3.0517578125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  10,
+                  16
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 3.814697265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  1,
+                  2
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 4.1961669921875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  17
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 6.103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  4,
+                  22
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 4.57763671875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  31,
+                  1
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 4.57763671875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  20,
+                  33
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 4.57763671875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  16
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 4.1961669921875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  25,
+                  30
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 6.866455078125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  25
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 3.814697265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  1
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 3.814697265625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  31,
+                  25
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 3.4332275390625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  21
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 2.09808349609375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  34
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 2.288818359375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  23,
+                  13
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  22
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  22
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 1.9073486328125e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  5,
+                  22
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/UTCI_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  6
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  14,
+                  9
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  25,
+                  13
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  9,
+                  1
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  2
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 6.4849853515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  12,
+                  8
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  20,
+                  24
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  14,
+                  13
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 5.340576171875e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  11,
+                  19
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  19,
+                  28
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 5.7220458984375e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  6,
+                  11
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  14
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  15
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  8,
+                  14
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  13,
+                  25
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  14
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  14
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 5.53131103515625e-05,
+                "passed": true,
+                "worst_coordinate": [
+                  2,
+                  14
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/WBGT_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 2,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 3,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 4,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 5,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 6,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 7,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 8,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 9,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 10,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 11,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 12,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 13,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 14,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 15,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 16,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 17,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 18,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 19,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 20,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 21,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 22,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 23,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              },
+              {
+                "band": 24,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "output_folder/0_0/Wind_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "bands": [
+              {
+                "band": 1,
+                "max_abs": 0.0,
+                "passed": true,
+                "worst_coordinate": [
+                  0,
+                  0
+                ]
+              }
+            ],
+            "passed": true,
+            "path": "processed_inputs/SVF/SkyViewFactor_0_0.tif",
+            "schema_equal": true
+          },
+          {
+            "path": "processed_inputs/SVF/shadowmats_0_0.npz",
+            "presence_matched": true,
+            "values_checked": false
+          },
+          {
+            "path": "processed_inputs/SVF/svfs_0_0.zip",
+            "presence_matched": true,
+            "values_checked": false
+          }
+        ],
+        "comparison_protocol_sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+        "evidence_class": "original_upstream_cpu_vs_candidate",
+        "limitations": [
+          "Non-TIFF legacy artifacts checked for presence only; intermediate chronological state requires separate numerical gates"
+        ],
+        "missing_left": [],
+        "missing_right": [],
+        "passed": true,
+        "scope": "correctness admission not benchmark"
+      },
+      "raw_artifact_inventory": {
+        "candidate": {
+          "0_0/Kdown_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "c0a062af1b2c840f8f8fb1fae4ab93185c790b67576b9e121216c923f87de557"
+          },
+          "0_0/Kup_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "e9da1c2d773d4da75427a90792425febc534a43f2098823cd8963ecf3cbe3942"
+          },
+          "0_0/Ldown_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "5c627c65c10824c5a00b5a0c7cf3aea6da27a48a13ba620577e7a3fe11f344df"
+          },
+          "0_0/Lup_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "876546806fde2ef0301677173394de572aa6fd2fcc9aad56fd3e5d9e6c96093e"
+          },
+          "0_0/Shadow_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "8dfb0fc208084889c6d8394775fab82cfc41e1a6e5cf05fdef5c7ba32c9cf392"
+          },
+          "0_0/TMRT_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "675112d75b28aadd513610a8135ae9fd9b0cf1b485580870cf5af5e8e00978e9"
+          },
+          "0_0/Ta_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "4d9ae6d30624055a152bad5a2b2bd98ab313cb23444f6e7d3d1484d76074f4f9"
+          },
+          "0_0/UTCI_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "3cdafdd060f81e01adb9672d4dbb1d36942e5fc9f793d8b78a6999853d832a56"
+          },
+          "0_0/WBGT_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "42ac5d500a84996c50c790c23d9d4b959a44919a9a214e62569c749ef9bfecaa"
+          },
+          "0_0/Wind_0_0.tif": {
+            "bytes": 141646,
+            "sha256": "3ef5e1e507103fa162f04400efc55145c7e6aa844daf05aed71165aa66d60f68"
+          },
+          "processed_inputs/SVF/SkyViewFactor_0_0.tif": {
+            "bytes": 4840,
+            "sha256": "0f10eba06cba04e7abb8030dc0f0b1b08921cae410ba171ed1df4d3e089290cc"
+          },
+          "processed_inputs/SVF/shadowmats_0_0.npz": {
+            "bytes": 18846,
+            "sha256": "7b35f89104798a045cffa2ecd880b7d86e70c262f2e83659b3928ad8b39b565b"
+          },
+          "processed_inputs/SVF/svfs_0_0.zip": {
+            "bytes": 17579,
+            "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+          }
+        },
+        "upstream": {
+          "0_0/Kdown_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "5ca360d27ffb61846e1292ec250f40da2e017de44cd3c6165d20cd59100a6227"
+          },
+          "0_0/Kup_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "23cb7290d3a1d0d5a492fb91ecd99ddcba59fe278688944bc1ea21c260c6928f"
+          },
+          "0_0/Ldown_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "6c20fe5ca3da34faa0633e47876ef851cbe6d025478e23b314b55ed09538b116"
+          },
+          "0_0/Lup_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "4ed53690354866608c69ef85cb652c182a69c5fa9896b70d133d48c27fffb5f9"
+          },
+          "0_0/Shadow_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "059a0930ecc0fe0ef48cc9ec654a9699c81a489fa20205da30d48b66761f0500"
+          },
+          "0_0/TMRT_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "145d4e9e492c36386976de78ac9c1a44c2425900b1aad263eab411b5a7a07c04"
+          },
+          "0_0/Ta_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "2c924231decc20b6985ac656ea2f4d1a080de38008dc9b06639f1db218ce8ba3"
+          },
+          "0_0/UTCI_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "fce1d7a2d5c5654fed7f90b409d6702bf4c23590e32079cb354a5d3d648aec2f"
+          },
+          "0_0/WBGT_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "181a6210c356b4eaac084c2dcd90a64b2f9cbbbc36549edb9a5ed8952016469b"
+          },
+          "0_0/Wind_0_0.tif": {
+            "bytes": 110182,
+            "sha256": "53b612b1fad20109bd04c10e4f9603c72824f37a66fcabe321a57130884ed1a2"
+          },
+          "processed_inputs/SVF/SkyViewFactor_0_0.tif": {
+            "bytes": 4840,
+            "sha256": "0f10eba06cba04e7abb8030dc0f0b1b08921cae410ba171ed1df4d3e089290cc"
+          },
+          "processed_inputs/SVF/shadowmats_0_0.npz": {
+            "bytes": 18846,
+            "sha256": "7b35f89104798a045cffa2ecd880b7d86e70c262f2e83659b3928ad8b39b565b"
+          },
+          "processed_inputs/SVF/svfs_0_0.zip": {
+            "bytes": 17579,
+            "sha256": "104a00b985f1fc16df9ee4d575c964c68d4eed8a585d6b557d13678186d2f15a"
+          }
+        }
+      },
+      "selected_run_evidence": {
+        "candidate": {
+          "environment.json": {
+            "bytes": 10618,
+            "sha256": "b9cca25c4a6e830989ac6c2e20da570360d456c40b5dbe675e3d11d1a6dd5e6e"
+          },
+          "measurement.json": {
+            "bytes": 691,
+            "sha256": "35e26f3c00bcbcee6fd15f7f757ef2b5636d9f6d933ae6cb85760eb6212e5cad"
+          },
+          "outcome.json": {
+            "bytes": 110,
+            "sha256": "65c8fd3fc0b812163340bd4f9da2d0259d0497dc63cd835d596252dd453fc4a6"
+          },
+          "spec.json": {
+            "bytes": 3689,
+            "sha256": "01832275e9df5d37173f3dcb40bd2a4a35fb326e83a59554d1c6cefb5db2a8d0"
+          },
+          "stderr.log": {
+            "bytes": 0,
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          "stdout.log": {
+            "bytes": 1040,
+            "sha256": "58fd30f7cb882c2b6a258706db074a5bd67157dffe0b943a911c9a6dd079b639"
+          }
+        },
+        "upstream": {
+          "environment.json": {
+            "bytes": 7399,
+            "sha256": "77b98cf894c0c28b8fce9edc259012c97640c8acf5372d8d889c2352fa5e2753"
+          },
+          "measurement.json": {
+            "bytes": 713,
+            "sha256": "26ba610bb3038de6f166656cf0ba928c39820c58b419f498d62d0ed2cc0a6d47"
+          },
+          "outcome.json": {
+            "bytes": 111,
+            "sha256": "2200962826b1d67c0ddf0a9ed92f30cf90f202429f1683c310db502d26138d79"
+          },
+          "spec.json": {
+            "bytes": 3710,
+            "sha256": "c25143daa42b028b0ad772f0dc7d7630d26030f71b75fca22991cb3ccd05b636"
+          },
+          "stderr.log": {
+            "bytes": 337,
+            "sha256": "6d2d32d5e162952aa045b3acb7ff3f75087ca865fe6f331ed59056fb284472fc"
+          },
+          "stdout.log": {
+            "bytes": 1465,
+            "sha256": "f51a1c41e9193a91f0b2a47ca55051e2cf245172761975ac6d8dcf83fecaa12b"
+          }
+        }
+      },
+      "upstream_measurement": {
+        "command": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+          "--child",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream_retry2/spec.json"
+        ],
+        "elapsed_seconds_including_imports_jit_io": 4.7839829456061125,
+        "exit_code": 0,
+        "measurement_class": "correctness admission diagnostic; not benchmark timing",
+        "memory_limit_aborted": false,
+        "memory_limit_bytes": 12884901888,
+        "peak_process_tree_rss_bytes": 8898863104,
+        "sample_interval_seconds": 0.02
+      },
+      "upstream_run": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream_retry2"
+    }
+  },
+  "comparison_protocol_sha256": "71a15d4b19cc7a58880e5da44f51d1c0b9289ce8067ba8900430c0181c8a61cd",
+  "cpu_configuration": {
+    "candidate_threads_per_worker": 1,
+    "candidate_workers": 1,
+    "cuda_visible_devices": "empty",
+    "note": "20ms summed process-tree RSS is not unique physical memory and may double-count shared pages",
+    "requested_threads": 1
+  },
+  "created_utc": "2026-09-19T17:06:52.914512+00:00",
+  "environment_locks": {
+    "candidate_pip_freeze": {
+      "sha256": "eb278bc53f05c5eabc97039b27864349db5503588029db39de29fb16ad50fc55"
+    },
+    "repair": "numba==0.67.0 and llvmlite==0.49.0 installed only into owned upstream environment after retained missing-numba failure; own PROJ_LIB/PROJ_DATA then used",
+    "upstream_pip_freeze": {
+      "sha256": "f56b6dfae3a92260818c343c24115435ee5079b98360c150df652b41dfad108a"
+    }
+  },
+  "host": "analytica",
+  "interpretation": "Correctness admission only. Elapsed times are instrumented diagnostics and cannot support speedup or performance claims. No tolerances, physics, fixture, source, or frozen tool changed.",
+  "memory_limit_bytes": 12884901888,
+  "process_tree_evidence": {
+    "repeated1024_live_snapshot": "2026-09-19T16:39:17Z\n    PID    PPID NLWP   RSS    VSZ STAT COMMAND         COMMAND\n 932053  929448    1 23896  33928 Ss   python          /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py --backend upstream --python /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python --source /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/upstream/SOLWEIG-GPU --fixture /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/fixtures/synthetic_repeated/repeated_block_1024 --kwargs /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/fixtures/synthetic_repeated/repeated_block_1024/kwargs.json --run /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream\n 932057  932053    2 2604112 3506416 Rsl python        /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py --child /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream/spec.json\n 932099  929448    1  2880   7744 Ss   bash            bash -c R=/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3; A=\"$R/admission\"; mkdir -p \"$A/diagnostics\"; date -u +%FT%TZ > \"$A/diagnostics/repeated1024_live_process_tree.txt\"; ps -u ssynn3 -o pid,ppid,nlwp,rss,vsz,stat,comm,args --sort=pid | grep -E \"admission_runner|python|PID\" >> \"$A/diagnostics/repeated1024_live_process_tree.txt\" || true; cat \"$A/diagnostics/repeated1024_live_process_tree.txt\"\n 932103  932099    1  1728   7088 S    grep            grep -E admission_runner|python|PID\n2767337       1    1  1728   8428 Ss   screen          SCREEN -dmS s24viewer bash -c export PYTHONPATH=/media/cura/ssynn3/ulg/velolane:/usr/lib/python3/dist-packages PYTHONNOUSERSITE=1 TMPDIR=/dev/shm; exec /home/ssynn3/ulg-venv/bin/python scripts/viz/av2_join_viewer.py --data-root /dev/shm/s24view --aerial-root /media/cura/ssynn3/ulg/data/aerial_crops_v4 --cities austin,detroit,miami,paloalto,pittsburgh,washington --av2-maps /media/cura/ssynn3/ulg/data/av2_maps_all --pred-dir /media/cura/ssynn3/ulg/data/runs/s24_1/pred_v3_loso --host 0.0.0.0 --port 8801 > /dev/shm/s24viewer.log 2>&1\n2767339 2767337    1 46652 1805712 Ss+ python          /home/ssynn3/ulg-venv/bin/python scripts/viz/av2_join_viewer.py --data-root /dev/shm/s24view --aerial-root /media/cura/ssynn3/ulg/data/aerial_crops_v4 --cities austin,detroit,miami,paloalto,pittsburgh,washington --av2-maps /media/cura/ssynn3/ulg/data/av2_maps_all --pred-dir /media/cura/ssynn3/ulg/data/runs/s24_1/pred_v3_loso --host 0.0.0.0 --port 8801\n2769336       1    1  1728   8428 Ss   screen          SCREEN -dmS s24viewer2 bash -c export PYTHONPATH=/media/cura/ssynn3/ulg/velolane:/usr/lib/python3/dist-packages PYTHONNOUSERSITE=1 TMPDIR=/dev/shm; exec /home/ssynn3/ulg-venv/bin/python scripts/viz/av2_join_viewer.py --data-root /dev/shm/s24view --aerial-root /media/cura/ssynn3/ulg/data/aerial_crops_v4 --cities pittsburgh --av2-maps /media/cura/ssynn3/ulg/data/av2_maps_all --pred-dir /media/cura/ssynn3/ulg/data/pred_sidecars/v4_stage2 --host 0.0.0.0 --port 8802 > /dev/shm/s24viewer2.log 2>&1\n2769338 2769336    1 45464 957164 Ss+  python          /home/ssynn3/ulg-venv/bin/python scripts/viz/av2_join_viewer.py --data-root /dev/shm/s24view --aerial-root /media/cura/ssynn3/ulg/data/aerial_crops_v4 --cities pittsburgh --av2-maps /media/cura/ssynn3/ulg/data/av2_maps_all --pred-dir /media/cura/ssynn3/ulg/data/pred_sidecars/v4_stage2 --host 0.0.0.0 --port 8802\n2026-09-19T16:42:40Z\n    PID    PPID NLWP   RSS    VSZ STAT     ELAPSED COMMAND         COMMAND\n 932053  929448    1 24472  34952 Ss         03:59 python          /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py --backend upstream --python /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python --source /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/upstream/SOLWEIG-GPU --fixture /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/fixtures/synthetic_repeated/repeated_block_1024 --kwargs /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/fixtures/synthetic_repeated/repeated_block_1024/kwargs.json --run /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream\n 932057  932053    2 3543376 4474448 Rsl     03:59 python          /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py --child /home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream/spec.json\n 932118  929448    1  2880   7744 Ss         00:00 bash            bash -c R=/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3; A=\"$R/admission\"; date -u +%FT%TZ >> \"$A/diagnostics/repeated1024_live_process_tree.txt\"; ps -u ssynn3 -o pid,ppid,nlwp,rss,vsz,stat,etime,comm,args --sort=pid | awk \"NR==1 || /932053|932057/\" | tee -a \"$A/diagnostics/repeated1024_live_process_tree.txt\"; tail -5 \"$A/runs/repeated1024/upstream/stderr.log\"\n 932121  932118    1  3456   9724 S          00:00 awk             awk NR==1 || /932053|932057/\n",
+    "small_limitation": "No per-PID snapshot was captured during small execution. Only the monitor summed RSS samples and the recorded requested/actual Torch thread settings are available; no cause for the 8.9 GiB sum is inferred."
+  },
+  "retained_small_failures": {
+    "upstream": {
+      "measurement": {
+        "command": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+          "--child",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream/spec.json"
+        ],
+        "elapsed_seconds_including_imports_jit_io": 2.5570303639397025,
+        "exit_code": 1,
+        "measurement_class": "correctness admission diagnostic; not benchmark timing",
+        "memory_limit_aborted": false,
+        "memory_limit_bytes": 12884901888,
+        "peak_process_tree_rss_bytes": 7516143616,
+        "sample_interval_seconds": 0.02
+      },
+      "outcome": {
+        "status": "failed",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py\", line 94, in child\n    returned = call(**spec[\"kwargs\"])\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/solweig_gpu.py\", line 670, in thermal_comfort\n    run_utci_tiles(\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/solweig_gpu.py\", line 422, in run_utci_tiles\n    from .utci_process import compute_utci, map_files_by_key, map_windcoeff_files_by_key\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/utci_process.py\", line 36, in <module>\n    from .calculate_wbgt import isobaric_wet_bulb_temperature_from_rh, black_globe_temperature\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/calculate_wbgt.py\", line 11, in <module>\n    from numba import vectorize\nModuleNotFoundError: No module named 'numba'\n"
+      },
+      "selected_evidence": {
+        "environment.json": {
+          "bytes": 7336,
+          "sha256": "5696fd9d6d0267eaf95ab1248eee5f8a143867515535681b8c8c15b8a4db52d2"
+        },
+        "measurement.json": {
+          "bytes": 706,
+          "sha256": "1d9599ad52ed0c77f180b75e0e337765c37bd2483795f066bbea697d659526b5"
+        },
+        "outcome.json": {
+          "bytes": 1324,
+          "sha256": "e45dfdf5369e58ecbaa1b8e0a98810f7d5d593e127e67ea100c4061e75d0cd6b"
+        },
+        "spec.json": {
+          "bytes": 3696,
+          "sha256": "7541c41e364df6d0808fa2aa8de31af43bfdb25ce83fccd289084a0a86823975"
+        },
+        "stderr.log": {
+          "bytes": 9041,
+          "sha256": "c6b75034993dc81d191cdce9d4f3d3351b8cb30580124c887b6a8cbd54018b43"
+        },
+        "stdout.log": {
+          "bytes": 1663,
+          "sha256": "00d313c7a5dc117dfdd54f46714b446a0577d9501cbc76f4eb5433d2c44596da"
+        }
+      }
+    },
+    "upstream_retry1": {
+      "measurement": {
+        "command": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+          "--child",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream_retry1/spec.json"
+        ],
+        "elapsed_seconds_including_imports_jit_io": 6.642737148329616,
+        "exit_code": 1,
+        "measurement_class": "correctness admission diagnostic; not benchmark timing",
+        "memory_limit_aborted": false,
+        "memory_limit_bytes": 12884901888,
+        "peak_process_tree_rss_bytes": 9122037760,
+        "sample_interval_seconds": 0.02
+      },
+      "outcome": {
+        "status": "failed",
+        "traceback": "Traceback (most recent call last):\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py\", line 94, in child\n    returned = call(**spec[\"kwargs\"])\n               ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/solweig_gpu.py\", line 670, in thermal_comfort\n    run_utci_tiles(\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/solweig_gpu.py\", line 474, in run_utci_tiles\n    compute_utci(\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/solweig_gpu/utci_process.py\", line 749, in compute_utci\n    out_band.FlushCache()\n  File \"/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/lib/python3.12/site-packages/osgeo/gdal.py\", line 9863, in FlushCache\n    return _gdal.Band_FlushCache(self, *args)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nRuntimeError: PROJ: proj_create_from_name: /usr/share/proj/proj.db contains DATABASE.LAYOUT.VERSION.MINOR = 3 whereas a number >= 7 is expected. It comes from another PROJ installation.\n"
+      },
+      "selected_evidence": {
+        "environment.json": {
+          "bytes": 7399,
+          "sha256": "51c2a89f62c68389a7f01355faeb02d590dcf61fdb07eba45e78ef8a1ddadb3a"
+        },
+        "measurement.json": {
+          "bytes": 712,
+          "sha256": "2d2efca61ae2a875b4485202c705869753a06f40420f748d70cbef645c0b7ba6"
+        },
+        "outcome.json": {
+          "bytes": 1379,
+          "sha256": "5f0d4946b5c6ba5a3725448b3bb08b1f413b2d9d1556975186e31bc2ec05e509"
+        },
+        "spec.json": {
+          "bytes": 3710,
+          "sha256": "86cfc1f8c6e4c29c4621aa9b926206cce6cc1412fdd3dd4f2cc74ab07a386aa7"
+        },
+        "stderr.log": {
+          "bytes": 11016,
+          "sha256": "1b38b6e04de2a2ad9b87b43b514148e3373b9e5225fe78625ad2ce1be440bce9"
+        },
+        "stdout.log": {
+          "bytes": 2038,
+          "sha256": "516e42437bc25955ed062b9083534f1960848bc2d3c6c8b65c8a0247d751a84e"
+        }
+      }
+    }
+  },
+  "retention": "Raw output trees retained remotely pending local quiet-window end and verified download; no remote admission artifacts cleaned yet.",
+  "schema_version": 1,
+  "source_commit": "0d7fe742abeeddd890dd58fc76ed7f78bd47faec",
+  "source_integrity": {
+    "candidate_environment_source_hashes": {
+      "solweig_light.egg-info/PKG-INFO": "54e5b9b51fe1b3ceaaa9b0903a18dc00d0dd3442d908c8648688bd2573e31ca8",
+      "solweig_light.egg-info/SOURCES.txt": "ba918c15b590c234d78d3327fb2d5cd7c4e186db0785c91ee98615f89cb81cde",
+      "solweig_light.egg-info/dependency_links.txt": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "solweig_light.egg-info/entry_points.txt": "48c66a89d9a6c906ed892c816b27b31eebdf12ab7e7ff5bda549d488113cfcbc",
+      "solweig_light.egg-info/requires.txt": "0ca25289ac30f9717b22e1ebad9ed1f821bb7dd655e0b6c9c2a567a6f68083c8",
+      "solweig_light.egg-info/top_level.txt": "1d4081f2f0ba73c39b1296337c12d931cadfaa8d06cc1138e85f8d5c70b2833e",
+      "solweig_light/__init__.py": "d7cd5105e93b22300e9469e6a57994153ab246d6eee5773e60a0e69a2914445e",
+      "solweig_light/api.py": "fcf800976b278cc5cfff6d7bf827082a9d7b762184c078d582d0612733094165",
+      "solweig_light/cache/__init__.py": "cf116329c2f1ad24a94541d66437975968516c5c301e92f03476495fda2b5a86",
+      "solweig_light/cache/geometry.py": "d8f3f9be2de1cd836b6a5c39f2eb754969ef6f569355c16ba0314b35ca10713f",
+      "solweig_light/cache/legacy.py": "3324d0aec11f6827ea4581bd31f606aede000b6f0cc181f6013020dcad8a5bfc",
+      "solweig_light/cli.py": "618d293d750594702a797b29b2200ea0593c8bdb9ab950d19a10813e8b94dc7b",
+      "solweig_light/comfort/__init__.py": "c0432cfdafbf5ffbd6ac3ae4bece3094d44f33894a73e5dc2fdeea6127ed12cd",
+      "solweig_light/comfort/_utci_scalar.py": "9877fbfc02ad1d1d3b013b07ddb0a736ec1322b672ce88558fde5238487997cb",
+      "solweig_light/comfort/utci.py": "999c14439d3f57f6cd195790df8ae25715fe4849587a340fe81701c2401caf4a",
+      "solweig_light/comfort/utci_coefficients.json": "73cf9b9887287256ff9abdb4ce18e7309b803fcb54bf3d9da16d313b5abc8e77",
+      "solweig_light/comfort/wbgt.py": "a9c18c7b82aa07287d8f45295bd7f2ecd750eccedc342702effe96f503e9697c",
+      "solweig_light/data/landcoverclasses_2016a.txt": "4f6f3c8acdb4719dba35a5401e3b89f19e569b0d4fef513dc87f43f9de4adaa7",
+      "solweig_light/forcing/__init__.py": "f5e20c91a41523f556f375daa11fc395048176abd58c800ae545c7ba1c63abb5",
+      "solweig_light/forcing/local.py": "e7a1150a512982460e80d44127b558d58f18a5b582354dfff286d1b61800d250",
+      "solweig_light/geometry/__init__.py": "e2656ddc437f75d7fa6ed5e268c68259830536f99bc68c997926b1c236df1b09",
+      "solweig_light/geometry/service.py": "05eb0e72902d1c386b6d00448947295a45e07e9fb76f334a0729371d5f69e604",
+      "solweig_light/geometry/shadows.py": "8eabe699ba421787a43dd86be5cba0fc54e9ae49e471877f8a35e79b287988fb",
+      "solweig_light/geometry/sky_compiled.py": "f6a6c5435f1014885e7f8b92543fffdf502fc1a80695dd26ec8358b93a7ebef8",
+      "solweig_light/geometry/svf.py": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+      "solweig_light/geometry/visibility.py": "d3b318dff95e71384d43a9b2162eb2173d21e43eff328b4e391c86df67d030e5",
+      "solweig_light/geometry/visibility_compiled.py": "f58959263175330162c5e9085be393d87ccb6320bead6d19d0a9d1445a03967a",
+      "solweig_light/geometry/visibility_native.py": "60117fc340562ed781e07b0cee916ead7734b2655a36adea66d5c73b43f30140",
+      "solweig_light/geometry/walls.py": "10e71d699c4c82b3b858ede1c8741546aa03fd6cb18cfe24561e56d398afe810",
+      "solweig_light/geometry/walls_compiled.py": "6916edf7533d03ff8b175acec39e2beb9131a33245b141ec482e6c9165da293c",
+      "solweig_light/identities.py": "7542ca5ebd30ca2554105c5ff9f29d5882afc4a422dc99a6cc19e3f5c7089aca",
+      "solweig_light/inputs/__init__.py": "19d25528162ceac8d17b43322ea09f78f5102db5d1c470914939fa17e5838877",
+      "solweig_light/inputs/construction.py": "ac0665ab53c4bca70b4dec5945078694074b9f23845af0ca5aaa24c3d7961122",
+      "solweig_light/io/__init__.py": "e27643c3c7ff2f4891f00c518d83c8661bf5ebe2415552f4da0444b6e444a523",
+      "solweig_light/io/rasters.py": "5597923ec4e8c53631f192f0b0b671939f82eaa65254049fdadf14d631e3069c",
+      "solweig_light/models.py": "9315e28bc0662c1b516e02e32398813cb0369c365f8c612e7c4373e2b665856e",
+      "solweig_light/persistence.py": "355ccf215f9dd4ec30e39ab4eef887d8e819dbeb28f600faf3872c21ba4e2242",
+      "solweig_light/pipeline.py": "6aec4978f7f9f8ee011ee44df3447ea69f146b52b06f228585abb2e7a1fabf93",
+      "solweig_light/preprocessor.py": "a3a42c0b76f5db64be20c233f20032fb417f0fa5fe4c66556c7e5d631c6b3de9",
+      "solweig_light/radiation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "solweig_light/radiation/engine.py": "071c3785e69ac8d6b4f1597038a9bd3ae5d748b58d4274be065a7b0ab164eef1",
+      "solweig_light/radiation/ground_view.py": "7fd7bc4f1596aeeb4ba6f1762944d46795df5d8dade4cb81369c3652fdb82d64",
+      "solweig_light/radiation/materials.py": "a610010588d0270b571efc0ca7ad9d59c224bae0b607807979490235c4234dc0",
+      "solweig_light/radiation/patch_radiation.py": "632d478c29efceed3f6646ac764ac20b562feb75ac71f19783a78d249d948233",
+      "solweig_light/radiation/solar.py": "61494e436a0f27c8d940032b1ed660422696917694e41bd011e0dc27187a3cd6",
+      "solweig_light/radiation/wall_shadows.py": "d8e08a434d3c61a0d7be9d045c0e6bc2f0c175d812505c53dc8d360ee882ea6c",
+      "solweig_light/runtime.py": "5ebed04703259b434be655fe84ad204d6a89bf3be4572a4cb2e58d9b417bd991",
+      "solweig_light/runtime_worker.py": "da3292d6e407220a087a49f88e7082410479d58198a165962afbc688934fd169",
+      "solweig_light/wind.py": "e2cb77dd45b681e792533920034c6dc7f6614665551398d1624dca5e166d49b2",
+      "solweig_light/wind_resources.py": "759806bc7d4a770cfc16bf0abb8593ff02885172dbd92c1a3d34bbee668c8554"
+    },
+    "upstream_git_status": ""
+  },
+  "status": "correctness_admission_passed_not_benchmark",
+  "svf_initializer_execution": {
+    "candidate": {
+      "backend": "candidate",
+      "counts_dtype": "int64",
+      "declared_counts": [
+        31,
+        30,
+        28,
+        24,
+        19,
+        13,
+        7,
+        1
+      ],
+      "declared_total": 153,
+      "effective_steps": [
+        11.612902641296387,
+        12.000000953674316,
+        12.85714340209961,
+        15.0,
+        18.947368621826172,
+        27.69230842590332,
+        51.42857360839844,
+        360.0
+      ],
+      "full_azimuth_array": [
+        0.0,
+        11.612902641296387,
+        23.225805282592773,
+        34.838706970214844,
+        46.45161056518555,
+        58.06451416015625,
+        69.67741394042969,
+        81.29032135009766,
+        92.9032211303711,
+        104.51612091064453,
+        116.1290283203125,
+        127.74192810058594,
+        139.35482788085938,
+        150.9677276611328,
+        162.5806427001953,
+        174.19354248046875,
+        185.8064422607422,
+        197.41934204101562,
+        209.03224182128906,
+        220.64515686035156,
+        232.258056640625,
+        243.87095642089844,
+        255.48385620117188,
+        267.0967712402344,
+        278.70965576171875,
+        290.32257080078125,
+        301.9354553222656,
+        313.5483703613281,
+        325.1612854003906,
+        336.774169921875,
+        348.3870849609375,
+        4.0,
+        16.0,
+        28.000001907348633,
+        40.000003814697266,
+        52.000003814697266,
+        64.0,
+        76.00000762939453,
+        88.00000762939453,
+        100.00000762939453,
+        112.00000762939453,
+        124.00000762939453,
+        136.00001525878906,
+        148.00001525878906,
+        160.00001525878906,
+        172.00001525878906,
+        184.00001525878906,
+        196.00001525878906,
+        208.00001525878906,
+        220.00001525878906,
+        232.00001525878906,
+        244.00001525878906,
+        256.0,
+        268.0000305175781,
+        280.0000305175781,
+        292.0000305175781,
+        304.0000305175781,
+        316.0000305175781,
+        328.0000305175781,
+        340.0000305175781,
+        2.0,
+        14.85714340209961,
+        27.71428680419922,
+        40.57143020629883,
+        53.42857360839844,
+        66.28572082519531,
+        79.14286041259766,
+        92.0,
+        104.85714721679688,
+        117.71429443359375,
+        130.57144165039062,
+        143.42857360839844,
+        156.2857208251953,
+        169.1428680419922,
+        182.0,
+        194.85714721679688,
+        207.71429443359375,
+        220.57144165039062,
+        233.4285888671875,
+        246.2857208251953,
+        259.14288330078125,
+        272.0,
+        284.8571472167969,
+        297.71429443359375,
+        310.5714416503906,
+        323.4285888671875,
+        336.2857360839844,
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0,
+        110.0,
+        125.0,
+        140.0,
+        155.0,
+        170.0,
+        185.0,
+        200.0,
+        215.0,
+        230.0,
+        245.0,
+        260.0,
+        275.0,
+        290.0,
+        305.0,
+        320.0,
+        335.0,
+        350.0,
+        8.0,
+        26.947368621826172,
+        45.894737243652344,
+        64.84210205078125,
+        83.78947448730469,
+        102.73684692382812,
+        121.68421173095703,
+        140.63157653808594,
+        159.57894897460938,
+        178.5263214111328,
+        197.47369384765625,
+        216.42105102539062,
+        235.36842346191406,
+        254.3157958984375,
+        273.2631530761719,
+        292.2105407714844,
+        311.15789794921875,
+        330.1052551269531,
+        349.0526428222656,
+        0.0,
+        27.69230842590332,
+        55.38461685180664,
+        83.0769271850586,
+        110.76923370361328,
+        138.4615478515625,
+        166.1538543701172,
+        193.84616088867188,
+        221.53846740722656,
+        249.23077392578125,
+        276.923095703125,
+        304.6153869628906,
+        10.0,
+        61.42857360839844,
+        112.85714721679688,
+        164.2857208251953,
+        215.71429443359375,
+        267.14288330078125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initialized_total": 149,
+      "numpy_version": "2.4.6",
+      "option": 2,
+      "schema": "svf-initializer-execution-v1",
+      "scope": "initializer arithmetic only; no shadows or SVF evaluated",
+      "source_file": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/source/src/solweig_light/geometry/svf.py",
+      "source_sha256": "54c1d1a29e3abdc640c14aa935aacfe098fac1fc7b4260a4be11ae74c5cc8576",
+      "starts": [
+        0,
+        4,
+        2,
+        5,
+        8,
+        0,
+        10,
+        0
+      ],
+      "starts_dtype": "int64",
+      "steps_dtype": "float32",
+      "written_counts": [
+        31,
+        29,
+        27,
+        24,
+        19,
+        12,
+        6,
+        1
+      ]
+    },
+    "upstream": {
+      "backend": "upstream",
+      "counts_dtype": "torch.int64",
+      "declared_counts": [
+        31,
+        30,
+        28,
+        24,
+        19,
+        13,
+        7,
+        1
+      ],
+      "declared_total": 153,
+      "default_dtype": "torch.float32",
+      "effective_step_dtype": "torch.float32",
+      "effective_steps": [
+        11.612902641296387,
+        12.000000953674316,
+        12.85714340209961,
+        15.0,
+        18.947368621826172,
+        27.69230842590332,
+        51.42857360839844,
+        360.0
+      ],
+      "full_azimuth_array": [
+        0.0,
+        11.612902641296387,
+        23.225805282592773,
+        34.838706970214844,
+        46.45161056518555,
+        58.06451416015625,
+        69.67741394042969,
+        81.29032135009766,
+        92.9032211303711,
+        104.51612091064453,
+        116.1290283203125,
+        127.74192810058594,
+        139.35482788085938,
+        150.9677276611328,
+        162.5806427001953,
+        174.19354248046875,
+        185.8064422607422,
+        197.41934204101562,
+        209.03224182128906,
+        220.64515686035156,
+        232.258056640625,
+        243.87095642089844,
+        255.48385620117188,
+        267.0967712402344,
+        278.70965576171875,
+        290.32257080078125,
+        301.9354553222656,
+        313.5483703613281,
+        325.1612854003906,
+        336.774169921875,
+        348.3870849609375,
+        4.0,
+        16.0,
+        28.000001907348633,
+        40.000003814697266,
+        52.000003814697266,
+        64.0,
+        76.00000762939453,
+        88.00000762939453,
+        100.00000762939453,
+        112.00000762939453,
+        124.00000762939453,
+        136.00001525878906,
+        148.00001525878906,
+        160.00001525878906,
+        172.00001525878906,
+        184.00001525878906,
+        196.00001525878906,
+        208.00001525878906,
+        220.00001525878906,
+        232.00001525878906,
+        244.00001525878906,
+        256.0,
+        268.0000305175781,
+        280.0000305175781,
+        292.0000305175781,
+        304.0000305175781,
+        316.0000305175781,
+        328.0000305175781,
+        340.0000305175781,
+        2.0,
+        14.85714340209961,
+        27.71428680419922,
+        40.57143020629883,
+        53.42857360839844,
+        66.28572082519531,
+        79.14286041259766,
+        92.0,
+        104.85714721679688,
+        117.71429443359375,
+        130.57144165039062,
+        143.42857360839844,
+        156.2857208251953,
+        169.1428680419922,
+        182.0,
+        194.85714721679688,
+        207.71429443359375,
+        220.57144165039062,
+        233.4285888671875,
+        246.2857208251953,
+        259.14288330078125,
+        272.0,
+        284.8571472167969,
+        297.71429443359375,
+        310.5714416503906,
+        323.4285888671875,
+        336.2857360839844,
+        5.0,
+        20.0,
+        35.0,
+        50.0,
+        65.0,
+        80.0,
+        95.0,
+        110.0,
+        125.0,
+        140.0,
+        155.0,
+        170.0,
+        185.0,
+        200.0,
+        215.0,
+        230.0,
+        245.0,
+        260.0,
+        275.0,
+        290.0,
+        305.0,
+        320.0,
+        335.0,
+        350.0,
+        8.0,
+        26.947368621826172,
+        45.894737243652344,
+        64.84210205078125,
+        83.78947448730469,
+        102.73684692382812,
+        121.68421173095703,
+        140.63157653808594,
+        159.57894897460938,
+        178.5263214111328,
+        197.47369384765625,
+        216.42105102539062,
+        235.36842346191406,
+        254.3157958984375,
+        273.2631530761719,
+        292.2105407714844,
+        311.15789794921875,
+        330.1052551269531,
+        349.0526428222656,
+        0.0,
+        27.69230842590332,
+        55.38461685180664,
+        83.0769271850586,
+        110.76923370361328,
+        138.4615478515625,
+        166.1538543701172,
+        193.84616088867188,
+        221.53846740722656,
+        249.23077392578125,
+        276.923095703125,
+        304.6153869628906,
+        10.0,
+        61.42857360839844,
+        112.85714721679688,
+        164.2857208251953,
+        215.71429443359375,
+        267.14288330078125,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "initialized_total": 149,
+      "option": 2,
+      "original_step_dtype": "torch.float32",
+      "schema": "svf-initializer-execution-v1",
+      "scope": "initializer arithmetic only; no shadows or SVF evaluated",
+      "source_file": "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/upstream/SOLWEIG-GPU/solweig_gpu/shadow.py",
+      "source_sha256": "4e94d839f89cfa1a83dfe9fb681b6b36ab05b31bd09681a8904054ce2b50cc58",
+      "starts": [
+        0,
+        4,
+        2,
+        5,
+        8,
+        0,
+        10,
+        0
+      ],
+      "starts_dtype": "torch.int64",
+      "torch_version": "2.14.0+cpu",
+      "written_counts": [
+        31,
+        29,
+        27,
+        24,
+        19,
+        12,
+        6,
+        1
+      ]
+    }
+  }
+}

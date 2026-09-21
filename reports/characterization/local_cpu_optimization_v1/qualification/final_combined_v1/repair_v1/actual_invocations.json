@@ -1,0 +1,71 @@
+{
+  "invocations": [
+    {
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/pytest",
+        "-q",
+        "-p",
+        "tests.helpers.installed_wheel_guard",
+        "-p",
+        "target_guard",
+        "tests/unit/test_p7_serial_variant_harness.py",
+        "--junitxml=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/installed/junit.xml"
+      ],
+      "environment": {
+        "MKL_NUM_THREADS": "10",
+        "NUMBA_CACHE_DIR": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/installed/numba_cache",
+        "NUMBA_NUM_THREADS": "10",
+        "NUMEXPR_NUM_THREADS": "10",
+        "OMP_NUM_THREADS": "10",
+        "OPENBLAS_NUM_THREADS": "10",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONPATH": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages:/Users/alansynn/Workspace/solweig-light:/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/installed_tests",
+        "SOLWEIG_INSTALLED_TARGET": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages",
+        "TMPDIR": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/installed/tmp"
+      },
+      "junit_path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/installed/junit.xml",
+      "junit_sha256": "8694b878f55319e1c5b2c3520fc64ed88b117a32ec08baf07b256c2004aa4147",
+      "name": "installed_wheel_full_focused_file",
+      "result": "18 passed",
+      "working_directory": "/Users/alansynn/Workspace/solweig-light"
+    },
+    {
+      "command": [
+        "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/pytest",
+        "-q",
+        "-p",
+        "baseline_guard",
+        "tests/unit/test_p7_serial_variant_harness.py",
+        "-k",
+        "test_child_failure_is_retained_as_job_failure",
+        "--junitxml=/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/baseline/junit.xml"
+      ],
+      "environment": {
+        "MKL_NUM_THREADS": "10",
+        "NUMBA_CACHE_DIR": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/baseline/numba_cache",
+        "NUMBA_NUM_THREADS": "10",
+        "NUMEXPR_NUM_THREADS": "10",
+        "OMP_NUM_THREADS": "10",
+        "OPENBLAS_NUM_THREADS": "10",
+        "PYTHONDONTWRITEBYTECODE": "1",
+        "PYTHONNOUSERSITE": "1",
+        "PYTHONPATH": "/Users/alansynn/Workspace/solweig-light/src:/Users/alansynn/Workspace/solweig-light:/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1",
+        "SOLWEIG_BASELINE_SOURCE_TARGET": "/Users/alansynn/Workspace/solweig-light/src",
+        "TMPDIR": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/baseline/tmp"
+      },
+      "junit_path": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/baseline/junit.xml",
+      "junit_sha256": "98e005cc0c240701b0dd37d86367f54f428e836b4e429d90331b2254377bc09b",
+      "name": "baseline_source_repaired_case",
+      "result": "1 passed, 17 deselected",
+      "working_directory": "/Users/alansynn/Workspace/solweig-light"
+    }
+  ],
+  "no_rerun_for_metadata": true,
+  "note": "Values are transcribed from the executed shell commands; no new tests were run for this metadata record.",
+  "schema": "local-cpu-optimization-final-combined-repair-invocations.v1",
+  "source_record_preserved": {
+    "path": "reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/repair_v1/repair_record.json",
+    "sha256": "18ac947f8b39f72e867baf2b465b8e39563d0ba13018b797b56b464e60a7d808"
+  }
+}

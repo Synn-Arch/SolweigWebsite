@@ -1,0 +1,1870 @@
+[
+  {
+    "elapsed": 0.008993786759674549,
+    "summed_rss": 7667712,
+    "summed_uss": 2904064,
+    "summed_pss": 4701184,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 7667712,
+        "vms": 16146432,
+        "uss": 2904064,
+        "pss": 4701184
+      }
+    ]
+  },
+  {
+    "elapsed": 0.04162811208516359,
+    "summed_rss": 17104896,
+    "summed_uss": 9850880,
+    "summed_pss": 12541952,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 17104896,
+        "vms": 24608768,
+        "uss": 9850880,
+        "pss": 12541952
+      }
+    ]
+  },
+  {
+    "elapsed": 0.07128498610109091,
+    "summed_rss": 62521344,
+    "summed_uss": 56520704,
+    "summed_pss": 59458560,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 62521344,
+        "vms": 595402752,
+        "uss": 56520704,
+        "pss": 59458560
+      }
+    ]
+  },
+  {
+    "elapsed": 0.10804463177919388,
+    "summed_rss": 163381248,
+    "summed_uss": 154763264,
+    "summed_pss": 158177280,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 163381248,
+        "vms": 816148480,
+        "uss": 154763264,
+        "pss": 158177280
+      }
+    ]
+  },
+  {
+    "elapsed": 0.14118027035146952,
+    "summed_rss": 219414528,
+    "summed_uss": 210313216,
+    "summed_pss": 213729280,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 219414528,
+        "vms": 2063380480,
+        "uss": 210313216,
+        "pss": 213729280
+      }
+    ]
+  },
+  {
+    "elapsed": 0.1726798564195633,
+    "summed_rss": 237699072,
+    "summed_uss": 228790272,
+    "summed_pss": 232206336,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 237699072,
+        "vms": 2063646720,
+        "uss": 228790272,
+        "pss": 232206336
+      }
+    ]
+  },
+  {
+    "elapsed": 0.2044325079768896,
+    "summed_rss": 240058368,
+    "summed_uss": 231346176,
+    "summed_pss": 234762240,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 240058368,
+        "vms": 2063646720,
+        "uss": 231346176,
+        "pss": 234762240
+      }
+    ]
+  },
+  {
+    "elapsed": 0.23701613675802946,
+    "summed_rss": 271908864,
+    "summed_uss": 262688768,
+    "summed_pss": 266104832,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 271908864,
+        "vms": 4170821632,
+        "uss": 262688768,
+        "pss": 266104832
+      }
+    ]
+  },
+  {
+    "elapsed": 0.2699835291132331,
+    "summed_rss": 287834112,
+    "summed_uss": 278761472,
+    "summed_pss": 282177536,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 287834112,
+        "vms": 4171083776,
+        "uss": 278761472,
+        "pss": 282177536
+      }
+    ]
+  },
+  {
+    "elapsed": 0.30314887408167124,
+    "summed_rss": 321454080,
+    "summed_uss": 313151488,
+    "summed_pss": 316567552,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 321454080,
+        "vms": 4188590080,
+        "uss": 313151488,
+        "pss": 316567552
+      }
+    ]
+  },
+  {
+    "elapsed": 0.33694250602275133,
+    "summed_rss": 343277568,
+    "summed_uss": 334716928,
+    "summed_pss": 338132992,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 343277568,
+        "vms": 4205469696,
+        "uss": 334716928,
+        "pss": 338132992
+      }
+    ]
+  },
+  {
+    "elapsed": 0.3701677434146404,
+    "summed_rss": 353894400,
+    "summed_uss": 345239552,
+    "summed_pss": 348655616,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 353894400,
+        "vms": 4212686848,
+        "uss": 345239552,
+        "pss": 348655616
+      }
+    ]
+  },
+  {
+    "elapsed": 0.403323489241302,
+    "summed_rss": 373358592,
+    "summed_uss": 365322240,
+    "summed_pss": 368738304,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 373358592,
+        "vms": 4221878272,
+        "uss": 365322240,
+        "pss": 368738304
+      }
+    ]
+  },
+  {
+    "elapsed": 0.436674389988184,
+    "summed_rss": 404619264,
+    "summed_uss": 395763712,
+    "summed_pss": 399212544,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 404619264,
+        "vms": 4235718656,
+        "uss": 395763712,
+        "pss": 399212544
+      }
+    ]
+  },
+  {
+    "elapsed": 0.4826686279848218,
+    "summed_rss": 413466624,
+    "summed_uss": 405643264,
+    "summed_pss": 409092096,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 413466624,
+        "vms": 14548676608,
+        "uss": 405643264,
+        "pss": 409092096
+      }
+    ]
+  },
+  {
+    "elapsed": 0.540518632158637,
+    "summed_rss": 422903808,
+    "summed_uss": 416739328,
+    "summed_pss": 420202496,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 422903808,
+        "vms": 14561083392,
+        "uss": 416739328,
+        "pss": 420202496
+      }
+    ]
+  },
+  {
+    "elapsed": 0.5841464223340154,
+    "summed_rss": 434700288,
+    "summed_uss": 427814912,
+    "summed_pss": 431278080,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 434700288,
+        "vms": 14567792640,
+        "uss": 427814912,
+        "pss": 431278080
+      }
+    ]
+  },
+  {
+    "elapsed": 0.6160927666351199,
+    "summed_rss": 447676416,
+    "summed_uss": 441036800,
+    "summed_pss": 444499968,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 447676416,
+        "vms": 14591258624,
+        "uss": 441036800,
+        "pss": 444499968
+      }
+    ]
+  },
+  {
+    "elapsed": 0.6473930319771171,
+    "summed_rss": 456523776,
+    "summed_uss": 449867776,
+    "summed_pss": 453330944,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 456523776,
+        "vms": 14598549504,
+        "uss": 449867776,
+        "pss": 453330944
+      }
+    ]
+  },
+  {
+    "elapsed": 0.6790722571313381,
+    "summed_rss": 461242368,
+    "summed_uss": 453976064,
+    "summed_pss": 457439232,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 461242368,
+        "vms": 14602121216,
+        "uss": 453976064,
+        "pss": 457439232
+      }
+    ]
+  },
+  {
+    "elapsed": 0.7100140424445271,
+    "summed_rss": 463601664,
+    "summed_uss": 457203712,
+    "summed_pss": 460666880,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 463601664,
+        "vms": 14605209600,
+        "uss": 457203712,
+        "pss": 460666880
+      }
+    ]
+  },
+  {
+    "elapsed": 0.7415849911049008,
+    "summed_rss": 471269376,
+    "summed_uss": 464314368,
+    "summed_pss": 467777536,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 471269376,
+        "vms": 14612463616,
+        "uss": 464314368,
+        "pss": 467777536
+      }
+    ]
+  },
+  {
+    "elapsed": 0.7730499980971217,
+    "summed_rss": 478347264,
+    "summed_uss": 472023040,
+    "summed_pss": 475486208,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 478347264,
+        "vms": 14621974528,
+        "uss": 472023040,
+        "pss": 475486208
+      }
+    ]
+  },
+  {
+    "elapsed": 0.8041521795094013,
+    "summed_rss": 485261312,
+    "summed_uss": 478318592,
+    "summed_pss": 481781760,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 485261312,
+        "vms": 14628077568,
+        "uss": 478318592,
+        "pss": 481781760
+      }
+    ]
+  },
+  {
+    "elapsed": 0.8341700257733464,
+    "summed_rss": 490569728,
+    "summed_uss": 483868672,
+    "summed_pss": 487331840,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 490569728,
+        "vms": 14633299968,
+        "uss": 483868672,
+        "pss": 487331840
+      }
+    ]
+  },
+  {
+    "elapsed": 0.8637637887150049,
+    "summed_rss": 492339200,
+    "summed_uss": 485842944,
+    "summed_pss": 489306112,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 492339200,
+        "vms": 14635876352,
+        "uss": 485842944,
+        "pss": 489306112
+      }
+    ]
+  },
+  {
+    "elapsed": 0.8945339070633054,
+    "summed_rss": 497057792,
+    "summed_uss": 490250240,
+    "summed_pss": 493713408,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 497057792,
+        "vms": 14640328704,
+        "uss": 490250240,
+        "pss": 493713408
+      }
+    ]
+  },
+  {
+    "elapsed": 0.9269375316798687,
+    "summed_rss": 500006912,
+    "summed_uss": 493236224,
+    "summed_pss": 496699392,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 500006912,
+        "vms": 14643388416,
+        "uss": 493236224,
+        "pss": 496699392
+      }
+    ]
+  },
+  {
+    "elapsed": 0.9588333377614617,
+    "summed_rss": 502956032,
+    "summed_uss": 495972352,
+    "summed_pss": 499435520,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 502956032,
+        "vms": 14645817344,
+        "uss": 495972352,
+        "pss": 499435520
+      }
+    ]
+  },
+  {
+    "elapsed": 0.9898746097460389,
+    "summed_rss": 505315328,
+    "summed_uss": 498716672,
+    "summed_pss": 502179840,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 505315328,
+        "vms": 14648410112,
+        "uss": 498716672,
+        "pss": 502179840
+      }
+    ]
+  },
+  {
+    "elapsed": 1.0207711840048432,
+    "summed_rss": 510623744,
+    "summed_uss": 503787520,
+    "summed_pss": 507250688,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 510623744,
+        "vms": 14653628416,
+        "uss": 503787520,
+        "pss": 507250688
+      }
+    ]
+  },
+  {
+    "elapsed": 1.0509633105248213,
+    "summed_rss": 514752512,
+    "summed_uss": 508125184,
+    "summed_pss": 511588352,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 72,
+        "rss": 514752512,
+        "vms": 14658134016,
+        "uss": 508125184,
+        "pss": 511588352
+      }
+    ]
+  },
+  {
+    "elapsed": 1.0819552512839437,
+    "summed_rss": 518881280,
+    "summed_uss": 512344064,
+    "summed_pss": 515807232,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 73,
+        "rss": 518881280,
+        "vms": 14669053952,
+        "uss": 512344064,
+        "pss": 515807232
+      }
+    ]
+  },
+  {
+    "elapsed": 1.11233383230865,
+    "summed_rss": 535986176,
+    "summed_uss": 529313792,
+    "summed_pss": 532776960,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 73,
+        "rss": 535986176,
+        "vms": 19441504256,
+        "uss": 529313792,
+        "pss": 532776960
+      }
+    ]
+  },
+  {
+    "elapsed": 1.1446481673046947,
+    "summed_rss": 537165824,
+    "summed_uss": 530698240,
+    "summed_pss": 534161408,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 74,
+        "rss": 537165824,
+        "vms": 19637035008,
+        "uss": 530698240,
+        "pss": 534161408
+      }
+    ]
+  },
+  {
+    "elapsed": 1.178567323833704,
+    "summed_rss": 625639424,
+    "summed_uss": 619446272,
+    "summed_pss": 622909440,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 75,
+        "rss": 625639424,
+        "vms": 19653193728,
+        "uss": 619446272,
+        "pss": 622909440
+      }
+    ]
+  },
+  {
+    "elapsed": 1.2094237003475428,
+    "summed_rss": 672006144,
+    "summed_uss": 665792512,
+    "summed_pss": 669255680,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 75,
+        "rss": 672006144,
+        "vms": 19986554880,
+        "uss": 665792512,
+        "pss": 669255680
+      }
+    ]
+  },
+  {
+    "elapsed": 1.256501971744001,
+    "summed_rss": 1523273728,
+    "summed_uss": 259358720,
+    "summed_pss": 492457984,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 4,
+        "rss": 680263680,
+        "vms": 19696390144,
+        "uss": 255483904,
+        "pss": 358508544
+      },
+      {
+        "pid": 933522,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421502976,
+        "vms": 19694292992,
+        "uss": 1994752,
+        "pss": 72005632
+      },
+      {
+        "pid": 933523,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421507072,
+        "vms": 19694292992,
+        "uss": 1880064,
+        "pss": 61943808
+      }
+    ]
+  },
+  {
+    "elapsed": 1.3318208530545235,
+    "summed_rss": 5739003904,
+    "summed_uss": 277372928,
+    "summed_pss": 521523200,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 4,
+        "rss": 680263680,
+        "vms": 19696390144,
+        "uss": 254918656,
+        "pss": 283273216
+      },
+      {
+        "pid": 933522,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421502976,
+        "vms": 19694292992,
+        "uss": 1994752,
+        "pss": 24169472
+      },
+      {
+        "pid": 933523,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421507072,
+        "vms": 19694292992,
+        "uss": 1880064,
+        "pss": 22955008
+      },
+      {
+        "pid": 933524,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 422100992,
+        "vms": 19694292992,
+        "uss": 1859584,
+        "pss": 21874688
+      },
+      {
+        "pid": 933525,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421511168,
+        "vms": 19694292992,
+        "uss": 1847296,
+        "pss": 20951040
+      },
+      {
+        "pid": 933526,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421511168,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 20952064
+      },
+      {
+        "pid": 933527,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 20125696
+      },
+      {
+        "pid": 933528,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 19373056
+      },
+      {
+        "pid": 933529,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1867776,
+        "pss": 18676736
+      },
+      {
+        "pid": 933530,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 18026496
+      },
+      {
+        "pid": 933531,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 17420288
+      },
+      {
+        "pid": 933532,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 16864256
+      },
+      {
+        "pid": 933533,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 16861184
+      }
+    ]
+  },
+  {
+    "elapsed": 1.4569919370114803,
+    "summed_rss": 14169600000,
+    "summed_uss": 317960192,
+    "summed_pss": 740881408,
+    "processes": [
+      {
+        "pid": 933443,
+        "ppid": 933442,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 6,
+        "rss": 680263680,
+        "vms": 19830640640,
+        "uss": 257388544,
+        "pss": 272395264
+      },
+      {
+        "pid": 933522,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421502976,
+        "vms": 19694292992,
+        "uss": 2146304,
+        "pss": 15030272
+      },
+      {
+        "pid": 933523,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421507072,
+        "vms": 19694292992,
+        "uss": 1908736,
+        "pss": 14713856
+      },
+      {
+        "pid": 933524,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 422100992,
+        "vms": 19694292992,
+        "uss": 1859584,
+        "pss": 14600192
+      },
+      {
+        "pid": 933525,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421511168,
+        "vms": 19694292992,
+        "uss": 1847296,
+        "pss": 14585856
+      },
+      {
+        "pid": 933526,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421511168,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 14592000
+      },
+      {
+        "pid": 933527,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 14592000
+      },
+      {
+        "pid": 933528,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14599168
+      },
+      {
+        "pid": 933529,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1867776,
+        "pss": 14602240
+      },
+      {
+        "pid": 933530,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14598144
+      },
+      {
+        "pid": 933531,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 14590976
+      },
+      {
+        "pid": 933532,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 14590976
+      },
+      {
+        "pid": 933533,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1855488,
+        "pss": 14589952
+      },
+      {
+        "pid": 933534,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421515264,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14598144
+      },
+      {
+        "pid": 933535,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421519360,
+        "vms": 19694292992,
+        "uss": 1867776,
+        "pss": 14602240
+      },
+      {
+        "pid": 933536,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421519360,
+        "vms": 19694292992,
+        "uss": 1859584,
+        "pss": 14597120
+      },
+      {
+        "pid": 933537,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421519360,
+        "vms": 19694292992,
+        "uss": 1859584,
+        "pss": 14597120
+      },
+      {
+        "pid": 933538,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421523456,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14601216
+      },
+      {
+        "pid": 933539,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421523456,
+        "vms": 19694292992,
+        "uss": 1871872,
+        "pss": 14606336
+      },
+      {
+        "pid": 933540,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421523456,
+        "vms": 19694292992,
+        "uss": 1875968,
+        "pss": 14610432
+      },
+      {
+        "pid": 933541,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421527552,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14599168
+      },
+      {
+        "pid": 933542,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421527552,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14599168
+      },
+      {
+        "pid": 933543,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421527552,
+        "vms": 19694292992,
+        "uss": 1867776,
+        "pss": 14603264
+      },
+      {
+        "pid": 933544,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421527552,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14599168
+      },
+      {
+        "pid": 933545,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421535744,
+        "vms": 19694292992,
+        "uss": 1867776,
+        "pss": 14603264
+      },
+      {
+        "pid": 933546,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421535744,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14600192
+      },
+      {
+        "pid": 933547,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421535744,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14600192
+      },
+      {
+        "pid": 933548,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421535744,
+        "vms": 19694292992,
+        "uss": 1867776,
+        "pss": 14604288
+      },
+      {
+        "pid": 933549,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421539840,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14624768
+      },
+      {
+        "pid": 933550,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421539840,
+        "vms": 19694292992,
+        "uss": 1863680,
+        "pss": 14624768
+      },
+      {
+        "pid": 933551,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421539840,
+        "vms": 19694292992,
+        "uss": 2093056,
+        "pss": 14848000
+      },
+      {
+        "pid": 933552,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421539840,
+        "vms": 19694292992,
+        "uss": 2093056,
+        "pss": 14848000
+      },
+      {
+        "pid": 933553,
+        "ppid": 933443,
+        "name": "python",
+        "cmdline": [
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cuda-cu126/bin/python",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/cuda_import_phases.py",
+          "--mode",
+          "pool_probe",
+          "--phases",
+          "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/cuda_admission/import_diagnostics/pool_probe/phases.jsonl"
+        ],
+        "threads": 1,
+        "rss": 421539840,
+        "vms": 19694292992,
+        "uss": 2039808,
+        "pss": 14833664
+      }
+    ]
+  }
+]

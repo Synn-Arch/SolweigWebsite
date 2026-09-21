@@ -1,0 +1,8 @@
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream_retry2/scene/output_folder removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream_retry2/scene/processed_inputs/SVF removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/candidate/scene/output_folder removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/candidate/scene/processed_inputs/SVF removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream/scene/output_folder removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/upstream/scene/processed_inputs/SVF removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/candidate/scene/output_folder removed_verified
+/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/repeated1024/candidate/scene/processed_inputs/SVF removed_verified

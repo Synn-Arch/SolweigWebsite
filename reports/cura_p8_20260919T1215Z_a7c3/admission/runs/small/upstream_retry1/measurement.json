@@ -1,0 +1,15 @@
+{
+  "command": [
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/envs/upstream-cpu/bin/python",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/reports/cura_p8_20260919T1215Z_a7c3/admission_runner.py",
+    "--child",
+    "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/runs/small/upstream_retry1/spec.json"
+  ],
+  "elapsed_seconds_including_imports_jit_io": 6.642737148329616,
+  "exit_code": 1,
+  "measurement_class": "correctness admission diagnostic; not benchmark timing",
+  "memory_limit_aborted": false,
+  "memory_limit_bytes": 12884901888,
+  "peak_process_tree_rss_bytes": 9122037760,
+  "sample_interval_seconds": 0.02
+}

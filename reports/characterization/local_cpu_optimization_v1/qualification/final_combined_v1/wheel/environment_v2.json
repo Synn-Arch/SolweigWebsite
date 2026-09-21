@@ -1,0 +1,15 @@
+{
+  "dependency_environment": "existing .venv-light; wheel installed --no-deps into owned target; not a clean minimal environment",
+  "executable": "/Users/alansynn/Workspace/solweig-light/.venv-light/bin/python",
+  "gdal": "3130300",
+  "machine": "arm64",
+  "numba": "0.67.0",
+  "numpy": "2.4.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python": "3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "schema": "local-cpu-optimization-final-combined-environment.v1",
+  "site_target": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/qualification/final_combined_v1/site-packages",
+  "source_inventory_sha256": "dc6e151cfcd6c8bd476921e850666d22f6dfcd2237eb8b0afa649736002af0c6",
+  "torch_loaded": false,
+  "wheel_sha256": "d0a7aa34c11cd535b9992965d9917ed062c3fd61e9c8fc82fe7ef89ced54b039"
+}

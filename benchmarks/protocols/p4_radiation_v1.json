@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "frozen_before_measurement",
+  "scope": "P4 component kernels only; no end-to-end simulation claim",
+  "reference": "Original small CPU chronological fixture, first daytime call with altitude above 30 degrees; captured function-entry arguments",
+  "families": [
+    "gvf_2018a",
+    "Kside_veg_v2022a",
+    "Lcyl_v2022a"
+  ],
+  "spatial_repeat": [
+    4,
+    4
+  ],
+  "fixture_policy": "Repeat all spatial input axes consistently, preserving patch axis and scalar forcing; synthetic component workload, not a changed logical simulation domain",
+  "patch_count": 153,
+  "upstream_threads": [
+    1,
+    4,
+    10
+  ],
+  "candidate_variants": [
+    "serial_1",
+    "parallel_1",
+    "parallel_4",
+    "parallel_10"
+  ],
+  "candidate_visibility": [
+    "dense",
+    "compact"
+  ],
+  "warm_repetitions": 3,
+  "first_call": "Fresh process and empty JIT cache; imports and fixture loading excluded; includes compilation and descriptor construction",
+  "mutable_inputs": "Fresh independent copies before every call; preparation outside timer; release previous outputs before next call",
+  "memory": "Process lifetime peak RSS including imports, fixtures, JIT and output export; not process-tree or stage-only memory",
+  "correctness": "Input hashes equal; compare every component with unchanged comparison_v1 field gates, masks exact; compare observable argument mutations",
+  "archive": "Raw calls, failures, dependency/thread environment, source/harness/protocol hashes and numeric outputs retained",
+  "platform": "Apple M1 Pro macOS ARM64; CUDA unavailable",
+  "interpretation": "Warm variation reflects repeated calls in one process; no cross-platform or universal speedup claim",
+  "candidate_block_pixels": 128
+}
