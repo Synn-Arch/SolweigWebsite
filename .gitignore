@@ -7,3 +7,8 @@ web/frontend/node_modules/
 web/frontend/dist/
 web/.env
 web/backend/.env
+build/
+solweig_scene_small/output_folder/
+solweig_scene_small/processed_inputs/
+solweig_scene_small/.solweig-light/
+solweig_scene_small/.solweig-light-locks/

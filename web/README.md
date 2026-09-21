@@ -1,4 +1,4 @@
-# SOLWEIG tree-scenario web app
+# Cool Choices — SOLWEIG tree-scenario web app
 
 Interactive map (Mapbox GL) over a 512×512 px, 2 m Austin scene. The baseline
 SOLWEIG-light result is shown as an hourly overlay; users drop trees on the
