@@ -7,6 +7,25 @@ from pathlib import Path
 _HERE = Path(__file__).resolve().parent
 _WEB = _HERE.parent.parent
 
+
+def _load_dotenv(*paths: Path) -> None:
+    """Read KEY=VALUE lines into os.environ without overriding real env vars."""
+    for path in paths:
+        if not path.is_file():
+            continue
+        for line in path.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key, value = key.strip(), value.strip().strip("'\"")
+            if key and key not in os.environ:
+                os.environ[key] = value
+
+
+# Local secrets/settings: web/.env (git-ignored). On Fly.io use `fly secrets set`.
+_load_dotenv(_WEB / ".env", _HERE.parent / ".env")
+
 # Static scene inputs (committed): Building_DSM/DEM/Trees/Landcover TIFFs + met file.
 SCENE_DIR = Path(os.environ.get("SOLWEIG_SCENE_DIR", _WEB / "scene")).resolve()
 # Writable working area: baseline outputs and per-job scenario folders.
