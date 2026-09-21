@@ -1,0 +1,36 @@
+# Fly.io app definition. Create the app once with `fly apps create <name>`
+# (or `fly launch --no-deploy`), then set secrets:
+#   fly secrets set MAPBOX_TOKEN=pk.xxx
+app = "solweig-scenarios"
+primary_region = "dfw"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  PORT = "8080"
+  SOLWEIG_THREADS = "4"
+  SOLWEIG_MEMORY_GB = "6"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
+  min_machines_running = 0
+
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 50
+    hard_limit = 100
+
+[[http_service.checks]]
+  interval = "30s"
+  timeout = "5s"
+  grace_period = "20s"
+  method = "GET"
+  path = "/healthz"
+
+[[vm]]
+  size = "performance-4x"
+  memory = "8gb"
