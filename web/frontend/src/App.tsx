@@ -151,7 +151,7 @@ export default function App() {
 
       <aside className="panel">
         <header>
-          <h1>SOLWEIG tree scenarios</h1>
+          <h1>Cool Choices</h1>
           <p className="muted">
             {scene.cols}×{scene.rows} px at {scene.pixel_size_m} m · {scene.date}
             {!scene.baseline_ready && ' · baseline not computed yet'}

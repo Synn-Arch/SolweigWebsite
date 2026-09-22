@@ -1,4 +1,4 @@
-# SOLWEIG tree-scenario web app
+# Cool Choices — SOLWEIG tree-scenario web app
 
 Interactive map (Mapbox GL) over a 512×512 px, 2 m Austin scene. The baseline
 SOLWEIG-light result is shown as an hourly overlay; users drop trees on the
@@ -32,8 +32,12 @@ pip install -r web/backend/requirements.txt
 pip install --no-deps .                 # solweig_light from this repo
 cd web/backend
 python -m app.precompute                # one-off baseline (~6 min)
-MAPBOX_TOKEN=pk.xxx uvicorn app.main:app --reload --port 8000
+uvicorn app.main:app --reload --port 8000
 ```
+
+Put your Mapbox token in `web/.env` (copy `web/.env.example`); the backend
+reads that file at start-up. Real environment variables take precedence,
+so `MAPBOX_TOKEN=pk.xxx uvicorn ...` still works too.
 
 Frontend (proxies `/api` and `/results` to :8000):
 
@@ -43,7 +47,7 @@ npm install
 npm run dev
 ```
 
-Environment variables: `MAPBOX_TOKEN` (required), `SOLWEIG_THREADS` (default 4,
+Environment variables (or `web/.env` entries): `MAPBOX_TOKEN` (required), `SOLWEIG_THREADS` (default 4,
 clamped to available CPUs), `SOLWEIG_MEMORY_GB` (6), `SOLWEIG_DATA_DIR`,
 `SOLWEIG_DATE` (2020-08-13), `SOLWEIG_MAX_KEPT_JOBS` (10).
 

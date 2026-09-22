@@ -11,7 +11,7 @@ from pydantic import BaseModel, Field
 from . import config, render, runner, scene
 from .jobs import JobManager
 
-app = FastAPI(title="SOLWEIG scenario service")
+app = FastAPI(title="Cool Choices API")
 geometry = scene.read_geometry()
 manager = JobManager(geometry)
 
