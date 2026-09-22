@@ -46,6 +46,7 @@ export interface ResultSummary {
 
 export interface JobStatus {
   id: string
+  trees?: { lon: number; lat: number; height: number; crown_radius: number }[]
   status: 'queued' | 'running' | 'done' | 'failed'
   phase: string
   elapsed_seconds: number

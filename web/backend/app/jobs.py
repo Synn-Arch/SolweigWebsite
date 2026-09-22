@@ -6,6 +6,7 @@ files; it survives uvicorn reloads and never runs the model itself.
 from __future__ import annotations
 
 import json
+import logging
 import os
 import shutil
 import subprocess
@@ -20,6 +21,7 @@ from . import config, scene
 from .worker import REQUEST_FILE, STATUS_FILE, read_status, write_status
 
 _BACKEND_DIR = Path(__file__).resolve().parent.parent
+log = logging.getLogger("uvicorn.error")
 
 
 def _process_alive(pid) -> bool:
@@ -77,7 +79,11 @@ class JobManager:
     def get(self, job_id: str) -> dict | None:
         if not job_id.isalnum():
             return None
-        return read_status(self._job_dir(job_id))
+        status = read_status(self._job_dir(job_id))
+        if status is None and self._job_dir(job_id).exists():
+            log.warning("job %s: directory exists but status.json is unreadable (%s)",
+                        job_id, sorted(p.name for p in self._job_dir(job_id).iterdir()))
+        return status
 
     def job_dir(self, job_id: str) -> Path:
         return self._job_dir(job_id)

@@ -23,23 +23,36 @@ STATUS_FILE = "status.json"
 REQUEST_FILE = "request.json"
 
 
+_WRITE_LOCK = threading.Lock()
+
+
 def read_status(job_dir: Path) -> dict | None:
-    try:
-        return json.loads((job_dir / STATUS_FILE).read_text())
-    except (OSError, ValueError):
-        return None
+    """Read status.json; tolerate a momentarily torn file by retrying briefly."""
+    path = job_dir / STATUS_FILE
+    for attempt in range(4):
+        try:
+            return json.loads(path.read_text())
+        except FileNotFoundError:
+            return None
+        except (OSError, ValueError):
+            time.sleep(0.05 * (attempt + 1))
+    return None
 
 
 def write_status(job_dir: Path, status: dict) -> None:
-    tmp = job_dir / (STATUS_FILE + ".tmp")
-    tmp.write_text(json.dumps(status))
-    tmp.replace(job_dir / STATUS_FILE)
+    """Atomic replace with a writer-unique temp name so concurrent writers never collide."""
+    tmp = job_dir / f"{STATUS_FILE}.{os.getpid()}.{threading.get_ident()}.tmp"
+    with _WRITE_LOCK:
+        tmp.write_text(json.dumps(status))
+        tmp.replace(job_dir / STATUS_FILE)
 
 
 def _update(job_dir: Path, record: dict, **fields) -> None:
-    record.update(fields)
-    record["updated"] = time.time()
-    write_status(job_dir, record)
+    with _WRITE_LOCK:
+        record.update(fields)
+        record["updated"] = time.time()
+        snapshot = dict(record)
+    write_status(job_dir, snapshot)
 
 
 def run_job(job_dir: Path) -> int:
