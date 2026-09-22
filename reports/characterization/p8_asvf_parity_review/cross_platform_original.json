@@ -1,7 +1,0 @@
-{
-  "scope": "OriginalTorch same source/version, same corpus, M1 CPU versus CuraCPU",
-  "inputs": 189220,
-  "finite_bit_differences": 10959,
-  "max_ulp": 120,
-  "nan_masks_equal": true
-}

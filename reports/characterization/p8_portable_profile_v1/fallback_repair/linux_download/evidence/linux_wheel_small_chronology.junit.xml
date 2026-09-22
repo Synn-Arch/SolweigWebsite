@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="8.465" timestamp="2026-09-20T00:09:57.250779-04:00" hostname="analytica"><testcase classname="tests.differential.test_pipeline_reference" name="test_chronological_tiff_pipeline[small-False]" time="7.446" /></testsuite></testsuites>

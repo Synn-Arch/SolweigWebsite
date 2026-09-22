@@ -1,6 +1,0 @@
-{
-  "kind": "origin_guard_import",
-  "reason": "Guard attempted visibility_compiled from radiation; actual module is solweig_light.geometry.visibility_compiled; pytest did not start.",
-  "retained": true,
-  "status": "failed"
-}

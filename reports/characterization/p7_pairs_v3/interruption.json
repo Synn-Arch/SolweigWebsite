@@ -1,8 +1,0 @@
-{
-  "status": "interrupted_incomplete_not_claim_eligible",
-  "reason": "Independent review found missing validation of geometry evidence links; retain trials and restart after instrumentation hardening. Workloads/repetitions/numerical gates unchanged.",
-  "benchmark_pid": 47444,
-  "terminated_child_process_groups": [
-    50969
-  ]
-}

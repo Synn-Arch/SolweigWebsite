@@ -1,5 +1,0 @@
-{
-  "actual_numba_threads": 1,
-  "requested": 1,
-  "scope": "launcher; tile subprocess environment is set by the frozen runtime scheduler"
-}

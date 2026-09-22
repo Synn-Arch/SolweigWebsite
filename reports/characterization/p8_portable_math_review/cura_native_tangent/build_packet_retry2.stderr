@@ -1,7 +1,0 @@
-   Target system: Linux-6.8.0-87-generic
-   Target processor: x86_64
-   Host system: Linux-6.8.0-87-generic
-   Host processor: x86_64
-   Detected C compiler: GNU @ /usr/bin/cc
-   CMake: 4.1.0
-   Make program: /usr/bin/gmake

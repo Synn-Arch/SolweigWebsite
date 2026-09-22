@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "/home/ssynn3/workspace/solweig-light-codex-p8-20260919T1215Z-a7c3/admission/diagnostics/portable_tan_20260920T0140Z/cmakeprefix/bin/cmake", line 5, in <module>
-    from cmake import cmake
-ModuleNotFoundError: No module named 'cmake'

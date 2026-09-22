@@ -1,8 +1,0 @@
-build_command=uv build --wheel --out-dir /tmp/solweig_p7_angular_integrated_v3/dist /tmp/solweig_p7_angular_integrated_v3
-install_command=/tmp/solweig_p7_angular_integrated_v3/venv/bin/python -m pip install --no-deps reports/characterization/p7_angular_moment_experiment/evidence/solweig_light-0.1.0.dev0-py3-none-any.whl
-test_command=PYTHONPATH=. /tmp/solweig_p7_angular_integrated_v3/venv/bin/python -m pytest -p reports.characterization.p7_angular_moment_experiment.snapshot_counter_plugin tests/differential/test_pipeline_reference.py -q --junitxml=reports/characterization/p7_angular_moment_experiment/evidence/wheel_pipeline.junit.xml
-wheel_sha256=490fcdc3e803dddea45e755db995b5b3f5d5e85fdea479eb4a342959cd1d9e6d
-wheel_bytes=209694
-origin=/private/tmp/solweig_p7_angular_integrated_v3/venv/lib/python3.11/site-packages/solweig_light/__init__.py
-torch_spec=None
-python=3.11.16 (main, Aug 12 2026, 23:03:19) [Clang 21.0.0 (clang-2100.1.1.101)]

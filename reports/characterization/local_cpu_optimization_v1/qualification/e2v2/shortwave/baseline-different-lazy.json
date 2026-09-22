@@ -1,1 +1,0 @@
-{"decode_calls": 9, "decode_diff_calls": 3, "leaf_decode_equivalents": 15, "mode": "different-lazy", "module": "/Users/alansynn/Workspace/solweig-light/reports/characterization/local_cpu_optimization_v1/candidates/baseline/src/solweig_light/radiation/patch_radiation.py", "output_sha256": "4818ab9cd29a62bc0736f4e9d828ec9fdfae6268be9f31992ea8874f0a82a4c8"}

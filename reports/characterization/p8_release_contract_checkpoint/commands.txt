@@ -1,6 +1,0 @@
-# Reused byte-exact base wheel; package source equality was verified for all 44 src/solweig_light files.
-.venv-light/bin/python -m build --wheel --no-isolation --outdir reports/characterization/p8_release_contract_checkpoint/wheels compat
-.venv-light/bin/python -m pip install --no-deps --target <task-temp>/lib/python3.11/site-packages reports/characterization/p8_ci_audit/solweig_light-0.1.0.dev0-py3-none-any.whl reports/characterization/p8_release_contract_checkpoint/wheels/solweig_light_compat-0.1.0.dev0-py3-none-any.whl
-PYTHONPATH=<task-temp>/lib/python3.11/site-packages PYTHONNOUSERSITE=1 .venv-light/bin/python -m pytest -p tests.helpers.installed_wheel_guard tests/integration/test_runtime_pipeline.py tests/unit/test_persistence.py -q --junitxml=reports/characterization/p8_release_contract_checkpoint/cache_restart.junit.xml
-.venv-light/bin/python -m pytest tests/unit/test_compatibility.py -q --junitxml=reports/characterization/p8_release_contract_checkpoint/compatibility.junit.xml
-PYTHONPATH=<task-temp>/lib/python3.11/site-packages PYTHONNOUSERSITE=1 .venv-light/bin/python <installed-origin-and-seven-workflow-import-probe>

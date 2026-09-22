@@ -1,3 +1,0 @@
-{"time": 1789838197.4080791, "phase": "start", "pid": 933196}
-{"time": 1789838198.459278, "phase": "torch_imported", "pid": 933196, "torch": "2.14.0+cu126", "compiled_cuda": "12.6"}
-{"time": 1789838198.9595506, "phase": "complete", "pid": 933196}

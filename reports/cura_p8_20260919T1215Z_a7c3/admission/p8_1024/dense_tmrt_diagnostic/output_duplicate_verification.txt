@@ -1,3 +1,0 @@
-verification_attempt_failed: NameError before any output hashes were checked
-remote diagnostic root removed_verified_absent
-original admission raw artifacts remain locally hash-verified; downloaded compact diagnostic probes were hash-verified before cleanup

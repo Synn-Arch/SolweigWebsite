@@ -1,9 +1,0 @@
-{
-  "bindings": {
-    "harness": "b7f52b0c897e16b0a4071af06c3fa549537e95cc201d94f57eafb04f00c0a80d",
-    "helpers": "d688ae60fbd82e13ecf58b2598f13ba3aa66201ddf56ed1857ffd9c7c12720d5"
-  },
-  "cells": 6,
-  "protocol_sha256": "9bbc68a97c06088e4039687f4b3dd143eebc2ee811fae432a048d7ce1c06ffee",
-  "status": "validated_execute_mode"
-}

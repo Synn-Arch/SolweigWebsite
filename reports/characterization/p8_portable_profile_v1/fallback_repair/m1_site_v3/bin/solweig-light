@@ -1,6 +1,0 @@
-#!/Users/alansynn/Workspace/solweig-light/reports/characterization/p8_portable_profile_v1/m1_admission/venv/bin/python
-import sys
-from solweig_light.cli import main
-if __name__ == '__main__':
-    sys.argv[0] = sys.argv[0].removesuffix('.exe')
-    sys.exit(main())

@@ -1,8 +1,0 @@
-{
-  "n": 411685,
-  "finite_bit_mismatches": 0,
-  "nan_mask_equal": true,
-  "examples": [],
-  "fma_intrinsic_in_llvm": true,
-  "production_source_changed": false
-}

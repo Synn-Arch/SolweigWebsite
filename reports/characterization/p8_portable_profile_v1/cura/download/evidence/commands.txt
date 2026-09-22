@@ -1,4 +1,0 @@
-PYTHONNOUSERSITE=1 PYTHONPATH=runtime/stubs:runtime/site:isolated_snapshot/src NUMBA_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -S tools/run_primitives.py
-PYTHONNOUSERSITE=1 PYTHONPATH=runtime/stubs:runtime/site:isolated_snapshot/src NUMBA_NUM_THREADS=1 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -S tools/run_stage_c_masks.py --paths both --output evidence/stage_c_linux_masks_minimal.json
-PYTHONNOUSERSITE=1 PYTHONPATH=runtime/stubs:runtime/site:isolated_snapshot/src NUMBA_NUM_THREADS=36 OMP_NUM_THREADS=36 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python3 -S tools/run_stage_c_matrix.py --root /home/ssynn3/workspace/solweig-light-portable-v1-20260920T022223Z-curaexec --output evidence/stage_c_linux_matrix.json
-All commands executed inside: ulimit -v 12582912; /usr/bin/time -v

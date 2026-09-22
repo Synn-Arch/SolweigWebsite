@@ -1,7 +1,0 @@
-{
-  "command": "python inline compare_scenes caller without sys.path.insert(0, tools)",
-  "kind": "comparison_caller_setup",
-  "reason": "Direct import of run_exact_cpu_pairs.py omitted tools from sys.path; no candidate numerical run affected; rerun will import through tools path.",
-  "retained": true,
-  "status": "failed"
-}

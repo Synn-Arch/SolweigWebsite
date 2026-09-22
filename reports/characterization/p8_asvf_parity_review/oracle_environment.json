@@ -1,9 +1,0 @@
-{
-  "platform": "macOS-26.6.2-arm64-arm-64bit",
-  "torch": "2.14.0",
-  "numpy": "2.4.6",
-  "n": 411685,
-  "scalar_vector_disagreement": 0,
-  "scalar_sample_n": 1040,
-  "fixture_sha256": "96749d763174cda8cc8333688454405480ba9498d2012163afb92d5a493c6de2"
-}

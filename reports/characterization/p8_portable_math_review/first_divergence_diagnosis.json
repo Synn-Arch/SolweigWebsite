@@ -1,9 +1,0 @@
-{
-  "oracle_hsvf_with_host_coeff_and_core_atan": {
-    "sun": 0,
-    "shade": 0
-  },
-  "tan_delta_bit_mismatches": 0,
-  "atan_bit_mismatches": 25,
-  "qualification": "Oracle intermediate substitution diagnostic, not candidate production implementation"
-}

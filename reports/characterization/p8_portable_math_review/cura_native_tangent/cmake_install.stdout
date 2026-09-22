@@ -1,6 +1,0 @@
-Collecting cmake==4.1.0
-  Downloading cmake-4.1.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.5 kB)
-Downloading cmake-4.1.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (29.7 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.7/29.7 MB 90.2 MB/s eta 0:00:00
-Installing collected packages: cmake
-Successfully installed cmake-4.1.0

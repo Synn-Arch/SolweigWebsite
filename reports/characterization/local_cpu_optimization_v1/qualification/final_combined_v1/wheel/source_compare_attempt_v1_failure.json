@@ -1,6 +1,0 @@
-{
-  "kind": "source_compare_caller",
-  "reason": "Initial verifier joined manifest paths to site-packages/solweig_light instead of site-packages; all installed files were present and matched when compared from the site-packages root. No test or numerical run affected.",
-  "retained": true,
-  "status": "failed"
-}
