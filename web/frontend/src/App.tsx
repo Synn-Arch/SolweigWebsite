@@ -4,6 +4,7 @@ import { api, overlayUrl } from './api'
 import type { JobStatus, Layer, ResultSummary, SceneInfo, Tree, Variable } from './types'
 
 const HOURS = Array.from({ length: 24 }, (_, i) => i)
+const LAST_JOB_KEY = 'coolchoices:lastJob'
 
 function fmt(v: number | undefined | null, digits = 1): string {
   return v == null || Number.isNaN(v) ? '–' : v.toFixed(digits)
@@ -48,24 +49,66 @@ export default function App() {
     return () => window.clearInterval(id)
   }, [playing])
 
-  // Poll a running job.
+  const attachResult = useCallback(async (status: JobStatus, jobTrees: Tree[]) => {
+    const summary = await api.result(status.id)
+    setScenario({ id: status.id, summary, trees: jobTrees })
+    setLayer('diff')
+  }, [])
+
+  // After a page reload, re-attach to the last job if it is still running or finished.
+  useEffect(() => {
+    if (!scene) return
+    let lastId: string | null = null
+    try {
+      lastId = window.localStorage.getItem(LAST_JOB_KEY)
+    } catch {
+      /* storage unavailable */
+    }
+    if (!lastId) return
+    api
+      .job(lastId)
+      .then(async (status) => {
+        const jobTrees = (status.trees ?? []).map((t) => ({ ...t, id: Math.random().toString(36).slice(2, 10) }))
+        if (status.status === 'done') {
+          setTrees((current) => (current.length ? current : jobTrees))
+          await attachResult(status, jobTrees)
+        } else if (status.status === 'queued' || status.status === 'running') {
+          setTrees(jobTrees)
+          setJob(status)
+        }
+      })
+      .catch(() => {
+        /* job pruned or server restarted; nothing to restore */
+      })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scene])
+
+  // Poll a running job. Transient errors (server reload, torn read) are retried
+  // a few times before giving up, so one bad response does not stop the poll.
   useEffect(() => {
     if (!job || job.status === 'done' || job.status === 'failed') return
+    let cancelled = false
+    let failures = 0
     const tick = async () => {
+      if (cancelled) return
       try {
         const status = await api.job(job.id)
+        if (cancelled) return
+        failures = 0
         setJob(status)
-        if (status.status === 'done') {
-          const summary = await api.result(status.id)
-          setScenario({ id: status.id, summary, trees })
-          setLayer('diff')
-        }
+        if (status.status === 'done') await attachResult(status, trees)
       } catch (e) {
-        setError((e as Error).message)
+        failures += 1
+        if (failures >= 5) {
+          setError(`Lost contact with the job (${(e as Error).message}). It may still be running; reload the page to re-attach.`)
+          return
+        }
+        pollTimer.current = window.setTimeout(tick, 3000)
       }
     }
     pollTimer.current = window.setTimeout(tick, 2000)
     return () => {
+      cancelled = true
       if (pollTimer.current) window.clearTimeout(pollTimer.current)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -90,6 +133,11 @@ export default function App() {
     setError(null)
     try {
       const status = await api.submit(trees)
+      try {
+        window.localStorage.setItem(LAST_JOB_KEY, status.id)
+      } catch {
+        /* storage unavailable */
+      }
       setJob(status)
     } catch (e) {
       setError((e as Error).message)
