@@ -79,33 +79,24 @@ def create_job(request: RunRequest):
     outside = [t for t in request.trees if not geometry.contains(t.lon, t.lat)]
     if outside:
         raise HTTPException(400, f"{len(outside)} tree(s) fall outside the scene extent")
-    job = manager.submit([t.model_dump() for t in request.trees])
-    return _job_response(job)
+    status = manager.submit([t.model_dump() for t in request.trees])
+    return JSONResponse(manager.to_response(status))
 
 
 @app.get("/api/jobs/{job_id}")
 def get_job(job_id: str):
-    job = manager.get(job_id)
-    if job is None:
+    status = manager.get(job_id)
+    if status is None:
         raise HTTPException(404, "unknown job")
-    return _job_response(job)
+    return JSONResponse(manager.to_response(status))
 
 
 @app.get("/api/jobs/{job_id}/result")
 def get_job_result(job_id: str):
-    job = manager.get(job_id)
-    if job is None or job.status != "done":
+    status = manager.get(job_id)
+    if status is None or status["status"] != "done":
         raise HTTPException(404, "result not available")
-    return json.loads((job.dir / "result" / "result.json").read_text())
-
-
-def _job_response(job):
-    expected = manager.expected_seconds
-    if expected is None and (config.BASELINE_DIR / "meta.json").exists():
-        expected = json.loads((config.BASELINE_DIR / "meta.json").read_text()).get("model_seconds")
-    payload = job.to_dict(expected)
-    payload["queue_position"] = manager.queue_position(job) if job.status == "queued" else 0
-    return JSONResponse(payload)
+    return json.loads((manager.job_dir(job_id) / "result" / "result.json").read_text())
 
 
 @app.get("/healthz")
@@ -122,10 +113,10 @@ app.mount("/results/baseline", StaticFiles(directory=config.BASELINE_DIR), name=
 
 @app.api_route("/results/jobs/{job_id}/{filename}", methods=["GET", "HEAD"])
 def job_file(job_id: str, filename: str):
-    job = manager.get(job_id)
-    if job is None or job.status != "done" or "/" in filename or not filename.endswith((".png", ".json")):
+    status = manager.get(job_id)
+    if status is None or status["status"] != "done" or "/" in filename or not filename.endswith((".png", ".json")):
         raise HTTPException(404)
-    path = job.dir / "result" / filename
+    path = manager.job_dir(job_id) / "result" / filename
     if not path.is_file():
         raise HTTPException(404)
     return FileResponse(path)
