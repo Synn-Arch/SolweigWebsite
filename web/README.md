@@ -18,7 +18,10 @@ Each scenario run copies the scene, paints the trees into `Trees.tif`
 runs the unchanged `thermal_comfort` workflow. Sky view factors and all 24
 timesteps are recomputed every run because the geometry cache is keyed on
 the whole raster, so one run takes a few minutes (about 6 min on 4 cores).
-Jobs are executed one at a time; the UI polls progress.
+Jobs are executed one at a time, each in its own worker process
+(`python -m app.worker <id>`), with progress written to `data/jobs/<id>/status.json`;
+the UI polls that state. The web server never runs the model itself, so it
+survives reloads and worker crashes.
 
 ## Local development
 
