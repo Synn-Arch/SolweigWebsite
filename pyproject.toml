@@ -30,7 +30,14 @@ solweig-light = "solweig_light.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-solweig_light = ["data/*.txt", "comfort/*.json", "radiation/SLEEF_LICENSE.txt"]
+solweig_light = ["data/*.txt", "comfort/*.json", "radiation/SLEEF_LICENSE.txt",
+                 "backends/native/*.ispc", "backends/native/*.sh",
+                 "backends/native/*.py"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests/differential", "tests/integration", "tests/unit"]
+markers = [
+    # Decoder family: run one test with the prepared route left declined
+    # (the conftest autouse fixture arms it for everything else).
+    "prepared_default_off: exercise the SOLWEIG_LIGHT_PREPARED_VIS default-off contract",
+]

@@ -13,11 +13,18 @@ web/
   data/       generated at runtime: baseline/ and jobs/<id>/ (git-ignored)
 ```
 
+The model is SOLWEIG-light, vendored in `src/solweig_light` from
+[Synn-Arch/SolweigLight2](https://github.com/Synn-Arch/SolweigLight2) at the
+commit recorded in `src/UPSTREAM`. To update it, copy that repository's
+`src/solweig_light` and `pyproject.toml` over the ones here, update
+`src/UPSTREAM`, and rerun `python -m app.precompute --force`.
+
 Each scenario run copies the scene, paints the trees into `Trees.tif`
 (canopy height = max(existing, tree height) inside the crown radius), and
 runs the unchanged `thermal_comfort` workflow. Sky view factors and all 24
 timesteps are recomputed every run because the geometry cache is keyed on
-the whole raster, so one run takes a few minutes (about 6 min on 4 cores).
+the whole raster, so one run takes a few minutes (about 3 min on 4 cores
+with SolweigLight2; about 4.5 min with the earlier SolweigLight).
 Jobs are executed one at a time, each in its own worker process
 (`python -m app.worker <id>`), with progress written to `data/jobs/<id>/status.json`;
 the UI polls that state. The web server never runs the model itself, so it
@@ -51,7 +58,7 @@ npm run dev
 ```
 
 Environment variables (or `web/.env` entries): `MAPBOX_TOKEN` (required), `SOLWEIG_THREADS` (default 4,
-clamped to available CPUs), `SOLWEIG_MEMORY_GB` (6), `SOLWEIG_DATA_DIR`,
+clamped to available CPUs), `SOLWEIG_MEMORY_GB` (unset = half of physical RAM; fly.toml sets 6), `SOLWEIG_DATA_DIR`,
 `SOLWEIG_DATE` (2020-08-13), `SOLWEIG_MAX_KEPT_JOBS` (10).
 
 ## API

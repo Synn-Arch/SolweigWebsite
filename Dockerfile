@@ -43,7 +43,9 @@ RUN uv pip install -r web/backend/requirements-core.txt \
 # The numerical package itself (source tree only; tests/docs are excluded).
 COPY pyproject.toml LICENSE README.md ./
 COPY src/ src/
-RUN uv pip install --no-deps . && python -c "import solweig_light; print(solweig_light.__version__)"
+# runtime_phases only exists in SolweigLight2, so a stale src/ tree fails here (both report 0.1.0.dev0).
+RUN uv pip install --no-deps . \
+    && python -c "import solweig_light, solweig_light.runtime_phases; print('solweig_light', solweig_light.__version__, '(SolweigLight2)')"
 
 COPY web/scene/ web/scene/
 COPY web/backend/ web/backend/

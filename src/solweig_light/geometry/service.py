@@ -15,8 +15,9 @@ import numpy as np
 
 from ..cache import GeometryStore, content_fingerprint, validate_legacy_geometry, SVF_FIELDS, VISIBILITY_FIELDS
 from ..cache.geometry import _lock, canonical_json, _manifest_digest, _read_json
-from ..identities import geometry_identity, InputGuard
+from ..identities import InputGuard
 from ..runtime import get_runtime_options, plan_admission
+from .recipe import numerical_geometry_recipe
 from .shadows import create_patches
 from .svf import svf_calculator_compact, save_svf_zip_npz_outputs
 from .visibility import import_visibility_npz, DEFAULT_WORKSPACE_BYTES
@@ -57,30 +58,6 @@ def _destination_locks(destinations):
     finally:
         for handle in reversed(handles):
             handle.close()
-
-
-def _producer(paths, patch_option, template):
-    from osgeo import gdal
-    a = template.GetRasterBand(1).ReadAsArray().astype(np.float32)
-    def read(path):
-        dataset = gdal.Open(str(path))
-        try:
-            return dataset.ReadAsArray().astype(np.float32)
-        finally:
-            dataset = None
-    tree, dem = read(paths['Trees']), read(paths['DEM'])
-    scale = 1 / template.GetGeoTransform()[1]
-    tree[tree < 0] = 0
-    height = tree + dem
-    trunkheight = tree * np.float32(.25) + dem
-    bush = np.logical_not(trunkheight * height) * height
-    vegdem = tree + a
-    vegdem[vegdem == a] = 0
-    vegdem2 = tree * np.float32(.25) + a
-    vegdem2[vegdem2 == a] = 0
-    amaxvalue = np.maximum(a.max(), height.max())
-    values = svf_calculator_compact(patch_option, amaxvalue, a, vegdem, vegdem2, bush, scale, save_rasters=False)
-    return dict(zip(RESULT_NAMES, values))
 
 
 def _schema(template, patch_option):
@@ -276,10 +253,13 @@ def prepare_geometry_exports(preprocess_dir, tile, paths, patch_option, overwrit
     guard.check()
     output = Path(preprocess_dir) / 'SVF'
     output.mkdir(parents=True, exist_ok=True)
-    identity = geometry_identity(paths, patch_option)
+    recipe = numerical_geometry_recipe(paths, patch_option)
     guard.check()
-    identity['construction'] = 'standalone-svf-v1'
-    identity['standalone_implementation'] = content_fingerprint(__file__)
+    # Export-operation provenance is separate from the numerical recipe that
+    # keys native production; extending the export identity never changes the
+    # native key, so both routes produce under one shared key.
+    identity = recipe.export_identity(construction='standalone-svf-v1',
+                                      exporter_implementation=content_fingerprint(__file__))
     artifacts = {'svfs': output / f'svfs_{tile}.zip', 'shadowmats': output / f'shadowmats_{tile}.npz',
                  'svftotal': output / f'SkyViewFactor_{tile}.tif'}
     control = Path(preprocess_dir) / '.solweig-light' / 'export-manifests'
@@ -298,14 +278,14 @@ def prepare_geometry_exports(preprocess_dir, tile, paths, patch_option, overwrit
                     return existing
             def producer():
                 guard.check()
-                fields = _producer(paths, patch_option, template)
+                fields = recipe.produce()
                 guard.check()
                 return fields
             def publish(cache_hit):
                 guard.check()
                 return _publish_manifest(manifest_path, identity, artifacts, schema, cache_hit)
             store = GeometryStore(runtime.cache_dir or Path(preprocess_dir) / '.solweig-light' / 'cache')
-            handle = store.get_or_create(identity, producer) if runtime.cache_enabled else None
+            handle = store.get_or_create(recipe.identity, producer) if runtime.cache_enabled else None
             try:
                 fields = handle.fields if handle is not None else producer()
                 cache_hit = handle.hit if handle is not None else False

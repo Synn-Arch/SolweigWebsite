@@ -9,6 +9,7 @@ import datetime
 import errno
 import fcntl
 import hashlib
+import io
 import json
 import os
 from pathlib import Path
@@ -90,12 +91,17 @@ def _encode(value, directory, counter):
         name = f"array-{counter[0]}.npy"
         counter[0] += 1
         path = directory / name
+        with io.BytesIO() as buffer:
+            np.save(buffer, array, allow_pickle=False)
+            payload = buffer.getvalue()
+        # Hash the exact serialized bytes so the durable file is never
+        # re-read merely to compute its content identity.
         with open(path, "xb") as target:
-            np.save(target, array, allow_pickle=False)
+            target.write(payload)
             target.flush()
             os.fsync(target.fileno())
         return {"type": "scalar" if isinstance(value, np.generic) else "array",
-                "file": name, "sha256": _digest(path)}
+                "file": name, "sha256": hashlib.sha256(payload).hexdigest()}
     if value is None:
         return {"type": "none"}
     if type(value) is bool:
@@ -193,6 +199,41 @@ def _band_digest(band, rows, cols):
     return digest.hexdigest()
 
 
+def _stored_bytes_digest(band, values):
+    """Digest exactly the band bytes GDAL stores for ``values``.
+
+    GTiff never rewrites nonzero blocks, but a block whose every value
+    compares equal to 0.0 (this includes -0.0) is never physically
+    written, so its bytes read back as +0.0; mixed blocks keep every
+    bit, including NaN payloads.  Nonzero and pure +0.0 blocks are
+    therefore digested straight from the buffer, while a block built
+    purely from signed zeros -- the one case whose stored bits depend
+    on the driver build -- is digested through a live-band ReadAsArray,
+    served from GDAL's block cache rather than a file re-read.  That is
+    the same read-back the previous implementation used for every
+    block, so an all-signed-zero block inherits base's disposition
+    unchanged (in principle a false failure, never a false pass;
+    recorded as an inherited pre-existing behavior, not altered here),
+    and the recorded identity always matches what recovery reads back.
+    """
+    native = np.ascontiguousarray(values, dtype=np.float32)
+    bits = native.view(np.uint32)
+    block_x, block_y = band.GetBlockSize()
+    digest = hashlib.sha256()
+    for y0 in range(0, bits.shape[0], max(block_y, 1)):
+        for x0 in range(0, bits.shape[1], max(block_x, 1)):
+            block = bits[y0:y0 + block_y, x0:x0 + block_x]
+            if np.count_nonzero(block & np.uint32(0x7FFFFFFF)):
+                digest.update(native[y0:y0 + block_y, x0:x0 + block_x].tobytes(order="C"))
+            elif np.count_nonzero(block):
+                # Signed-zero-only block: hash what this build actually stores.
+                stored = band.ReadAsArray(x0, y0, block.shape[1], block.shape[0])
+                digest.update(stored.tobytes(order="C"))
+            else:
+                digest.update(bytes(block.nbytes))
+    return digest.hexdigest()
+
+
 class TransactionalOutputs(StreamingOutputs):
     """Single-owner staged output with explicit checkpoint and completion.
 
@@ -236,6 +277,7 @@ class TransactionalOutputs(StreamingOutputs):
         self.next_band = 0
         self._committed = 0
         self._band_hashes = {field: [] for field in self.fields}
+        self._pending_band_hashes = {field: [] for field in self.fields}
         self._restore = None
         try:
             self._acquire_locks(self.destinations.values())
@@ -415,6 +457,15 @@ class TransactionalOutputs(StreamingOutputs):
         if self._closed or self._completed or self.publication_path.exists():
             raise RuntimeError("Output transaction is closed or being published")
         super().write(timestep, fields)
+        # Record band identity from the buffer GDAL just consumed instead of
+        # re-reading every band back through GDAL at checkpoint time.  The
+        # digest reproduces the stored bytes exactly (see
+        # _stored_bytes_digest); recovery still re-reads committed bands and
+        # compares them against these digests.
+        for name in self.fields:
+            values = np.asarray(fields[name], dtype=np.float32)
+            band = self.datasets[name].GetRasterBand(timestep + 1)
+            self._pending_band_hashes[name].append(_stored_bytes_digest(band, values))
 
     def checkpoint(self, next_timestep, state):
         """Flush output first, then atomically commit complete state and cursor."""
@@ -423,10 +474,14 @@ class TransactionalOutputs(StreamingOutputs):
         if type(next_timestep) is not int or next_timestep != self.next_band or next_timestep < self._committed:
             raise ValueError("Checkpoint cursor must match the written chronological boundary")
         self._flush()
+        added = next_timestep - self._committed
         hashes = {name: list(values) for name, values in self._band_hashes.items()}
-        for name, dataset in self.datasets.items():
-            for i in range(self._committed, next_timestep):
-                hashes[name].append(_band_digest(dataset.GetRasterBand(i + 1), self.metadata.rows, self.metadata.cols))
+        for name in self.fields:
+            pending = self._pending_band_hashes[name]
+            if len(pending) != added:
+                raise RuntimeError(
+                    f"Output field {name} lacks write-time digests for the checkpoint boundary")
+            hashes[name].extend(pending)
         generation = "state-" + uuid.uuid4().hex
         state_hash = save_state(self.transaction_directory / generation, state)
         checkpoint = {"next_timestep": next_timestep, "generation": generation,
@@ -436,6 +491,8 @@ class TransactionalOutputs(StreamingOutputs):
         self._record = record
         self._committed = next_timestep
         self._band_hashes = hashes
+        for pending in self._pending_band_hashes.values():
+            pending.clear()
         # No retained copy of state/history; restore reloads only on a new owner.
         self._prune_state_generations()
 

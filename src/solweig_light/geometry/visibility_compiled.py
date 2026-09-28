@@ -36,6 +36,42 @@ def _decode(payloads, modes, start, stop, patches):
 
 
 @njit(cache=True, fastmath=False)
+def _preflight_flat(flat, offsets, modes, start, stop, patches):
+    """Reject reserved codes in _decode's exact patch-major, pixel-inner order."""
+    for patch in range(patches):
+        mode = modes[patch]
+        if mode == 4:
+            continue
+        base = offsets[patch]
+        for row in range(stop-start):
+            pixel = start + row
+            code = (flat[base + pixel // (8 // mode)]
+                    >> ((pixel % (8 // mode))*mode)) & ((1 << mode)-1)
+            if code == 3:
+                raise IndexError('Reserved visibility code')
+
+
+@njit(cache=True, fastmath=False, inline='always')
+def _decode_at(flat, offsets, modes, patch, pixel):
+    """Decode one (patch, pixel) value with _decode's exact bits.
+
+    Binary/ternary codes map to the codebook float patterns (0.0, 1.0, 2.0
+    carry the exact codebook bit patterns); raw mode bitcasts the stored
+    little-endian uint32. Reserved codes are handled by _preflight_flat only.
+    """
+    mode = modes[patch]
+    base = offsets[patch]
+    if mode == 4:
+        offset = base + pixel*4
+        bits = (np.uint32(flat[offset]) | (np.uint32(flat[offset+1]) << 8)
+                | (np.uint32(flat[offset+2]) << 16) | (np.uint32(flat[offset+3]) << 24))
+        return np.uint32(bits).view(np.float32)
+    code = (flat[base + pixel // (8 // mode)]
+            >> ((pixel % (8 // mode))*mode)) & ((1 << mode)-1)
+    return np.float32(code)
+
+
+@njit(cache=True, fastmath=False)
 def _diff(shadow, vegetation):
     for row in range(shadow.shape[0]):
         for patch in range(shadow.shape[1]):
@@ -63,6 +99,28 @@ def _descriptor(channel):
                           for patch in channel._patches], dtype=np.uint8)
         descriptor = payloads, modes
         object.__setattr__(channel, '_block_descriptor', descriptor)
+    return descriptor
+
+
+def _fused_descriptor(channel):
+    """Flat payload layout for the fused kernels, cached per channel.
+
+    (flat uint8 payload, int64 offsets[patches+1], uint8 modes). The flat copy
+    lets the kernels index plain arrays instead of per-patch typed-list boxes,
+    and identity of the cached descriptor doubles as payload-identity, so the
+    dispatcher can skip re-decoding a lazy leaf that shares its base channel.
+    """
+    descriptor = getattr(channel, '_fused_block_descriptor', None)
+    if descriptor is None:
+        payloads, modes = _descriptor(channel)
+        offsets = np.zeros(len(payloads)+1, dtype=np.int64)
+        for patch in range(len(payloads)):
+            offsets[patch+1] = offsets[patch] + payloads[patch].shape[0]
+        flat = np.empty(int(offsets[-1]), dtype=np.uint8)
+        for patch in range(len(payloads)):
+            flat[offsets[patch]:offsets[patch+1]] = payloads[patch]
+        descriptor = flat, offsets, modes
+        object.__setattr__(channel, '_fused_block_descriptor', descriptor)
     return descriptor
 
 

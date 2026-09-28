@@ -28,6 +28,9 @@ import calendar
 import scipy.ndimage.interpolation as sc
 from scipy.ndimage import rotate
 from solweig_light.geometry.shadows import create_patches
+# C6-20 private demand dispatcher. pipeline_demand imports engine
+# lazily inside its functions, so this module-level import is cycle-free.
+from .pipeline_demand import current_demand, lside_veg_v2022a_demanded
 gdal.UseExceptions()
 
 def ensure_tensor(x, device=None):
@@ -1647,7 +1650,20 @@ def Solweig_2022a_calc(i, dsm, scale, rows, cols, svf, svfN, svfW, svfE, svfS, s
         if CI < 0.95:
             esky_c = _operate(np.add, _operate(np.multiply, CI, esky), _operate(np.multiply, _operate(np.subtract, 1, CI), 1.0))
             esky = esky_c
-        Ldown, Lside, Least_, Lwest_, Lnorth_, Lsouth_ = Lcyl_v2022a(esky, L_patches, Ta, Tgwall, ewall, Lup, shmat, vegshmat, vbshvegshmat, altitude, azimuth, rows, cols, asvf)
+        from .cylinder_longwave import Lcyl_v2022a_by_demand, NOT_REQUESTED
+        from ..runtime import get_runtime_options
+        # N9 default route (F4): the tri-state stays LOADED-BEARING. H>1 is
+        # an explicit parallel demand; H<=1 is no demand (None), so the
+        # single _lw_region_route consult fires at the shipped default and
+        # an admitted invocation takes the bounded stream at its pinned
+        # budget 1 (zero background pool threads; the leaf's prange owns
+        # numba's threads). Driver-level parallel=False remains the only
+        # serial demand and never dispatches; there is no registry consult
+        # anywhere in the path (F4 removed the selector). F6 pre-committed
+        # rule: if the compact threads_per_worker=1 cell measures the
+        # stream LOSING the legacy serial kernels, engine restores the
+        # plain boolean (parallel=threads>1) and the manifest records it.
+        Ldown, Lside, Least_, Lwest_, Lnorth_, Lsouth_ = Lcyl_v2022a_by_demand(esky, L_patches, Ta, Tgwall, ewall, Lup, shmat, vegshmat, vbshvegshmat, altitude, azimuth, rows, cols, asvf, block_pixels=get_runtime_options().block_pixels, parallel=True if get_runtime_options().threads_per_worker > 1 else None)
     else:
         Ldown = _operate(np.add, _operate(np.add, _operate(np.add, _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, _operate(np.add, svf, svfveg), 1), esky), SBC), _operate(np.power, _operate(np.add, Ta, 273.15), 4)), _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, _operate(np.subtract, 2, svfveg), svfaveg), ewall), SBC), _operate(np.power, _operate(np.add, Ta, 273.15), 4))), _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, svfaveg, svf), ewall), SBC), _operate(np.power, _operate(np.add, _operate(np.add, Ta, 273.15), Tgwall), 4))), _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, _operate(np.subtract, 2, svf), svfveg), _operate(np.subtract, 1, ewall)), esky), SBC), _operate(np.power, _operate(np.add, Ta, 273.15), 4)))
         Lside = _zeros((rows, cols))
@@ -1655,8 +1671,8 @@ def Solweig_2022a_calc(i, dsm, scale, rows, cols, svf, svfN, svfW, svfE, svfS, s
         if CI < 0.95:
             c = _operate(np.subtract, 1, CI)
             Ldown = _operate(np.add, _operate(np.multiply, Ldown, _operate(np.subtract, 1, c)), _operate(np.multiply, c, _operate(np.add, _operate(np.add, _operate(np.add, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, _operate(np.add, svf, svfveg), 1), SBC), _operate(np.power, _operate(np.add, Ta, 273.15), 4)), _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, _operate(np.subtract, 2, svfveg), svfaveg), ewall), SBC), _operate(np.power, _operate(np.add, Ta, 273.15), 4))), _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, svfaveg, svf), ewall), SBC), _operate(np.power, _operate(np.add, _operate(np.add, Ta, 273.15), Tgwall), 4))), _operate(np.multiply, _operate(np.multiply, _operate(np.multiply, _operate(np.subtract, _operate(np.subtract, 2, svf), svfveg), _operate(np.subtract, 1, ewall)), SBC), _operate(np.power, _operate(np.add, Ta, 273.15), 4)))))
-    Least, Lsouth, Lwest, Lnorth = Lside_veg_v2022a(svfS, svfW, svfN, svfE, svfEveg, svfSveg, svfWveg, svfNveg, svfEaveg, svfSaveg, svfWaveg, svfNaveg, azimuth.item(), altitude.item(), Ta, Tgwall, SBC, ewall, Ldown, esky, t, F_sh, CI, LupE, LupS, LupW, LupN, anisotropic_sky)
-    if cyl == 0 and anisotropic_sky == 1:
+    Least, Lsouth, Lwest, Lnorth = lside_veg_v2022a_demanded(svfS, svfW, svfN, svfE, svfEveg, svfSveg, svfWveg, svfNveg, svfEaveg, svfSaveg, svfWaveg, svfNaveg, azimuth.item(), altitude.item(), Ta, Tgwall, SBC, ewall, Ldown, esky, t, F_sh, CI, LupE, LupS, LupW, LupN, anisotropic_sky, demand=current_demand())
+    if cyl == 0 and anisotropic_sky == 1 and Least_ is not NOT_REQUESTED:
         Least += Least_
         Lwest += Lwest_
         Lnorth += Lnorth_
@@ -1668,7 +1684,7 @@ def Solweig_2022a_calc(i, dsm, scale, rows, cols, svf, svfN, svfW, svfE, svfS, s
     else:
         Sstr = _operate(np.add, _operate(np.multiply, absK, _operate(np.add, _operate(np.multiply, _operate(np.add, Kdown, Kup), Fup), _operate(np.multiply, _operate(np.add, _operate(np.add, _operate(np.add, Knorth, Keast), Ksouth), Kwest), Fside))), _operate(np.multiply, absL, _operate(np.add, _operate(np.multiply, _operate(np.add, Ldown, Lup), Fup), _operate(np.multiply, _operate(np.add, _operate(np.add, _operate(np.add, Lnorth, Least), Lsouth), Lwest), Fside))))
     Tmrt = _operate(np.subtract, np.sqrt(np.sqrt(_divide(Sstr, _operate(np.multiply, absL, SBC)))), 273.2)
-    if cyl == 1 and anisotropic_sky == 1:
+    if cyl == 1 and anisotropic_sky == 1 and Least_ is not NOT_REQUESTED:
         Least += Least_
         Lwest += Lwest_
         Lnorth += Lnorth_
@@ -1735,9 +1751,18 @@ from .ground_view import sunonsurface_2018a
 def gvf_2018a(wallsun, walls, buildings, scale, shadow, first, second, dirwalls, Tg, Tgwall, Ta, emis_grid, ewall, alb_grid, SBC, albedo_b, rows, cols, Twater, lc_grid, landcover):
     """Dispatch the identical ordered gather within the admitted CPU budget."""
     from .ground_view import gvf_2018a as serial, gvf_2018a_parallel as parallel
+    from .gvf_prepared import prepared_gvf_step
     from ..runtime import get_runtime_options
-    function = parallel if get_runtime_options().threads_per_worker > 1 else serial
-    return function(wallsun, walls, buildings, scale, shadow, first, second, dirwalls, Tg, Tgwall, Ta, emis_grid, ewall, alb_grid, SBC, albedo_b, rows, cols, Twater, lc_grid, landcover)
+    threads = get_runtime_options().threads_per_worker
+    if threads > 1:
+        # C6-30: prepared source-expression snapshot; its guard union is the
+        # C5-22 G03 fused union PLUS three stronger alias exclusions required
+        # by the once-per-call snapshots (lc_grid/dirwalls/Twater vs Tg), and
+        # every unsupported input delegates to the exact per-direction full
+        # route. SOLWEIG_LIGHT_GVF_PREPARE=0 routes every call to the
+        # previous fused path bitwise.
+        return prepared_gvf_step(wallsun, walls, buildings, scale, shadow, first, second, dirwalls, Tg, Tgwall, Ta, emis_grid, ewall, alb_grid, SBC, albedo_b, rows, cols, Twater, lc_grid, landcover, parallel=True, block_rows=32)
+    return serial(wallsun, walls, buildings, scale, shadow, first, second, dirwalls, Tg, Tgwall, Ta, emis_grid, ewall, alb_grid, SBC, albedo_b, rows, cols, Twater, lc_grid, landcover)
 
 
 _serial_Kside_veg_v2022a = Kside_veg_v2022a

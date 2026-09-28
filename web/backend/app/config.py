@@ -41,7 +41,21 @@ SIM_DATE = os.environ.get("SOLWEIG_DATE", "2020-08-13")
 
 # Runtime budget handed to solweig_light; never above the CPUs actually present.
 CPU_THREADS = max(1, min(int(os.environ.get("SOLWEIG_THREADS", "4")), os.cpu_count() or 1))
-MEMORY_BUDGET_BYTES = int(float(os.environ.get("SOLWEIG_MEMORY_GB", "6")) * 1024**3)
+
+
+def _half_physical_ram() -> int | None:
+    try:
+        return os.sysconf("SC_PHYS_PAGES") * os.sysconf("SC_PAGE_SIZE") // 2
+    except (AttributeError, ValueError, OSError):
+        return None  # let solweig_light choose
+
+
+# Memory budget for solweig_light's admission check. SolweigLight2 reserves 5% of
+# physical RAM for GDAL's cache, so a fixed budget is refused on very large hosts
+# (6 GiB fails above ~81 GiB of RAM) and the package default (half of *free* RAM)
+# can be refused on large, busy hosts. Half of physical RAM always fits a 512 px job.
+_MEMORY_GB = os.environ.get("SOLWEIG_MEMORY_GB", "").strip()
+MEMORY_BUDGET_BYTES = int(float(_MEMORY_GB) * 1024**3) if _MEMORY_GB else _half_physical_ram()
 BLOCK_PIXELS = int(os.environ.get("SOLWEIG_BLOCK_PIXELS", "1024"))
 
 MAPBOX_TOKEN = os.environ.get("MAPBOX_TOKEN", "")

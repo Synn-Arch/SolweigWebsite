@@ -1,0 +1,8 @@
+src/solweig_light and pyproject.toml are copied unchanged from:
+
+  repository: https://github.com/Synn-Arch/SolweigLight2
+  commit:     5a6dc4484211d658fbffb5c79b53187a404f8a2d  (2026-09-28, "Strip repository to runtime essentials")
+
+Both SolweigLight and SolweigLight2 report version 0.1.0.dev0, so this file is the
+record of which source is in use. The Dockerfile import-checks a module that only
+exists in SolweigLight2 (solweig_light.runtime_phases).

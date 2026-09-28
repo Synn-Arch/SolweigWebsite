@@ -21,9 +21,17 @@ profiles use the retained serial engine. Block size only bounds decode work.
 from dataclasses import dataclass
 from functools import lru_cache
 import inspect
+import os
 
 import numpy as np
 from numba import njit, prange
+
+# Private compiled decode helpers; importing this module is cycle-free
+# (geometry/__init__ is docstring-only) and the kernels need them as globals.
+from .._native_dispatch.aplus_decode import _decode_at_plus as _decode_at
+# The exact-table classification kernel evaluates the same SLEEF scalar core
+# that atan_array loops over; numba needs it as a module-level global.
+from ._sleef_classifier import atan_fma
 
 
 @dataclass(frozen=True)
@@ -113,6 +121,10 @@ def _block(channel,start,stop,patches):
 
 def _shortwave_visibility_blocks(shadow,vegetation,vegetation_building,diffuse,start,stop,patches):
     """Read shortwave visibility in the original observable order."""
+    from ..geometry.visibility_prepared import decode_shortwave_block
+    prepared=decode_shortwave_block(shadow,vegetation,vegetation_building,diffuse,start,stop,patches)
+    if prepared is not None:
+        return prepared
     sh=_block(shadow,start,stop,patches)
     vs=_block(vegetation,start,stop,patches)
     vb=_block(vegetation_building,start,stop,patches)
@@ -123,8 +135,144 @@ def _shortwave_visibility_blocks(shadow,vegetation,vegetation_building,diffuse,s
     return sh,vs,vb,diff
 
 
+def _fused_enabled():
+    """Fused radiation route is opt-in: SOLWEIG_LIGHT_FUSED_RAD=1, default OFF.
+
+    Pipeline measurement showed the fused kernels regressing the radiation
+    stage, so the dispatch hooks keep the retained route armed unless the
+    environment explicitly requests the experimental path.
+    """
+    return os.environ.get('SOLWEIG_LIGHT_FUSED_RAD') == '1'
+
+
+def _classes_exact_enabled():
+    """Exact finite-state classification tables are opt-in:
+    SOLWEIG_LIGHT_PATCH_CLASS_TABLES=1, default OFF.
+
+    The retained per-block NumPy classification stays the dispatch default.
+    The gate arms the exact-table route: deduplicated per-state coefficient
+    construction (equal full source-state tuples share one verbatim scalar
+    evaluation) plus a single compiled block pass that reproduces the
+    retained route's elementwise arithmetic bitwise on admitted inputs.
+    """
+    return os.environ.get('SOLWEIG_LIGHT_PATCH_CLASS_TABLES') == '1'
+
+
+def _packed_leaves(channel,allow_lazy=False):
+    """Admitted packed leaves of a channel, or None when fusion is unsupported.
+
+    Admission is deliberately restricted to the two known immutable packed
+    implementations, never arbitrary PackedVisibility subclasses. Only the
+    diffuse stream may be a LazyDiffVisibility pair: the fused kernels apply
+    the leaf subtraction on that stream alone, so a lazy direct channel must
+    fall back to the retained route.
+    """
+    from ..geometry.visibility import PackedVisibility, LazyDiffVisibility
+    from ..geometry.visibility_native import MappedVisibility
+    def admitted(leaf):
+        return type(leaf) is PackedVisibility or isinstance(leaf,MappedVisibility)
+    if isinstance(channel,LazyDiffVisibility):
+        leaves=(channel.shadow,channel.vegetation)
+        return leaves if allow_lazy and all(admitted(leaf) for leaf in leaves) else None
+    return (channel,) if admitted(channel) else None
+
+
+def _fused_guard(leaves,start,stop,patches):
+    """Hold mapped-owner locks and restate decode_block's range contract."""
+    from contextlib import ExitStack
+    stack=ExitStack()
+    try:
+        owners=sorted({id(leaf):leaf for leaf in leaves if hasattr(leaf,'_lock')}.values(),key=id)
+        for owner in owners:
+            stack.enter_context(owner._lock)
+            owner._check_open()
+        for leaf in leaves:
+            if not 0 <= start <= stop <= leaf.shape[0]*leaf.shape[1] or not 0 <= patches <= leaf.shape[2]:
+                raise IndexError('Visibility block interval out of range')
+    except BaseException:
+        stack.close()
+        raise
+    return stack
+
+
+def _shortwave_fused_block(shadow,vegetation,vegetation_building,diffuse,start,stop,patches,sun,shade,lum,solid,cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box,parallel):
+    """Fused ordered decode+reduce for one block; None selects the retained route."""
+    if not _fused_enabled():
+        return None
+    from ..geometry.visibility_compiled import _fused_descriptor, _preflight_flat
+    leaves=[_packed_leaves(channel,allow_lazy=index==3)
+            for index,channel in enumerate((shadow,vegetation,vegetation_building,diffuse))]
+    if any(pair is None for pair in leaves):
+        return None
+    flat=[leaf for pair in leaves for leaf in pair]
+    with _fused_guard(flat,start,stop,patches):
+        sh_desc=_fused_descriptor(leaves[0][0])
+        vs_desc=_fused_descriptor(leaves[1][0])
+        vb_desc=_fused_descriptor(leaves[2][0])
+        dsh_desc=_fused_descriptor(leaves[3][0])
+        lazy=len(leaves[3])==2
+        dveg_desc=_fused_descriptor(leaves[3][1]) if lazy else dsh_desc
+        # A shared cached descriptor is the same payload stream: its decode
+        # equals the base channel's, and it has already been preflighted.
+        dsh_shared=dsh_desc is sh_desc
+        dveg_shared=lazy and dveg_desc is vs_desc
+        # Preflight every distinct decode stream in the original read order.
+        _preflight_flat(*sh_desc,start,stop,patches)
+        _preflight_flat(*vs_desc,start,stop,patches)
+        _preflight_flat(*vb_desc,start,stop,patches)
+        if not dsh_shared:
+            _preflight_flat(*dsh_desc,start,stop,patches)
+        if lazy and not dveg_shared:
+            _preflight_flat(*dveg_desc,start,stop,patches)
+        kernel=_shortwave_fused if parallel else _shortwave_fused_serial
+        return kernel(*sh_desc,*vs_desc,*vb_desc,*dsh_desc,*dveg_desc,
+                      lazy,dsh_shared,dveg_shared,start,stop,sun,shade,
+                      lum,solid,cosine,directions,diff_gate,ref_gate,box_gate,
+                      surface_sun,surface_sh,box)
+
+
+def _longwave_fused_block(shadow,vegetation,vegetation_building,start,stop,patches,sun,shade,solid,sine,cosine,directions,gate,solar_gate,sky_down,sky_side,surface_sun,surface_sh,lup,reflection_factor,parallel):
+    """Fused ordered decode+reduce for one block; None selects the retained route."""
+    if not _fused_enabled():
+        return None
+    from ..geometry.visibility_compiled import _fused_descriptor, _preflight_flat
+    leaves=[_packed_leaves(channel) for channel in (shadow,vegetation,vegetation_building)]
+    if any(pair is None or len(pair)!=1 for pair in leaves):
+        return None
+    flat=[pair[0] for pair in leaves]
+    with _fused_guard(flat,start,stop,patches):
+        sh_desc=_fused_descriptor(leaves[0][0])
+        vs_desc=_fused_descriptor(leaves[1][0])
+        vb_desc=_fused_descriptor(leaves[2][0])
+        # Preflight every decode stream in the original observable read order.
+        _preflight_flat(*sh_desc,start,stop,patches)
+        _preflight_flat(*vs_desc,start,stop,patches)
+        _preflight_flat(*vb_desc,start,stop,patches)
+        kernel=_longwave_fused if parallel else _longwave_fused_serial
+        return kernel(*sh_desc,*vs_desc,*vb_desc,start,stop,sun,shade,solid,sine,cosine,
+                      directions,gate,solar_gate,sky_down,sky_side,surface_sun,surface_sh,
+                      lup,reflection_factor)
+
+
 def _supported(values,cubes):
     return all(np.asarray(value).dtype==np.float32 for value in values) and all(getattr(value,'dtype',None)==np.dtype(np.float32) for value in cubes)
+
+
+def _class_coefficient(azimuth,altitude,patch_azimuth):
+    """One patch's scalar coefficient chain, verbatim from the retained loop.
+
+    Kept as its own function so the exact-table route can evaluate it once
+    per equal source state without changing any operation, operand order,
+    intermediate dtype, or the separate coefficient cast.
+    """
+    from . import engine as e
+    difference=np.abs(e._operate(np.subtract,azimuth,patch_azimuth))
+    deg2rad=e._divide(np.pi,180.0)
+    xi=np.cos(e._operate(np.multiply,difference,deg2rad))
+    if not isinstance(altitude,np.ndarray):
+        raise TypeError('tan(): solar_altitude must be a tensor-origin array')
+    yi=e._operate(np.multiply,e._operate(np.multiply,2,xi),np.tan(e._operate(np.multiply,altitude,deg2rad)))
+    return np.where(yi>0,0.0,yi)
 
 
 def _class_coefficients(altitude,azimuth,geometry,asvf,active=None):
@@ -142,14 +290,27 @@ def _class_coefficients(altitude,azimuth,geometry,asvf,active=None):
         return None
     indices=np.flatnonzero(np.ones(geometry.altitude.size,dtype=bool) if active is None else active)
     coefficients=np.empty(indices.size,dtype=field.dtype)
+    if _classes_exact_enabled():
+        # Exact finite-state table (R04+G06): within one call the solar
+        # scalars are fixed, so the coefficient bits are a pure function of
+        # the patch azimuth source state. Patches with an equal full
+        # source-state tuple (exact float32 bit pattern: signed zeros and NaN
+        # payloads stay distinct) share one verbatim evaluation of the chain
+        # and the stored float32 coefficient is scattered to the class
+        # members. No reassociation: the original intermediate dtypes and the
+        # separate coefficient cast run exactly as the retained loop does.
+        states=np.ascontiguousarray(geometry.azimuth).view(np.uint32)
+        evaluated={}
+        for column,patch in enumerate(indices):
+            key=int(states[patch])
+            if key in evaluated:
+                coefficients[column]=evaluated[key]
+            else:
+                coefficients[column]=_class_coefficient(azimuth,altitude,geometry.azimuth[patch])
+                evaluated[key]=coefficients[column]
+        return indices,coefficients,e._divide(180.0,np.pi)
     for column,patch in enumerate(indices):
-        difference=np.abs(e._operate(np.subtract,azimuth,geometry.azimuth[patch]))
-        deg2rad=e._divide(np.pi,180.0)
-        xi=np.cos(e._operate(np.multiply,difference,deg2rad))
-        if not isinstance(altitude,np.ndarray):
-            raise TypeError('tan(): solar_altitude must be a tensor-origin array')
-        yi=e._operate(np.multiply,e._operate(np.multiply,2,xi),np.tan(e._operate(np.multiply,altitude,deg2rad)))
-        coefficients[column]=np.where(yi>0,0.0,yi)
+        coefficients[column]=_class_coefficient(azimuth,altitude,geometry.azimuth[patch])
     return indices,coefficients,e._divide(180.0,np.pi)
 
 
@@ -163,12 +324,30 @@ def _classes(altitude,azimuth,geometry,asvf,start,stop,active=None,prepared=None
     if prepared is not None:
         indices,coefficients,rad2deg=prepared
         if indices.size:
-            # Both raster operations remain float32 and retain their grouping.
-            from ._math_profile import tan32, atan32
-            delta=np.add(tan32(field),coefficients[None,:])
-            degrees=np.multiply(atan32(delta),np.asarray(rad2deg,dtype=field.dtype))
-            sun[:,indices]=degrees<geometry.altitude[indices]
-            shade[:,indices]=degrees>geometry.altitude[indices]
+            if _classes_exact_enabled():
+                # Exact finite-state tables (R04): the retained tan32 field
+                # pass feeds one compiled pass whose per-element sequence —
+                # float32 add, the SLEEF scalar arctangent atan_array loops
+                # over, float32 multiply, the two strict comparisons — is the
+                # retained route's elementwise arithmetic without the array
+                # temporaries and dispatch overhead. Typed arithmetic only.
+                from ._math_profile import tan32
+                heights=np.ascontiguousarray(tan32(field)).reshape(-1)
+                if indices[0]==0 and indices.size==indices[-1]+1:
+                    _classes_table(heights,coefficients,
+                                   np.asarray(rad2deg,dtype=field.dtype)[()],
+                                   geometry.altitude[indices],sun,shade)
+                else:
+                    _classes_table_masked(heights,coefficients,
+                                          np.asarray(rad2deg,dtype=field.dtype)[()],
+                                          geometry.altitude[indices],indices,sun,shade)
+            else:
+                # Both raster operations remain float32 and retain their grouping.
+                from ._math_profile import tan32, atan32
+                delta=np.add(tan32(field),coefficients[None,:])
+                degrees=np.multiply(atan32(delta),np.asarray(rad2deg,dtype=field.dtype))
+                sun[:,indices]=degrees<geometry.altitude[indices]
+                shade[:,indices]=degrees>geometry.altitude[indices]
         return sun,shade
     for patch in range(geometry.altitude.size):
         if active is not None and not active[patch]:
@@ -176,6 +355,46 @@ def _classes(altitude,azimuth,geometry,asvf,start,stop,active=None,prepared=None
         a,b=e.shaded_or_sunlit(altitude,azimuth,geometry.altitude[patch],geometry.azimuth[patch],field)
         sun[:,patch],shade[:,patch]=a[:,0],b[:,0]
     return sun,shade
+
+
+@njit(cache=True, fastmath=False, error_model='numpy')
+def _classes_table(heights,coefficients,radians_to_degrees,altitudes,sun,shade):
+    """Exact finite-state classification of one block in a single compiled pass.
+
+    Contiguous-column form (the whole-vault state set): per element this
+    reproduces the retained route's elementwise NumPy operations exactly —
+    the float32 add of the ``tan32`` field value and the per-state
+    coefficient, the source-derived SLEEF scalar arctangent (the same
+    ``atan_fma`` core ``atan_array`` loops over), the float32 multiply by
+    the degree factor, and the two strict comparisons against the patch
+    altitude. No reassociation, no fused multiply-add, serial over rows so
+    the route adds no thread interactions; only the float32/bool temporaries
+    and per-op dispatch of the retained route are removed.
+    """
+    for row in range(heights.shape[0]):
+        value=heights[row]
+        for column in range(coefficients.shape[0]):
+            delta=np.float32(value+coefficients[column])
+            degrees=np.float32(atan_fma(delta)*radians_to_degrees)
+            sun[row,column]=degrees<altitudes[column]
+            shade[row,column]=degrees>altitudes[column]
+
+
+@njit(cache=True, fastmath=False, error_model='numpy')
+def _classes_table_masked(heights,coefficients,radians_to_degrees,altitudes,indices,sun,shade):
+    """Masked-column form of :func:`_classes_table` for solar-gate subsets.
+
+    Identical per-element arithmetic; only the destination columns are
+    indirections through the active-patch indices, as the retained route's
+    ``sun[:,indices]`` assignment writes them.
+    """
+    for row in range(heights.shape[0]):
+        value=heights[row]
+        for column in range(coefficients.shape[0]):
+            delta=np.float32(value+coefficients[column])
+            degrees=np.float32(atan_fma(delta)*radians_to_degrees)
+            sun[row,indices[column]]=degrees<altitudes[column]
+            shade[row,indices[column]]=degrees>altitudes[column]
 
 
 @njit(cache=True, fastmath=False, parallel=True)
@@ -272,6 +491,128 @@ def _shortwave_serial(sh,vs,vb,diff,sun,shade,lum,solid,cosine,directions,diff_g
     return out
 
 
+
+@njit(cache=True, fastmath=False, parallel=True)
+def _shortwave_fused(sh_flat,sh_off,sh_modes,vs_flat,vs_off,vs_modes,vb_flat,vb_off,vb_modes,dsh_flat,dsh_off,dsh_modes,dveg_flat,dveg_off,dveg_modes,diff_is_lazy,dsh_shared,dveg_shared,start,stop,sun,shade,lum,solid,cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box):
+    rows=stop-start
+    patches=sh_modes.shape[0]
+    out=np.zeros((rows,20),dtype=np.float32)
+    for row in prange(rows):
+        pixel=start+row
+        for patch in range(patches):
+            sh_v=_decode_at(sh_flat,sh_off,sh_modes,patch,pixel)
+            vs_v=_decode_at(vs_flat,vs_off,vs_modes,patch,pixel)
+            vb_v=_decode_at(vb_flat,vb_off,vb_modes,patch,pixel)
+            if diff_is_lazy:
+                # The lazy diffuse read decodes both leaves, then applies _diff;
+                # leaves shared with the base channels reuse their decode.
+                d_v=sh_v if dsh_shared else _decode_at(dsh_flat,dsh_off,dsh_modes,patch,pixel)
+                t_v=vs_v if dveg_shared else _decode_at(dveg_flat,dveg_off,dveg_modes,patch,pixel)
+                difference=np.float32(np.float32(1)-t_v)
+                product=np.float32(difference*np.float32(1-.03))
+                d_v=np.float32(d_v-product)
+            else:
+                d_v=sh_v if dsh_shared else _decode_at(dsh_flat,dsh_off,dsh_modes,patch,pixel)
+            veg=vs_v==0 or vb_v==0
+            building=np.float32(np.float32(1)-sh_v)*vb_v==1
+            contribution=np.float32(np.float32(np.float32(d_v*lum[patch])*cosine[patch])*solid[patch])
+            out[row,0]=np.float32(out[row,0]+contribution)
+            v=((surface_sh*veg)*solid[patch])*cosine[patch]
+            out[row,3]=np.float32(out[row,3]+v)
+            if not box:
+                a=((((surface_sun*sun[row,patch])*building)*solid[patch])*cosine[patch])
+                b=((((surface_sh*shade[row,patch])*building)*solid[patch])*cosine[patch])
+                out[row,1]=np.float32(out[row,1]+a)
+                out[row,2]=np.float32(out[row,2]+b)
+            else:
+                if box_gate[patch]:
+                    a=((((surface_sun*sun[row,patch])*building)*solid[patch])*cosine[patch])
+                    b=((((surface_sh*shade[row,patch])*building)*solid[patch])*cosine[patch])
+                else:
+                    a=np.float32(0)
+                    b=(((surface_sh*building)*solid[patch])*cosine[patch])
+                out[row,1]=np.float32(out[row,1]+a)
+                out[row,2]=np.float32(out[row,2]+b)
+                for direction in range(4):
+                    if diff_gate[patch,direction]:
+                        inc=np.float32(cosine[patch]*directions[patch,direction])
+                        d=np.float32(np.float32(np.float32(d_v*lum[patch])*inc)*solid[patch])
+                        out[row,4+direction]=np.float32(out[row,4+direction]+d)
+                    if ref_gate[patch,direction]:
+                        v=((((surface_sh*solid[patch])*cosine[patch])*veg)*directions[patch,direction])
+                        out[row,12+direction]=np.float32(out[row,12+direction]+v)
+                        if box_gate[patch]:
+                            a=(((((surface_sun*sun[row,patch])*solid[patch])*cosine[patch])*building)*directions[patch,direction])
+                            b=(((((surface_sh*shade[row,patch])*solid[patch])*cosine[patch])*building)*directions[patch,direction])
+                        else:
+                            a=np.float32(0)
+                            b=((((surface_sh*solid[patch])*cosine[patch])*building)*directions[patch,direction])
+                        out[row,8+direction]=np.float32(out[row,8+direction]+a)
+                        # Shaded directional accumulation lives in separate final columns.
+                        out[row,16+direction]=np.float32(out[row,16+direction]+b)
+    return out
+
+
+@njit(cache=True, fastmath=False)
+def _shortwave_fused_serial(sh_flat,sh_off,sh_modes,vs_flat,vs_off,vs_modes,vb_flat,vb_off,vb_modes,dsh_flat,dsh_off,dsh_modes,dveg_flat,dveg_off,dveg_modes,diff_is_lazy,dsh_shared,dveg_shared,start,stop,sun,shade,lum,solid,cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box):
+    rows=stop-start
+    patches=sh_modes.shape[0]
+    out=np.zeros((rows,20),dtype=np.float32)
+    for row in range(rows):
+        pixel=start+row
+        for patch in range(patches):
+            sh_v=_decode_at(sh_flat,sh_off,sh_modes,patch,pixel)
+            vs_v=_decode_at(vs_flat,vs_off,vs_modes,patch,pixel)
+            vb_v=_decode_at(vb_flat,vb_off,vb_modes,patch,pixel)
+            if diff_is_lazy:
+                # The lazy diffuse read decodes both leaves, then applies _diff;
+                # leaves shared with the base channels reuse their decode.
+                d_v=sh_v if dsh_shared else _decode_at(dsh_flat,dsh_off,dsh_modes,patch,pixel)
+                t_v=vs_v if dveg_shared else _decode_at(dveg_flat,dveg_off,dveg_modes,patch,pixel)
+                difference=np.float32(np.float32(1)-t_v)
+                product=np.float32(difference*np.float32(1-.03))
+                d_v=np.float32(d_v-product)
+            else:
+                d_v=sh_v if dsh_shared else _decode_at(dsh_flat,dsh_off,dsh_modes,patch,pixel)
+            veg=vs_v==0 or vb_v==0
+            building=np.float32(np.float32(1)-sh_v)*vb_v==1
+            contribution=np.float32(np.float32(np.float32(d_v*lum[patch])*cosine[patch])*solid[patch])
+            out[row,0]=np.float32(out[row,0]+contribution)
+            v=((surface_sh*veg)*solid[patch])*cosine[patch]
+            out[row,3]=np.float32(out[row,3]+v)
+            if not box:
+                a=((((surface_sun*sun[row,patch])*building)*solid[patch])*cosine[patch])
+                b=((((surface_sh*shade[row,patch])*building)*solid[patch])*cosine[patch])
+                out[row,1]=np.float32(out[row,1]+a)
+                out[row,2]=np.float32(out[row,2]+b)
+            else:
+                if box_gate[patch]:
+                    a=((((surface_sun*sun[row,patch])*building)*solid[patch])*cosine[patch])
+                    b=((((surface_sh*shade[row,patch])*building)*solid[patch])*cosine[patch])
+                else:
+                    a=np.float32(0)
+                    b=(((surface_sh*building)*solid[patch])*cosine[patch])
+                out[row,1]=np.float32(out[row,1]+a)
+                out[row,2]=np.float32(out[row,2]+b)
+                for direction in range(4):
+                    if diff_gate[patch,direction]:
+                        inc=np.float32(cosine[patch]*directions[patch,direction])
+                        d=np.float32(np.float32(np.float32(d_v*lum[patch])*inc)*solid[patch])
+                        out[row,4+direction]=np.float32(out[row,4+direction]+d)
+                    if ref_gate[patch,direction]:
+                        v=((((surface_sh*solid[patch])*cosine[patch])*veg)*directions[patch,direction])
+                        out[row,12+direction]=np.float32(out[row,12+direction]+v)
+                        if box_gate[patch]:
+                            a=(((((surface_sun*sun[row,patch])*solid[patch])*cosine[patch])*building)*directions[patch,direction])
+                            b=(((((surface_sh*shade[row,patch])*solid[patch])*cosine[patch])*building)*directions[patch,direction])
+                        else:
+                            a=np.float32(0)
+                            b=((((surface_sh*solid[patch])*cosine[patch])*building)*directions[patch,direction])
+                        out[row,8+direction]=np.float32(out[row,8+direction]+a)
+                        # Shaded directional accumulation lives in separate final columns.
+                        out[row,16+direction]=np.float32(out[row,16+direction]+b)
+    return out
+
 def Kside_veg_v2022a(*args,block_pixels=128,parallel=True,**kwargs):
     from . import engine as e
     reference=_reference('Kside_veg_v2022a')
@@ -291,6 +632,15 @@ def Kside_veg_v2022a(*args,block_pixels=128,parallel=True,**kwargs):
     azimuth=values['azimuth']
     t=values['t']
     box=values['cyl']!=1
+    if not box and not _fused_enabled():
+        # C6-22 narrow scratch specialization, admitted-profile only. The
+        # entry re-verifies admission and returns None => fall through to the
+        # untouched generic path below. Declined while the experimental fused
+        # route is armed so SOLWEIG_LIGHT_FUSED_RAD=1 keeps base behavior.
+        from .cylinder_shortwave import kside_cylinder_anisotropic as _narrow
+        narrowed=_narrow(values,block_pixels=block_pixels,parallel=parallel)
+        if narrowed is not None:
+            return narrowed
     total=np.zeros(1,dtype=np.float32)
     luminance=values['lv'][:,2]
     for patch in range(count):
@@ -327,10 +677,16 @@ def Kside_veg_v2022a(*args,block_pixels=128,parallel=True,**kwargs):
     for start in range(0,pixels,block_pixels):
         stop=min(start+block_pixels,pixels)
         sun,shade=_classes(altitude,azimuth,geometry,values['asvf'],start,stop,prepared=prepared)
-        sh,vs,vb,diff=_shortwave_visibility_blocks(values['shmat'],values['vegshmat'],
-                                                   values['vbshvegshmat'],values['diffsh'],
-                                                   start,stop,count)
-        reduced=kernel(sh,vs,vb,diff,sun,shade,lum,geometry.solid_angle,geometry.cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box)
+        reduced=_shortwave_fused_block(values['shmat'],values['vegshmat'],
+                                       values['vbshvegshmat'],values['diffsh'],
+                                       start,stop,count,sun,shade,lum,geometry.solid_angle,
+                                       geometry.cosine,directions,diff_gate,ref_gate,box_gate,
+                                       surface_sun,surface_sh,box,parallel)
+        if reduced is None:
+            sh,vs,vb,diff=_shortwave_visibility_blocks(values['shmat'],values['vegshmat'],
+                                                       values['vbshvegshmat'],values['diffsh'],
+                                                       start,stop,count)
+            reduced=kernel(sh,vs,vb,diff,sun,shade,lum,geometry.solid_angle,geometry.cosine,directions,diff_gate,ref_gate,box_gate,surface_sun,surface_sh,box)
         if not box:
             output[5,start:stop]=reduced[:,0]
             combined=e._operate(np.add,e._operate(np.add,e._operate(np.add,e._operate(np.add,output[4,start:stop],reduced[:,0]),reduced[:,1]),reduced[:,2]),reduced[:,3])
@@ -472,6 +828,152 @@ def _longwave_serial(sh,vs,vb,sun,shade,solid,sine,cosine,directions,gate,solar_
     return output
 
 
+
+@njit(cache=True, fastmath=False, parallel=True)
+def _longwave_fused(sh_flat,sh_off,sh_modes,vs_flat,vs_off,vs_modes,vb_flat,vb_off,vb_modes,start,stop,sun,shade,solid,sine,cosine,directions,gate,solar_gate,sky_down,sky_side,surface_sun,surface_sh,lup,reflection_factor):
+    rows=stop-start
+    patches=sh_modes.shape[0]
+    output=np.zeros((rows,11),dtype=np.float32)
+    # The reflected sweep re-reads only the occlusion predicate, captured here
+    # during the sky sweep so no payload is decoded twice.
+    masks=np.empty((rows,patches),dtype=np.bool_)
+    for row in prange(rows):
+        pixel=start+row
+        accum=np.zeros(14,dtype=np.float32)
+        for patch in range(patches):
+            sh_v=_decode_at(sh_flat,sh_off,sh_modes,patch,pixel)
+            vs_v=_decode_at(vs_flat,vs_off,vs_modes,patch,pixel)
+            vb_v=_decode_at(vb_flat,vb_off,vb_modes,patch,pixel)
+            masks[row,patch]= sh_v==0 or vs_v==0 or vb_v==0
+            sky=sh_v==1 and vs_v==1
+            veg=vs_v==0 or vb_v==0
+            building=np.float32(np.float32(1)-sh_v)*vb_v==1
+            accum[0]=np.float32(accum[0]+np.float32(sky*sky_down[patch]))
+            accum[5]=np.float32(accum[5]+np.float32(sky*sky_side[patch]))
+            vegetation_side=((surface_sh*solid[patch])*cosine[patch])*veg
+            vegetation_down=((surface_sh*solid[patch])*sine[patch])*veg
+            accum[6]=np.float32(accum[6]+vegetation_side)
+            accum[1]=np.float32(accum[1]+vegetation_down)
+            for direction in range(4):
+                if gate[patch,direction]:
+                    sky_term=np.float32(np.float32(sky*sky_side[patch])*directions[patch,direction])
+                    accum[10+direction]=np.float32(accum[10+direction]+sky_term)
+                    vegetation_term=vegetation_side*directions[patch,direction]
+                    accum[10+direction]=np.float32(accum[10+direction]+vegetation_term)
+            if solar_gate[patch]:
+                sun_side=((((surface_sun*sun[row,patch])*solid[patch])*cosine[patch])*building)
+                shade_side=((((surface_sh*shade[row,patch])*solid[patch])*cosine[patch])*building)
+                sun_down=((((surface_sun*sun[row,patch])*solid[patch])*sine[patch])*building)
+                shade_down=((((surface_sh*shade[row,patch])*solid[patch])*sine[patch])*building)
+                accum[8]=np.float32(accum[8]+sun_side)
+                accum[7]=np.float32(accum[7]+shade_side)
+                accum[3]=np.float32(accum[3]+sun_down)
+                accum[2]=np.float32(accum[2]+shade_down)
+                for direction in range(4):
+                    if gate[patch,direction]:
+                        accum[10+direction]=np.float32(accum[10+direction]+sun_side*directions[patch,direction])
+                        accum[10+direction]=np.float32(accum[10+direction]+shade_side*directions[patch,direction])
+            else:
+                shade_side=(((surface_sh*solid[patch])*cosine[patch])*building)
+                shade_down=(((surface_sh*solid[patch])*sine[patch])*building)
+                accum[7]=np.float32(accum[7]+shade_side)
+                accum[2]=np.float32(accum[2]+shade_down)
+                for direction in range(4):
+                    if gate[patch,direction]:
+                        accum[10+direction]=np.float32(accum[10+direction]+shade_side*directions[patch,direction])
+        # The reflection field depends on the completed ordered sky sweep.
+        reflected=np.float32(np.float32(np.float32(np.float32(accum[0]+lup[row])*reflection_factor)*np.float32(.5))/np.float32(np.pi))
+        for patch in range(patches):
+            mask=masks[row,patch]
+            side=np.float32(np.float32(np.float32(reflected*solid[patch])*cosine[patch])*mask)
+            down=np.float32(np.float32(np.float32(reflected*solid[patch])*sine[patch])*mask)
+            accum[9]=np.float32(accum[9]+side)
+            accum[4]=np.float32(accum[4]+down)
+            for direction in range(4):
+                if gate[patch,direction]:
+                    accum[10+direction]=np.float32(accum[10+direction]+np.float32(side*directions[patch,direction]))
+        output[row,0]=np.float32(np.float32(np.float32(np.float32(accum[0]+accum[1])+accum[2])+accum[3])+accum[4])
+        output[row,1]=np.float32(np.float32(np.float32(np.float32(accum[5]+accum[6])+accum[7])+accum[8])+accum[9])
+        output[row,2:7]=accum[5:10]
+        output[row,7]=accum[10]
+        output[row,8]=accum[12]
+        output[row,9]=accum[13]
+        output[row,10]=accum[11]
+    return output
+
+
+@njit(cache=True, fastmath=False)
+def _longwave_fused_serial(sh_flat,sh_off,sh_modes,vs_flat,vs_off,vs_modes,vb_flat,vb_off,vb_modes,start,stop,sun,shade,solid,sine,cosine,directions,gate,solar_gate,sky_down,sky_side,surface_sun,surface_sh,lup,reflection_factor):
+    rows=stop-start
+    patches=sh_modes.shape[0]
+    output=np.zeros((rows,11),dtype=np.float32)
+    # The reflected sweep re-reads only the occlusion predicate, captured here
+    # during the sky sweep so no payload is decoded twice.
+    masks=np.empty((rows,patches),dtype=np.bool_)
+    for row in range(rows):
+        pixel=start+row
+        accum=np.zeros(14,dtype=np.float32)
+        for patch in range(patches):
+            sh_v=_decode_at(sh_flat,sh_off,sh_modes,patch,pixel)
+            vs_v=_decode_at(vs_flat,vs_off,vs_modes,patch,pixel)
+            vb_v=_decode_at(vb_flat,vb_off,vb_modes,patch,pixel)
+            masks[row,patch]= sh_v==0 or vs_v==0 or vb_v==0
+            sky=sh_v==1 and vs_v==1
+            veg=vs_v==0 or vb_v==0
+            building=np.float32(np.float32(1)-sh_v)*vb_v==1
+            accum[0]=np.float32(accum[0]+np.float32(sky*sky_down[patch]))
+            accum[5]=np.float32(accum[5]+np.float32(sky*sky_side[patch]))
+            vegetation_side=((surface_sh*solid[patch])*cosine[patch])*veg
+            vegetation_down=((surface_sh*solid[patch])*sine[patch])*veg
+            accum[6]=np.float32(accum[6]+vegetation_side)
+            accum[1]=np.float32(accum[1]+vegetation_down)
+            for direction in range(4):
+                if gate[patch,direction]:
+                    sky_term=np.float32(np.float32(sky*sky_side[patch])*directions[patch,direction])
+                    accum[10+direction]=np.float32(accum[10+direction]+sky_term)
+                    vegetation_term=vegetation_side*directions[patch,direction]
+                    accum[10+direction]=np.float32(accum[10+direction]+vegetation_term)
+            if solar_gate[patch]:
+                sun_side=((((surface_sun*sun[row,patch])*solid[patch])*cosine[patch])*building)
+                shade_side=((((surface_sh*shade[row,patch])*solid[patch])*cosine[patch])*building)
+                sun_down=((((surface_sun*sun[row,patch])*solid[patch])*sine[patch])*building)
+                shade_down=((((surface_sh*shade[row,patch])*solid[patch])*sine[patch])*building)
+                accum[8]=np.float32(accum[8]+sun_side)
+                accum[7]=np.float32(accum[7]+shade_side)
+                accum[3]=np.float32(accum[3]+sun_down)
+                accum[2]=np.float32(accum[2]+shade_down)
+                for direction in range(4):
+                    if gate[patch,direction]:
+                        accum[10+direction]=np.float32(accum[10+direction]+sun_side*directions[patch,direction])
+                        accum[10+direction]=np.float32(accum[10+direction]+shade_side*directions[patch,direction])
+            else:
+                shade_side=(((surface_sh*solid[patch])*cosine[patch])*building)
+                shade_down=(((surface_sh*solid[patch])*sine[patch])*building)
+                accum[7]=np.float32(accum[7]+shade_side)
+                accum[2]=np.float32(accum[2]+shade_down)
+                for direction in range(4):
+                    if gate[patch,direction]:
+                        accum[10+direction]=np.float32(accum[10+direction]+shade_side*directions[patch,direction])
+        # The reflection field depends on the completed ordered sky sweep.
+        reflected=np.float32(np.float32(np.float32(np.float32(accum[0]+lup[row])*reflection_factor)*np.float32(.5))/np.float32(np.pi))
+        for patch in range(patches):
+            mask=masks[row,patch]
+            side=np.float32(np.float32(np.float32(reflected*solid[patch])*cosine[patch])*mask)
+            down=np.float32(np.float32(np.float32(reflected*solid[patch])*sine[patch])*mask)
+            accum[9]=np.float32(accum[9]+side)
+            accum[4]=np.float32(accum[4]+down)
+            for direction in range(4):
+                if gate[patch,direction]:
+                    accum[10+direction]=np.float32(accum[10+direction]+np.float32(side*directions[patch,direction]))
+        output[row,0]=np.float32(np.float32(np.float32(np.float32(accum[0]+accum[1])+accum[2])+accum[3])+accum[4])
+        output[row,1]=np.float32(np.float32(np.float32(np.float32(accum[5]+accum[6])+accum[7])+accum[8])+accum[9])
+        output[row,2:7]=accum[5:10]
+        output[row,7]=accum[10]
+        output[row,8]=accum[12]
+        output[row,9]=accum[13]
+        output[row,10]=accum[11]
+    return output
+
 def define_patch_characteristics(*args,block_pixels=128,parallel=True,**kwargs):
     from . import engine as e
     reference=_reference('define_patch_characteristics')
@@ -503,8 +1005,21 @@ def define_patch_characteristics(*args,block_pixels=128,parallel=True,**kwargs):
     for start in range(0,rows*cols,block_pixels):
         stop=min(start+block_pixels,rows*cols)
         sun,shade=_classes(values['solar_altitude'],values['solar_azimuth'],geometry,values['asvf'],start,stop,active=solar_gate,prepared=prepared)
-        sh,vs,vb=(_block(values[name],start,stop,count) for name in ('shmat','vegshmat','vbshvegshmat'))
-        reduced=kernel(sh,vs,vb,sun,shade,values['steradian'],geometry.sine,geometry.cosine,directions,gate,solar_gate,values['Lsky_down'][:,2],values['Lsky_side'][:,2],sun_surface,shade_surface,values['Lup'].reshape(-1)[start:stop],factor)
+        reduced=_longwave_fused_block(values['shmat'],values['vegshmat'],values['vbshvegshmat'],
+                                      start,stop,count,sun,shade,values['steradian'],geometry.sine,
+                                      geometry.cosine,directions,gate,solar_gate,
+                                      values['Lsky_down'][:,2],values['Lsky_side'][:,2],
+                                      sun_surface,shade_surface,values['Lup'].reshape(-1)[start:stop],factor,parallel)
+        if reduced is None:
+            from ..geometry.visibility_prepared import decode_longwave_block
+            decoded=decode_longwave_block(values['shmat'],values['vegshmat'],
+                                          values['vbshvegshmat'],start,stop,count)
+            if decoded is None:
+                sh,vs,vb=(_block(values[name],start,stop,count)
+                          for name in ('shmat','vegshmat','vbshvegshmat'))
+            else:
+                sh,vs,vb=decoded
+            reduced=kernel(sh,vs,vb,sun,shade,values['steradian'],geometry.sine,geometry.cosine,directions,gate,solar_gate,values['Lsky_down'][:,2],values['Lsky_side'][:,2],sun_surface,shade_surface,values['Lup'].reshape(-1)[start:stop],factor)
         output[:,start:stop]=reduced.T
     return tuple(field.reshape(rows,cols) for field in output)
 

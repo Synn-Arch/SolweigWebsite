@@ -14,7 +14,11 @@
 
 Schedule arithmetic stays NumPy, matching the diagnostic recurrence's scalar
 promotion, trig and rounding. Schedules are freshly prepared, never reused
-under an incomplete geometry/forcing key. No ray is truncated on shadow state.
+under an incomplete geometry/forcing key. The step-major recurrence never
+truncates a ray on shadow state. The pixel-major no-bush trace stops a pixel's
+remaining steps only at its guarded absorption exit (see _trace_pixel): after
+a non-first step reaches sh==1, the skipped suffix provably cannot change the
+returned masks.
 """
 import numpy as np
 from numba import njit, prange
@@ -296,6 +300,16 @@ def _trace_pixel(row,col,a,canopy,trunk,bush,bounds,da,dv,dt,first_heights):
                 vs=np.float32(1)
             vs=np.float32(vs*np.float32(trunk[row,col]>height))
             vb=np.float32(0)
+        # Guarded absorption exit. All updates of this step, including the
+        # reset and accumulation, ran above. From here f never decreases, so
+        # every later step keeps f>height and sh==1 (NaN samples leave sh
+        # unchanged); each later reset re-zeroes any positive vs before
+        # vb+=vs, so vs and vb are frozen. Skipping the suffix leaves
+        # 1-sh, 1-vs, 1-vb unchanged. The first step is excluded: its special
+        # block runs after the reset and may leave vs==1 with sh==1, which a
+        # later step's reset must still zero.
+        if step>0 and sh==np.float32(1):
+            break
     if vb>0:vb=np.float32(1)
     vb=np.float32(vb-vs)
     if vs>0:vs=np.float32(1)
@@ -329,7 +343,9 @@ def _shadow_pixel(amaxvalue,a,vegdem,vegdem2,bush,azimuth,altitude,scale,paralle
     # Independence proof: the static global bush predicate is false for every
     # ray, so g and the bush tail never execute. f/sh/vs/vb only read their own
     # prior value and immutable shifted input fields. Each pixel follows the
-    # complete original schedule in order; no pixel/ray early termination.
+    # original schedule in order, with one guarded early exit: after a
+    # non-first step whose sh became 1, the remaining steps are skipped
+    # because they cannot change 1-sh, 1-vs or 1-vb (_trace_pixel).
     bounds,heights=ray_schedule(a.shape,amaxvalue,azimuth,altitude,scale)
     da=np.asarray(heights,dtype=a.dtype)
     dv=np.asarray(heights,dtype=vegdem.dtype)

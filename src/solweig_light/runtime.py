@@ -673,7 +673,119 @@ def _child_environment(options: RuntimeOptions) -> dict[str, str]:
         "NUMBA_NUM_THREADS",
     ):
         env[name] = value
+    # C6-42: cap the per-process GDAL block cache at the allowance the phase
+    # admission calculator charges (5% of physical RAM when GDAL_CACHEMAX is
+    # unset; M2 §5).  GDAL reads this at first use in each fresh child, the
+    # same mechanism as the thread caps above.  Value is megabytes.
+    from .runtime_memory import default_gdal_cache_bytes
+    env['GDAL_CACHEMAX'] = str(max(1, default_gdal_cache_bytes() // (1024 * 1024)))
     return env
+
+
+# Persistent-pool handshake.  The scheduler places its private pool directory
+# in the child environment before the child's first import; a worker that
+# understands the protocol reports each finished job with an atomic done
+# marker and serves further job paths from stdin until end-of-input.  Worker
+# modules without protocol support (the one-shot entry and test stubs) exit
+# after their first job, and the scheduler respawns them per job, preserving
+# the previous one-shot behavior.  Keep in sync with runtime_worker.main.
+_WORKER_POOL_ENV = "SOLWEIG_LIGHT_WORKER_POOL"
+
+
+def _text_or_empty(path: Path) -> str:
+    try:
+        return path.read_text(encoding="utf-8", errors="replace")
+    except (OSError, UnicodeError):
+        return ""
+
+
+def _read_done(root: Path, index: int) -> int | None:
+    """Return a job's recorded return code, or ``None`` while still running.
+
+    Workers publish done markers by atomic rename, so an existing marker is
+    final.  A marker that exists but cannot be parsed cannot certify success
+    and is reported as a failure instead of hanging the scheduler.
+    """
+    marker = root / f"job-{index}.done"
+    if not marker.is_file():
+        return None
+    try:
+        return int(json.loads(marker.read_text(encoding="utf-8"))["returncode"])
+    except (OSError, UnicodeError, json.JSONDecodeError, KeyError, TypeError, ValueError):
+        return 1
+
+
+def _job_failure(root: Path, index: int, code: int) -> BaseException:
+    """Rebuild the same observable failure the one-shot scheduler raised."""
+    failure_payload = None
+    failure_path = root / f"job-{index}.failure.json"
+    if failure_path.is_file():
+        try:
+            failure_payload = json.loads(failure_path.read_text(encoding="utf-8"))
+        except (OSError, UnicodeError, json.JSONDecodeError):
+            failure_payload = None
+    error_text = _text_or_empty(root / f"job-{index}.stderr")[-4000:]
+    child_error = _child_exception(failure_payload)
+    if child_error is not None:
+        note = f"tile job {index} failed with exit code {code}"
+        if error_text.strip():
+            note += f"; worker stderr: {error_text.strip()}"
+        child_error.add_note(note)
+        return child_error
+    return TileExecutionError(
+        f"tile job {index} failed with exit code {code}: {error_text.strip()}"
+    )
+
+
+def _close_quietly(stream: Any) -> None:
+    if stream is not None:
+        try:
+            stream.close()
+        except BaseException:
+            # Preserve the scheduling or cancellation exception.
+            pass
+
+
+def _reap_worker(process: subprocess.Popen[bytes], *, terminate: bool) -> None:
+    """Close the job channel and reap the child; never raises.
+
+    Persistent workers exit on end-of-input; ``terminate=True`` is the
+    cancellation path and stops the child immediately.  A child that survives
+    termination is killed, so cancellation can never hang the batch.
+    """
+    _close_quietly(getattr(process, "stdin", None))
+    if not terminate and process.poll() is None:
+        try:
+            process.wait(timeout=5)
+        except subprocess.TimeoutExpired:
+            pass
+        except BaseException:
+            pass
+    try:
+        if process.poll() is None:
+            process.terminate()
+        process.wait(timeout=5)
+    except subprocess.TimeoutExpired:
+        try:
+            process.kill()
+            process.wait()
+        except BaseException:
+            pass
+    except BaseException:
+        pass
+
+
+class _WorkerSlot:
+    """One child process, its job channel, and its current job index."""
+
+    __slots__ = ("process", "job_index", "confirmed")
+
+    def __init__(self, process: subprocess.Popen[bytes], job_index: int) -> None:
+        self.process = process
+        self.job_index: int | None = job_index
+        # Set once this slot has reported a done marker, proving it speaks the
+        # persistent protocol and may receive further jobs on stdin.
+        self.confirmed = False
 
 
 def execute_tiles(
@@ -683,11 +795,19 @@ def execute_tiles(
     python_executable: str | None = None,
     worker_module: str = "solweig_light.runtime_worker",
 ) -> tuple[TileResult, ...]:
-    """Run independent tile jobs in bounded subprocesses.
+    """Run independent tile jobs on a bounded pool of persistent subprocesses.
 
-    Each job is written to a private temporary JSON file and the child gets a
-    fresh environment with native thread limits.  The parent environment and
-    process-global numerical settings are never changed.
+    Exactly ``plan_admission(...).active_workers`` children are created per
+    call, each with native thread limits in ``env=`` before its first import.
+    A child that supports the persistent protocol serves tile jobs
+    sequentially from the scheduler until the batch completes or is
+    cancelled, releasing tile state between jobs; one-shot worker modules
+    exit after their single job and are respawned, preserving the previous
+    per-job behavior.  Per-tile artifacts, failure payloads, and checkpoint
+    publication inside ``run_tile`` are unchanged: a failing job raises the
+    child's rebuilt exception (or ``TileExecutionError`` for crashes), and
+    every remaining job is stopped before it propagates.  The parent
+    environment and process-global numerical settings are never changed.
     """
     options = options or get_runtime_options()
     normalized = [_json_safe(dict(job)) for job in jobs]
@@ -696,117 +816,154 @@ def execute_tiles(
     plan = plan_admission(normalized, options)
     executable = python_executable or sys.executable
     results: list[TileResult | None] = [None] * len(normalized)
-    active: dict[int, tuple[subprocess.Popen[bytes], Any, Any, Path]] = {}
-    next_index = 0
 
     with tempfile.TemporaryDirectory(prefix="solweig-runtime-") as directory:
         root = Path(directory)
+        env = _child_environment(options)
+        env[_WORKER_POOL_ENV] = str(root)
+        slots: list[_WorkerSlot] = []
+        next_index = 0
 
-        def close_streams(stdout: Any, stderr: Any) -> None:
-            for stream in (stdout, stderr):
-                try:
-                    stream.close()
-                except BaseException:
-                    # Preserve the scheduling or cancellation exception.
-                    pass
+        def write_job(index: int) -> Path:
+            path = root / f"job-{index}.json"
+            path.write_text(json.dumps(normalized[index], sort_keys=True), encoding="utf-8")
+            return path
 
-        def start(index: int) -> None:
-            job_path = root / f"job-{index}.json"
-            job_path.write_text(json.dumps(normalized[index], sort_keys=True), encoding="utf-8")
-            stdout_path = root / f"job-{index}.stdout"
-            stderr_path = root / f"job-{index}.stderr"
-            stdout = stdout_path.open("wb")
-            stderr = stderr_path.open("wb")
-            process = None
+        def spawn(index: int) -> None:
+            """Start a fresh child on ``index`` (first assignment or fallback)."""
+            path = write_job(index)
+            stdout = (root / f"job-{index}.stdout").open("wb")
+            stderr = (root / f"job-{index}.stderr").open("wb")
             try:
                 process = subprocess.Popen(
-                    [executable, "-m", worker_module, "--job", os.fspath(job_path),
+                    [executable, "-m", worker_module, "--job", os.fspath(path),
                      "--options", json.dumps(options.as_dict(), sort_keys=True)],
-                    env=_child_environment(options),
+                    env=env,
+                    stdin=subprocess.PIPE,
                     stdout=stdout,
                     stderr=stderr,
                 )
-                active[index] = (process, stdout, stderr, job_path)
             except BaseException:
-                if process is not None:
-                    try:
-                        if process.poll() is None:
-                            process.terminate()
-                        process.wait(timeout=5)
-                    except BaseException:
-                        try:
-                            process.kill()
-                            process.wait()
-                        except BaseException:
-                            pass
-                close_streams(stdout, stderr)
+                _close_quietly(stdout)
+                _close_quietly(stderr)
                 raise
+            # The child owns duplicated descriptors, and a persistent worker
+            # reopens its own per-job streams, so the parent copies close now.
+            _close_quietly(stdout)
+            _close_quietly(stderr)
+            slots.append(_WorkerSlot(process, index))
+
+        def dispatch(slot: _WorkerSlot, index: int) -> None:
+            """Hand a confirmed persistent worker its next job path."""
+            path = write_job(index)
+            slot.job_index = index
+            try:
+                stdin = slot.process.stdin
+                if stdin is None:  # pragma: no cover - Popen(stdin=PIPE) sets it
+                    raise OSError("worker job channel is missing")
+                stdin.write(os.fspath(path).encode("utf-8") + b"\n")
+                stdin.flush()
+            except OSError:
+                # The worker died between the liveness check and the write, so
+                # the job never started: fail over to a fresh child on it.
+                slot.job_index = None
+                try:
+                    slots.remove(slot)
+                except ValueError:
+                    pass
+                _reap_worker(slot.process, terminate=True)
+                spawn(index)
+
+        def complete(index: int, code: int) -> None:
+            if code != 0:
+                raise _job_failure(root, index, code)
+            results[index] = TileResult(index, normalized[index].get("tile"), code)
+
+        def reap(slot: _WorkerSlot, code: int) -> None:
+            """The slot's process exited on its own while holding a job."""
+            index = slot.job_index
+            try:
+                slots.remove(slot)
+            except ValueError:
+                pass
+            slot.job_index = None
+            marker_code = _read_done(root, index) if index is not None else None
+            if index is None:  # pragma: no cover - only reachable via dispatch
+                return
+            if marker_code is not None:
+                # A persistent worker that exits after reporting its result.
+                complete(index, marker_code)
+            elif code == 0 and not slot.confirmed:
+                # One-shot worker modules exit after their single job.
+                complete(index, 0)
+            elif code == 0:
+                raise TileExecutionError(
+                    f"tile worker exited before tile job {index} could start"
+                )
+            else:
+                raise _job_failure(root, index, code)
 
         try:
-            while next_index < len(normalized) and len(active) < plan.active_workers:
-                start(next_index)
+            while next_index < len(normalized) and len(slots) < plan.active_workers:
+                spawn(next_index)
                 next_index += 1
-            while active:
-                completed = None
-                for index, (process, stdout, stderr, _) in active.items():
-                    code = process.poll()
-                    if code is not None:
-                        completed = (index, code, stdout, stderr)
+            while True:
+                if next_index >= len(normalized) and all(
+                    slot.job_index is None for slot in slots
+                ):
+                    break
+                progressed = False
+                for slot in list(slots):
+                    index = slot.job_index
+                    if index is None:
+                        if slot.process.poll() is not None:
+                            # An idle persistent worker that exited anyway.
+                            try:
+                                slots.remove(slot)
+                            except ValueError:
+                                pass
+                            _reap_worker(slot.process, terminate=False)
+                            progressed = True
+                            break
+                        continue
+                    marker_code = _read_done(root, index)
+                    if marker_code is not None:
+                        slot.confirmed = True
+                        slot.job_index = None
+                        complete(index, marker_code)
+                        progressed = True
                         break
-                if completed is None:
+                    code = slot.process.poll()
+                    if code is not None:
+                        reap(slot, code)
+                        progressed = True
+                        break
+                if not progressed:
                     time.sleep(0.01)
                     continue
-                index, code, stdout, stderr = completed
-                close_streams(stdout, stderr)
-                active.pop(index)
-                if code != 0:
-                    failure_payload = None
-                    failure_path = root / f"job-{index}.failure.json"
-                    if failure_path.is_file():
-                        try:
-                            failure_payload = json.loads(failure_path.read_text(encoding="utf-8"))
-                        except (OSError, UnicodeError, json.JSONDecodeError):
-                            failure_payload = None
-                    error_text = (root / f"job-{index}.stderr").read_text(
-                        encoding="utf-8", errors="replace"
-                    )[-4000:]
-                    child_error = _child_exception(failure_payload)
-                    if child_error is not None:
-                        note = f"tile job {index} failed with exit code {code}"
-                        if error_text.strip():
-                            note += f"; worker stderr: {error_text.strip()}"
-                        child_error.add_note(note)
-                        raise child_error
-                    raise TileExecutionError(
-                        f"tile job {index} failed with exit code {code}: {error_text.strip()}"
+                while next_index < len(normalized):
+                    idle = next(
+                        (slot for slot in slots if slot.job_index is None
+                         and slot.confirmed and slot.process.poll() is None),
+                        None,
                     )
-                results[index] = TileResult(index, normalized[index].get("tile"), code)
-                if next_index < len(normalized):
-                    start(next_index)
+                    if idle is not None:
+                        dispatch(idle, next_index)
+                    elif len(slots) < plan.active_workers:
+                        spawn(next_index)
+                    else:
+                        break
                     next_index += 1
+            # Graceful drain: persistent workers exit on end-of-input.
+            for slot in slots:
+                _reap_worker(slot.process, terminate=False)
+            slots.clear()
         except BaseException:
             # This includes KeyboardInterrupt/SystemExit.  Reap every child
             # before TemporaryDirectory removes the JSON/job log paths.
-            active_children = list(active.values())
-            for process, stdout, stderr, _ in active_children:
-                try:
-                    if process.poll() is None:
-                        process.terminate()
-                except BaseException:
-                    pass
-            for process, stdout, stderr, _ in active_children:
-                try:
-                    process.wait(timeout=5)
-                except subprocess.TimeoutExpired:
-                    try:
-                        process.kill()
-                        process.wait()
-                    except BaseException:
-                        pass
-                except BaseException:
-                    pass
-                finally:
-                    close_streams(stdout, stderr)
+            for slot in list(slots):
+                _reap_worker(slot.process, terminate=True)
+            slots.clear()
             raise
     return tuple(result for result in results if result is not None)
 
