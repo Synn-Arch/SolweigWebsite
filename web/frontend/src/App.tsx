@@ -4,7 +4,8 @@ import { api, overlayUrl } from './api'
 import type { JobStatus, Layer, ResultSummary, SceneInfo, Tree, Variable } from './types'
 
 const HOURS = Array.from({ length: 24 }, (_, i) => i)
-const LAST_JOB_KEY = 'coolchoices:lastJob'
+
+const sleep = (ms: number) => new Promise((resolve) => window.setTimeout(resolve, ms))
 
 function fmt(v: number | undefined | null, digits = 1): string {
   return v == null || Number.isNaN(v) ? '–' : v.toFixed(digits)
@@ -29,7 +30,9 @@ export default function App() {
 
   const [job, setJob] = useState<JobStatus | null>(null)
   const [scenario, setScenario] = useState<{ id: string; summary: ResultSummary; trees: Tree[] } | null>(null)
-  const pollTimer = useRef<number | null>(null)
+  // Bumped on every run (and on unmount): a poll loop whose number is no longer
+  // current stops, so an older run can never overwrite a newer one.
+  const runSeq = useRef(0)
 
   // Initial load.
   useEffect(() => {
@@ -49,70 +52,53 @@ export default function App() {
     return () => window.clearInterval(id)
   }, [playing])
 
-  const attachResult = useCallback(async (status: JobStatus, jobTrees: Tree[]) => {
-    const summary = await api.result(status.id)
-    setScenario({ id: status.id, summary, trees: jobTrees })
-    setLayer('diff')
-  }, [])
+  useEffect(
+    () => () => {
+      runSeq.current += 1
+    },
+    [],
+  )
 
-  // After a page reload, re-attach to the last job if it is still running or finished.
-  useEffect(() => {
-    if (!scene) return
-    let lastId: string | null = null
-    try {
-      lastId = window.localStorage.getItem(LAST_JOB_KEY)
-    } catch {
-      /* storage unavailable */
+  // Poll one job until it finishes, then load its result. Transient errors (a
+  // restarting server, a torn read) are retried; a job the server no longer knows
+  // about is reported instead of leaving the panel stuck on "Running".
+  const followJob = useCallback(async (jobId: string, jobTrees: Tree[], seq: number) => {
+    const giveUp = (message: string) => {
+      if (runSeq.current !== seq) return
+      setJob((current) => (current && current.id === jobId ? { ...current, status: 'failed', phase: 'failed', error: message } : current))
     }
-    if (!lastId) return
-    api
-      .job(lastId)
-      .then(async (status) => {
-        const jobTrees = (status.trees ?? []).map((t) => ({ ...t, id: Math.random().toString(36).slice(2, 10) }))
-        if (status.status === 'done') {
-          setTrees((current) => (current.length ? current : jobTrees))
-          await attachResult(status, jobTrees)
-        } else if (status.status === 'queued' || status.status === 'running') {
-          setTrees(jobTrees)
-          setJob(status)
-        }
-      })
-      .catch(() => {
-        /* job pruned or server restarted; nothing to restore */
-      })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scene])
-
-  // Poll a running job. Transient errors (server reload, torn read) are retried
-  // a few times before giving up, so one bad response does not stop the poll.
-  useEffect(() => {
-    if (!job || job.status === 'done' || job.status === 'failed') return
-    let cancelled = false
     let failures = 0
-    const tick = async () => {
-      if (cancelled) return
+    for (;;) {
+      await sleep(2000)
+      if (runSeq.current !== seq) return
+      let status: JobStatus
       try {
-        const status = await api.job(job.id)
-        if (cancelled) return
-        failures = 0
-        setJob(status)
-        if (status.status === 'done') await attachResult(status, trees)
+        status = await api.job(jobId)
       } catch (e) {
         failures += 1
-        if (failures >= 5) {
-          setError(`Lost contact with the job (${(e as Error).message}). It may still be running; reload the page to re-attach.`)
+        if (failures >= 10) return giveUp(`lost contact with the server (${(e as Error).message}); please run again`)
+        continue
+      }
+      if (runSeq.current !== seq) return
+      failures = 0
+      setJob(status)
+      if (status.status === 'failed') return
+      if (status.status !== 'done') continue
+      for (let attempt = 1; ; attempt += 1) {
+        try {
+          const summary = await api.result(jobId)
+          if (runSeq.current !== seq) return
+          setScenario({ id: jobId, summary, trees: jobTrees })
+          setLayer('diff')
           return
+        } catch (e) {
+          if (attempt >= 5) return giveUp(`could not load the result (${(e as Error).message}); please run again`)
+          await sleep(2000)
+          if (runSeq.current !== seq) return
         }
-        pollTimer.current = window.setTimeout(tick, 3000)
       }
     }
-    pollTimer.current = window.setTimeout(tick, 2000)
-    return () => {
-      cancelled = true
-      if (pollTimer.current) window.clearTimeout(pollTimer.current)
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [job])
+  }, [])
 
   const addTree = useCallback(
     (lon: number, lat: number) => {
@@ -130,17 +116,20 @@ export default function App() {
   const updateTree = (id: string, patch: Partial<Tree>) => setTrees((list) => list.map((t) => (t.id === id ? { ...t, ...patch } : t)))
 
   const run = async () => {
+    const seq = ++runSeq.current
+    const jobTrees = trees.map((t) => ({ ...t }))
     setError(null)
+    setPlacing(false)
+    // Drop the previous scenario so the map shows the baseline until the new one lands.
+    setScenario(null)
+    setJob(null)
     try {
-      const status = await api.submit(trees)
-      try {
-        window.localStorage.setItem(LAST_JOB_KEY, status.id)
-      } catch {
-        /* storage unavailable */
-      }
+      const status = await api.submit(jobTrees)
+      if (runSeq.current !== seq) return
       setJob(status)
+      void followJob(status.id, jobTrees, seq)
     } catch (e) {
-      setError((e as Error).message)
+      if (runSeq.current === seq) setError((e as Error).message)
     }
   }
 

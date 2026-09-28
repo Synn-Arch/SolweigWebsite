@@ -39,6 +39,7 @@ class JobManager:
         self.geometry = geometry
         self.queue: Queue[str] = Queue()
         self.expected_seconds: float | None = None
+        self._running: str | None = None
         config.JOBS_DIR.mkdir(parents=True, exist_ok=True)
         self._recover()
         threading.Thread(target=self._loop, name="solweig-job-loop", daemon=True).start()
@@ -85,6 +86,10 @@ class JobManager:
                         job_id, sorted(p.name for p in self._job_dir(job_id).iterdir()))
         return status
 
+    def busy(self) -> bool:
+        """True while a job is queued or running."""
+        return self._running is not None or not self.queue.empty()
+
     def job_dir(self, job_id: str) -> Path:
         return self._job_dir(job_id)
 
@@ -125,9 +130,11 @@ class JobManager:
     def _loop(self) -> None:
         while True:
             job_id = self.queue.get()
+            self._running = job_id
             try:
                 self._run(job_id)
             finally:
+                self._running = None
                 self._prune()
                 self.queue.task_done()
 
