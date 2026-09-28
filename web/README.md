@@ -115,4 +115,11 @@ Fly's remote builder and deploys it. The image build runs the baseline
 simulation once (also warming the Numba JIT cache), so builds take several
 minutes. The machine is `performance-4x` / 8 GB and auto-stops when idle.
 
-Manual deploy from a laptop: `fly deploy`.
+Manual deploy from a laptop: `fly deploy --ha=false`.
+
+The app must run as **exactly one machine**: jobs are queued in the server
+process and written to that machine's disk, so with two machines the browser
+can be answered by the one that never saw the job (404 for
+`/results/jobs/...`, a stale baseline overlay, or "unknown job"). Fly's first
+deploy creates two machines unless `--ha=false` is given; fix an existing app
+with `fly scale count 1` and check with `fly status`.
