@@ -18,7 +18,11 @@ def _load_dotenv(*paths: Path) -> None:
             if not line or line.startswith("#") or "=" not in line:
                 continue
             key, value = line.split("=", 1)
-            key, value = key.strip(), value.strip().strip("'\"")
+            key, value = key.strip(), value.strip()
+            if value[:1] in ("'", '"') and value[-1:] == value[:1] and len(value) > 1:
+                value = value[1:-1]
+            elif " #" in value:  # unquoted value with an inline comment
+                value = value.split(" #", 1)[0].rstrip()
             if key and key not in os.environ:
                 os.environ[key] = value
 
@@ -43,19 +47,23 @@ SIM_DATE = os.environ.get("SOLWEIG_DATE", "2020-08-13")
 CPU_THREADS = max(1, min(int(os.environ.get("SOLWEIG_THREADS", "4")), os.cpu_count() or 1))
 
 
-def _half_physical_ram() -> int | None:
+def _physical_ram() -> int:
     try:
-        return os.sysconf("SC_PHYS_PAGES") * os.sysconf("SC_PAGE_SIZE") // 2
-    except (AttributeError, ValueError, OSError):
-        return None  # let solweig_light choose
+        pages, page_size = os.sysconf("SC_PHYS_PAGES"), os.sysconf("SC_PAGE_SIZE")
+    except (AttributeError, ValueError, OSError):  # e.g. native Windows
+        return 0
+    return pages * page_size if pages > 0 and page_size > 0 else 0
 
 
-# Memory budget for solweig_light's admission check. SolweigLight2 reserves 5% of
-# physical RAM for GDAL's cache, so a fixed budget is refused on very large hosts
-# (6 GiB fails above ~81 GiB of RAM) and the package default (half of *free* RAM)
-# can be refused on large, busy hosts. Half of physical RAM always fits a 512 px job.
+# Memory budget for solweig_light's admission check. SolweigLight2 charges a 512 px
+# job ~1.55 GiB plus 5% of physical RAM (GDAL cache) plus 0.4 GiB for the parent, so
+# a fixed 6 GiB is refused on hosts with more than ~81 GiB of RAM, while half of RAM
+# alone is refused below ~4.3 GiB. max(6 GiB, half of RAM) is admitted at every size.
+# Inside a memory-limited container sysconf reports the host's RAM, so set
+# SOLWEIG_MEMORY_GB explicitly there (fly.toml does).
 _MEMORY_GB = os.environ.get("SOLWEIG_MEMORY_GB", "").strip()
-MEMORY_BUDGET_BYTES = int(float(_MEMORY_GB) * 1024**3) if _MEMORY_GB else _half_physical_ram()
+MEMORY_BUDGET_BYTES = (int(float(_MEMORY_GB) * 1024**3) if _MEMORY_GB
+                       else max(6 * 1024**3, _physical_ram() // 2))
 BLOCK_PIXELS = int(os.environ.get("SOLWEIG_BLOCK_PIXELS", "1024"))
 
 MAPBOX_TOKEN = os.environ.get("MAPBOX_TOKEN", "")

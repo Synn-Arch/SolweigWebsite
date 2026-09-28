@@ -1,5 +1,13 @@
 # SOLWEIG-light
 
+> **This repository hosts the Cool Choices web app (`web/`).** The model in
+> `src/solweig_light` is vendored from
+> [Synn-Arch/SolweigLight2](https://github.com/Synn-Arch/SolweigLight2) at the
+> commit in `src/UPSTREAM`. The text below, `docs/`, `TASKS.yaml` and
+> `BUNDLE_MANIFEST.json` describe the earlier SolweigLight development record
+> and are kept for reference. See [web/README.md](web/README.md) for running and
+> deploying the site.
+
 A CPU-native SOLWEIG implementation under development, using NumPy, SciPy and
 Numba. The compatibility baseline is SOLWEIG-GPU commit
 `0d7fe742abeeddd890dd58fc76ed7f78bd47faec`.

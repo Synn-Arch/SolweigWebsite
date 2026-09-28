@@ -16,3 +16,4 @@ tools
 uv.lock
 *.md
 !README.md
+*.egg-info

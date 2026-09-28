@@ -15,9 +15,7 @@ web/
 
 The model is SOLWEIG-light, vendored in `src/solweig_light` from
 [Synn-Arch/SolweigLight2](https://github.com/Synn-Arch/SolweigLight2) at the
-commit recorded in `src/UPSTREAM`. To update it, copy that repository's
-`src/solweig_light` and `pyproject.toml` over the ones here, update
-`src/UPSTREAM`, and rerun `python -m app.precompute --force`.
+commit recorded in `src/UPSTREAM` (see "Updating the model" below).
 
 Each scenario run copies the scene, paints the trees into `Trees.tif`
 (canopy height = max(existing, tree height) inside the crown radius), and
@@ -41,7 +39,7 @@ pip install --no-build-isolation "gdal==$(gdal-config --version)"
 pip install -r web/backend/requirements.txt
 pip install --no-deps .                 # solweig_light from this repo
 cd web/backend
-python -m app.precompute                # one-off baseline (~6 min)
+python -m app.precompute                # one-off baseline (~3.5 min on 4 cores)
 uvicorn app.main:app --reload --port 8000
 ```
 
@@ -58,8 +56,35 @@ npm run dev
 ```
 
 Environment variables (or `web/.env` entries): `MAPBOX_TOKEN` (required), `SOLWEIG_THREADS` (default 4,
-clamped to available CPUs), `SOLWEIG_MEMORY_GB` (unset = half of physical RAM; fly.toml sets 6), `SOLWEIG_DATA_DIR`,
+clamped to available CPUs), `SOLWEIG_MEMORY_GB` (unset = max(6, half of physical RAM); set it explicitly inside a
+memory-limited container, as fly.toml does), `SOLWEIG_DATA_DIR`,
 `SOLWEIG_DATE` (2020-08-13), `SOLWEIG_MAX_KEPT_JOBS` (10).
+
+## Updating the model
+
+The package is installed non-editably and every SOLWEIG-light release reports
+version 0.1.0.dev0, so pip will not notice a new copy by itself. After pulling
+a change to `src/` (including the switch to SolweigLight2), reinstall it:
+
+```sh
+pip install --no-deps --force-reinstall .      # from the repository root
+cd web/backend && python -m app.precompute --force
+```
+
+To move to a newer SolweigLight2 commit (`$SL2` = a clone of that repository):
+
+```sh
+rm -rf src/solweig_light build
+cp -R $SL2/src/solweig_light src/ && cp $SL2/pyproject.toml .
+diff -rq -x __pycache__ src/solweig_light $SL2/src/solweig_light   # must print nothing
+```
+
+Then update the commit in `src/UPSTREAM`, compare `[project].dependencies` in
+`pyproject.toml` (and `$SL2/requirements/`, `$SL2/uv.lock`) with
+`web/backend/requirements-core.txt`, because the Docker image installs the
+package with `--no-deps`, and run the two commands above. The Dockerfile
+import-checks `solweig_light.runtime_phases`; update that line if a future
+version renames it.
 
 ## API
 
