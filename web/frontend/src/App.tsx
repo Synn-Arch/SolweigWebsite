@@ -16,6 +16,7 @@ export default function App() {
   const [scene, setScene] = useState<SceneInfo | null>(null)
   const [baseline, setBaseline] = useState<ResultSummary | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const [overlayError, setOverlayError] = useState<string | null>(null)
 
   const [variable, setVariable] = useState<Variable>('tmrt')
   const [layer, setLayer] = useState<Layer>('baseline')
@@ -184,6 +185,7 @@ export default function App() {
         onPlace={addTree}
         onMoveTree={moveTree}
         onRemoveTree={removeTree}
+        onOverlayError={setOverlayError}
       />
 
       <aside className="panel">
@@ -242,6 +244,7 @@ export default function App() {
             min={effectiveLayer === 'diff' ? -scene.diff_range : varSpec.vmin}
             max={effectiveLayer === 'diff' ? scene.diff_range : varSpec.vmax}
           />
+          {overlayError && <p className="error small">{overlayError}</p>}
           <dl className="stats">
             <dt>Baseline mean</dt>
             <dd>{fmt(stats.baseMean)} °C</dd>

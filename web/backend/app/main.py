@@ -146,13 +146,18 @@ app.mount("/results/baseline", StaticFiles(directory=config.BASELINE_DIR), name=
 
 @app.api_route("/results/jobs/{job_id}/{filename}", methods=["GET", "HEAD"])
 def job_file(job_id: str, filename: str):
-    status = manager.get(job_id)
-    if status is None or status["status"] != "done" or "/" in filename or not filename.endswith((".png", ".json")):
+    if "/" in filename or not filename.endswith((".png", ".json")):
         raise HTTPException(404)
+    status = manager.get(job_id)
+    if status is None or status["status"] != "done":
+        reason = "unknown job" if status is None else f"job is {status['status']}"
+        logging.getLogger("uvicorn.error").warning("result %s/%s: %s", job_id, filename, reason)
+        raise HTTPException(404, reason)
     path = manager.job_dir(job_id) / "result" / filename
     if not path.is_file():
-        raise HTTPException(404)
-    return FileResponse(path)
+        logging.getLogger("uvicorn.error").warning("result %s/%s: file missing", job_id, filename)
+        raise HTTPException(404, "file missing")
+    return FileResponse(path, headers={"Cache-Control": "no-store"})
 
 
 if config.FRONTEND_DIST.is_dir():
