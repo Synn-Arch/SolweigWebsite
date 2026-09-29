@@ -1,7 +1,7 @@
 # Fly.io app definition. Create the app once with `fly apps create <name>`
 # (or `fly launch --no-deploy`), then set secrets:
 #   fly secrets set MAPBOX_TOKEN=pk.xxx
-app = "solweig-scenarios"
+app = "cool-choices-solweig"
 primary_region = "dfw"
 
 [build]
