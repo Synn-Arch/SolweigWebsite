@@ -11,11 +11,16 @@ primary_region = "dfw"
   PORT = "8080"
   SOLWEIG_THREADS = "4"
   SOLWEIG_MEMORY_GB = "6"
+  # The app exits itself after 10 idle minutes (no requests, no job); see below.
+  SOLWEIG_IDLE_EXIT_MINUTES = "10"
 
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = "stop"
+  # Fly's auto-stop only sees HTTP traffic and can stop the machine in the middle
+  # of a multi-minute model run, losing the job. The app stops itself when idle
+  # instead (SOLWEIG_IDLE_EXIT_MINUTES), and the next request starts it again.
+  auto_stop_machines = "off"
   auto_start_machines = true
   min_machines_running = 0
 
@@ -30,6 +35,11 @@ primary_region = "dfw"
   grace_period = "20s"
   method = "GET"
   path = "/healthz"
+
+# A clean idle exit (code 0) leaves the machine stopped; only crashes restart it.
+[[restart]]
+  policy = "on-failure"
+  retries = 10
 
 [[vm]]
   size = "performance-4x"

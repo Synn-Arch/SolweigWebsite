@@ -68,6 +68,12 @@ BLOCK_PIXELS = int(os.environ.get("SOLWEIG_BLOCK_PIXELS", "1024"))
 
 MAPBOX_TOKEN = os.environ.get("MAPBOX_TOKEN", "")
 
+# Exit the server after this many minutes with no requests and no queued or
+# running job (0 = never). On Fly.io the machine then stops and is started again
+# by the next request; Fly's own traffic-based auto-stop cannot see a running job
+# and may stop the machine in the middle of one.
+IDLE_EXIT_MINUTES = float(os.environ.get("SOLWEIG_IDLE_EXIT_MINUTES", "0"))
+
 # How many finished jobs to keep on disk before the oldest are removed.
 MAX_KEPT_JOBS = int(os.environ.get("SOLWEIG_MAX_KEPT_JOBS", "10"))
 

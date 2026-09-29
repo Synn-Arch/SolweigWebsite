@@ -2,8 +2,13 @@
 from __future__ import annotations
 
 import json
+import logging
+import os
+import sys
+import threading
+import time
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
@@ -14,6 +19,34 @@ from .jobs import JobManager
 app = FastAPI(title="Cool Choices API")
 geometry = scene.read_geometry()
 manager = JobManager(geometry)
+_last_request = time.monotonic()
+
+
+@app.middleware("http")
+async def _track_activity(request: Request, call_next):
+    global _last_request
+    if request.url.path != "/healthz":  # Fly's health checks must not keep the machine awake
+        _last_request = time.monotonic()
+    return await call_next(request)
+
+
+def _idle_watchdog(limit_seconds: float) -> None:
+    while True:
+        time.sleep(30)
+        if manager.busy():
+            continue
+        if time.monotonic() - _last_request > limit_seconds:
+            logging.getLogger("uvicorn.error").info("idle for %.0f min with no jobs; exiting", limit_seconds / 60)
+            # Exit code 0, so Fly's on-failure restart policy leaves the machine stopped.
+            # (uvicorn re-raises SIGTERM after a graceful shutdown, which exits 143.)
+            # Nothing is in flight: no job is queued or running and no request arrived.
+            sys.stdout.flush()
+            sys.stderr.flush()
+            os._exit(0)
+
+
+if config.IDLE_EXIT_MINUTES > 0:
+    threading.Thread(target=_idle_watchdog, args=(config.IDLE_EXIT_MINUTES * 60,), name="idle-watchdog", daemon=True).start()
 
 
 class Tree(BaseModel):
