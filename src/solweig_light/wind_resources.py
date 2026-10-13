@@ -5,13 +5,13 @@ and inverse rotations and untrimmed physical supports are reserved explicitly.
 """
 from contextlib import contextmanager
 from dataclasses import dataclass, replace
-import fcntl
 import hashlib
 import math
 import os
 from pathlib import Path
 import tempfile
 
+from . import _portable
 from .cache.geometry import canonical_json
 from .cache import content_fingerprint
 from .runtime import plan_admission, ResourceAdmissionError
@@ -136,7 +136,7 @@ def destination_locks(destinations):
             directory.mkdir(parents=True, exist_ok=True)
             handle = open(directory / (key + '.lock'), 'a+b')
             try:
-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                _portable.lock_exclusive(handle.fileno(), blocking=False)
             except BaseException as error:
                 handle.close()
                 if isinstance(error, BlockingIOError):
@@ -150,11 +150,7 @@ def destination_locks(destinations):
 
 
 def _sync_directory(path):
-    descriptor = os.open(path, os.O_RDONLY)
-    try:
-        os.fsync(descriptor)
-    finally:
-        os.close(descriptor)
+    _portable.sync_directory(path)
 
 
 def publish_outputs(output_dir, written, staging, identity, metrics, guard):
@@ -179,8 +175,7 @@ def publish_outputs(output_dir, written, staging, identity, metrics, guard):
             with rasterio.open(stage, NUM_THREADS="1") as dataset:
                 for _, window in dataset.block_windows(1):
                     dataset.read(1, window=window)
-            with open(stage, 'rb') as stream:
-                os.fsync(stream.fileno())
+            _portable.sync_file(stage)
         guard.check()
         for final in unique:
             if final.exists():

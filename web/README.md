@@ -75,9 +75,11 @@ cd web/backend && python -m app.precompute --force
 To move to a newer SolweigLight2 commit (`$SL2` = a clone of that repository):
 
 ```sh
+git diff 93536cd0 -- src/solweig_light > /tmp/windows.patch   # save the Windows patch first
 rm -rf src/solweig_light build
 cp -R $SL2/src/solweig_light src/ && cp $SL2/pyproject.toml .
-diff -rq -x __pycache__ src/solweig_light $SL2/src/solweig_light   # must print nothing
+git apply /tmp/windows.patch                                   # unless upstream already has it
+diff -rq -x __pycache__ src/solweig_light $SL2/src/solweig_light   # only the files in src/UPSTREAM's patch list
 ```
 
 Then update the commit in `src/UPSTREAM`, compare `[project].dependencies` in

@@ -6,7 +6,6 @@ Only geometry belongs in this store; dynamic thermal/radiation state does not.
 """
 from contextlib import contextmanager
 from dataclasses import dataclass
-import fcntl
 import hashlib
 import json
 import os
@@ -16,6 +15,7 @@ import uuid
 
 import numpy as np
 
+from .. import _portable
 from ..geometry.visibility import PackedVisibility, DEFAULT_WORKSPACE_BYTES, _workspace
 from ..geometry.visibility_native import save_native_visibility, open_native_visibility
 
@@ -109,11 +109,11 @@ def raster_fingerprint(path, *, max_workspace_bytes=DEFAULT_WORKSPACE_BYTES):
 def _lock(path):
     # Separate file descriptions also coordinate threads in a single process.
     with open(path, 'a+b') as stream:
-        fcntl.flock(stream.fileno(), fcntl.LOCK_EX)
+        _portable.lock_exclusive(stream.fileno(), blocking=True)
         try:
             yield
         finally:
-            fcntl.flock(stream.fileno(), fcntl.LOCK_UN)
+            _portable.unlock(stream.fileno())
 
 
 def _manifest_digest(value):
@@ -250,7 +250,7 @@ class GeometryStore:
                     stream.write(chunk.tobytes(order='C'))
                 stream.flush()
                 os.fsync(stream.fileno())
-            os.chmod(path, 0o444)
+            _portable.make_read_only(path)
             manifest['arrays'][name] = {'name': f'{generation.name}/{path.name}', 'shape': list(shape),
                                        'fingerprint': content_fingerprint(path, max_workspace_bytes=self.max_workspace_bytes)}
         for name in VISIBILITY_FIELDS:
@@ -263,11 +263,7 @@ class GeometryStore:
         data = canonical_json(manifest)
         if len(data) > MAX_MANIFEST_BYTES:
             raise ValueError('Geometry manifest exceeds limit')
-        generation_fd = os.open(generation, os.O_RDONLY)
-        try:
-            os.fsync(generation_fd)
-        finally:
-            os.close(generation_fd)
+        _portable.sync_directory(generation)
         fd, temporary = tempfile.mkstemp(prefix='.manifest-', suffix='.tmp', dir=directory)
         try:
             with os.fdopen(fd, 'wb') as stream:
@@ -276,11 +272,7 @@ class GeometryStore:
                 os.fsync(stream.fileno())
             os.replace(temporary, directory / 'manifest.json')
             # Flush directory entries after publishing the commit point.
-            directory_fd = os.open(directory, os.O_RDONLY)
-            try:
-                os.fsync(directory_fd)
-            finally:
-                os.close(directory_fd)
+            _portable.sync_directory(directory)
         finally:
             Path(temporary).unlink(missing_ok=True)
 

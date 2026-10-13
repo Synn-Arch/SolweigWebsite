@@ -7,7 +7,6 @@ No numerical model policy is defined here: callers supply the full identity.
 from dataclasses import fields as dataclass_fields
 import datetime
 import errno
-import fcntl
 import hashlib
 import io
 import json
@@ -18,6 +17,8 @@ import struct
 import uuid
 
 import numpy as np
+
+from . import _portable
 from osgeo import gdal
 
 from .models import SimulationState
@@ -43,16 +44,11 @@ def _canonical(value):
 
 
 def _sync_directory(path):
-    descriptor = os.open(path, os.O_RDONLY)
-    try:
-        os.fsync(descriptor)
-    finally:
-        os.close(descriptor)
+    _portable.sync_directory(path)
 
 
 def _sync_file(path):
-    with open(path, "rb") as source:
-        os.fsync(source.fileno())
+    _portable.sync_file(path)
 
 
 def _atomic_json(path, value):
@@ -353,7 +349,7 @@ class TransactionalOutputs(StreamingOutputs):
             lock_path = lock_dir / (destination_key + ".lock")
             handle = open(lock_path, "a+b")
             try:
-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                _portable.lock_exclusive(handle.fileno(), blocking=False)
             except BlockingIOError as error:
                 handle.close()
                 raise PersistenceError(f"Output destination already has an owner: {destination}") from error

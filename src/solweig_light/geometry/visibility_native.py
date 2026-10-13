@@ -18,6 +18,7 @@ import threading
 
 import numpy as np
 
+from .. import _portable
 from .visibility import (PackedVisibility, CODEC_VERSION, CODEBOOK_BITS,
                          DEFAULT_WORKSPACE_BYTES, _shape, _workspace)
 
@@ -165,7 +166,7 @@ def save_native_visibility(manifest_path, channel, *, max_workspace_bytes=DEFAUL
                     offset += length
                 stream.flush()
                 os.fsync(stream.fileno())
-        os.chmod(payload, 0o444)
+        _portable.make_read_only(payload)
         manifest = {'format': FORMAT, 'native_version': NATIVE_VERSION,
                     'codec_version': CODEC_VERSION, 'shape': list(channel.shape),
                     'dtype': '<f4', 'codebook_bits': list(CODEBOOK_BITS), 'patches': patches,

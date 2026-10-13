@@ -4,7 +4,6 @@ Input content identifies native geometry. Existing complete legacy exports are
 preserved unless they are proven equal or overwrite is explicitly requested.
 """
 from contextlib import contextmanager
-import fcntl
 import hashlib
 import os
 from pathlib import Path
@@ -13,6 +12,7 @@ import zipfile
 
 import numpy as np
 
+from .. import _portable
 from ..cache import GeometryStore, content_fingerprint, validate_legacy_geometry, SVF_FIELDS, VISIBILITY_FIELDS
 from ..cache.geometry import _lock, canonical_json, _manifest_digest, _read_json
 from ..identities import InputGuard
@@ -46,7 +46,7 @@ def _destination_locks(destinations):
             lock_dir.mkdir(parents=True, exist_ok=True)
             handle = open(lock_dir / (destination_key + '.lock'), 'a+b')
             try:
-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+                _portable.lock_exclusive(handle.fileno(), blocking=False)
             except BaseException as error:
                 handle.close()
                 if isinstance(error, BlockingIOError):
@@ -176,11 +176,7 @@ def _publish_manifest(path, identity, artifacts, schema, cache_hit):
             stream.flush()
             os.fsync(stream.fileno())
         os.replace(temporary, path)
-        directory = os.open(path.parent, os.O_RDONLY)
-        try:
-            os.fsync(directory)
-        finally:
-            os.close(directory)
+        _portable.sync_directory(path.parent)
     finally:
         Path(temporary).unlink(missing_ok=True)
     return value
@@ -197,8 +193,7 @@ def _export(output, tile, template, artifacts, fields, schema, manifest_path, pu
         _compare(staged_artifacts, schema, fields)
         check_inputs()
         for path in artifacts.values():
-            with open(staged / path.name, 'rb') as stream:
-                os.fsync(stream.fileno())
+            _portable.sync_file(staged / path.name)
         backups = {}
         replaced = []
         previous_manifest = staged / '.previous-manifest'
@@ -213,11 +208,7 @@ def _export(output, tile, template, artifacts, fields, schema, manifest_path, pu
                     backups[name] = backup
                 os.replace(staged / path.name, path)
                 replaced.append(name)
-            destination_fd = os.open(output, os.O_RDONLY)
-            try:
-                os.fsync(destination_fd)
-            finally:
-                os.close(destination_fd)
+            _portable.sync_directory(output)
             return publish()
         except BaseException:
             for name in reversed(replaced):

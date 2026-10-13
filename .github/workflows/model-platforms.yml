@@ -1,0 +1,58 @@
+name: Model on Windows, macOS and Linux
+
+# Students install the model on their own laptops (the solweig-light-web.zip
+# release is built from src/). This checks that install and a small run work on
+# every OS they use, the same way the course backend calls it.
+on:
+  push:
+    paths:
+      - "src/**"
+      - "pyproject.toml"
+      - ".github/scripts/model_smoke.py"
+      - ".github/workflows/model-platforms.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      # The same environment as the course's Week 5 instructions.
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: solweig-light
+          python-version: "3.11"
+          channels: conda-forge
+          conda-remove-defaults: "true"
+
+      - name: Create the environment
+        run: conda install -y -c conda-forge "gdal>=3.13,<3.14" "numpy=2.4" "scipy=1.17" "numba=0.67" pytz timezonefinder
+
+      - name: Build and install the model zip like students do
+        run: |
+          python - <<'PY'
+          import zipfile, pathlib
+          root = pathlib.Path(".")
+          with zipfile.ZipFile("solweig-light-web.zip", "w", zipfile.ZIP_DEFLATED) as z:
+              for name in ("pyproject.toml", "README.md", "LICENSE"):
+                  z.write(name, f"solweig-light-web/{name}")
+              for path in sorted(pathlib.Path("src/solweig_light").rglob("*")):
+                  if path.is_file() and "__pycache__" not in path.parts:
+                      z.write(path, f"solweig-light-web/{path.as_posix()}")
+          PY
+          pip install --force-reinstall --no-deps solweig-light-web.zip
+          cd "$RUNNER_TEMP"
+          python -c "import solweig_light.runtime_phases; print('website model ok')"
+
+      - name: Run the model like the course backend
+        run: python .github/scripts/model_smoke.py web/scene "$RUNNER_TEMP/smoke"
