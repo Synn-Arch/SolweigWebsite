@@ -1,7 +1,7 @@
 From 8fc12f40e31c334e790116636c785f90f93dbe61 Mon Sep 17 00:00:00 2001
 From: Claude <noreply@anthropic.com>
 Date: Fri, 23 Oct 2026 06:02:32 +0000
-Subject: [PATCH] Run on Windows: portable file locks and syncs
+Subject: [PATCH 1/2] Run on Windows: portable file locks and syncs
 
 solweig_light imports fcntl unconditionally, and also fsyncs directories,
 fsyncs read-only handles and marks cache files read-only. None of that works
@@ -360,6 +360,40 @@ index 606b4b6..b4a6b49 100644
          guard.check()
          for final in unique:
              if final.exists():
+-- 
+2.43.0
+
+
+From 4ba370b71e7c8b36a9e91149979d1844c7d2b265 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 23 Oct 2026 06:17:05 +0000
+Subject: [PATCH 2/2] Leave tests/ out of GitHub's download zip so it installs
+ on Windows
+
+pip install https://github.com/Synn-Arch/Solweig-Lite/archive/refs/heads/master.zip
+unpacks the whole archive first. tests/reference contains two WRF files named
+..._13:00:00, and Windows cannot create a file with ':' in its name, so the
+install fails there. Marking tests/ export-ignore drops it from GitHub's
+archive (and Download ZIP); clones still have it. The package itself is
+unchanged.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_019hAbRjTLoRBAdS6dr9Xkwy
+---
+ .gitattributes | 4 ++++
+ 1 file changed, 4 insertions(+)
+ create mode 100644 .gitattributes
+
+diff --git a/.gitattributes b/.gitattributes
+new file mode 100644
+index 0000000..23c2139
+--- /dev/null
++++ b/.gitattributes
+@@ -0,0 +1,4 @@
++# GitHub's "Download ZIP" and archive links leave these out. tests/ holds
++# file names Windows cannot create (wrfout_..._13:00:00), and pip does not
++# need them to install the package.
++tests/ export-ignore
 -- 
 2.43.0
 

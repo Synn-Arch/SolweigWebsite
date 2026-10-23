@@ -25,6 +25,7 @@ gdal.UseExceptions()
 SIZE = 96
 TILES = {"r1c1_C": (208, 208), "r1c2_E": (304, 208)}       # tile name -> (column, row) offset
 THREADS = max(1, (os.cpu_count() or 2) - 1)
+MEMORY_BUDGET = 6 * 1024**3        # the model checks each run fits in this (its own guess is far too low on Windows)
 
 
 def date_of(met):
@@ -38,7 +39,8 @@ def date_of(met):
 
 def run(folder):
     met = next(folder.glob("*.txt"))                       # the one weather file in the tile folder
-    options = RuntimeOptions(cpu_budget=THREADS, workers=1, threads_per_worker=THREADS, block_pixels=1024)
+    options = RuntimeOptions(memory_budget_bytes=MEMORY_BUDGET, cpu_budget=THREADS, workers=1,
+                             threads_per_worker=THREADS, block_pixels=1024)
     started = time.perf_counter()
     with runtime_options(options):
         thermal_comfort(
