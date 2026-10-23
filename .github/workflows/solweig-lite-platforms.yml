@@ -1,0 +1,85 @@
+name: Solweig-Lite on Windows, macOS and Linux
+
+# The course moves from the solweig-light-web.zip release to the Solweig-Lite
+# repository. This installs it the way students will (replacing last week's
+# zip), records whether the unpatched repository imports, then applies
+# .github/patches/solweig-lite-windows.patch and runs it like the course
+# backend and like the students' tile script.
+on:
+  push:
+    paths:
+      - ".github/patches/solweig-lite-windows.patch"
+      - ".github/scripts/model_smoke.py"
+      - ".github/scripts/solweig_lite_tiles.py"
+      - ".github/workflows/solweig-lite-platforms.yml"
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    name: ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [windows-latest, macos-latest, ubuntu-latest]
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      # Keep LF line endings on Windows so the patch applies as written.
+      - name: Keep line endings
+        shell: bash
+        run: git config --global core.autocrlf false
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: Synn-Arch/Solweig-Lite
+          ref: master
+          path: solweig-lite
+
+      # The same environment as the course's Week 5 instructions.
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: solweig-light
+          python-version: "3.11"
+          channels: conda-forge
+          conda-remove-defaults: "true"
+
+      - name: Create the environment
+        run: conda install -y -c conda-forge "gdal>=3.13,<3.14" "numpy=2.4" "scipy=1.17" "numba=0.67" pytz timezonefinder
+
+      - name: Last week's model (the release zip)
+        run: |
+          pip install --force-reinstall --no-deps https://github.com/Synn-Arch/VIP_2026Fall/releases/download/solweiglight/solweig-light-web.zip
+          cd "$RUNNER_TEMP" && python -c "import solweig_light.runtime_phases; print('old website model installed')"
+
+      - name: Replace it with Solweig-Lite straight from GitHub (unpatched)
+        run: |
+          pip install --force-reinstall --no-deps https://github.com/Synn-Arch/Solweig-Lite/archive/refs/heads/master.zip
+          cd "$RUNNER_TEMP" && python -c "import solweig_light.radiation.static_geometry; print('Solweig-Lite installed')"
+
+      - name: Does the unpatched model import everything it needs?
+        id: unpatched
+        continue-on-error: true
+        run: cd "$RUNNER_TEMP" && python -c "import solweig_light.persistence, solweig_light.geometry.service; print('unpatched import ok')"
+
+      - name: Apply the Windows patch and install it the same way
+        run: |
+          git -C solweig-lite -c user.name=ci -c user.email=ci@localhost am ../.github/patches/solweig-lite-windows.patch
+          git -C solweig-lite show --stat --format=%s HEAD
+          git -C solweig-lite archive --prefix=Solweig-Lite-master/ -o "$RUNNER_TEMP/Solweig-Lite-master.zip" HEAD
+          pip install --force-reinstall --no-deps "$RUNNER_TEMP/Solweig-Lite-master.zip"
+          cd "$RUNNER_TEMP" && python -c "import solweig_light._portable, solweig_light.persistence; print('patched Solweig-Lite ok')"
+
+      - name: Run it like the course backend
+        run: python .github/scripts/model_smoke.py web/scene "$RUNNER_TEMP/smoke"
+
+      - name: Run it like the students' tile script
+        run: python .github/scripts/solweig_lite_tiles.py web/scene "$RUNNER_TEMP/tiles"
+
+      - name: Unpatched result
+        if: always()
+        run: echo "Unpatched Solweig-Lite import on ${{ matrix.os }}: ${{ steps.unpatched.outcome }}"

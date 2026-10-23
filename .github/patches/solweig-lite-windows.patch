@@ -1,0 +1,365 @@
+From 8fc12f40e31c334e790116636c785f90f93dbe61 Mon Sep 17 00:00:00 2001
+From: Claude <noreply@anthropic.com>
+Date: Fri, 23 Oct 2026 06:02:32 +0000
+Subject: [PATCH] Run on Windows: portable file locks and syncs
+
+solweig_light imports fcntl unconditionally, and also fsyncs directories,
+fsyncs read-only handles and marks cache files read-only. None of that works
+on Windows, so the package fails there with No module named 'fcntl'.
+
+src/solweig_light/_portable.py keeps the exact POSIX calls and, on Windows,
+uses msvcrt byte-range locks, skips directory fsync, fsyncs through a
+writable handle and does not mark files read-only. persistence,
+cache/geometry, geometry/service, geometry/visibility_native and
+wind_resources call it instead. On Linux, TMRT/UTCI are bitwise identical
+before and after.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: https://claude.ai/code/session_019hAbRjTLoRBAdS6dr9Xkwy
+---
+ src/solweig_light/_portable.py                | 74 +++++++++++++++++++
+ src/solweig_light/cache/geometry.py           | 20 ++---
+ src/solweig_light/geometry/service.py         | 19 ++---
+ .../geometry/visibility_native.py             |  3 +-
+ src/solweig_light/persistence.py              | 13 +---
+ src/solweig_light/wind_resources.py           | 13 +---
+ 6 files changed, 95 insertions(+), 47 deletions(-)
+ create mode 100644 src/solweig_light/_portable.py
+
+diff --git a/src/solweig_light/_portable.py b/src/solweig_light/_portable.py
+new file mode 100644
+index 0000000..030eb8e
+--- /dev/null
++++ b/src/solweig_light/_portable.py
+@@ -0,0 +1,74 @@
++"""File locks and directory syncs that work on POSIX and on Windows.
++
++POSIX keeps the exact calls used before (fcntl.flock, fsync on a directory
++descriptor or a read-only handle, chmod 0o444). Windows has none of them:
++locks use msvcrt byte-range locking on the first byte of the lock file,
++directories cannot be fsynced (NTFS journals its metadata), a file is flushed
++through a writable handle, and files are not made read-only because Windows
++then refuses to replace or delete them.
++"""
++import errno
++import os
++import time
++
++WINDOWS = os.name == "nt"
++
++if WINDOWS:
++    import msvcrt
++
++    _BUSY = {errno.EACCES, getattr(errno, "EDEADLOCK", errno.EDEADLK)}
++
++    def _locking(fd, mode):
++        os.lseek(fd, 0, os.SEEK_SET)          # msvcrt locks from the current position
++        msvcrt.locking(fd, mode, 1)
++
++    def lock_exclusive(fd, *, blocking):
++        """Lock fd's file; with blocking=False a held lock raises BlockingIOError."""
++        while True:
++            try:
++                _locking(fd, msvcrt.LK_NBLCK)
++                return
++            except OSError as error:
++                if error.errno not in _BUSY:
++                    raise
++                if not blocking:
++                    raise BlockingIOError(error.errno, "lock is held elsewhere") from error
++                time.sleep(0.05)
++
++    def unlock(fd):
++        _locking(fd, msvcrt.LK_UNLCK)
++
++    def sync_directory(path):
++        return None
++
++    def sync_file(path):
++        # Windows flushes a file only through a handle that may write to it.
++        with open(path, "r+b") as stream:
++            os.fsync(stream.fileno())
++
++    def make_read_only(path):
++        # A read-only attribute makes Windows refuse later replace/unlink/rmtree.
++        return None
++else:
++    import fcntl
++
++    def lock_exclusive(fd, *, blocking):
++        """Lock fd's file; with blocking=False a held lock raises BlockingIOError."""
++        fcntl.flock(fd, fcntl.LOCK_EX if blocking else fcntl.LOCK_EX | fcntl.LOCK_NB)
++
++    def unlock(fd):
++        fcntl.flock(fd, fcntl.LOCK_UN)
++
++    def sync_directory(path):
++        descriptor = os.open(path, os.O_RDONLY)
++        try:
++            os.fsync(descriptor)
++        finally:
++            os.close(descriptor)
++
++    def sync_file(path):
++        with open(path, "rb") as stream:
++            os.fsync(stream.fileno())
++
++    def make_read_only(path):
++        os.chmod(path, 0o444)
+diff --git a/src/solweig_light/cache/geometry.py b/src/solweig_light/cache/geometry.py
+index 411adea..28e88db 100644
+--- a/src/solweig_light/cache/geometry.py
++++ b/src/solweig_light/cache/geometry.py
+@@ -6,7 +6,6 @@ Only geometry belongs in this store; dynamic thermal/radiation state does not.
+ """
+ from contextlib import contextmanager
+ from dataclasses import dataclass
+-import fcntl
+ import hashlib
+ import json
+ import os
+@@ -16,6 +15,7 @@ import uuid
+ 
+ import numpy as np
+ 
++from .. import _portable
+ from .._io import HashingWriter
+ from ..geometry.visibility import PackedVisibility, DEFAULT_WORKSPACE_BYTES, _workspace
+ from ..geometry.visibility_native import save_native_visibility, open_native_visibility
+@@ -110,11 +110,11 @@ def raster_fingerprint(path, *, max_workspace_bytes=DEFAULT_WORKSPACE_BYTES):
+ def _lock(path):
+     # Separate file descriptions also coordinate threads in a single process.
+     with open(path, 'a+b') as stream:
+-        fcntl.flock(stream.fileno(), fcntl.LOCK_EX)
++        _portable.lock_exclusive(stream.fileno(), blocking=True)
+         try:
+             yield
+         finally:
+-            fcntl.flock(stream.fileno(), fcntl.LOCK_UN)
++            _portable.unlock(stream.fileno())
+ 
+ 
+ def _manifest_digest(value):
+@@ -252,7 +252,7 @@ class GeometryStore:
+                     stream.write(chunk.tobytes(order='C'))
+                 stream.flush()
+                 os.fsync(stream.fileno())
+-            os.chmod(path, 0o444)
++            _portable.make_read_only(path)
+             manifest['arrays'][name] = {'name': f'{generation.name}/{path.name}', 'shape': list(shape),
+                                        'fingerprint': {'size_bytes': stream.bytes_written, 'sha256': stream.sha256.hexdigest()}}
+         for name in VISIBILITY_FIELDS:
+@@ -265,11 +265,7 @@ class GeometryStore:
+         data = canonical_json(manifest)
+         if len(data) > MAX_MANIFEST_BYTES:
+             raise ValueError('Geometry manifest exceeds limit')
+-        generation_fd = os.open(generation, os.O_RDONLY)
+-        try:
+-            os.fsync(generation_fd)
+-        finally:
+-            os.close(generation_fd)
++        _portable.sync_directory(generation)
+         fd, temporary = tempfile.mkstemp(prefix='.manifest-', suffix='.tmp', dir=directory)
+         try:
+             with os.fdopen(fd, 'wb') as stream:
+@@ -278,11 +274,7 @@ class GeometryStore:
+                 os.fsync(stream.fileno())
+             os.replace(temporary, directory / 'manifest.json')
+             # Flush directory entries after publishing the commit point.
+-            directory_fd = os.open(directory, os.O_RDONLY)
+-            try:
+-                os.fsync(directory_fd)
+-            finally:
+-                os.close(directory_fd)
++            _portable.sync_directory(directory)
+         finally:
+             Path(temporary).unlink(missing_ok=True)
+ 
+diff --git a/src/solweig_light/geometry/service.py b/src/solweig_light/geometry/service.py
+index 9cb16db..ecb33a7 100644
+--- a/src/solweig_light/geometry/service.py
++++ b/src/solweig_light/geometry/service.py
+@@ -4,7 +4,6 @@ Input content identifies native geometry. Existing complete legacy exports are
+ preserved unless they are proven equal or overwrite is explicitly requested.
+ """
+ from contextlib import contextmanager
+-import fcntl
+ import hashlib
+ import os
+ from pathlib import Path
+@@ -13,6 +12,7 @@ import zipfile
+ 
+ import numpy as np
+ 
++from .. import _portable
+ from ..cache import GeometryStore, content_fingerprint, validate_legacy_geometry, SVF_FIELDS, VISIBILITY_FIELDS
+ from ..cache.geometry import _lock, canonical_json, _manifest_digest, _read_json
+ from ..identities import InputGuard
+@@ -46,7 +46,7 @@ def _destination_locks(destinations):
+             lock_dir.mkdir(parents=True, exist_ok=True)
+             handle = open(lock_dir / (destination_key + '.lock'), 'a+b')
+             try:
+-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
++                _portable.lock_exclusive(handle.fileno(), blocking=False)
+             except BaseException as error:
+                 handle.close()
+                 if isinstance(error, BlockingIOError):
+@@ -147,11 +147,7 @@ def _publish_manifest(path, identity, artifacts, schema, cache_hit):
+             stream.flush()
+             os.fsync(stream.fileno())
+         os.replace(temporary, path)
+-        directory = os.open(path.parent, os.O_RDONLY)
+-        try:
+-            os.fsync(directory)
+-        finally:
+-            os.close(directory)
++        _portable.sync_directory(path.parent)
+     finally:
+         Path(temporary).unlink(missing_ok=True)
+     return value
+@@ -168,8 +164,7 @@ def _export(output, tile, template, artifacts, fields, schema, manifest_path, pu
+         _compare(staged_artifacts, schema, fields)
+         check_inputs()
+         for path in artifacts.values():
+-            with open(staged / path.name, 'rb') as stream:
+-                os.fsync(stream.fileno())
++            _portable.sync_file(staged / path.name)
+         backups = {}
+         replaced = []
+         previous_manifest = staged / '.previous-manifest'
+@@ -184,11 +179,7 @@ def _export(output, tile, template, artifacts, fields, schema, manifest_path, pu
+                     backups[name] = backup
+                 os.replace(staged / path.name, path)
+                 replaced.append(name)
+-            destination_fd = os.open(output, os.O_RDONLY)
+-            try:
+-                os.fsync(destination_fd)
+-            finally:
+-                os.close(destination_fd)
++            _portable.sync_directory(output)
+             return publish()
+         except BaseException:
+             for name in reversed(replaced):
+diff --git a/src/solweig_light/geometry/visibility_native.py b/src/solweig_light/geometry/visibility_native.py
+index 98ed8c0..d96e449 100644
+--- a/src/solweig_light/geometry/visibility_native.py
++++ b/src/solweig_light/geometry/visibility_native.py
+@@ -18,6 +18,7 @@ import threading
+ 
+ import numpy as np
+ 
++from .. import _portable
+ from .._io import HashingWriter
+ from .visibility import (PackedVisibility, CODEC_VERSION, CODEBOOK_BITS,
+                          DEFAULT_WORKSPACE_BYTES, _shape, _workspace)
+@@ -168,7 +169,7 @@ def save_native_visibility(manifest_path, channel, *, max_workspace_bytes=DEFAUL
+                     offset += length
+                 stream.flush()
+                 os.fsync(stream.fileno())
+-        os.chmod(payload, 0o444)
++        _portable.make_read_only(payload)
+         manifest = {'format': FORMAT, 'native_version': NATIVE_VERSION,
+                     'codec_version': CODEC_VERSION, 'shape': list(channel.shape),
+                     'dtype': '<f4', 'codebook_bits': list(CODEBOOK_BITS), 'patches': patches,
+diff --git a/src/solweig_light/persistence.py b/src/solweig_light/persistence.py
+index d0f4ba7..80d00c5 100644
+--- a/src/solweig_light/persistence.py
++++ b/src/solweig_light/persistence.py
+@@ -7,7 +7,6 @@ No numerical model policy is defined here: callers supply the full identity.
+ from dataclasses import fields as dataclass_fields
+ import datetime
+ import errno
+-import fcntl
+ import hashlib
+ import json
+ import os
+@@ -19,6 +18,7 @@ import uuid
+ import numpy as np
+ from osgeo import gdal
+ 
++from . import _portable
+ from .models import SimulationState
+ from .io.rasters import StreamingOutputs
+ from ._io import HashingWriter
+@@ -43,16 +43,11 @@ def _canonical(value):
+ 
+ 
+ def _sync_directory(path):
+-    descriptor = os.open(path, os.O_RDONLY)
+-    try:
+-        os.fsync(descriptor)
+-    finally:
+-        os.close(descriptor)
++    _portable.sync_directory(path)
+ 
+ 
+ def _sync_file(path):
+-    with open(path, "rb") as source:
+-        os.fsync(source.fileno())
++    _portable.sync_file(path)
+ 
+ 
+ def _atomic_json(path, value):
+@@ -353,7 +348,7 @@ class TransactionalOutputs(StreamingOutputs):
+             lock_path = lock_dir / (destination_key + ".lock")
+             handle = open(lock_path, "a+b")
+             try:
+-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
++                _portable.lock_exclusive(handle.fileno(), blocking=False)
+             except BlockingIOError as error:
+                 handle.close()
+                 raise PersistenceError(f"Output destination already has an owner: {destination}") from error
+diff --git a/src/solweig_light/wind_resources.py b/src/solweig_light/wind_resources.py
+index 606b4b6..b4a6b49 100644
+--- a/src/solweig_light/wind_resources.py
++++ b/src/solweig_light/wind_resources.py
+@@ -5,13 +5,13 @@ and inverse rotations and untrimmed physical supports are reserved explicitly.
+ """
+ from contextlib import contextmanager
+ from dataclasses import dataclass, replace
+-import fcntl
+ import hashlib
+ import math
+ import os
+ from pathlib import Path
+ import tempfile
+ 
++from . import _portable
+ from .cache.geometry import canonical_json
+ from .cache import content_fingerprint
+ from .runtime import plan_admission, ResourceAdmissionError
+@@ -136,7 +136,7 @@ def destination_locks(destinations):
+             directory.mkdir(parents=True, exist_ok=True)
+             handle = open(directory / (key + '.lock'), 'a+b')
+             try:
+-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
++                _portable.lock_exclusive(handle.fileno(), blocking=False)
+             except BaseException as error:
+                 handle.close()
+                 if isinstance(error, BlockingIOError):
+@@ -150,11 +150,7 @@ def destination_locks(destinations):
+ 
+ 
+ def _sync_directory(path):
+-    descriptor = os.open(path, os.O_RDONLY)
+-    try:
+-        os.fsync(descriptor)
+-    finally:
+-        os.close(descriptor)
++    _portable.sync_directory(path)
+ 
+ 
+ def publish_outputs(output_dir, written, staging, identity, metrics, guard):
+@@ -179,8 +175,7 @@ def publish_outputs(output_dir, written, staging, identity, metrics, guard):
+             with rasterio.open(stage, NUM_THREADS="1") as dataset:
+                 for _, window in dataset.block_windows(1):
+                     dataset.read(1, window=window)
+-            with open(stage, 'rb') as stream:
+-                os.fsync(stream.fileno())
++            _portable.sync_file(stage)
+         guard.check()
+         for final in unique:
+             if final.exists():
+-- 
+2.43.0
+
