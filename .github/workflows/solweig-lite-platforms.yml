@@ -82,4 +82,4 @@ jobs:
 
       - name: Unpatched result
         if: always()
-        run: echo "Unpatched Solweig-Lite import on ${{ matrix.os }}: ${{ steps.unpatched.outcome }}"
+        run: 'echo "Unpatched Solweig-Lite import on ${{ matrix.os }}: ${{ steps.unpatched.outcome }}"'
