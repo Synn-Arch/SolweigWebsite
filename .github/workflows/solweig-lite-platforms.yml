@@ -12,6 +12,7 @@ on:
       - ".github/patches/solweig-lite-windows.patch"
       - ".github/scripts/model_smoke.py"
       - ".github/scripts/solweig_lite_tiles.py"
+      - ".github/scripts/notebook_smoke.py"
       - ".github/workflows/solweig-lite-platforms.yml"
   workflow_dispatch:
 
@@ -101,6 +102,15 @@ jobs:
 
       - name: Run it like the students' tile script
         run: python .github/scripts/solweig_lite_tiles.py web/scene "$RUNNER_TEMP/tiles"
+
+      # Week 9's notebook: Jupyter installed the way the page says, model run from a kernel.
+      - name: Install JupyterLab into the environment
+        run: |
+          conda install -y -c conda-forge jupyterlab
+          python -c "from osgeo import gdal; import numpy; print('gdal', gdal.__version__, 'numpy', numpy.__version__)"
+
+      - name: Run it from a Jupyter notebook
+        run: python .github/scripts/notebook_smoke.py web/scene "$RUNNER_TEMP/notebook"
 
       - name: Unpatched result
         if: always()
