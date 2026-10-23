@@ -25,7 +25,7 @@ gdal.UseExceptions()
 SIZE = 96
 TILES = {"r1c1_C": (208, 208), "r1c2_E": (304, 208)}       # tile name -> (column, row) offset
 THREADS = max(1, (os.cpu_count() or 2) - 1)
-MEMORY_BUDGET = 6 * 1024**3        # the model checks each run fits in this (its own guess is far too low on Windows)
+MEMORY_BUDGET = 6 * 1024**3        # the model checks each run fits in this (its own guess follows free RAM)
 
 
 def date_of(met):
