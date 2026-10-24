@@ -20,18 +20,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: conda-incubator/setup-miniconda@v3
+      # setup-miniconda's "conda init" fails on the current Windows image ("needs sudo
+      # ... conda.exe"); micromamba builds the same conda-forge environment.
+      - uses: mamba-org/setup-micromamba@v2
         with:
-          miniforge-version: latest
-          activate-environment: solweig-light
-          python-version: "3.11"
-          channels: conda-forge
-          conda-remove-defaults: "true"
+          environment-name: solweig-light
+          create-args: >-
+            -c conda-forge python=3.11 "gdal>=3.13,<3.14" numpy=2.4 scipy=1.17 numba=0.67 pytz timezonefinder pip
+          init-shell: bash
 
-      - name: Create the environment and install Solweig-Lite like students
+      - name: Install Solweig-Lite like students
         run: |
-          conda install -y -c conda-forge "gdal>=3.13,<3.14" "numpy=2.4" "scipy=1.17" "numba=0.67" pytz timezonefinder
           pip install --force-reinstall --no-deps https://github.com/Synn-Arch/Solweig-Lite/archive/refs/heads/master.zip
+          python -c "import solweig_light._portable; from osgeo import gdal; print('new model ok, gdal', gdal.__version__)"
 
       - name: Long paths off (a laptop's default)
         shell: pwsh
