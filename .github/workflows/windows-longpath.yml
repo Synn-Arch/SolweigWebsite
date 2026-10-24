@@ -1,0 +1,52 @@
+name: Solweig-Lite and Windows path length
+
+# A student's backend failed with "FileNotFoundError: [Errno 2] No such file or
+# directory" on Windows while the baseline worked. This runs the course
+# backend's call at several run-folder depths with Windows long paths off (the
+# default on a laptop) and then on, to see whether path length is the cause.
+on:
+  push:
+    paths:
+      - ".github/scripts/longpath_check.py"
+      - ".github/workflows/windows-longpath.yml"
+  workflow_dispatch:
+
+jobs:
+  longpath:
+    runs-on: windows-latest
+    defaults:
+      run:
+        shell: bash -el {0}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: conda-incubator/setup-miniconda@v3
+        with:
+          miniforge-version: latest
+          activate-environment: solweig-light
+          python-version: "3.11"
+          channels: conda-forge
+          conda-remove-defaults: "true"
+
+      - name: Create the environment and install Solweig-Lite like students
+        run: |
+          conda install -y -c conda-forge "gdal>=3.13,<3.14" "numpy=2.4" "scipy=1.17" "numba=0.67" pytz timezonefinder
+          pip install --force-reinstall --no-deps https://github.com/Synn-Arch/Solweig-Lite/archive/refs/heads/master.zip
+
+      - name: Long paths off (a laptop's default)
+        shell: pwsh
+        run: |
+          Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name LongPathsEnabled -Value 0
+          Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name LongPathsEnabled | Select-Object LongPathsEnabled
+
+      - name: Run at several depths, long paths off
+        run: python .github/scripts/longpath_check.py web/scene "$RUNNER_TEMP/lp"
+
+      - name: Long paths on
+        shell: pwsh
+        run: |
+          Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name LongPathsEnabled -Value 1
+          Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name LongPathsEnabled | Select-Object LongPathsEnabled
+
+      - name: Run at several depths, long paths on
+        run: python .github/scripts/longpath_check.py web/scene "$RUNNER_TEMP/lp"
